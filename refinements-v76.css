@@ -1,0 +1,108 @@
+/* V76 — screenshot polish: hero scale, true-black chapters, accordion and learning controls. */
+
+/* Hero: make the supplied MacBook the visual anchor without crowding the copy. */
+body.page-case-agent .agent-cover-fixed .agent-hero-v72__stage{
+  width:min(1720px,calc(100% - 32px))!important;
+  grid-template-columns:minmax(330px,.64fr) minmax(700px,1.55fr)!important;
+  column-gap:clamp(12px,2.2vw,36px)!important;
+}
+body.page-case-agent .agent-cover-fixed .agent-hero-upload-v75{
+  width:min(1180px,78vw)!important;
+  margin-inline:auto -10vw!important;
+}
+@media(max-width:1180px){
+  body.page-case-agent .agent-cover-fixed .agent-hero-upload-v75{width:min(1040px,76vw)!important;margin-right:-7vw!important}
+}
+@media(max-width:980px){
+  body.page-case-agent .agent-cover-fixed .agent-hero-v72__stage{grid-template-columns:1fr!important;width:min(100% - 24px,860px)!important}
+  body.page-case-agent .agent-cover-fixed .agent-hero-upload-v75{width:min(980px,116vw)!important;margin:12px -8vw -8px!important}
+}
+
+/* True black is the shared field for the final flow, Decision 05 and COP chapter. */
+body.page-case-agent #solution,
+body.page-case-agent #solution .screen-flow__sticky,
+body.page-case-agent #decision-background,
+body.page-case-agent #architecture-shift{
+  background:#000!important;
+}
+body.page-case-agent #solution{border:0!important}
+body.page-case-agent #decision-background{border:0!important;box-shadow:none!important}
+body.page-case-agent #decision-background::before,
+body.page-case-agent #decision-background::after{display:none!important;content:none!important}
+body.page-case-agent #architecture-shift{border:0!important}
+
+/* Accordion: compact at rest, aligned row, then content determines expanded height. */
+body.page-case-agent .case-disclosure-slot{min-height:0!important;margin-top:18px!important}
+body.page-case-agent details.case-disclosure{
+  min-height:0!important;height:auto!important;margin:0!important;
+  border-radius:12px!important;overflow:hidden!important;
+}
+body.page-case-agent details.case-disclosure>summary{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) 34px!important;
+  align-items:center!important;
+  column-gap:18px!important;
+  min-height:0!important;
+  padding:11px 14px 11px 16px!important;
+  line-height:1.3!important;
+}
+body.page-case-agent .case-disclosure__label{display:block!important;margin:0!important;align-self:center!important}
+body.page-case-agent .case-disclosure__icon{
+  width:34px!important;height:34px!important;margin:0!important;padding:0!important;
+  display:grid!important;place-items:center!important;align-self:center!important;justify-self:end!important;
+  border-radius:50%!important;
+}
+body.page-case-agent .case-disclosure__icon svg{display:block!important;width:18px!important;height:18px!important;margin:0!important;overflow:visible!important}
+body.page-case-agent .case-disclosure__icon svg path{vector-effect:non-scaling-stroke}
+body.page-case-agent details.case-disclosure .story-accordion__inner{padding:4px 16px 16px!important}
+body.page-case-agent details.case-disclosure .story-accordion__body{margin:0!important;padding:0!important}
+
+/* Learning and ZFI controls: never rely on the '+' glyph metrics for centering. */
+body.page-case-agent .agent-learning-card__hint,
+body.page-case-agent .agent-zfi-card__hint{
+  position:relative!important;
+  width:40px!important;height:40px!important;min-width:40px!important;min-height:40px!important;
+  padding:0!important;margin:0!important;
+  display:block!important;
+  border:1px solid rgba(35,36,40,.25)!important;
+  border-radius:50%!important;
+  box-sizing:border-box!important;
+  line-height:0!important;
+  transform:none!important;
+}
+body.page-case-agent .agent-learning-card__hint span,
+body.page-case-agent .agent-zfi-card__hint i{
+  position:absolute!important;inset:0!important;
+  width:100%!important;height:100%!important;
+  font-size:0!important;line-height:0!important;
+  transform:none!important;
+}
+body.page-case-agent .agent-learning-card__hint::before,
+body.page-case-agent .agent-learning-card__hint::after,
+body.page-case-agent .agent-zfi-card__hint::before,
+body.page-case-agent .agent-zfi-card__hint::after{
+  content:""!important;position:absolute!important;left:50%!important;top:50%!important;
+  width:14px!important;height:2px!important;background:currentColor!important;border-radius:2px!important;
+  transform:translate(-50%,-50%)!important;transition:transform 220ms ease,opacity 220ms ease!important;
+}
+body.page-case-agent .agent-learning-card__hint::after,
+body.page-case-agent .agent-zfi-card__hint::after{transform:translate(-50%,-50%) rotate(90deg)!important}
+body.page-case-agent .agent-learning-card[data-open="true"] .agent-learning-card__hint::after,
+body.page-case-agent .agent-zfi-card[data-open="true"] .agent-zfi-card__hint::after{opacity:0!important;transform:translate(-50%,-50%) rotate(90deg) scaleX(.2)!important}
+
+/* Remove any hover-only borders/strokes from the learning cards. */
+body.page-case-agent .agent-learning-card,
+body.page-case-agent .agent-learning-card:hover,
+body.page-case-agent .agent-zfi-card,
+body.page-case-agent .agent-zfi-card:hover{
+  box-shadow:none!important;
+}
+body.page-case-agent .agent-learning-card::before,
+body.page-case-agent .agent-learning-card::after,
+body.page-case-agent .agent-zfi-card::before,
+body.page-case-agent .agent-zfi-card::after{box-shadow:none!important;border:0!important}
+
+/* Selected book must always project in front of the shelf. */
+.newsletter-bookshelf.is-enhanced .shelf-book.is-selected{z-index:999!important}
+.newsletter-bookshelf.is-enhanced .shelf-book.is-selected .shelf-book__button,
+.newsletter-bookshelf.is-enhanced .shelf-book.is-selected .shelf-book__object{z-index:3000!important}

@@ -1,0 +1,122 @@
+/* V80 — one top-right navigation pill: Shiva home wordmark + orange circular menu button. */
+.site-header.site-header--floating {
+  position: fixed !important;
+  top: clamp(12px, 1.4vw, 18px) !important;
+  left: auto !important;
+  right: clamp(14px, 2vw, 24px) !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  display: block !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  pointer-events: none !important;
+  z-index: 1180 !important;
+}
+.site-header.site-header--floating::before { display:none !important; }
+.site-header--floating .header-actions {
+  margin: 0 !important;
+  display: block !important;
+  pointer-events: auto !important;
+}
+.site-header__combo-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-height: 56px !important;
+  padding: 4px 4px 4px 15px !important;
+  border-radius: 999px !important;
+  background: rgba(252,252,244,.94) !important;
+  border: 1px solid rgba(35,36,40,.11) !important;
+  box-shadow: 0 8px 28px rgba(35,36,40,.09) !important;
+  backdrop-filter: blur(14px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.1) !important;
+}
+.site-header--floating .header-logo {
+  position: static !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 92px !important;
+  min-width: 92px !important;
+  height: 46px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  overflow: visible !important;
+  color: var(--ink) !important;
+}
+.site-header--floating .header-lastoria-v70 {
+  display: block !important;
+  width: 88px !important;
+  height: 36px !important;
+  object-fit: contain !important;
+  filter: none !important;
+}
+.site-header--floating .site-menu-trigger,
+.site-header--floating .site-menu-trigger--wordmark-burger {
+  position: relative !important;
+  inset: auto !important;
+  width: 48px !important;
+  min-width: 48px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  border: 0 !important;
+  background: var(--orange) !important;
+  color: var(--ink) !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+/* The wordmark lives in the outer pill now; hide the duplicate inside the menu button. */
+.site-header--floating .site-menu-trigger__shiva { display:none !important; }
+.site-menu-trigger__burger {
+  display: inline-flex !important;
+  width: 18px !important;
+  height: 14px !important;
+  flex: 0 0 18px !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  align-items: stretch !important;
+}
+.site-menu-trigger__burger > span {
+  display:block !important;
+  width:100% !important;
+  height:1.8px !important;
+  border-radius:999px !important;
+  background:currentColor !important;
+  transform-origin:center !important;
+  transition:transform 220ms cubic-bezier(.22,.78,.18,1), opacity 160ms ease !important;
+}
+.site-menu-trigger[aria-expanded="true"] .site-menu-trigger__burger > span:nth-child(1){transform:translateY(6.1px) rotate(45deg)!important}
+.site-menu-trigger[aria-expanded="true"] .site-menu-trigger__burger > span:nth-child(2){opacity:0!important}
+.site-menu-trigger[aria-expanded="true"] .site-menu-trigger__burger > span:nth-child(3){transform:translateY(-6.1px) rotate(-45deg)!important}
+.site-header--floating .site-menu-trigger:hover { background: var(--ink) !important; color: var(--paper) !important; }
+.site-header--floating .header-logo:focus-visible,
+.site-header--floating .site-menu-trigger:focus-visible { outline:2px solid var(--orange) !important; outline-offset:3px !important; }
+.site-header[data-theme="dark"] .site-header__combo-pill { background:rgba(0,0,0,.72) !important; border-color:rgba(255,255,255,.18) !important; }
+.site-header[data-theme="dark"] .header-lastoria-v70 { filter:invert(1) brightness(1.15) !important; }
+.site-header[data-theme="dark"] .site-menu-trigger { background:var(--orange)!important; color:var(--ink)!important; }
+body.menu-open .site-header.site-header--floating { opacity:0!important; visibility:hidden!important; pointer-events:none!important; }
+@media(max-width:620px){
+  .site-header.site-header--floating{top:10px!important;right:10px!important}
+  .site-header__combo-pill{min-height:52px!important;padding:4px 4px 4px 12px!important;gap:6px!important}
+  .site-header--floating .header-logo{width:76px!important;min-width:76px!important;height:42px!important}
+  .site-header--floating .header-lastoria-v70{width:74px!important;height:31px!important}
+  .site-header--floating .site-menu-trigger,.site-header--floating .site-menu-trigger--wordmark-burger{width:44px!important;min-width:44px!important;height:44px!important;min-height:44px!important}
+  .site-menu-trigger__burger{width:17px!important;height:13px!important;flex-basis:17px!important}
+  .site-menu-trigger[aria-expanded="true"] .site-menu-trigger__burger > span:nth-child(1){transform:translateY(5.6px) rotate(45deg)!important}
+  .site-menu-trigger[aria-expanded="true"] .site-menu-trigger__burger > span:nth-child(3){transform:translateY(-5.6px) rotate(-45deg)!important}
+}

@@ -1,0 +1,40 @@
+/* V70: universal quiet, connected signature flourish. Every page uses the
+   same approved charcoal / soft-orange preloader. */
+.page-wipe.is-lastoria {
+  background: #232428 !important;
+  transition: transform .18s cubic-bezier(.2,.78,.18,1) !important;
+}
+/* One shared coordinate system prevents the joins separating on resize. */
+.page-wipe.is-lastoria .page-wipe__signature-wrap--wave {
+  position: absolute !important;
+  inset: 50% 0 auto !important;
+  width: 100vw !important;
+  height: 26.25vw !important;
+  max-height: 100vh !important;
+  min-height: 0 !important;
+  transform: translateY(-50%) !important;
+  display: block !important;
+  overflow: visible !important;
+}
+.page-wipe.is-lastoria .page-wipe__signature--wave {
+  width: 100vw !important;
+  height: 100% !important;
+  max-width: none !important;
+  overflow: visible !important;
+}
+.page-wipe.is-lastoria .lastoria-ink {
+  fill: #ff8a63;
+}
+.page-wipe.is-lastoria .lastoria-ink path {
+  fill: inherit;
+  stroke: none;
+  filter: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-wipe.is-lastoria { transition: none !important; }
+  .page-wipe.is-lastoria .lastoria-ink [mask] { mask: none; }
+}
+/* Override the old reel's transform reset on the outgoing document too. */
+html.is-ready.is-leaving .page-wipe.is-lastoria .page-wipe__signature-wrap--wave {
+  transform: translateY(-50%) !important;
+}

@@ -1,0 +1,21 @@
+/* V78 — render header/menu wordmarks as real SVG images, not external CSS masks. */
+.site-header--floating .header-lastoria-v70,
+.site-header--floating .site-menu-trigger__shiva,
+#site-menu .site-menu__signature-v70 {
+  display:block !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  background:none !important;
+  -webkit-mask:none !important;
+  mask:none !important;
+  opacity:1 !important;
+}
+.site-header--floating .header-lastoria-v70 { width:88px !important; height:36px !important; }
+.site-header--floating .site-menu-trigger__shiva { width:72px !important; height:34px !important; }
+#site-menu .site-menu__signature-v70 { width:108px !important; height:46px !important; }
+.site-header[data-theme="dark"] .header-lastoria-v70 { filter:invert(1) brightness(1.15); }
+.site-header[data-theme="dark"] .site-menu-trigger__shiva { filter:none; }
+@media(max-width:620px){
+ .site-header--floating .header-lastoria-v70{width:68px!important;height:30px!important}
+ .site-header--floating .site-menu-trigger__shiva{width:62px!important;height:30px!important}
+}

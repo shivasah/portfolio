@@ -1,0 +1,144 @@
+/* V77 — restore the stable split floating header from the earlier portfolio chrome.
+   The home signature stays fixed at top-left; the menu trigger stays top-right. */
+.site-header.site-header--floating {
+  position: fixed !important;
+  top: clamp(12px, 1.4vw, 18px) !important;
+  left: clamp(14px, 2vw, 24px) !important;
+  right: clamp(14px, 2vw, 24px) !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  pointer-events: none !important;
+  z-index: 1180 !important;
+}
+.site-header.site-header--floating::before { display: none !important; }
+.site-header--floating .header-logo,
+.site-header--floating .header-actions,
+.site-header--floating .site-menu-trigger { pointer-events: auto !important; }
+.site-header--floating .header-actions {
+  display: flex !important;
+  align-items: center !important;
+  margin-left: auto !important;
+}
+
+/* Left wordmark: restore the clean isolated pill rather than nesting it inside the menu cluster. */
+.site-header--floating .header-logo {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 110px !important;
+  min-width: 110px !important;
+  height: 48px !important;
+  padding: 6px 12px !important;
+  color: var(--ink) !important;
+  background: rgba(252,252,244,.88) !important;
+  border: 1px solid rgba(35,36,40,.10) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 28px rgba(35,36,40,.08) !important;
+  backdrop-filter: blur(14px) saturate(1.1) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.1) !important;
+  overflow: visible !important;
+}
+.site-header--floating .header-lastoria-v70 {
+  display: block !important;
+  width: 88px !important;
+  height: 36px !important;
+  flex: none !important;
+  background: currentColor !important;
+  opacity: 1 !important;
+  -webkit-mask: url('assets/shiva-wordmark-static.svg') center / contain no-repeat !important;
+  mask: url('assets/shiva-wordmark-static.svg') center / contain no-repeat !important;
+}
+
+/* Right menu trigger keeps the requested Lastoria 'shiva' label, but is independent of the left logo. */
+.site-header--floating .site-menu-trigger {
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 !important;
+  width: 104px !important;
+  min-width: 104px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 7px 14px !important;
+  border: 1px solid transparent !important;
+  border-radius: 999px !important;
+  background: var(--orange) !important;
+  color: var(--ink) !important;
+  box-shadow: 0 8px 28px rgba(35,36,40,.08) !important;
+}
+.site-header--floating .site-menu-trigger__shiva {
+  display: block !important;
+  width: 72px !important;
+  height: 34px !important;
+  background: currentColor !important;
+  -webkit-mask: url('assets/shiva-lastoria-word-v70.svg') center / contain no-repeat !important;
+  mask: url('assets/shiva-lastoria-word-v70.svg') center / contain no-repeat !important;
+}
+.site-header--floating .site-menu-trigger:hover {
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+}
+.site-header--floating .site-menu-trigger:focus-visible,
+.site-header--floating .header-logo:focus-visible {
+  outline: 2px solid var(--orange) !important;
+  outline-offset: 4px !important;
+}
+
+/* Keep the split chrome readable over dark sections without moving it. */
+.site-header[data-theme="dark"] .header-logo {
+  color: var(--paper) !important;
+  background: rgba(0,0,0,.64) !important;
+  border-color: rgba(255,255,255,.18) !important;
+}
+.site-header[data-theme="dark"] .site-menu-trigger {
+  background: var(--orange) !important;
+  color: var(--ink) !important;
+}
+.site-header[data-theme="dark"] .site-menu-trigger:hover {
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+}
+
+body.menu-open .site-header.site-header--floating {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 620px) {
+  .site-header.site-header--floating {
+    top: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+  }
+  .site-header--floating .header-logo {
+    width: 88px !important;
+    min-width: 88px !important;
+    height: 44px !important;
+    padding-inline: 9px !important;
+  }
+  .site-header--floating .header-lastoria-v70 {
+    width: 68px !important;
+    height: 30px !important;
+  }
+  .site-header--floating .site-menu-trigger {
+    width: 88px !important;
+    min-width: 88px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+  }
+  .site-header--floating .site-menu-trigger__shiva {
+    width: 62px !important;
+    height: 30px !important;
+  }
+}

@@ -1,0 +1,139 @@
+/* v56: centered, layered lift stack, calibrated against the supplied recording.
+   Self-contained component rules; other page components are unchanged. */
+.flip-stack {
+  --flip-count: 3;
+  --flip-viewport: 100svh;
+  --flip-card-base-height: 488px;
+  --flip-card-height: var(--flip-card-base-height);
+  --flip-gutter: clamp(26px, 6.5vw, 80px);
+  position: relative;
+  margin-top: 24px;
+  isolation: isolate;
+}
+.flip-stack__instruction { margin-top: 24px; font: 400 13px/1.5 var(--font-body); color: var(--ink-soft); }
+.flip-stack__skip { position: absolute; z-index: 120; padding: 12px 18px; color: var(--ink); background: var(--paper); border: 2px solid var(--orange); border-radius: 8px; transform: translateY(-150%); opacity: 0; pointer-events: none; }
+.flip-stack__skip:focus-visible { transform: none; opacity: 1; pointer-events: auto; }
+.flip-stack__pin { position: relative; width: 100%; padding-inline: var(--flip-gutter); }
+.flip-stack__cards { position: relative; display: grid; gap: 36px; width: min(860px, 100%); margin-inline: auto; }
+.flip-card { min-width: 0; position: relative; border-radius: 24px; }
+.flip-card__link {
+  position: relative; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  min-height: var(--flip-card-base-height); overflow: hidden; color: var(--ink); background: #eeece3;
+  border: 1px solid rgba(35,36,40,.18); border-radius: inherit;
+  box-shadow: 0 18px 40px rgba(35,36,40,.13);
+  text-decoration: none;
+}
+.flip-card--domain .flip-card__link { background: #e4e3d8; }
+.flip-card--reports .flip-card__link { background: #f5ebd4; }
+.flip-card__link::after { content: ""; position: absolute; inset: 0; pointer-events: none; border: 3px solid var(--orange); border-radius: inherit; opacity: 0; transition: opacity 220ms ease; z-index: 5; }
+.flip-card__link:is(:hover,:focus-visible)::after { opacity: 1; }
+.flip-card__link:focus-visible { outline: 3px solid var(--ink); outline-offset: -7px; }
+.flip-card__copy { display: flex; flex-direction: column; min-width: 0; padding: 28px 30px; }
+.flip-card__meta { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; font: 500 12px/1.4 var(--font-body); }
+.flip-card__meta > span:last-child { margin-left: auto; }
+.flip-card__index { color: var(--orange); font-variant-numeric: tabular-nums; }
+.flip-card h3 { margin: 24px 0 0; max-width: 13ch; font: 500 clamp(34px,3.2vw,44px)/1.04 var(--font-display); letter-spacing: -.045em; text-wrap: balance; }
+.flip-card__description { max-width: 38ch; margin: 14px 0 20px; font: 400 15px/1.48 var(--font-body); }
+.flip-card__kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; margin-top: auto; padding-top: 8px; }
+.flip-card__kpis > div { display: flex; flex-direction: column-reverse; gap: 4px; min-width: 0; }
+.flip-card__kpis dd { margin: 0; font: 500 30px/1.08 var(--font-display); letter-spacing: -.025em; }
+.flip-card__kpis dt { font: 400 12px/1.35 var(--font-body); color: var(--ink-soft); }
+.flip-card__cta { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 22px; min-height: 24px; font: 500 14px/1.4 var(--font-body); }
+.flip-card__cta svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.6; flex: none; }
+.flip-card__media { position: relative; margin: 0; min-width: 0; min-height: 0; background: #f5f5f7; overflow: hidden; }
+.flip-card__media img { display: block; width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: left top; }
+.flip-card--domain .flip-card__media img { object-position: center; }
+.flip-card__shade { position: absolute; inset: 0; pointer-events: none; border-radius: inherit; background: #141414; opacity: 0; }
+/* The pin clips at the viewport, not at the card. Completed cards remain in the
+   upper pile while future cards have visible lower edges. Perspective belongs
+   to each face, and travels with it, rather than fixing a hinge to the screen. */
+.flip-stack.is-enhanced { height: calc((var(--flip-count) + 1) * var(--flip-viewport)); }
+.flip-stack.is-enhanced .flip-stack__pin {
+  position: sticky; top: 0; height: var(--flip-viewport);
+  display: grid; align-items: center; overflow: clip;
+}
+.flip-stack.is-enhanced .flip-stack__cards {
+  display: block; height: var(--flip-card-height); perspective: none;
+}
+.flip-stack.is-enhanced .flip-card {
+  position: absolute; inset: 0; height: 100%;
+  transform-origin: 50% 50%; backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; will-change: transform;
+}
+.flip-stack.is-enhanced .flip-card__link { height: 100%; min-height: 0; }
+.flip-stack.is-enhanced .flip-card__shade { opacity: var(--fold-shade,0); }
+/* Non-enhanced layout remains a complete linear reading experience. */
+@media (max-width: 1000px) {
+  .flip-card__copy { padding: 26px; }
+  .flip-card h3 { font-size: 38px; }
+}
+@media (max-width: 620px) {
+  .flip-stack { --flip-card-base-height: 590px; --flip-gutter: 24px; }
+  .flip-card { border-radius: 20px; }
+  .flip-card__link { grid-template-columns: 1fr; grid-template-rows: 174px auto; }
+  .flip-card__media { grid-row: 1; }
+  .flip-card__copy { grid-row: 2; padding: 20px 22px; }
+  .flip-card h3 { font-size: clamp(29px,8vw,38px); max-width: 16ch; margin-top: 14px; }
+  .flip-card__meta { gap: 4px 8px; }
+  .flip-card__description { margin: 10px 0 14px; font-size: 14px; line-height: 1.45; }
+  .flip-card__kpis { gap: 12px 16px; padding-top: 4px; }
+  .flip-card__kpis dd { font-size: 27px; }
+  .flip-card__cta { margin-top: 16px; }
+}
+@media (max-width: 370px) {
+  .flip-stack { --flip-card-base-height: 592px; --flip-gutter: 20px; }
+  .flip-card__link { grid-template-rows: 140px auto; }
+  .flip-card__copy { padding: 18px; }
+  .flip-card h3 { font-size: 29px; }
+  .flip-card__kpis dd { font-size: 25px; }
+}
+@media (max-width:620px) and (max-height:740px) {
+  .flip-stack { --flip-card-base-height: 546px; }
+  .flip-card__link { grid-template-rows: 134px auto; }
+  .flip-card__copy { padding: 18px 20px; }
+  .flip-card h3 { margin-top: 12px; font-size: 30px; }
+  .flip-card__description { margin: 9px 0 12px; }
+  .flip-card__kpis { gap: 10px 14px; }
+  .flip-card__kpis dd { font-size: 25px; }
+  .flip-card__cta { margin-top: 14px; }
+}
+@media (min-width:621px) and (max-height:720px) {
+  .flip-stack { --flip-card-base-height: 428px; }
+  .flip-card__copy { padding: 22px 26px; }
+  .flip-card h3 { font-size: 34px; margin-top: 16px; }
+  .flip-card__description { margin: 10px 0 14px; font-size: 14px; }
+  .flip-card__kpis { gap: 12px 20px; padding-top: 4px; }
+  .flip-card__kpis dd { font-size: 28px; }
+  .flip-card__cta { margin-top: 16px; }
+}
+@media (max-height:500px) and (min-aspect-ratio:1/1) {
+  .flip-stack { --flip-card-base-height: 264px; --flip-gutter: clamp(32px, 6.5vw, 60px); }
+  .flip-card__link { grid-template-columns: minmax(0,1.85fr) minmax(0,1fr); grid-template-rows: 1fr; }
+  .flip-card__copy { grid-row: 1; grid-column: 1; padding: 12px 20px; }
+  .flip-card__media { grid-row: 1; grid-column: 2; }
+  .flip-card__meta { gap: 4px 8px; }
+  .flip-card h3 { font-size: 24px; margin-top: 6px; max-width: 100%; }
+  .flip-card__description { margin: 6px 0; max-width: 46ch; font-size: 13px; line-height: 1.4; }
+  .flip-card__kpis { gap: 5px 18px; padding-top: 2px; }
+  .flip-card__kpis dd { font-size: 22px; }
+  .flip-card__kpis dt { font-size: 12px; line-height: 1.2; }
+  .flip-card__cta { margin-top: 8px; font-size: 12px; }
+  .flip-card__cta svg { width: 18px; height: 18px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .flip-card { transform: none !important; transition: none !important; }
+  .flip-card__link::after { transition: none; }
+  .flip-stack__instruction { display: none; }
+}
+@media print {
+  .flip-stack.is-enhanced { height: auto; }
+  .flip-stack.is-enhanced .flip-stack__pin { position: static; height: auto; display: block; overflow: visible; padding: 0; }
+  .flip-stack.is-enhanced .flip-stack__cards { display: grid; height: auto; perspective: none; gap: 32px; }
+  .flip-stack.is-enhanced .flip-card { position: relative; height: auto; transform: none !important; opacity: 1 !important; }
+  .flip-card__shade,.flip-stack__instruction { display: none !important; }
+  .flip-card { break-inside: avoid; }
+}
+html:not(.js) .flip-stack__instruction { display: none; }
+
+/* V74 long-title clipping fix */
+.flip-card h3{line-height:1.10;padding-block:.04em .12em;overflow:visible}

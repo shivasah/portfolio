@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#fcfcf4" name="theme-color"/>
+<meta content="Agent Management — Cisco AppDynamics product design by Shiva Sah." name="description"/>
+<title>Agent Management — Shiva Sah</title>
+<script>document.documentElement.classList.add("js");</script>
+<script>
+(() => {
+  const host = (location.hostname || '').toLowerCase();
+  // Only suppress network font requests inside OpenAI's restricted artifact/canvas preview.
+  // Local files and normal deployments should load the exact webfonts.
+  const restrictedPreview = /(openai|chatgpt|oaiusercontent|oaistatic|sandbox|canvas)/.test(host);
+
+  document.documentElement.classList.add(restrictedPreview ? 'font-preview-safe' : 'font-web-enabled');
+  if (restrictedPreview) return;
+
+  const stylesheets = [
+    'https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,600,700,800&display=swap',
+    'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap'
+  ];
+
+  stylesheets.forEach((href) => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+})();
+</script>
+<link href="styles.css?v=83" rel="stylesheet"/>
+<link href="menu.css?v=83" rel="stylesheet"/>
+<link href="preloader-art.css?v=83" rel="stylesheet"/>
+<link href="agent.css?v=83" rel="stylesheet"/>
+<script defer="" src="site-config.js?v=83"></script>
+<script defer="" src="preloader-art.js?v=83"></script>
+<script defer="" src="app.js?v=83"></script>
+<script defer="" src="agent.js?v=83"></script>
+<link href="refinements-v74.css?v=83" rel="stylesheet"/><script defer="" src="refinements-v74.js?v=83"></script>
+<link href="refinements-v75.css?v=83" rel="stylesheet"/><link href="refinements-v76.css?v=83" rel="stylesheet"/>
+<link href="refinements-v77.css?v=83" rel="stylesheet"/>
+<link href="refinements-v78.css?v=83" rel="stylesheet"/>
+<link href="refinements-v79.css?v=83" rel="stylesheet"/>
+<link href="refinements-v80.css?v=83" rel="stylesheet"/>
+<link href="refinements-v82.css?v=83" rel="stylesheet"/>
+</head>
+<body class="page-case page-case-agent">
+<a class="skip-link" href="#main">Skip to content</a>
+<div aria-hidden="true" class="page-wipe">
+<div class="page-wipe__signature-wrap page-wipe__signature-wrap--wave">
+<span class="sr-only">shiva</span>
+<svg aria-hidden="true" class="page-wipe__signature page-wipe__signature--wave" preserveaspectratio="none" role="presentation" viewbox="0 0 1600 240">
+<path class="page-wipe__wave page-wipe__wave--lead" d="M0 126 C88 72 170 176 260 121 C348 67 424 165 512 111 C542 92 560 94 578 102"></path>
+<g class="page-wipe__signature-center-v28" transform="translate(565 45) scale(.48)">
+<path class="page-wipe__signature-shadow-v28" d="M28 118 C54 139 92 126 84 104 C78 88 45 92 43 75 C41 57 72 49 94 61 C114 72 116 94 111 118 C115 91 126 53 143 33 C155 18 162 31 153 50 C142 72 128 98 132 121 C139 99 153 83 169 82 C188 80 191 99 182 118 C176 131 185 135 198 125 C210 115 216 101 219 90 C221 82 216 76 220 70 C225 63 233 68 229 76 C226 82 221 83 219 91 C216 105 216 121 222 130 C228 139 241 132 251 119 C259 129 266 138 276 132 C290 124 298 102 306 83 C304 104 309 122 322 129 C334 136 341 122 349 104 C357 84 376 73 391 82 C406 92 405 116 392 129 C379 142 357 135 357 117 C357 101 374 91 393 97 C410 103 424 116 442 119 C463 123 483 118 510 104"></path>
+<path class="page-wipe__signature-line-v28" d="M28 118 C54 139 92 126 84 104 C78 88 45 92 43 75 C41 57 72 49 94 61 C114 72 116 94 111 118 C115 91 126 53 143 33 C155 18 162 31 153 50 C142 72 128 98 132 121 C139 99 153 83 169 82 C188 80 191 99 182 118 C176 131 185 135 198 125 C210 115 216 101 219 90 C221 82 216 76 220 70 C225 63 233 68 229 76 C226 82 221 83 219 91 C216 105 216 121 222 130 C228 139 241 132 251 119 C259 129 266 138 276 132 C290 124 298 102 306 83 C304 104 309 122 322 129 C334 136 341 122 349 104 C357 84 376 73 391 82 C406 92 405 116 392 129 C379 142 357 135 357 117 C357 101 374 91 393 97 C410 103 424 116 442 119 C463 123 483 118 510 104"></path>
+</g>
+<path class="page-wipe__wave page-wipe__wave--tail" d="M810 95 C858 74 904 153 972 111 C1050 63 1118 166 1208 112 C1303 55 1410 170 1600 104"></path>
+</svg>
+</div>
+</div>
+<div aria-hidden="true" class="noise"></div><svg aria-hidden="true" class="sketch-filter-defs" height="0" width="0"><defs><filter height="130%" id="sketchyLine" width="130%" x="-15%" y="-15%"><feturbulence basefrequency="0.045" numoctaves="1" result="noise" seed="9" type="fractalNoise"></feturbulence><fedisplacementmap in="SourceGraphic" in2="noise" scale="1.7" xchannelselector="R" ychannelselector="G"></fedisplacementmap></filter></defs></svg>
+<div aria-hidden="true" class="cursor-scribble">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 48 48">
+<path class="cursor-scribble__loop cursor-scribble__loop--a" d="M8.5 23.5C8.2 13.2 15.4 7.1 25.6 7.8C35.2 8.4 41 14.7 40.2 24.6C39.4 34.1 32.4 40.2 22.8 39.6C13.2 39 8.7 32.7 8.5 23.5Z"></path>
+<path class="cursor-scribble__loop cursor-scribble__loop--b" d="M10.2 20.8C12.7 11.8 21 7.4 30 10.2C38.7 12.9 42.1 21.2 38.4 29.7C34.8 37.9 26.3 41 18.2 36.9C10.5 33 7.8 28.6 10.2 20.8Z"></path>
+<circle class="cursor-scribble__dot" cx="24" cy="24" r="2.4"></circle>
+</svg>
+</div>
+<header class="site-header site-header--untold site-header--floating" data-theme="light">
+<div class="header-actions"><div class="site-header__combo-pill"><a aria-label="Shiva Sah home" class="header-logo header-logo--signature transition-link" href="index.html">
+<img alt="" aria-hidden="true" class="header-lastoria-v70" src="assets/shiva-wordmark-static.svg"/>
+<span class="sr-only">Shiva Sah</span>
+</a><button aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog" aria-label="Open menu" class="site-menu-trigger site-menu-trigger--wordmark-burger" type="button"><span aria-hidden="true" class="site-menu-trigger__burger"><span></span><span></span><span></span></span><span class="sr-only">Menu</span></button></div></div>
+</header>
+<!-- SITE MENU START -->
+<!-- Shared site menu. Regenerate copies with python tools/build_menu.py. -->
+<div aria-hidden="true" aria-labelledby="site-menu-title" aria-modal="true" class="site-menu" hidden="" id="site-menu" inert="" role="dialog" tabindex="-1">
+<div class="site-menu__bar">
+<h2 class="site-menu__label" id="site-menu-title">
+<img alt="" aria-hidden="true" class="site-menu__signature-v70" src="assets/shiva-wordmark-static.svg"/>
+<span class="sr-only">Shiva</span>
+</h2>
+<button aria-label="Close menu" class="site-menu__close" type="button">
+<span>Close</span>
+<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+</button>
+</div>
+<div class="site-menu__scroll">
+<nav aria-labelledby="site-menu-pages-title" class="site-menu__primary site-menu__primary--simple">
+<a class="site-menu__page" data-menu-section="top" href="index.html#top"><strong>Home</strong></a>
+<div class="site-menu__works-group">
+<button aria-controls="site-menu-case-studies" aria-expanded="false" class="site-menu__page site-menu__works-toggle" data-menu-section="work" type="button">
+<strong>Selected works</strong>
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg>
+</button>
+<div class="site-menu__projects-panel" hidden="" id="site-menu-case-studies"><div class="site-menu__projects-inner">
+<a class="site-menu__project" data-menu-page="agent-management.html" href="agent-management.html"><strong>Agent Management</strong><em>Cisco AppDynamics</em></a>
+</div></div>
+</div>
+<a class="site-menu__page" data-menu-section="writing" href="index.html#writing"><strong>Writing</strong></a>
+<a class="site-menu__page" data-menu-section="intro" href="index.html#intro"><strong>Approach</strong></a>
+<a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
+</nav>
+</div>
+</div>
+<!-- SITE MENU END -->
+<main id="main">
+<section class="agent-hero-v72 agent-cover-fixed" data-header-theme="light" id="top">
+<div aria-hidden="true" class="editorial-grid-lines"></div>
+<div class="agent-hero-v72__stage">
+<figure class="pitch-device-v73 reveal agent-cover-device" data-agent-hero-device=""><img alt="Agent Management displayed on a MacBook Pro" class="agent-hero-upload-v75" fetchpriority="high" height="1365" src="assets/agent-hero-macbook-v75.png" width="2048"/></figure><div class="agent-hero-v72__copy">
+<p class="agent-hero-v72__kicker reveal">Cisco AppDynamics · 2023</p>
+<h1 aria-label="Agent Management" class="agent-hero-v72__title">Agent Management</h1>
+<p class="agent-hero-v72__subtitle reveal" data-reveal-delay="120">A unified way to install, upgrade and manage agents at enterprise scale.</p>
+<dl class="agent-hero-v72__facts reveal" data-reveal-delay="180">
+<div><dt>Timeline</dt><dd>6 months</dd></div>
+<div><dt>Product</dt><dd>Cisco AppDynamics</dd></div>
+<div><dt>Role</dt><dd>Senior product designer</dd></div>
+</dl>
+</div>
+<a class="agent-hero-v72__scroll" href="#pitch"><span>Scroll to discover</span><span>↓</span></a>
+</div>
+</section>
+<section class="section section--paper pitch-v24" data-header-theme="light" id="pitch">
+<div class="shell pitch-v24__inner">
+<div class="pitch-v24__top">
+<div class="pitch-v24__copy">
+<h2 class="h1 pitch-v24__title reveal">At a glance</h2>
+<h3 class="pitch-v24__statement reveal" data-reveal-delay="70">Install, upgrade and operate agents from one place.</h3>
+<p class="copy muted reveal" data-reveal-delay="130">Agent Management brought installation, upgrades, rollbacks and ongoing operations into one workflow around Smart Agent—so ITOps teams could manage thousands of machines without stitching the process together by hand.</p>
+</div>
+</div>
+<div aria-label="Pitch outcomes" class="pitch-v24__metrics">
+<article class="pitch-metric reveal pitch-metric--yellow"><strong>≈5×</strong><b>faster measured install</b><span>17 min → 3 min in the guided flow</span></article>
+<article class="pitch-metric reveal pitch-metric--orange" data-reveal-delay="60"><strong>21.5%</strong><b>SaaS adoption</b><span>of eligible accounts within six months</span></article>
+<article class="pitch-metric reveal pitch-metric--paper" data-reveal-delay="120"><strong>2 weeks → 2 hours</strong><b>customer-reported time to value</b><span>for a representative rollout</span></article>
+<article class="pitch-metric pitch-metric--quote reveal pitch-metric--ink" data-reveal-delay="180"><strong>“highlight”</strong><b>at Cisco Live</b><span>among a broad launch portfolio</span></article>
+</div>
+</div>
+</section><section class="section section--paper agent-role-section" data-header-theme="light" id="overview">
+<div class="shell agent-role-layout">
+<div class="agent-role-intro reveal">
+<h2 class="agent-section-heading">I carried the work from ambiguity to an operable system.</h2>
+</div>
+<div aria-label="What I owned and who I worked with" class="agent-role-board">
+<article class="agent-role-note agent-role-note--orange reveal">
+<span class="agent-role-note__index">01</span>
+<h3>Turn scattered operational pain into one lifecycle product model.</h3>
+<p>Problem framing + product model</p>
+</article>
+<article class="agent-role-note agent-role-note--yellow reveal">
+<span class="agent-role-note__index">02</span>
+<h3>Translate discovery research into product priorities and decisions.</h3>
+<p>Research planning + synthesis</p>
+</article>
+<article class="agent-role-note agent-role-note--paper reveal">
+<span class="agent-role-note__index">03</span>
+<h3>Standardise installation and configuration across agents.</h3>
+<p>Working sessions with PM · architecture · engineering</p>
+</article>
+<article class="agent-role-note agent-role-note--ink reveal">
+<span class="agent-role-note__index">04</span>
+<h3>Protect the core workflow through release and implementation constraints.</h3>
+<p>Prioritisation + design-to-engineering delivery</p>
+</article>
+<p class="agent-role-collaborators"><span>With</span> product management · engineering · architecture · research · field support · design system · UX writing · IX</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="analogy-title" class="agent-analogy-intro" data-header-theme="light">
+<div aria-hidden="true" class="editorial-grid-lines"></div>
+<div class="agent-analogy-intro__inner">
+<h2 class="analogy-reveal reveal" id="analogy-title"><span>let’s understand agent management</span><span>through a city.</span></h2>
+</div>
+</section>
+<section class="city-story-v13" data-city-story-v13="" data-header-theme="light" id="background">
+<div class="shell city-story-v13__stage"><div class="city-story-v13__steps">
+<article class="city-story-v13__step is-active" data-city-step="0"><h4 class="city-story-v74__label">01 · City</h4><h3>Applications are like cities.</h3><p>Services are buildings, dependencies are roads, and requests are the traffic moving between them.</p></article>
+<article class="city-story-v13__step" data-city-step="1"><h4 class="city-story-v74__label">02 · Junction</h4><h3>The useful signal is at the junction.</h3><p>Many paths meet here. A slowdown at one intersection can ripple through the system.</p></article>
+<article class="city-story-v13__step" data-city-step="2"><h4 class="city-story-v74__label">03 · Camera</h4><h3>Agents are the eyes.</h3><p>They observe what moves, where it slows, and what needs attention—without becoming the traffic itself.</p></article>
+</div>
+<div class="city-story-v13__visual">
+<div aria-live="polite" class="city-story-v13__card">
+<img alt="Hand-drawn city used as a metaphor for a distributed application" class="city-story-v13__image is-active" data-city-image="0" src="assets/agent-city.webp"/>
+<img alt="Hand-drawn road junction used as a metaphor for critical application intersections" class="city-story-v13__image" data-city-image="1" src="assets/agent-junction.webp"/>
+<img alt="Hand-drawn traffic cameras used as a metaphor for application agents observing traffic" class="city-story-v13__image" data-city-image="2" src="assets/agent-camera.webp"/>
+</div>
+</div>
+</div>
+</section>
+<section class="section section--paper agent-scale" data-header-theme="light" id="problem">
+<div class="shell agent-scale__layout" data-agent-scale="" data-agents="95000" data-per-dot="1000">
+<div class="agent-scale__statement">
+<h2 class="agent-section-heading">“It takes weeks.”</h2>
+<p class="agent-scale__metric"><span class="sr-only">95,000 agents at enterprise scale</span><span aria-hidden="true" data-agent-count="">95k</span><small aria-hidden="true">agents at enterprise scale</small></p>
+</div>
+<figure aria-label="95 interactive orange dots. Each dot represents 1,000 agents." class="agent-scale__visual" data-magnet-dots="">
+<div aria-hidden="true" class="agent-scale__field"><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span><span class="agent-scale-dot is-counted"></span></div>
+<figcaption><span aria-hidden="true" class="agent-scale__legend-dot"></span>1 dot = 1,000 agents</figcaption>
+</figure>
+<p class="copy muted agent-scale__context">Installation and upgrades were assembled through scripts, documentation and coordination across teams. At this scale, even a small inconsistency became operational work.</p>
+</div>
+</section>
+<section class="section section--ink agent-news" data-header-theme="dark" id="why-it-mattered">
+<div class="shell agent-news__layout">
+<div class="agent-news__copy"><h1 class="section-title-fixed reveal">Why it mattered</h1>
+<h3 class="h3">A security event turned Christmas into an emergency upgrade window.</h3>
+<p class="copy">AppDynamics teams gave up planned holiday time to urgently upgrade agents across customer environments. The emergency exposed the human cost of a fragmented upgrade workflow—not just the technical risk.</p>
+</div>
+<div aria-label="Log4j news coverage" aria-roledescription="carousel" class="agent-news__gallery" data-active="2" data-agent-news="" data-news-stack="" role="region">
+<div class="agent-news__viewport" id="agent-news-viewport">
+<figure aria-label="1 of 3" aria-roledescription="slide" class="agent-news__slide" data-news-slide="" data-position="left" role="group">
+<div class="agent-news__image">
+<img alt="Check Point Research Log4j article screenshot" draggable="false" loading="lazy" src="assets/news-checkpoint-v24.webp"/>
+</div>
+<figcaption class="sr-only"><strong>Check Point Research</strong><span>Protect yourself against the Apache Log4j vulnerability · Dec 11, 2021</span></figcaption>
+</figure>
+<figure aria-label="2 of 3" aria-roledescription="slide" class="agent-news__slide" data-news-slide="" data-position="right" role="group">
+<div class="agent-news__image">
+<img alt="Microsoft Threat Intelligence Log4j article screenshot" draggable="false" loading="lazy" src="assets/news-microsoft-v24.webp"/>
+</div>
+<figcaption class="sr-only"><strong>Microsoft Threat Intelligence</strong><span>Guidance for preventing, detecting and hunting Log4j exploitation · Dec 11, 2021</span></figcaption>
+</figure>
+<figure aria-label="3 of 3" aria-roledescription="slide" class="agent-news__slide" data-news-slide="" data-position="front" role="group">
+<div class="agent-news__image">
+<img alt="Built In article explaining the Log4j vulnerability" draggable="false" loading="lazy" src="assets/news-builtin-v27.png"/>
+</div>
+<figcaption class="sr-only"><strong>Built In</strong><span>Log4J Vulnerability Explained: What It Is and How to Fix It</span></figcaption>
+</figure>
+</div><div class="agent-news__toolbar" data-news-controls="" hidden="">
+<p aria-atomic="true" aria-live="polite" class="agent-news__position" data-news-status="">3 of 3</p>
+<div class="agent-news__arrows">
+<button aria-controls="agent-news-viewport" aria-label="Previous news image" data-news-prev="" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6"></path></svg></button>
+<button aria-controls="agent-news-viewport" aria-label="Next news image" data-news-next="" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section--paper" data-header-theme="light" id="user">
+<div class="shell persona">
+<figure class="persona__portrait reveal-clip"><img alt="Hand-drawn sketch of an administrator working at a computer" src="assets/admin-adnan-v63.webp"/></figure>
+<div>
+<h2 class="h2 reveal" data-reveal-delay="80">Admin Adnan</h2>
+<p class="lede reveal" data-reveal-delay="150">Responsible for the stability and security of systems—while coordinating changes that can affect thousands of agents.</p>
+<div class="persona__tasks persona__tasks--notes"><article class="persona-job-note persona-job-note--one reveal"><span>01</span><img alt="" aria-hidden="true" class="figma-icon persona-job-note__icon" src="assets/adnan-deploy.svg"/><strong>Deploy + monitor agents</strong><small>Across applications, hosts and teams.</small></article><article class="persona-job-note persona-job-note--two reveal" data-reveal-delay="80"><span>02</span><img alt="" aria-hidden="true" class="figma-icon persona-job-note__icon" src="assets/adnan-optimise.svg"/><strong>Optimise configurations</strong><small>Without breaking working environments.</small></article><article class="persona-job-note persona-job-note--three reveal" data-reveal-delay="160"><span>03</span><img alt="" aria-hidden="true" class="figma-icon persona-job-note__icon" src="assets/adnan-setup.svg"/><strong>Set up alerts</strong><small>Act before customers feel impact.</small></article></div>
+</div>
+</div>
+</section>
+<section class="section section--sand discovery-v29" data-header-theme="light" id="discovery">
+<div class="shell">
+<div class="agent-discovery-header">
+<div class="discovery-v29__heading">
+<h1 class="section-title-fixed reveal">Discovery research</h1>
+<h3 class="discovery-statement-fixed reveal" data-reveal-delay="80">Across the research, admins lost context as one task moved across tools, owners and configurations.</h3>
+</div>
+<aside aria-labelledby="agent-sample-title" class="agent-sample-note">
+<p class="agent-sample-note__eyebrow">Who we spoke with</p>
+<h3 id="agent-sample-title"><strong>12</strong> participants</h3>
+<svg aria-labelledby="agent-sample-chart-title agent-sample-chart-desc" class="agent-sample-note__pie" role="img" viewbox="0 0 220 220">
+<title id="agent-sample-chart-title">Discovery research participants</title><desc id="agent-sample-chart-desc">5 internal participants and 7 external participants, out of 12 total.</desc>
+<defs><pattern height="8" id="agent-pie-hatch" patterntransform="rotate(28)" patternunits="userSpaceOnUse" width="8"><path d="M0 0V8" stroke="currentColor" stroke-opacity=".18" stroke-width="1.1"></path></pattern></defs>
+<path class="agent-pie-external" d="M110 110 L153.0000 184.4782 A86 86 0 1 1 110 24 Z"></path>
+<path d="M110 110 L153.0000 184.4782 A86 86 0 1 1 110 24 Z" fill="url(#agent-pie-hatch)"></path>
+<path class="agent-pie-internal" d="M110 110 L110 24 A86 86 0 0 1 153.0000 184.4782 Z"></path>
+<circle class="agent-pie-outline" cx="110" cy="110" r="86"></circle>
+<path class="agent-pie-echo" d="M111 25 C158 22 197 65 195 110 C198 160 157 199 111 196 C63 199 25 160 23 112 C21 63 63 24 111 25Z"></path>
+<path class="agent-pie-outline" d="M110 24L110 110L153.0000 184.4782"></path>
+<text aria-hidden="true" text-anchor="middle" x="157" y="109">5</text><text aria-hidden="true" text-anchor="middle" x="65" y="133">7</text>
+</svg>
+<ul class="agent-sample-note__legend"><li><span aria-hidden="true" class="agent-pie-key agent-pie-key--internal"></span><b>5</b> internal</li><li><span aria-hidden="true" class="agent-pie-key agent-pie-key--external"></span><b>7</b> external</li></ul>
+</aside>
+</div>
+<div class="research-summary research-summary--v29">
+<div class="discovery-v29__findings">
+<h3 class="research-subheading-fixed">What the research exposed</h3>
+<div class="research-insights research-insights--scribble">
+<article aria-controls="research-detail-1" aria-expanded="false" aria-labelledby="research-title-1" class="insight-card insight-card--scribble reveal" data-research-note="" role="button" tabindex="0"><img alt="" aria-hidden="true" class="figma-icon research-insight__icon" src="assets/discovery-research-learning-curve.svg"/><h3 id="research-title-1">The work started before execution.</h3><p class="copy-sm muted" id="research-detail-1">Admins had to identify the right agents, owners and prerequisites before they could act.</p></article>
+<article aria-controls="research-detail-2" aria-expanded="false" aria-labelledby="research-title-2" class="insight-card insight-card--scribble reveal" data-research-note="" data-reveal-delay="80" role="button" tabindex="0"><img alt="" aria-hidden="true" class="figma-icon research-insight__icon" src="assets/discovery-research-complex-configuration.svg"/><h3 id="research-title-2">Configuration was a risk decision.</h3><p class="copy-sm muted" id="research-detail-2">A wrong configuration could disrupt a working application, so confidence and recovery mattered.</p></article>
+<article aria-controls="research-detail-3" aria-expanded="false" aria-labelledby="research-title-3" class="insight-card insight-card--scribble reveal" data-research-note="" data-reveal-delay="160" role="button" tabindex="0"><img alt="" aria-hidden="true" class="figma-icon research-insight__icon" src="assets/discovery-research-fragmented-tools.svg"/><h3 id="research-title-3">One task was split across too many surfaces.</h3><p class="copy-sm muted" id="research-detail-3">Ansible and host tools worked well, but constant switching split one lifecycle task across many surfaces.</p></article>
+</div>
+</div>
+</div>
+<article aria-labelledby="decision-inventory-title" class="decision-card-wide-v70 decision-card-wide-v71 reveal decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" src="assets/decision-lightbulb-v73.svg"/><span>Decision 01</span></div><div><h2 class="decision-card-wide-v70__title" id="decision-inventory-title">Start with inventory.</h2><p class="decision-card-wide-v70__copy">Admins needed to know what existed and its state before taking action.</p></div></article></div>
+</section>
+<section class="section section--sand journey" data-header-theme="light">
+<div class="shell">
+<h2 class="h2 reveal" data-reveal-delay="80">What it took to get an install through.</h2>
+<div class="journey__steps journey__notes">
+<article class="journey-card reveal journey-note journey-note--1"><h3>Identification</h3><ul><li>Target applications</li><li>Deployment strategy</li><li>Identify stakeholders</li></ul></article>
+<article class="journey-card reveal journey-note journey-note--2" data-reveal-delay="100"><h3>Planning &amp; testing</h3><ul><li>Construct and test scripts</li><li>Create and test install steps</li><li>Validate dependencies</li></ul></article>
+<article class="journey-card reveal journey-note journey-note--3" data-reveal-delay="200"><h3>Execution</h3><ul><li>Schedule a window</li><li>Deploy scripts or install manually</li><li>Verify and restart safely</li></ul></article>
+</div>
+</div>
+</section>
+<section class="section section--paper cognitive-v24" data-header-theme="light" id="cognitive-load">
+<div class="shell cognitive-v24__layout">
+<div class="cognitive-v24__head cognitive-v67__head">
+<h2 class="h1 cognitive-v67__title reveal">Measuring cognitive load</h2>
+<h3 class="cognitive-v67__statement reveal" data-reveal-delay="70">The difficult part started before execution.</h3>
+<p class="copy muted reveal" data-reveal-delay="130">We expected execution to be the hard part. Research showed the peak came earlier: identifying the right agents, coordinating ownership and permissions, and deciding which configuration was safe enough to apply.</p>
+</div>
+<div class="cognitive-v24__chart cognitive-v24__chart--report-style cognitive-v67__chart reveal" data-cognitive-chart="">
+<svg aria-label="Cognitive load rises through identification, peaks during planning and testing, then falls during execution" role="img" viewbox="0 0 960 420">
+<defs>
+<lineargradient id="cogLineV40" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0" stop-color="#232428"></stop>
+<stop offset=".38" stop-color="#232428"></stop>
+<stop offset=".54" stop-color="#ff5623"></stop>
+<stop offset=".67" stop-color="#232428"></stop>
+<stop offset="1" stop-color="#232428"></stop>
+</lineargradient>
+</defs>
+<path class="cog-axis cog-axis--baseline" d="M112 344H874"></path>
+<path class="cog-axis cog-axis--y" d="M112 344V112"></path>
+<text class="cog-label cog-label--y" text-anchor="middle" transform="rotate(-90 58 228)" x="58" y="228">Cognitive load</text>
+<path class="cog-curve cog-curve--report" d="M112 284 C190 267 252 224 326 174 C430 102 565 104 665 144 C744 176 797 238 854 292" data-cog-line=""></path>
+<text class="cog-label" x="112" y="382">Identification</text>
+<text class="cog-label" x="405" y="382">Planning &amp; testing</text>
+<text class="cog-label" x="760" y="382">Execution</text>
+</svg>
+<button aria-label="Why identification carries cognitive load" class="cog-hotspot" data-cog-position="0.27" data-cog-tip="Identifying the right applications and agents required collaborative effort across owners and operators." type="button"><span></span></button>
+<button aria-label="Why planning carries the peak cognitive load" class="cog-hotspot cog-hotspot--peak" data-cog-position="0.50" data-cog-tip="Installation required admin permission plus application-owner changes to link applications to agents." type="button"><span></span></button>
+<button aria-label="Why configuration testing carries high cognitive load" class="cog-hotspot cog-hotspot--flip" data-cog-position="0.68" data-cog-tip="An incompatible configuration could break a working environment, so testing carried high consequence." type="button"><span></span></button>
+</div>
+<article aria-labelledby="decision-target-title" class="decision-card-wide-v70 decision-card-wide-v71 reveal decision-card-breakout-v73 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" src="assets/decision-lightbulb-v73.svg"/><span>Decision 02</span></div><div><h2 class="decision-card-wide-v70__title" id="decision-target-title">Make the target clear before the action.</h2><p class="decision-card-wide-v70__copy">Show ownership, status and configuration before asking admins to commit.</p></div></article>
+</div>
+</section>
+<section class="section section--ink zfi-section zfi-section--v29" data-header-theme="dark" id="direction">
+<div class="shell zfi-layout zfi-layout--v29">
+<div class="zfi-intro">
+<h3 class="predecessor-fixed">The predecessor</h3>
+<h2 class="h2 reveal">ZFI simplified one install.</h2>
+<p class="copy reveal" data-reveal-delay="80">At fleet scale, admins also needed bulk actions, persistent status and ongoing management.</p>
+<div class="case-disclosure-slot"><details class="zfi-more story-accordion story-accordion--dark case-disclosure"><summary aria-controls="disclosure-panel-1"><span class="case-disclosure__label">Learn more about ZFI</span><span aria-hidden="true" class="case-disclosure__icon"><svg viewbox="0 0 24 24"><path d="M5 12h14"></path><path class="case-disclosure__plus" d="M12 5v14"></path></svg></span></summary><div class="zfi-more__body story-accordion__body" id="disclosure-panel-1"><div class="story-accordion__inner"><p>ZFI guided installation well, but the workflow fragmented again after setup.</p></div></div></details></div>
+</div>
+<figure class="zfi-product-evidence reveal">
+<img alt="Zero Friction Installation guided Java agent setup showing a step-by-step installation flow" loading="lazy" src="assets/zfi-guided-install-v64.png"/>
+<figcaption><span>Zero Friction Installation</span><strong>A guided path for installing one agent</strong></figcaption>
+</figure>
+<div class="agent-zfi-learnings"><div class="agent-zfi-learnings__label"><h3 class="agent-zfi-learnings__title">Learning from ZFI</h3></div>
+<article class="agent-zfi-note"><button aria-controls="zfi-fleet-detail" aria-describedby="zfi-fleet-detail" aria-expanded="false" aria-labelledby="zfi-fleet-title" class="agent-zfi-card" data-zfi-note="" type="button">
+<span class="agent-zfi-card__top"><span aria-hidden="true">01</span><img alt="" aria-hidden="true" height="72" src="assets/zfi-fleet.svg" width="72"/></span>
+<span class="agent-zfi-card__title" id="zfi-fleet-title">Design for fleets.</span>
+<span class="agent-zfi-card__space"><span class="agent-zfi-card__detail" id="zfi-fleet-detail">Fleet work needed bulk actions, persistent status, and a clear recovery path when operations ran long.</span></span>
+<span aria-hidden="true" class="agent-zfi-card__hint"><i>+</i></span></button></article>
+<article class="agent-zfi-note agent-zfi-note--yellow"><button aria-controls="zfi-step-detail" aria-describedby="zfi-step-detail" aria-expanded="false" aria-labelledby="zfi-step-title" class="agent-zfi-card" data-zfi-note="" type="button">
+<span class="agent-zfi-card__top"><span aria-hidden="true">02</span><img alt="" aria-hidden="true" height="72" src="assets/zfi-installation-step.svg" width="72"/></span>
+<span class="agent-zfi-card__title" id="zfi-step-title">Installation is one step.</span>
+<span class="agent-zfi-card__space"><span class="agent-zfi-card__detail" id="zfi-step-detail">Installation was one moment; inventory, upgrades, configuration, and history still needed to stay connected afterward.</span></span>
+<span aria-hidden="true" class="agent-zfi-card__hint"><i>+</i></span></button></article>
+</div>
+<article aria-labelledby="decision-fleet-title" class="decision-card-wide-v70 decision-card-wide-v71 reveal decision-card-breakout-v73 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" src="assets/decision-lightbulb-v73.svg"/><span>Decision 03</span></div><div><h2 class="decision-card-wide-v70__title" id="decision-fleet-title">Keep the guidance. Make it work for fleets.</h2><p class="decision-card-wide-v70__copy">Bulk actions and persistent status extend the guided model.</p></div></article></div></section>
+<section class="lifecycle-scene" data-header-theme="light" data-lifecycle-scene="" id="agent-lifecycle">
+<div class="lifecycle-scene__sticky">
+<div class="shell">
+<h2 class="h2 lifecycle-scene__title">Focus on the lifecycle moments with the most leverage.</h2>
+<div aria-label="Five phases of the agent lifecycle" class="lifecycle-deck">
+<article aria-expanded="false" class="lifecycle-flip" data-life-card="0" role="button" tabindex="0"><div class="lifecycle-flip__inner"><div class="lifecycle-flip__face lifecycle-flip__front"><strong>01</strong><img alt="" aria-hidden="true" class="figma-icon lifecycle-flip__icon" src="assets/agent-lifecycle-discovery.svg"/><span>Discovery</span></div><div class="lifecycle-flip__face lifecycle-flip__back"><b>Discovery</b><p>Identify environments, dependencies and prerequisites before work begins.</p></div></div></article>
+<article aria-expanded="false" class="lifecycle-flip" data-life-card="1" role="button" tabindex="0"><div class="lifecycle-flip__inner"><div class="lifecycle-flip__face lifecycle-flip__front"><strong>02</strong><img alt="" aria-hidden="true" class="figma-icon lifecycle-flip__icon" src="assets/agent-lifecycle-installation.svg"/><span>Installation</span></div><div class="lifecycle-flip__face lifecycle-flip__back"><b>Installation</b><p>Guide setup and deployment with a clear, repeatable supported path.</p></div></div></article>
+<article aria-expanded="false" class="lifecycle-flip" data-life-card="2" role="button" tabindex="0"><div class="lifecycle-flip__inner"><div class="lifecycle-flip__face lifecycle-flip__front"><strong>03</strong><img alt="" aria-hidden="true" class="figma-icon lifecycle-flip__icon" src="assets/agent-lifecycle-upgradation.svg"/><span>Upgradation</span></div><div class="lifecycle-flip__face lifecycle-flip__back"><b>Upgradation</b><p>Coordinate version changes across hosts without losing operational context.</p></div></div></article>
+<article aria-expanded="false" class="lifecycle-flip" data-life-card="3" role="button" tabindex="0"><div class="lifecycle-flip__inner"><div class="lifecycle-flip__face lifecycle-flip__front"><strong>04</strong><img alt="" aria-hidden="true" class="figma-icon lifecycle-flip__icon" src="assets/agent-lifecycle-configuration.svg"/><span>Configuration</span></div><div class="lifecycle-flip__face lifecycle-flip__back"><b>Configuration</b><p>Manage settings consistently while keeping the system observable and safe.</p></div></div></article>
+<article aria-expanded="false" class="lifecycle-flip" data-life-card="4" role="button" tabindex="0"><div class="lifecycle-flip__inner"><div class="lifecycle-flip__face lifecycle-flip__front"><strong>05</strong><img alt="" aria-hidden="true" class="figma-icon lifecycle-flip__icon" src="assets/agent-lifecycle-termination.svg"/><span>Termination</span></div><div class="lifecycle-flip__face lifecycle-flip__back"><b>Termination</b><p>Retire agents cleanly when applications or environments change.</p></div></div></article>
+</div>
+<div class="lifecycle-scene__decision">
+<p class="lifecycle-scene__conclusion">We prioritised installation, upgradation and configuration: the recurring moments with the most coordination and risk.</p>
+<div class="case-disclosure-slot"><details class="lifecycle-why story-accordion story-accordion--light case-disclosure">
+<summary aria-controls="disclosure-panel-2"><span class="case-disclosure__label">See why</span><span aria-hidden="true" class="case-disclosure__icon"><svg viewbox="0 0 24 24"><path d="M5 12h14"></path><path class="case-disclosure__plus" d="M12 5v14"></path></svg></span></summary>
+<div class="lifecycle-why__body story-accordion__body" id="disclosure-panel-2"><div class="story-accordion__inner">
+<p>These three stages repeated most often and carried the highest cost when the workflow broke.</p>
+</div></div>
+</details></div>
+</div>
+</div>
+</div>
+</section>
+<section class="before-after section--paper" data-header-theme="light" id="technical-landscape">
+<div class="before-after__sticky">
+<div class="before-after__grid">
+<div><h3 class="technical-label-fixed">Technical landscape</h3><h2 class="before-after__headline">from many installs to one orchestrator.</h2><div class="before-after__captions"><article class="before-after__copy-item is-active"><strong>Before</strong><h3>Every agent was installed and managed independently.</h3><p>Agent-specific setup repeated on every host.</p></article><article class="before-after__copy-item"><strong>After</strong><h3>One Smart Agent orchestrates the host.</h3><p>A shared host-level layer can coordinate agent operations.</p></article></div></div>
+<div class="before-after__stage">
+<img alt="Before architecture with many manually installed agents" class="before-after__image before-after__image--before" src="assets/architecture-before-v63.webp"/>
+<img alt="After architecture with a Smart Agent on each host" class="before-after__image before-after__image--after" src="assets/architecture-after-v63.webp"/>
+</div>
+</div>
+</div>
+</section><section class="section section--paper decision4-post-landscape-v75" data-header-theme="light"><div class="shell decision-card-v73__architecture-wrap"><article aria-labelledby="decision-orchestrator-title" class="decision-card-wide-v70 decision-card-wide-v71 reveal decision-card-breakout-v73 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" src="assets/decision-lightbulb-v73.svg"/><span>Decision 04</span></div><div><h2 class="decision-card-wide-v70__title" id="decision-orchestrator-title">Standardise the steps behind each agent.</h2><p class="decision-card-wide-v70__copy">Smart Agent could orchestrate the differences while the workflow stayed familiar.</p></div></article></div></section>
+<section class="section section--sand design-phase design-phase--brainstorm design-fixed" data-header-theme="light" id="design">
+<div class="shell design-phase__grid">
+<div>
+<h1 class="design-phase__title-v70 reveal" id="brainstorm-board-title">Brainstorming</h1>
+<h3 class="design-phase__statement-v70 reveal" data-reveal-delay="80">Make the system visible before making it operable.</h3>
+<p class="copy muted reveal" data-reveal-delay="150">I used the early model to connect the recurring decisions that had been scattered across installation, inventory, configuration and ongoing operations.</p>
+</div>
+<figure aria-labelledby="brainstorm-board-title" class="brainstorm-image-v70 reveal"><img alt="Hand-drawn brainstorming concepts for agent status, market updates, history, and installing or maintaining agents" loading="lazy" src="assets/brainstorm-v70.png"/><figcaption class="sr-only">Brainstorming explored status and alerts, market updates, historical performance and configuration history, and installing or maintaining agents.</figcaption></figure>
+</div>
+</section>
+<section class="section section--paper design-phase design-phase--layout design-fixed" data-header-theme="light" id="layout">
+<div class="shell design-phase__grid design-phase__grid--reverse">
+<figure class="design-phase__art design-phase__art--layout"><img alt="Early layout sketch separating an action bar, main content area and inspector panel" loading="lazy" src="assets/layout-design.webp"/></figure>
+<div>
+<h1 class="design-phase__title-v70 reveal">Layout design</h1>
+<h3 class="design-phase__statement-v70 reveal" data-reveal-delay="80">Then give repeated actions a stable place to live.</h3>
+<p class="copy muted reveal" data-reveal-delay="150">The layout separates global context, selection-dependent actions and detailed configuration without turning each task into a new page.</p>
+</div>
+</div>
+</section>
+<section class="section section--sand validation-v29" data-header-theme="light" id="validation">
+<div class="shell validation-v29__grid">
+<div class="validation-v29__copy">
+<h1 class="section-title-fixed reveal">Low-fidelity validation</h1>
+<h3 class="validation-statement-fixed reveal" data-reveal-delay="70"><strong>14 customers</strong> from <strong>6 companies</strong> tested the direction.</h3>
+<div class="validation-v29__scores">
+<article class="score-card score-card--rating reveal" style="--score:.84"><strong>4.2<span>/5</span></strong><p>Easy to use</p><div aria-hidden="true" class="score-card__meter"><i></i><i></i><i></i><i></i><i></i></div></article>
+<article class="score-card score-card--rating reveal" data-reveal-delay="70" style="--score:.82"><strong>4.1<span>/5</span></strong><p>Features met needs</p><div aria-hidden="true" class="score-card__meter"><i></i><i></i><i></i><i></i><i></i></div></article>
+<article class="score-card score-card--time reveal" data-reveal-delay="140"><strong>3<span> min</span></strong><p>Install flow, down from 17 min</p><div class="score-card__timebar"><span>17</span><b></b><span>3</span></div></article>
+</div>
+</div>
+<div class="validation-v29__visuals">
+<article class="iteration-card iteration-fixed reveal"><img alt="Unified table dashboard iteration" src="assets/iteration-table.webp"/><div class="iteration-card__body"><div><p class="label">Preferred direction</p><h3 class="h4">Unified dashboard</h3></div><p class="copy-sm muted">Preferred by 4 of 6 teams: “more data at a glance.”</p></div></article>
+<article class="iteration-card iteration-fixed reveal" data-reveal-delay="100"><img alt="Dynamic card view iteration" src="assets/iteration-cards.webp"/><div class="iteration-card__body"><div><p class="label">Explored</p><h3 class="h4">Dynamic view</h3></div><p class="copy-sm muted">Grouped by agent type.</p></div></article>
+</div>
+<div class="validation-change-sticky-v75" data-validation-change-sticky=""><div class="validation-change-log reveal">
+<div class="validation-change-log__head"><span>What validation changed</span><h3>We tested the operating model, not just the screens.</h3></div>
+<article><b>Inventory first</b><p>Customers wanted to understand agent state and context before choosing an action. That reinforced inventory as the starting point for the product.</p></article>
+<article><b>Restart with explicit consent</b><p>Customers were hesitant about agents automatically restarting applications. We added a restart reminder in the panel so the consequence stayed visible and under admin control.</p></article>
+</div></div>
+</div>
+</section>
+<section class="section section--paper" data-header-theme="light">
+<div class="shell">
+<h2 class="h2 reveal" data-reveal-delay="80">A nested tree stopped working at enterprise scale.</h2>
+<p class="copy muted reveal" data-reveal-delay="150" style="max-width:720px;margin-top:22px">Three of six teams found it hard to use at scale. Adjacent columns kept host, application, tier and node visible.</p>
+<div class="drawing-board drawing-board--cards" style="margin-top:55px">
+<figure class="drawing-board__image hierarchy-card reveal-clip"><span class="hierarchy-card__label">Before</span><img alt="Nested tree concept for application hierarchy" src="assets/tree-view.webp"/><figcaption>Nested tree</figcaption></figure>
+<figure class="drawing-board__arrow reveal"><img alt="Hand-drawn arrow" src="assets/rough-arrow.webp"/></figure>
+<figure class="drawing-board__image hierarchy-card reveal-clip"><span class="hierarchy-card__label">After</span><img alt="Column-based hierarchy mapping redesign" src="assets/mapping-redesign.webp"/><figcaption>Adjacent columns</figcaption></figure>
+</div>
+</div>
+</section>
+<section class="screen-flow" data-header-theme="dark" id="solution" style="--flow-height:610vh;--flow-aspect:1.54639">
+<div class="screen-flow__sticky">
+<header class="screen-flow__header">
+<h1 class="screen-flow__title">The final experience</h1>
+<h3 class="screen-flow__headline">Admin Adnan installs Java agents for newly deployed applications.</h3>
+</header>
+<div aria-live="polite" class="screen-flow__copy">
+<article class="flow-step is-active"><strong>01 / Inventory</strong><h3>Check the fleet before acting.</h3><p>He checks status, version and environment so he knows which agents need attention.</p></article>
+<article class="flow-step"><strong>02 / Bulk action</strong><h3>Group the work.</h3><p>He selects agents that need the same change and expects one action to apply to the group.</p></article>
+<article class="flow-step"><strong>03 / Agent type</strong><h3>Choose Java, then see what matters.</h3><p>He expects the flow to surface Java-specific prerequisites without changing the overall pattern.</p></article>
+<article class="flow-step"><strong>04 / Mapping</strong><h3>Confirm where each agent reports.</h3><p>He maps hosts to applications, tiers and nodes and checks the relationship before continuing.</p></article>
+<article class="flow-step"><strong>05 / Attributes</strong><h3>Set shared configuration once.</h3><p>He sets common values for the group, then checks the exceptions.</p></article>
+<article class="flow-step"><strong>06 / Progress</strong><h3>Start the job and move on.</h3><p>He expects installation to continue in the background and status to remain visible in History.</p></article>
+<article class="flow-step"><strong>07 / Outcome</strong><h3>Confirm the agents are reporting.</h3><p>He returns to monitoring to verify the newly deployed applications are connected.</p></article>
+</div>
+<div class="screen-flow__frame">
+<img alt="Agent inventory dashboard" class="flow-screen is-active" data-flow-aspect="1.54639" src="assets/flow-01.webp"/>
+<img alt="Bulk agent selection and actions" class="flow-screen" data-flow-aspect="1.54639" src="assets/flow-02.webp"/>
+<img alt="Select agent type to install" class="flow-screen" data-flow-aspect="1.54639" src="assets/flow-03.webp"/>
+<img alt="Map hosts to applications, tiers and nodes" class="flow-screen" data-flow-aspect="1.54639" src="assets/flow-04.webp"/>
+<img alt="Set agent attributes" class="flow-screen" data-flow-aspect="1.54639" src="assets/flow-05.webp"/>
+<img alt="Installation progress" class="flow-screen" data-flow-aspect="1.54639" src="assets/flow-06.webp"/>
+<img alt="Application monitoring map after installation" class="flow-screen" data-flow-aspect="1.7769" src="assets/flow-07.webp"/>
+<div aria-hidden="true" class="screen-flow__rail"><span class="is-active"></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="decision-background-title" class="section decision-card-section-v71 section--ink decision-card-section-v73--black" data-header-theme="dark" id="decision-background"><div class="shell"><article class="decision-card-wide-v70 decision-card-wide-v71 reveal decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" src="assets/decision-lightbulb-v73.svg"/><span>Decision 05</span></div><div><h2 class="decision-card-wide-v70__title" id="decision-background-title">Keep long-running work visible.</h2><p class="decision-card-wide-v70__copy">Status and recovery stay available after the install panel closes.</p></div></article></div></section>
+<section class="section section--paper" data-header-theme="light" id="balancing-act">
+<div class="shell balance">
+<div>
+<h1 class="section-title-fixed reveal">The balancing act</h1>
+<p class="copy muted reveal release-priority__intro" data-reveal-delay="120">A fixed release date forced prioritisation. We kept the end-to-end jobs intact and ranked secondary capabilities with engineering.</p>
+<div class="balance__sides reveal">
+<article class="balance__side"><p class="label">Must have</p><h3 class="h4" style="margin-top:18px">Keep inventory, fleet actions, guided setup and status connected.</h3></article>
+<span class="balance__vs">+</span>
+<article class="balance__side"><p class="label">Good to have</p><h3 class="h4" style="margin-top:18px">Rank secondary capabilities by impact and effort.</h3></article>
+</div>
+<div class="balance__features balance__features--v27 reveal">
+<div class="balance__feature"><span>01</span><img alt="" aria-hidden="true" class="figma-icon balance__feature-icon" src="assets/experience-vs-release-scheduling.svg"/><b>Scheduling</b></div>
+<div class="balance__feature"><span>02</span><img alt="" aria-hidden="true" class="figma-icon balance__feature-icon" src="assets/experience-vs-release-live-logs.svg"/><b>Live logs</b></div>
+<div class="balance__feature"><span>03</span><img alt="" aria-hidden="true" class="figma-icon balance__feature-icon" src="assets/experience-vs-release-side-panel.svg"/><b>Sidebar interactions</b></div>
+<div class="balance__feature"><span>04</span><img alt="" aria-hidden="true" class="figma-icon balance__feature-icon" src="assets/experience-vs-release-in-app.svg"/><b>In-app view</b></div>
+</div>
+</div>
+<img alt="Hand-drawn character balancing two trays" class="reveal" src="assets/balancing.webp"/>
+</div>
+</section>
+<section class="section section--sand impact-v12" data-header-theme="light" id="impact">
+<div class="shell">
+<div class="impact-hero"><div><h1 class="section-title-fixed reveal">Impact</h1></div></div>
+<div class="impact-split">
+<section aria-labelledby="impact-reach-title" class="impact-group impact-group--reach">
+<div class="impact-group__head"><div><h3 class="h3" id="impact-reach-title">Adoption across accounts and hosts.<sup aria-label="See adoption scope note" class="impact-direct-note">*</sup></h3></div></div>
+<div class="impact-grid impact-grid--reach">
+<article class="impact-card impact-card--reach reveal"><p class="impact-card__number"><span data-count="430" data-suffix="+">430+</span></p><p class="impact-card__label">SaaS customers</p><p class="impact-card__foot">Direct adoption of Smart Agents and Agent Management.</p></article>
+<article class="impact-card impact-card--reach reveal" data-reveal-delay="70"><p class="impact-card__number"><span data-count="680" data-suffix="+">680+</span></p><p class="impact-card__label">SaaS accounts</p><p class="impact-card__foot">Using the portal across multiple accounts.</p></article>
+<article class="impact-card impact-card--reach reveal" data-reveal-delay="140"><p class="impact-card__number"><span data-count="3000" data-suffix="+">3,000+</span></p><p class="impact-card__label">SaaS hosts</p><p class="impact-card__foot">Powered by Smart Agent within six months.</p></article>
+<article class="impact-card impact-card--reach reveal" data-reveal-delay="200"><p class="impact-card__number">21.5%</p><p class="impact-card__label">Eligible SaaS accounts</p><p class="impact-card__foot">Adopted Agent Management within six months.</p></article></div>
+<p class="copy-sm muted impact-group__note"><span class="impact-direct-note">*</span> These are direct SaaS adoption metrics. On-premises adoption data is classified and intentionally omitted.</p>
+</section>
+<section aria-labelledby="impact-efficiency-title" class="impact-group impact-group--efficiency">
+<div class="impact-group__head"><div><h3 class="h3" id="impact-efficiency-title">Less time between intent and a working agent.</h3></div></div>
+<div class="impact-grid impact-grid--efficiency">
+<article class="impact-card reveal"><div><p class="impact-card__label">Customer-reported time to value</p><p class="impact-card__number">2 weeks <svg aria-hidden="true" class="impact-card__arrow impact-card__arrow--draw" viewbox="0 0 76 24"><path d="M3 13 C22 8 38 15 62 10"></path><path d="M55 4 L64 10 L56 18"></path></svg> 2 hours</p></div><p class="impact-card__foot">Reported by a customer for a representative rollout.</p></article>
+<article class="impact-card reveal" data-reveal-delay="90"><div><p class="impact-card__label">Observed guided install</p><p class="impact-card__number">17 min <svg aria-hidden="true" class="impact-card__arrow impact-card__arrow--draw" viewbox="0 0 76 24"><path d="M3 13 C22 8 38 15 62 10"></path><path d="M55 4 L64 10 L56 18"></path></svg> 3 min</p></div><p class="impact-card__foot">Observed benchmark completion time. The shipped workflow reduced the measured installation journey by roughly 5×.</p></article>
+</div>
+</section>
+<section aria-labelledby="design-influence-title" class="design-influence-v73" id="design-influence">
+<div class="design-influence-v73__head reveal">
+<h2 id="design-influence-title">What design influenced</h2>
+<p>These were the parts of the product model and workflow that design directly shaped.</p>
+</div>
+<div aria-label="Areas influenced by design" class="design-influence-v73__notes">
+<article class="design-influence-note design-influence-note--orange reveal"><span>01</span><h3>One workflow</h3><p>Installation, upgrades, rollbacks and ongoing operations shared one product model.</p></article>
+<article class="design-influence-note design-influence-note--yellow reveal"><span>02</span><h3>Fleet operations</h3><p>Bulk actions and persistent status made the workflow usable across thousands of agents.</p></article>
+<article class="design-influence-note design-influence-note--paper reveal"><span>03</span><h3>Visible state</h3><p>Inventory, ownership and configuration stayed visible before admins committed changes.</p></article>
+<article class="design-influence-note design-influence-note--ink reveal"><span>04</span><h3>Guided configuration</h3><p>The guided install model became a repeatable pattern for safer configuration.</p></article>
+</div>
+<p class="design-influence-v73__caveat">Orchestration and execution performance were enabled by the broader product and engineering system.</p>
+<div class="roadmap-subsection-v73" id="roadmap">
+<h3 class="roadmap-subsection-v73__title reveal">UX defined the roadmap</h3>
+<p class="roadmap-subsection-v73__statement reveal" data-reveal-delay="80">The experience became a sequence of product bets—not a one-off screen.</p>
+<div class="roadmap" data-roadmap-reveal="" style="margin-top:64px">
+<div class="roadmap__row reveal"><h3 class="h4">Cisco AppDynamics</h3><div><div class="roadmap__line"><span class="roadmap__fill" style="--fill:72%"></span><div class="roadmap__nodes"><span class="roadmap__node is-done"></span><span class="roadmap__node is-done"></span><span class="roadmap__node"></span></div></div><div class="roadmap__labels"><span>Ansible / Chef management</span><span>Simplified management UI</span><span>Auto discovery / auto attach</span></div></div></div>
+<div class="roadmap__row reveal"><h3 class="h4">Cisco Observability Platform</h3><div><div class="roadmap__line"><span class="roadmap__fill" style="--fill:42%"></span><div class="roadmap__nodes"><span class="roadmap__node is-done"></span><span class="roadmap__node"></span><span class="roadmap__node"></span></div></div><div class="roadmap__labels"><span>Inventory &amp; actions</span><span>Profiles &amp; templates</span><span>Host-based machine</span></div></div></div>
+</div></div>
+</section>
+</div>
+</div>
+</section>
+<section class="section architecture-shift-v70 section--ink" data-header-theme="dark" id="architecture-shift"><div class="shell architecture-shift-v70__grid"><div class="architecture-shift-v70__copy"><h2 class="architecture-shift-v70__title reveal">A parallel experience for Cisco Observability Platform.</h2><p class="copy architecture-shift-v70__body reveal" data-reveal-delay="80">I stayed involved as a parallel Agent Management experience was created for Cisco Observability Platform. The work explored Smart Agent behavior while keeping inventory, installation, configuration and background operations familiar.</p></div><figure class="architecture-shift-v70__media reveal"><img alt="Agent Management on Cisco Observability Platform" src="assets/epilogue.webp"/></figure></div></section><section class="section section--sand agent-learning-section" data-header-theme="light" id="learning">
+<div class="shell">
+<div class="agent-learning-heading"><div><h2 class="agent-section-heading">Four lessons that stayed with me.</h2></div></div>
+<div aria-label="Project learnings" class="agent-learning-grid">
+<article class="agent-learning-note agent-learning-note--1">
+<button aria-controls="agent-learning-detail-1" aria-describedby="agent-learning-detail-1" aria-expanded="false" aria-labelledby="agent-learning-title-1" class="agent-learning-card" data-learning-note="" type="button">
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-trust.svg"/>
+</span>
+<span class="agent-learning-card__title" id="agent-learning-title-1">Confidence before speed.</span><span class="agent-learning-card__detail" id="agent-learning-detail-1">Admins needed certainty about targets, consequences and recovery before speed mattered.</span>
+<span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
+</button>
+</article>
+<article class="agent-learning-note agent-learning-note--2">
+<button aria-controls="agent-learning-detail-2" aria-describedby="agent-learning-detail-2" aria-expanded="false" aria-labelledby="agent-learning-title-2" class="agent-learning-card" data-learning-note="" type="button">
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-share.svg"/>
+</span>
+<span class="agent-learning-card__title" id="agent-learning-title-2">Design for fleets.</span><span class="agent-learning-card__detail" id="agent-learning-detail-2">Bulk actions and persistent status need to exist from the start.</span>
+<span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
+</button>
+</article>
+<article class="agent-learning-note agent-learning-note--3">
+<button aria-controls="agent-learning-detail-3" aria-describedby="agent-learning-detail-3" aria-expanded="false" aria-labelledby="agent-learning-title-3" class="agent-learning-card" data-learning-note="" type="button">
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-align.svg"/>
+</span>
+<span class="agent-learning-card__title" id="agent-learning-title-3">Use predecessors as evidence.</span><span class="agent-learning-card__detail" id="agent-learning-detail-3">ZFI showed what guidance solved—and where one-install thinking stopped.</span>
+<span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
+</button>
+</article>
+<article class="agent-learning-note agent-learning-note--4">
+<button aria-controls="agent-learning-detail-4" aria-describedby="agent-learning-detail-4" aria-expanded="false" aria-labelledby="agent-learning-title-4" class="agent-learning-card" data-learning-note="" type="button">
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-handshake.svg"/>
+</span>
+<span class="agent-learning-card__title" id="agent-learning-title-4">Protect the critical path.</span><span class="agent-learning-card__detail" id="agent-learning-detail-4">We cut secondary features, not the end-to-end critical path.</span>
+<span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
+</button>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer site-footer--case-reveal" data-header-theme="dark" id="contact"><div class="site-footer__top site-footer__top--simple"><div><p class="site-footer__title">let’s<br/>connect.</p><p class="site-footer__note">Open to conversations about complex systems, product craft and mentoring.</p></div><div class="footer-next"><p class="eyebrow eyebrow--light">Keep exploring</p><a class="footer-next__link transition-link" href="index.html#writing"><span>Read more</span><strong>Writing &amp; research ↗</strong></a><a class="footer-next__link transition-link" href="index.html"><span>Back to</span><strong>Homepage ↗</strong></a></div></div><div class="site-footer__bottom site-footer__bottom--simple"><nav aria-label="Social links" class="footer-socials" data-contact-links="">
+<a aria-label="LinkedIn (opens in a new tab)" data-contact-key="linkedin" href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank">LinkedIn <span aria-hidden="true">↗</span></a>
+<a aria-label="Medium (opens in a new tab)" data-contact-key="medium" href="https://medium.com/" rel="noopener noreferrer" target="_blank">Medium <span aria-hidden="true">↗</span></a>
+<a aria-label="GitHub (opens in a new tab)" data-contact-key="github" href="https://github.com/" rel="noopener noreferrer" target="_blank">GitHub <span aria-hidden="true">↗</span></a>
+</nav><a aria-label="Back to top" class="back-top back-top--icon" href="#top"><svg aria-hidden="true" viewbox="0 0 32 32"><path d="M16 25V7M9 14l7-7 7 7"></path></svg></a></div></footer>
+</body>
+</html>

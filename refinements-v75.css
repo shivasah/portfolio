@@ -1,0 +1,117 @@
+/* V75 — Agent Management interaction/layout refinements + shelf/menu polish. */
+
+/* Global top-right menu trigger: exact Lastoria outline asset, rendered as a wordmark. */
+.site-menu-trigger{
+  width:104px!important;height:48px!important;min-width:104px!important;padding:7px 14px!important;
+  border-radius:999px!important;background:var(--orange)!important;color:var(--ink)!important;
+}
+.site-menu-trigger__shiva{
+  display:block;width:72px;height:34px;background:currentColor;
+  -webkit-mask:url('assets/shiva-lastoria-word-v70.svg') center/contain no-repeat;
+  mask:url('assets/shiva-lastoria-word-v70.svg') center/contain no-repeat;
+}
+.site-menu-trigger:hover{background:var(--ink)!important;color:var(--paper)!important}
+@media(max-width:620px){.site-menu-trigger{width:88px!important;min-width:88px!important}.site-menu-trigger__shiva{width:62px;height:30px}}
+
+/* Agent hero — user supplied MacBook artwork, already composited with product UI. */
+body.page-case-agent .agent-cover-fixed{min-height:100svh!important;padding:clamp(104px,12vh,148px) 0 clamp(48px,7vh,88px)!important;overflow:hidden}
+body.page-case-agent .agent-cover-fixed .agent-hero-v72__stage{
+  width:min(1500px,calc(100% - 48px));margin:auto;display:grid!important;
+  grid-template-columns:minmax(360px,.78fr) minmax(600px,1.35fr)!important;
+  grid-template-areas:'copy device' 'scroll device'!important;column-gap:clamp(20px,3vw,56px);align-items:center;
+}
+body.page-case-agent .agent-cover-fixed .agent-hero-v72__copy{grid-area:copy!important;display:block!important;align-self:center}
+body.page-case-agent .agent-cover-fixed .agent-cover-device{grid-area:device!important;margin:0!important;padding:0!important;position:relative;z-index:2;transform:none!important}
+body.page-case-agent .agent-cover-fixed .agent-hero-v72__scroll{grid-area:scroll!important;align-self:end}
+body.page-case-agent .agent-cover-fixed .agent-hero-upload-v75{
+  display:block;width:min(920px,68vw);max-width:none;height:auto;margin-inline:auto -5vw;
+  filter:drop-shadow(0 28px 34px rgba(35,36,40,.12));transform:translate3d(0,0,0);
+  animation:agentHeroFloatV75 7.5s cubic-bezier(.45,0,.55,1) infinite alternate;
+}
+@keyframes agentHeroFloatV75{from{transform:translate3d(0,5px,0)}to{transform:translate3d(0,-7px,0)}}
+@media(max-width:980px){
+ body.page-case-agent .agent-cover-fixed .agent-hero-v72__stage{grid-template-columns:1fr!important;grid-template-areas:'copy' 'device' 'scroll'!important;width:min(100% - 32px,760px)}
+ body.page-case-agent .agent-cover-fixed .agent-hero-upload-v75{width:min(900px,110vw);margin:18px -6vw -8px}
+}
+@media(prefers-reduced-motion:reduce){body.page-case-agent .agent-cover-fixed .agent-hero-upload-v75{animation:none!important}}
+
+/* Restore the pre-v74 95k slide composition: field left, story right. */
+body.page-case-agent #problem .agent-scale__layout{
+  display:grid!important;grid-template-columns:minmax(360px,1fr) minmax(360px,1fr)!important;
+  grid-template-areas:'visual statement' 'visual context'!important;gap:28px clamp(52px,8vw,120px)!important;align-items:center!important;
+}
+body.page-case-agent #problem .agent-scale__visual{grid-area:visual!important;width:min(100%,470px)!important;max-width:470px!important;margin:auto!important}
+body.page-case-agent #problem .agent-scale__statement{grid-area:statement!important}
+body.page-case-agent #problem .agent-scale__context{grid-area:context!important;grid-column:auto!important;margin-top:0!important;max-width:44ch!important}
+@media(max-width:820px){body.page-case-agent #problem .agent-scale__layout{grid-template-columns:1fr!important;grid-template-areas:'statement' 'visual' 'context'!important;gap:30px!important}body.page-case-agent #problem .agent-scale__visual{margin-inline:0!important;width:min(100%,390px)!important}}
+
+/* Discovery research cards: compact default height, hover reveals copy without resizing. */
+body.page-case-agent #discovery .research-insights{gap:18px!important}
+body.page-case-agent #discovery .insight-card{
+  min-height:232px!important;padding:22px!important;grid-template-rows:56px minmax(58px,auto) 66px!important;gap:12px!important;
+}
+body.page-case-agent #discovery .research-insight__icon{width:52px!important;height:52px!important}
+body.page-case-agent #discovery .insight-card h3{font-size:clamp(21px,1.7vw,26px)!important}
+body.page-case-agent #discovery .insight-card .copy-sm{min-height:66px!important;font-size:14px!important;line-height:1.45!important;overflow:hidden!important}
+@media(max-width:760px){body.page-case-agent #discovery .insight-card{grid-template-columns:58px 1fr!important;grid-template-rows:auto 64px!important;min-height:168px!important}body.page-case-agent #discovery .insight-card img{grid-row:1/3!important}body.page-case-agent #discovery .insight-card .copy-sm{grid-column:2!important;min-height:64px!important}}
+
+/* Compact disclosures at rest; height comes only from revealed content. */
+body.page-case-agent .case-disclosure-slot{min-height:0!important;margin-top:20px!important}
+body.page-case-agent details.case-disclosure{min-height:0!important;height:auto!important;border-radius:10px!important}
+body.page-case-agent details.case-disclosure>summary{min-height:0!important;padding:12px 16px!important;font-size:16px!important}
+body.page-case-agent .case-disclosure__icon{width:32px!important;height:32px!important}
+body.page-case-agent .case-disclosure__icon svg{width:18px!important;height:18px!important}
+body.page-case-agent details.case-disclosure .story-accordion__inner{padding:2px 16px 16px!important}
+body.page-case-agent details.case-disclosure .story-accordion__inner p{font-size:15px!important;line-height:1.5!important}
+
+/* ZFI learning notes: descriptions have room for ~2 lines; no hover stroke; centered plus. */
+body.page-case-agent .agent-zfi-card{padding:26px!important;gap:14px!important;box-shadow:none!important;outline-offset:4px}
+body.page-case-agent .agent-zfi-card:hover{box-shadow:none!important}
+body.page-case-agent .agent-zfi-card__space{min-height:58px!important;display:grid!important;align-items:start!important}
+body.page-case-agent .agent-zfi-card__detail{font-size:15px!important;line-height:1.42!important;max-width:34ch!important}
+body.page-case-agent .agent-zfi-card__hint{width:36px;height:36px;display:grid!important;place-items:center!important;margin-top:auto!important;border:1px solid rgba(35,36,40,.24);border-radius:50%;font-size:0!important;align-self:flex-end}
+body.page-case-agent .agent-zfi-card__hint i{display:grid!important;place-items:center!important;width:100%;height:100%;font:400 22px/1 var(--font-body)!important;font-style:normal!important;transform-origin:50% 50%}
+
+/* Project learning stickies: never draw surprise hover strokes; plus is geometrically centered. */
+body.page-case-agent .agent-learning-card:hover{box-shadow:none!important}
+body.page-case-agent .agent-learning-card__hint{width:40px!important;height:40px!important;display:grid!important;place-items:center!important;padding:0!important;border:1px solid rgba(35,36,40,.25)!important;border-radius:50%!important;align-self:flex-start}
+body.page-case-agent .agent-learning-card__hint span{display:grid!important;place-items:center!important;width:100%!important;height:100%!important;font-size:22px!important;line-height:1!important;transform-origin:50% 50%!important}
+
+/* Decision 4 enters only after the sticky technical landscape has fully released. */
+body.page-case-agent .decision4-post-landscape-v75{padding-block:clamp(84px,11vh,150px)!important;margin:0!important;background:var(--paper)!important}
+body.page-case-agent .decision4-post-landscape-v75 .decision-card-v73__architecture-wrap{padding:0!important}
+
+/* Validation change log owns a sticky beat after the two iterations. */
+body.page-case-agent .validation-change-sticky-v75{position:relative;min-height:125svh;margin-top:clamp(64px,9vh,110px)}
+body.page-case-agent .validation-change-sticky-v75 .validation-change-log{position:sticky!important;top:clamp(90px,12vh,138px);margin-top:0!important}
+@media(max-width:760px){body.page-case-agent .validation-change-sticky-v75{min-height:auto}body.page-case-agent .validation-change-sticky-v75 .validation-change-log{position:relative!important;top:auto}}
+
+/* Final screen to Decision 5 is one uninterrupted black field. */
+body.page-case-agent #solution{margin:0!important;background:#08070c!important}
+body.page-case-agent #decision-background{margin:0!important;background:#08070c!important;padding-block:clamp(94px,12vh,150px)!important;position:relative}
+body.page-case-agent #decision-background::before{content:'';position:absolute;left:0;right:0;top:-3px;height:4px;background:#08070c}
+
+/* Impact card content uses the full vertical rhythm rather than bunching at the top. */
+body.page-case-agent #impact .impact-card{display:flex!important;flex-direction:column!important;justify-content:space-between!important;gap:24px!important;padding:28px!important}
+body.page-case-agent #impact .impact-card--reach{display:grid!important;grid-template-rows:auto auto 1fr!important;align-content:stretch!important}
+body.page-case-agent #impact .impact-card--reach .impact-card__number{align-self:start}
+body.page-case-agent #impact .impact-card--reach .impact-card__label{align-self:start;margin-top:4px!important}
+body.page-case-agent #impact .impact-card--reach .impact-card__foot{align-self:end;margin-top:0!important;padding-top:18px}
+body.page-case-agent #impact .impact-grid--efficiency .impact-card>div{display:flex;flex-direction:column;gap:18px}
+body.page-case-agent #impact .impact-grid--efficiency .impact-card__foot{margin-top:auto!important;padding-top:18px}
+
+/* COP chapter: edge-to-edge screen on an uninterrupted black field. */
+body.page-case-agent #architecture-shift{background:#08070c!important;color:var(--paper)!important;padding:clamp(96px,12vh,150px) 0 0!important;overflow:hidden}
+body.page-case-agent #architecture-shift .architecture-shift-v70__grid{width:100%!important;max-width:none!important;padding:0!important;display:block!important}
+body.page-case-agent #architecture-shift .architecture-shift-v70__copy{width:min(1420px,calc(100% - 48px));margin:0 auto clamp(50px,7vh,84px)!important;padding:0!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:clamp(32px,5vw,80px)!important}
+body.page-case-agent #architecture-shift .architecture-shift-v70__media{width:100vw!important;max-width:none!important;margin:0!important;overflow:hidden!important}
+body.page-case-agent #architecture-shift .architecture-shift-v70__media img{display:block!important;width:100vw!important;height:auto!important;max-width:none!important;object-fit:contain!important;margin:0!important}
+@media(max-width:760px){body.page-case-agent #architecture-shift .architecture-shift-v70__copy{grid-template-columns:1fr!important;width:min(100% - 32px,720px)!important}}
+
+/* Writing shelf: selected title must sit above the physical ledge/shelf. */
+.newsletter-bookshelf.is-enhanced .bookshelf__stage{overflow:visible!important}
+.newsletter-bookshelf.is-enhanced .bookshelf__books{z-index:4!important}
+.newsletter-bookshelf.is-enhanced .bookshelf__ledge{z-index:1!important}
+.newsletter-bookshelf.is-enhanced .shelf-book{z-index:3}
+.newsletter-bookshelf.is-enhanced .shelf-book.is-selected{z-index:2000!important}
+.newsletter-bookshelf.is-enhanced .shelf-book.is-selected .shelf-book__object{z-index:2000!important}

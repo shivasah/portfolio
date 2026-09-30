@@ -1,0 +1,69 @@
+/* V82 — single clean header pill across light and dark page sections. */
+.site-header.site-header--floating,
+.site-header.site-header--floating[data-theme="dark"],
+.site-header.site-header--floating[data-theme="light"] {
+  background: transparent !important;
+}
+
+.site-header--floating .site-header__combo-pill,
+.site-header[data-theme="dark"] .site-header__combo-pill,
+.site-header[data-theme="light"] .site-header__combo-pill {
+  background: rgba(252,252,244,.96) !important;
+  border: 1px solid rgba(35,36,40,.12) !important;
+  box-shadow: 0 8px 28px rgba(35,36,40,.10) !important;
+  color: #232428 !important;
+}
+
+/* The signature is part of the outer pill, never a second/nested pill. */
+.site-header--floating .header-logo,
+.site-header[data-theme="dark"] .header-logo,
+.site-header[data-theme="light"] .header-logo {
+  position: static !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  color: #232428 !important;
+  overflow: visible !important;
+}
+
+.site-header--floating .header-lastoria-v70,
+.site-header[data-theme="dark"] .header-lastoria-v70,
+.site-header[data-theme="light"] .header-lastoria-v70 {
+  display: block !important;
+  width: 88px !important;
+  height: 36px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: transparent !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.site-header--floating .site-menu-trigger,
+.site-header[data-theme="dark"] .site-menu-trigger,
+.site-header[data-theme="light"] .site-menu-trigger {
+  background: #ff5623 !important;
+  color: #232428 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.site-header--floating .site-menu-trigger:hover,
+.site-header[data-theme="dark"] .site-menu-trigger:hover,
+.site-header[data-theme="light"] .site-menu-trigger:hover {
+  background: #ff5623 !important;
+  color: #232428 !important;
+}
+
+@media (max-width:620px) {
+  .site-header--floating .header-lastoria-v70,
+  .site-header[data-theme="dark"] .header-lastoria-v70,
+  .site-header[data-theme="light"] .header-lastoria-v70 {
+    width: 74px !important;
+    height: 31px !important;
+  }
+}
