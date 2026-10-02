@@ -35,11 +35,11 @@
     title: el.querySelector('.shelf-book__cover-title').textContent,
     label: el.querySelector('.shelf-book__category').textContent,
     publisher: el.dataset.publisher || '', year: el.dataset.year || '',
-    x: 0, width: 54, height: 350,
+    x: 0, width: 54, height: 350, depth: 260,
     value: {x: 0, y: 0, z: 0, ry: 0, rx: 0, s: 1}, flight: null
   }));
   let visible = nodes.slice(), selected = null, hovered = null, current = 0;
-  let camera = 0, cameraTarget = 0, maxHeight = 350, totalWidth = 0;
+  let camera = 0, cameraTarget = 0, maxHeight = 350, totalWidth = 0, frontDepth = 226;
   let inView = true, paused = false, frame = 0, lastTime = 0, selectedAt = 0;
   let gesture = null, suppressClick = false, resetClickTimer = 0;
   let orbit = { yaw: 0, pitch: 0 }, titleShown = '', initialLayout = true;
@@ -71,11 +71,14 @@
     }
     if (selected && !href) metaLabel.textContent = [node.publisher, node.year, 'Print publication'].filter(Boolean).join(' · ');
   };
-  const flight = (node, duration) => { node.flight = { start: performance.now(), duration: motion.matches ? 0 : duration, from: {...node.value} }; };
+  const flight = (node, duration, returning = false) => {
+    node.el.classList.toggle('is-returning', returning);
+    node.flight = { start: performance.now(), duration: motion.matches ? 0 : duration, from: {...node.value}, returning };
+  };
   const select = node => {
     if (!node || node.el.hidden || suppressClick) return;
     if (selected === node) return;
-    if (selected) { selected.el.classList.remove('is-selected'); selected.button.setAttribute('aria-expanded','false'); flight(selected,400); }
+    if (selected) { selected.el.classList.remove('is-selected'); selected.button.setAttribute('aria-expanded','false'); flight(selected,480,true); }
     selected = node; hovered = null; current = visible.indexOf(node); selectedAt = performance.now(); orbit = {yaw:0,pitch:0};
     node.el.classList.add('is-selected'); node.button.setAttribute('aria-expanded','true');
     nodes.forEach(n => n.button.tabIndex = n === node ? 0 : -1);
@@ -90,13 +93,13 @@
   const close = (restore = true) => {
     const old = selected;
     selected = null; hovered = null; orbit = {yaw:0,pitch:0};
-    if (old) { old.el.classList.remove('is-selected'); old.button.setAttribute('aria-expanded','false'); flight(old,400); }
+    if (old) { old.el.classList.remove('is-selected'); old.button.setAttribute('aria-expanded','false'); flight(old,480,true); }
     nodes.forEach(n => n.button.tabIndex = n.el.hidden ? -1 : 0);
     back.hidden = true; readLink.hidden = true;
     if (overlay) overlay.hidden = true;
     shelf.classList.remove('has-selection'); shelf.dataset.coverHover='false';
     instructions.textContent = 'Select a spine to explore.';
-    stage.setAttribute('aria-label', `Writing bookshelf, ${visible.length} titles. Left and right arrows browse; Enter previews a cover.`);
+    stage.setAttribute('aria-label', `Publication bookshelf, ${visible.length} titles. Left and right arrows browse; Enter previews a cover.`);
     if (restore && old) old.button.focus({preventScroll:true});
     titleShown = ''; label(visible[current]); request();
   };
@@ -115,8 +118,12 @@
       const measure = document.createElement('canvas').getContext('2d');
       measure.font = `600 19px ${getComputedStyle(document.body).getPropertyValue('--font-display') || 'Arial'}`;
       n.el.querySelector('.shelf-book__spine-title').style.fontSize = `${Math.max(14, Math.min(19, 19 * (n.height - 100) / measure.measureText(n.el.querySelector('.shelf-book__spine-title').textContent).width))}px`;
-      n.el.style.setProperty('--book-depth',`${small ? Math.min(248,stage.clientWidth * .72) : 260}px`);
+      n.depth = small ? Math.min(248,stage.clientWidth * .72) : 260;
+      n.el.style.setProperty('--book-depth',`${n.depth}px`);
     });
+    // Clear every resting spine in the shared preserve-3d scene.
+    // Raising z-index alone cannot change geometry in a 3D rendering context.
+    frontDepth = Math.max(...visible.map(n => n.depth), 0) / 2 + 96;
     totalWidth = Math.max(1,cursor-8);
     shelf.style.setProperty('--max-book-height',`${maxHeight}px`);
     visible.forEach(n => n.el.style.top = `${120 + maxHeight - n.height}px`);
@@ -140,16 +147,25 @@
       const sway = false; // No perpetual motion; selection and drag are deliberate.
       const target = {
         x: focus ? -n.width/2 : n.x-camera-n.width/2,
-        y: focus ? -4 : hover ? -12 : 0,
-        z: focus ? (stage.clientWidth <= 620 ? 75 : 100) : hover ? 12 : 0,
+        y: focus ? -18 : hover ? -12 : 0,
+        z: focus ? frontDepth : hover ? 12 : 0,
         s: focus ? .94 : 1,
         ry: focus ? -90 + orbit.yaw + (sway ? Math.sin(elapsed*.85)*8 : 0) : 0,
         rx: focus ? orbit.pitch + (sway ? Math.sin(elapsed*.55)*1.8 : 0) : 0
       };
       if (n.flight) {
         const p = n.flight.duration ? clamp((time-n.flight.start)/n.flight.duration) : 1;
-        for (const key of Object.keys(target)) n.value[key] = lerp(n.flight.from[key],target[key], key==='ry'||key==='rx' ? easeInOut(p) : ease(p));
-        if (p === 1) n.flight = null; else moving = true;
+        for (const key of Object.keys(target)) {
+          const rotation = key === 'ry' || key === 'rx';
+          // Rotate a returning cover first, then slide it into its shelf slot.
+          // This prevents it sinking through neighbouring spines during close.
+          const progress = n.flight.returning
+            ? rotation || key === 's' ? easeInOut(clamp(p / .68)) : ease(clamp((p - .56) / .44))
+            : rotation ? easeInOut(p) : ease(p);
+          n.value[key] = lerp(n.flight.from[key], target[key], progress);
+        }
+        if (p === 1) { n.flight = null; n.el.classList.remove('is-returning'); }
+        else moving = true;
       } else {
         for (const key of Object.keys(target)) {
           n.value[key] = motion.matches ? target[key] : damp(n.value[key],target[key],focus?10:13,dt);
@@ -157,7 +173,7 @@
         }
       }
       n.el.style.transform = `translate3d(${n.value.x.toFixed(3)}px,${n.value.y.toFixed(3)}px,${n.value.z.toFixed(3)}px)`;
-      n.el.style.zIndex = focus ? '2000' : hover ? '50' : String(visible.indexOf(n)+2);
+      n.el.style.zIndex = focus ? '30' : n.flight?.returning ? '29' : hover ? '20' : String(visible.indexOf(n)+2);
       n.object.style.transform = `rotateX(${n.value.rx.toFixed(3)}deg) rotateY(${n.value.ry.toFixed(3)}deg) scale(${n.value.s.toFixed(4)})`;
       if (sway) moving = true;
     });
@@ -254,7 +270,7 @@
     layout();titleShown='';label(visible[0]);
     instructions.textContent=`${visible.length} ${visible.length===1?'title':'titles'}. Select a spine to explore.`;
   }));
-  motion.addEventListener('change',()=>{nodes.forEach(n=>n.flight=null);request();});
+  motion.addEventListener('change',()=>{nodes.forEach(n=>{n.flight=null;n.el.classList.remove('is-returning');});request();});
   document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;}else{lastTime=0;request();}});
   if ('IntersectionObserver' in window) new IntersectionObserver(entries=>{
     inView=entries[0].isIntersecting;
@@ -269,3 +285,5 @@
   document.fonts?.ready.then(layout);
   layout();label(visible[0]);
 })();
+
+

@@ -33,20 +33,23 @@
 })();
 </script>
 <link href="styles.css?v=83" rel="stylesheet"/>
-<link href="menu.css?v=83" rel="stylesheet"/>
+<link href="menu.css?v=84" rel="stylesheet"/>
 <link href="preloader-art.css?v=83" rel="stylesheet"/>
 <link href="agent.css?v=83" rel="stylesheet"/>
-<script defer="" src="site-config.js?v=83"></script>
+<script defer="" src="site-config.js?v=87"></script>
 <script defer="" src="preloader-art.js?v=83"></script>
-<script defer="" src="app.js?v=83"></script>
+<script defer="" src="app.js?v=87"></script>
 <script defer="" src="agent.js?v=83"></script>
 <link href="refinements-v74.css?v=83" rel="stylesheet"/><script defer="" src="refinements-v74.js?v=83"></script>
-<link href="refinements-v75.css?v=83" rel="stylesheet"/><link href="refinements-v76.css?v=83" rel="stylesheet"/>
+<link href="refinements-v75.css?v=87" rel="stylesheet"/><link href="refinements-v76.css?v=87" rel="stylesheet"/>
 <link href="refinements-v77.css?v=83" rel="stylesheet"/>
 <link href="refinements-v78.css?v=83" rel="stylesheet"/>
 <link href="refinements-v79.css?v=83" rel="stylesheet"/>
 <link href="refinements-v80.css?v=83" rel="stylesheet"/>
 <link href="refinements-v82.css?v=83" rel="stylesheet"/>
+<link href="refinements-v84c.css?v=84c" rel="stylesheet"/>
+<link href="agent-city-story.css?v=85" rel="stylesheet"/>
+<script defer="" src="agent-city-story.js?v=85"></script>
 </head>
 <body class="page-case page-case-agent">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -85,10 +88,6 @@
 <img alt="" aria-hidden="true" class="site-menu__signature-v70" src="assets/shiva-wordmark-static.svg"/>
 <span class="sr-only">Shiva</span>
 </h2>
-<button aria-label="Close menu" class="site-menu__close" type="button">
-<span>Close</span>
-<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"></path></svg>
-</button>
 </div>
 <div class="site-menu__scroll">
 <nav aria-labelledby="site-menu-pages-title" class="site-menu__primary site-menu__primary--simple">
@@ -100,9 +99,10 @@
 </button>
 <div class="site-menu__projects-panel" hidden="" id="site-menu-case-studies"><div class="site-menu__projects-inner">
 <a class="site-menu__project" data-menu-page="agent-management.html" href="agent-management.html"><strong>Agent Management</strong><em>Cisco AppDynamics</em></a>
-</div></div>
+<div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Domain-Centric Views</strong><em>Cisco Cloud Observability</em><span class="site-menu__soon">Adding soon</span></div><div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Management Reports</strong><em>Intuit QuickBooks</em><span class="site-menu__soon">Adding soon</span></div></div></div>
 </div>
-<a class="site-menu__page" data-menu-section="writing" href="index.html#writing"><strong>Writing</strong></a>
+<a class="site-menu__page" data-menu-section="writing" href="index.html#writing"><strong>Notes &amp; essays</strong></a>
+<a class="site-menu__page" data-menu-section="vibes" href="index.html#vibes"><strong>Experiments</strong></a>
 <a class="site-menu__page" data-menu-section="intro" href="index.html#intro"><strong>Approach</strong></a>
 <a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
 </nav>
@@ -172,26 +172,45 @@
 </div>
 </div>
 </section>
-<section aria-labelledby="analogy-title" class="agent-analogy-intro" data-header-theme="light">
-<div aria-hidden="true" class="editorial-grid-lines"></div>
-<div class="agent-analogy-intro__inner">
-<h2 class="analogy-reveal reveal" id="analogy-title"><span>let’s understand agent management</span><span>through a city.</span></h2>
-</div>
-</section>
-<section class="city-story-v13" data-city-story-v13="" data-header-theme="light" id="background">
-<div class="shell city-story-v13__stage"><div class="city-story-v13__steps">
-<article class="city-story-v13__step is-active" data-city-step="0"><h4 class="city-story-v74__label">01 · City</h4><h3>Applications are like cities.</h3><p>Services are buildings, dependencies are roads, and requests are the traffic moving between them.</p></article>
-<article class="city-story-v13__step" data-city-step="1"><h4 class="city-story-v74__label">02 · Junction</h4><h3>The useful signal is at the junction.</h3><p>Many paths meet here. A slowdown at one intersection can ripple through the system.</p></article>
-<article class="city-story-v13__step" data-city-step="2"><h4 class="city-story-v74__label">03 · Camera</h4><h3>Agents are the eyes.</h3><p>They observe what moves, where it slows, and what needs attention—without becoming the traffic itself.</p></article>
-</div>
-<div class="city-story-v13__visual">
-<div aria-live="polite" class="city-story-v13__card">
-<img alt="Hand-drawn city used as a metaphor for a distributed application" class="city-story-v13__image is-active" data-city-image="0" src="assets/agent-city.webp"/>
-<img alt="Hand-drawn road junction used as a metaphor for critical application intersections" class="city-story-v13__image" data-city-image="1" src="assets/agent-junction.webp"/>
-<img alt="Hand-drawn traffic cameras used as a metaphor for application agents observing traffic" class="city-story-v13__image" data-city-image="2" src="assets/agent-camera.webp"/>
-</div>
-</div>
-</div>
+<!-- V85: one scroll-driven city narrative; no legacy image-step controller. -->
+<section aria-labelledby="analogy-title" class="agent-city-story" data-agent-city-story="" data-header-theme="light" id="background">
+  <div class="agent-city-story__stage">
+    <div aria-hidden="true" class="agent-city-story__visual">
+      <img alt="" class="agent-city-story__fallback" decoding="async" height="900" loading="lazy" src="assets/agent-city-motion-still.webp" width="1440"/>
+      <canvas class="agent-city-story__canvas" id="agent-city-canvas"></canvas>
+    </div>
+    <div aria-hidden="true" class="agent-city-story__shade"></div>
+    <div class="shell agent-city-story__layout">
+      <div class="agent-city-story__overlays">
+        <div class="agent-city-story__panel agent-city-story__panel--intro" data-city-panel="0">
+          <h2 id="analogy-title"><span>let’s understand agent management</span><span>through a city.</span></h2>
+        </div>
+        <article class="agent-city-story__panel" data-city-panel="1">
+          <p class="agent-city-story__label">01 · City</p>
+          <h3>Applications are like cities.</h3>
+          <p class="agent-city-story__body">Services are buildings, dependencies are roads, and requests are the traffic moving between them.</p>
+        </article>
+        <article class="agent-city-story__panel" data-city-panel="2">
+          <p class="agent-city-story__label">02 · Junction</p>
+          <h3>The useful signal is at the junction.</h3>
+          <p class="agent-city-story__body">Many paths meet here. A slowdown at one intersection can ripple through the system.</p>
+        </article>
+        <article class="agent-city-story__panel" data-city-panel="3">
+          <p class="agent-city-story__label">03 · Camera</p>
+          <h3>Agents are the eyes.</h3>
+          <p class="agent-city-story__body">They observe what moves, where it slows, and what needs attention—without becoming the traffic itself.</p>
+        </article>
+      </div>
+    </div>
+    <div class="shell agent-city-story__footer">
+      <div class="agent-city-story__guide">
+        <span aria-hidden="true" class="agent-city-story__progress"><i></i><i></i><i></i><i></i></span>
+        <span data-city-guide="">Scroll to explore</span><span aria-hidden="true">↓</span>
+      </div>
+      <button aria-pressed="false" class="pill agent-city-story__motion" data-city-motion="" hidden="" type="button">Pause motion</button>
+    </div>
+    <a class="button agent-city-story__skip" href="#problem"><span>Skip city story</span></a>
+  </div>
 </section>
 <section class="section section--paper agent-scale" data-header-theme="light" id="problem">
 <div class="shell agent-scale__layout" data-agent-scale="" data-agents="95000" data-per-dot="1000">
@@ -574,7 +593,7 @@
 </div>
 </section>
 </main>
-<footer class="site-footer site-footer--case-reveal" data-header-theme="dark" id="contact"><div class="site-footer__top site-footer__top--simple"><div><p class="site-footer__title">let’s<br/>connect.</p><p class="site-footer__note">Open to conversations about complex systems, product craft and mentoring.</p></div><div class="footer-next"><p class="eyebrow eyebrow--light">Keep exploring</p><a class="footer-next__link transition-link" href="index.html#writing"><span>Read more</span><strong>Writing &amp; research ↗</strong></a><a class="footer-next__link transition-link" href="index.html"><span>Back to</span><strong>Homepage ↗</strong></a></div></div><div class="site-footer__bottom site-footer__bottom--simple"><nav aria-label="Social links" class="footer-socials" data-contact-links="">
+<footer class="site-footer site-footer--case-reveal" data-header-theme="dark" id="contact"><div class="site-footer__top site-footer__top--simple"><div><p class="site-footer__title">let’s<br/>connect.</p><p class="site-footer__note">Open to conversations about complex systems, product craft and mentoring.</p></div><div class="footer-next"><p class="eyebrow eyebrow--light">Keep exploring</p><a class="footer-next__link transition-link" href="index.html#writing"><span>Read more</span><strong>Essays &amp; research ↗</strong></a><a class="footer-next__link transition-link" href="index.html"><span>Back to</span><strong>Homepage ↗</strong></a></div></div><div class="site-footer__bottom site-footer__bottom--simple"><nav aria-label="Social links" class="footer-socials" data-contact-links="">
 <a aria-label="LinkedIn (opens in a new tab)" data-contact-key="linkedin" href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank">LinkedIn <span aria-hidden="true">↗</span></a>
 <a aria-label="Medium (opens in a new tab)" data-contact-key="medium" href="https://medium.com/" rel="noopener noreferrer" target="_blank">Medium <span aria-hidden="true">↗</span></a>
 <a aria-label="GitHub (opens in a new tab)" data-contact-key="github" href="https://github.com/" rel="noopener noreferrer" target="_blank">GitHub <span aria-hidden="true">↗</span></a>

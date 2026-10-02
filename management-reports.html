@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#fcfcf4" name="theme-color"/>
+<meta content="Rethinking QuickBooks Management Reports around quality, data flexibility, and repeat use. A lead-design case study from legacy context to release and measured usage. By Shiva Sah." name="description"/>
+<title>Management Reports - Intuit QuickBooks - Shiva Sah</title>
+<script>document.documentElement.classList.add("js");</script>
+<script>
+(() => {
+  const host = (location.hostname || '').toLowerCase();
+  // Only suppress network font requests inside OpenAI's restricted artifact/canvas preview.
+  // Local files and normal deployments should load the exact webfonts.
+  const restrictedPreview = /(openai|chatgpt|oaiusercontent|oaistatic|sandbox|canvas)/.test(host);
+
+  document.documentElement.classList.add(restrictedPreview ? 'font-preview-safe' : 'font-web-enabled');
+  if (restrictedPreview) return;
+
+  const stylesheets = [
+    'https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,600,700,800&display=swap',
+    'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap'
+  ];
+
+  stylesheets.forEach((href) => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+  });
+})();
+</script>
+<link href="styles.css?v=83" rel="stylesheet"/>
+<link href="menu.css?v=84" rel="stylesheet"/>
+<link href="preloader-art.css?v=83" rel="stylesheet"/>
+<link href="reports.css" rel="stylesheet"/>
+<link href="northstar.css" rel="stylesheet"/>
+<script defer="" src="site-config.js?v=87"></script>
+<script defer="" src="preloader-art.js?v=83"></script>
+<script defer="" src="app.js?v=87"></script>
+<script defer="" src="reports.js"></script>
+<link href="refinements-v74.css?v=83" rel="stylesheet"/><script defer="" src="refinements-v74.js?v=83"></script>
+<link href="refinements-v75.css?v=87" rel="stylesheet"/><link href="refinements-v76.css?v=87" rel="stylesheet"/>
+<link href="refinements-v77.css?v=83" rel="stylesheet"/>
+<link href="refinements-v78.css?v=83" rel="stylesheet"/>
+<link href="refinements-v79.css?v=83" rel="stylesheet"/>
+<link rel="stylesheet" href="refinements-v80.css?v=83">
+<link rel="stylesheet" href="refinements-v82.css?v=83">
+</head>
+<body class="page-case page-case-reports">
+<a class="skip-link" href="#main">Skip to content</a>
+<div aria-hidden="true" class="page-wipe is-lastoria">
+<div class="page-wipe__signature-wrap page-wipe__signature-wrap--wave">
+<span class="sr-only">shiva</span>
+<svg aria-hidden="true" class="page-wipe__signature page-wipe__signature--wave" data-lettering="lastoria" data-signature-version="61" preserveaspectratio="xMidYMid meet" role="presentation" viewbox="0 0 1600 420"><defs xmlns="http://www.w3.org/2000/svg"><mask height="150" id="lastoria-mask-s" maskunits="userSpaceOnUse" style="mask-type:luminance" width="1620" x="-10" y="140"><path d="M700.67375 219.08325Q700.5775 220.35375 701.05875 221.35475Q701.155 222.0285 702.772 222.99099999999999Q706.93 226.0325 710.18325 230.0365Q713.22475 233.40525 712.4355 238.468Q711.627 242.83775 708.91275 246.476Q705.005 251.2885 699.67275 251.096Q694.841 251.26925 694.8025 247.8235Q694.86025 245.0515 699.44175 240.855Q704.21575 236.1195 710.857 232.1925Q718.84575 227.1875 725.795 225.1855Q731.85875 223.3375 735.42 223.39525" data-duration="132" data-lastoria-trace="s" data-start="300" fill="none" pathlength="1" stroke="white" stroke-dasharray="1" stroke-dashoffset="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.1225"></path><path d="M-3 210 C235 210 447 202 611 202 C642 202 664 199.68 680 204 C693 206 700.683375 207.8 700.683375 219.08325" data-duration="300" data-lastoria-trace="lead" data-start="0" fill="none" pathlength="1" stroke="white" stroke-dasharray="1" stroke-dashoffset="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path></mask><mask height="150" id="lastoria-mask-h" maskunits="userSpaceOnUse" style="mask-type:luminance" width="1620" x="-10" y="140"><path d="M737.32575 223.89575Q739.9245 212.75 744.4675 201.97Q751.60925 184.26 761.8695 173.095Q766.97075 167.89749999999998 771.20575 168.09Q776.8845 168.09 776.36475 174.30775Q776.40325 178.38875000000002 771.78325 187.34Q768.0295 195.04 759.0975 204.0875Q748.0095 215.445 738.962 220.81575Q736.17075 224.8775 734.4767499999999 232.924Q734.034 237.37075 734.804 238.75675Q737.01775 237.467 743.06225 230.768Q751.0509999999999 221.81675 753.4765 220.065Q754.6315 218.8715 755.9019999999999 220.758Q759.92525 227.51475 763.58275 230.1135Q765.9119999999999 232.2695 769.31925 230.6525Q774.9594999999999 228.304 781.8895 222.77925" data-duration="218" data-lastoria-trace="h" data-start="432" fill="none" pathlength="1" stroke="white" stroke-dasharray="1" stroke-dashoffset="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="9.24"></path></mask><mask height="150" id="lastoria-mask-i" maskunits="userSpaceOnUse" style="mask-type:luminance" width="1620" x="-10" y="140"><path d="M784.007 219.62225Q782.467 222.43275 780.25325 228.24625Q778.0202499999999 234.63725 781.9665 235.56125Q785.25825 236.21575 791.9572499999999 232.308Q799.3299999999999 227.97675 806.722 223.068" data-duration="52" data-lastoria-trace="i" data-start="650" fill="none" pathlength="1" stroke="white" stroke-dasharray="1" stroke-dashoffset="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.545"></path></mask><mask height="150" id="lastoria-mask-dot" maskunits="userSpaceOnUse" style="mask-type:luminance" width="1620" x="-10" y="140"><path d="M786.394 208.3225H786.41325" data-duration="12" data-lastoria-trace="dot" data-start="702" fill="none" pathlength="1" stroke="white" stroke-dasharray="1" stroke-dashoffset="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.16"></path></mask><mask height="150" id="lastoria-mask-v" maskunits="userSpaceOnUse" style="mask-type:luminance" width="1620" x="-10" y="140"><path d="M806.876 221.89375Q808.20425 222.50975 806.58725 229.69Q803.4110000000001 242.5105 803.9885 246.2065Q805.1435 248.49725 813.4595 238.468Q820.7745 229.1895 828.07025 219.69925Q828.45525 229.0355 832.80575 230.4215Q836.96375 233.155 845.08725 227.688Q849.09125 225.147 852.691 222.81775" data-duration="96" data-lastoria-trace="v" data-start="714" fill="none" pathlength="1" stroke="white" stroke-dasharray="1" stroke-dashoffset="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.1225"></path></mask><mask height="150" id="lastoria-mask-a" maskunits="userSpaceOnUse" style="mask-type:luminance" width="1620" x="-10" y="140"><path d="M866.0505 219.7955Q863.3555000000001 217.42775 860.6605000000001 218.063Q855.52075 219.2565 851.5937500000001 224.8775Q849.0527500000001 227.86125 850.3040000000001 228.997Q852.3252500000001 230.51775 863.0282500000001 222.77925Q868.1680000000001 219.4875 872.3645 216.38825Q870.8052500000001 219.4105 868.3990000000001 223.08725Q864.83775 229.0355 865.29975 233.05875Q865.2805000000001 236.36975 869.3615000000001 236.33125Q873.1152500000001 236.4275 880.5842500000001 232.77Q888.7270000000001 228.227 895.8687500000001 224.24225" data-duration="70" data-lastoria-trace="a" data-start="810" fill="none" pathlength="1" stroke="white" stroke-dasharray="1" stroke-dashoffset="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.1225"></path><path d="M895.839875 224.232625 C901 221.2 910 215.6 926.15 212.855 C944 210.15 970 209.8 1009 209.8 C1190 209.8 1390 212 1603 212" data-duration="320" data-lastoria-trace="tail" data-start="880" fill="none" pathlength="1" stroke="white" stroke-dasharray="1" stroke-dashoffset="0" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path></mask></defs><g class="lastoria-ink" fill="#ff8a63" xmlns="http://www.w3.org/2000/svg"><g class="lastoria-word"><g data-lastoria-glyph="s"><path d="M699.538 249.0555Q700.90475 249.0555 702.233 248.5165Q702.71425 248.324 703.17625 248.11225Q708.6625 245.26325 710.2025 238.5835Q710.29875 238.0445 710.29875 237.2745Q710.29875 236.19650000000001 710.14475 235.5035Q710.10625 235.311 710.01 235.1955L707.854 236.6585Q703.1955 239.931 700.3465 242.87625Q698.075 245.167 697.36275 246.707Q696.9585 247.5155 696.9585 247.8235Q696.9585 247.99675 697.05475 248.18925000000002Q697.55525 249.0555 699.538 249.0555ZM711.80025 229.24725Q711.99275 229.13175 712.37775 228.92Q717.171 226.2635 722.3685 224.3Q725.50625 223.16425 729.250375 222.288375Q732.9945 221.4125 734.9965 221.374Q737.47975 221.39325 737.47975 223.24125Q737.47975 225.05075 736.20925 225.2625Q734.93875 225.47425 734.496 225.51275Q732.34 225.686 728.85575 226.59075Q720.92475 228.689 713.80225 232.847L713.91775 233.1935Q714.5915 235.06075 714.5915 237.082Q714.5915 240.45075 712.705 244.166Q710.87625 247.785 707.7 250.181625Q704.52375 252.57825 700.847 253.07875Q700.0385 253.175 699.4995 253.175Q697.4975 253.175 695.78425 252.3665Q692.685 250.9035 692.685 247.88125Q692.685 244.53175 697.613 239.7385Q701.54 235.75375 707.06475 232.1925Q708.0465 231.538 708.3545 231.4225Q708.14275 231.23 707.5845 230.5755Q705.13975 227.7265 701.694 225.1085Q698.7295 222.85625 698.537 222.04775Q698.4215 221.62425 698.1905 221.04675Q697.8055 220.1035 697.8055 219.27575C697.8055 208.116 691.6499999999999 208.58000000000004 679.6499999999999 205.304C664.0 201.03000000000003 641.9999999999999 203.35000000000002 610.9999999999999 203.35000000000002C446.9999999999999 203.35000000000002 234.99999999999994 211.55000000000004 -3.0000000000001137 211.55000000000004V208.45C234.99999999999994 208.45 446.9999999999999 200.65000000000003 610.9999999999999 200.65000000000003C641.9999999999999 200.65000000000003 664.0 198.33 680.3499999999999 202.696C693.8799999999999 206.36700000000002 703.5612499999999 207.5 703.5612499999999 218.89075C703.56125 220.16125 703.3495 221.16225 704.25425 221.836Q706.314 223.39525 708.402625 225.387625Q710.49125 227.38 711.60775 228.843Q711.80025 229.1125 711.80025 229.24725Z" mask="url(#lastoria-mask-s)"></path></g><g data-lastoria-glyph="h"><path d="M734.86175 240.855Q734.1302499999999 240.855 733.6875 240.60475Q732.0704999999999 239.777 732.0704999999999 235.25325Q732.0704999999999 233.21275 732.6095 229.63225Q733.803 221.66275 736.8444999999999 212.26875Q744.2365 189.51525 755.8249999999999 175.80925Q758.1927499999999 172.96025 760.46425 171.03525Q766.47025 165.9725 771.39825 165.9725Q772.534 165.9725 773.275125 166.16500000000002Q774.01625 166.35750000000002 774.78625 166.781Q778.25125 168.72525000000002 778.63625 173.96125Q778.63625 176.2135 778.09725 178.54275Q777.2695 181.565 775.0749999999999 186.1465Q771.5715 193.36525 766.4125 199.52525Q758.2505 209.11175 749.1645 216.754Q743.13925 221.7975 739.86675 223.453Q738.885 223.9535 738.1535 224.223Q737.98025 224.28075 737.961 224.290375Q737.94175 224.3 737.63375 225.85925Q737.3065 227.32225 736.9214999999999 230.01725Q736.55575 232.48125 736.4979999999999 234.695L738.9812499999999 231.9615Q744.2172499999999 226.225 744.4675 225.994Q750.14625 219.834 752.45625 218.42875Q753.4957499999999 217.81275 754.67 217.81275Q756.19075 217.81275 757.07625 218.58275Q757.8077499999999 219.19875 759.88675 222.31725Q763.4865 227.70725 764.6415 228.3425Q765.9119999999999 229.074 767.6252499999999 229.074Q768.607 229.074 771.78325 227.303Q774.13175 225.994 776.6535 224.31925Q781.081 221.08525 781.851 221.04675L782.1205 221.00825Q782.8712499999999 221.00825 783.4968749999999 221.4895Q784.1225 221.97075 784.1225 222.77925Q784.1225 223.761 783.3525 224.47325Q783.0252499999999 224.78125 778.17425 228.1885Q775.44075 230.1135 772.919 231.4995Q770.58975 232.59675 769.4828749999999 232.914375Q768.376 233.232 767.31725 233.232Q763.8715 233.232 761.446 231.461Q760.4449999999999 230.71025 759.3573749999999 229.295375Q758.2697499999999 227.8805 756.0944999999999 224.6465Q754.45825 222.1825 754.3523749999999 222.08625Q754.2465 221.99 754.2465 221.97075Q754.2465 221.9515 754.26575 221.9515Q753.6497499999999 221.9515 744.94875 231.55725Q740.98325 235.927 738.6732499999999 238.3525Q736.7674999999999 240.3545 736.036 240.64325Q735.51625 240.855 734.86175 240.855ZM739.3085 219.08325Q740.48275 218.35175 742.21525 217.062Q745.0065 214.96375 748.076875 212.259125Q751.14725 209.5545 753.4572499999999 207.34075Q755.76725 205.127 758.0772499999999 202.6245Q762.54325 197.83125 765.093875 194.501Q767.6445 191.17075 769.58875 187.59025Q770.8785 185.24175 772.05275 182.575625Q773.227 179.9095 773.70825 178.27325Q773.9585 177.32999999999998 774.09325 176.12687499999998Q774.228 174.92374999999998 774.228 174.2885L774.20875 173.865Q773.689 170.22675 771.071 170.13049999999998Q768.068 170.13049999999998 763.65975 173.7495Q762.293 174.86599999999999 761.292 175.867Q759.23225 178.023 756.6335 181.478375Q754.03475 184.93375 752.10975 188.11Q745.48775 199.37125 740.67525 214.38625Q739.94375 216.677 739.3085 219.08325Z" mask="url(#lastoria-mask-h)"></path></g><g data-lastoria-glyph="i"><path d="M782.9675 237.6595Q780.7344999999999 237.6595 779.0405 236.25425Q777.1347499999999 234.695 777.1347499999999 232.0Q777.1347499999999 230.86425 777.5775 228.997Q777.8855 227.59175 778.3667499999999 226.20575Q779.13675 224.146 780.2339999999999 221.7975Q782.005 218.00525 782.9675 217.46625Q783.44875 217.15825 784.007 217.15825Q785.87425 217.15825 786.41325 218.92925Q786.52875 219.295 786.52875 219.6415Q786.52875 220.604 785.9705 220.940875Q785.41225 221.27775 784.14175 223.992Q781.48525 229.613 781.48525 232.616Q781.48525 233.17425 781.71625 233.36675Q781.9472499999999 233.55925 782.39 233.55925Q782.8905 233.55925 783.79525 233.309Q785.4314999999999 232.90475 787.443125 231.913375Q789.45475 230.922 793.9784999999999 228.2655Q797.3665 226.302 802.4292499999999 223.068Q803.6034999999999 222.3365 805.49 221.20075Q806.1252499999999 220.8735 806.722 220.8735Q807.6075 220.8735 808.39675 221.605Q808.8394999999999 222.4135 808.8394999999999 223.068Q808.8394999999999 224.223 807.85775 224.89675Q806.9915 225.32025 802.0635 228.4965Q800.46575 229.51675 797.713 231.13375Q792.631 234.079 790.72525 235.1185Q785.60475 237.6595 782.9675 237.6595Z" mask="url(#lastoria-mask-i)"></path><path d="M786.02825 211.0945Q785.2389999999999 211.0945 784.60375 210.53625Q783.75675 209.88175 783.75675 208.746Q783.75675 208.284 784.161 207.4755Q784.5844999999999 206.57075 785.10425 206.16649999999998Q785.6239999999999 205.76225 786.4325 205.76225Q787.4912499999999 205.76225 788.3478749999999 206.53225Q789.2044999999999 207.30225000000002 789.2044999999999 208.13Q789.2044999999999 208.49575 789.06975 208.823Q788.80025 209.57375 788.0302499999999 209.8625Q787.395 211.0945 786.02825 211.0945Z" mask="url(#lastoria-mask-dot)"></path></g><g data-lastoria-glyph="v"><path d="M805.20125 248.76675Q804.89325 248.76675 804.62375 248.7475Q801.69775 248.49725 801.69775 243.68475Q801.69775 242.1255 802.0635 240.06575Q802.42925 237.929 803.4495000000001 233.59775Q804.31575 229.94025 804.6815 227.8805Q805.12425 225.3395 805.12425 223.1065Q804.66225 222.54825 804.643 221.913Q804.643 221.43175 804.9125 220.85425Q805.182 220.27675 805.730625 219.96875Q806.27925 219.66075 806.876 219.66075Q808.12725 219.66075 808.85875 220.62325Q809.24375 221.16225 809.35925 221.78787499999999Q809.47475 222.4135 809.47475 223.43375Q809.47475 225.609 809.0705 228.044125Q808.66625 230.47925 807.66525 234.772Q806.722 238.699 806.39475 240.64325Q806.12525 242.1255 806.0675 243.49225Q809.2245 240.3545 814.82625 233.078L817.71375 229.382Q819.6965 226.8795 822.4685 223.1065Q825.95275 218.4095 826.588 217.88975Q827.22325 217.37 828.0125 217.37Q829.34075 217.37 829.9375 218.65975Q830.053 219.295 830.053 219.757Q830.053 220.373 829.8412500000001 220.6425L830.361 222.47125Q831.45825 226.78325 832.76725 227.842Q834.07625 228.90075 835.4815 228.90075Q836.367 228.90075 837.46425 228.612Q842.7195 227.16825 849.996 222.08625Q850.74675 221.54725 851.1895 221.2585Q851.63225 220.96975 851.9595 220.844625Q852.28675 220.7195 852.67175 220.7195Q854.8085 220.912 854.8085 222.837Q854.8085 223.51075 854.28875 224.1075Q853.615 224.78125 851.4975 226.215375Q849.38 227.6495 847.07 228.97775Q840.08225 233.001 835.77025 233.0395Q834.3265 233.0395 833.518 232.8855Q832.57475 232.6545 831.516 232.1155Q828.22425 230.40225 826.53025 224.9545Q823.79675 228.6505 816.82825 237.544Q815.4037500000001 239.37275 813.372875 241.788625Q811.342 244.2045 810.0715 245.57125Q807.12625 248.76675 805.20125 248.76675Z" mask="url(#lastoria-mask-v)"></path></g><g data-lastoria-glyph="a"><path d="M852.7102500000001 226.12875Q855.36675 224.8775 860.6605000000001 221.5665Q862.1427500000001 220.6425 862.316 220.50775Q861.9887500000001 220.142 860.75675 220.142Q859.0820000000001 220.142 856.8105 221.8745Q855.13575 223.16425 853.6535 224.916L852.7102500000001 226.12875ZM865.9927500000001 218.17849999999999Q866.6665 217.62025 869.26525 215.79149999999998Q871.171 214.42475 871.5752500000001 214.222625Q871.9795 214.0205 872.4607500000001 214.0205Q873.8275000000001 214.0205 874.5975000000001 215.445Q874.92475 216.061 874.92475 216.6Q874.92475 217.755 871.4212500000001 223.376Q867.552 229.6515 867.552 232.0Q867.552 233.17425 867.6675 233.40525Q867.937 233.8865 868.8610000000001 234.156Q869.1305000000001 234.233 869.4385000000001 234.233Q871.9217500000001 234.233 876.6957500000001 232.01925Q880.9115 230.09425 884.3380000000001 228.15Q885.4352500000001 227.534 889.1890000000001 225.51275Q893.0390000000001 223.453 895.0987500000001 222.20175C900.44875 218.95175000000003 909.0 214.077 926.0 211.51300000000003C944.0 208.8 970.0 208.45 1009.0 208.45C1190.0 208.45 1390.0 210.45 1602.9999999999998 210.45V213.55000000000004C1390.0 213.55000000000004 1190.0 211.15000000000003 1009.0 211.15000000000003C970.0 211.15000000000003 944.0 211.50000000000003 926.3 214.19700000000003C910.9999999999999 216.50000000000003 903.331 222.31350000000003 896.581 226.2635Q893.98225 227.78425 892.115 228.74675L887.3602500000001 231.3455Q883.3755000000001 233.59775 879.5640000000001 235.36875Q876.9075 236.60075 875.2520000000001 237.21675Q871.9987500000001 238.4295 869.34225 238.4295Q868.6300000000001 238.4295 868.1102500000001 238.33325Q865.0495000000001 237.71725 863.64425 235.17625Q863.1437500000001 234.17525 863.1148750000001 233.386Q863.086 232.59675 863.086 232.385Q863.086 229.844 864.7800000000001 226.2635Q865.49225 224.78125 866.705 222.76L866.1082500000001 223.16425Q864.29875 224.39625 863.5095000000001 224.81975Q857.1185 228.86225 854.09625 230.17125Q851.998 231.1145 851.3435000000001 231.153Q850.6890000000001 231.1915 850.6120000000001 231.1915Q849.20675 231.1915 848.302 230.20975Q847.378 229.28575 847.378 227.97675Q847.378 225.917 849.6398750000001 222.981375Q851.9017500000001 220.04575 855.05875 217.88975Q858.158 215.907 860.9685000000001 215.907Q863.5672500000001 215.907 865.2420000000001 217.37Q865.7040000000001 217.77425 865.9927500000001 218.17849999999999Z" mask="url(#lastoria-mask-a)"></path></g></g></g></svg>
+</div>
+</div>
+<div aria-hidden="true" class="noise"></div><svg aria-hidden="true" class="sketch-filter-defs" height="0" width="0"><defs><filter height="130%" id="sketchyLine" width="130%" x="-15%" y="-15%"><feturbulence basefrequency="0.045" numoctaves="1" result="noise" seed="9" type="fractalNoise"></feturbulence><fedisplacementmap in="SourceGraphic" in2="noise" scale="1.7" xchannelselector="R" ychannelselector="G"></fedisplacementmap></filter></defs></svg>
+<div aria-hidden="true" class="cursor-scribble">
+<svg aria-hidden="true" focusable="false" viewbox="0 0 48 48">
+<path class="cursor-scribble__loop cursor-scribble__loop--a" d="M8.5 23.5C8.2 13.2 15.4 7.1 25.6 7.8C35.2 8.4 41 14.7 40.2 24.6C39.4 34.1 32.4 40.2 22.8 39.6C13.2 39 8.7 32.7 8.5 23.5Z"></path>
+<path class="cursor-scribble__loop cursor-scribble__loop--b" d="M10.2 20.8C12.7 11.8 21 7.4 30 10.2C38.7 12.9 42.1 21.2 38.4 29.7C34.8 37.9 26.3 41 18.2 36.9C10.5 33 7.8 28.6 10.2 20.8Z"></path>
+<circle class="cursor-scribble__dot" cx="24" cy="24" r="2.4"></circle>
+</svg>
+</div>
+<header class="site-header site-header--untold site-header--floating" data-theme="light">
+
+<div class="header-actions"><div class="site-header__combo-pill"><a aria-label="Shiva Sah home" class="header-logo header-logo--signature transition-link" href="index.html">
+<img alt="" aria-hidden="true" class="header-lastoria-v70" src="assets/shiva-wordmark-static.svg"/>
+<span class="sr-only">Shiva Sah</span>
+</a><button aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog" aria-label="Open menu" class="site-menu-trigger site-menu-trigger--wordmark-burger" type="button"><span aria-hidden="true" class="site-menu-trigger__burger"><span></span><span></span><span></span></span><span class="sr-only">Menu</span></button></div></div>
+</header>
+<!-- SITE MENU START -->
+<!-- Shared site menu. Regenerate copies with python tools/build_menu.py. -->
+<div aria-hidden="true" aria-labelledby="site-menu-title" aria-modal="true" class="site-menu" hidden="" id="site-menu" inert="" role="dialog" tabindex="-1">
+<div class="site-menu__bar">
+<h2 class="site-menu__label" id="site-menu-title">
+<img alt="" aria-hidden="true" class="site-menu__signature-v70" src="assets/shiva-wordmark-static.svg"/>
+<span class="sr-only">Shiva</span>
+</h2>
+</div>
+<div class="site-menu__scroll">
+<nav aria-labelledby="site-menu-pages-title" class="site-menu__primary site-menu__primary--simple">
+<a class="site-menu__page" data-menu-section="top" href="index.html#top"><strong>Home</strong></a>
+<div class="site-menu__works-group">
+<button aria-controls="site-menu-case-studies" aria-expanded="false" class="site-menu__page site-menu__works-toggle" data-menu-section="work" type="button">
+<strong>Selected works</strong>
+<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg>
+</button>
+<div class="site-menu__projects-panel" hidden="" id="site-menu-case-studies"><div class="site-menu__projects-inner">
+<a class="site-menu__project" data-menu-page="agent-management.html" href="agent-management.html"><strong>Agent Management</strong><em>Cisco AppDynamics</em></a>
+<div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Domain-Centric Views</strong><em>Cisco Cloud Observability</em><span class="site-menu__soon">Adding soon</span></div><div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Management Reports</strong><em>Intuit QuickBooks</em><span class="site-menu__soon">Adding soon</span></div></div></div>
+</div>
+<a class="site-menu__page" data-menu-section="writing" href="index.html#writing"><strong>Notes &amp; essays</strong></a>
+<a class="site-menu__page" data-menu-section="vibes" href="index.html#vibes"><strong>Experiments</strong></a>
+<a class="site-menu__page" data-menu-section="intro" href="index.html#intro"><strong>Approach</strong></a>
+<a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
+</nav>
+</div>
+</div>
+<!-- SITE MENU END -->
+<main class="mr-main" id="main">
+<section aria-labelledby="mr-title" class="mr-hero" data-header-theme="light" id="top">
+<div class="mr-shell">
+<div class="mr-hero__kicker"><span class="mr-eyebrow">A next-generation experience</span><span class="mr-eyebrow">Intuit QuickBooks · 2025</span></div>
+<div class="mr-hero__lead"><h1 class="mr-hero__title" id="mr-title">management<br/><span>reports.</span></h1><figure class="mr-lead-art"><img alt="Management Reports editor with report canvas and KPI customization" fetchpriority="high" height="960" src="assets/management-reports-thumbnail.png" width="1440"/><figcaption>Management Reports editor</figcaption></figure></div>
+<div class="mr-hero__bottom">
+<div><p class="mr-hero__thesis">More flexibility.<br/>Less repeated effort.</p><p class="mr-copy">I led the next-generation reporting experience, introduced alongside legacy. The goal: quality, data flexibility and repeat use.</p></div>
+<dl class="mr-facts"><div><dt>Role</dt><dd>Lead designer for the initiative</dd></div><div><dt>Design &amp; release</dt><dd>Jul–Nov 2025<br/>December AI-summary follow-up</dd></div><div><dt>My scope</dt><dd>Vision · product model · research · interaction design · release sequencing</dd></div><div><dt>Core partners</dt><dd>Product, engineering, research, and design leadership</dd></div></dl>
+</div>
+<nav aria-label="Case study shortcuts" class="mr-hero__links"><a class="mr-text-link" href="#problem">Read the story <span aria-hidden="true">↓</span></a><a class="mr-text-link" href="#impact">Usage &amp; next questions <span aria-hidden="true">↓</span></a></nav>
+</div>
+</section>
+<section aria-labelledby="mr-problem-title" class="mr-section" data-header-theme="light" id="problem">
+<span class="mr-anchor-alias" id="pitch"></span><span class="mr-anchor-alias" id="mandate"></span>
+<div class="mr-shell">
+<div class="mr-two-col"><div class="reveal"><p class="mr-eyebrow">01 · The starting point</p><h2 class="mr-h2" id="mr-problem-title">An existing product.<br/>An unfinished job.</h2></div><div class="mr-prose reveal"><p>Legacy Management Reports was reusable, but offered limited customization. Usage was low; customers wanted more control over the data and presentation.</p><p>Our goal was a more flexible experience, not a fresh start for management reporting in QuickBooks.</p></div></div>
+<ol aria-label="Existing legacy reporting cycle" class="mr-workflow mr-workflow--legacy reveal"><li><span>01</span><img alt="" aria-hidden="true" class="mr-workflow-icon" height="64" loading="lazy" src="assets/discovery-research-fragmented-tools.svg" width="64"/><h3>Combine reports &amp; KPIs</h3><p>Start within legacy Management Reports</p></li><li><span>02</span><img alt="" aria-hidden="true" class="mr-workflow-icon" height="64" loading="lazy" src="assets/learning-align.svg" width="64"/><h3>Write the summary</h3><p>Add interpretation manually</p></li><li><span>03</span><img alt="" aria-hidden="true" class="mr-workflow-icon" height="64" loading="lazy" src="assets/learning-share.svg" width="64"/><h3>Save &amp; send</h3><p>Prepare the report for clients</p></li><li><span>04</span><img alt="" aria-hidden="true" class="mr-workflow-icon" height="64" loading="lazy" src="assets/experience-vs-release-scheduling.svg" width="64"/><h3>Reopen &amp; revise</h3><p>Update the narrative for the next cycle</p></li></ol>
+<div class="mr-keep-change reveal"><div><span class="mr-number">Worth preserving</span><h3>Preserve saved, reusable reports.</h3></div><div><span class="mr-number">Worth rethinking</span><h3>Add flexibility without more recurring work.</h3></div></div>
+<p class="mr-caption-note">Broad July brief. Fixed November target. A coherent next version, not just a longer feature list.</p>
+</div>
+</section>
+<section aria-labelledby="mr-needs-title" class="mr-section mr-section--needs" data-header-theme="light" id="needs">
+<span class="mr-anchor-alias" id="research"></span>
+<div class="mr-shell">
+<div class="mr-heading reveal"><p class="mr-eyebrow">02 · Customer needs</p><h2 class="mr-h2" id="mr-needs-title">Three needs.<br/>One design tension.</h2></div>
+<div class="mr-customer-needs"><article class="mr-need-note mr-need-note--1 reveal"><span class="mr-number">01</span><img alt="" aria-hidden="true" class="mr-authored-icon" height="88" loading="lazy" src="assets/learning-trust.svg" width="88"/><h3>Quality with less effort.</h3><p>Build accurate, high-quality reports with minimal effort.</p></article><article class="mr-need-note mr-need-note--2 reveal"><span class="mr-number">02</span><img alt="" aria-hidden="true" class="mr-authored-icon" height="88" loading="lazy" src="assets/discovery-research-fragmented-tools.svg" width="88"/><h3>The data I need.</h3><p>Bring in the data I want, with the flexibility to shape my report.</p></article><article class="mr-need-note mr-need-note--3 reveal"><span class="mr-number">03</span><img alt="" aria-hidden="true" class="mr-authored-icon" height="88" loading="lazy" src="assets/experience-vs-release-scheduling.svg" width="88"/><h3>A repeatable setup.</h3><p>Let my setup carry forward, so recurring reporting scales with my work.</p></article></div>
+<div class="mr-question reveal"><span class="mr-eyebrow">The design question</span><p>How could we give customers more flexibility without making every reporting cycle more work?</p></div>
+<p class="mr-caption-note">Customer needs and design goals, not measured accuracy or productivity gains.</p>
+</div>
+</section>
+<section aria-labelledby="mr-life-title" class="mr-section" data-header-theme="light" id="lifecycle">
+<span class="mr-anchor-alias" id="vision"></span>
+<div class="mr-shell">
+<div class="mr-two-col"><div class="reveal"><p class="mr-eyebrow">03 · Decision 01 / Product model</p><h2 class="mr-h2" id="mr-life-title">Define the whole.<br/>Sequence the release.</h2></div><div class="mr-prose reveal"><p>I used the vision prototype and lifecycle to align leadership, product and engineering on one experience and its dependencies.</p></div></div>
+<div class="mr-lifecycle" data-mr-tabs="">
+<div aria-label="Report lifecycle views" class="mr-tabs" hidden="" role="tablist"><button aria-controls="mr-panel-northstar" aria-selected="true" data-mr-tab="northstar" id="mr-tab-northstar" role="tab" type="button">North star</button><button aria-controls="mr-panel-sequence" aria-selected="false" data-mr-tab="sequence" id="mr-tab-sequence" role="tab" tabindex="-1" type="button">Release sequence</button></div>
+<div class="mr-tab-panels">
+<div aria-labelledby="mr-tab-northstar" class="mr-tab-panel" data-mr-panel="northstar" id="mr-panel-northstar" role="tabpanel" tabindex="0">
+<figure aria-describedby="mr-northstar-note" aria-labelledby="mr-northstar-title" class="mr-northstar mr-northstar--notes">
+<figcaption class="mr-northstar__caption">
+<h3 id="mr-northstar-title">North Star report lifecycle</h3>
+<p id="mr-northstar-note">Long-term product model, not a shipped-feature checklist. First-release focus refers to the stage; individual capabilities follow the 2025 release plan.</p>
+</figcaption><div aria-label="Diagram key" class="mr-northstar-legend"><span><i aria-hidden="true" class="mr-legend-line"></i>Journey</span><span><i aria-hidden="true" class="mr-legend-line mr-legend-line--later"></i>Fast follow / roadmap</span><small>Timing is labelled on the notes.</small></div>
+<div class="mr-journey">
+<article class="mr-journey-stage">
+<header>
+<span>01</span>
+<div><h4>Create</h4><small>2025 first-release focus</small></div>
+<svg aria-hidden="true" class="mr-stage-ink" focusable="false" preserveaspectratio="none" viewbox="0 0 300 12"><path d="M3 6 C79 3 188 8 297 5"></path><path class="mr-pen-echo" d="M4 7 C113 5 208 9 295 6"></path></svg></header>
+<div class="mr-journey-actions"><div class="mr-journey-action mr-journey-action--primary"><div class="mr-journey-paper">
+<strong>Create a new report</strong>
+<ul><li>Start from scratch</li><li>Start with an AI prompt</li><li>Use a template</li></ul>
+</div></div></div></article>
+<div aria-hidden="true" class="mr-journey-connector"><svg aria-hidden="true" focusable="false" viewbox="0 0 48 24"><path d="M3 13 C15 10 26 14 43 10 M34 4 L44 10 L35 19"></path><path class="mr-pen-echo" d="M4 14 C16 12 29 13 42 11"></path></svg></div>
+<article class="mr-journey-stage">
+<header>
+<span>02</span>
+<div><h4>Build</h4><small>2025 first-release focus</small></div>
+<svg aria-hidden="true" class="mr-stage-ink" focusable="false" preserveaspectratio="none" viewbox="0 0 300 12"><path d="M3 6 C79 3 188 8 297 5"></path><path class="mr-pen-echo" d="M4 7 C113 5 208 9 295 6"></path></svg></header>
+<div class="mr-journey-actions"><div class="mr-journey-action"><div class="mr-journey-paper">
+<strong>Add sections</strong>
+<ul><li>Reports and KPIs</li><li>Text and media</li><li>Highlights</li></ul>
+</div></div><div class="mr-journey-action mr-journey-action--follow"><div class="mr-journey-paper"><span class="mr-journey-status">Dec 2025 fast follow</span>
+<strong>AI-assisted summary</strong>
+<ul><li>Generate a draft</li><li>Edit and update</li></ul>
+</div><svg aria-hidden="true" class="mr-action-arrow is-later" focusable="false" viewbox="0 0 24 32"><path d="M12 2 C10 10 14 17 12 28 M5 21 L12 29 L19 21"></path><path class="mr-pen-echo" d="M13 3 C12 12 15 21 12 28"></path></svg></div><div class="mr-journey-action"><div class="mr-journey-paper">
+<strong>Apply style and theme</strong>
+<ul><li>Choose a starting style</li><li>Adjust font, color, and layout</li></ul>
+</div><svg aria-hidden="true" class="mr-action-arrow" focusable="false" viewbox="0 0 24 32"><path d="M12 2 C10 10 14 17 12 28 M5 21 L12 29 L19 21"></path><path class="mr-pen-echo" d="M13 3 C12 12 15 21 12 28"></path></svg></div><div class="mr-journey-action"><div class="mr-journey-paper">
+<strong>Save draft</strong>
+</div><svg aria-hidden="true" class="mr-action-arrow" focusable="false" viewbox="0 0 24 32"><path d="M12 2 C10 10 14 17 12 28 M5 21 L12 29 L19 21"></path><path class="mr-pen-echo" d="M13 3 C12 12 15 21 12 28"></path></svg></div></div></article>
+<div aria-hidden="true" class="mr-journey-connector is-later"><svg aria-hidden="true" focusable="false" viewbox="0 0 48 24"><path d="M3 13 C15 10 26 14 43 10 M34 4 L44 10 L35 19"></path><path class="mr-pen-echo" d="M4 14 C16 12 29 13 42 11"></path></svg></div>
+<article class="mr-journey-stage mr-journey-stage--deferred">
+<header>
+<span>03</span>
+<div><h4>Collaborate</h4><small>Team review deferred in 2025</small></div>
+<svg aria-hidden="true" class="mr-stage-ink" focusable="false" preserveaspectratio="none" viewbox="0 0 300 12"><path d="M3 6 C79 3 188 8 297 5"></path><path class="mr-pen-echo" d="M4 7 C113 5 208 9 295 6"></path></svg></header>
+<div class="mr-journey-actions"><div class="mr-journey-action mr-journey-action--roadmap"><div class="mr-journey-paper"><span class="mr-journey-status">Later in the 2025 plan</span>
+<strong>Invite collaborators</strong>
+<ul><li>Share a working link</li><li>Assign review tasks</li></ul>
+</div></div><div class="mr-journey-action mr-journey-action--roadmap"><div class="mr-journey-paper"><span class="mr-journey-status">Later in the 2025 plan</span>
+<strong>Comment and review</strong>
+<ul><li>Comment on sections</li><li>Resolve feedback</li></ul>
+</div><svg aria-hidden="true" class="mr-action-arrow is-later" focusable="false" viewbox="0 0 24 32"><path d="M12 2 C10 10 14 17 12 28 M5 21 L12 29 L19 21"></path><path class="mr-pen-echo" d="M13 3 C12 12 15 21 12 28"></path></svg></div><div class="mr-journey-action"><div class="mr-journey-paper">
+<strong>Finalize report</strong>
+</div><svg aria-hidden="true" class="mr-action-arrow" focusable="false" viewbox="0 0 24 32"><path d="M12 2 C10 10 14 17 12 28 M5 21 L12 29 L19 21"></path><path class="mr-pen-echo" d="M13 3 C12 12 15 21 12 28"></path></svg></div></div></article>
+<div aria-hidden="true" class="mr-journey-connector is-later"><svg aria-hidden="true" focusable="false" viewbox="0 0 48 24"><path d="M3 13 C15 10 26 14 43 10 M34 4 L44 10 L35 19"></path><path class="mr-pen-echo" d="M4 14 C16 12 29 13 42 11"></path></svg></div>
+<article class="mr-journey-stage">
+<header>
+<span>04</span>
+<div><h4>Publish</h4><small>2025 first-release focus</small></div>
+<svg aria-hidden="true" class="mr-stage-ink" focusable="false" preserveaspectratio="none" viewbox="0 0 300 12"><path d="M3 6 C79 3 188 8 297 5"></path><path class="mr-pen-echo" d="M4 7 C113 5 208 9 295 6"></path></svg></header>
+<div class="mr-journey-actions"><div class="mr-journey-action mr-journey-action--primary"><div class="mr-journey-paper">
+<strong>Share</strong>
+<ul><li>Send to stakeholders</li></ul>
+</div></div><div class="mr-journey-action mr-journey-action--primary"><div class="mr-journey-paper">
+<strong>Export</strong>
+<ul><li>PDF</li><li>Interactive HTML</li></ul>
+</div><svg aria-hidden="true" class="mr-action-arrow" focusable="false" viewbox="0 0 24 32"><path d="M12 2 C10 10 14 17 12 28 M5 21 L12 29 L19 21"></path><path class="mr-pen-echo" d="M13 3 C12 12 15 21 12 28"></path></svg></div><div class="mr-journey-action mr-journey-action--roadmap"><div class="mr-journey-paper"><span class="mr-journey-status">Later in the 2025 plan</span>
+<strong>Schedule</strong>
+<ul><li>Added to the later roadmap</li></ul>
+</div><svg aria-hidden="true" class="mr-action-arrow is-later" focusable="false" viewbox="0 0 24 32"><path d="M12 2 C10 10 14 17 12 28 M5 21 L12 29 L19 21"></path><path class="mr-pen-echo" d="M13 3 C12 12 15 21 12 28"></path></svg></div></div></article>
+</div>
+<p class="mr-northstar__scope">Invite and review were deferred; individual finalization remained in the first-release sequence. Starting with an AI prompt and interactive HTML are shown as vision capabilities, not confirmed November scope.</p></figure>
+</div>
+<div aria-labelledby="mr-tab-sequence" class="mr-tab-panel" data-mr-panel="sequence" id="mr-panel-sequence" role="tabpanel" tabindex="0">
+<p class="mr-panel-note">2025 delivery sequence. This describes the project at launch, not current feature availability.</p>
+<div class="mr-release-lanes"><article><span class="mr-number">November 2025</span><h3>First release</h3><ul><li>Create and compose a report</li><li>Add reports, KPIs, text, and media</li><li>Apply styles and themes</li><li>Save, finalize, share, and export</li></ul></article><article><span class="mr-number">December 2025</span><h3>Fast follow</h3><ul><li>AI-assisted summary</li><li>Originally planned for November</li><li>Paused for bug fixes and released the following month</li></ul></article><article><span class="mr-number">Later roadmap</span><h3>Team workflows</h3><ul><li>Invite collaborators</li><li>Comment and review</li><li>Scheduling</li></ul></article></div>
+</div>
+</div>
+</div>
+<p class="mr-caption-note">The lifecycle connected the customer job to release planning. Collaboration could leave the first release without disappearing from the product direction.</p>
+</div>
+</section>
+<section aria-labelledby="mr-design-title" class="mr-section" data-header-theme="light" id="design">
+<span class="mr-anchor-alias" id="architecture"></span>
+<div class="mr-shell">
+<div class="mr-heading reveal"><p class="mr-eyebrow">04 · Decision 02 / Authoring</p><h2 class="mr-h2" id="mr-design-title">One block.<br/>Flexible expression.</h2><p class="mr-copy">I consolidated specialized text components into one block, with hierarchy and formatting applied after insertion.</p></div>
+<div class="mr-component-change reveal"><div class="mr-component-before"><p class="mr-eyebrow">Early inventory</p><h3>Five text components</h3><div class="mr-block-list"><span>Text</span><span>Quote</span><span>Observation</span><span>Summary</span><span>Heading</span></div></div><span aria-hidden="true" class="mr-change-arrow">→</span><div class="mr-component-after"><p class="mr-eyebrow">Simplified model</p><h3>One flexible text block</h3><figure aria-labelledby="mr-format-caption" class="mr-format-demo" data-format-demo="">
+<figcaption class="sr-only" id="mr-format-caption">One block. Different expression.</figcaption>
+<div aria-label="Format the example text" class="mr-format-toolbar" hidden="" role="group">
+<button aria-controls="mr-format-sample" aria-pressed="false" class="mr-format-toggle" data-format="bold" type="button"><span>Bold</span></button>
+<button aria-controls="mr-format-sample" aria-pressed="false" class="mr-format-toggle" data-format="italic" type="button"><span>Italic</span></button>
+<label class="mr-format-size"><span>Font size</span><select aria-controls="mr-format-sample" aria-label="Font size" data-format="size"><option selected="" value="18">18 px</option><option value="24">24 px</option><option value="32">32 px</option></select></label>
+</div>
+<div class="mr-format-page">
+<span class="mr-format-page__label">Text block</span>
+<div class="mr-format-sample-wrap"><p class="mr-format-sample" id="mr-format-sample">Executive summary</p></div>
+</div>
+<div class="mr-format-footer" hidden="">
+<p class="mr-format-state" data-format-state="">Regular · 18 px</p>
+<button aria-label="Play formatting demonstration" class="mr-format-play" data-format-play="" type="button"><svg aria-hidden="true" viewbox="0 0 20 20"><path class="mr-play-symbol" d="m7 4 8 6-8 6Z"></path><path class="mr-pause-symbol" d="M7 4v12M13 4v12"></path></svg><span>Play demo</span></button>
+</div>
+<p class="mr-format-caption">Formatting illustration, not the product interface. <span class="mr-format-hint" hidden="">Try the controls.</span></p>
+<span aria-atomic="true" aria-live="polite" class="sr-only" data-format-status=""></span>
+</figure></div></div>
+<div class="mr-decision reveal"><span>The tradeoff</span><div><h3>Standardize insertion. Keep expression flexible.</h3><p>Fewer component behaviors; formatting remains a customer choice.</p></div></div>
+<section aria-labelledby="mr-capabilities-title" class="mr-capability-model">
+<div class="mr-capability-model__heading"><div><p class="mr-eyebrow">Product capability model</p><h3 id="mr-capabilities-title">Five capability groups.</h3></div><p class="mr-copy">Five peer groups connect the customer job to the product and technical scope.</p></div>
+<ul class="mr-capability-grid"><li class="mr-capability mr-capability--content"><div aria-hidden="true" class="mr-capability__visual"><img alt="" aria-hidden="true" class="mr-capability-icon" height="112" loading="lazy" src="assets/discovery-research-fragmented-tools.svg" width="112"/></div><div class="mr-capability__copy"><h4>Content blocks</h4><p>Text, tables, KPI, media</p></div></li>
+<li class="mr-capability mr-capability--structure"><div aria-hidden="true" class="mr-capability__visual"><img alt="" aria-hidden="true" class="mr-capability-icon" height="112" loading="lazy" src="assets/experience-vs-release-side-panel.svg" width="112"/></div><div class="mr-capability__copy"><h4>Structure</h4><p>Sections, links</p></div></li>
+<li class="mr-capability mr-capability--assist"><div aria-hidden="true" class="mr-capability__visual"><img alt="" aria-hidden="true" class="mr-capability-icon" height="112" loading="lazy" src="assets/learning-align.svg" width="112"/></div><div class="mr-capability__copy"><h4>Smart assist</h4><p>AI prompts, summaries, highlights, insights</p></div></li>
+<li class="mr-capability mr-capability--design"><div aria-hidden="true" class="mr-capability__visual"><img alt="" aria-hidden="true" class="mr-capability-icon" height="112" loading="lazy" src="assets/agent-lifecycle-configuration.svg" width="112"/></div><div class="mr-capability__copy"><h4>Design</h4><p>Theme, font, color, layout</p></div></li>
+<li class="mr-capability mr-capability--import"><div aria-hidden="true" class="mr-capability__visual"><img alt="" aria-hidden="true" class="mr-capability-icon" height="112" loading="lazy" src="assets/discovery-research-complex-configuration.svg" width="112"/></div><div class="mr-capability__copy"><h4>Import and integration</h4><p>Reports, dashboards, embeds</p></div></li></ul>
+<p class="mr-capability-model__outcome"><span>One connected reporting experience.</span><small>Grouped capabilities, not steps in a sequence.</small></p>
+</section>
+<div class="mr-explorations"><figure class="mr-screen reveal"><div class="mr-screen-static"><img alt="Early Build exploration with Intuit Assist suggestions, a report canvas, and modular content controls" height="960" loading="lazy" src="assets/reports/build-exploration.png" width="1440"/></div><figcaption><span>Early exploration · Build</span><span>Guidance, canvas, composition</span></figcaption></figure><figure class="mr-screen reveal"><div class="mr-screen-static"><img alt="Early Style exploration with starting themes and controls for font, color, and page layout" height="960" loading="lazy" src="assets/reports/style-exploration.png" width="1440"/></div><figcaption><span>Early exploration · Style</span><span>Theme, font, color, layout</span></figcaption></figure></div>
+<p class="mr-caption-note">Early Build and Style explorations, not finished customer reports or a complete record of the November release.</p>
+<details class="mr-details"><summary><span>Research scope</span><span aria-hidden="true" class="mr-details__icon"></span></summary><div class="mr-prose"><p>Moderated and unmoderated studies ran through vision, builder refinement, and implementation. Specific participant counts, quotes, and decision-changing observations are not included here; no causal research result is claimed for the component change.</p></div></details>
+</div>
+</section>
+<section aria-labelledby="mr-experience-title" class="mr-section" data-header-theme="light" id="experience">
+<div class="mr-shell">
+<div class="mr-two-col"><div class="reveal"><p class="mr-eyebrow">The experience</p><h2 class="mr-h2" id="mr-experience-title">Evidence and narrative.<br/>In context.</h2></div><div class="mr-prose reveal"><p>Financial evidence and interpretation share one canvas, with KPI customization alongside the document.</p></div></div>
+<figure class="mr-screen mr-screen--wide reveal"><a class="mr-screen-link" data-caption="Management Reports editor - report canvas and KPI customization. Product screen, not a finished report." data-report-lightbox="" href="assets/management-reports-thumbnail.png"><img alt="Management Reports editor showing a monthly performance report, profitability chart, financial table, KPI customization, and save and publish controls" height="960" loading="lazy" src="assets/management-reports-thumbnail.png" width="1440"/><span aria-hidden="true" class="mr-screen-zoom">Inspect the editor ↗</span></a><figcaption><span>Management Reports editor</span><span>Product screen · KPI customization</span></figcaption></figure>
+<div class="mr-screen-notes"><article><span>01 / Compose</span><p>Financial charts and tables share the report canvas.</p></article><article><span>02 / Customize</span><p>KPI header, hero-number, and color controls sit beside the document.</p></article><article><span>03 / Finish</span><p>Preview, Save draft, and Publish remain visible in the workspace.</p></article></div>
+</div>
+</section>
+<section aria-labelledby="mr-release-title" class="mr-section" data-header-theme="light" id="release">
+<span class="mr-anchor-alias" id="launch"></span>
+<div class="mr-shell">
+<div class="mr-two-col"><div class="reveal"><p class="mr-eyebrow">05 · Decision 03 / Scope and transition</p><h2 class="mr-h2" id="mr-release-title">A next version.<br/>Not a forced switch.</h2></div><div class="mr-prose reveal"><p>I worked with product and engineering to protect the authoring foundation, then sequence the rest around dependencies and quality.</p></div></div>
+<div class="mr-release-map"><div aria-label="2025 delivery sequence" class="mr-release-path"><article><span class="mr-number">November 2025</span><h3>Authoring foundation</h3><p>Create, compose, style and publish.</p></article><span aria-hidden="true" class="mr-release-connector">→</span><article><span class="mr-number">December 2025</span><h3>AI-summary follow-up</h3><p>Moved from November for bug fixes.</p></article></div><div class="mr-legacy-lane"><span aria-hidden="true" class="mr-legacy-lane__line"></span><div><h3>Legacy remained available at launch.</h3><p>Two experiences coexisted. This is not a claim of completed migration.</p></div></div></div>
+<div class="mr-decision reveal"><span>My contribution</span><div><h3>Keep the product direction coherent as scope changes.</h3><p>I led the vision, product model, research, and experience design, and worked through release tradeoffs with partners. Shipping was a cross-functional team outcome.</p></div></div>
+</div>
+</section>
+<section aria-labelledby="mr-impact-title" class="mr-section" data-header-theme="light" id="impact">
+<div class="mr-shell">
+<div class="mr-heading reveal"><p class="mr-eyebrow">06 · Usage and next questions</p><h2 class="mr-h2" id="mr-impact-title">Real usage.<br/><span>An open adoption question.</span></h2><p class="mr-copy">Customers saved and distributed reports. Whether the new experience improves adoption and recurring use remains an open question.</p></div>
+<figure aria-labelledby="mr-usage-caption" class="mr-usage">
+<dl class="mr-usage__metrics"><div><dt>Report-save events</dt><dd>51.8K</dd></div><div><dt>Publish / send / export events</dt><dd>38.4K</dd></div></dl>
+<figcaption id="mr-usage-caption"><strong>New Management Reports only · US · All SKUs</strong><span>Source: QBO Reports Dashboard, event view; monthly grain, all-months snapshot. Updated September 16, 2026, 20:38 PT.</span><span>Repeat events are included. These are not counts of distinct reports or customers. Legacy Management Reports is excluded.</span></figcaption>
+</figure>
+<div class="mr-interpretation"><div><span class="mr-number">Observed</span><h3>Use beyond exploration.</h3><p>Activity reaches saving and distribution.</p></div><div><span class="mr-number">Not established</span><h3>A better recurring workflow.</h3><p>No verified time, accuracy, retention or adoption lift versus legacy.</p></div></div>
+<details class="mr-details"><summary><span>What the company-level funnel suggests</span><span aria-hidden="true" class="mr-details__icon"></span></summary><div class="mr-prose"><p>The separate company view displays stage ratios of 9% from listing to start, 32% from start to created, and 60% from created to distribution. These raise questions about beginning and reaching a saved report.</p><p>They are dashboard stage ratios, not verified sequential-cohort conversion rates. Whole-period company deduplication and stage membership need confirmation before using them as customer completion or adoption claims.</p></div></details>
+<div class="mr-question"><span class="mr-eyebrow">What I would investigate next</span><p>How do more customers reach a useful first report—and return for the next cycle?</p></div>
+<div class="mr-next-questions"><article><span class="mr-number">01 / Understand the start</span><p>Separate legacy users trying the new experience from people starting management reporting for the first time.</p></article><article><span class="mr-number">02 / Follow the task</span><p>Investigate the path from an intentional start to a saved and distributed report, rather than treating all activity as success.</p></article><article><span class="mr-number">03 / Test repeatability</span><p>Examine what carries forward to the next reporting cycle and what still requires effort or manual review.</p></article></div>
+<p class="mr-caption-note">These are next-step questions, not completed experiments or measured improvements.</p>
+<details class="mr-details mr-evidence-details"><summary><span>Measurement and release scope</span><span aria-hidden="true" class="mr-details__icon"></span></summary><div class="mr-prose"><p><strong>Usage:</strong> the all-months dashboard selector spans October 2025 to September 2026. September is partial at the snapshot date. Activity may include work before and after the initial November release and is not attributable solely to my design or that release. The two exports are event and company views, not a before-and-after comparison.</p><p><strong>Comparison:</strong> legacy usage was described qualitatively as low. A matched legacy baseline, eligible audience, customer completion cohort, and repeat-use measures are not available here. Accuracy, quality, flexibility, and productivity remain customer goals rather than quantified improvements.</p><p><strong>Release:</strong> November and December milestones describe the 2025 project narrative. Exact capability-level November scope is not fully verified. Roadmap labels in the lifecycle refer to that plan, not present-day availability.</p><p><strong>Visual evidence:</strong> Build and Style are early explorations. The editor image is a product screen, not a finished customer report. A matched comparison of the generated legacy and new reports is not yet included.</p></div></details>
+</div>
+</section>
+</main>
+<footer class="site-footer site-footer--case-reveal" data-header-theme="dark" id="contact">
+<div class="site-footer__top site-footer__top--simple"><div><p class="site-footer__title">let's<br/>connect.</p><p class="site-footer__note">Open to conversations about complex systems, product craft and mentoring.</p></div><div class="footer-next"><p class="eyebrow eyebrow--light">Keep exploring</p><a class="footer-next__link transition-link" href="agent-management.html"><span>Next case study</span><strong>Agent Management <svg aria-hidden="true" class="footer-next__arrow" focusable="false" viewbox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"></path></svg></strong></a><a class="footer-next__link transition-link" href="index.html#work"><span>Back to the portfolio</span><strong>Selected work <svg aria-hidden="true" class="footer-next__arrow" focusable="false" viewbox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"></path></svg></strong></a></div></div>
+<div class="site-footer__bottom site-footer__bottom--simple"><nav aria-label="Social links" class="footer-socials" data-contact-links="">
+<a aria-label="LinkedIn (opens in a new tab)" data-contact-key="linkedin" href="https://www.linkedin.com/" rel="noopener noreferrer" target="_blank">LinkedIn <span aria-hidden="true">↗</span></a>
+<a aria-label="Medium (opens in a new tab)" data-contact-key="medium" href="https://medium.com/" rel="noopener noreferrer" target="_blank">Medium <span aria-hidden="true">↗</span></a>
+<a aria-label="GitHub (opens in a new tab)" data-contact-key="github" href="https://github.com/" rel="noopener noreferrer" target="_blank">GitHub <span aria-hidden="true">↗</span></a>
+</nav><a aria-label="Back to top" class="back-top back-top--icon" href="#top"><svg aria-hidden="true" viewbox="0 0 32 32"><path d="M16 25V7M9 14l7-7 7 7"></path></svg></a></div>
+</footer></body></html>

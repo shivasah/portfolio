@@ -1,0 +1,124 @@
+/* Management Reports North Star: physical notes, matching the Agent page.
+   One externally referenced handwritten family; no font binaries are bundled. */
+@font-face {
+  font-family: "Northstar Excalifont";
+  src: local("Excalifont"), local("Excalifont Regular"),
+    url("https://raw.githubusercontent.com/excalidraw/excalidraw/master/packages/excalidraw/fonts/Excalifont/Excalifont-Regular-a88b72a24fb54c9f94e3b5fdaa7481c9.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.page-case-reports .mr-northstar {
+  --ns-hand: "Northstar Excalifont", "Comic Neue", "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+  --ns-ink: var(--ink, #232428);
+  --ns-accent: var(--orange, #ff5623);
+  color: var(--ns-ink);
+  margin: 0;
+}
+/* This explicit typography exception is confined to the note board. */
+.page-case-reports .mr-northstar :is(h3,h4,p,span,small,strong,li) {
+  font-family: var(--ns-hand) !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-synthesis: none;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-wrap: pretty;
+}
+.page-case-reports .mr-northstar__caption {
+  display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap;
+  gap: 18px 48px; padding-block: 24px;
+}
+.page-case-reports .mr-northstar__caption h3 {
+  margin: 0; font-size: clamp(26px,2.35vw,34px) !important; line-height: 1.25 !important;
+}
+.page-case-reports .mr-northstar__caption p {
+  max-width: 55ch; font-size: 16px !important; line-height: 1.5 !important;
+  color: var(--ink-soft, #4d4d50);
+}
+.page-case-reports .mr-northstar-legend {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 14px 28px; margin: 0 0 30px;
+}
+.page-case-reports .mr-northstar-legend > span { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; }
+.page-case-reports .mr-northstar-legend > small { color: var(--ink-soft); font-size: 14px; }
+.page-case-reports .mr-legend-line { width: 28px; border-top: 2px solid var(--ns-accent); transform: rotate(-2deg); }
+.page-case-reports .mr-legend-line--later { border-top: 2px dotted var(--ns-ink); }
+.page-case-reports .mr-journey {
+  display: grid; grid-template-columns: minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr);
+  gap: 12px; align-items: start; padding: 8px 6px 20px;
+}
+.page-case-reports .mr-journey-stage { --note-color: #ff8b64; --note-angle: -.8deg; min-width: 0; }
+.page-case-reports .mr-journey-stage:nth-of-type(2) { --note-color: #efcc62; --note-angle: .6deg; }
+.page-case-reports .mr-journey-stage:nth-of-type(3) { --note-color: #f3eee3; --note-angle: -.5deg; }
+.page-case-reports .mr-journey-stage:nth-of-type(4) { --note-color: #f5e9b9; --note-angle: .8deg; }
+.page-case-reports .mr-journey-stage header {
+  position: relative; display: flex; align-items: start; gap: 10px;
+  min-height: 112px; margin-bottom: 18px; padding: 0 0 28px; border: 0;
+}
+.page-case-reports .mr-journey-stage header > span { min-width: 25px; padding-top: 8px; color: var(--ink-soft); font-size: 15px !important; }
+.page-case-reports .mr-journey-stage header > div { min-width: 0; }
+.page-case-reports .mr-journey-stage h4 { margin: 0; font-size: clamp(27px,2.3vw,34px) !important; line-height: 1.22 !important; }
+.page-case-reports .mr-journey-stage header small { display: block; margin-top: 9px; font-size: 14px !important; line-height: 1.4 !important; color: var(--ink-soft); }
+.page-case-reports .mr-stage-ink { position: absolute; bottom: 8px; left: 0; width: 100%; height: 10px; fill: none; stroke: var(--ns-accent); stroke-width: 1.8; overflow: visible; pointer-events: none; }
+.page-case-reports .mr-stage-ink path { vector-effect: non-scaling-stroke; }
+.page-case-reports .mr-journey-stage--deferred .mr-stage-ink { stroke: var(--ns-ink); }
+.page-case-reports .mr-journey-actions { min-width: 0; }
+.page-case-reports .mr-journey-action { position: relative; min-width: 0; background: none; border: 0; padding: 0; isolation: isolate; }
+.page-case-reports .mr-journey-action + .mr-journey-action { margin-top: 46px; }
+.page-case-reports .mr-journey-paper {
+  position: relative; min-height: 110px; padding: 26px 22px 30px;
+  border: 0; border-radius: 2px 4px 3px 1px;
+  background: linear-gradient(174deg,rgba(255,255,255,.16),transparent 58%), var(--note-color);
+  box-shadow: 2px 8px 20px rgba(35,36,40,.1), 0 1px 2px rgba(35,36,40,.05);
+  transform: rotate(var(--note-angle)); transform-origin: 50% 12px;
+}
+.page-case-reports .mr-journey-action:nth-child(even) .mr-journey-paper { transform: rotate(calc(var(--note-angle) * -1)); }
+.page-case-reports .mr-journey-paper::before {
+  content: ""; position: absolute; top: -8px; left: calc(50% - 30px); width: 60px; height: 18px;
+  background: rgba(242,233,204,.7); border-inline: 1px solid rgba(252,252,244,.35);
+  transform: rotate(-3deg); pointer-events: none;
+}
+.page-case-reports .mr-journey-paper::after {
+  content: ""; position: absolute; right: 0; bottom: 0; width: 18px; height: 18px;
+  background: linear-gradient(135deg,transparent 48%,rgba(35,36,40,.09) 50%,rgba(255,255,255,.4));
+  pointer-events: none;
+}
+.page-case-reports .mr-journey-action--follow { --note-color: #ff8b64; }
+.page-case-reports .mr-journey-action--roadmap { --note-color: #f3eee3; }
+.page-case-reports .mr-journey-action strong { display: block; font-size: 21px !important; line-height: 1.25 !important; overflow-wrap: break-word; }
+.page-case-reports .mr-journey-action ul { display: grid; gap: 7px; list-style: none; padding: 0; margin: 14px 0 0; }
+.page-case-reports .mr-journey-action li { position: relative; padding-left: 13px; font-size: 16px !important; line-height: 1.45 !important; color: var(--ink-soft); overflow-wrap: break-word; }
+.page-case-reports .mr-journey-action li::before { content: ""; position: absolute; left: 0; top: .67em; width: 5px; height: 3px; background: currentColor; border-radius: 40% 54%; transform: rotate(-12deg); }
+.page-case-reports .mr-journey-status { display: block; width: fit-content; font-size: 14px !important; line-height: 1.4 !important; padding-bottom: 5px; border-bottom: 2px dotted rgba(35,36,40,.4); margin-bottom: 14px; color: var(--ink-soft); }
+.page-case-reports .mr-action-arrow { position: absolute; top: -39px; left: calc(50% - 12px); width: 24px; height: 28px; fill: none; stroke: var(--ns-ink); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; overflow: visible; }
+.page-case-reports .mr-journey-connector { align-self: start; margin-top: 12px; }
+.page-case-reports .mr-journey-connector svg { width: 24px; height: 22px; fill: none; stroke: var(--ns-accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; overflow: visible; pointer-events: none; }
+.page-case-reports .mr-journey-connector.is-later svg,
+.page-case-reports .mr-action-arrow.is-later { stroke: var(--ns-ink); stroke-dasharray: 1 5; }
+.page-case-reports .mr-northstar .mr-pen-echo { stroke-width: 1; opacity: .28; }
+.page-case-reports .is-later .mr-pen-echo { display: none; }
+.page-case-reports .mr-northstar__scope { margin-top: 28px; max-width: 95ch; font-size: 15px !important; line-height: 1.55 !important; color: var(--ink-soft); }
+@media (max-width: 1100px) {
+  .page-case-reports .mr-journey { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .page-case-reports .mr-journey-stage { display: grid; grid-template-columns: minmax(180px,.8fr) minmax(0,1.2fr); gap: 36px; }
+  .page-case-reports .mr-journey-stage header { min-height: 0; align-self: start; }
+  .page-case-reports .mr-journey-stage h4 { font-size: 34px !important; }
+  .page-case-reports .mr-journey-connector { display: grid; place-items: center; width: 30px; height: 60px; margin: 16px 0 24px 40px; }
+  .page-case-reports .mr-journey-connector svg { transform: rotate(90deg); }
+  .page-case-reports #lifecycle [data-enhanced] .mr-tab-panels { display: block; }
+  .page-case-reports #lifecycle [data-enhanced] .mr-tab-panel[hidden] { display: none; }
+}
+@media (max-width: 640px) {
+  .page-case-reports .mr-northstar__caption { gap: 16px; padding-block: 20px 24px; }
+  .page-case-reports .mr-northstar-legend { gap: 12px 20px; }
+  .page-case-reports .mr-northstar-legend > small { flex-basis: 100%; }
+  .page-case-reports .mr-journey-stage { display: block; }
+  .page-case-reports .mr-journey-stage header { margin-bottom: 24px; }
+  .page-case-reports .mr-journey-paper { padding: 26px 24px 30px; }
+  .page-case-reports .mr-journey-connector { margin: 20px auto 26px; }
+}
+@media print {
+  .page-case-reports .mr-journey-stage, .page-case-reports .mr-journey-action { break-inside: avoid; }
+  .page-case-reports .mr-journey-paper { box-shadow: none; print-color-adjust: exact; }
+  .page-case-reports #lifecycle [data-enhanced] .mr-tab-panel[hidden] { display: block; visibility: visible; }
+}

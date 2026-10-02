@@ -137,3 +137,28 @@ html:not(.js) .flip-stack__instruction { display: none; }
 
 /* V74 long-title clipping fix */
 .flip-card h3{line-height:1.10;padding-block:.04em .12em;overflow:visible}
+
+
+/* V83 — keep all three case-study cards visible while two remain private. */
+.flip-card__link--locked {
+  cursor: default;
+  position: relative;
+}
+.flip-card__link--locked .flip-card__media img {
+  filter: saturate(.82) contrast(.96);
+}
+.flip-card__coming-soon {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 32px;
+  padding: 5px 11px;
+  margin-bottom: 14px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 1;
+}
+.flip-card__link--locked .flip-card__cta {
+  pointer-events: none;
+}

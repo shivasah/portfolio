@@ -103,6 +103,3 @@ body.page-case-agent .agent-zfi-card::before,
 body.page-case-agent .agent-zfi-card::after{box-shadow:none!important;border:0!important}
 
 /* Selected book must always project in front of the shelf. */
-.newsletter-bookshelf.is-enhanced .shelf-book.is-selected{z-index:999!important}
-.newsletter-bookshelf.is-enhanced .shelf-book.is-selected .shelf-book__button,
-.newsletter-bookshelf.is-enhanced .shelf-book.is-selected .shelf-book__object{z-index:3000!important}

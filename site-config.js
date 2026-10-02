@@ -19,6 +19,13 @@ window.PORTFOLIO_CONFIG = Object.freeze({
     'writing-06': 'https://ieeexplore.ieee.org/abstract/document/9701536',
     'writing-07': ''
   },
+  // Optional, sanitized capture containing exactly the first two screenfuls.
+  // Leave empty until the real image is supplied. Never point this at localhost.
+  cashflowPreview: {
+    imagePath: '', // Example: 'assets/cashflow-first-two-folds.webp'
+    alt: 'Cash Flow Feedback dashboard: the first two screenfuls, with private data removed.',
+    cycleSeconds: 24
+  },
   menuAnimation: {
     // Supply a real, licensed Lottie JSON plus a local lottie-web player.
     // No requests or player loading occur until BOTH paths are configured.

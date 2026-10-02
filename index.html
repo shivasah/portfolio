@@ -33,27 +33,95 @@
 })();
 </script>
 <link href="styles.css?v=83" rel="stylesheet"/>
-<link href="menu.css?v=83" rel="stylesheet"/>
+<link href="menu.css?v=84" rel="stylesheet"/>
 <link href="preloader-art.css?v=83" rel="stylesheet"/>
-<link href="home.css" rel="stylesheet"/>
-<link href="hero.css?v=83" rel="stylesheet"/>
-<link as="image" fetchpriority="high" href="assets/character-hero-q95/center-v4.webp" rel="preload"/>
-<link href="case-study-stack.css?v=83" rel="stylesheet"/>
-<script defer="" src="site-config.js?v=83"></script>
+<link href="home.css?v=87" rel="stylesheet"/>
+
+<link href="case-study-stack.css?v=84" rel="stylesheet"/>
+<script defer="" src="site-config.js?v=87"></script>
 <script defer="" src="preloader-art.js?v=83"></script>
-<script defer="" src="app.js?v=83"></script>
-<script defer="" src="home.js?v=83"></script>
+<script defer="" src="app.js?v=87"></script>
+<script defer="" src="home.js?v=87"></script>
 <script defer="" src="case-study-stack.js?v=83"></script>
-<script defer="" src="hero.js?v=83"></script>
+
 <link href="refinements-v74.css?v=83" rel="stylesheet"/><script defer="" src="refinements-v74.js?v=83"></script>
-<link href="refinements-v75.css?v=83" rel="stylesheet"/><link href="refinements-v76.css?v=83" rel="stylesheet"/>
+<link href="refinements-v75.css?v=87" rel="stylesheet"/><link href="refinements-v76.css?v=87" rel="stylesheet"/>
 <link href="refinements-v77.css?v=83" rel="stylesheet"/>
 <link href="refinements-v78.css?v=83" rel="stylesheet"/>
 <link href="refinements-v79.css?v=83" rel="stylesheet"/>
 <link href="refinements-v80.css?v=83" rel="stylesheet"/>
 <link href="refinements-v82.css?v=83" rel="stylesheet"/>
-</head>
-<body class="page-home">
+<link href="vibe-codes.css?v=87" rel="stylesheet"/>
+<link href="portfolio-polish.css?v=87" rel="stylesheet"/>
+<script defer="" src="vibe-codes.js?v=86"></script>
+<style id="v88-landing-hero-style">
+/* V88 — uploaded portfolio landing hero, isolated from the rest of the portfolio. */
+#top.hero{
+  --paper:#FBFBF4;--ink:#232428;--orange:#FE5724;
+  --display:var(--font-display,"Cabinet Grotesk","Avenir Next","Helvetica Neue",Arial,sans-serif);
+  --body:var(--font-body,"Syne",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif);
+  --ease:cubic-bezier(.22,1,.36,1);--pad:clamp(18px,3.4vw,56px);
+  position:relative;width:100vw;height:100vh;min-height:0;overflow:hidden;background:var(--paper);color:var(--ink);
+  box-sizing:border-box;font-family:var(--body);-webkit-font-smoothing:antialiased;
+}
+#top.hero *,#top.hero *::before,#top.hero *::after{box-sizing:border-box}
+#top.hero svg#m{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible}
+#top.hero svg .d4{font-family:var(--display);font-weight:400}
+#top.hero svg .d5{font-family:var(--display);font-weight:500}
+#top.hero svg .b{font-family:var(--body)}
+#top.hero .who{position:absolute;z-index:2;left:var(--pad);top:calc(clamp(18px,4vh,44px) + env(safe-area-inset-top,0px))}
+#top.hero .name{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(34px,min(4.6vw,8.4vh),84px);line-height:.92;letter-spacing:-.035em}
+#top.hero .role{margin:clamp(8px,1.2vh,12px) 0 0;font-size:clamp(13px,1.05vw,17px);font-weight:500}
+#top.hero .now{margin:4px 0 0;font-size:clamp(12px,.92vw,15px);font-weight:500;opacity:.68}
+.js #top.hero .who>*{opacity:0;transform:translateY(10px)}
+#top.hero.in .who>*{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .9s var(--ease)}
+#top.hero.in .who>:nth-child(2){transition-delay:.12s}#top.hero.in .who>:nth-child(3){transition-delay:.22s}
+#top.hero .mouse{position:absolute;z-index:3;left:50%;bottom:calc(clamp(14px,3vh,30px) + env(safe-area-inset-bottom,0px));translate:-50% 0;display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:10.5px;font-weight:700;letter-spacing:.1em;transition:opacity .5s var(--ease)}
+#top.hero .mouse .body{position:relative;width:24px;height:38px;border:1.6px solid currentColor;border-radius:13px}
+#top.hero .mouse .wheel{position:absolute;left:50%;top:7px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--orange);animation:v88wheel 1.8s var(--ease) infinite}
+#top.hero .mouse[data-tone="orange"] .wheel{background:var(--ink)}
+@keyframes v88wheel{0%{transform:translateY(0);opacity:0}20%{opacity:1}70%{transform:translateY(12px);opacity:1}100%{transform:translateY(14px);opacity:0}}
+#top.hero .mouse.gone{opacity:0;pointer-events:none}
+#top.hero .mouse:focus-visible{outline:2px solid var(--ink);outline-offset:5px;border-radius:8px}
+#top.hero .pause{all:unset;position:absolute;z-index:3;right:var(--pad);bottom:calc(clamp(14px,3vh,30px) + env(safe-area-inset-bottom,0px));cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.06em;color:var(--ink);opacity:.55;transition:opacity .3s var(--ease)}
+#top.hero .pause:hover,#top.hero .pause:focus-visible{opacity:1}#top.hero .pause:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+#top.hero .pause i{width:5px;height:5px;border-radius:50%;background:var(--orange)}#top.hero .pause[data-tone="orange"] i{background:var(--ink)}
+#top.hero .scrub{position:absolute;z-index:4;right:12px;top:12px;display:none;gap:8px;align-items:center;font:700 11px/1 var(--body);background:var(--paper);padding:6px 10px;border-radius:999px}
+#top.hero .scrub.on{display:flex}#top.hero .scrub input{width:260px;accent-color:var(--orange)}
+@media (max-aspect-ratio:1/1){#top.hero .name{font-size:clamp(36px,9.6vw,72px)}#top.hero .role{font-size:15px}#top.hero .now{font-size:13px}}
+@media (prefers-reduced-motion:reduce){#top.hero .mouse .wheel{animation:none;transform:translateY(6px)}#top.hero.in .who>*{transition:none}}
+/* Keep the existing floating site menu above the new full-viewport hero. */
+.site-header.site-header--floating{z-index:120!important}
+.site-menu{z-index:130!important}
+
+/* V89 — landing hero identity + compact-to-expanded header. */
+#top.hero .name{font-size:0;line-height:1;letter-spacing:0}
+#top.hero .hero-name-wordmark{display:block;width:clamp(132px,13vw,220px);height:auto;object-fit:contain;object-position:left center}
+#top.hero .role{margin-top:clamp(10px,1.25vh,14px)}
+
+body.page-home .site-header__combo-pill,
+body.page-home .site-header--floating .header-logo{
+  transition:width 520ms cubic-bezier(.22,1,.36,1),min-width 520ms cubic-bezier(.22,1,.36,1),padding 520ms cubic-bezier(.22,1,.36,1),gap 520ms cubic-bezier(.22,1,.36,1),opacity 280ms ease,transform 520ms cubic-bezier(.22,1,.36,1)!important;
+}
+body.page-home.hero-header-compact .site-header__combo-pill{
+  min-height:56px!important;
+  padding:4px!important;
+  gap:0!important;
+}
+body.page-home.hero-header-compact .site-header--floating .header-logo{
+  width:0!important;
+  min-width:0!important;
+  opacity:0!important;
+  overflow:hidden!important;
+  pointer-events:none!important;
+  transform:translateX(8px)!important;
+}
+@media(max-width:620px){
+  body.page-home.hero-header-compact .site-header__combo-pill{min-height:52px!important;padding:4px!important}
+  #top.hero .hero-name-wordmark{width:clamp(124px,34vw,176px)}
+}
+</style></head>
+<body class="page-home hero-header-compact">
 <a class="skip-link" href="#main">Skip to content</a>
 <div aria-hidden="true" class="page-wipe">
 <div class="page-wipe__signature-wrap page-wipe__signature-wrap--wave">
@@ -90,10 +158,6 @@
 <img alt="" aria-hidden="true" class="site-menu__signature-v70" src="assets/shiva-wordmark-static.svg"/>
 <span class="sr-only">Shiva</span>
 </h2>
-<button aria-label="Close menu" class="site-menu__close" type="button">
-<span>Close</span>
-<svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"></path></svg>
-</button>
 </div>
 <div class="site-menu__scroll">
 <nav aria-labelledby="site-menu-pages-title" class="site-menu__primary site-menu__primary--simple">
@@ -105,9 +169,10 @@
 </button>
 <div class="site-menu__projects-panel" hidden="" id="site-menu-case-studies"><div class="site-menu__projects-inner">
 <a class="site-menu__project" data-menu-page="agent-management.html" href="agent-management.html"><strong>Agent Management</strong><em>Cisco AppDynamics</em></a>
-</div></div>
+<div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Domain-Centric Views</strong><em>Cisco Cloud Observability</em><span class="site-menu__soon">Adding soon</span></div><div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Management Reports</strong><em>Intuit QuickBooks</em><span class="site-menu__soon">Adding soon</span></div></div></div>
 </div>
-<a class="site-menu__page" data-menu-section="writing" href="index.html#writing"><strong>Writing</strong></a>
+<a class="site-menu__page" data-menu-section="writing" href="index.html#writing"><strong>Notes &amp; essays</strong></a>
+<a class="site-menu__page" data-menu-section="vibes" href="index.html#vibes"><strong>Experiments</strong></a>
 <a class="site-menu__page" data-menu-section="intro" href="index.html#intro"><strong>Approach</strong></a>
 <a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
 </nav>
@@ -116,40 +181,25 @@
 <!-- SITE MENU END -->
 <main id="main">
 <!-- Character hero: uploaded Q95 runtime integrated into the main document. -->
-<section aria-labelledby="character-hero-title" class="character-hero" data-character-hero="" data-header-theme="dark" id="top">
-<div aria-hidden="true" class="character-hero__scene">
-<img alt="" class="character-hero__poster" decoding="async" fetchpriority="high" height="720" src="assets/character-hero-q95/center-v4.webp" width="1280"/>
-<canvas aria-hidden="true" class="character-hero__canvas" data-character-canvas=""></canvas>
+<section aria-labelledby="hero-name" class="hero" data-header-theme="light" id="top">
+<div class="who">
+<h1 class="name" id="hero-name"><img src="assets/shiva-wordmark-static.svg" alt="Shiva" class="hero-name-wordmark"/></h1>
+<p class="role">Senior Product Designer</p>
+<p class="now">Now designing AI-native reporting at Intuit</p>
 </div>
-<div aria-hidden="true" class="character-hero__vignette"></div>
-<aside aria-label="Career highlights" class="character-hero__kpis" data-hero-kpis="">
-<div aria-hidden="true" class="character-hero__kpi-live">
-<span class="character-hero__kpi-count" data-hero-kpi-count="">01 / 04</span>
-<strong class="character-hero__kpi-value" data-hero-kpi-value="">200+</strong>
-<p class="character-hero__kpi-label" data-hero-kpi-label="">customers supported by systems I’ve worked on</p>
-</div>
-<ul class="sr-only">
-<li>Some systems I’ve worked on now support 200+ customers.</li>
-<li>One deployment flow moved from about 2 weeks to about 2 hours.</li>
-<li>I’ve spent 1,050 minutes mentoring across four countries.</li>
-<li>A 2022 AppDynamics experiment happened to win the hackathon.</li>
+<div class="sr-only">
+<p>I make complex problems easy. Leading enterprise and AI-native products for 7+ years.</p>
+<ul>
+<li>Database monitoring that finds issues faster: 70% less time to identify incidents (MTTI), Cisco AppDynamics.</li>
+<li>Customer setup, from weeks to hours: time to value cut from 2 weeks to 2 hours, 200+ enterprise customers in 6 months, Cisco AppDynamics.</li>
+<li>Closed the gap with competitors' reports: reporting parity from 5% to 70%, Intuit QuickBooks.</li>
+<li>TEDx speaker, TEDxIITGuwahati. Visiting faculty, NID Andhra Pradesh and SPA Vijayawada. Top 1% mentor on ADPList, across 6 countries.</li>
 </ul>
-</aside>
-<div class="character-hero__copy">
-<p class="character-hero__eyebrow">Hi, I’m</p>
-<h1 class="character-hero__name" id="character-hero-title"><span class="sr-only">Shiva Sah</span><svg aria-hidden="true" focusable="false" viewbox="-570 -3650 11180 4980" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor" transform="scale(1 -1)"><g class="lastoria-word" xmlns="http://www.w3.org/2000/svg"><path d="M-24 -886Q47 -886 116 -858Q141 -848 165 -837Q450 -689 530 -342Q535 -314 535 -274Q535 -218 527 -182Q525 -172 520 -166L408 -242Q166 -412 18 -565Q-100 -684 -137 -764Q-158 -806 -158 -822Q-158 -831 -153 -841Q-127 -886 -24 -886ZM613 143Q623 149 643 160Q892 298 1162 400Q1325 459 1519.5 504.5Q1714 550 1818 552Q1947 551 1947 455Q1947 361 1881 350Q1815 339 1792 337Q1680 328 1499 281Q1087 172 717 -44L723 -62Q758 -159 758 -264Q758 -439 660 -632Q565 -820 400 -944.5Q235 -1069 44 -1095Q2 -1100 -26 -1100Q-130 -1100 -219 -1058Q-380 -982 -380 -825Q-380 -651 -124 -402Q80 -195 367 -10Q418 24 434 30Q423 40 394 74Q267 222 88 358Q-66 475 -76 517Q-82 539 -94 569Q-114 618 -114 661Q-114 706 -93 743Q-43 829 48 829Q105 829 146 783Q185 744 185 681Q185 641 168 590Q162 569 162 561Q162 563 164 563Q174 563 221 528Q328 447 436.5 343.5Q545 240 603 164Q613 150 613 143Z" transform="translate(0 0)"></path><path d="M7 -460Q-31 -460 -54 -447Q-138 -404 -138 -169Q-138 -63 -110 123Q-48 537 110 1025Q494 2207 1096 2919Q1219 3067 1337 3167Q1649 3430 1905 3430Q1964 3430 2002.5 3420Q2041 3410 2081 3388Q2261 3287 2281 3015Q2281 2898 2253 2777Q2210 2620 2096 2382Q1914 2007 1646 1687Q1222 1189 750 792Q437 530 267 444Q216 418 178 404Q169 401 168 400.5Q167 400 151 319Q134 243 114 103Q95 -25 92 -140L221 2Q493 300 506 312Q801 632 921 705Q975 737 1036 737Q1115 737 1161 697Q1199 665 1307 503Q1494 223 1554 190Q1620 152 1709 152Q1760 152 1925 244Q2047 312 2178 399Q2408 567 2448 569L2462 571Q2501 571 2533.5 546Q2566 521 2566 479Q2566 428 2526 391Q2509 375 2257 198Q2115 98 1984 26Q1863 -31 1805.5 -47.5Q1748 -64 1693 -64Q1514 -64 1388 28Q1336 67 1279.5 140.5Q1223 214 1110 382Q1025 510 1019.5 515Q1014 520 1014 521Q1014 522 1015 522Q983 522 531 23Q325 -204 205 -330Q106 -434 68 -449Q41 -460 7 -460ZM238 671Q299 709 389 776Q534 885 693.5 1025.5Q853 1166 973 1281Q1093 1396 1213 1526Q1445 1775 1577.5 1948Q1710 2121 1811 2307Q1878 2429 1939 2567.5Q2000 2706 2025 2791Q2038 2840 2045 2902.5Q2052 2965 2052 2998L2051 3020Q2024 3209 1888 3214Q1732 3214 1503 3026Q1432 2968 1380 2916Q1273 2804 1138 2624.5Q1003 2445 903 2280Q559 1695 309 915Q271 796 238 671Z" transform="translate(1804 0)"></path><path d="M101 -294Q-15 -294 -103 -221Q-202 -140 -202 0Q-202 59 -179 156Q-163 229 -138 301Q-98 408 -41 530Q51 727 101 755Q126 771 155 771Q252 771 280 679Q286 660 286 642Q286 592 257 574.5Q228 557 162 416Q24 124 24 -32Q24 -61 36 -71Q48 -81 71 -81Q97 -81 144 -68Q229 -47 333.5 4.5Q438 56 673 194Q849 296 1112 464Q1173 502 1271 561Q1304 578 1335 578Q1381 578 1422 540Q1445 498 1445 464Q1445 404 1394 369Q1349 347 1093 182Q1010 129 867 45Q603 -108 504 -162Q238 -294 101 -294ZM260 1086Q219 1086 186 1115Q142 1149 142 1208Q142 1232 163 1274Q185 1321 212 1342Q239 1363 281 1363Q336 1363 380.5 1323Q425 1283 425 1240Q425 1221 418 1204Q404 1165 364 1150Q331 1086 260 1086Z" transform="translate(4209 0)"></path><path d="M-25 -871Q-41 -871 -55 -870Q-207 -857 -207 -607Q-207 -526 -188 -419Q-169 -308 -116 -83Q-71 107 -52 214Q-29 346 -29 462Q-53 491 -54 524Q-54 549 -40 579Q-26 609 2.5 625Q31 641 62 641Q127 641 165 591Q185 563 191 530.5Q197 498 197 445Q197 332 176 205.5Q155 79 103 -144Q54 -348 37 -449Q23 -526 20 -597Q184 -434 475 -56L625 136Q728 266 872 462Q1053 706 1086 733Q1119 760 1160 760Q1229 760 1260 693Q1266 660 1266 636Q1266 604 1255 590L1282 495Q1339 271 1407 216Q1475 161 1548 161Q1594 161 1651 176Q1924 251 2302 515Q2341 543 2364 558Q2387 573 2404 579.5Q2421 586 2441 586Q2552 576 2552 476Q2552 441 2525 410Q2490 375 2380 300.5Q2270 226 2150 157Q1787 -52 1563 -54Q1488 -54 1446 -46Q1397 -34 1342 -6Q1171 83 1083 366Q941 174 579 -288Q505 -383 399.5 -508.5Q294 -634 228 -705Q75 -871 -25 -871Z" transform="translate(5490 0)"></path><path d="M73 305Q211 370 486 542Q563 590 572 597Q555 616 491 616Q404 616 286 526Q199 459 122 368ZM763 718Q798 747 933 842Q1032 913 1053 923.5Q1074 934 1099 934Q1170 934 1210 860Q1227 828 1227 800Q1227 740 1045 448Q844 122 844 0Q844 -61 850 -73Q864 -98 912 -112Q926 -116 942 -116Q1071 -116 1319 -1Q1538 99 1716 200Q1773 232 1968 337Q2168 444 2275 509Q2406 587 2448 587Q2514 587 2536 546Q2558 505 2558 475Q2558 402 2482 371Q2457 360 2352 298Q2217 219 2120 169L1873 34Q1666 -83 1468 -175Q1330 -239 1244 -271Q1075 -334 937 -334Q900 -334 873 -329Q714 -297 641 -165Q615 -113 613.5 -72Q612 -31 612 -20Q612 112 700 298Q737 375 800 480L769 459Q675 395 634 373Q302 163 145 95Q36 46 2 44Q-32 42 -36 42Q-109 42 -156 93Q-204 141 -204 209Q-204 316 -86.5 468.5Q31 621 195 733Q356 836 502 836Q637 836 724 760Q748 739 763 718Z" transform="translate(7860 0)"></path></g></g></svg></h1>
-<p class="character-hero__thesis">I make complex<br/>problems easy.</p>
-<p class="character-hero__bio">Product design, systems thinking <br/>and mentoring.</p>
-<div class="character-hero__actions">
-<a class="character-hero__button character-hero__button--primary" href="#work">Explore my work <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></a>
-<a class="character-hero__button" href="#contact">Let’s connect</a>
 </div>
-</div>
-<div class="character-hero__motion" hidden="">
-<span class="character-hero__hint">Move your cursor</span>
-</div>
-<p aria-live="polite" class="character-hero__status" data-character-status="" hidden="" role="status"></p>
-<a aria-label="Discover my design approach" class="character-hero__scroll" href="#intro"><span>Scroll to discover</span><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"></path></svg></a>
+<svg aria-hidden="true" focusable="false" id="m"><defs id="defs"></defs><g id="root"></g></svg>
+<a aria-label="Scroll to selected work" class="mouse" data-tone="paper" href="#work" id="cue"><span aria-hidden="true" class="body"><i class="wheel"></i></span><span>Scroll</span></a>
+<button aria-pressed="false" class="pause" data-tone="paper" id="pause" type="button"><i aria-hidden="true"></i><span>Pause</span></button>
+<div class="scrub" id="scrub"><span id="scrubT">0.00s</span><input aria-label="Scrub timeline" max="26.999" min="0" step="0.001" type="range" value="0"/></div>
 </section>
 <section class="section section--paper" data-header-theme="light" id="intro">
 <div class="shell site-grid home-intro-v9">
@@ -158,10 +208,9 @@
 </section>
 <section aria-labelledby="work-title" class="work-flip" data-header-theme="light" id="work">
 <header class="shell work-flip__heading"><div><p class="eyebrow">Selected work</p><h2 id="work-title">Stories that changed<br/>the roadmap.</h2></div><p>One featured project. The product, the process and the decisions behind the work.</p></header>
-<p class="shell flip-stack__instruction">Scroll to reveal the next story.</p><a class="flip-stack__skip" href="#writing">Skip case studies</a><div aria-label="Featured case study." class="flip-stack" data-flip-stack="" role="region" style="--flip-count:1;">
+<p class="shell flip-stack__instruction">Scroll to reveal the next story.</p><a class="flip-stack__skip" href="#writing">Skip case studies</a><div aria-label="Case studies. Agent Management is available now; two more case studies are adding soon." class="flip-stack" data-flip-stack="" role="region" style="--flip-count:3;">
 <div class="flip-stack__pin">
-<div class="flip-stack__cards">
-<article aria-label="Agent Management" class="flip-card flip-card--agent" data-flip-card="0">
+<div class="flip-stack__cards"><article aria-label="Agent Management" class="flip-card flip-card--agent" data-flip-card="0">
 <a aria-describedby="agent-project-description agent-project-kpis" aria-labelledby="agent-project-title" class="flip-card__link transition-link" href="agent-management.html">
 <div class="flip-card__copy">
 <div class="flip-card__meta"><span aria-hidden="true" class="flip-card__index">01</span><span>Cisco AppDynamics</span><span>2023</span></div>
@@ -172,16 +221,37 @@
 </div>
 <figure class="flip-card__media"><img alt="Agent Management interface showing agent status, types, versions and available upgrades" height="960" loading="lazy" src="assets/agent-management-thumbnail.png" width="1440"/></figure>
 </a>
-<span aria-hidden="true" class="flip-card__shade"></span></article>
+<span aria-hidden="true" class="flip-card__shade"></span></article><article aria-label="Domain-Centric Views — adding soon" class="flip-card flip-card--domain" data-flip-card="1">
+<div aria-describedby="domain-project-description domain-project-kpis" aria-disabled="true" aria-labelledby="domain-project-title" class="flip-card__link transition-link flip-card__link--locked">
+<div class="flip-card__copy"><span class="flip-card__coming-soon">Adding soon</span>
+<div class="flip-card__meta"><span aria-hidden="true" class="flip-card__index">02</span><span>Cisco Cloud Observability</span><span>Ongoing</span></div>
+<h3 id="domain-project-title">Domain-Centric Views</h3>
+<p class="flip-card__description" id="domain-project-description">Cloud troubleshooting organised around operational domains.</p>
+<dl class="flip-card__kpis" id="domain-project-kpis"><div><dt>research participants</dt><dd>9</dd></div><div><dt>prototype directions</dt><dd>3</dd></div><div><dt>feedback tracks</dt><dd>3</dd></div><div><dt>design proposal</dt><dd>In progress</dd></div></dl>
+<span class="flip-card__cta">Adding soon</span>
 </div>
+<figure class="flip-card__media"><img alt="Domain-Centric Views interface composition" height="960" loading="lazy" src="assets/domain-hero.webp" width="1440"/></figure>
+</div>
+<span aria-hidden="true" class="flip-card__shade"></span></article><article aria-label="Management Reports — adding soon" class="flip-card flip-card--reports" data-flip-card="2">
+<div aria-describedby="reports-project-description reports-project-kpis" aria-disabled="true" aria-labelledby="reports-project-title" class="flip-card__link transition-link flip-card__link--locked">
+<div class="flip-card__copy"><span class="flip-card__coming-soon">Adding soon</span>
+<div class="flip-card__meta"><span aria-hidden="true" class="flip-card__index">03</span><span>Intuit QuickBooks</span><span>2025</span></div>
+<h3 id="reports-project-title">Management Reports</h3>
+<p class="flip-card__description" id="reports-project-description">Rethinking reports for flexibility and repeatable reporting.</p>
+<dl class="flip-card__kpis" id="reports-project-kpis"><div><dt>customer needs</dt><dd>3</dd></div><div><dt>lifecycle stages</dt><dd>4</dd></div><div><dt>first release, 2025</dt><dd>Nov</dd></div><div><dt>AI summary, 2025</dt><dd>Dec</dd></div></dl>
+<span class="flip-card__cta">Adding soon</span>
+</div>
+<figure class="flip-card__media"><img alt="Management Reports editor showing a monthly performance report with KPI customization" height="960" loading="lazy" src="assets/management-reports-thumbnail.png" width="1440"/></figure>
+</div>
+<span aria-hidden="true" class="flip-card__shade"></span></article></div>
 </div>
 </div>
 </section>
 <section aria-labelledby="writing-title" class="writing-shelf-section" data-header-theme="light" id="writing">
-<header class="shell writing-shelf-heading"><div><p class="eyebrow">Writing</p><h2 id="writing-title">Notes, essays<br/>&amp; research.</h2></div><div class="writing-shelf-heading__aside"><p>On product design, systems<br/>and enterprise work.</p><div aria-label="Filter writing" class="bookshelf-filter" role="group"><button aria-pressed="true" data-books-filter="all" type="button">All</button><button aria-pressed="false" data-books-filter="article" type="button">Articles</button><button aria-pressed="false" data-books-filter="research" type="button">Research</button></div></div></header>
+<header class="shell writing-shelf-heading"><div><h2 id="writing-title">Notes, essays<br/>&amp; research.</h2></div><div class="writing-shelf-heading__aside"><p>On product design, systems<br/>and enterprise work.</p><div aria-label="Filter publications" class="bookshelf-filter" role="group"><button aria-pressed="true" data-books-filter="all" type="button">All</button><button aria-pressed="false" data-books-filter="article" type="button">Articles</button><button aria-pressed="false" data-books-filter="research" type="button">Research</button></div></div></header>
 <div class="newsletter-bookshelf" data-bookshelf="">
 <div class="shell bookshelf__topline" hidden=""><p id="bookshelf-instructions">Select a spine to explore.</p><div class="bookshelf__focus-actions"><button data-shelf-close="" hidden="" type="button">Back to shelf <span aria-hidden="true">×</span></button></div></div>
-<div aria-describedby="bookshelf-instructions" aria-label="Writing bookshelf" class="bookshelf__stage" data-books-stage="" role="region" tabindex="0">
+<div aria-describedby="bookshelf-instructions" aria-label="Publication bookshelf" class="bookshelf__stage" data-books-stage="" role="region" tabindex="0">
 <ol class="bookshelf__books"><li class="shelf-book" data-book-href="https://medium.com/design-appd/storytelling-through-analogies-247b9272ce76" data-book-id="writing-01" data-book-kind="article" data-publisher="Design@AppD" data-year="2024" style="--book-color:#232428;--book-ink:#fcfcf4;--cover-title-size:28px">
 <button aria-expanded="false" aria-label="Preview Storytelling through Analogies, published in Design@AppD" class="shelf-book__button" disabled="" type="button">
 <span class="shelf-book__object">
@@ -251,7 +321,90 @@
 <div class="shell bookshelf__bottom" hidden=""><div aria-atomic="true" aria-live="polite" class="bookshelf__caption"><span data-shelf-meta="">7 pieces</span><p data-shelf-title="">Pick a title from the shelf.</p><a data-shelf-link="" hidden="" rel="noopener noreferrer" target="_blank">Read now ↗</a></div><div class="bookshelf__navigation"><button aria-label="Previous writing" data-shelf-prev="" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"></path></svg></button><span aria-hidden="true" data-shelf-count="">01 / 07</span><button aria-label="Next writing" data-shelf-next="" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></button></div></div>
 </div>
 </section>
-
+<!-- V86: real projects restored in the original Vibe Apps position. -->
+<section aria-labelledby="vibes-title" class="vibe-codes" data-header-theme="light" id="vibes">
+<header class="shell vibe-codes__head">
+<div><h2 id="vibes-title">small tools,<br/>odd experiments.</h2></div>
+<div class="vibe-codes__intro"><p>A musical letter, a QR with personality,<br class="vibe-codes__desktop-break"/> and a better way to follow feedback.</p><span>Two to try. One behind the scenes.</span></div>
+</header>
+<div class="shell vibe-codes__grid">
+<article aria-labelledby="vibe-letterwave-title" class="vibe-project" id="vibe-letterwave">
+<div class="vibe-site-preview" data-site-name="Letterwave" data-site-preview="letterwave" data-site-url="https://letterwave.vercel.app/">
+<div aria-hidden="true" class="vibe-site-preview__browser"><span class="vibe-site-preview__dots"><i></i><i></i><i></i></span><span>letterwave.vercel.app</span><span class="vibe-site-preview__out">↗</span></div>
+<a aria-label="Open the Letterwave website (opens in a new tab)" class="vibe-site-preview__screen vibe-site-preview__screen--letterwave" href="https://letterwave.vercel.app/" rel="noopener noreferrer" target="_blank">
+<div aria-hidden="true" class="vibe-site-preview__cover">
+<span class="vibe-site-preview__cover-name">Letterwave</span>
+<div class="vibe-site-preview__letter"><img alt="" height="500" loading="lazy" src="assets/vibe-codes-preview.svg" width="800"/></div>
+<strong>Turn your words<br/>into music.</strong>
+<span class="vibe-site-preview__cover-note">Project illustration · open to explore ↗</span>
+</div>
+<div aria-hidden="true" class="vibe-site-preview__mount" data-preview-mount=""></div>
+</a>
+<div class="vibe-site-preview__bar"><span aria-live="polite" data-preview-status="">Illustrated cover · live site linked below</span><button class="vibe-site-preview__toggle" data-preview-toggle="" hidden="" type="button">Load live preview</button></div>
+</div>
+<div class="vibe-project__body">
+<p class="vibe-project__index">01 <span>Music &amp; sharing</span></p>
+<h3 id="vibe-letterwave-title">Letterwave</h3>
+<p class="vibe-project__description">A way to send musical letters to friends. Your words become something they can listen to.</p>
+<div class="vibe-project__insight"><h4>What I cracked</h4><p>Sharing a unique letter without storing the message. It travels in the URL hash, with a QR code generated right on the site. No message database.</p></div>
+<div class="vibe-project__footer"><a aria-label="Explore Letterwave (opens in a new tab)" class="button button--outline vibe-project__cta" href="https://letterwave.vercel.app/" rel="noopener noreferrer" target="_blank"><span>Explore Letterwave</span></a><span class="vibe-project__availability">Public experiment</span></div>
+</div>
+</article>
+<article aria-labelledby="vibe-squarekin-title" class="vibe-project" id="vibe-squarekin">
+<div class="vibe-site-preview" data-site-name="Squarekin" data-site-preview="squarekin" data-site-url="https://squarekin.vercel.app/">
+<div aria-hidden="true" class="vibe-site-preview__browser"><span class="vibe-site-preview__dots"><i></i><i></i><i></i></span><span>squarekin.vercel.app</span><span class="vibe-site-preview__out">↗</span></div>
+<a aria-label="Open the Squarekin website (opens in a new tab)" class="vibe-site-preview__screen vibe-site-preview__screen--squarekin" href="https://squarekin.vercel.app/" rel="noopener noreferrer" target="_blank">
+<div aria-hidden="true" class="vibe-site-preview__cover">
+<span class="vibe-site-preview__cover-name">Squarekin</span>
+<div class="vibe-site-preview__qr"><img alt="" height="370" loading="lazy" src="assets/vibe-squarekin-code.svg" width="370"/><i></i><i></i><i></i></div>
+<strong>A little world<br/>for your link.</strong>
+<span class="vibe-site-preview__cover-note">Project illustration · scan or open to explore ↗</span>
+</div>
+<div aria-hidden="true" class="vibe-site-preview__mount" data-preview-mount=""></div>
+</a>
+<div class="vibe-site-preview__bar"><span aria-live="polite" data-preview-status="">Illustrated cover · live site linked below</span><button class="vibe-site-preview__toggle" data-preview-toggle="" hidden="" type="button">Load live preview</button></div>
+</div>
+<div class="vibe-project__body">
+<p class="vibe-project__index">02 <span>QR &amp; motion</span></p>
+<h3 id="vibe-squarekin-title">Squarekin</h3>
+<p class="vibe-project__description">Why keep sharing boring QR codes? Add motion and give your links a little personality.</p>
+<div class="vibe-project__insight"><h4>What I cracked</h4><p>An offline-capable tool for making QR codes that move, with different formats to share them in. A small utility with room to play.</p></div>
+<div class="vibe-project__footer"><a aria-label="Explore Squarekin (opens in a new tab)" class="button button--outline vibe-project__cta" href="https://squarekin.vercel.app/" rel="noopener noreferrer" target="_blank"><span>Explore Squarekin</span></a><span class="vibe-project__availability">Works offline, too</span></div>
+</div>
+</article>
+<article aria-labelledby="vibe-feedback-title" class="vibe-project vibe-project--private" id="vibe-feedback">
+<div class="cashflow-project-media" data-cashflow-media="">
+<div class="cashflow-preview" data-cashflow-preview="" hidden="">
+<div class="vibe-site-preview__browser"><span aria-hidden="true" class="vibe-site-preview__dots"><i></i><i></i><i></i></span><span>Cash Flow Feedback</span><span class="cashflow-preview__private">Internal preview</span></div>
+<div aria-label="Sanitized dashboard preview, first two screenfuls" class="cashflow-preview__screen" data-cashflow-screen="" role="region" tabindex="0">
+<img alt="" class="cashflow-preview__image" data-cashflow-image="" decoding="async" draggable="false"/>
+</div>
+<div class="vibe-site-preview__bar"><span data-cashflow-status="">First two screenfuls</span><button class="vibe-site-preview__toggle" data-cashflow-toggle="" type="button">Pause preview</button></div>
+</div>
+<div aria-label="Workflow illustration, not a dashboard screenshot: Cash Flow feedback from UserVoice is fetched through a Slack integration and updates an internal dashboard five times a day while the owner's laptop is on. No private data is shown." class="vibe-private" data-cashflow-fallback="" role="img">
+<div class="vibe-private__top"><span>Behind the scenes</span><span class="vibe-private__lock"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="11" rx="3" width="14" x="5" y="10"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"></path></svg>Internal only</span></div>
+<div aria-hidden="true" class="vibe-private__workflow">
+<div class="vibe-private__node"><div class="vibe-private__icon"><svg viewbox="0 0 48 48"><path d="M9 9h30v22H22l-9 8v-8H9V9Z"></path><path d="M16 17h16m-16 7h11"></path></svg></div><strong>UserVoice</strong><span>Cash Flow feedback</span></div>
+<span class="vibe-private__arrow">→</span>
+<div class="vibe-private__node"><div class="vibe-private__icon vibe-private__icon--accent"><svg viewbox="0 0 48 48"><path d="M15 18a12 12 0 0 1 21 4m0 0v-9m0 9h-9M33 30a12 12 0 0 1-21-4m0 0v9m0-9h9"></path></svg></div><strong>Slack</strong><span>The integration</span></div>
+<span class="vibe-private__arrow">→</span>
+<div class="vibe-private__node"><div class="vibe-private__icon"><svg viewbox="0 0 48 48"><rect height="27" rx="3" width="34" x="7" y="9"></rect><path d="M7 16h34M20 36v5m8-5v5m-13 0h18M14 23h5m-5 6h5m6-6h9m-9 6h9"></path></svg></div><strong>Dashboard</strong><span>Feedback in view</span></div>
+</div>
+<div aria-hidden="true" class="vibe-private__schedule"><div class="vibe-private__pulses"><i></i><i></i><i></i><i></i><i></i></div><p><strong>5 updates a day</strong><span>While my laptop is on</span></p></div>
+<p aria-hidden="true" class="vibe-private__caption">Workflow illustration · no private data shown</p>
+</div>
+</div>
+<div class="vibe-project__body">
+<p class="vibe-project__index">03 <span>Feedback &amp; automation</span></p>
+<h3 id="vibe-feedback-title">Cash Flow Feedback</h3>
+<p class="vibe-project__description">An internal dashboard for tracking Cash Flow feedback from UserVoice.</p>
+<div class="vibe-project__insight"><h4>The workaround</h4><p>Fetching the feedback automatically was the hard part. I used my Slack integration to update the dashboard five times a day while my laptop is on.</p></div>
+<div class="vibe-project__footer vibe-project__footer--private"><span class="vibe-project__private-label"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="11" rx="3" width="14" x="5" y="10"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"></path></svg>Internal project</span><span class="vibe-project__availability">Not publicly linked</span></div>
+</div>
+</article>
+</div>
+<p class="shell vibe-codes__note">Public previews are view-only. Open an experiment to play with it.</p>
+</section>
 <section aria-label="Design manifesto" class="manifesto" data-header-theme="light" id="manifesto">
 <div class="manifesto__frame">
 <div aria-hidden="true" class="manifesto__halo"></div>
@@ -265,5 +418,363 @@
 <a aria-label="Medium (opens in a new tab)" data-contact-key="medium" href="https://medium.com/" rel="noopener noreferrer" target="_blank">Medium <span aria-hidden="true">↗</span></a>
 <a aria-label="GitHub (opens in a new tab)" data-contact-key="github" href="https://github.com/" rel="noopener noreferrer" target="_blank">GitHub <span aria-hidden="true">↗</span></a>
 </nav><a aria-label="Back to top" class="back-top back-top--icon" href="#top"><svg aria-hidden="true" viewbox="0 0 32 32"><path d="M16 25V7M9 14l7-7 7 7"></path></svg></a></div></footer>
+<script id="v88-landing-hero-script">
+(() => {
+  document.documentElement.classList.add("js");
+  const LOOP=27, POSTER=5.2;
+  const INK=[35,36,40], ORANGE=[254,87,36], PAPER=[251,251,244];
+  const COL={paper:"#FBFBF4",ink:"#232428",orange:"#FE5724"};
+  const NS="http://www.w3.org/2000/svg";
+
+  function bez(x1,y1,x2,y2){const cx=3*x1,bx=3*(x2-x1)-cx,ax=1-cx-bx,cy=3*y1,by=3*(y2-y1)-cy,ay=1-cy-by;
+    const sx=u=>((ax*u+bx)*u+cx)*u,sy=u=>((ay*u+by)*u+cy)*u,dx=u=>(3*ax*u+2*bx)*u+cx;
+    return t=>{if(t<=0)return 0;if(t>=1)return 1;let u=t;for(let i=0;i<8;i++){const e=sx(u)-t;if(Math.abs(e)<1e-5)break;const d=dx(u);if(Math.abs(d)<1e-6)break;u-=e/d;}
+      if(!(u>=0&&u<=1)){let lo=0,hi=1;u=t;for(let i=0;i<24;i++){if(sx(u)<t)lo=u;else hi=u;u=(lo+hi)/2;}}return sy(u);};}
+  const EO=bez(.22,1,.36,1),EIO=bez(.65,0,.35,1),EI=bez(.55,0,.8,.2),BACK=bez(.34,1.4,.64,1),LIN=t=>Math.min(1,Math.max(0,t));
+  const clamp=(v,a,b)=>Math.min(b,Math.max(a,v)),lerp=(a,b,p)=>a+(b-a)*p,seg=(t,a,b,e=EO)=>e(clamp((t-a)/(b-a),0,1));
+  const mix=(a,b,p)=>`rgb(${Math.round(lerp(a[0],b[0],p))},${Math.round(lerp(a[1],b[1],p))},${Math.round(lerp(a[2],b[2],p))})`;
+  const grey=a=>mix(PAPER,INK,a);
+  const f1=v=>Math.round(v*10)/10;
+  const rnd=(i,k)=>{const x=Math.sin(i*12.9898+k*78.233)*43758.5453;return x-Math.floor(x);};
+  function mk(tag,attrs,parent,text){const el=document.createElementNS(NS,tag);if(attrs)for(const k in attrs)el.setAttribute(k,attrs[k]);if(text!=null)el.textContent=text;if(parent)parent.appendChild(el);return el;}
+  function set(el,a){for(const k in a)el.setAttribute(k,a[k]);}
+  function op(el,o){if(o<=0.003){if(el.__h!==1){el.style.display="none";el.__h=1;}return false;}if(el.__h!==0){el.style.display="";el.__h=0;}el.setAttribute("opacity",o>=.997?"1":o.toFixed(3));return true;}
+  const R4=r=>({x:f1(r.x),y:f1(r.y),width:f1(Math.max(0,r.w)),height:f1(Math.max(0,r.h))});
+  const lerpR=(a,b,p)=>({x:lerp(a.x,b.x,p),y:lerp(a.y,b.y,p),w:lerp(a.w,b.w,p),h:lerp(a.h,b.h,p)});
+
+  /* ---------- copy ---------- */
+  const RESULTS=[
+    {head:["Database monitoring that","finds issues faster"],from:0,to:70,pre:"",unit:"%",label:["less time to identify incidents (MTTI)"],src:"Cisco AppDynamics",a:6.5},
+    {head:["Customer setup,","from weeks to hours"],from:336,to:2,pre:"",unit:"hours",label:["time to value, 200+ enterprise customers in 6 months"],src:"Cisco AppDynamics",a:10.5},
+    {head:["Closed the gap with","competitors' reports"],from:5,to:70,pre:"5",unit:"%",label:["reporting parity against competitors"],src:"Intuit QuickBooks",a:14.5},
+  ];
+  const CREDS=[["TEDx speaker",["TEDxIITGuwahati"],18.5,20.6],["Visiting faculty",["NID Andhra Pradesh","and SPA Vijayawada"],20.6,22.7],["Top 1% mentor",["ADPList, across 6 countries"],22.7,24.9]];
+
+  /* ---------- compositions ---------- */
+  const LAYOUTS={
+    land:{W:1600,H:900,cx:800,LY:560,m1:140,m2:1460,
+      thesis:{lines:["I make complex","problems easy."],size:140,base:[412,548],sub:["Leading enterprise and AI-native products for 7+ years"],subY:[612]},
+      res:{x:140,anchor:"start",headSize:46,headY:[262,316],num:190,labelY:610,srcY:642,labelSize:21},
+      gfx:{x:880,y:290,w:580,h:228},
+      cred:{x:140,anchor:"start",size:96,base:500,sub:552},
+      form:{cx:1170,cy:500,s:1}},
+    port:{W:900,H:1600,cx:450,LY:880,m1:70,m2:830,
+      thesis:{lines:["I make","complex","problems easy."],size:104,base:[628,748,866],sub:["Leading enterprise and AI-native","products for 7+ years"],subY:[930,960]},
+      res:{x:450,anchor:"middle",headSize:44,headY:[560,614],num:170,labelY:930,srcY:962,labelSize:19},
+      gfx:{x:110,y:1060,w:680,h:300},
+      cred:{x:450,anchor:"middle",size:88,base:600,sub:650},
+      form:{cx:450,cy:1100,s:1}}
+  };
+
+  const svg=document.getElementById("m"), defs=document.getElementById("defs"), root=document.getElementById("root");
+  const cue=document.getElementById("cue"), pauseBtn=document.getElementById("pause"), hero=document.getElementById("top");
+  const pageBody=document.body;
+  const syncHeaderIdentity=()=>{
+    const r=hero.getBoundingClientRect();
+    pageBody.classList.toggle("hero-header-compact", r.bottom>1);
+  };
+  syncHeaderIdentity();
+  addEventListener("scroll",syncHeaderIdentity,{passive:true});
+  addEventListener("resize",syncHeaderIdentity,{passive:true});
+  let S=null, cid=0;
+  function clipRect(y1,y2){const id="c"+(++cid);const cp=mk("clipPath",{id,clipPathUnits:"userSpaceOnUse"},defs);mk("rect",{x:-6000,y:y1,width:16000,height:y2-y1},cp);return `url(#${id})`;}
+  function riser(parent,txt,attrs,base,size,below,amp){
+    const g=mk("g",{"clip-path":below?clipRect(base+2,base+600):clipRect(base-size*4,base+size*.3)},parent);
+    const el=mk("text",{...attrs,y:base},g,txt);
+    return {g,el,amp:amp!=null?amp:(below?-size*2:size*1.25),set(p,q=0){const y=this.amp*(1-p)+this.amp*q;if(op(this.el,(p>0&&q<1)?1:0))this.el.setAttribute("transform",`translate(0 ${f1(y)})`);}};
+  }
+
+  function build(key){
+    const C=LAYOUTS[key]; defs.textContent=""; root.textContent=""; cid=0;
+    svg.setAttribute("viewBox",`0 0 ${C.W} ${C.H}`); svg.setAttribute("preserveAspectRatio","xMidYMid meet");
+    const s={C,key};
+    s.burst=mk("rect",{fill:COL.orange},root);
+    const probe=mk("text",{"fill-opacity":0,x:0,y:-3000},root);
+
+    /* ---- thesis: letters that untangle, with design guides ---- */
+    s.guides=mk("g",null,root);
+    s.grid=mk("g",null,s.guides);
+    s.boxes=[]; s.vguide=mk("line",{stroke:COL.orange,"stroke-width":1,"stroke-dasharray":"4 4"},s.guides);
+    s.spacer=mk("g",null,s.guides);
+    const T=C.thesis, sz=T.size;
+    set(probe,{class:"d5","font-size":sz,style:"letter-spacing:-.045em"});
+    s.chars=[]; s.lineGroups=[];
+    let block={x0:1e9,x1:-1e9};
+    T.lines.forEach((ln,li)=>{
+      probe.textContent=ln; const w=probe.getComputedTextLength(); const x0=C.cx-w/2;
+      block.x0=Math.min(block.x0,x0); block.x1=Math.max(block.x1,x0+w);
+      const g=mk("g",{"clip-path":clipRect(T.base[li]-sz*3,T.base[li]+sz*.3)},root); const gi=mk("g",null,g); s.lineGroups.push(gi);
+      let word=null;
+      [...ln].forEach((ch,ci)=>{
+        let sx,ex; try{sx=probe.getStartPositionOfChar(ci).x;ex=probe.getEndPositionOfChar(ci).x;}catch(e){sx=ci*sz*.5;ex=sx+sz*.5;}
+        if(ch===" "){word=null;return;}
+        const fx=x0+sx, fy=T.base[li], idx=s.chars.length;
+        const el=mk("text",{class:"d5","font-size":sz,fill:COL.ink,x:0,y:0},gi,ch);
+        const c={el,fx,fy,w:ex-sx,i:idx,
+          sx:(rnd(idx,1)-.5)*C.W*.55, sy:(rnd(idx,2)-.5)*sz*2.6, rot:(rnd(idx,3)-.5)*140,
+          fxo:(rnd(idx,4)-.5)*C.W*1.2, fyo:-C.H*.6-rnd(idx,5)*C.H*.4};
+        c.tSnap=3.0+0.9*clamp((fx-C.m1)/(C.m2-C.m1),0,1);
+        s.chars.push(c);
+        if(!word){word={x0:fx,x1:fx+c.w,y:fy,last:c};s.boxes.push(word);} else {word.x1=fx+c.w;word.last=c;}
+      });
+    });
+    s.boxes.forEach(b=>{b.el=mk("rect",{fill:"none",stroke:COL.orange,"stroke-width":1},s.guides);});
+    s.block=block;
+    for(let y=T.base[0]-sz*.9;y<=T.base[T.base.length-1]+sz*.3;y+=sz*.25) mk("line",{x1:block.x0-60,x2:block.x1+60,y1:f1(y),y2:f1(y),stroke:COL.ink,"stroke-opacity":.1,"stroke-width":1},s.grid);
+    // spacing marker between the first two baselines
+    const mx=block.x1+34, y1=T.base[0], y2=T.base[1];
+    mk("path",{d:`M${mx-6} ${y1}H${mx+6}M${mx} ${y1}V${y2}M${mx-6} ${y2}H${mx+6}`,stroke:COL.orange,"stroke-width":1,fill:"none"},s.spacer);
+    mk("text",{class:"b",x:mx+12,y:(y1+y2)/2+4,"font-size":13,"font-weight":700,fill:COL.orange},s.spacer,String(Math.round(y2-y1)));
+    s.sub=T.sub.map((ln,i)=>riser(root,ln,{class:"b",x:C.cx,"text-anchor":"middle","font-size":22,"font-weight":500,fill:COL.ink},C.LY+4,30,true,-(T.subY[T.subY.length-1]-C.LY+30)));
+    s.sub.forEach((r,i)=>r.el.setAttribute("y",T.subY[i]));
+
+    /* ---- the line ---- */
+    s.line=mk("line",{"stroke-width":4,"stroke-linecap":"round",stroke:COL.orange},root);
+
+    /* ---- results: text ---- */
+    const RS=C.res;
+    s.res=RESULTS.map(r=>{
+      const heads=r.head.map((h,j)=>riser(root,h,{class:"d4",x:RS.x,"text-anchor":RS.anchor,"font-size":RS.headSize,fill:COL.ink,style:"letter-spacing:-.02em"},RS.headY[j],RS.headSize));
+      const num=riser(root,"",{class:"d4","text-anchor":"start","font-size":RS.num,fill:COL.orange,style:"letter-spacing:-.04em"},C.LY-22,RS.num);
+      let pre=null,arr=null;
+      if(r.pre){pre=mk("tspan",null,num.el,r.pre);arr=mk("tspan",{class:"b","font-weight":500,"font-size":RS.num*.48,dx:RS.num*.03,dy:-RS.num*.09},num.el,"→");}
+      const v=mk("tspan",r.pre?{dx:RS.num*.03,dy:RS.num*.09}:null,num.el,String(r.to));
+      const unit=riser(root,r.unit,{class:r.unit==="%"?"d4":"b","font-weight":r.unit==="%"?400:500,"text-anchor":"start","font-size":r.unit==="%"?RS.num*.46:32,fill:COL.orange},C.LY-22,RS.num);
+      const label=riser(root,r.label[0],{class:"b",x:RS.x,"text-anchor":RS.anchor,"font-size":RS.labelSize,"font-weight":500,fill:COL.ink},C.LY+4,30,true,-(RS.srcY-C.LY+30));
+      label.el.setAttribute("y",RS.labelY);
+      const src=riser(root,r.src,{class:"b",x:RS.x,"text-anchor":RS.anchor,"font-size":13.5,"font-weight":700,fill:COL.ink,"fill-opacity":.6,style:"letter-spacing:.07em"},C.LY+4,30,true,-(RS.srcY-C.LY+30));
+      src.el.setAttribute("y",RS.srcY);
+      return {r,heads,num,v,unit,label,src,last:null};
+    });
+    // width of the number at a given value (probe), so the unit always sits clear of it
+    s.numW=(R,val)=>{set(probe,{class:"d4","font-size":RS.num,style:"letter-spacing:-.04em"});probe.textContent=String(val);let w=probe.getComputedTextLength();
+      if(R.r.pre){probe.textContent=R.r.pre;w+=probe.getComputedTextLength()+RS.num*.06;set(probe,{class:"b","font-size":RS.num*.48,style:""});probe.textContent="→";w+=probe.getComputedTextLength();}
+      return w;};
+    s.unitW=s.res.map(R=>{if(R.r.unit==="%"){set(probe,{class:"d4","font-size":RS.num*.46,style:""});}else{set(probe,{class:"b","font-size":32,style:""});}probe.textContent=R.r.unit;return probe.getComputedTextLength();});
+
+    /* ---- results: graphics ---- */
+    const G=C.gfx; s.G=G;
+    s.gLabel=[0,1,2].map(()=>mk("text",{class:"b","font-size":13,"font-weight":700,fill:COL.ink,"fill-opacity":.55,style:"letter-spacing:.06em"},root,""));
+    // G1: query bars (one slow bar in orange)
+    const BAR_W=[.62,.38,.92,.31,.52,.45], rowH=G.h/6, bh=Math.min(16,rowH*.5);
+    s.bars=BAR_W.map((w,i)=>({w,i,orange:i===2,y:G.y+rowH*(i+.5)-bh/2,h:bh,el:mk("rect",{rx:2},root)}));
+    // G2: 14-day calendar → one day of 24 hours
+    const g2=10, cell=Math.min((G.w-6*g2)/7,(G.h-g2)/2-14), calW=7*cell+6*g2, calX=G.x+(G.w-calW)/2, calY=G.y+14;
+    s.days=[...Array(14)].map((_,i)=>({r:{x:calX+(i%7)*(cell+g2),y:calY+Math.floor(i/7)*(cell+g2),w:cell,h:cell},el:mk("rect",{rx:3},root)}));
+    const DAY=Math.min(G.h-14,G.w*.5), dayR={x:G.x+(G.w-DAY)/2,y:G.y+14,w:DAY,h:DAY}; s.dayR=dayR;
+    s.dayFrame=mk("rect",{fill:"none",stroke:COL.ink,"stroke-opacity":.35,"stroke-width":1,rx:4},root);
+    const sg=6, sw=(DAY-2*12-5*sg)/6, sh=(DAY-2*12-3*sg)/4;
+    // G3: capability grid, 2 rows × 10
+    const g3=8, c3=Math.min((G.w-9*g3)/10,G.h*.3), gW=10*c3+9*g3, gX=G.x+(G.w-gW)/2, rowY=[G.y+22,G.y+22+c3+40];
+    s.cmpLabels=[mk("text",{class:"b",x:gX,y:rowY[0]-9,"font-size":13,"font-weight":700,fill:COL.ink,"fill-opacity":.55,style:"letter-spacing:.06em"},root,"Competitors"),
+                 mk("text",{class:"b",x:gX,y:rowY[1]-9,"font-size":13,"font-weight":700,fill:COL.ink,"fill-opacity":.55,style:"letter-spacing:.06em"},root,"QuickBooks reports")];
+    s.slots=[...Array(24)].map((_,i)=>({
+      hr:{x:dayR.x+12+(i%6)*(sw+sg),y:dayR.y+12+Math.floor(i/6)*(sh+sg),w:sw,h:sh},
+      gr:i<20?{x:gX+(i%10)*(c3+g3),y:rowY[Math.floor(i/10)],w:c3,h:c3}:null,
+      row:Math.floor(i/10),col:i%10,i,el:mk("rect",{rx:2},root)}));
+    s.calLabelPos=[calX,calY-10]; s.dayLabelPos=[dayR.x,dayR.y-10]; s.gridX=gX;
+
+    /* ---- achievements: dot formations ---- */
+    const F=C.form, N=60; s.F=F;
+    const aud=[],cls=[],clu=[];
+    // auditorium: 5 curved rows facing a speaker point
+    const rows=[8,10,12,14,16]; let k=0; const spk={x:F.cx,y:F.cy+150};
+    rows.forEach((n,ri)=>{const rad=90+ri*50;for(let j=0;j<n;j++){const a=Math.PI*(1.12+.76*j/(n-1));aud.push({x:spk.x+rad*Math.cos(a),y:spk.y+rad*Math.sin(a)*.82,o:ri});k++;}});
+    // classroom: 10 × 6 grid, front row nearest the teacher point
+    for(let r=0;r<6;r++)for(let c=0;c<10;c++)cls.push({x:F.cx+(c-4.5)*40,y:F.cy-60+r*34,o:r});
+    const tch={x:F.cx,y:F.cy-120};
+    // six clusters of ten
+    const CC=[...Array(6)].map((_,i)=>{const a=-Math.PI/2+i*Math.PI/3;return {x:F.cx+180*Math.cos(a)*1.25,y:F.cy+150*Math.sin(a)};});
+    for(let c=0;c<6;c++)for(let j=0;j<10;j++){const a=j/10*Math.PI*2;const rr=j<1?0:(j<7?16:28);clu.push({x:CC[c].x+rr*Math.cos(a*1.0+c),y:CC[c].y+rr*Math.sin(a+c),o:c});}
+    s.forms=[aud,cls,clu]; s.CC=CC; s.spk=spk; s.tch=tch;
+    s.dots=[...Array(N)].map((_,i)=>({i,el:mk("circle",null,root)}));
+    s.links=mk("polyline",{fill:"none",stroke:COL.orange,"stroke-width":2,"stroke-linecap":"round","stroke-linejoin":"round"},root);
+    s.anchorDot=mk("circle",{fill:COL.orange},root);
+    s.creds=CREDS.map(([h,subl,a,b])=>({a,b,h:riser(root,h,{class:"d5",x:C.cred.x,"text-anchor":C.cred.anchor,"font-size":C.cred.size,fill:COL.ink,style:"letter-spacing:-.04em"},C.cred.base,C.cred.size),
+      s:subl.map((ln,i)=>mk("text",{class:"b",x:C.cred.x+(C.cred.anchor==="start"?3:0),y:C.cred.sub+i*28,"text-anchor":C.cred.anchor,"font-size":21,"font-weight":500,fill:COL.ink},root,ln))}));
+
+    s.point=mk("circle",{fill:COL.orange},root);
+    s.measure=()=>{const ctm=svg.getScreenCTM();if(!ctm)return;const inv=ctm.inverse(),pt=svg.createSVGPoint();const r=svg.getBoundingClientRect();
+      pt.x=r.left;pt.y=r.top;const a=pt.matrixTransform(inv);pt.x=r.right;pt.y=r.bottom;const b=pt.matrixTransform(inv);s.vis={x0:a.x,y0:a.y,x1:b.x,y1:b.y};};
+    s.measure();
+    return s;
+  }
+
+  /* ---------- render(t): pure function of time ---------- */
+  function render(t){
+    const s=S,C=s.C,V=s.vis,G=s.G,RS=C.res;
+
+    /* opening burst → field → line */
+    let field=0;
+    if(t>=0.3&&t<3.15){
+      const cover=Math.hypot(Math.max(C.cx-V.x0,V.x1-C.cx),Math.max(C.LY-V.y0,V.y1-C.LY));
+      if(t<1.0){const r=lerp(7,cover,seg(t,0.3,1.0,EIO));set(s.burst,{x:f1(C.cx-r),y:f1(C.LY-r),width:f1(2*r),height:f1(2*r),rx:f1(r)});field=1;}
+      else{const p=seg(t,2.5,3.1,EIO);set(s.burst,{x:f1(V.x0-10),width:f1(V.x1-V.x0+20),y:f1(lerp(V.y0-10,C.LY-2,p)),height:f1(lerp(V.y1-V.y0+20,4,p)),rx:0});field=p<.5?1:0;}
+      op(s.burst,1-seg(t,3.05,3.15,LIN));
+    } else op(s.burst,0);
+    const orangeFull=(t>=0.75&&t<2.75);
+
+    /* thesis letters */
+    const T=C.thesis, thesisOn=t>=1.0&&t<6.6;
+    s.lineGroups.forEach((g,li)=>{ if(op(g,thesisOn?1:0)) g.setAttribute("transform",`translate(0 ${f1(T.size*1.25*seg(t,6.25+li*.04,6.55+li*.04,EI))})`); });
+    if(thesisOn) s.chars.forEach(c=>{
+      const pin=seg(t,1.0+c.i*.025,1.9+c.i*.025), snap=seg(t,c.tSnap,c.tSnap+.42,BACK);
+      let x=lerp(c.fx+c.fxo,c.fx+c.sx,pin), y=lerp(c.fy+c.fyo,c.fy+c.sy,pin), r=lerp(c.rot*2,c.rot,pin);
+      x=lerp(x,c.fx,snap); y=lerp(y,c.fy,snap); r=lerp(r,0,snap);
+      if(op(c.el,seg(t,1.0+c.i*.025,1.35+c.i*.025,LIN))) c.el.setAttribute("transform",`translate(${f1(x)} ${f1(y)}) rotate(${f1(r)})`);
+    });
+    // design guides while the letters align
+    const gOn=t>=2.9&&t<5.0;
+    if(op(s.guides,gOn?1:0)){
+      op(s.grid,seg(t,2.95,3.3,LIN)*(1-seg(t,4.4,4.9,LIN)));
+      s.boxes.forEach(b=>{const t0=b.last.tSnap+.35;if(op(b.el,seg(t,t0,t0+.12,LIN)*(1-seg(t,t0+.75,t0+1.0,LIN))))set(b.el,{x:f1(b.x0-6),y:f1(b.y-T.size*.74),width:f1(b.x1-b.x0+12),height:f1(T.size*.8)});});
+      const vg=seg(t,3.35,3.7,EIO)*(1-seg(t,4.5,4.8,LIN));
+      if(op(s.vguide,vg>0?1:0)){const top=T.base[0]-T.size*.95,bot=T.base[T.base.length-1]+T.size*.25;set(s.vguide,{x1:f1(s.block.x0-8),x2:f1(s.block.x0-8),y1:f1(top),y2:f1(lerp(top,bot,vg))});}
+      op(s.spacer,seg(t,3.75,3.95,LIN)*(1-seg(t,4.5,4.8,LIN)));
+    }
+    s.sub.forEach(r=>r.set(seg(t,3.95,4.45),seg(t,6.2,6.45,EI)));
+
+    /* the line: sweep head 3.0–3.9, carries results, contracts at 18.35; returns at 25.4 */
+    {
+      let x1=C.m1,x2=C.m1,o=0;
+      if(t>=3.0&&t<18.8){o=1;x2=lerp(C.m1,C.m2,seg(t,3.0,3.9,LIN));const c=seg(t,18.35,18.75,EIO);x1=lerp(C.m1,C.cx,c);x2=lerp(x2,C.cx,c);}
+      else if(t>=25.45){o=1;const e=seg(t,25.45,25.85);x1=lerp(s.dotsX?s.dotsX[0]:C.m1,C.m1,e);x2=lerp(s.dotsX?s.dotsX[1]:C.m2,C.m2,e);const c=seg(t,26.05,26.75,EIO);x1=lerp(x1,C.cx,c);x2=lerp(x2,C.cx,c);}
+      if(op(s.line,(x2-x1)>.5?o:0))set(s.line,{x1:f1(x1),x2:f1(x2),y1:C.LY,y2:C.LY});
+    }
+
+    /* results: text */
+    s.res.forEach((R,ri)=>{const a=R.r.a,b=a+3.95;
+      R.heads.forEach((h,j)=>h.set(seg(t,a+.05+j*.08,a+.55+j*.08),seg(t,b-.32+j*.03,b-.06+j*.03,EI)));
+      const pin=seg(t,a+.35,a+.85),pout=seg(t,b-.3,b,EI); R.num.set(pin,pout); R.unit.set(seg(t,a+.45,a+.95),pout);
+      if(t>=a&&t<b){
+        const cp=seg(t,a+.45,a+1.75,R.r.from>R.r.to?EIO:EO), val=Math.round(lerp(R.r.from,R.r.to,cp));
+        if(val!==R.last){R.v.textContent=val;R.last=val;
+          const w=s.numW(R,val), uw=s.unitW[ri], gap=12;
+          const x0=RS.anchor==="start"?RS.x:C.cx-(s.numW(R,R.r.to)+gap+uw)/2;
+          R.num.el.setAttribute("x",f1(x0)); R.unit.el.setAttribute("x",f1(x0+w+gap));}
+      }
+      R.label.set(seg(t,a+.6,a+1.05),seg(t,b-.32,b-.08,EI)); R.src.set(seg(t,a+.72,a+1.15),seg(t,b-.32,b-.08,EI));
+    });
+
+    /* graphic labels */
+    const lbl=(el,txt,pos,o)=>{if(op(el,o)){if(el.textContent!==txt)el.textContent=txt;set(el,{x:f1(pos[0]),y:f1(pos[1])});}};
+    lbl(s.gLabel[0],"time to identify",[G.x,G.y-8],seg(t,6.7,7.0,LIN)*(1-seg(t,10.15,10.4,LIN)));
+    lbl(s.gLabel[1],t<11.9?"14 days":"24 hours",t<11.9?s.calLabelPos:s.dayLabelPos,seg(t,10.75,11.0,LIN)*(1-seg(t,11.75,11.85,LIN))+seg(t,12.15,12.4,LIN)*(1-seg(t,14.15,14.4,LIN)));
+    op(s.gLabel[2],0);
+    s.cmpLabels.forEach((el,i)=>op(el,seg(t,14.95+i*.1,15.25+i*.1,LIN)*(1-seg(t,18.15,18.4,LIN))));
+
+    /* G1 → G2: bars become calendar days */
+    const r1=RESULTS[0].a, cpr1=seg(t,r1+.45,r1+1.75,EO);
+    s.bars.forEach(B=>{
+      const grow=seg(t,r1+.2+B.i*.07,r1+.8+B.i*.07);
+      let w=G.w*B.w*grow; if(B.orange) w=G.w*B.w*(1-.7*cpr1)*grow;
+      const barR={x:G.x,y:B.y,w,h:B.h}, m=seg(t,10.25+B.i*.04,10.85+B.i*.04,EIO), dayIdx=[0,1,2,7,8,9][B.i];
+      const r=lerpR(barR,s.days[dayIdx].r,m);
+      if(op(B.el,(t>=r1+.2&&t<10.9)?1:0)){set(B.el,R4(r));B.el.setAttribute("fill",B.orange?mix(ORANGE,mix(PAPER,INK,.14).match(/\d+/g).map(Number),m):grey(lerp(.22,.14,m)));}
+    });
+    // calendar days (some arrive from the bars, the rest fade in), then fold into one day
+    const fold=seg(t,11.35,12.25,EIO);
+    s.days.forEach((D,i)=>{
+      const fromBar=[0,1,2,7,8,9].includes(i), app=fromBar?(t>=10.85?1:0):seg(t,10.6+i*.03,10.95+i*.03,LIN);
+      const target=i===0?s.dayR:{x:s.dayR.x+s.dayR.w/2-8,y:s.dayR.y+s.dayR.h/2-8,w:16,h:16};
+      const r=lerpR(D.r,target,fold);
+      if(op(D.el,(t>=10.6&&t<12.4)?app*(i===0?1:1-seg(t,11.6,12.2,LIN)):0)){set(D.el,R4(r));D.el.setAttribute("fill",grey(.14));}
+    });
+    if(op(s.dayFrame,seg(t,12.0,12.3,LIN)*(1-seg(t,14.3,14.6,LIN)))) set(s.dayFrame,R4(s.dayR));
+    // hour slots (2 lit) → capability grid cells
+    const r3=RESULTS[2].a, val3=Math.round(lerp(5,70,seg(t,r3+.45,r3+1.75,EO))), lit3=Math.round(val3/5);
+    s.slots.forEach(Sl=>{
+      const app=seg(t,12.1+Sl.i*.02,12.4+Sl.i*.02,LIN), m=seg(t,14.35+Sl.i*.012,14.95+Sl.i*.012,EIO);
+      if(!Sl.gr){op(Sl.el,(t>=12.1&&t<14.9)?app*(1-seg(t,14.35,14.6,LIN)):0); if(Sl.el.__h===0){set(Sl.el,R4(Sl.hr));Sl.el.setAttribute("fill",grey(.12));} return;}
+      const r=lerpR(Sl.hr,Sl.gr,m), litHour=Sl.i<2&&t>=12.55;
+      let fill;
+      if(m<1){fill=litHour?mix(ORANGE,INK.map((v,i)=>lerp(PAPER[i],v,.12)),m):grey(.12);}
+      else if(Sl.row===0) fill=grey(lerp(.12,.32,seg(t,14.95,15.3,LIN)));
+      else fill=(t>=r3+.45&&Sl.col<lit3)?COL.orange:grey(.08);
+      const collapse=seg(t,18.15,18.45,EI);
+      const rr=collapse>0?lerpR(r,{x:r.x+r.w/2-3,y:r.y+r.h/2-3,w:6,h:6},collapse):r;
+      if(op(Sl.el,(t>=12.1&&t<18.5)?app:0)){set(Sl.el,R4(rr));Sl.el.setAttribute("fill",fill);}
+    });
+
+    /* achievements: dot formations (auditorium → classroom → six clusters) */
+    const F=C.form;
+    const dotsOn=t>=18.3&&t<25.7;
+    s.dotsX=null; let dminX=1e9,dmaxX=-1e9;
+    s.dots.forEach(d=>{
+      if(!op(d.el,dotsOn?1:0))return;
+      const srcSlot=s.slots[d.i%20].gr, start={x:srcSlot.x+srcSlot.w/2,y:srcSlot.y+srcSlot.h/2};
+      const A=s.forms[0][d.i],B=s.forms[1][d.i],Cc=s.forms[2][d.i];
+      const m0=seg(t,18.35+(d.i%10)*.015,19.0+(d.i%10)*.015,EIO), m1=seg(t,20.45,21.0,EIO), m2=seg(t,22.55,23.1,EIO);
+      let x=lerp(start.x,A.x,m0),y=lerp(start.y,A.y,m0); x=lerp(x,B.x,m1);y=lerp(y,B.y,m1); x=lerp(x,Cc.x,m2);y=lerp(y,Cc.y,m2);
+      // light: per formation, spreading from front row / cluster by cluster
+      let lit;
+      if(t<20.6) lit=clamp((seg(t,19.0,20.2,LIN)*5-A.o),0,1);
+      else if(t<22.7) lit=clamp((seg(t,21.0,22.3,LIN)*6-B.o),0,1);
+      else lit=clamp((seg(t,23.1,24.5,LIN)*6-Cc.o),0,1);
+      const fadeIn=seg(t,18.35,18.6,LIN);
+      // return: collapse onto the line
+      const back=seg(t,25.0+(d.i%10)*.02,25.45+(d.i%10)*.02,EIO);
+      y=lerp(y,C.LY,back); const L=Math.max(lit,back);
+      dminX=Math.min(dminX,x); dmaxX=Math.max(dmaxX,x);
+      set(d.el,{cx:f1(x),cy:f1(y),r:f1(lerp(3,4.2,L)),fill:mix(INK,ORANGE,L),"fill-opacity":(lerp(.3,1,L)*fadeIn*(1-seg(t,25.5,25.7,LIN))).toFixed(3)});
+    });
+    if(dotsOn) s.dotsX=[dminX,dmaxX];
+    // the anchor point: speaker, then teacher, then the mentor's path
+    {
+      let o=0,x=0,y=0;
+      if(t>=18.9&&t<20.55){o=seg(t,18.9,19.1,LIN)*(1-seg(t,20.4,20.55,LIN));x=s.spk.x;y=s.spk.y;}
+      else if(t>=20.9&&t<22.65){o=seg(t,20.9,21.1,LIN)*(1-seg(t,22.5,22.65,LIN));x=s.tch.x;y=s.tch.y;}
+      if(op(s.anchorDot,o))set(s.anchorDot,{cx:f1(x),cy:f1(y),r:7});
+      const lp=seg(t,23.1,24.5,EIO);
+      if(op(s.links,(t>=23.1&&t<24.95)?(1-seg(t,24.7,24.95,LIN)):0)){
+        const pts=s.CC.map(c=>[c.x,c.y]); const n=pts.length-1, f=lp*n, k=Math.floor(f), part=pts.slice(0,k+1);
+        if(k<n){const a=pts[k],b=pts[k+1],q=f-k;part.push([lerp(a[0],b[0],q),lerp(a[1],b[1],q)]);}
+        s.links.setAttribute("points",part.map(p=>f1(p[0])+","+f1(p[1])).join(" "));
+      }
+    }
+    s.creds.forEach(c=>{c.h.set(seg(t,c.a,c.a+.35),seg(t,c.b-.22,c.b,EI));
+      c.s.forEach((el,i)=>{const so=seg(t,c.a+.12+i*.06,c.a+.42+i*.06,LIN)*(1-seg(t,c.b-.25,c.b-.05,LIN));if(op(el,so))el.setAttribute("transform",`translate(0 ${f1(6*(1-seg(t,c.a+.12,c.a+.5)))})`);});});
+
+    /* the protagonist point */
+    {
+      let o=0,x=C.cx,y=C.LY,r=7;
+      if(t<.32){o=1;}
+      else if(t>=3.0&&t<3.92){o=1;x=lerp(C.m1,C.m2,seg(t,3.0,3.9,LIN));r=6;}
+      else if(t>=26.7){o=1;r=lerp(2,7,seg(t,26.7,26.95));}
+      if(op(s.point,o))set(s.point,{cx:f1(x),cy:f1(y),r:f1(r)});
+    }
+
+    /* overlay tone */
+    const tone=(t>=0.62&&t<2.8)?"orange":"paper";
+    if(cue.dataset.tone!==tone)cue.dataset.tone=tone; if(pauseBtn.dataset.tone!==tone)pauseBtn.dataset.tone=tone;
+  }
+
+  /* ---------- clock ---------- */
+  const pauseLbl=pauseBtn.querySelector("span"), reduce=matchMedia("(prefers-reduced-motion: reduce)"), debug=new URLSearchParams(location.search).has("scrub");
+  let elapsed=0,last=null,raf=null,playing=false,inView=true;
+  function tick(now){raf=null;if(last==null)last=now;const dt=Math.min(now-last,100);last=now;elapsed=(elapsed+dt)%(LOOP*1000);render(elapsed/1000);kick();}
+  function kick(){if(!raf&&playing&&inView&&!document.hidden)raf=requestAnimationFrame(tick);if(!playing||!inView||document.hidden)last=null;}
+  function setPlaying(v){playing=v;pauseBtn.setAttribute("aria-pressed",String(!v));pauseLbl.textContent=v?"Pause":"Play";if(!v){if(raf)cancelAnimationFrame(raf);raf=null;last=null;}kick();}
+  pauseBtn.addEventListener("click",()=>setPlaying(!playing));
+  document.addEventListener("visibilitychange",kick);
+  new IntersectionObserver(es=>{inView=es[0].isIntersecting;kick();},{threshold:.05}).observe(hero);
+  addEventListener("scroll",()=>cue.classList.toggle("gone",scrollY>60),{passive:true});
+  const pick=()=>{const r=svg.getBoundingClientRect();return (r.width/Math.max(r.height,1))<.95?"port":"land";};
+  function relayout(force){const k=pick();if(force||!S||S.key!==k){S=build(k);S.res.forEach(R=>R.last=null);}else S.measure();render(elapsed/1000);}
+  let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>relayout(false),80);});
+  if(debug){const sc=document.getElementById("scrub"),si=sc.querySelector("input"),st=document.getElementById("scrubT");sc.classList.add("on");
+    si.addEventListener("input",()=>{setPlaying(false);const t=+si.value;elapsed=t*1000;render(t);st.textContent=t.toFixed(2)+"s";});}
+
+  const ready=document.fonts&&document.fonts.ready?Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,900))]):Promise.resolve();
+  ready.then(()=>{
+    relayout(true);
+    requestAnimationFrame(()=>requestAnimationFrame(()=>hero.classList.add("in")));
+    if(reduce.matches){elapsed=POSTER*1000;render(POSTER);pauseBtn.hidden=true;}
+    else if(!debug) setPlaying(true); else render(0);
+  });
+  reduce.addEventListener?.("change",e=>{if(e.matches){setPlaying(false);elapsed=POSTER*1000;render(POSTER);}});
+  window.__heroRender=t=>{elapsed=t*1000;S.res.forEach(R=>R.last=null);render(t);};
+})();
+</script><script defer="" src="cashflow-preview.js?v=87"></script>
 </body>
 </html>

@@ -171,8 +171,8 @@
         ['top', 'Top'],
         ['intro', 'Approach'],
         ['work', 'Work'],
-        ['writing', 'Writing'],
-        ['vibes', 'Vibe apps'],
+        ['writing', 'Notes & essays'],
+        ['vibes', 'Experiments'],
         ['manifesto', 'Principle']
       ]
     : body.classList.contains('page-case-agent')
@@ -241,7 +241,7 @@
       learning: { title: 'Four lessons that stayed with me', subtitle: 'Learnings' }
     } : body.classList.contains('page-home') ? {
       top: ['Home', 'assets/character-hero-q95/center-v4.webp'], intro: ['Approach', 'assets/process-board.webp'], work: ['Selected work', 'assets/agent-hero.webp'],
-      writing: ['Writing', 'assets/feedback-card.webp'], vibes: ['Vibe apps', 'assets/project-placeholder-01.svg'], manifesto: ['Principle', 'assets/shiva-sketch-work.webp']
+      writing: ['Notes & essays', 'assets/feedback-card.webp'], vibes: ['Experiments', 'assets/vibe-codes-preview.svg'], manifesto: ['Principle', 'assets/shiva-sketch-work.webp']
     } : body.classList.contains('page-case-domain') ? {
       top:['Case study','assets/domain-hero.webp'], overview:['Overview','assets/application-map.webp'], alert:['Alert','assets/alert-storm.webp'],
       current:['Current UX','assets/current-observe.webp'], discovery:['Research','assets/research-donut.webp'], insight:['Insight','assets/feedback-heatmap.webp'],
@@ -469,8 +469,13 @@
     element.focus({ preventScroll: true });
     if (added) element.addEventListener('blur', () => element.removeAttribute('tabindex'), { once: true });
   };
-  const menuFocusables = () => menu ? [...menu.querySelectorAll(focusableSelector)]
-    .filter(el => !el.closest('[inert], [hidden]') && el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden') : [];
+  const menuFocusables = () => {
+    if (!menu) return [];
+    const items = [...menu.querySelectorAll(focusableSelector)]
+      .filter(el => !el.closest('[inert], [hidden]') && el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
+    if (menuButton && menuButton.getClientRects().length && getComputedStyle(menuButton).visibility !== 'hidden') items.unshift(menuButton);
+    return items;
+  };
 
   const updateMenuCurrent = () => {
     if (!menu) return;
@@ -550,6 +555,7 @@
     lockedElements.forEach(([el, wasInert]) => { el.inert = wasInert; });
     lockedElements = [];
     menuButton?.setAttribute('aria-expanded', 'false');
+    menuButton?.setAttribute('aria-label', 'Open menu');
     if (Math.abs(window.scrollY - menuScrollY) > 1) window.scrollTo({ top: menuScrollY, behavior: 'instant' });
     // Move focus out before hiding the modal from assistive technology.
     if (menu.contains(document.activeElement)) document.activeElement.blur();
@@ -585,11 +591,12 @@
     body.classList.add('menu-open');
     root.classList.add('menu-locked');
     menuButton?.setAttribute('aria-expanded', 'true');
-    // Focus first, then deactivate the opener and other background UI.
-    (menuCloseButton || menu).focus({ preventScroll: true });
+    menuButton?.setAttribute('aria-label', 'Close menu');
+    // The existing menu trigger remains in place and becomes the close control.
+    menuButton?.focus({ preventScroll: true });
     lockedElements = [...body.children]
       .filter(el => el instanceof HTMLElement && el !== menu
-        && !el.matches('script, style, link, .cursor-scribble, .page-wipe, .noise, .sketch-filter-defs'))
+        && !el.matches('script, style, link, .site-header, .cursor-scribble, .portfolio-cursor-ring, .portfolio-cursor-dot, .page-wipe, .noise, .sketch-filter-defs'))
       .map(el => [el, el.inert]);
     lockedElements.forEach(([el]) => { el.inert = true; });
     syncMenuAnimation();
@@ -616,7 +623,7 @@
     }
   }, true);
   document.addEventListener('focusin', event => {
-    if (menuIsOpen && !menu.contains(event.target)) (menuCloseButton || menu).focus({ preventScroll: true });
+    if (menuIsOpen && !menu.contains(event.target) && event.target !== menuButton) menuButton?.focus({ preventScroll: true });
   });
 
   const scrollToDestination = (target, { smooth = true, updateHistory = true, focus = true } = {}) => {
@@ -1042,7 +1049,9 @@
   const toneForSection = section => {
     if (body.classList.contains('page-home')) {
       if (section.id === 'writing' || section.id === 'vibes') return 'grey';
-      if (section.id === 'manifesto') return 'orange';
+      // The closing poster owns a static orange surface. Do not recolour
+      // the projects (or the entire page) as the poster enters the viewport.
+      if (section.id === 'manifesto') return 'grey';
       return 'paper';
     }
 
@@ -1282,9 +1291,8 @@
       chip.addEventListener('click', () => activateVibe(key));
     });
   });
-  // One delegated cursor state covers links, their child images/text, and
-  // dynamically created controls. Native cursors are hidden only while this
-  // cursor is active, never on touch or when reduced motion is requested.
+  // Shared magnetic scribble cursor. The pointer remains exact over open space,
+  // then is gently attracted toward the centre of interactive targets.
   const cursor = document.querySelector('.cursor-scribble');
   if (cursor) {
     const pointerMedia = window.matchMedia('(hover:hover) and (pointer:fine)');
@@ -1292,46 +1300,69 @@
     const enabled = () => pointerMedia.matches && !motionMedia.matches;
     const clickable = 'a[href], button:not(:disabled), summary, [role="button"], [role="tab"], [data-cursor="link"]';
     let mouseX = 0, mouseY = 0, cursorX = 0, cursorY = 0;
+    let targetX = 0, targetY = 0, magneticEl = null;
     let visible = false;
     let cursorRaf = 0;
 
     const updateCursorMode = target => {
       const element = target instanceof Element ? target.closest(clickable) : null;
-      cursor.classList.toggle('is-link', Boolean(element && !element.closest('[inert], [aria-disabled="true"]')));
+      magneticEl = element && !element.closest('[inert], [aria-disabled="true"]') ? element : null;
+      cursor.classList.toggle('is-link', Boolean(magneticEl));
+      cursor.classList.toggle('is-magnetic', Boolean(magneticEl));
+    };
+    const updateMagneticTarget = () => {
+      targetX = mouseX; targetY = mouseY;
+      if (!magneticEl || !magneticEl.isConnected) return;
+      const rect = magneticEl.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = cx - mouseX, dy = cy - mouseY;
+      const radius = Math.max(54, Math.min(150, Math.hypot(rect.width, rect.height) * .58));
+      const distance = Math.hypot(dx, dy);
+      const falloff = Math.max(0, 1 - distance / radius);
+      const pull = .16 + falloff * .30;
+      targetX = mouseX + dx * pull;
+      targetY = mouseY + dy * pull;
     };
     const cursorFrame = () => {
       cursorRaf = 0;
-      cursorX += (mouseX - cursorX) * .24;
-      cursorY += (mouseY - cursorY) * .24;
-      if (Math.abs(mouseX - cursorX) + Math.abs(mouseY - cursorY) < .1) {
-        cursorX = mouseX; cursorY = mouseY;
+      updateMagneticTarget();
+      const ease = magneticEl ? .30 : .38;
+      cursorX += (targetX - cursorX) * ease;
+      cursorY += (targetY - cursorY) * ease;
+      if (Math.abs(targetX - cursorX) + Math.abs(targetY - cursorY) < .08) {
+        cursorX = targetX; cursorY = targetY;
       }
       cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
-      if (visible && (cursorX !== mouseX || cursorY !== mouseY)) cursorRaf = requestAnimationFrame(cursorFrame);
+      if (visible && (magneticEl || cursorX !== targetX || cursorY !== targetY)) cursorRaf = requestAnimationFrame(cursorFrame);
     };
     const hideCursor = () => {
-      visible = false;
+      visible = false; magneticEl = null;
       cancelAnimationFrame(cursorRaf);
       cursorRaf = 0;
       cursor.style.opacity = '0';
-      cursor.classList.remove('is-link', 'is-down');
+      cursor.classList.remove('is-link', 'is-magnetic', 'is-down');
       root.classList.remove('has-custom-cursor');
     };
-    document.addEventListener('pointermove', event => {
+    const moveCursor = event => {
       if (!enabled() || event.pointerType === 'touch') { hideCursor(); return; }
       mouseX = event.clientX; mouseY = event.clientY;
+      updateCursorMode(event.target);
+      updateMagneticTarget();
       if (!visible) {
-        cursorX = mouseX; cursorY = mouseY;
+        cursorX = targetX; cursorY = targetY;
         cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
         visible = true;
         cursor.style.opacity = '1';
         root.classList.add('has-custom-cursor');
       }
-      updateCursorMode(event.target);
       if (!cursorRaf) cursorRaf = requestAnimationFrame(cursorFrame);
-    }, { passive: true });
+    };
+    const moveEvent = 'onpointerrawupdate' in window ? 'pointerrawupdate' : 'pointermove';
+    document.addEventListener(moveEvent, moveCursor, { passive: true });
     document.addEventListener('pointerover', event => {
-      if (visible) updateCursorMode(event.target);
+      if (visible) { updateCursorMode(event.target); if (!cursorRaf) cursorRaf = requestAnimationFrame(cursorFrame); }
     }, { passive: true });
     document.addEventListener('pointerout', event => {
       if (!event.relatedTarget) hideCursor();

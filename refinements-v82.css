@@ -67,3 +67,39 @@
     height: 31px !important;
   }
 }
+
+
+/* V84 — the floating menu trigger is also the close control. */
+body.menu-open .site-header.site-header--floating {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+  z-index: 1305 !important;
+}
+body.menu-open .site-header__combo-pill {
+  min-height: 56px !important;
+  padding: 4px !important;
+  gap: 0 !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  pointer-events: none !important;
+}
+body.menu-open .site-header--floating .header-logo {
+  width: 0 !important;
+  min-width: 0 !important;
+  height: 48px !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+body.menu-open .site-header--floating .site-menu-trigger { pointer-events: auto !important; }
+.site-menu__bar { justify-content: flex-start !important; }
+.site-menu__close { display: none !important; }
+@media (max-width:620px) {
+  body.menu-open .site-header__combo-pill { min-height:52px !important; padding:4px !important; }
+  body.menu-open .site-header--floating .header-logo { height:44px !important; }
+}

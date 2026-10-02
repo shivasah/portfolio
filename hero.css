@@ -31,9 +31,8 @@
   object-position: center;
   pointer-events: none;
 }
-.character-hero__canvas { opacity: 0; }
-.character-hero[data-poster-ready="true"] .character-hero__canvas { opacity: 1; }
-.character-hero[data-poster-ready="true"] .character-hero__poster { visibility: hidden; }
+.character-hero__canvas { opacity: 1; }
+.character-hero__poster { display: none !important; }
 .character-hero__vignette {
   position: absolute;
   inset: 0;

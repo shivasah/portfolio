@@ -279,3 +279,28 @@ html.is-fast-navigation .page-wipe { transition-duration: 320ms !important; }
 .site-menu__contact,.site-menu__work,.site-menu__art{display:none!important}
 .site-menu__signature-v70{width:102px;height:42px;background:currentColor;opacity:1!important}
 @media(max-width:560px){.site-menu__primary--simple .site-menu__page strong{font-size:clamp(32px,10vw,48px)}.site-menu__projects-panel{padding-left:16px}.site-menu__signature-v70{width:88px;height:38px}}
+
+
+/* V83 — private case studies remain visible in Selected works but cannot open. */
+.site-menu__project--locked {
+  position: relative;
+  cursor: default;
+  opacity: .62;
+  text-decoration: none;
+}
+.site-menu__project--locked:hover,
+.site-menu__project--locked:focus {
+  opacity: .62;
+}
+.site-menu__soon {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 6px;
+  padding: 4px 9px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1;
+}

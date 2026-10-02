@@ -110,8 +110,3 @@ body.page-case-agent #architecture-shift .architecture-shift-v70__media img{disp
 
 /* Writing shelf: selected title must sit above the physical ledge/shelf. */
 .newsletter-bookshelf.is-enhanced .bookshelf__stage{overflow:visible!important}
-.newsletter-bookshelf.is-enhanced .bookshelf__books{z-index:4!important}
-.newsletter-bookshelf.is-enhanced .bookshelf__ledge{z-index:1!important}
-.newsletter-bookshelf.is-enhanced .shelf-book{z-index:3}
-.newsletter-bookshelf.is-enhanced .shelf-book.is-selected{z-index:2000!important}
-.newsletter-bookshelf.is-enhanced .shelf-book.is-selected .shelf-book__object{z-index:2000!important}

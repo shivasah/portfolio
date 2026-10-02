@@ -1,0 +1,222 @@
+/* Clip inherited off-canvas artwork, not vertical scroll. This prevents the
+   mobile layout viewport from becoming wider/taller than the pinned story. */
+body.page-case-agent #main { overflow-x: clip; }
+
+/* V85 - immersive city analogy. Only this section is affected.
+   Cabinet Grotesk / Syne and the existing pill styling are inherited. */
+body.page-case-agent .agent-city-story {
+  position: relative;
+  width: 100%;
+  padding-block: clamp(80px, 10svh, 140px);
+  background: var(--paper);
+  color: var(--ink);
+  isolation: isolate;
+}
+.agent-city-story__stage { position: relative; }
+.agent-city-story__visual { width: 100%; margin-inline: auto; }
+.agent-city-story__fallback { width: 100%; height: auto; }
+.agent-city-story__canvas, .agent-city-story__shade,
+.agent-city-story__footer, .agent-city-story__skip { display: none; }
+.agent-city-story__layout { position: relative; z-index: 2; }
+.agent-city-story__overlays { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; }
+.agent-city-story__panel--intro { grid-column: 1 / -1; }
+.agent-city-story__panel h2,
+.agent-city-story__panel h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(36px, 3.8vw, 56px);
+  line-height: 1.06;
+  letter-spacing: -.04em;
+  text-wrap: balance;
+}
+.agent-city-story__panel h2 { font-size: clamp(40px, 4.6vw, 68px); max-width: 16ch; }
+.agent-city-story__panel h2 span { display: block; }
+.agent-city-story__panel h3 { max-width: 14ch; }
+.agent-city-story__label {
+  margin: 0 0 20px;
+  font: 600 14px/1.4 var(--font-body);
+  letter-spacing: .025em;
+}
+.agent-city-story__body {
+  max-width: 36ch;
+  margin: 22px 0 0;
+  font: 400 clamp(16px, 1.28vw, 19px)/1.65 var(--font-body);
+  letter-spacing: -.015em;
+  color: var(--ink-soft);
+}
+
+/* One pin, four scroll-controlled beats, then a live closing tableau. */
+body.page-case-agent #background.agent-city-story.is-enhanced:not(.is-reduced) {
+  height: 650vh;
+  height: 650svh;
+  padding: 0 !important;
+  overflow: visible;
+}
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--paper);
+}
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__visual {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  pointer-events: none;
+}
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.agent-city-story.is-enhanced.is-ready:not(.is-reduced) .agent-city-story__fallback { display: none; }
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__shade {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--paper) 0%, rgba(252,252,244,.97) 24%, rgba(252,252,244,.84) 33%, rgba(252,252,244,.18) 49%, rgba(252,252,244,0) 60%);
+}
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__layout {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  pointer-events: none;
+}
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__overlays {
+  position: relative;
+  display: block;
+  width: min(42%, 510px);
+  height: min(440px, 58svh);
+}
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  will-change: opacity, transform;
+}
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__panel:first-child { opacity: 1; }
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__footer {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  right: 0;
+  bottom: max(30px, env(safe-area-inset-bottom, 0px));
+  z-index: 3;
+  min-height: 40px;
+  gap: 20px;
+  pointer-events: none;
+}
+.agent-city-story__guide {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 500 12px/1.5 var(--font-body);
+  color: var(--ink);
+}
+.agent-city-story__progress { display: flex; gap: 5px; width: 96px; }
+.agent-city-story__progress i {
+  position: relative;
+  display: block;
+  flex: 1;
+  height: 2px;
+  overflow: hidden;
+  background: rgba(35,36,40,.15);
+}
+.agent-city-story__progress i::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--orange);
+  transform-origin: left;
+  transform: scaleX(var(--city-progress, 0));
+}
+.agent-city-story__motion {
+  min-height: 40px;
+  font-family: var(--font-body);
+  background: var(--paper);
+  pointer-events: auto;
+  cursor: pointer;
+}
+.agent-city-story__motion[hidden] { display: none !important; }
+.agent-city-story__motion:hover { background: var(--ink); color: var(--paper); }
+.agent-city-story__motion:focus-visible,
+.agent-city-story__skip:focus-visible { outline: 2px solid var(--orange); outline-offset: 5px; }
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__skip {
+  position: absolute;
+  display: inline-flex;
+  z-index: 5;
+  left: var(--gutter);
+  top: 20px;
+  transform: translateY(-200%);
+}
+.agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__skip:focus { transform: none; }
+
+@media (max-width: 799px) and (min-aspect-ratio: 1/10) {
+  .agent-city-story__overlays { grid-template-columns: 1fr; gap: 40px; }
+  .agent-city-story__panel h2 { font-size: clamp(32px, 5.2vw, 44px); }
+  .agent-city-story__panel h3 { font-size: clamp(30px, 5vw, 42px); max-width: 20ch; }
+  .agent-city-story__label { font-size: 12px; margin-bottom: 12px; }
+  .agent-city-story__body { font-size: 15px; line-height: 1.55; margin-top: 14px; max-width: 38ch; }
+}
+@media (max-width: 799px) and (max-aspect-ratio: 5/4) {
+  .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__layout {
+    align-items: flex-start;
+    padding-top: max(106px, 13svh);
+    padding-bottom: 76px;
+  }
+  .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__overlays { width: min(100%, 530px); height: 235px; }
+  .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__panel { justify-content: flex-start; }
+  .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__shade {
+    background: linear-gradient(180deg, var(--paper) 0%, rgba(252,252,244,.96) 24%, rgba(252,252,244,.90) 34%, rgba(252,252,244,.14) 49%, rgba(252,252,244,0) 60%);
+  }
+  .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__footer { bottom: max(20px, env(safe-area-inset-bottom, 0px)); gap: 10px; }
+  .agent-city-story__progress { width: 52px; gap: 4px; }
+  .agent-city-story__guide { font-size: 10px; gap: 8px; }
+  .agent-city-story__motion { font-size: 10px; padding-inline: 12px; }
+}
+@media (max-height: 600px) and (min-aspect-ratio: 5/4) {
+  .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__layout { padding-top: 90px; padding-bottom: 66px; }
+  .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__overlays { height: 100%; width: 43%; }
+  .agent-city-story__panel h2, .agent-city-story__panel h3 { font-size: clamp(24px, 5.5svh, 34px); }
+  .agent-city-story__body { font-size: 13px; line-height: 1.45; margin-top: 12px; }
+  .agent-city-story__label { font-size: 11px; margin-bottom: 10px; }
+  .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__footer { bottom: 12px; }
+}
+
+/* Text and a static final view remain available without JS, when canvas fails,
+   and for reduced motion. No motion is required to understand the narrative. */
+.agent-city-story.is-reduced .agent-city-story__panel { opacity: 1 !important; transform: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .agent-city-story__panel { will-change: auto !important; }
+}
+@media print {
+  body.page-case-agent .agent-city-story.is-enhanced { height: auto !important; padding: 30px 0 !important; }
+  .agent-city-story.is-enhanced .agent-city-story__stage { position: static !important; height: auto !important; overflow: visible !important; }
+  .agent-city-story.is-enhanced .agent-city-story__visual { position: relative !important; height: auto !important; }
+  .agent-city-story.is-enhanced .agent-city-story__fallback { display: block !important; position: static !important; height: auto !important; }
+  .agent-city-story.is-enhanced .agent-city-story__layout { display: block !important; height: auto !important; padding-block: 30px !important; }
+  .agent-city-story.is-enhanced .agent-city-story__overlays { width: 100% !important; height: auto !important; }
+  .agent-city-story.is-enhanced .agent-city-story__panel { position: static !important; opacity: 1 !important; transform: none !important; margin-bottom: 30px; }
+  .agent-city-story.is-enhanced .agent-city-story__canvas, .agent-city-story.is-enhanced .agent-city-story__shade,
+  .agent-city-story.is-enhanced .agent-city-story__footer, .agent-city-story.is-enhanced .agent-city-story__skip { display: none !important; }
+}

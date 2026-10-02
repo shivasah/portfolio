@@ -1,0 +1,34 @@
+/* v87 - restrained section labels, stable surfaces and coherent book layering.
+   Existing anchors are intentionally retained for bookmarks. */
+.page-home .writing-shelf-heading h2 { margin-top:0; }
+
+/* The selected cover must clear the other spines in actual 3D space (home.js).
+   These are the outer 2D layers; the books retain a single 3D rendering context. */
+.newsletter-bookshelf.is-enhanced .bookshelf__stage { isolation:isolate; }
+.newsletter-bookshelf.is-enhanced .bookshelf__books { z-index:2; transform-style:preserve-3d; }
+.newsletter-bookshelf.is-enhanced .bookshelf__ledge { z-index:0; pointer-events:none; }
+.newsletter-bookshelf.is-enhanced .bookshelf__read-overlay { z-index:3; }
+
+/* No orange scroll transition on the experiments. The closing manifesto keeps
+   its own orange surface, rather than tinting all previous sections. */
+.page-home #main > #vibes { background-color:#deded8 !important; }
+.page-home #main > #manifesto { background-color:var(--orange) !important; }
+
+/* A real, sanitized two-fold capture is optional. Without it the existing,
+   labelled workflow illustration remains; no fake dashboard is substituted. */
+.cashflow-project-media { display:flex; flex-direction:column; min-width:0; background:var(--paper-2); }
+.cashflow-project-media > .vibe-private { flex:1; }
+.cashflow-project-media [hidden] { display:none !important; }
+.cashflow-preview { min-width:0; border-right:1px solid var(--line); background:var(--paper); }
+.cashflow-preview__private { margin-left:auto; font-size:10px; }
+.cashflow-preview__screen { position:relative; overflow:hidden; width:100%; aspect-ratio:16/9; background:var(--paper-2); }
+.cashflow-preview__screen:focus-visible { outline:2px solid var(--orange); outline-offset:-3px; }
+.cashflow-preview__image { display:block; width:100%; height:auto; max-width:none; pointer-events:none; user-select:none; transform:translate3d(0,0,0); }
+.cashflow-preview.is-running .cashflow-preview__image { will-change:transform; }
+.cashflow-preview > .vibe-site-preview__bar { border-bottom:0; }
+@media (max-width:760px) {
+  .cashflow-preview { border-right:0; border-bottom:1px solid var(--line); }
+}
+@media (prefers-reduced-motion:reduce) {
+  .cashflow-preview__image { will-change:auto; }
+}
