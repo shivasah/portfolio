@@ -1,0 +1,440 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1457 955" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><defs><clipPath id="win_am_s036"><rect width="1457" height="955" rx="10"/></clipPath></defs><g clip-path="url(#win_am_s036)"><g transform="translate(-171 -104)"><defs><linearGradient id="hdr_am_s036" x1="0" x2="1"><stop offset="0" stop-color="#33206C"/><stop offset="0.45" stop-color="#31205F"/><stop offset="1" stop-color="#2F2150"/></linearGradient><linearGradient id="swirl_am_s036" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1565D8"/><stop offset="1" stop-color="#3FC1F2"/></linearGradient><filter id="sh_am_s036" x="-5%" y="-10%" width="110%" height="130%"><feDropShadow dx="0" dy="1" stdDeviation="1.4" flood-color="#000" flood-opacity="0.08"/></filter></defs>
+<rect x="171.00" y="104.00" width="1457.00" height="955.00" rx="0" fill="#F7F7F7" />
+<rect x="171.00" y="104.00" width="1457.00" height="55.00" rx="0" fill="#FFFFFF" />
+<circle cx="198.00" cy="131.00" r="6" fill="#FF5F57" />
+<circle cx="219.00" cy="131.00" r="6" fill="#FEBC2E" />
+<circle cx="240.00" cy="131.00" r="6" fill="#28C840" />
+<rect x="274.00" y="124.00" width="19.00" height="14.00" rx="2" fill="none" stroke="#555" stroke-width="1.4" />
+<line x1="280.00" y1="124.00" x2="280.00" y2="138.00" stroke="#555" stroke-width="1.4" />
+<line x1="276.50" y1="128.00" x2="278.00" y2="128.00" stroke="#555" stroke-width="1" />
+<line x1="276.50" y1="131.00" x2="278.00" y2="131.00" stroke="#555" stroke-width="1" />
+<line x1="276.50" y1="134.00" x2="278.00" y2="134.00" stroke="#555" stroke-width="1" />
+<path d="M331 125L325 131L331 137" stroke="#444" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M358 125L364 131L358 137" stroke="#B0B0B0" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M625 123L632 125.5V131C632 135 629 138 625 139.5C621 138 618 135 618 131V125.5Z" stroke="#555" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M625 123L632 125.5V131C632 135 629 138 625 139.5Z" fill="#555"/>
+<rect x="652.00" y="117.00" width="495.00" height="29.00" rx="8" fill="#F2F2F2" />
+<rect x="757.43" y="129.00" width="8.00" height="7.00" rx="1.2" fill="#777" />
+<path d="M759.2280078125 129V127A2.2 2.2 0 0 1 763.6280078125001 127V129" stroke="#777" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="771.43" y="136.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="400" fill="#3A3A3A" text-anchor="start" >www.appdynamics.com/acme/agentmanagement</text>
+<path d="M1139 131A5 5 0 1 1 1136.5 126.7" stroke="#666" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1135.5 124.3L1137 126.9L1134.2 127.6" stroke="#666" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1471.00" cy="131.00" r="8" fill="none" stroke="#555" stroke-width="1.4" />
+<path d="M1471 126.5V135M1467.5 131.7L1471 135.2L1474.5 131.7" stroke="#555" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1509 128H1507V139.5H1520V128H1518M1513.5 134V122M1510 125.5L1513.5 122L1517 125.5" stroke="#555" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1556 124V138M1549 131H1563" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1590.00" y="126.00" width="13.00" height="13.00" rx="2.5" fill="none" stroke="#555" stroke-width="1.4" />
+<path d="M1593.5 126V123.5H1606.5V135.5H1603" stroke="#555" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="171.00" y="159.00" width="1457.00" height="42.00" rx="0" fill="url(#hdr_am_s036)" />
+<path transform="translate(187 166.4) scale(1.1667)" fill="#fff" d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.186 1.186 0 01-.806-.237 1.038 1.038 0 01-.352-.498 1.21 1.21 0 01-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 011.061.198l.024.013v-1.117l-.051-.014a2.862 2.862 0 00-1.011-.132 2.34 2.34 0 00-.903.206c-.287.132-.54.327-.739.571a2.221 2.221 0 00-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052l.082-.023M5.336 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.183 1.183 0 01-.806-.237 1.03 1.03 0 01-.351-.498 1.202 1.202 0 01-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 011.061.198l.024.013v-1.117l-.051-.014a2.862 2.862 0 00-1.011-.132 2.344 2.344 0 00-.903.206 2.08 2.08 0 00-.74.571 2.224 2.224 0 00-.041 2.705 2.11 2.11 0 001.176.756c.491.12 1.005.102 1.487-.052l.083-.023M9.26 17.249l-.004.957.07.012c.22.041.441.069.664.085.195.019.391.022.587.012.187-.014.372-.049.551-.104.21-.06.405-.163.571-.305a1.16 1.16 0 00.333-.478 1.31 1.31 0 00-.007-.96 1.068 1.068 0 00-.298-.414 1.261 1.261 0 00-.438-.255l-.722-.268a.388.388 0 01-.197-.188.245.245 0 01.008-.219.382.382 0 01.154-.142.798.798 0 01.257-.074c.153-.022.308-.021.46.005.18.02.358.051.533.096l.038.008v-.883l-.069-.015a4.749 4.749 0 00-.543-.097 2.844 2.844 0 00-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899.054.145.14.274.252.381.097.093.207.173.327.236.157.084.324.149.497.195.057.017.114.035.17.054l.085.031.024.01c.084.03.162.078.226.14.045.042.08.094.101.151a.325.325 0 01.001.161.339.339 0 01-.166.198.856.856 0 01-.275.086 2.032 2.032 0 01-.427.021 5.208 5.208 0 01-.557-.074 9.195 9.195 0 01-.287-.067l-.033-.006zm-2.475.995h1.05v-4.167h-1.05v4.167zm12.162-2.936a1.095 1.095 0 011.541.158 1.094 1.094 0 01-.157 1.541l-.017.014a1.096 1.096 0 01-1.367-1.713m-1.525.854a2.193 2.193 0 002.666 2.107 2.139 2.139 0 00.701-3.937 2.207 2.207 0 00-3.367 1.83M22.961 10.728a.52.52 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M20.117 10.728a.522.522 0 001.041 0V8.139a.521.521 0 00-1.04 0v2.589M17.231 11.771a.521.521 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M14.393 10.728a.521.521 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M11.494 10.728a.522.522 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M8.624 10.728a.52.52 0 001.039 0V8.139a.52.52 0 00-1.039 0v2.589M5.737 11.771a.52.52 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M2.876 10.728a.522.522 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M0 10.728a.521.521 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155"/>
+<text x="223.00" y="185.50" font-family="Inter, Arial, sans-serif" font-size="14.00" font-weight="400" fill="#FFFFFF" text-anchor="start" >AppDynamics</text>
+<circle cx="1418.00" cy="179.00" r="5.5" fill="none" stroke="#fff" stroke-width="1.6" />
+<path d="M1421.96 182.96L1426.25 187.25" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1456.00" cy="181.00" r="7.5" fill="none" stroke="#fff" stroke-width="1.5" />
+<path d="M1453.8 179.1A2.3 2.3 0 1 1 1457.3 181C1456.4 181.5 1456 182 1456 183.1" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1456.00" cy="185.50" r="0.9" fill="#fff" />
+<line x1="1479.00" y1="171.00" x2="1479.00" y2="190.00" stroke="#8A86A8" stroke-width="1" />
+<circle cx="1501.00" cy="177.60" r="3.2" fill="none" stroke="#fff" stroke-width="1.4" />
+<path d="M1495.2 186.6C1495.2 182.6 1506.8 182.6 1506.8 186.6Z" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1515.00" y="185.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="600" fill="#fff" text-anchor="start" >masteradmin</text>
+<path d="M1598.5 179.5H1605.5L1602 183.5Z" fill="#fff"/>
+<line x1="197.00" y1="223.00" x2="211.00" y2="223.00" stroke="#555" stroke-width="1.4" />
+<line x1="197.00" y1="228.50" x2="211.00" y2="228.50" stroke="#555" stroke-width="1.4" />
+<line x1="197.00" y1="234.00" x2="211.00" y2="234.00" stroke="#555" stroke-width="1.4" />
+<text x="225.00" y="269.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Overview</text>
+<text x="225.00" y="305.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Applications</text>
+<text x="225.00" y="341.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >User Experience</text>
+<text x="225.00" y="377.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Databases</text>
+<text x="225.00" y="413.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Servers</text>
+<text x="225.00" y="450.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Analytics</text>
+<text x="225.00" y="486.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Dashboards &amp; Reports</text>
+<text x="225.00" y="522.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Alert &amp; Respond</text>
+<text x="225.00" y="558.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >OTel</text>
+<rect x="198.00" y="259.00" width="6.00" height="7.50" rx="0.8" fill="#73777A" />
+<rect x="198.00" y="268.00" width="6.00" height="3.00" rx="0.8" fill="#A6A8AC" />
+<rect x="205.50" y="259.00" width="5.50" height="4.50" rx="0.8" fill="#A6A8AC" />
+<rect x="205.50" y="265.00" width="5.50" height="6.00" rx="0.8" fill="#73777A" />
+<line x1="204.50" y1="298.98" x2="204.50" y2="296.58" stroke="#A6A8AC" stroke-width="0.9" />
+<circle cx="204.50" cy="295.50" r="1.15" fill="#73777A" />
+<line x1="204.50" y1="304.02" x2="204.50" y2="306.42" stroke="#A6A8AC" stroke-width="0.9" />
+<circle cx="204.50" cy="307.50" r="1.15" fill="#73777A" />
+<line x1="202.40" y1="300.11" x2="200.40" y2="298.79" stroke="#A6A8AC" stroke-width="0.9" />
+<circle cx="199.50" cy="298.20" r="1.15" fill="#73777A" />
+<line x1="206.60" y1="300.11" x2="208.60" y2="298.79" stroke="#A6A8AC" stroke-width="0.9" />
+<circle cx="209.50" cy="298.20" r="1.15" fill="#73777A" />
+<line x1="202.40" y1="302.89" x2="200.40" y2="304.21" stroke="#A6A8AC" stroke-width="0.9" />
+<circle cx="199.50" cy="304.80" r="1.15" fill="#73777A" />
+<line x1="206.60" y1="302.89" x2="208.60" y2="304.21" stroke="#A6A8AC" stroke-width="0.9" />
+<circle cx="209.50" cy="304.80" r="1.15" fill="#73777A" />
+<circle cx="204.50" cy="301.50" r="2.3" fill="none" stroke="#73777A" stroke-width="1.3" />
+<circle cx="201.30" cy="334.00" r="2.9" fill="#73777A" />
+<path d="M196.6 342.6V340.2C196.6 338.2 198.4 336.9 201 336.9C203.6 336.9 205.4 338.2 205.4 340.2V342.6Z" fill="#73777A"/>
+<line x1="203.40" y1="338.00" x2="208.80" y2="338.00" stroke="#B5B7BA" stroke-width="1.1" />
+<line x1="203.40" y1="341.00" x2="208.80" y2="341.00" stroke="#B5B7BA" stroke-width="1.1" />
+<rect x="198.00" y="367.00" width="3.60" height="3.60" rx="0.5" fill="#73777A" />
+<rect x="198.00" y="372.00" width="3.60" height="3.60" rx="0.5" fill="#73777A" />
+<rect x="198.00" y="377.00" width="3.60" height="3.60" rx="0.5" fill="#73777A" />
+<rect x="203.00" y="372.00" width="3.60" height="3.60" rx="0.5" fill="#A6A8AC" />
+<rect x="203.00" y="377.00" width="3.60" height="3.60" rx="0.5" fill="#A6A8AC" />
+<rect x="208.00" y="377.00" width="3.60" height="3.60" rx="0.5" fill="#CDCFD1" />
+<rect x="199.00" y="403.00" width="12.00" height="3.60" rx="0.6" fill="#73777A" />
+<rect x="200.20" y="404.20" width="1.20" height="1.20" rx="0.2" fill="#F7F7F7" />
+<rect x="199.00" y="408.00" width="12.00" height="3.60" rx="0.6" fill="#A6A8AC" />
+<rect x="200.20" y="409.20" width="1.20" height="1.20" rx="0.2" fill="#F7F7F7" />
+<rect x="199.00" y="413.00" width="12.00" height="3.60" rx="0.6" fill="#CDCFD1" />
+<rect x="200.20" y="414.20" width="1.20" height="1.20" rx="0.2" fill="#F7F7F7" />
+<line x1="198.30" y1="447.60" x2="198.30" y2="452.60" stroke="#CDCFD1" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="202.60" y1="443.60" x2="202.60" y2="452.60" stroke="#73777A" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="206.50" y1="445.80" x2="206.50" y2="452.60" stroke="#A6A8AC" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="210.50" y1="442.20" x2="210.50" y2="452.60" stroke="#73777A" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="198.40" y="474.60" width="12.20" height="15.20" rx="2" fill="none" stroke="#73777A" stroke-width="1.3" />
+<line x1="201.20" y1="480.20" x2="201.20" y2="482.60" stroke="#A6A8AC" stroke-width="1.1" />
+<line x1="203.50" y1="478.20" x2="203.50" y2="482.60" stroke="#73777A" stroke-width="1.1" />
+<line x1="205.70" y1="480.20" x2="205.70" y2="482.60" stroke="#A6A8AC" stroke-width="1.1" />
+<line x1="208.00" y1="477.80" x2="208.00" y2="482.60" stroke="#73777A" stroke-width="1.1" />
+<line x1="201.00" y1="485.20" x2="208.00" y2="485.20" stroke="#A6A8AC" stroke-width="1.1" />
+<line x1="201.00" y1="487.60" x2="205.20" y2="487.60" stroke="#A6A8AC" stroke-width="1.1" />
+<path d="M199.2 521V516.6A5.3 5.3 0 0 1 209.8 516.6V521L211.0 522.2H198.0Z" fill="#73777A"/>
+<line x1="202.60" y1="524.60" x2="206.40" y2="524.60" stroke="#CDCFD1" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M209.6 555.6C210.7 557.6 209.3 560.6 204.4 560.6C203 560.6 202.3 560.4 201.6 560.1" fill="none" stroke="#CDCFD1" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M196 553C197.9 549.7 200 548.3 202.6 548.3C205.2 548.3 207.3 549.7 209.2 553C207.3 556.3 205.2 557.7 202.6 557.7C200 557.7 197.9 556.3 196 553Z" fill="#F7F7F7" stroke="#73777A" stroke-width="1.8"/>
+<circle cx="202.60" cy="553.00" r="2.1" fill="none" stroke="#73777A" stroke-width="1.4" />
+<circle cx="203.10" cy="552.50" r="0.8" fill="#73777A" />
+<text x="388.00" y="239.00" font-family="Inter, Arial, sans-serif" font-size="19.00" font-weight="600" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.2">Agent management</text>
+<rect x="388.00" y="264.00" width="218.00" height="44.00" rx="6" fill="#FFFFFF" stroke="#DCDCDC" stroke-width="1" filter="url(#sh_am_s036)"/>
+<text x="400" y="293" font-family="Inter, Arial, sans-serif" fill="#2C2E2F"><tspan font-size="14.5" font-weight="600">29</tspan><tspan font-size="9.5" font-weight="500" dx="4">Out of support</tspan></text>
+<rect x="573.00" y="275.00" width="22.00" height="22.00" rx="3" fill="#FBDCD5" />
+<circle cx="584.00" cy="286.00" r="6" fill="#D93B25" />
+<path d="M582 284L586 288M586 284L582 288" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="617.00" y="264.00" width="218.00" height="44.00" rx="6" fill="#FFFFFF" stroke="#DCDCDC" stroke-width="1" filter="url(#sh_am_s036)"/>
+<text x="629" y="293" font-family="Inter, Arial, sans-serif" fill="#2C2E2F"><tspan font-size="14.5" font-weight="600">36</tspan><tspan font-size="9.5" font-weight="500" dx="4">Out of date</tspan></text>
+<rect x="802.00" y="275.00" width="22.00" height="22.00" rx="3" fill="#FBF0C2" />
+<circle cx="813.00" cy="286.00" r="6" fill="#E8C21F" />
+<path d="M813 283.4V286.6" stroke="#5C4A00" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="813.00" cy="288.40" r="0.8" fill="#5C4A00" />
+<rect x="846.00" y="264.00" width="217.00" height="44.00" rx="6" fill="#FFFFFF" stroke="#DCDCDC" stroke-width="1" filter="url(#sh_am_s036)"/>
+<text x="858" y="293" font-family="Inter, Arial, sans-serif" fill="#2C2E2F"><tspan font-size="14.5" font-weight="600">132</tspan><tspan font-size="9.5" font-weight="500" dx="4">Normal</tspan></text>
+<rect x="1030.00" y="275.00" width="22.00" height="22.00" rx="3" fill="#DDF3D2" />
+<circle cx="1041.00" cy="286.00" r="6" fill="#3E9B2F" />
+<path d="M1038.6 286.1L1040.4 287.9L1043.5 284.4" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1074.00" y="264.00" width="218.00" height="44.00" rx="6" fill="#FFFFFF" stroke="#DCDCDC" stroke-width="1" filter="url(#sh_am_s036)"/>
+<text x="1086" y="293" font-family="Inter, Arial, sans-serif" fill="#2C2E2F"><tspan font-size="14.5" font-weight="600">62</tspan><tspan font-size="9.5" font-weight="500" dx="4">Disabled</tspan></text>
+<rect x="1259.00" y="275.00" width="22.00" height="22.00" rx="3" fill="#E4E4E4" />
+<circle cx="1270.00" cy="286.00" r="6" fill="#6B6E70" />
+<path d="M1267.4 286H1272.6" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="388.00" y="322.00" width="905.00" height="648.00" rx="8" fill="#FFFFFF" stroke="#E2E2E2" stroke-width="1" filter="url(#sh_am_s036)"/>
+<line x1="405.00" y1="364.00" x2="1272.00" y2="364.00" stroke="#E3E3E3" stroke-width="1" />
+<text x="407.00" y="356.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="600" fill="#1D69C4" text-anchor="start" >Agents</text>
+<rect x="449.00" y="345.00" width="28.00" height="14.00" rx="7" fill="#E6E6E6" />
+<text x="463.00" y="355.50" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="600" fill="#333" text-anchor="middle" >147</text>
+<rect x="405.00" y="361.50" width="71.00" height="2.50" rx="1" fill="#1D69C4" />
+<text x="497.00" y="356.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#444" text-anchor="start" >Saved tasks</text>
+<rect x="563.00" y="345.00" width="17.00" height="14.00" rx="7" fill="#E6E6E6" />
+<text x="571.50" y="355.50" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="600" fill="#333" text-anchor="middle" >2</text>
+<text x="601.00" y="356.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#444" text-anchor="start" >History</text>
+<text x="658.00" y="356.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#444" text-anchor="start" >Config management</text>
+<rect x="407.00" y="381.00" width="179.00" height="25.00" rx="4" fill="#fff" stroke="#8A8D8F" stroke-width="1.2" />
+<circle cx="421.00" cy="393.00" r="4" fill="none" stroke="#777" stroke-width="1.3" />
+<path d="M423.88 395.88L427.0 399.0" stroke="#777" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="432.00" y="397.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#8A8D8F" text-anchor="start" >Search</text>
+<rect x="594.00" y="381.00" width="58.00" height="25.00" rx="4" fill="#fff" stroke="#8A8D8F" stroke-width="1.2" />
+<text x="603.00" y="397.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#8A8D8F" text-anchor="start" >Type</text>
+<path d="M635 391.5L638 394.5L641 391.5" stroke="#666" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="660.00" y="381.00" width="88.00" height="25.00" rx="4" fill="#fff" stroke="#8A8D8F" stroke-width="1.2" />
+<text x="668.00" y="397.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#8A8D8F" text-anchor="start" >Application</text>
+<path d="M731 391.5L734 394.5L737 391.5" stroke="#666" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="762.00" y1="390.00" x2="773.00" y2="390.00" stroke="#1D69C4" stroke-width="1.4" />
+<line x1="764.00" y1="393.00" x2="771.00" y2="393.00" stroke="#1D69C4" stroke-width="1.4" />
+<line x1="766.00" y1="396.00" x2="769.00" y2="396.00" stroke="#1D69C4" stroke-width="1.4" />
+<text x="777.00" y="397.50" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="600" fill="#1D69C4" text-anchor="start" >Filters</text>
+<text x="822.00" y="397.50" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="400" fill="#555" text-anchor="start" >147 results</text>
+<rect x="1208.00" y="381.00" width="64.00" height="25.00" rx="4" fill="#1D69C4" />
+<path d="M1222 388.5V398.5M1217 393.5H1227" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1231.00" y="398.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="600" fill="#fff" text-anchor="start" >Install</text>
+<rect x="406.00" y="420.00" width="866.00" height="30.00" rx="4" fill="#E8F1FC" />
+<rect x="416.00" y="427.00" width="15.00" height="16.00" rx="3" fill="#1D69C4" />
+<text x="423.50" y="438.80" font-family="Inter, Arial, sans-serif" font-size="9.50" font-weight="600" fill="#fff" text-anchor="middle" >3</text>
+<text x="442.00" y="438.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="500" fill="#2C2E2F" text-anchor="start" >agents selected</text>
+<text x="537.00" y="438.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#1D69C4" text-anchor="start" >Select all</text>
+<text x="1005.00" y="438.80" font-family="Inter, Arial, sans-serif" font-size="9.50" font-weight="600" fill="#1D69C4" text-anchor="middle" >Cancel</text>
+<rect x="1032.70" y="425.70" width="79.60" height="18.60" rx="3.5" fill="#fff" stroke="#1D69C4" stroke-width="1.4" />
+<text x="1038.00" y="438.30" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="600" fill="#1D69C4" text-anchor="start" >More actions</text>
+<path d="M1101.9 433.7L1104.5 436.3L1107.1 433.7" stroke="#1D69C4" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1122.70" y="425.70" width="68.60" height="18.60" rx="3.5" fill="#fff" stroke="#1D69C4" stroke-width="1.4" />
+<path d="M1138.21 435.85L1136.74 436.84L1136.38 438.58L1134.63 438.24L1133.15 439.21L1132.16 437.74L1130.42 437.38L1130.76 435.63L1129.79 434.15L1131.26 433.16L1131.62 431.42L1133.37 431.76L1134.85 430.79L1135.84 432.26L1137.58 432.62L1137.24 434.37Z" stroke="#1D69C4" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1134.00" cy="435.00" r="1.462" fill="none" stroke="#1D69C4" stroke-width="1.1" />
+<text x="1142.00" y="438.30" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="600" fill="#1D69C4" text-anchor="start" >Configure</text>
+<rect x="1198.70" y="425.70" width="62.60" height="18.60" rx="3.5" fill="#fff" stroke="#1D69C4" stroke-width="1.4" />
+<path d="M1206 435.5V439.5H1214V435.5M1210 437V430.5M1207.5 433L1210 430.5L1212.5 433" stroke="#1D69C4" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1218.00" y="438.30" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="600" fill="#1D69C4" text-anchor="start" >Upgrade</text>
+<rect x="412.50" y="470.00" width="14.00" height="14.00" rx="2.5" fill="#1D69C4" />
+<path d="M415.9 477H423.1" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="440.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Status</text>
+<text x="486.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Name</text>
+<text x="626.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Type</text>
+<text x="684.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Version</text>
+<text x="740.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Host</text>
+<text x="828.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Application</text>
+<text x="901.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Tier</text>
+<text x="980.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Node</text>
+<text x="1059.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Monitoring</text>
+<text x="1169.00" y="482.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#222" text-anchor="start" >Architecture</text>
+<line x1="407.00" y1="491.50" x2="1272.00" y2="491.50" stroke="#5A5D60" stroke-width="1.6" />
+<rect x="407.00" y="492.50" width="865.00" height="27.00" rx="0" fill="#E8F1FC" />
+<rect x="412.50" y="499.00" width="14.00" height="14.00" rx="2.5" fill="#1D69C4" />
+<path d="M415.9 506.2L418.4 508.7L423.3 503.6" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="456.00" cy="506.00" r="5.2" fill="#D93B25" />
+<path d="M454 504.0L458 508.0M458 504.0L454 508.0" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="509.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="509.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="509.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >19.9.0</text>
+<text x="828.00" y="509.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Ecommerce</text>
+<text x="900.00" y="509.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >ecom_12</text>
+<text x="980.00" y="509.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JavaNode</text>
+<text x="1059.00" y="509.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="509.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="509.80" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="520.00" x2="1272.00" y2="520.00" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="527.40" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="533.90" r="5.2" fill="#E8C21F" />
+<path d="M456 531.3V534.5" stroke="#5C4A00" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="456.00" cy="536.30" r="0.8" fill="#5C4A00" />
+<text x="486.00" y="537.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="537.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="537.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >21.4.0</text>
+<text x="828.00" y="537.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Ecommerce</text>
+<text x="900.00" y="537.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >ecom_12</text>
+<text x="980.00" y="537.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JavaNode_2</text>
+<text x="1059.00" y="537.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Disabled</text>
+<text x="1168.00" y="537.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="537.70" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="547.90" x2="1272.00" y2="547.90" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="555.30" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="561.80" r="5.2" fill="#3E9B2F" />
+<path d="M453.6 561.9L455.4 563.6999999999999L458.5 560.1999999999999" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="565.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="565.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="565.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >23.3.0</text>
+<text x="828.00" y="565.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Ecommerce</text>
+<text x="900.00" y="565.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >ecom_12</text>
+<text x="980.00" y="565.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JavaNode_3</text>
+<text x="1059.00" y="565.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="565.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="565.60" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="575.80" x2="1272.00" y2="575.80" stroke="#E8E8E8" stroke-width="1" />
+<rect x="407.00" y="576.20" width="865.00" height="27.00" rx="0" fill="#E8F1FC" />
+<rect x="412.50" y="582.70" width="14.00" height="14.00" rx="2.5" fill="#1D69C4" />
+<path d="M415.9 589.9000000000001L418.4 592.4000000000001L423.3 587.3000000000001" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="456.00" cy="589.70" r="5.2" fill="#D93B25" />
+<path d="M454 587.7L458 591.7M458 587.7L454 591.7" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="593.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="593.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="593.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >19.9.0</text>
+<text x="828.00" y="593.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Ecommerce</text>
+<text x="900.00" y="593.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >ecom_12</text>
+<text x="980.00" y="593.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JavaNode_4</text>
+<text x="1059.00" y="593.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Disabled</text>
+<text x="1168.00" y="593.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="593.50" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="603.70" x2="1272.00" y2="603.70" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="611.10" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="617.60" r="5.2" fill="#E8C21F" />
+<path d="M456 615.0V618.2" stroke="#5C4A00" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="456.00" cy="620.00" r="0.8" fill="#5C4A00" />
+<text x="486.00" y="621.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="621.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="621.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >21.4.0</text>
+<text x="828.00" y="621.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Ecommerce</text>
+<text x="900.00" y="621.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >ecom_12</text>
+<text x="980.00" y="621.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >java_test1</text>
+<text x="1059.00" y="621.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="621.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="621.40" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="631.60" x2="1272.00" y2="631.60" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="639.00" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="645.50" r="5.2" fill="#3E9B2F" />
+<path d="M453.6 645.6L455.4 647.4L458.5 643.9" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="649.30" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="649.30" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="649.30" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >23.3.0</text>
+<text x="828.00" y="649.30" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Ecommerce</text>
+<text x="900.00" y="649.30" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >ecom_290</text>
+<text x="980.00" y="649.30" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >java_test2</text>
+<text x="1059.00" y="649.30" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="649.30" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="649.30" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="659.50" x2="1272.00" y2="659.50" stroke="#E8E8E8" stroke-width="1" />
+<rect x="407.00" y="659.90" width="865.00" height="27.00" rx="0" fill="#DCEAFB" />
+<rect x="412.50" y="666.40" width="14.00" height="14.00" rx="2.5" fill="#1D69C4" />
+<path d="M415.9 673.6L418.4 676.1L423.3 671.0" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="456.00" cy="673.40" r="5.2" fill="#D93B25" />
+<path d="M454 671.4L458 675.4M458 671.4L454 675.4" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="677.20" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="677.20" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="677.20" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >19.9.0</text>
+<text x="828.00" y="677.20" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Ecommerce</text>
+<text x="900.00" y="677.20" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >ecom_290</text>
+<text x="980.00" y="677.20" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >java_test3</text>
+<text x="1059.00" y="677.20" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="677.20" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="677.20" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="687.40" x2="1272.00" y2="687.40" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="694.80" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="701.30" r="5.2" fill="#E8C21F" />
+<path d="M456 698.6999999999999V701.9" stroke="#5C4A00" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="456.00" cy="703.70" r="0.8" fill="#5C4A00" />
+<text x="486.00" y="705.10" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="705.10" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="705.10" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >21.4.0</text>
+<text x="828.00" y="705.10" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Ecommerce</text>
+<text x="900.00" y="705.10" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >ecom_290</text>
+<text x="980.00" y="705.10" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >java_test4</text>
+<text x="1059.00" y="705.10" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Disabled</text>
+<text x="1168.00" y="705.10" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="705.10" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="715.30" x2="1272.00" y2="715.30" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="722.70" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="729.20" r="5.2" fill="#3E9B2F" />
+<path d="M453.6 729.3000000000001L455.4 731.1L458.5 727.6" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="733.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="733.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="733.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >23.3.0</text>
+<text x="828.00" y="733.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Sales_demo</text>
+<text x="900.00" y="733.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >tier_test</text>
+<text x="980.00" y="733.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >nd1_test</text>
+<text x="1059.00" y="733.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="733.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="733.00" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="743.20" x2="1272.00" y2="743.20" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="750.60" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="757.10" r="5.2" fill="#D93B25" />
+<path d="M454 755.1L458 759.1M458 755.1L454 759.1" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="760.90" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="760.90" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="760.90" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >19.9.0</text>
+<text x="828.00" y="760.90" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Sales_demo</text>
+<text x="900.00" y="760.90" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >tier_test</text>
+<text x="980.00" y="760.90" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >nd2_test</text>
+<text x="1059.00" y="760.90" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="760.90" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="760.90" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="771.10" x2="1272.00" y2="771.10" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="778.50" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="785.00" r="5.2" fill="#E8C21F" />
+<path d="M456 782.4V785.6" stroke="#5C4A00" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="456.00" cy="787.40" r="0.8" fill="#5C4A00" />
+<text x="486.00" y="788.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="788.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="788.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >21.4.0</text>
+<text x="828.00" y="788.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Sales_demo</text>
+<text x="900.00" y="788.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >tier_test</text>
+<text x="980.00" y="788.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >nd3_test</text>
+<text x="1059.00" y="788.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Disabled</text>
+<text x="1168.00" y="788.80" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="788.80" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="799.00" x2="1272.00" y2="799.00" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="806.40" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="812.90" r="5.2" fill="#3E9B2F" />
+<path d="M453.6 813.0L455.4 814.8L458.5 811.3" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="816.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="816.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="816.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >23.3.0</text>
+<text x="828.00" y="816.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Sales_demo</text>
+<text x="900.00" y="816.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >tier_test</text>
+<text x="980.00" y="816.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >nd4_test</text>
+<text x="1059.00" y="816.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Disabled</text>
+<text x="1168.00" y="816.70" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="816.70" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="826.90" x2="1272.00" y2="826.90" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="834.30" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="840.80" r="5.2" fill="#D93B25" />
+<path d="M454 838.8L458 842.8M458 838.8L454 842.8" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="844.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="844.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="844.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >19.9.0</text>
+<text x="828.00" y="844.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Sales_demo</text>
+<text x="900.00" y="844.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >tier_test</text>
+<text x="980.00" y="844.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >nd5_test</text>
+<text x="1059.00" y="844.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="844.60" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="844.60" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="854.80" x2="1272.00" y2="854.80" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="862.20" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="868.70" r="5.2" fill="#E8C21F" />
+<path d="M456 866.1V869.3000000000001" stroke="#5C4A00" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="456.00" cy="871.10" r="0.8" fill="#5C4A00" />
+<text x="486.00" y="872.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="872.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="872.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >21.4.0</text>
+<text x="828.00" y="872.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Sales_demo</text>
+<text x="900.00" y="872.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >tier_test</text>
+<text x="980.00" y="872.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >nd7_test</text>
+<text x="1059.00" y="872.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="872.50" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="872.50" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="882.70" x2="1272.00" y2="882.70" stroke="#E8E8E8" stroke-width="1" />
+<rect x="413.00" y="890.10" width="13.00" height="13.00" rx="2.5" fill="#fff" stroke="#666" stroke-width="1.3" />
+<circle cx="456.00" cy="896.60" r="5.2" fill="#3E9B2F" />
+<path d="M453.6 896.6999999999999L455.4 898.4999999999999L458.5 894.9999999999999" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="486.00" y="900.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Java Agent - JDK8+ JVM</text>
+<text x="628.00" y="900.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >JAVA</text>
+<text x="684.00" y="900.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >23.3.0</text>
+<text x="828.00" y="900.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Sales_demo</text>
+<text x="900.00" y="900.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >tier_test</text>
+<text x="980.00" y="900.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >fleetmgt1</text>
+<text x="1059.00" y="900.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Enabled</text>
+<text x="1168.00" y="900.40" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#2C2E2F" text-anchor="start" >Linux 64 bit</text>
+<text x="740.00" y="900.40" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.80" font-weight="400" fill="#2C2E2F" text-anchor="start" letter-spacing="-0.15">ip-10-0-0-1</text>
+<line x1="407.00" y1="910.60" x2="1272.00" y2="910.60" stroke="#E8E8E8" stroke-width="1" />
+<text x="985.00" y="949.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#333" text-anchor="start" >Rows per page</text>
+<rect x="1066.00" y="933.00" width="47.00" height="25.00" rx="4" fill="#fff" stroke="#8A8D8F" stroke-width="1.2" />
+<text x="1075.00" y="949.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#333" text-anchor="start" >15</text>
+<path d="M1095 943.5L1098 946.5L1101 943.5" stroke="#666" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1135.0 940L1130.0 945L1135.0 950" stroke="#666" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1149.50" y="935.50" width="19.50" height="19.50" rx="3" fill="#fff" stroke="#1D69C4" stroke-width="1.4" />
+<text x="1159.30" y="949.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="500" fill="#1D69C4" text-anchor="middle" >1</text>
+<text x="1183.50" y="949.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#333" text-anchor="middle" >2</text>
+<text x="1209.50" y="949.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#333" text-anchor="middle" >...</text>
+<text x="1236.00" y="949.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#333" text-anchor="middle" >10</text>
+<path d="M1260.0 940L1265.0 945L1260.0 950" stroke="#666" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="388.00" y1="999.50" x2="1592.00" y2="999.50" stroke="#DDDDDD" stroke-width="1" />
+<text x="388.00" y="1022.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#666" text-anchor="start" >Last login</text>
+<text x="388.00" y="1036.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="600" fill="#1D69C4" text-anchor="start" >about 2 hours ago</text>
+<text x="466.37" y="1036.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#444" text-anchor="start" >from your current IP address</text>
+<text x="1592.00" y="1022.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#666" text-anchor="end" >© 2023 Cisco Systems, Inc.</text>
+<text x="1592.00" y="1036.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="600" fill="#1D69C4" text-anchor="end" >Terms</text>
+<text x="1562.94" y="1036.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#666" text-anchor="end" >-</text>
+<text x="1555.99" y="1036.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="600" fill="#1D69C4" text-anchor="end" >Privacy</text>
+<rect x="1318.50" y="201.50" width="321.50" height="768.00" rx="0" fill="#FFFFFF" stroke="#E2E2E2" stroke-width="1" filter="url(#sh_am_s036)"/>
+<text x="1336.00" y="246.00" font-family="Inter, Arial, sans-serif" font-size="13.50" font-weight="600" fill="#2C2E2F" text-anchor="start" >Properties</text>
+<text x="1336.00" y="274.00" font-family="Inter, Arial, sans-serif" font-size="10.80" font-weight="600" fill="#2C2E2F" text-anchor="start" >JAVA agents (3)</text>
+<text x="1336.00" y="289.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >Controller Name: AppD21c</text>
+<text x="1336.00" y="304.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >Controller Version: 23.4</text>
+<text x="1336.00" y="319.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >Disk Size Requirement: 43 MB</text>
+<text x="1336.00" y="334.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >Latest Version Available: 23.2.3</text>
+<line x1="1336.00" y1="357.00" x2="1601.00" y2="357.00" stroke="#E3E3E3" stroke-width="1" />
+<text x="1336.00" y="393.00" font-family="Inter, Arial, sans-serif" font-size="13.50" font-weight="600" fill="#2C2E2F" text-anchor="start" >Upgrades available</text>
+<text x="1336.00" y="421.00" font-family="Inter, Arial, sans-serif" font-size="10.80" font-weight="600" fill="#2C2E2F" text-anchor="start" >.Net agent 24.9.0.11925</text>
+<text x="1336.00" y="436.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >An older version of .Net Agent is detected on your</text>
+<text x="1336.00" y="451.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >system. We recommend upgrading to the latest</text>
+<text x="1336.00" y="466.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >version.</text>
+<rect x="1336.70" y="484.70" width="66.10" height="18.10" rx="3.5" fill="#fff" stroke="#1D69C4" stroke-width="1.4" />
+<text x="1369.75" y="496.92" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="600" fill="#1D69C4" text-anchor="middle" >View agents</text>
+<text x="1413.00" y="497.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="600" fill="#1D69C4" text-anchor="start" >View release notes</text>
+<text x="1336.00" y="539.00" font-family="Inter, Arial, sans-serif" font-size="10.80" font-weight="600" fill="#2C2E2F" text-anchor="start" >JAVA agent 24.10.0.36431</text>
+<text x="1336.00" y="554.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >An older version of JAVA Agent is detected on your</text>
+<text x="1336.00" y="569.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >system. We recommend upgrading to the latest</text>
+<text x="1336.00" y="584.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >version.</text>
+<rect x="1336.70" y="602.70" width="66.10" height="18.10" rx="3.5" fill="#fff" stroke="#1D69C4" stroke-width="1.4" />
+<text x="1369.75" y="614.92" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="600" fill="#1D69C4" text-anchor="middle" >View agents</text>
+<text x="1413.00" y="615.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="600" fill="#1D69C4" text-anchor="start" >View release notes</text>
+<line x1="1336.00" y1="643.00" x2="1601.00" y2="643.00" stroke="#E3E3E3" stroke-width="1" />
+<text x="1336.00" y="686.00" font-family="Inter, Arial, sans-serif" font-size="13.50" font-weight="600" fill="#2C2E2F" text-anchor="start" >Restart pending</text>
+<text x="1336.00" y="714.00" font-family="Inter, Arial, sans-serif" font-size="10.80" font-weight="600" fill="#2C2E2F" text-anchor="start" >.Net agent 24.9.0.11925</text>
+<text x="1336.00" y="729.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >Recent configuration has been detected on your</text>
+<text x="1336.00" y="744.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >agents. We recommend restarting the agents for</text>
+<text x="1336.00" y="759.00" font-family="Inter, Arial, sans-serif" font-size="10.30" font-weight="400" fill="#555" text-anchor="start" >new configurations to take effect.</text>
+<rect x="1336.70" y="777.70" width="66.10" height="18.10" rx="3.5" fill="#fff" stroke="#1D69C4" stroke-width="1.4" />
+<text x="1369.75" y="789.92" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="600" fill="#1D69C4" text-anchor="middle" >View agents</text>
+<text x="1413.00" y="790.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="600" fill="#1D69C4" text-anchor="start" >View release notes</text>
+<line x1="1336.00" y1="820.00" x2="1601.00" y2="820.00" stroke="#E3E3E3" stroke-width="1" /></g></g></svg>

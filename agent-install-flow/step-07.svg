@@ -1,0 +1,444 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1457 955" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"><defs><clipPath id="win_dash"><rect width="1457" height="955" rx="10"/></clipPath></defs><g clip-path="url(#win_dash)"><g transform="translate(-171 -104)"><defs><linearGradient id="hdr_dash" x1="0" x2="1"><stop offset="0" stop-color="#33206C"/><stop offset="0.45" stop-color="#31205F"/><stop offset="1" stop-color="#2F2150"/></linearGradient><linearGradient id="swirl_dash" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1565D8"/><stop offset="1" stop-color="#3FC1F2"/></linearGradient><filter id="sh_dash" x="-5%" y="-10%" width="110%" height="130%"><feDropShadow dx="0" dy="1" stdDeviation="1.4" flood-color="#000" flood-opacity="0.08"/></filter></defs>
+<rect x="171.00" y="104.00" width="1457.00" height="955.00" rx="0" fill="#F7F7F7" />
+<rect x="171.00" y="104.00" width="1457.00" height="55.00" rx="0" fill="#FFFFFF" />
+<circle cx="198.00" cy="131.00" r="6" fill="#FF5F57" />
+<circle cx="219.00" cy="131.00" r="6" fill="#FEBC2E" />
+<circle cx="240.00" cy="131.00" r="6" fill="#28C840" />
+<rect x="274.00" y="124.00" width="19.00" height="14.00" rx="2" fill="none" stroke="#555" stroke-width="1.4" />
+<line x1="280.00" y1="124.00" x2="280.00" y2="138.00" stroke="#555" stroke-width="1.4" />
+<line x1="276.50" y1="128.00" x2="278.00" y2="128.00" stroke="#555" stroke-width="1" />
+<line x1="276.50" y1="131.00" x2="278.00" y2="131.00" stroke="#555" stroke-width="1" />
+<line x1="276.50" y1="134.00" x2="278.00" y2="134.00" stroke="#555" stroke-width="1" />
+<path d="M331 125L325 131L331 137" stroke="#444" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M358 125L364 131L358 137" stroke="#B0B0B0" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M625 123L632 125.5V131C632 135 629 138 625 139.5C621 138 618 135 618 131V125.5Z" stroke="#555" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M625 123L632 125.5V131C632 135 629 138 625 139.5Z" fill="#555"/>
+<rect x="652.00" y="117.00" width="495.00" height="29.00" rx="8" fill="#F2F2F2" />
+<rect x="723.08" y="129.00" width="8.00" height="7.00" rx="1.2" fill="#777" />
+<path d="M724.8753515625 129V127A2.2 2.2 0 0 1 729.2753515625001 127V129" stroke="#777" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="737.08" y="136.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="400" fill="#3A3A3A" text-anchor="start" >www.appdynamics.com/acme/applications/ecommerce-blr-01</text>
+<path d="M1139 131A5 5 0 1 1 1136.5 126.7" stroke="#666" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1135.5 124.3L1137 126.9L1134.2 127.6" stroke="#666" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1471.00" cy="131.00" r="8" fill="none" stroke="#555" stroke-width="1.4" />
+<path d="M1471 126.5V135M1467.5 131.7L1471 135.2L1474.5 131.7" stroke="#555" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1509 128H1507V139.5H1520V128H1518M1513.5 134V122M1510 125.5L1513.5 122L1517 125.5" stroke="#555" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1556 124V138M1549 131H1563" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="1590.00" y="126.00" width="13.00" height="13.00" rx="2.5" fill="none" stroke="#555" stroke-width="1.4" />
+<path d="M1593.5 126V123.5H1606.5V135.5H1603" stroke="#555" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="171.00" y="159.00" width="1457.00" height="42.00" rx="0" fill="url(#hdr_dash)" />
+<path transform="translate(187 166.4) scale(1.1667)" fill="#fff" d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.186 1.186 0 01-.806-.237 1.038 1.038 0 01-.352-.498 1.21 1.21 0 01-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 011.061.198l.024.013v-1.117l-.051-.014a2.862 2.862 0 00-1.011-.132 2.34 2.34 0 00-.903.206c-.287.132-.54.327-.739.571a2.221 2.221 0 00-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052l.082-.023M5.336 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.183 1.183 0 01-.806-.237 1.03 1.03 0 01-.351-.498 1.202 1.202 0 01-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 011.061.198l.024.013v-1.117l-.051-.014a2.862 2.862 0 00-1.011-.132 2.344 2.344 0 00-.903.206 2.08 2.08 0 00-.74.571 2.224 2.224 0 00-.041 2.705 2.11 2.11 0 001.176.756c.491.12 1.005.102 1.487-.052l.083-.023M9.26 17.249l-.004.957.07.012c.22.041.441.069.664.085.195.019.391.022.587.012.187-.014.372-.049.551-.104.21-.06.405-.163.571-.305a1.16 1.16 0 00.333-.478 1.31 1.31 0 00-.007-.96 1.068 1.068 0 00-.298-.414 1.261 1.261 0 00-.438-.255l-.722-.268a.388.388 0 01-.197-.188.245.245 0 01.008-.219.382.382 0 01.154-.142.798.798 0 01.257-.074c.153-.022.308-.021.46.005.18.02.358.051.533.096l.038.008v-.883l-.069-.015a4.749 4.749 0 00-.543-.097 2.844 2.844 0 00-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899.054.145.14.274.252.381.097.093.207.173.327.236.157.084.324.149.497.195.057.017.114.035.17.054l.085.031.024.01c.084.03.162.078.226.14.045.042.08.094.101.151a.325.325 0 01.001.161.339.339 0 01-.166.198.856.856 0 01-.275.086 2.032 2.032 0 01-.427.021 5.208 5.208 0 01-.557-.074 9.195 9.195 0 01-.287-.067l-.033-.006zm-2.475.995h1.05v-4.167h-1.05v4.167zm12.162-2.936a1.095 1.095 0 011.541.158 1.094 1.094 0 01-.157 1.541l-.017.014a1.096 1.096 0 01-1.367-1.713m-1.525.854a2.193 2.193 0 002.666 2.107 2.139 2.139 0 00.701-3.937 2.207 2.207 0 00-3.367 1.83M22.961 10.728a.52.52 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M20.117 10.728a.522.522 0 001.041 0V8.139a.521.521 0 00-1.04 0v2.589M17.231 11.771a.521.521 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M14.393 10.728a.521.521 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M11.494 10.728a.522.522 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155M8.624 10.728a.52.52 0 001.039 0V8.139a.52.52 0 00-1.039 0v2.589M5.737 11.771a.52.52 0 001.039 0V6.17a.52.52 0 00-1.039 0v5.601M2.876 10.728a.522.522 0 001.04 0V8.139a.52.52 0 00-1.039 0v2.589M0 10.728a.521.521 0 001.039 0V9.573a.52.52 0 00-1.039 0v1.155"/>
+<text x="223.00" y="185.50" font-family="Inter, Arial, sans-serif" font-size="14.00" font-weight="400" fill="#FFFFFF" text-anchor="start" >AppDynamics</text>
+<circle cx="1418.00" cy="179.00" r="5.5" fill="none" stroke="#fff" stroke-width="1.6" />
+<path d="M1421.96 182.96L1426.25 187.25" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1456.00" cy="181.00" r="7.5" fill="none" stroke="#fff" stroke-width="1.5" />
+<path d="M1453.8 179.1A2.3 2.3 0 1 1 1457.3 181C1456.4 181.5 1456 182 1456 183.1" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1456.00" cy="185.50" r="0.9" fill="#fff" />
+<line x1="1479.00" y1="171.00" x2="1479.00" y2="190.00" stroke="#8A86A8" stroke-width="1" />
+<circle cx="1501.00" cy="177.60" r="3.2" fill="none" stroke="#fff" stroke-width="1.4" />
+<path d="M1495.2 186.6C1495.2 182.6 1506.8 182.6 1506.8 186.6Z" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1515.00" y="185.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="600" fill="#fff" text-anchor="start" >masteradmin</text>
+<path d="M1598.5 179.5H1605.5L1602 183.5Z" fill="#fff"/>
+<line x1="197.00" y1="223.00" x2="211.00" y2="223.00" stroke="#555" stroke-width="1.4" />
+<line x1="197.00" y1="228.50" x2="211.00" y2="228.50" stroke="#555" stroke-width="1.4" />
+<line x1="197.00" y1="234.00" x2="211.00" y2="234.00" stroke="#555" stroke-width="1.4" />
+<rect x="183.00" y="251.00" width="186.00" height="28.00" rx="3" fill="#EDEDEF" />
+<rect x="183.00" y="251.00" width="3.00" height="28.00" rx="1.2" fill="#6D5CE6" />
+<text x="225.00" y="269.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="600" fill="#1E1F20" text-anchor="start" >Application Dashboard</text>
+<text x="225.00" y="305.10" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Business Transactions</text>
+<text x="225.00" y="341.20" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Data Pipelines</text>
+<text x="225.00" y="377.30" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Service Endpoints</text>
+<text x="225.00" y="413.40" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Tiers &amp; Nodes</text>
+<text x="225.00" y="449.50" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Servers</text>
+<text x="225.00" y="485.60" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Containers</text>
+<text x="225.00" y="521.70" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Database Calls</text>
+<text x="225.00" y="557.80" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Remote Services</text>
+<text x="225.00" y="593.90" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Troubleshoot</text>
+<text x="225.00" y="630.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >More</text>
+<text x="225.00" y="680.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Alert &amp; Respond</text>
+<text x="225.00" y="716.10" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Metric Browser</text>
+<text x="225.00" y="752.20" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="500" fill="#3A3D40" text-anchor="start" >Configuration</text>
+<path d="M352.75 585.4000000000001L357.25 589.9000000000001L352.75 594.4000000000001" stroke="#444" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M352.75 621.5L357.25 626.0L352.75 630.5" stroke="#444" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="183.00" y1="651.00" x2="369.00" y2="651.00" stroke="#E1E1E1" stroke-width="1" />
+<g transform="translate(-4.5 -132.00)">
+<rect x="201.00" y="390.00" width="17.00" height="14.00" rx="2" fill="#8C78F0" />
+<rect x="201.00" y="390.00" width="17.00" height="3.50" rx="1.5" fill="#5B46D6" />
+<line x1="206.00" y1="396.80" x2="215.00" y2="396.80" stroke="#fff" stroke-width="1.3" />
+<circle cx="203.50" cy="396.80" r="0.8" fill="#fff" />
+<line x1="206.00" y1="400.60" x2="215.00" y2="400.60" stroke="#fff" stroke-width="1.3" />
+<circle cx="203.50" cy="400.60" r="0.8" fill="#fff" />
+</g>
+<g transform="translate(-4.5 -132.90)">
+<path d="M202 431H215M212 428L215 431L212 434M216 437H203M206 434L203 437L206 440" stroke="#7A7E81" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<g transform="translate(-4.5 -133.80)">
+<rect x="204.00" y="464.00" width="10.00" height="6.00" rx="1" fill="#7A7E81" />
+<path d="M209 470V473M204 477L209 473L214 477" stroke="#A6A8AC" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="204.00" cy="477.00" r="1.4" fill="#A6A8AC" />
+<circle cx="214.00" cy="477.00" r="1.4" fill="#A6A8AC" />
+</g>
+<g transform="translate(-4.5 -134.70)">
+<circle cx="209.00" cy="502.00" r="1.6" fill="#7A7E81" />
+<path d="M209 503.5V508M203 510V508H215V510M209 508V510" stroke="#A6A8AC" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="201.20" y="511.00" width="3.60" height="3.60" rx="0.5" fill="#7A7E81" />
+<rect x="207.20" y="511.00" width="3.60" height="3.60" rx="0.5" fill="#7A7E81" />
+<rect x="213.20" y="511.00" width="3.60" height="3.60" rx="0.5" fill="#7A7E81" />
+</g>
+<g transform="translate(-4.5 -135.60)">
+<path d="M209 540L203 550H215Z" stroke="#7A7E81" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="209.00" cy="540.00" r="1.6" fill="#7A7E81" />
+<circle cx="203.00" cy="550.00" r="1.6" fill="#7A7E81" />
+<circle cx="215.00" cy="550.00" r="1.6" fill="#A6A8AC" />
+</g>
+<g transform="translate(-4.5 -137.50)">
+<rect x="202.00" y="577.00" width="14.00" height="3.60" rx="0.6" fill="#7A7E81" />
+<rect x="202.00" y="581.50" width="14.00" height="3.60" rx="0.6" fill="#A6A8AC" />
+<rect x="202.00" y="586.00" width="14.00" height="3.60" rx="0.6" fill="#CDCFD1" />
+</g>
+<g transform="translate(-4.5 -138.40)">
+<path d="M209 612.8l3.4 2v4l-3.4 2-3.4-2v-4z" fill="#7A7E81"/>
+<path d="M205 618.8l3.4 2v4l-3.4 2-3.4-2v-4z" fill="#A6A8AC"/>
+<path d="M213 618.8l3.4 2v4l-3.4 2-3.4-2v-4z" fill="#7A7E81"/>
+<path d="M209 620.8l3.4 2v4l-3.4 2-3.4-2v-4z" fill="#CDCFD1"/>
+</g>
+<g transform="translate(-4.5 -139.30)">
+<ellipse cx="209" cy="662.6" rx="7" ry="2.4" fill="#A6A8AC"/>
+<rect x="202.00" y="659.40" width="14.00" height="3.20" rx="0" fill="#A6A8AC" />
+<ellipse cx="209" cy="659.4" rx="7" ry="2.4" fill="#7A7E81" stroke="#F7F7F7" stroke-width="0.6"/>
+<ellipse cx="209" cy="658.6" rx="7" ry="2.4" fill="#A6A8AC"/>
+<rect x="202.00" y="655.40" width="14.00" height="3.20" rx="0" fill="#A6A8AC" />
+<ellipse cx="209" cy="655.4" rx="7" ry="2.4" fill="#7A7E81" stroke="#F7F7F7" stroke-width="0.6"/>
+<ellipse cx="209" cy="654.6" rx="7" ry="2.4" fill="#A6A8AC"/>
+<rect x="202.00" y="651.40" width="14.00" height="3.20" rx="0" fill="#A6A8AC" />
+<ellipse cx="209" cy="651.4" rx="7" ry="2.4" fill="#7A7E81" stroke="#F7F7F7" stroke-width="0.6"/>
+</g>
+<g transform="translate(-4.5 -140.20)">
+<circle cx="209.00" cy="691.00" r="1.4" fill="#7A7E81" />
+<path d="M206.30 688.62A3.6 3.6 0 0 0 206.30 693.38M211.70 688.62A3.6 3.6 0 0 1 211.70 693.38" fill="none" stroke="#A6A8AC" stroke-width="1.1"/>
+<path d="M204.50 687.04A6 6 0 0 0 204.50 694.96M213.50 687.04A6 6 0 0 1 213.50 694.96" fill="none" stroke="#A6A8AC" stroke-width="1.1"/>
+<rect x="202.00" y="697.50" width="14.00" height="3.00" rx="0.8" fill="#7A7E81" />
+</g>
+<g transform="translate(-4.5 -141.10)">
+<circle cx="208.00" cy="730.00" r="5.2" fill="none" stroke="#7A7E81" stroke-width="1.4" />
+<path d="M211.8 733.8L215.5 737.5" stroke="#7A7E81" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M204 730H206L207 728L209 732.5L210 730H212" stroke="#A6A8AC" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<g transform="translate(-4.5 -142.00)">
+<circle cx="209.00" cy="763.00" r="1.3" fill="#555" />
+<circle cx="209.00" cy="768.00" r="1.3" fill="#555" />
+<circle cx="209.00" cy="773.00" r="1.3" fill="#555" />
+</g>
+<g transform="translate(-4.5 -144.00)">
+<path d="M203.7 823V818.6A5.3 5.3 0 0 1 214.3 818.6V823L215.5 824.2H202.5Z" fill="#7A7E81"/>
+<line x1="207.10" y1="826.60" x2="210.90" y2="826.60" stroke="#CDCFD1" stroke-width="1.2" stroke-linecap="round"/>
+</g>
+<g transform="translate(-4.5 -144.90)">
+<line x1="203.50" y1="853.00" x2="203.50" y2="862.00" stroke="#CDCFD1" stroke-width="1.9" stroke-linecap="round"/>
+<line x1="207.20" y1="849.00" x2="207.20" y2="862.00" stroke="#7A7E81" stroke-width="1.9" stroke-linecap="round"/>
+<line x1="210.80" y1="851.00" x2="210.80" y2="862.00" stroke="#A6A8AC" stroke-width="1.9" stroke-linecap="round"/>
+<line x1="214.50" y1="847.00" x2="214.50" y2="862.00" stroke="#7A7E81" stroke-width="1.9" stroke-linecap="round"/>
+</g>
+<g transform="translate(-4.5 -145.80)">
+<path d="M214 887.5A4 4 0 0 0 210.2 893.2L203.4 900L205.5 902L212.2 895.2A4 4 0 0 0 217.8 891.4L215 894.2L212.6 891.8Z" stroke="#7A7E81" stroke-width="1.2" fill="#7A7E81" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="407.00" y="228.00" font-family="Inter, Arial, sans-serif" font-size="15.00" font-weight="500" fill="#1E1F20" text-anchor="start" >eCommerce-BLR-01</text>
+<path d="M559.1390625 220.5L563.1390625 224.5L567.1390625 220.5" stroke="#444" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1363.5 218.5A6.5 6.5 0 1 0 1364 228" stroke="#555" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1361 214.5L1364 218.6L1359.8 219.8" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1393.00" y="227.00" font-family="Inter, Arial, sans-serif" font-size="10.00" font-weight="600" fill="#1E1F20" text-anchor="start" >Baseline...</text>
+<path d="M1453.6 221.8L1457 225.2L1460.4 221.8" stroke="#444" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="1506.00" cy="223.00" r="7" fill="none" stroke="#555" stroke-width="1.4" />
+<path d="M1506 219V223.4L1509 225.4" stroke="#555" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1523.00" y="227.00" font-family="Inter, Arial, sans-serif" font-size="11.00" font-weight="600" fill="#1E1F20" text-anchor="start" >Last 5 Minutes</text>
+<line x1="408.00" y1="282.00" x2="1608.00" y2="282.00" stroke="#E0E0E0" stroke-width="1.2" />
+<text x="429.00" y="268.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#1E1F20" text-anchor="start" >Dashboard</text>
+<text x="514.00" y="268.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Network Dashboard</text>
+<text x="641.00" y="268.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Events</text>
+<text x="704.00" y="268.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Top Business Transactions</text>
+<text x="866.00" y="268.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Transaction Snapshots</text>
+<text x="1008.00" y="268.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Transaction Score</text>
+<rect x="428.00" y="279.50" width="57.00" height="3.00" rx="1" fill="#6B45D8" />
+<text x="1525.00" y="266.00" font-family="Inter, Arial, sans-serif" font-size="9.50" font-weight="500" fill="#1E1F20" text-anchor="start" >Actions</text>
+<path d="M1572.6 260.8L1576 264.2L1579.4 260.8" stroke="#444" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="409.50" y="301.50" width="1198.00" height="758.50" rx="4" fill="#fff" stroke="#E2E2E2" stroke-width="1" />
+<line x1="1355.00" y1="302.00" x2="1355.00" y2="912.00" stroke="#E3E3E3" stroke-width="1" />
+<line x1="410.00" y1="912.00" x2="1607.00" y2="912.00" stroke="#E3E3E3" stroke-width="1" />
+<line x1="808.00" y1="912.00" x2="808.00" y2="1060.00" stroke="#E3E3E3" stroke-width="1" />
+<line x1="1208.00" y1="912.00" x2="1208.00" y2="1060.00" stroke="#E3E3E3" stroke-width="1" />
+<text x="417.00" y="321.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Application Flow Map</text>
+<path d="M529.6 315.8L533 319.2L536.4 315.8" stroke="#444" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1189.00" y="321.00" font-family="Inter, Arial, sans-serif" font-size="10.00" font-weight="600" fill="#1D69C4" text-anchor="end" >Legend</text>
+<rect x="1204.00" y="307.00" width="20.00" height="20.00" rx="2" fill="#1A73E8" />
+<path d="M1209 312H1213M1209 312V316M1219 322H1215M1219 322V318M1210 313L1218 321" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1229 311.5H1235M1232 311.5V323.5H1243M1232 317.5H1243M1237 311.5H1243" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="1251.00" y1="309.00" x2="1251.00" y2="325.00" stroke="#DDD" stroke-width="1" />
+<circle cx="1266.00" cy="316.00" r="5" fill="none" stroke="#555" stroke-width="1.5" />
+<circle cx="1271.00" cy="322.00" r="3" fill="#555" />
+<circle cx="1285.00" cy="313.00" r="2.4" fill="#555" />
+<circle cx="1291.00" cy="313.00" r="2.4" fill="#555" />
+<circle cx="1285.00" cy="319.00" r="2.4" fill="#555" />
+<circle cx="1291.00" cy="319.00" r="2.4" fill="#555" />
+<rect x="1302.00" y="319.00" width="4.00" height="4.00" rx="0.5" fill="#555" />
+<rect x="1307.00" y="314.00" width="4.00" height="4.00" rx="0.5" fill="#555" />
+<rect x="1307.00" y="319.00" width="4.00" height="4.00" rx="0.5" fill="#555" />
+<rect x="1312.00" y="309.00" width="4.00" height="4.00" rx="0.5" fill="#555" />
+<line x1="1326.00" y1="309.00" x2="1326.00" y2="325.00" stroke="#DDD" stroke-width="1" />
+<path d="M1334 313V310H1337M1342 310H1345V313M1345 319V322H1342M1337 322H1334V319" stroke="#555" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="421.00" y="348.00" width="6.00" height="167.00" rx="3" fill="#EFEFEF" />
+<circle cx="424.00" cy="478.00" r="4.6" fill="#B9BCBF" />
+<text x="1346.00" y="898.00" font-family="Inter, Arial, sans-serif" font-size="9.50" font-weight="400" fill="#1D69C4" text-anchor="end" >Not comparing against Baseline data</text>
+<line x1="605.76" y1="467.04" x2="814.24" y2="587.96" stroke="#1D4FA6" stroke-width="1.3" />
+<path d="M669.32 503.91L657.80 501.85L661.82 494.93Z" fill="#1D4FA6"/>
+<path d="M815.10 588.46L803.58 586.40L807.60 579.48Z" fill="#1D4FA6"/>
+<text x="722.00" y="512.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="start" >8.42k calls / min, 18 ms</text>
+<text x="722.00" y="522.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="start" >HTTP</text>
+<line x1="605.76" y1="732.96" x2="814.24" y2="612.04" stroke="#1D4FA6" stroke-width="1.3" />
+<path d="M669.32 696.09L661.82 705.07L657.80 698.15Z" fill="#1D4FA6"/>
+<path d="M815.10 611.54L807.60 620.52L803.58 613.60Z" fill="#1D4FA6"/>
+<text x="722.00" y="690.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="start" >6.24k calls / min, 22 ms</text>
+<text x="722.00" y="700.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="start" >HTTP</text>
+<line x1="855.09" y1="586.88" x2="1059.91" y2="453.12" stroke="#1D4FA6" stroke-width="1.3" />
+<path d="M917.47 546.15L910.44 555.51L906.07 548.81Z" fill="#1D4FA6"/>
+<path d="M1060.74 452.58L1053.72 461.94L1049.35 455.24Z" fill="#1D4FA6"/>
+<text x="950.00" y="505.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="end" >3.10k calls / min, 9 ms</text>
+<text x="950.00" y="515.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="end" >HTTP</text>
+<line x1="859.00" y1="600.00" x2="1056.00" y2="600.00" stroke="#1D4FA6" stroke-width="1.3" />
+<path d="M920.16 600.00L909.16 604.00L909.16 596.00Z" fill="#1D4FA6"/>
+<path d="M1057.00 600.00L1046.00 604.00L1046.00 596.00Z" fill="#1D4FA6"/>
+<text x="958.00" y="582.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >2.86k calls / min, 41 ms</text>
+<text x="958.00" y="592.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >HTTP</text>
+<line x1="855.09" y1="613.12" x2="1059.91" y2="746.88" stroke="#1D4FA6" stroke-width="1.3" />
+<path d="M917.47 653.85L906.07 651.19L910.44 644.49Z" fill="#1D4FA6"/>
+<path d="M1060.74 747.42L1049.35 744.76L1053.72 738.06Z" fill="#1D4FA6"/>
+<text x="950.00" y="700.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="end" >4.02k calls / min, 15 ms</text>
+<text x="950.00" y="710.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="end" >HTTP</text>
+<line x1="835.00" y1="624.00" x2="835.00" y2="797.00" stroke="#1D4FA6" stroke-width="1.3" />
+<path d="M835.00 678.44L831.00 667.44L839.00 667.44Z" fill="#1D4FA6"/>
+<path d="M835.00 798.00L831.00 787.00L839.00 787.00Z" fill="#1D4FA6"/>
+<text x="845.00" y="745.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="start" >12.76k calls / min, NaN</text>
+<text x="845.00" y="755.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="start" >HTTP</text>
+<line x1="1104.00" y1="440.00" x2="1237.00" y2="440.00" stroke="#1D4FA6" stroke-width="1.3" />
+<path d="M1147.24 440.00L1136.24 444.00L1136.24 436.00Z" fill="#1D4FA6"/>
+<path d="M1238.00 440.00L1227.00 444.00L1227.00 436.00Z" fill="#1D4FA6"/>
+<text x="1167.00" y="424.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >3.08k calls / min</text>
+<text x="1167.00" y="434.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >2 ms</text>
+<line x1="1104.00" y1="600.00" x2="1237.00" y2="600.00" stroke="#1D4FA6" stroke-width="1.3" />
+<path d="M1147.24 600.00L1136.24 604.00L1136.24 596.00Z" fill="#1D4FA6"/>
+<path d="M1238.00 600.00L1227.00 604.00L1227.00 596.00Z" fill="#1D4FA6"/>
+<text x="1167.00" y="584.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >2.71k calls / min</text>
+<text x="1167.00" y="594.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >28 ms</text>
+<line x1="1104.00" y1="760.00" x2="1237.00" y2="760.00" stroke="#1D4FA6" stroke-width="1.3" />
+<path d="M1147.24 760.00L1136.24 764.00L1136.24 756.00Z" fill="#1D4FA6"/>
+<path d="M1238.00 760.00L1227.00 764.00L1227.00 756.00Z" fill="#1D4FA6"/>
+<text x="1167.00" y="744.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >3.95k calls / min</text>
+<text x="1167.00" y="754.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >4 ms</text>
+<path d="M824 580C819 556 851 556 846 580" stroke="#1D4FA6" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M842.00 562.00L831.00 566.00L831.00 558.00Z" fill="#1D4FA6"/>
+<text x="835.00" y="541.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >1.9k calls / min, NaN</text>
+<text x="835.00" y="551.50" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="middle" >HTTP</text>
+<circle cx="585.00" cy="455.00" r="19" fill="none" stroke="#22C77A" stroke-width="7" />
+<circle cx="585.00" cy="455.00" r="15.5" fill="#fff" />
+<text x="585.00" y="457.00" font-family="Inter, Arial, sans-serif" font-size="13.00" font-weight="400" fill="#1E1F20" text-anchor="middle" >4</text>
+<text x="585.00" y="465.00" font-family="Inter, Arial, sans-serif" font-size="6.40" font-weight="500" fill="#1E1F20" text-anchor="middle" >Nodes</text>
+<circle cx="562.00" cy="469.00" r="8" fill="#E76F00" />
+<circle cx="562.00" cy="469.00" r="8" fill="none" stroke="#fff" stroke-width="1.2" />
+<text x="562.00" y="472.00" font-family="Inter, Arial, sans-serif" font-size="7.20" font-weight="700" fill="#fff" text-anchor="middle" >J</text>
+<text x="585.00" y="491.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >web-storefront</text>
+<circle cx="585.00" cy="745.00" r="19" fill="none" stroke="#22C77A" stroke-width="7" />
+<circle cx="585.00" cy="745.00" r="15.5" fill="#fff" />
+<text x="585.00" y="747.00" font-family="Inter, Arial, sans-serif" font-size="13.00" font-weight="400" fill="#1E1F20" text-anchor="middle" >3</text>
+<text x="585.00" y="755.00" font-family="Inter, Arial, sans-serif" font-size="6.40" font-weight="500" fill="#1E1F20" text-anchor="middle" >Nodes</text>
+<circle cx="562.00" cy="759.00" r="8" fill="#3E8A3A" />
+<circle cx="562.00" cy="759.00" r="8" fill="none" stroke="#fff" stroke-width="1.2" />
+<text x="562.00" y="762.00" font-family="Inter, Arial, sans-serif" font-size="7.20" font-weight="700" fill="#fff" text-anchor="middle" >N</text>
+<text x="585.00" y="781.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >mobile-bff</text>
+<circle cx="835.00" cy="600.00" r="19" fill="none" stroke="#22C77A" stroke-width="7" />
+<circle cx="835.00" cy="600.00" r="15.5" fill="#fff" />
+<text x="835.00" y="602.00" font-family="Inter, Arial, sans-serif" font-size="13.00" font-weight="400" fill="#1E1F20" text-anchor="middle" >9</text>
+<text x="835.00" y="610.00" font-family="Inter, Arial, sans-serif" font-size="6.40" font-weight="500" fill="#1E1F20" text-anchor="middle" >Nodes</text>
+<circle cx="812.00" cy="614.00" r="8" fill="#F07E26" />
+<circle cx="812.00" cy="614.00" r="8" fill="none" stroke="#fff" stroke-width="1.2" />
+<text x="812.00" y="617.00" font-family="Inter, Arial, sans-serif" font-size="7.20" font-weight="700" fill="#fff" text-anchor="middle" >C+</text>
+<text x="835.00" y="636.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >api-gateway-data-pane</text>
+<text x="794.00" y="590.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="end" >14.66k calls / min</text>
+<text x="794.00" y="600.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="end" >12 ms</text>
+<text x="794.00" y="610.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#1D4FA6" text-anchor="end" >8.10k errors / min</text>
+<circle cx="1080.00" cy="440.00" r="19" fill="none" stroke="#22C77A" stroke-width="7" />
+<circle cx="1080.00" cy="440.00" r="15.5" fill="#fff" />
+<text x="1080.00" y="442.00" font-family="Inter, Arial, sans-serif" font-size="13.00" font-weight="400" fill="#1E1F20" text-anchor="middle" >2</text>
+<text x="1080.00" y="450.00" font-family="Inter, Arial, sans-serif" font-size="6.40" font-weight="500" fill="#1E1F20" text-anchor="middle" >Nodes</text>
+<circle cx="1057.00" cy="454.00" r="8" fill="#E76F00" />
+<circle cx="1057.00" cy="454.00" r="8" fill="none" stroke="#fff" stroke-width="1.2" />
+<text x="1057.00" y="457.00" font-family="Inter, Arial, sans-serif" font-size="7.20" font-weight="700" fill="#fff" text-anchor="middle" >J</text>
+<text x="1080.00" y="476.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >auth-service</text>
+<circle cx="1080.00" cy="600.00" r="19" fill="none" stroke="#22C77A" stroke-width="7" />
+<circle cx="1080" cy="600" r="19" fill="none" stroke="#F5B700" stroke-width="7" stroke-dasharray="33.43 119.38" transform="rotate(-90 1080 600)"/>
+<circle cx="1080.00" cy="600.00" r="15.5" fill="#fff" />
+<text x="1080.00" y="602.00" font-family="Inter, Arial, sans-serif" font-size="13.00" font-weight="400" fill="#1E1F20" text-anchor="middle" >3</text>
+<text x="1080.00" y="610.00" font-family="Inter, Arial, sans-serif" font-size="6.40" font-weight="500" fill="#1E1F20" text-anchor="middle" >Nodes</text>
+<circle cx="1057.00" cy="614.00" r="8" fill="#E76F00" />
+<circle cx="1057.00" cy="614.00" r="8" fill="none" stroke="#fff" stroke-width="1.2" />
+<text x="1057.00" y="617.00" font-family="Inter, Arial, sans-serif" font-size="7.20" font-weight="700" fill="#fff" text-anchor="middle" >J</text>
+<text x="1080.00" y="636.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >payments-service</text>
+<circle cx="1080.00" cy="760.00" r="19" fill="none" stroke="#22C77A" stroke-width="7" />
+<circle cx="1080" cy="760" r="19" fill="none" stroke="#E8202A" stroke-width="7" stroke-dasharray="14.33 119.38" transform="rotate(-90 1080 760)"/>
+<circle cx="1080.00" cy="760.00" r="15.5" fill="#fff" />
+<text x="1080.00" y="762.00" font-family="Inter, Arial, sans-serif" font-size="13.00" font-weight="400" fill="#1E1F20" text-anchor="middle" >2</text>
+<text x="1080.00" y="770.00" font-family="Inter, Arial, sans-serif" font-size="6.40" font-weight="500" fill="#1E1F20" text-anchor="middle" >Nodes</text>
+<circle cx="1057.00" cy="774.00" r="8" fill="#3B6A9A" />
+<circle cx="1057.00" cy="774.00" r="8" fill="none" stroke="#fff" stroke-width="1.2" />
+<text x="1057.00" y="777.00" font-family="Inter, Arial, sans-serif" font-size="7.20" font-weight="700" fill="#fff" text-anchor="middle" >Py</text>
+<text x="1080.00" y="796.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >inventory-service</text>
+<ellipse cx="1255" cy="448.4" rx="12" ry="4" fill="#5F6366"/>
+<rect x="1243.00" y="443.60" width="24.00" height="4.80" rx="0" fill="#5F6366" />
+<ellipse cx="1255" cy="443.6" rx="12" ry="4" fill="#7D8184" stroke="#fff" stroke-width="0.8"/>
+<ellipse cx="1255" cy="442.4" rx="12" ry="4" fill="#5F6366"/>
+<rect x="1243.00" y="437.60" width="24.00" height="4.80" rx="0" fill="#5F6366" />
+<ellipse cx="1255" cy="437.6" rx="12" ry="4" fill="#7D8184" stroke="#fff" stroke-width="0.8"/>
+<ellipse cx="1255" cy="436.4" rx="12" ry="4" fill="#5F6366"/>
+<rect x="1243.00" y="431.60" width="24.00" height="4.80" rx="0" fill="#5F6366" />
+<ellipse cx="1255" cy="431.6" rx="12" ry="4" fill="#7D8184" stroke="#fff" stroke-width="0.8"/>
+<text x="1255.00" y="467.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >sessions-cache</text>
+<text x="1255.00" y="477.50" font-family="Inter, Arial, sans-serif" font-size="7.60" font-weight="400" fill="#777" text-anchor="middle" >Redis</text>
+<ellipse cx="1255" cy="608.4" rx="12" ry="4" fill="#5F6366"/>
+<rect x="1243.00" y="603.60" width="24.00" height="4.80" rx="0" fill="#5F6366" />
+<ellipse cx="1255" cy="603.6" rx="12" ry="4" fill="#7D8184" stroke="#fff" stroke-width="0.8"/>
+<ellipse cx="1255" cy="602.4" rx="12" ry="4" fill="#5F6366"/>
+<rect x="1243.00" y="597.60" width="24.00" height="4.80" rx="0" fill="#5F6366" />
+<ellipse cx="1255" cy="597.6" rx="12" ry="4" fill="#7D8184" stroke="#fff" stroke-width="0.8"/>
+<ellipse cx="1255" cy="596.4" rx="12" ry="4" fill="#5F6366"/>
+<rect x="1243.00" y="591.60" width="24.00" height="4.80" rx="0" fill="#5F6366" />
+<ellipse cx="1255" cy="591.6" rx="12" ry="4" fill="#7D8184" stroke="#fff" stroke-width="0.8"/>
+<text x="1255.00" y="627.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >payments-db</text>
+<text x="1255.00" y="637.50" font-family="Inter, Arial, sans-serif" font-size="7.60" font-weight="400" fill="#777" text-anchor="middle" >MySQL</text>
+<rect x="1241.00" y="751.00" width="28.00" height="18.00" rx="3" fill="#6F6F6F" />
+<rect x="1245.00" y="755.00" width="3.60" height="10.00" rx="0.8" fill="#fff" />
+<rect x="1250.40" y="755.00" width="3.60" height="10.00" rx="0.8" fill="#fff" />
+<rect x="1255.80" y="755.00" width="3.60" height="10.00" rx="0.8" fill="#fff" />
+<rect x="1261.20" y="755.00" width="3.60" height="10.00" rx="0.8" fill="#B9BCBF" />
+<text x="1255.00" y="787.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >order-events</text>
+<text x="1255.00" y="797.50" font-family="Inter, Arial, sans-serif" font-size="7.60" font-weight="400" fill="#777" text-anchor="middle" >Kafka</text>
+<path d="M821 822A6 6 0 0 1 823 811A8 8 0 0 1 837 807A7 7 0 0 1 847 813A5.5 5.5 0 0 1 848 822Z" fill="#6F6F6F"/>
+<text x="835.00" y="819.60" font-family="Inter, Arial, sans-serif" font-size="6.20" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.3">HTTP</text>
+<text x="835.00" y="842.00" font-family="Inter, Arial, sans-serif" font-size="8.80" font-weight="500" fill="#1E1F20" text-anchor="middle" >9 HTTP backends</text>
+<rect x="1355.50" y="302.00" width="251.50" height="35.00" rx="0" fill="#FAFAFA" />
+<line x1="1355.50" y1="337.00" x2="1607.00" y2="337.00" stroke="#E3E3E3" stroke-width="1" />
+<text x="1365.00" y="324.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="600" fill="#1E1F20" text-anchor="start" >Metrics</text>
+<rect x="1365.00" y="334.50" width="38.00" height="3.00" rx="1" fill="#6B45D8" />
+<text x="1433.00" y="324.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Correlations</text>
+<text x="1365.00" y="359.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="400" fill="#1A5FB4" text-anchor="start" >Events</text>
+<text x="1365.00" y="377.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="start" >No Events in selected time range</text>
+<line x1="1356.00" y1="388.00" x2="1607.00" y2="388.00" stroke="#E8E8E8" stroke-width="1" />
+<line x1="1356.00" y1="448.00" x2="1607.00" y2="448.00" stroke="#E8E8E8" stroke-width="1" />
+<line x1="1356.00" y1="508.00" x2="1607.00" y2="508.00" stroke="#E8E8E8" stroke-width="1" />
+<line x1="1356.00" y1="568.00" x2="1607.00" y2="568.00" stroke="#E8E8E8" stroke-width="1" />
+<text x="1365.00" y="405.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="400" fill="#1A5FB4" text-anchor="start" >Business Transaction Health</text>
+<rect x="1365.00" y="419.00" width="232.00" height="4.50" rx="2.2" fill="#22C55E" />
+<rect x="1365.00" y="419.00" width="6.00" height="4.50" rx="2" fill="#E8202A" />
+<text x="1365.00" y="436.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="start" >1 critical, 0 warning, 48 normal</text>
+<text x="1365.00" y="465.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="400" fill="#1A5FB4" text-anchor="start" >Node Health</text>
+<rect x="1365.00" y="479.00" width="232.00" height="4.50" rx="2.2" fill="#22C55E" />
+<text x="1365.00" y="496.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="start" >0 critical, 0 warning, 9 normal</text>
+<text x="1365.00" y="525.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="400" fill="#1A5FB4" text-anchor="start" >Server Health</text>
+<rect x="1365.00" y="539.00" width="232.00" height="4.50" rx="0.5" fill="#8E9296" />
+<text x="1365.00" y="598.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="400" fill="#1A5FB4" text-anchor="start" >Security Health</text>
+<text x="1365.00" y="622.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="600" fill="#1A5FB4" text-anchor="start" >Business Risk</text>
+<text x="1577.00" y="623.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="end" >0</text>
+<line x1="1365.00" y1="638.00" x2="1597.00" y2="638.00" stroke="#E8E8E8" stroke-width="1" />
+<text x="1365.00" y="667.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="600" fill="#1A5FB4" text-anchor="start" >Vulnerabilities</text>
+<text x="1427.61" y="667.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#555" text-anchor="start" >(Real-time)</text>
+<text x="1365.00" y="691.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="start" >Critical</text>
+<circle cx="1371.00" cy="704.00" r="5.6" fill="#E8202A" />
+<text x="1380.00" y="707.50" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#1A5FB4" text-anchor="start" >0</text>
+<text x="1423.00" y="691.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="start" >High</text>
+<circle cx="1429.00" cy="704.00" r="5.6" fill="#F07E26" />
+<text x="1438.00" y="707.50" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#1A5FB4" text-anchor="start" >0</text>
+<text x="1481.00" y="691.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="start" >Medium</text>
+<circle cx="1487.00" cy="704.00" r="5.6" fill="#F8CC1B" />
+<text x="1496.00" y="707.50" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#1A5FB4" text-anchor="start" >0</text>
+<text x="1539.00" y="691.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="start" >Low</text>
+<circle cx="1545.00" cy="704.00" r="5.6" fill="#7B61FF" />
+<text x="1554.00" y="707.50" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#1A5FB4" text-anchor="start" >0</text>
+<line x1="1365.00" y1="722.00" x2="1597.00" y2="722.00" stroke="#E8E8E8" stroke-width="1" />
+<text x="1365.00" y="750.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="600" fill="#1A5FB4" text-anchor="start" >Attacks</text>
+<text x="1399.46" y="750.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#555" text-anchor="start" >(Last 5 Minutes)</text>
+<text x="1365.00" y="774.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="start" >Exploited</text>
+<circle cx="1371.00" cy="787.00" r="5.6" fill="#E8202A" />
+<text x="1380.00" y="790.50" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#1A5FB4" text-anchor="start" >0</text>
+<text x="1423.00" y="774.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="start" >Blocked</text>
+<circle cx="1429.00" cy="787.00" r="5.6" fill="#7B61FF" />
+<text x="1438.00" y="790.50" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#1A5FB4" text-anchor="start" >0</text>
+<text x="1481.00" y="774.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="start" >Attempted</text>
+<circle cx="1487.00" cy="787.00" r="5.6" fill="#F8CC1B" />
+<text x="1496.00" y="790.50" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#1A5FB4" text-anchor="start" >0</text>
+<line x1="1356.00" y1="805.00" x2="1607.00" y2="805.00" stroke="#E8E8E8" stroke-width="1" />
+<text x="1365.00" y="828.00" font-family="Inter, Arial, sans-serif" font-size="11.50" font-weight="400" fill="#1A5FB4" text-anchor="start" >Transaction Scorecard</text>
+<rect x="1365.00" y="838.00" width="212.05" height="4.50" rx="0" fill="#22C55E" />
+<rect x="1577.05" y="838.00" width="9.51" height="4.50" rx="0" fill="#F8CC1B" />
+<rect x="1586.56" y="838.00" width="3.71" height="4.50" rx="0" fill="#F07E26" />
+<rect x="1590.27" y="838.00" width="6.73" height="4.50" rx="0" fill="#E8202A" />
+<circle cx="1369.00" cy="857.00" r="3.2" fill="#22C55E" />
+<text x="1377.00" y="860.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="start" >Normal</text>
+<text x="1597.00" y="860.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="end" >91.4%</text>
+<circle cx="1369.00" cy="870.00" r="3.2" fill="#F8CC1B" />
+<text x="1377.00" y="873.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="start" >Slow</text>
+<text x="1597.00" y="873.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="end" >4.1%</text>
+<circle cx="1369.00" cy="883.00" r="3.2" fill="#F07E26" />
+<text x="1377.00" y="886.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="start" >Very slow</text>
+<text x="1597.00" y="886.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="end" >1.6%</text>
+<circle cx="1369.00" cy="896.00" r="3.2" fill="#E8202A" />
+<text x="1377.00" y="899.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="start" >Errors</text>
+<text x="1597.00" y="899.00" font-family="Inter, Arial, sans-serif" font-size="9.30" font-weight="400" fill="#222" text-anchor="end" >2.9%</text>
+<text x="416.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Load</text>
+<text x="604.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="14.00" font-weight="400" fill="#555" text-anchor="start" >73.3k</text>
+<text x="649.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="400" fill="#222" text-anchor="start" >calls</text>
+<text x="691.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="14.00" font-weight="400" fill="#1D69C4" text-anchor="start" >14,659</text>
+<text x="745.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="400" fill="#222" text-anchor="start" >calls / min</text>
+<text x="448.00" y="953.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="end" >20000</text>
+<line x1="463.00" y1="950.00" x2="792.00" y2="950.00" stroke="#E6E6E6" stroke-width="1" />
+<text x="448.00" y="993.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="end" >10000</text>
+<line x1="463.00" y1="990.00" x2="792.00" y2="990.00" stroke="#E6E6E6" stroke-width="1" />
+<text x="448.00" y="1033.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="end" >0</text>
+<line x1="463.00" y1="1030.00" x2="792.00" y2="1030.00" stroke="#C8C8C8" stroke-width="1" />
+<path d="M463.00 958.00C476.71 962.83 517.83 987.00 545.25 987.00C572.67 987.00 600.08 958.00 627.50 958.00C654.92 958.00 682.33 986.33 709.75 987.00C737.17 987.67 778.29 966.17 792.00 962.00L792 1030L463 1030Z" fill="#B4C3EC"/>
+<path d="M463.00 958.00C476.71 962.83 517.83 987.00 545.25 987.00C572.67 987.00 600.08 958.00 627.50 958.00C654.92 958.00 682.33 986.33 709.75 987.00C737.17 987.67 778.29 966.17 792.00 962.00" stroke="#4A64C0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="463.00" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="start" >6:33 AM</text>
+<text x="545.25" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="middle" >6:34 AM</text>
+<text x="627.50" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="middle" >6:35 AM</text>
+<text x="709.75" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="middle" >6:36 AM</text>
+<text x="792.00" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="end" >6:37 AM</text>
+<text x="816.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Response Time (ms)</text>
+<text x="1114.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="14.00" font-weight="400" fill="#1D69C4" text-anchor="start" >12</text>
+<text x="1138.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="400" fill="#222" text-anchor="start" >ms average</text>
+<text x="846.00" y="953.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="end" >20ms</text>
+<line x1="861.00" y1="950.00" x2="1192.00" y2="950.00" stroke="#E6E6E6" stroke-width="1" />
+<text x="846.00" y="993.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="end" >10ms</text>
+<line x1="861.00" y1="990.00" x2="1192.00" y2="990.00" stroke="#E6E6E6" stroke-width="1" />
+<text x="846.00" y="1033.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="end" >0ms</text>
+<line x1="861.00" y1="1030.00" x2="1192.00" y2="1030.00" stroke="#C8C8C8" stroke-width="1" />
+<path d="M861.00 992.00C874.79 988.33 916.17 972.50 943.75 970.00C971.33 967.50 998.92 977.83 1026.50 977.00C1054.08 976.17 1081.67 962.17 1109.25 965.00C1136.83 967.83 1178.21 989.17 1192.00 994.00L1192 1030L861 1030Z" fill="#B4C3EC"/>
+<path d="M861.00 992.00C874.79 988.33 916.17 972.50 943.75 970.00C971.33 967.50 998.92 977.83 1026.50 977.00C1054.08 976.17 1081.67 962.17 1109.25 965.00C1136.83 967.83 1178.21 989.17 1192.00 994.00" stroke="#4A64C0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="861.00" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="start" >6:33 AM</text>
+<text x="943.75" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="middle" >6:34 AM</text>
+<text x="1026.50" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="middle" >6:35 AM</text>
+<text x="1109.25" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="middle" >6:36 AM</text>
+<text x="1192.00" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="end" >6:37 AM</text>
+<text x="1215.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="10.50" font-weight="400" fill="#1E1F20" text-anchor="start" >Errors</text>
+<text x="1340.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="14.00" font-weight="400" fill="#E25563" text-anchor="start" >55.3%</text>
+<text x="1401.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="14.00" font-weight="400" fill="#555" text-anchor="start" >40.51k</text>
+<text x="1447.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="400" fill="#222" text-anchor="start" >errors</text>
+<text x="1501.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="14.00" font-weight="400" fill="#1D69C4" text-anchor="start" >8.1k</text>
+<text x="1530.00" y="931.00" font-family="Inter, Arial, sans-serif" font-size="9.00" font-weight="400" fill="#222" text-anchor="start" >errors / min</text>
+<text x="1247.00" y="953.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="end" >20000</text>
+<line x1="1262.00" y1="950.00" x2="1590.00" y2="950.00" stroke="#E6E6E6" stroke-width="1" />
+<text x="1247.00" y="993.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="end" >10000</text>
+<line x1="1262.00" y1="990.00" x2="1590.00" y2="990.00" stroke="#E6E6E6" stroke-width="1" />
+<text x="1247.00" y="1033.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#222" text-anchor="end" >0</text>
+<line x1="1262.00" y1="1030.00" x2="1590.00" y2="1030.00" stroke="#C8C8C8" stroke-width="1" />
+<path d="M1262.00 982.00C1275.67 987.00 1316.67 1011.67 1344.00 1012.00C1371.33 1012.33 1398.67 984.00 1426.00 984.00C1453.33 984.00 1480.67 1011.17 1508.00 1012.00C1535.33 1012.83 1576.33 992.83 1590.00 989.00L1590 1030L1262 1030Z" fill="#FFC2C6"/>
+<path d="M1262.00 982.00C1275.67 987.00 1316.67 1011.67 1344.00 1012.00C1371.33 1012.33 1398.67 984.00 1426.00 984.00C1453.33 984.00 1480.67 1011.17 1508.00 1012.00C1535.33 1012.83 1576.33 992.83 1590.00 989.00" stroke="#E06070" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1262.00" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="start" >6:33 AM</text>
+<text x="1344.00" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="middle" >6:34 AM</text>
+<text x="1426.00" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="middle" >6:35 AM</text>
+<text x="1508.00" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="middle" >6:36 AM</text>
+<text x="1590.00" y="1045.00" font-family="Inter, Arial, sans-serif" font-size="8.60" font-weight="400" fill="#333" text-anchor="end" >6:37 AM</text></g></g></svg>
