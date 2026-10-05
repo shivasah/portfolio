@@ -1,0 +1,40 @@
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#fff;--f:"Avenir Next","Avenir Next LT Pro","Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--screen-shadow:none}body{font-family:var(--f)}
+#screen{position:relative;width:min(94vw,calc((100vh - 150px) * 1.5));width:min(94vw,calc((100svh - 150px) * 1.5));aspect-ratio:3/2;border-radius:10px;overflow:hidden;background:#fff;box-shadow:var(--screen-shadow);isolation:isolate}
+#stage{position:absolute;left:0;top:0;width:1440px;height:960px;transform-origin:0 0;overflow:hidden;background:#fff}
+#cam{position:absolute;inset:0;transform-origin:0 0;will-change:transform}
+#views,#fx{position:absolute;inset:0}
+.view{position:absolute;inset:0;background:#fff;will-change:opacity}
+.view img{position:absolute;display:block;user-select:none;-webkit-user-drag:none}
+.view img.full{left:0;top:0;width:1440px;height:960px}
+.cv{position:absolute;left:0;top:107px;height:786px;overflow:hidden;background:#fff}
+.cv img{left:0;top:0;will-change:transform}
+.fsh{position:absolute;left:0;top:893px;width:1440px;height:67px;background:#fff;box-shadow:0 -1px 0 rgba(0,0,0,.05),0 -6px 16px rgba(0,0,0,.06)}
+.patch{pointer-events:none}
+
+#cursor{position:absolute;left:0;top:0;width:0;height:0;z-index:20;will-change:transform;pointer-events:none}
+#cursor svg{position:absolute;left:-1.5px;top:-1.5px;width:23px;height:31px;transform-origin:2px 2px;filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.35)) drop-shadow(0 3px 6px rgba(0,0,0,.12))}
+.ripple{position:absolute;width:44px;height:44px;border-radius:50%;background:rgba(254,87,36,.28);border:1.5px solid rgba(254,87,36,.7);pointer-events:none;z-index:19}
+
+/* synthesized UI ; GBSG / QBDS styling sampled from the frames */
+.dd{position:absolute;background:#fff;border:1px solid #d4d7dc;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,.12);padding:4px 0;font:400 14px/1 var(--f);color:#393a3d}
+.ddi{height:36px;display:flex;align-items:center;gap:10px;padding:0 12px}
+.ddi.hov{background:#eaf1fb}
+.ddi svg,.lbl svg{flex:none}
+.lbl{position:absolute;background:#fff;display:flex;align-items:center;gap:6px;padding-left:4px;font:400 14px/1 var(--f);color:#393a3d}
+.mask{position:absolute;background:#fff}
+.caret{position:absolute;width:1.5px;background:#393a3d}
+.rz{position:absolute;border:2px solid #1c4770;border-radius:13px}
+.rz svg{position:absolute;right:-2.5px;bottom:-2.5px;width:14px;height:14px;overflow:visible}
+.shim{position:absolute;border-radius:11px;overflow:hidden}
+.shim::after,.sb::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(255,255,255,.8) 50%,transparent 80%);transform:translateX(-100%);animation:sh 1000ms cubic-bezier(.4,0,.2,1) infinite}
+@keyframes sh{to{transform:translateX(100%)}}
+.skel{position:absolute;background:#fff}
+.sb{position:absolute;background:#e8eaed;overflow:hidden}
+.scrim{position:absolute;inset:0;background:rgba(0,0,0,.4)}
+.modal{position:absolute;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.25);overflow:hidden}
+.modal img,.toast img{display:block;width:100%;height:100%}
+.toast{position:absolute;filter:drop-shadow(0 6px 16px rgba(0,0,0,.14))}
+
+
+#screen{width:100%;height:100%;border-radius:0;aspect-ratio:auto;box-shadow:none}
+.loading{position:absolute;inset:0;display:grid;place-items:center;font:400 14px/1.5 var(--f);background:#fff;color:#555;z-index:40}

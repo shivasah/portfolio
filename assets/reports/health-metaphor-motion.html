@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Health-report metaphor; 18s motion</title>
+<style>
+:root{
+  --paper:#fcfcf4; --paper-2:#ece9e4; --paper-3:#e4e1dc; --ink:#232428; --ink-soft:#4d4d50; --muted:#7a7a76;
+  --orange:#ff5623; --note:#efcc62; --line:rgba(35,36,40,.14);
+  --page:#efeee6; --ui:#232428; --ui-muted:#6E6F72; --ui-line:rgba(35,36,40,.14); --btn:#fcfcf4;
+  --font-display:"Cabinet Grotesk","Avenir Next","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Syne","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-hand:"Syne","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+:root{color-scheme:light}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0}
+body{background:var(--paper);color:var(--ui);font-family:var(--font-body);display:block;padding:0;overflow:hidden}
+.wrap{width:100%;height:100dvh;min-width:0}
+.frame{position:relative;width:100%;height:100%;overflow:hidden;border-radius:0;background:var(--paper);box-shadow:none}
+#stage{position:absolute;left:0;top:0;width:1600px;height:900px;transform-origin:0 0;background:var(--paper);color:var(--ink);font-family:var(--font-body)}
+#stage *{position:absolute}
+#stage .flow,#stage .flow *{position:static}
+.abs{will-change:transform,opacity}
+
+/* top text */
+#sec{left:96px;top:70px;font:400 15px/1 var(--font-mono);color:var(--muted);letter-spacing:.02em}
+#head{left:96px;top:100px;font:300 44px/1.15 var(--font-display);letter-spacing:-.02em;white-space:nowrap}
+#head span{position:relative;display:inline-block;margin-right:.26em}
+.beat{left:96px;top:176px;font:400 19px/1.3 var(--font-body);color:var(--ink);white-space:nowrap}
+.cap{left:96px;top:208px;font:400 19px/1.4 var(--font-body);color:var(--ink-soft);white-space:nowrap}
+#closing{left:96px;top:176px;font:300 30px/1.25 var(--font-display);letter-spacing:-.015em;white-space:nowrap}
+#closing span{position:relative;display:inline-block;margin-right:.25em}
+
+/* cards */
+.card{left:0;top:0;width:520px;height:440px;background:var(--paper-2);border-radius:3px 5px 3px 2px;box-shadow:2px 10px 26px rgba(35,36,40,.11);transform-origin:50% 50%}
+.card::before{content:"";position:absolute;width:76px;height:22px;top:-10px;left:222px;background:rgba(247,240,207,.62);transform:rotate(-2deg)}
+.card .ch{left:40px;top:38px;font:400 30px/1.1 var(--font-display);letter-spacing:-.015em}
+.card .cs{left:40px;top:80px;font:400 15px/1.2 var(--font-body);color:var(--muted)}
+.card .rule{left:40px;right:40px;top:118px;height:1px;background:rgba(35,36,40,.22)}
+.row{left:40px;width:440px;height:64px}
+.row .sep{left:0;right:0;bottom:0;height:1px;background:var(--line)}
+.row .lab{left:0;top:21px;font:400 18px/1.2 var(--font-body);white-space:nowrap}
+.row .lab .med,.row .lab .fin{left:0;top:0}
+.row .strike{left:-2px;top:11px;height:1.5px;background:var(--ink);transform-origin:0 50%}
+.row .val{right:108px;top:19px;font:400 22px/1.2 var(--font-body);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.row .del{left:350px;top:22px;font:500 16px/1.2 var(--font-body);font-variant-numeric:tabular-nums;white-space:nowrap;display:flex;align-items:center;gap:7px}
+#stage .row .del svg{position:static}
+.row .ul{left:0;width:440px;bottom:-1px;height:1px;background:var(--ink);transform-origin:0 50%}
+
+/* note */
+#note{left:0;top:0;width:540px;height:330px;background:var(--note);border-radius:2px 4px 3px 1px;box-shadow:3px 12px 30px rgba(35,36,40,.14);transform-origin:50% 50%}
+#note::before{content:"";position:absolute;left:230px;top:-12px;width:84px;height:25px;background:rgba(241,232,200,.78);transform:rotate(-4deg)}
+.hl{left:44px;font:400 25px/1 var(--font-hand);white-space:nowrap;color:var(--ink)}
+#sigtxt{left:178px;top:270px;font:400 16px/1 var(--font-body);font-variant:small-caps;letter-spacing:.04em;color:var(--ink-soft)}
+svg.ov{left:0;top:0;overflow:visible;pointer-events:none}
+
+/* ui */
+.bar{display:flex;align-items:center;gap:14px;margin-top:14px;font-size:14px;color:var(--ui)}
+button{font:inherit;color:var(--ui);background:var(--btn);border:1px solid var(--ui-line);height:34px;padding:0 14px;border-radius:17px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+button:hover{border-color:var(--ui)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+#play{width:34px;padding:0;justify-content:center}
+.track{position:relative;flex:1;min-width:80px;height:34px;display:flex;align-items:center}
+input[type=range]{width:100%;margin:0;accent-color:var(--orange);background:transparent}
+.ticks{position:absolute;left:0;right:0;top:27px;height:6px;pointer-events:none}
+.ticks i{position:absolute;width:1px;height:6px;background:var(--ui-line)}
+.meta{display:flex;gap:10px;align-items:baseline;white-space:nowrap}
+#time{font-variant-numeric:tabular-nums;min-width:56px}
+#phase{color:var(--ui-muted)}
+label.loop{display:inline-flex;gap:6px;align-items:center;color:var(--ui-muted);cursor:pointer}
+label.loop input{accent-color:var(--orange)}
+@media (max-width:640px){.bar{flex-wrap:wrap;gap:10px}#phase{display:none}.track{order:5;flex-basis:100%}}
+</style>
+
+<script>
+(()=>{const links=[
+'https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,600,700,800&display=swap',
+'https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap'
+];links.forEach(h=>{const l=document.createElement('link');l.rel='stylesheet';l.href=h;document.head.appendChild(l);});})();
+</script>
+<style id="note-hand-v110">
+#stage #note .hl{width:452px;height:44px;font-family:"Portfolio Note Lastoria",cursive;font-size:30px;line-height:1.2}
+#stage #note .note-hand-outlines{position:static;display:block;height:44px;width:auto;max-width:100%}
+#stage #note .note-hand-native{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.has-note-lastoria #stage #note .note-hand-native{position:static;width:auto;height:auto;overflow:visible;clip:auto;display:block}
+.has-note-lastoria #stage #note .note-hand-outlines{display:none}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="frame" id="frame">
+    <div id="stage" role="img" aria-label="A health report card whose medical vitals relabel as revenue, gross margin, cash and receivables; a February card is compared against March with deltas; a doctor's note interprets the two flagged rows and is signed by an accountant.">
+      <div id="content" style="left:0;top:0;width:1600px;height:900px">
+        
+        <div id="head" class="abs"></div>
+        <div class="beat abs" id="b1">01 · Vitals</div>
+        <div class="beat abs" id="b2">02 · Compared to last time</div>
+        <div class="beat abs" id="b3">03 · The doctor’s note</div>
+        <div class="beat abs" id="b4">04 · Recheck in April</div>
+        <div class="cap abs" id="c1">Accurate. But a number on its own doesn’t tell you if you’re well.</div>
+        <div class="cap abs" id="c2">The comparison is where a number becomes a signal.</div>
+        <div class="cap abs" id="c3">The owner reads this first. The numbers are why it’s true.</div>
+        <div class="cap abs" id="c4">April shows whether the advice worked. That’s what the next report is for.</div>
+        <div id="closing" class="abs"></div>
+        <div id="scene" style="left:0;top:0;width:1600px;height:900px">
+          <div class="card abs" id="cardF"></div>
+          <div class="card abs" id="cardM"></div>
+          <svg class="ov" id="ovA" width="1600" height="900" viewBox="0 0 1600 900" aria-hidden="true">
+            <path id="arrow" d="M930 364 C 905 290, 740 268, 660 318 C 646 327, 636 338, 628 350" fill="none" stroke="#232428" stroke-width="2.4" stroke-linecap="round"/>
+            <path id="arrowHead" d="M642 342 L628 350 L629.5 334" fill="none" stroke="#232428" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div id="note" class="abs">
+            <div class="hl" id="h1" style="top:46px"><span class="note-hand-native">Margin slipped and receivables are up;</span><img class="note-hand-outlines" src="doctor-note-line-01.svg" alt="Margin slipped and receivables are up;" height="44"></div>
+            <div class="hl" id="h2" style="top:92px"><span class="note-hand-native">chase the three overdue invoices</span><img class="note-hand-outlines" src="doctor-note-line-02.svg" alt="chase the three overdue invoices" height="44"></div>
+            <div class="hl" id="h3" style="top:138px"><span class="note-hand-native">before month-end.</span><img class="note-hand-outlines" src="doctor-note-line-03.svg" alt="before month-end." height="44"></div>
+            <div class="hl" id="h4" style="top:196px"><span class="note-hand-native">Recheck in April.</span><img class="note-hand-outlines" src="doctor-note-line-04.svg" alt="Recheck in April." height="44"></div>
+            <svg class="ov" width="140" height="60" viewBox="0 0 140 60" style="left:40px;top:250px" aria-hidden="true">
+              <path id="sig" d="M6 40 C 14 18, 22 14, 24 30 C 26 44, 18 48, 20 36 C 23 22, 36 16, 40 28 C 43 38, 46 40, 52 26 C 56 18, 60 34, 66 32 C 74 30, 72 18, 82 24 C 90 29, 92 36, 104 30 C 112 26, 118 28, 128 22" fill="none" stroke="#232428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div id="sigtxt">; your accountant</div>
+            <svg class="ov" width="48" height="44" viewBox="0 0 48 44" style="left:270px;top:122px" aria-hidden="true">
+              <path id="tick" d="M6 24 C 10 27, 13 31, 17 36 C 23 24, 31 13, 43 5" fill="none" stroke="#ff5623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <svg class="ov" id="ovL" width="1600" height="900" viewBox="0 0 1600 900" aria-hidden="true">
+            <path id="lead1" d="M820 567 C 856 565, 866 476, 902 456" fill="none" stroke="#232428" stroke-width="1.4" stroke-linecap="round"/>
+            <path id="lead2" d="M820 678 C 862 674, 868 526, 902 504" fill="none" stroke="#232428" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+          <div class="card abs" id="cardA"></div>
+          <svg class="ov" id="ovR" width="1600" height="900" viewBox="0 0 1600 900" aria-hidden="true">
+            <path id="apArrow" d="M1024 596 C 1054 594, 1050 470, 1066 436" fill="none" stroke="#232428" stroke-width="2.2" stroke-linecap="round"/>
+            <path id="apHead" d="M1055 444 L1066 436 L1067 450" fill="none" stroke="#232428" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script>
+(()=>{
+const DUR=24;
+/* ---------- easing ---------- */
+function bez(x1,y1,x2,y2){const cx=3*x1,bx=3*(x2-x1)-cx,ax=1-cx-bx,cy=3*y1,by=3*(y2-y1)-cy,ay=1-cy-by;
+  const X=t=>((ax*t+bx)*t+cx)*t,Y=t=>((ay*t+by)*t+cy)*t,dX=t=>(3*ax*t+2*bx)*t+cx;
+  return x=>{if(x<=0)return 0;if(x>=1)return 1;let t=x;for(let i=0;i<7;i++){const e=X(t)-x,d=dX(t);if(Math.abs(e)<1e-5)break;if(Math.abs(d)<1e-6)break;t-=e/d;}
+    let a=0,b=1;for(let i=0;i<20&&Math.abs(X(t)-x)>1e-5;i++){if(X(t)<x)a=t;else b=t;t=(a+b)/2;}return Y(t);};}
+const IN=bez(.2,.8,.2,1), OUT=bez(.42,0,1,1), MOVE=bez(.65,0,.35,1), HAND=bez(0,0,.58,1), LIN=x=>x;
+const cl=(v,a,b)=>v<a?a:v>b?b:v, lerp=(a,b,k)=>a+(b-a)*k;
+const tw=(t,s,d,f)=>(f||IN)(cl((t-s)/d,0,1));
+const inout=(t,a,b,da=0.6,db=0.3)=>tw(t,a,da,IN)*(1-tw(t,b,db,OUT));
+
+/* ---------- build ---------- */
+const $=id=>document.getElementById(id);
+function words(el,text){el.innerHTML='';return text.split(' ').map(w=>{const s=document.createElement('span');s.textContent=w;el.appendChild(s);return s;});}
+const headW=words($('head'),'Let’s understand management reports through a health report.');
+const closeW=words($('closing'),'A health report is only useful if you get another one.');
+
+const ROWS=[
+  {med:'Blood pressure',fin:'Revenue',v:11942,feb:11266,fmt:'n',d:'▲ 6%',tone:'acc'},
+  {med:'Cholesterol',fin:'Gross margin',v:38,feb:42,fmt:'%',d:'▼ 4 pts',tone:'mark'},
+  {med:'Resting heart rate',fin:'Cash',v:4210,feb:4127,fmt:'n',d:'▲ 2%',tone:'soft'},
+  {med:'Blood oxygen',fin:'Receivables',v:2860,feb:2424,fmt:'n',d:'▲ 18%',tone:'mark'},
+];
+const fmt=(v,f)=>f==='%'?Math.round(v)+'%':Math.round(v).toLocaleString('en-US');
+const RING='<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.2 1.4 C 9.4 1.2, 10.9 3.6, 10.6 6.3 C 10.3 9.2, 7.8 10.8, 5.4 10.5 C 2.8 10.2, 1.2 8, 1.5 5.4 C 1.8 3.1, 3.6 1.6, 6.6 1.7" fill="none" stroke="#232428" stroke-width="1.5" stroke-linecap="round"/></svg>';
+const TICK='<svg width="13" height="12" viewBox="0 0 13 12" aria-hidden="true"><path d="M1.6 6.6 C 3 7.6, 4 8.8, 5 10.2 C 6.8 6.6, 9 3.8, 11.6 1.6" fill="none" stroke="#ff5623" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function buildCard(el,head,sub,mode,DL){DL=DL||ROWS;
+  el.innerHTML=`<div class="ch">${head}</div><div class="cs">${sub}</div><div class="rule"></div>`;
+  const rows=ROWS.map((r,i)=>{const row=document.createElement('div');row.className='row';row.style.top=(132+i*64)+'px';
+    row.innerHTML=`<div class="lab"><span class="med">${r.med}</span><span class="fin">${r.fin}</span><div class="strike" style="width:${r.med.length*9.2}px"></div></div><div class="val"></div>`+
+      (mode==='m'?(q=>`<div class="del" style="color:${q.tone==='acc'||q.tone==='ok'?'#ff5623':q.tone==='soft'?'#4d4d50':'#232428'}">${q.d}${q.tone==='mark'?RING:q.tone==='ok'?TICK:''}</div>${q.tone==='mark'||q.tone==='ok'?`<div class="ul"${q.tone==='ok'?' style="background:#ff5623"':''}></div>`:''}`)(DL[i]):'')+
+      (i<3?'<div class="sep"></div>':'');
+    el.appendChild(row);
+    const q=s=>row.querySelector(s);return{row,lab:q('.lab'),med:q('.med'),fin:q('.fin'),strike:q('.strike'),val:q('.val'),del:q('.del'),ul:q('.ul')};});
+  return rows;}
+const RM=buildCard($('cardM'),'Health report','Grasshopper Landscapes · March','m');
+const RF=buildCard($('cardF'),'February','Grasshopper Landscapes','f');
+const APR=[12180,40,4890,2120];
+const RA=buildCard($('cardA'),'Health report','Grasshopper Landscapes · April','m',[{d:'▲ 2%',tone:'soft'},{d:'▲ 2 pts',tone:'ok'},{d:'▲ 16%',tone:'soft'},{d:'▼ 26%',tone:'ok'}]);
+RF.forEach((r,i)=>{r.med.style.display='none';r.strike.style.display='none';r.val.textContent=fmt(ROWS[i].feb,ROWS[i].fmt);});
+$('cardA').querySelectorAll('.med,.strike').forEach(e=>e.style.display='none');
+
+function prep(id){const p=$(id),L=p.getTotalLength();p.style.strokeDasharray=L+' '+L;return{p,L};}
+const TK=prep('tick'),APA=prep('apArrow'),APH=prep('apHead'),ARW=prep('arrow'),ARH=prep('arrowHead'),SIG=prep('sig'),LD1=prep('lead1'),LD2=prep('lead2');
+const draw=(o,k)=>{o.p.style.strokeDashoffset=(o.L*(1-k)).toFixed(2);o.p.style.opacity=k>0.001?1:0;};
+const op=(el,v)=>{el.style.opacity=v.toFixed(3);};
+const K=1.2;
+const card=(el,cx,cy,s,o,rot,w,h)=>{el.style.transform=`translate(${(cx-(w||260)).toFixed(2)}px,${(cy-(h||220)).toFixed(2)}px) rotate(${rot||0}deg) scale(${(s*(rot?1:K)).toFixed(4)})`;op(el,o);};
+
+let LOOP=false;
+/* ---------- the timeline: every element is a pure function of t ---------- */
+function render(t){
+  // headline + section label
+  const hb=1;
+  headW.forEach((w,i)=>{const k=1;w.style.transform=`translateY(${(8*(1-k)).toFixed(2)}px)`;op(w,k);});
+  op($('head'),hb);
+  // beat labels + captions
+  op($('b1'),inout(t,1.0,5.25,0.5,0.25));op($('b2'),inout(t,5.5,10.25,0.5,0.25));op($('b3'),inout(t,10.5,15.2,0.5,0.3));op($('b4'),inout(t,15.6,20.3,0.5,0.3));
+  op($('c1'),inout(t,4.2,5.3));op($('c2'),inout(t,9.2,10.3));op($('c3'),inout(t,14.2,15.2));op($('c4'),inout(t,19.0,20.3));
+  closeW.forEach((w,i)=>{const k=tw(t,20.8+i*0.05,0.7);w.style.transform=`translateY(${(8*(1-k)).toFixed(2)}px)`;op(w,k);});
+
+  // March card
+  const mIn=tw(t,1.0,0.6), m1=tw(t,5.3,0.5,MOVE), m2=tw(t,10.3,0.5,MOVE);
+  const m3=tw(t,15.5,0.7,MOVE);
+  const mx=lerp(lerp(lerp(800,480,m1),640,m2),330,m3), ms=1-0.28*m1-0.12*m3;
+  card($('cardM'),mx,560+40*(1-mIn),ms,mIn*(1-0.45*m3));
+  RM.forEach((r,i)=>{const s=1.4+i*0.35,k=tw(t,s,0.5);op(r.row,k);r.row.style.transform=`translateY(${(10*(1-k)).toFixed(2)}px)`;
+    const c=cl((t-s)/0.6,0,1);r.val.textContent=t<s?'':fmt(ROWS[i].v*c,ROWS[i].fmt);
+    const sw=3.4+i*0.12, st=tw(t,sw-0.22,0.22,LIN), x=tw(t,sw,0.3,MOVE);
+    r.strike.style.transform=`scaleX(${st.toFixed(3)})`;op(r.strike,1-x);op(r.med,1-x);op(r.fin,x);
+    r.med.style.transform=`translateY(${(-6*x).toFixed(2)}px)`;r.fin.style.transform=`translateY(${(6*(1-x)).toFixed(2)}px)`;
+    const dk=tw(t,7.2+i*0.35,0.5);op(r.del,dk);r.del.style.transform=`translateX(${(12*(1-dk)).toFixed(2)}px)`;
+    if(r.ul)r.ul.style.transform=`scaleX(${tw(t,7.2+i*0.35+0.25,0.45,MOVE).toFixed(3)})`;});
+
+  // February card + arrow
+  const fIn=tw(t,5.8,0.6), fOut=tw(t,10.3,0.3,OUT);
+  card($('cardF'),977+160*(1-fIn),560,0.72,0.7*fIn*(1-fOut));
+  const ak=tw(t,6.6,0.7,HAND);draw(ARW,ak);draw(ARH,tw(t,7.15,0.2,HAND));op($('ovA'),1-fOut);
+
+  // the doctor's note
+  const nIn=tw(t,10.8,0.6);card($('note'),lerp(1197,800,m3),560+40*(1-nIn),lerp(1.1,0.8,m3),nIn,1.5,270,165);
+  const HL=[['h1',11.2,0.7],['h2',11.95,0.6],['h3',12.6,0.35],['h4',13.05,0.5]];
+  HL.forEach(([id,s,d])=>{const k=tw(t,s,d,HAND);$(id).style.clipPath=`inset(-6px ${(100-k*100).toFixed(2)}% -10px -4px)`;});
+  draw(LD1,tw(t,13.6,0.4,HAND));draw(LD2,tw(t,13.75,0.4,HAND));op($('ovL'),1-tw(t,15.45,0.3,OUT));
+  draw(SIG,tw(t,13.9,0.5,HAND));op($('sigtxt'),tw(t,14.2,0.5));
+  $('sigtxt').style.transform=`translateY(${(6*(1-tw(t,14.2,0.5))).toFixed(2)}px)`;
+
+  // resolve: everything settles back, the headline returns
+  // recheck: the action gets ticked off, April's report arrives and proves it
+  draw(TK,tw(t,16.3,0.45,HAND));
+  draw(APA,tw(t,16.6,0.5,HAND));draw(APH,tw(t,17.05,0.2,HAND));
+  const aIn=tw(t,16.9,0.6);card($('cardA'),1300,560+40*(1-aIn),0.72,aIn);
+  RA.forEach((r,i)=>{r.med.style.display='none';r.strike.style.display='none';op(r.fin,1);
+    const s=17.3+i*0.12,c=tw(t,s,0.7,MOVE);r.val.textContent=fmt(lerp(ROWS[i].v,APR[i],c),ROWS[i].fmt);
+    const dk=tw(t,18.0+i*0.3,0.5);op(r.del,dk);r.del.style.transform=`translateX(${(12*(1-dk)).toFixed(2)}px)`;
+    if(r.ul)r.ul.style.transform=`scaleX(${tw(t,18.0+i*0.3+0.25,0.45,MOVE).toFixed(3)})`;});
+  // resolve: everything settles back, the headline and the closing line take over
+  const dim=tw(t,20.4,0.5);
+  $('scene').style.transform=`translateY(${(24*dim).toFixed(2)}px)`;op($('scene'),1-0.82*dim);
+  // loop seam: the frame clears to paper
+  op($('content'),LOOP?1-tw(t,23.1,0.8,OUT):1);
+}
+
+/* Parent-controlled chapter player. Frames stop rendering when paused. */
+const stage=$('stage'),frame=$('frame');
+function resizeStage(){
+  const sc=Math.min(frame.clientWidth/1600,frame.clientHeight/900);
+  stage.style.left=((frame.clientWidth-1600*sc)/2)+'px';
+  stage.style.top=((frame.clientHeight-900*sc)/2)+'px';
+  stage.style.transform=`scale(${sc})`;
+}
+if('ResizeObserver' in window)new ResizeObserver(resizeStage).observe(frame);
+window.addEventListener('resize',resizeStage,{passive:true});
+resizeStage();
+let t=0.9,fromT=0.9,targetT=0.9,animStart=0,animDur=0,animating=false,raf=0,visible=true;
+const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+function paint(){
+  render(t);
+  stage.dataset.time=t.toFixed(3);
+  stage.dataset.playing=String(animating);
+}
+function cancel(){if(raf)cancelAnimationFrame(raf);raf=0;}
+function setAt(target){
+  cancel();
+  t=cl(Number(target)||0,0,DUR);targetT=t;animating=false;paint();
+}
+function tick(now){
+  raf=0;
+  if(!animating||!visible||document.hidden)return;
+  // Every element already has its own authored easing. Keep the master
+  // timeline linear so individual card transitions are not sped up twice.
+  const k=cl((now-animStart)/animDur,0,1);
+  t=lerp(fromT,targetT,k);
+  if(k>=1){t=targetT;animating=false;}
+  paint();
+  if(animating)raf=requestAnimationFrame(tick);
+}
+function goTo(target,duration=4600){
+  target=cl(Number(target)||0,0,DUR);
+  if(motion.matches||Math.abs(t-target)<0.001){setAt(target);return;}
+  cancel();
+  fromT=t;targetT=target;animStart=performance.now();animDur=Math.max(1800,Number(duration)||4600);animating=true;
+  if(visible&&!document.hidden)raf=requestAnimationFrame(tick);
+}
+function announce(){if(window.parent!==window)window.parent.postMessage({type:'health-metaphor-ready'},'*');}
+window.addEventListener('message',event=>{
+  // The component responds only to its own embedding page.
+  if(event.source!==window.parent)return;
+  const d=event.data||{};
+  if(d.type==='health-metaphor-ping'){announce();return;}
+  if(d.type==='health-metaphor-go'&&Number.isFinite(Number(d.target)))goTo(d.target,d.duration);
+  if(d.type==='health-metaphor-set'&&Number.isFinite(Number(d.target)))setAt(d.target);
+  if(d.type==='health-metaphor-visible'){
+    visible=!!d.visible;
+    if(!visible)cancel();
+    else if(animating)goTo(targetT,Math.max(1800,Math.abs(targetT-t)*920));
+  }
+});
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden)cancel();
+  else if(animating&&visible)goTo(targetT,Math.max(1800,Math.abs(targetT-t)*920));
+});
+motion.addEventListener('change',()=>{if(motion.matches)setAt(20.2);announce();});
+const fq=new URLSearchParams(location.search).get('frame');
+if(fq!==null){const named={title:0.9,vitals:5.2,compare:10.2,note:15.1,recheck:20.2,resolve:22.9};const v=named[fq]!==undefined?named[fq]:parseFloat(fq);if(!isNaN(v))t=cl(v,0,DUR);}
+if(motion.matches)t=20.2;
+if(document.fonts)document.fonts.ready.then(paint);
+paint();announce();
+
+})();
+</script>
+<noscript><style>.wrap{display:none}.health-static{box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:22px;min-height:100vh;padding:8vw;font-family:var(--font-body);color:var(--ink);background:var(--paper)}.health-static h2{font:500 clamp(24px,4vw,50px)/1.1 var(--font-display);margin:0}.health-static p{font-size:clamp(14px,2vw,20px);line-height:1.5;margin:0}</style><section class="health-static"><h2>Let’s understand management reports through a health report.</h2><p><b>Vitals.</b> Accurate. But a number on its own doesn’t tell you if you’re well.</p><p><b>Compared to last time.</b> The comparison is where a number becomes a signal.</p><p><b>The doctor’s note.</b> The owner reads this first. The numbers are why it’s true.</p><p><b>Recheck in April.</b> April shows whether the advice worked. That’s what the next report is for.</p></section></noscript>
+<script>
+if('FontFace' in window){const face=new FontFace('Portfolio Note Lastoria','local("Lastoria")');face.load().then(f=>{document.fonts.add(f);document.documentElement.classList.add('has-note-lastoria');}).catch(()=>{});}
+</script>
+</body>
+</html>
