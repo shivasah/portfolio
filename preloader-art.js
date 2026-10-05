@@ -19,7 +19,13 @@
     }
     svg.setAttribute('viewBox', '0 0 1600 420');
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
-    preloader.classList.add('is-lastoria');
+    svg.querySelectorAll('[data-lastoria-trace]').forEach(path => {
+      path.style.opacity = '0';
+      path.style.strokeDashoffset = '1';
+      path.setAttribute('stroke-dashoffset', '1');
+    });
+    svg.style.clipPath = 'inset(0 100% 0 0)';
+    preloader.classList.add('is-lastoria', 'is-composed');
   };
 
   window.completePortfolioReportPreloader = svg => {

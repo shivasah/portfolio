@@ -1,0 +1,237 @@
+/* v107 - static homepage surfaces and case-study layout refinements.
+ * This layer is deliberately scoped. Hero and install-flow timelines are unchanged.
+ */
+html body.page-home #main{background:var(--paper)!important;transition:none!important;}
+html body.page-home #main > :is(#top,#intro,#work){background:var(--paper)!important;transition-property:none!important;}
+html body.page-home #main > :is(#writing,#vibes){background:#deded8!important;transition-property:none!important;}
+html body.page-home #main > #beyond{background:var(--beyond-bg)!important;transition-property:none!important;}
+html body.page-home #main > #manifesto{background:var(--orange)!important;transition-property:none!important;}
+html body.page-home #main > .bg-transition-breath{display:none!important;}
+
+/* Persona introduction should support the name, not compete with it. */
+html body.page-case-agent #user .lede{
+ font:400 clamp(19px,1.7vw,25px)/1.5 var(--font-body)!important;
+ max-width:43ch!important;letter-spacing:normal!important;
+}
+/* A disclosure changes the left column's height, never the right image's origin. */
+html body.page-case-agent #direction{overflow-anchor:none;}
+html body.page-case-agent #direction .zfi-layout{align-items:start!important;}
+html body.page-case-agent #direction .zfi-product-evidence{
+ align-self:start!important;justify-self:stretch!important;margin-top:0!important;
+}
+html body.page-case-agent #direction .agent-zfi-card__top{justify-content:flex-end!important;}
+
+/* Visible full perimeter, compact summary, and room for the bottom stroke. */
+html body.page-case-agent #agent-lifecycle{
+ --lifecycle-more:0px;
+ height:calc(250svh + var(--lifecycle-more))!important;
+ min-height:100svh!important;overflow:visible!important;overflow-anchor:none;
+}
+html body.page-case-agent #agent-lifecycle .lifecycle-scene__sticky{
+ height:calc(100svh + var(--lifecycle-more))!important;min-height:0!important;
+ padding:64px 0 40px!important;box-sizing:border-box!important;
+ overflow:visible!important;align-items:stretch!important;
+}
+html body.page-case-agent #agent-lifecycle .lifecycle-scene__sticky > .shell{
+ height:100%!important;display:grid!important;
+ grid-template-rows:auto minmax(250px,1fr) auto!important;
+ row-gap:18px!important;box-sizing:border-box!important;
+}
+html body.page-case-agent #agent-lifecycle .lifecycle-scene__decision{
+ align-self:start!important;overflow:visible!important;transform:none!important;
+}
+html body.page-case-agent #agent-lifecycle .case-disclosure-slot{
+ margin:20px auto 0!important;overflow:visible!important;
+ padding:0 0 2px!important;box-sizing:border-box!important;
+}
+html body.page-case-agent #agent-lifecycle details.lifecycle-why.case-disclosure{
+ overflow:visible!important;border:1px solid rgba(35,36,40,.35)!important;
+ border-radius:12px!important;background:#f3efe5!important;
+ box-shadow:none!important;clip-path:none!important;mask-image:none!important;
+}
+html body.page-case-agent #agent-lifecycle details.case-disclosure > summary{
+ border-radius:11px!important;
+}
+html body.page-case-agent #agent-lifecycle details.case-disclosure .story-accordion__inner{
+ padding:4px 18px 20px!important;
+}
+@media(max-width:980px),(max-height:849px),(prefers-reduced-motion:reduce){
+ html body.page-case-agent #agent-lifecycle{
+  height:auto!important;min-height:0!important;padding:var(--space-dense,100px) 0!important;
+ }
+ html body.page-case-agent #agent-lifecycle .lifecycle-scene__sticky{
+  position:relative!important;top:auto!important;height:auto!important;padding:0!important;
+ }
+ html body.page-case-agent #agent-lifecycle .lifecycle-scene__sticky > .shell{height:auto!important;display:block!important;}
+}
+html:not(.js) body.page-case-agent #agent-lifecycle{height:auto!important;min-height:0!important;padding-block:100px!important;}
+html:not(.js) body.page-case-agent #agent-lifecycle .lifecycle-scene__sticky{height:auto!important;position:relative!important;}
+html:not(.js) body.page-case-agent #agent-lifecycle .lifecycle-scene__sticky > .shell{height:auto!important;display:block!important;}
+
+/* No grey seam between the final flow and its fifth decision. */
+html body.page-case-agent #main > #decision-background,
+html body.page-case-agent #decision-background > .shell{
+ background:#000!important;background-image:none!important;color:var(--paper)!important;
+}
+/* The UI follows the platform heading with a small, deliberate gap. */
+html body.page-case-agent #architecture-shift .architecture-shift-v70__copy{
+ margin-bottom:24px!important;
+}
+html body.page-case-agent #architecture-shift .architecture-shift-v70__media{
+ aspect-ratio:auto!important;height:auto!important;display:block!important;
+ padding:0!important;margin-top:0!important;
+}
+html body.page-case-agent #architecture-shift .architecture-shift-v70__media img{
+ max-height:none!important;display:block!important;
+}
+html body.page-case-agent #main > #learning{
+ min-height:120vh!important;min-height:120svh!important;height:auto!important;
+ display:flex!important;align-items:center!important;padding-block:120px!important;
+ box-sizing:border-box!important;
+}
+html body.page-case-agent #learning > .shell{width:100%;}
+
+/* The raster arrow points north-east in its source. Rotate the asset itself
+ * clockwise, regardless of the surrounding card/layout transformations. */
+html body:is(.page-case-agent,.page-case-reports) img[src$="rough-arrow.webp"]{
+ transform:rotate(45deg)!important;rotate:none!important;
+ object-fit:contain!important;transform-origin:50% 50%!important;
+ align-self:center!important;justify-self:center!important;
+}
+
+/* Slower chapters, plus the existing two-viewport reading hold after April. */
+html body.page-case-reports #background.mr-health-story,
+html body.page-case-reports-v90 .mr-health-story__shell{
+ height:900svh!important;min-height:900svh!important;
+}
+/* The lifecycle diagram sits on the section, not inside a tinted panel. */
+html body.page-case-reports-v90 #lifecycle .mr-northstar{
+ background:transparent!important;background-image:none!important;
+ border:0!important;border-radius:0!important;box-shadow:none!important;
+ padding:0!important;color:var(--paper)!important;--ns-ink:var(--paper);
+}
+html body.page-case-reports-v90 #lifecycle .mr-northstar::before,
+html body.page-case-reports-v90 #lifecycle .mr-northstar::after{display:none!important;content:none!important;}
+html body.page-case-reports-v90 #lifecycle :is(.mr-northstar__caption p,.mr-northstar-legend,.mr-northstar-legend > small,.mr-northstar__scope,.mr-journey-stage header > span,.mr-journey-stage header small){
+ color:rgba(252,252,244,.76)!important;
+}
+html body.page-case-reports-v90 #lifecycle .mr-journey-paper{
+ color:var(--ink)!important;--ns-ink:var(--ink);
+}
+/* Equal-size lesson notes; revealing text does not resize any card. */
+html body.page-case-reports-v90 #learning .agent-learning-grid{
+ align-items:stretch!important;grid-auto-rows:1fr!important;
+}
+html body.page-case-reports-v90 #learning .agent-learning-note{
+ height:100%!important;display:flex!important;align-items:stretch!important;
+}
+html body.page-case-reports-v90 #learning .agent-learning-card{
+ height:100%!important;min-height:440px!important;display:grid!important;
+ grid-template-rows:94px auto minmax(84px,1fr) 40px!important;
+ gap:18px!important;align-content:stretch!important;
+}
+html body.page-case-reports-v90 #learning .agent-learning-card__title{margin-top:0!important;}
+html body.page-case-reports-v90 #learning .agent-learning-card__detail{
+ margin:0!important;min-height:84px!important;height:auto!important;max-height:none!important;
+ transform:none!important;transition:opacity 240ms ease,visibility 240ms ease!important;
+}
+html body.page-case-reports-v90 #learning .agent-learning-card__hint{margin-top:0!important;}
+@media(max-width:600px){
+ html body.page-case-reports-v90 #learning .agent-learning-card{min-height:430px!important;}
+}
+@media(prefers-reduced-motion:reduce){
+ html body.page-case-reports #background.mr-health-story,
+ html body.page-case-reports-v90 .mr-health-story__shell{height:100svh!important;min-height:100svh!important;}
+}
+html:not(.js) body.page-case-reports #background.mr-health-story,
+html:not(.js) body.page-case-reports-v90 .mr-health-story__shell{height:100svh!important;min-height:100svh!important;}
+
+/* One case-study footer: Agent Management's composition, links and reveal.
+ * A shared grid contains both rows inside the viewport, including the bottom
+ * links; no inline arrow SVGs can inherit a full-page image size. */
+html body:is(.page-case-agent,.page-case-reports) #main{margin-bottom:100svh!important;}
+html body:is(.page-case-agent,.page-case-reports) #contact.site-footer--case-reveal{
+ position:fixed!important;inset:auto 0 0!important;z-index:0!important;
+ width:100%!important;height:100svh!important;min-height:100svh!important;
+ padding:0!important;margin:0!important;box-sizing:border-box!important;
+ display:grid!important;grid-template-rows:minmax(0,1fr) auto!important;
+ background:var(--ink)!important;color:var(--paper)!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact .site-footer__top--simple{
+ width:100%!important;max-width:none!important;min-height:0!important;height:auto!important;
+ margin:0!important;padding:var(--gutter)!important;box-sizing:border-box!important;
+ display:flex!important;flex-direction:row!important;justify-content:space-between!important;
+ align-items:center!important;gap:40px!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact .site-footer__title{
+ font:500 clamp(96px,12vw,190px)/.76 var(--font-display)!important;
+ letter-spacing:-.07em!important;margin:0!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact .site-footer__note{
+ margin:30px 0 0!important;max-width:38ch!important;
+ font:400 clamp(15px,1.2vw,18px)/1.45 var(--font-body)!important;
+ color:rgba(252,252,244,.76)!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact .footer-next{
+ width:min(360px,34%)!important;min-width:0!important;display:grid!important;gap:14px!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact .eyebrow{
+ font:600 12px/1.4 var(--font-body)!important;letter-spacing:.12em!important;
+ margin:0!important;color:var(--paper)!important;opacity:.6!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact .footer-next__link{
+ display:grid!important;gap:5px!important;padding:16px 0!important;
+ border-bottom:1px solid rgba(252,252,244,.2)!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact .footer-next__link span{
+ font:400 12px/1.3 var(--font-body)!important;color:rgba(252,252,244,.6)!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact .footer-next__link strong{
+ font:500 clamp(18px,1.7vw,26px)/1.25 var(--font-display)!important;
+ letter-spacing:-.02em!important;color:var(--paper)!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact .site-footer__bottom--simple{
+ width:100%!important;max-width:none!important;min-height:0!important;margin:0!important;
+ padding:20px var(--gutter) 28px!important;display:flex!important;
+ justify-content:space-between!important;align-items:center!important;gap:20px!important;
+ border-top:1px solid rgba(252,252,244,.18)!important;
+}
+@media(max-width:980px),(max-height:700px){
+ html body:is(.page-case-agent,.page-case-reports) #main{margin-bottom:0!important;}
+ html body:is(.page-case-agent,.page-case-reports) #contact.site-footer--case-reveal{
+  position:relative!important;inset:auto!important;height:auto!important;
+  min-height:76svh!important;grid-template-rows:auto auto!important;
+ }
+ html body:is(.page-case-agent,.page-case-reports) #contact .site-footer__top--simple{
+  padding:80px var(--gutter) 56px!important;
+ }
+}
+@media(max-width:760px){
+ html body:is(.page-case-agent,.page-case-reports) #contact .site-footer__top--simple{
+  flex-direction:column!important;align-items:flex-start!important;gap:56px!important;
+ }
+ html body:is(.page-case-agent,.page-case-reports) #contact .footer-next{width:100%!important;max-width:none!important;}
+ html body:is(.page-case-agent,.page-case-reports) #contact .site-footer__title{font-size:clamp(86px,17vw,130px)!important;}
+}
+/* Fixed-origin evidence and identical inherited footer type on both pages. */
+html body.page-case-agent #main{overflow-anchor:none;}
+html body.page-case-agent #direction .zfi-product-evidence{
+ transform:none!important;opacity:1!important;transition:none!important;
+}
+html body:is(.page-case-agent,.page-case-reports) #contact.site-footer--case-reveal{
+ font:400 16px/1.52 var(--font-body)!important;
+}
+/* A reveal offset must not manufacture another gap above the COP screen. */
+html body.page-case-agent #architecture-shift .architecture-shift-v70__media.reveal{
+ transform:none!important;
+}
+/* The supplied COP artboard includes 224px of empty space above its UI.
+ * Frame out that padding only; keep the interface itself untouched. */
+html body.page-case-agent #architecture-shift .architecture-shift-v70__media{
+ position:relative!important;aspect-ratio:1600/676!important;height:auto!important;
+ overflow:hidden!important;
+}
+html body.page-case-agent #architecture-shift .architecture-shift-v70__media img{
+ position:absolute!important;inset:0 auto auto 0!important;
+ transform:translateY(-24.888889%)!important;
+}

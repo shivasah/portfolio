@@ -1,4 +1,4 @@
-/* V85 - scroll-driven Agent Management city analogy.
+/* V91 - scroll-driven Agent Management city analogy.
  * Scene artwork/physics adapted from the supplied Intelligent intersection HTML.
  * Four narrative phases scrub with native scroll; only the final live junction loops.
  * All content, fonts, navigation, and controls belong to the portfolio.
@@ -32,7 +32,7 @@ const colorCache=new Map();
 const hex=h=>{let c=colorCache.get(h);if(!c){c=[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));colorCache.set(h,c);}return c;};
 const shade=(h,k)=>'rgb('+hex(h).map(v=>Math.round(clamp(v*k,0,255))).join(',')+')';
 const mix=(a,b,k)=>{const A=hex(a),B=hex(b);return 'rgb('+A.map((v,i)=>Math.round(v+(B[i]-v)*k)).join(',')+')'};
-const orA=a=>'rgba(254,87,36,'+a.toFixed(3)+')';
+const orA=a=>'rgba(254,87,36,'+a.toFixed(3)+')', ylA=a=>'rgba(239,204,98,'+a.toFixed(3)+')';
 
 /* ---------------- responsive canvas ---------------- */
 const cv=root.querySelector('.agent-city-story__canvas'), ctx=cv.getContext('2d', {alpha:false});
@@ -135,13 +135,14 @@ function green(ix,iy,axis,t){let ph;
   if(ix===6&&iy===6&&t>=JAM0){if(t<REL)return false;ph=mod(t-REL,8);}
   else ph=mod(t+offsets[ix*12+iy],8);
   return axis==='x'?ph<3.4:(ph>=4&&ph<7.4);}
-const CARC=['#F4F3EA','#F4F3EA','#F9F8F1','#E2E0D4','#CFCDC0','#B9B7AA','#97968E'];
+// vehicle colours taken from the sticky notes on the Agent Management case study
+const CARC=['#EFCC62','#F1D578','#F4E3A3','#FFAB88','#F3EEE3','#F5EFE1','#EFCC62','#FFAB88','#F3EEE3'];
 function mkCar(r){const t=r();let c;
   if(t<0.07)c={k:'bus',L:2.2,Wd:0.62,H:0.64,vmax:3.6+r()*0.6};
   else if(t<0.16)c={k:'van',L:1.15,Wd:0.56,H:0.52,vmax:4+r()*0.9};
   else if(t<0.2)c={k:'taxi',L:0.98,Wd:0.52,H:0.36,vmax:4.4+r()*0.9};
   else c={k:'car',L:0.92+r()*0.12,Wd:0.5,H:0.34,vmax:4.3+r()*1.1};
-  const col=c.k==='taxi'?'#F7F6EE':(r()<0.035?OR:CARC[(r()*CARC.length)|0]);
+  const col=c.k==='taxi'?'#EFCC62':c.k==='bus'?(r()<0.5?'#F3EEE3':'#F4E3A3'):CARC[(r()*CARC.length)|0];
   c.col=[col,shade(col,0.93),shade(col,0.8)];c.v=0;c.p=0;c.np=0;c.brake=false;return c;}
 const DENS={'x60:1':2.0,'y60:1':2.6,'x60:-1':5.2,'y60:-1':3.8};
 const CR0=rng(777), lanes=[], TL={};
@@ -232,22 +233,22 @@ function drawShadows(){ctx.beginPath();
   ctx.fillStyle='rgba(35,36,40,0.07)';ctx.fill();}
 function drawDecals(t){
   // congestion: soft orange heat under queued lanes
-  const qa=0.24*sstep(2.9,3.7,t)*(1-0.55*sstep(5.6,6.4,t));
+  const qa=0.42*sstep(2.9,3.7,t)*(1-sstep(4.7,5.8,t));
   if(qa>0.004)for(const k of QORDER){const l=TL[k],e=qs[k];if(e<0.4)continue;const s=stopC(l),en=s-l.dir*e,hw=0.46,o=l.off;
     const pts=l.axis==='x'?[[s,o-hw],[en,o-hw],[en,o+hw],[s,o+hw]]:[[o-hw,s],[o-hw,en],[o+hw,en],[o+hw,s]];
     P(...(l.axis==='x'?[s,o]:[o,s]),0);const hx=PX,hy=PY;P(...(l.axis==='x'?[en,o]:[o,en]),0);
-    const g=ctx.createLinearGradient(hx,hy,PX,PY);g.addColorStop(0,orA(qa));g.addColorStop(1,orA(qa*0.15));
+    const g=ctx.createLinearGradient(hx,hy,PX,PY);g.addColorStop(0,ylA(qa));g.addColorStop(1,ylA(qa*0.12));
     ctx.beginPath();pts.forEach((p,i)=>i?ln(p[0],p[1],0):mv(p[0],p[1],0));ctx.closePath();ctx.fillStyle=g;ctx.fill();
     ctx.beginPath();if(l.axis==='x'){mv(s,o-hw,0);ln(s,o+hw,0);}else{mv(o-hw,s,0);ln(o+hw,s,0);}
-    ctx.strokeStyle=orA(Math.min(0.85,qa*3.4));ctx.lineWidth=Math.max(1.2,unit*0.07);ctx.stroke();}
+    ctx.strokeStyle=ylA(Math.min(0.95,qa*2.2));ctx.lineWidth=Math.max(1.2,unit*0.07);ctx.stroke();}
   // camera fields of view
   for(const c of cams){const p=t-c.start;if(p<0.55)continue;const l=TL[c.ln],g=s5((p-0.6)/0.5);if(g<=0)continue;
     const bl=0.42,ax=c.px+Math.cos(c.a)*bl,ay=c.py+Math.sin(c.a)*bl,s=stopC(l),F=1.6+6.6*g,fc=s-l.dir*F,w=1.15;
     const FL=l.axis==='x'?[fc,l.off-w]:[l.off-w,fc],FR=l.axis==='x'?[fc,l.off+w]:[l.off+w,fc],FC=l.axis==='x'?[fc,l.off]:[l.off,fc];
     P(ax,ay,0);const x0=PX,y0=PY;P(FC[0],FC[1],0);
-    const gr=ctx.createLinearGradient(x0,y0,PX,PY);gr.addColorStop(0,orA(0.2*g));gr.addColorStop(1,orA(0));
+    const gr=ctx.createLinearGradient(x0,y0,PX,PY);gr.addColorStop(0,orA(0.32*g));gr.addColorStop(1,orA(0));
     ctx.beginPath();mv(ax,ay,0);ln(FL[0],FL[1],0);ln(FR[0],FR[1],0);ctx.closePath();ctx.fillStyle=gr;ctx.fill();
-    const ge=ctx.createLinearGradient(x0,y0,PX,PY);ge.addColorStop(0,orA(0.55*g));ge.addColorStop(1,orA(0));
+    const ge=ctx.createLinearGradient(x0,y0,PX,PY);ge.addColorStop(0,orA(0.85*g));ge.addColorStop(1,orA(0));
     ctx.beginPath();mv(ax,ay,0);ln(FL[0],FL[1],0);mv(ax,ay,0);ln(FR[0],FR[1],0);ctx.strokeStyle=ge;ctx.lineWidth=Math.max(1,unit*0.03);ctx.stroke();
     // a single scan on activation, then a quiet periodic one
     let q=(p-0.65)/0.6,qa2=0.6;if(q>1){q=mod(p-1.25,3.4)/1.1;qa2=0.28;}
@@ -272,7 +273,7 @@ function drawTree(o,t){const sw=Math.sin(t*1.4+o.ph)*0.025;
 function drawPole(o,t){const zt=3,lw=Math.max(1,unit*0.055),hx=o.x+o.ax*o.al,hy=o.y+o.ay*o.al;
   ctx.beginPath();mv(o.x,o.y,0);ln(o.x,o.y,zt);ln(hx,hy,zt);ctx.strokeStyle=INK;ctx.lineWidth=lw;ctx.lineCap='round';ctx.stroke();
   if(ucss>9){box(hx-0.1,hy-0.1,hx+0.1,hy+0.1,zt-0.44,zt-0.02,'#3A3B40','#2E2F33',INK,null);
-    if(o.target){P(hx+0.1,hy+0.1,zt-0.22);ctx.fillStyle=green(o.ix,o.iy,o.axis,t)?'#86AE91':OR;circ(PX,PY,Math.max(1.3*DPR,unit*0.055));}}}
+    if(o.target){P(hx+0.1,hy+0.1,zt-0.22);ctx.fillStyle=green(o.ix,o.iy,o.axis,t)?'#86AE91':'#FFAB88';circ(PX,PY,Math.max(1.3*DPR,unit*0.055));}}}
 function band(x0,y0,x1,y1,za,zb,col){ctx.beginPath();mv(x0+0.08,y1,za);ln(x1-0.08,y1,za);ln(x1-0.08,y1,zb);ln(x0+0.08,y1,zb);ctx.closePath();
   mv(x1,y0+0.08,za);ln(x1,y1-0.08,za);ln(x1,y1-0.08,zb);ln(x1,y0+0.08,zb);ctx.closePath();ctx.fillStyle=col;ctx.fill();}
 function drawCar(c,t){const l=c.ln,ax=l.axis==='x',d=l.dir,x=ax?c.p:l.off,y=ax?l.off:c.p,hl=c.L/2,hw=c.Wd/2;
@@ -283,9 +284,8 @@ function drawCar(c,t){const l=c.ln,ax=l.axis==='x',d=l.dir,x=ax?c.p:l.off,y=ax?l
   else{const bz=c.H*0.55;box(x0,y0,x1,y1,0.06,bz,tp,lf,rt,st,lw);
     if(ucss>11){const sh=-0.08*c.L*d,ca=hl*0.48;const cx0=ax?x+sh-ca:x0+0.05,cx1=ax?x+sh+ca:x1-0.05,cy0=ax?y0+0.05:y+sh-ca,cy1=ax?y1-0.05:y+sh+ca;
       box(cx0,cy0,cx1,cy1,bz,c.H,tp,'#4A4B50','#3C3D42',st,lw);
-      if(c.k==='taxi'){const mx=(cx0+cx1)/2,my=(cy0+cy1)/2;box(mx-0.08,my-0.08,mx+0.08,my+0.08,c.H,c.H+0.07,OR,shade(OR,0.9),shade(OR,0.78),null);}}}
-  if(l.target&&c.brake&&t>2.6&&ucss>12){const dist=Math.abs(c.p-60);if(dist<16){const rx=ax?x-d*hl*0.97:x,ry=ax?y:y-d*hl*0.97,zz=c.H*0.4;
-    ctx.fillStyle=OR;for(const s of[-1,1]){P(ax?rx:rx+s*hw*0.6,ax?ry+s*hw*0.6:ry,zz);circ(PX,PY,Math.max(1.2*DPR,unit*0.045));}}}}
+      if(c.k==='taxi'){const mx=(cx0+cx1)/2,my=(cy0+cy1)/2;box(mx-0.08,my-0.08,mx+0.08,my+0.08,c.H,c.H+0.07,'#3A3B40','#2E2F33',INK,null);}}}
+}
 function drawCam(c,t){const p=t-c.start;if(p<0)return;
   const bl=0.42*backOut(p/0.22,2.2);let sc=backOut((p-0.1)/0.28,1.9);const _u=backOut((p-0.1)/0.28,1.9),yaw=c.a0+(c.a-c.a0)*backOut((p-0.34)/0.34,1.6);
   const ox=Math.cos(c.a),oy=Math.sin(c.a),mx=c.px+ox*bl,my=c.py+oy*bl,mz=2.68;
@@ -299,14 +299,14 @@ function drawCam(c,t){const p=t-c.start;if(p<0)return;
   faces.sort((a,b)=>a.k-b.k);const lw=Math.max(0.8,unit*0.022);
   for(const f of faces){const s=clamp(0.5+0.5*(f.ny-f.nx)/1.414,0,1);
     ctx.beginPath();mv(f.A[0],f.A[1],z0);ln(f.B[0],f.B[1],z0);ln(f.B[0],f.B[1],z1);ln(f.A[0],f.A[1],z1);ctx.closePath();
-    ctx.fillStyle=mix('#C9C7BB','#F5F4EC',s);ctx.fill();ctx.strokeStyle='rgba(35,36,40,0.6)';ctx.lineWidth=lw;ctx.stroke();
+    ctx.fillStyle=mix('#C9441C','#FE6A3C',s);ctx.fill();ctx.strokeStyle='rgba(35,36,40,0.7)';ctx.lineWidth=lw;ctx.stroke();
     if(f.i===0&&ucss>12){P((f.A[0]+f.B[0])/2,(f.A[1]+f.B[1])/2,(z0+z1)/2);const r=0.085*sc*unit;ctx.fillStyle=INK;circ(PX,PY,r);ctx.fillStyle='#5C5D62';circ(PX-r*0.25,PY-r*0.25,r*0.35);}}
   // charcoal sun hood, extended past the lens
   const ext=0.13*sc,h=[[L/2+ext,Wd/2+0.02*sc],[L/2+ext,-Wd/2-0.02*sc],[-L/2,-Wd/2-0.02*sc],[-L/2,Wd/2+0.02*sc]].map(([a,b])=>[cx+a*yx-b*yy,cy+a*yy+b*yx]);
   ctx.beginPath();h.forEach((q,i)=>i?ln(q[0],q[1],z1+0.02):mv(q[0],q[1],z1+0.02));ctx.closePath();ctx.fillStyle=INK;ctx.fill();
   if(p>0.62){const on=p>0.95||(Math.floor((p-0.62)/0.08)%2===0);
     P(cx-yx*L*0.3,cy-yy*L*0.3,z1+0.04);const r=Math.max(1.3*DPR,0.05*sc*unit);
-    if(on){ctx.fillStyle=OR;circ(PX,PY,r);}
+    if(on){ctx.fillStyle='#FBFBF4';circ(PX,PY,r);ctx.fillStyle=OR;circ(PX,PY,r*0.6);}
     const hp=(p-0.62)/0.5;if(hp<1){ctx.beginPath();ctx.arc(PX,PY,r*(1.5+hp*3.5),0,6.2832);ctx.strokeStyle=orA(0.5*(1-hp));ctx.lineWidth=Math.max(1,unit*0.02);ctx.stroke();}}}
 
 const vis=[];
@@ -321,9 +321,24 @@ function drawFade(){const r2=60*1.2247*unit;if(r2>Math.hypot(W,H)*2.2)return;P(T
   g.addColorStop(0,'rgba(251,251,244,0)');g.addColorStop(0.68,'rgba(251,251,244,0)');g.addColorStop(1,'rgba(251,251,244,1)');
   ctx.fillStyle=g;ctx.fillRect(-W*12,-H*24,W*24,H*48);ctx.restore();}
 
+// once cameras arrive, quiet the rest of the city so the junction carries the frame
+function drawFocus(t){const a=0.34*sstep(4.4,5.3,t);if(a<0.005)return;P(TX,TY,1);
+  const r=21*1.2247*unit;ctx.save();ctx.translate(PX,PY);ctx.scale(1,0.6);const g=ctx.createRadialGradient(0,0,r*0.45,0,0,r);
+  g.addColorStop(0,'rgba(251,251,244,0)');g.addColorStop(1,'rgba(251,251,244,'+a.toFixed(3)+')');ctx.fillStyle=g;ctx.fillRect(-W*12,-H*24,W*24,H*48);ctx.restore();}
+// detection brackets on vehicles inside each camera's field of view
+function drawDetect(t){for(const c of cams){const p=t-c.start;if(p<0.6)continue;const l=TL[c.ln],g=s5((p-0.6)/0.5),F=1.6+6.6*g,s=stopC(l);
+    ctx.beginPath();let any=false;
+    for(const v of l.cars){const ds=(s-(v.p+l.dir*v.L/2))*l.dir;if(ds<-0.2||ds>F-0.3)continue;any=true;
+      const ax=l.axis==='x',x=ax?v.p:l.off,y=ax?l.off:v.p,hl=v.L/2+0.12,hw=v.Wd/2+0.12,k=0.2;
+      const x0=ax?x-hl:x-hw,x1=ax?x+hl:x+hw,y0=ax?y-hw:y-hl,y1=ax?y+hw:y+hl;
+      for(const[cx,cy,sx,sy]of[[x0,y0,1,1],[x1,y0,-1,1],[x1,y1,-1,-1],[x0,y1,1,-1]]){mv(cx+sx*k,cy,0.02);ln(cx,cy,0.02);ln(cx,cy+sy*k,0.02);}
+      const zt=v.H+0.06;mv(x0,y0,zt);ln(x0+k,y0,zt);mv(x0,y0,zt);ln(x0,y0+k,zt);mv(x1,y1,zt);ln(x1-k,y1,zt);mv(x1,y1,zt);ln(x1,y1-k,zt);}
+    if(any){ctx.strokeStyle=orA(0.95*g);ctx.lineWidth=Math.max(1.2,unit*0.035);ctx.lineCap='round';ctx.stroke();}}}
+// redraw cameras above the focus veil so they stay crisp
+function drawCamsTop(t){if(t<4.4)return;for(const c of cams)drawCam(c,t);}
 function render(t){setCam(Math.min(t,DUR));ctx.setTransform(1,0,0,1,0,0);ctx.fillStyle=BG;ctx.fillRect(0,0,W,H);
   const haze=1-s5((t-0.3)/1.3);
-  if(haze<0.999){drawGround();drawMarks();drawShadows();drawDecals(t);drawObjects(t);drawFade();}
+  if(haze<0.999){drawGround();drawMarks();drawShadows();drawDecals(t);drawObjects(t);drawFocus(t);drawDetect(t);drawCamsTop(t);drawFade();}
   if(haze>0.001){ctx.globalAlpha=haze;ctx.fillStyle=BG;ctx.fillRect(0,0,W,H);ctx.globalAlpha=1;}
   drawClouds(t);}
 
@@ -336,7 +351,6 @@ const stage=root.querySelector('.agent-city-story__stage');
 const panels=[...root.querySelectorAll('[data-city-panel]')];
 const ticks=[...root.querySelectorAll('.agent-city-story__progress i')];
 const guide=root.querySelector('[data-city-guide]');
-const motionButton=root.querySelector('[data-city-motion]');
 const starts=[0,1.5,3,4.5], ends=[1.5,3,4.5,7];
 let warm=0,baked=0,ready=false,preparing=false;
 let raf=0,lastNow=0,lastPaint=-1,forcePaint=true;
@@ -412,7 +426,6 @@ function setUI(t,isHold){
   ticks.forEach((tick,i)=>tick.style.setProperty('--city-progress',clamp((t-starts[i])/(ends[i]-starts[i]),0,1).toFixed(3)));
   const nextGuide=isHold?'Scroll to continue':'Scroll to explore';
   if(guide.textContent!==nextGuide)guide.textContent=nextGuide;
-  if(motionButton.hidden===isHold)motionButton.hidden=!isHold;
   root.dataset.cityMode=isHold?(paused?'paused':'hold'):'scrub';
   // Useful for inspecting the live integration without exposing global APIs.
   root.dataset.cityTime=t.toFixed(3);
@@ -457,10 +470,6 @@ function frame(now){
   else lastNow=0;
 }
 
-motionButton.addEventListener('click',()=>{
-  paused=!paused;motionButton.setAttribute('aria-pressed',String(paused));
-  motionButton.textContent=paused?'Resume motion':'Pause motion';forcePaint=true;request();
-});
 window.addEventListener('scroll',request,{passive:true});
 window.addEventListener('resize',refresh,{passive:true});
 window.visualViewport?.addEventListener('resize',refresh,{passive:true});

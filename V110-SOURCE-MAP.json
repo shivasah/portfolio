@@ -1,0 +1,11 @@
+{
+  "base": "v109",
+  "finalFlowSource": "Monthly financial summary - building a report(2).html",
+  "sourceSha256": "cf132bee54181f4c4c9e66fb9ce549f8516de28b6475c11a2bf3a6d7135688b4",
+  "uploads1And2Identical": true,
+  "frameAssets": 58,
+  "excludedFromSource": "AI generation beat remains deferred; standalone scroll-snap and page controls are replaced by portfolio controls",
+  "loading": "On-demand decoded views and prepared patch/hover assets; short view cache rather than bulk-decoding all 143.1 million source-image pixels.",
+  "stripSource": "Report tools strip - QBO to Excel to Word to email(1).html",
+  "stripUploadMatchesEarlierStrip": true
+}

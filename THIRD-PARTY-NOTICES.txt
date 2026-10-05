@@ -42,3 +42,6 @@ luxury-character-hero-q95(1).zip. Original frame bytes are retained, with the
 engine adapted for inline portfolio integration and lifecycle suspension. The
 source package supplied no separate license text; this integration does not
 assert new ownership or licensing terms. No font binaries are distributed.
+
+V110 NOTE LETTERING
+The four fixed doctor-note lines are outlined from the handwriting supplied in the owner's report-tools demo. The portfolio preloader supplies only name outlines. No font binaries or embedded font programs are included. A locally installed Lastoria can be used by the browser.

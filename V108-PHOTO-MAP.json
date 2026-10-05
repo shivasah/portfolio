@@ -1,0 +1,68 @@
+[
+  {
+    "key": "avantika",
+    "title": "Avantika University",
+    "image": "assets/beyond/avantika.webp",
+    "description": "Designing conversations: a talk at Avantika University."
+  },
+  {
+    "key": "design-detective",
+    "title": "Design like a detective",
+    "image": "assets/beyond/design-detective.webp",
+    "description": "An online talk at the University of Washington during Protothon '25."
+  },
+  {
+    "key": "india-hci",
+    "title": "India HCI",
+    "image": "assets/beyond/india-hci.webp",
+    "description": "I co-led a workshop on cultural sensitivity through speculative design with two other presenters."
+  },
+  {
+    "key": "level-up",
+    "title": "Level up your portfolio",
+    "image": "assets/beyond/level-up.webp",
+    "description": "An online portfolio discussion session."
+  },
+  {
+    "key": "live-session",
+    "title": "Learn about UX",
+    "image": "assets/beyond/live-session.webp",
+    "description": "An online session on a broader perspective of UX, habituation and its effects."
+  },
+  {
+    "key": "phillychi",
+    "title": "PhillyCHI Design Slam",
+    "image": "assets/beyond/phillychi.webp",
+    "description": "Guest judge for the PhillyCHI Design Slam."
+  },
+  {
+    "key": "reva",
+    "title": "REVA University",
+    "image": "assets/beyond/reva.webp",
+    "description": "Judging the UX design hackathon at REVA University."
+  },
+  {
+    "key": "sweden",
+    "title": "Campus Varnamo",
+    "image": "assets/beyond/sweden.webp",
+    "description": "Presenting our group's work at Campus Varnamo, Sweden."
+  },
+  {
+    "key": "think-product",
+    "title": "Think like a product designer",
+    "image": "assets/beyond/think-product.webp",
+    "description": "An online talk at the University of Washington during Protothon '26."
+  },
+  {
+    "key": "ux-switch",
+    "title": "The UX switch",
+    "image": "assets/beyond/ux-switch.webp",
+    "description": "An online AMA for architecture students exploring UX."
+  },
+  {
+    "key": "voice-ui-workshop",
+    "title": "Voice User Interface Design",
+    "image": "assets/beyond/voice-ui-workshop.webp",
+    "description": "A workshop on Voice User Interface Design, held on 1 March 2025."
+  }
+]

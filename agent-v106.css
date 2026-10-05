@@ -1,0 +1,239 @@
+/* v106 - Agent Management only. No shared homepage/report styles are changed. */
+
+/* Each requested chapter occupies at least one viewport. Content can grow on
+   small screens instead of being cropped by a fixed height. */
+html body.page-case-agent #main > section:is(#problem,#why-it-mattered,#design,#layout,#balancing-act){
+  min-height:100vh!important;
+  min-height:100svh!important;
+  height:auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  padding-block:clamp(84px,11svh,140px)!important;
+  box-sizing:border-box!important;
+}
+html body.page-case-agent #main > section:is(#problem,#why-it-mattered,#design,#layout,#balancing-act) > .shell{
+  flex:none; width:100%;
+}
+html body.page-case-agent #main #roadmap.roadmap-subsection-v73{
+  min-height:100vh!important;
+  min-height:100svh!important;
+  height:auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  padding-block:clamp(84px,11svh,140px)!important;
+  box-sizing:border-box!important;
+}
+
+/* Remove legacy 126/150px minimums and reserved body space. The real content
+   determines the expanded height; a closed disclosure is only its summary. */
+html body.page-case-agent #direction .case-disclosure-slot,
+html body.page-case-agent #agent-lifecycle .case-disclosure-slot{
+  min-height:0!important;height:auto!important;padding:0!important;
+}
+html body.page-case-agent #direction details.zfi-more.case-disclosure,
+html body.page-case-agent #agent-lifecycle details.lifecycle-why.case-disclosure{
+  display:block!important;position:relative!important;inset:auto!important;
+  min-height:0!important;height:auto!important;max-height:none!important;
+  padding:0!important;margin:0!important;transform:none!important;
+  overflow:hidden!important;box-sizing:border-box!important;
+}
+html body.page-case-agent #direction details.case-disclosure > summary,
+html body.page-case-agent #agent-lifecycle details.case-disclosure > summary{
+  display:grid!important;grid-template-columns:minmax(0,1fr) 34px!important;
+  align-items:center!important;gap:18px!important;min-height:56px!important;
+  height:auto!important;margin:0!important;padding:11px 16px!important;
+  text-align:left!important;
+}
+html body.page-case-agent #direction details.case-disclosure .story-accordion__body,
+html body.page-case-agent #agent-lifecycle details.case-disclosure .story-accordion__body{
+  display:block!important;position:static!important;inset:auto!important;
+  min-height:0!important;max-height:none!important;grid-template-rows:none!important;
+  padding:0!important;margin:0!important;overflow:hidden!important;
+  transform:none!important;clip-path:none!important;
+}
+html body.page-case-agent #direction details.case-disclosure:not([open]) .story-accordion__body,
+html body.page-case-agent #agent-lifecycle details.case-disclosure:not([open]) .story-accordion__body{
+  display:none!important;height:0!important;
+}
+html body.page-case-agent #agent-lifecycle .case-disclosure-slot{
+  width:min(100%,740px)!important;max-width:100%!important;
+  margin:18px auto 0!important;align-self:center!important;
+}
+html body.page-case-agent #agent-lifecycle details.lifecycle-why.case-disclosure{
+  width:100%!important;max-width:none!important;
+}
+html body.page-case-agent #direction .story-accordion__inner{
+  padding:4px 18px 20px!important;
+}
+html body.page-case-agent #direction .zfi-limitations{
+  list-style:decimal!important;display:grid;gap:14px;
+  padding:0 0 0 1.35em!important;margin:18px 0 0!important;
+  font:400 15px/1.55 var(--font-body);color:var(--paper);
+}
+html body.page-case-agent #direction .zfi-limitations li{padding-left:4px;}
+html body.page-case-agent #direction .zfi-limitations li::marker{color:var(--orange);font-weight:600;}
+html body.page-case-agent #direction .zfi-limitations strong{font-weight:650;}
+
+/* The COP chapter owns a genuinely black field, including its media wrapper.
+   This selector outranks the older #main > .section--ink surface rules. */
+html body.page-case-agent #main > section#architecture-shift,
+html body.page-case-agent #main > section#architecture-shift > .architecture-shift-v70__grid,
+html body.page-case-agent #main > section#architecture-shift .architecture-shift-v70__copy,
+html body.page-case-agent #main > section#architecture-shift .architecture-shift-v70__media{
+  background:#000!important;background-image:none!important;color:var(--paper)!important;
+}
+html body.page-case-agent #main > section#architecture-shift::before,
+html body.page-case-agent #main > section#architecture-shift::after{
+  display:none!important;content:none!important;
+}
+
+/* New, isolated renderer. The host scroll owns the timeline, not a nested
+   iframe or a second scroll root. Existing section anchors are preserved. */
+html body.page-case-agent #main > section#solution.agent-install-flow{
+  position:relative!important;display:block!important;
+  height:900vh!important;height:900svh!important;min-height:0!important;
+  padding:0!important;margin:0!important;overflow:visible!important;
+  background:#000!important;color:#fff!important;border:0!important;
+  isolation:isolate;
+}
+#solution.agent-install-flow .agent-install-flow__sticky{
+  position:sticky;top:0;height:100vh;height:100svh;
+  width:100%;max-width:1560px;margin-inline:auto;box-sizing:border-box;
+  display:grid;grid-template-columns:minmax(200px,.65fr) minmax(0,2.35fr);
+  grid-template-rows:auto minmax(0,1fr) auto;
+  gap:24px 38px;align-items:center;
+  padding:90px max(var(--gutter),36px) 30px;overflow:hidden;background:#000;
+}
+#solution.agent-install-flow .agent-install-flow__header{grid-area:1/1/2/-1;min-width:0;}
+#solution.agent-install-flow .agent-install-flow__header h2{
+  font:500 clamp(38px,4.5vw,64px)/1.08 var(--font-display)!important;
+  letter-spacing:-.035em!important;color:#fff;margin:0!important;
+}
+#solution.agent-install-flow .agent-install-flow__header h3{
+  font:500 clamp(21px,2.1vw,31px)/1.25 var(--font-display)!important;
+  letter-spacing:-.02em;color:#fff;max-width:52ch;margin:14px 0 0!important;
+}
+#solution.agent-install-flow .agent-install-flow__copy{
+  grid-area:2/1;display:grid;align-items:center;min-width:0;align-self:center;
+}
+#solution.agent-install-flow .agent-install-step{
+  grid-area:1/1;align-self:center;visibility:hidden;opacity:0;
+  pointer-events:none;transition:opacity 180ms ease;max-width:30ch;
+}
+#solution.agent-install-flow .agent-install-step.is-active{visibility:visible;opacity:1;pointer-events:auto;}
+#solution.agent-install-flow .agent-install-step p{
+  margin:0!important;color:#fff!important;opacity:1!important;
+  font:400 clamp(17px,1.4vw,21px)/1.55 var(--font-body)!important;
+  letter-spacing:normal!important;
+}
+#solution.agent-install-flow .agent-install-flow__visual{
+  grid-area:2/2;align-self:stretch;justify-self:stretch;
+  min-height:0;min-width:0;display:grid;place-items:center;
+}
+#solution.agent-install-flow .agent-install-flow__stage{
+  position:relative;width:var(--install-width,100%);height:var(--install-height,auto);
+  aspect-ratio:1457/955;max-width:100%;max-height:100%;background:#f7f7f7;
+  border-radius:clamp(5px,.6vw,10px);overflow:hidden;isolation:isolate;
+  box-shadow:0 20px 55px #0005,0 0 0 1px #ffffff18;
+}
+#solution.agent-install-flow .agent-install-flow__poster{
+  display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;
+}
+#solution.agent-install-flow[data-install-ready] .agent-install-flow__poster{display:none;}
+#solution.agent-install-flow .agent-install-layer{
+  position:absolute;inset:0;opacity:0;visibility:hidden;pointer-events:none;
+}
+#solution.agent-install-flow .agent-install-layer svg,
+#solution.agent-install-flow .agent-install-overlay{
+  display:block;width:100%;height:100%;max-width:100%;
+}
+#solution.agent-install-flow .agent-install-overlay{
+  position:absolute;inset:0;pointer-events:none;z-index:10;
+}
+#solution.agent-install-flow .agent-install-flow__controls{
+  grid-area:3/2;display:flex;align-items:center;justify-content:center;gap:20px;
+  min-height:44px;color:#fff;
+}
+#solution.agent-install-flow .agent-install-flow__controls button{
+  display:grid;place-items:center;width:44px;height:44px;padding:0;border-radius:50%;
+  border:1px solid #ffffff50;background:transparent;color:#fff;font:400 23px/1 var(--font-body);
+}
+#solution.agent-install-flow .agent-install-flow__controls button:is(:hover,:focus-visible){background:var(--orange);color:var(--ink);border-color:var(--orange);}
+#solution.agent-install-flow .agent-install-flow__controls button:disabled{opacity:.28;cursor:default;}
+#solution.agent-install-flow .agent-install-flow__controls span{font:500 14px/1.4 var(--font-body);min-width:64px;text-align:center;}
+#solution.agent-install-flow .agent-install-flow__rail{
+  position:absolute;bottom:12px;left:max(var(--gutter),36px);right:max(var(--gutter),36px);
+  display:flex;gap:5px;pointer-events:none;
+}
+#solution.agent-install-flow .agent-install-flow__rail i{height:2px;flex:1;background:#ffffff26;position:relative;overflow:hidden;}
+#solution.agent-install-flow .agent-install-flow__rail i::after{
+  content:"";position:absolute;inset:0;background:var(--orange);
+  transform:scaleX(var(--progress,0));transform-origin:left;
+}
+#solution.agent-install-flow .agent-install-flow__fallback{
+  width:min(100%,1200px);margin:auto;padding:90px var(--gutter);
+}
+#solution.agent-install-flow .agent-install-flow__fallback figure{margin:40px 0;}
+#solution.agent-install-flow .agent-install-flow__fallback figcaption{color:#fff;margin-top:18px;font:400 18px/1.5 var(--font-body);}
+
+@media(max-width:900px) and (min-height:560px){
+  #solution.agent-install-flow .agent-install-flow__sticky{
+    grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto auto;
+    gap:16px;padding:86px var(--gutter) 30px;
+  }
+  #solution.agent-install-flow .agent-install-flow__header{grid-area:1/1;}
+  #solution.agent-install-flow .agent-install-flow__header h2{font-size:clamp(30px,6.5vw,44px)!important;}
+  #solution.agent-install-flow .agent-install-flow__header h3{font-size:clamp(17px,3.5vw,22px)!important;margin-top:10px!important;}
+  #solution.agent-install-flow .agent-install-flow__visual{grid-area:2/1;}
+  #solution.agent-install-flow .agent-install-flow__copy{grid-area:3/1;}
+  #solution.agent-install-flow .agent-install-step{max-width:100%;}
+  #solution.agent-install-flow .agent-install-step p{font-size:17px!important;line-height:1.45!important;}
+  #solution.agent-install-flow .agent-install-flow__controls{grid-area:4/1;}
+  #solution.agent-install-flow .agent-install-flow__rail{left:var(--gutter);right:var(--gutter);}
+}
+@media(max-height:720px) and (min-width:901px){
+  #solution.agent-install-flow .agent-install-flow__sticky{padding-top:78px;gap:14px 28px;}
+  #solution.agent-install-flow .agent-install-flow__header h2{font-size:40px!important;}
+  #solution.agent-install-flow .agent-install-flow__header h3{font-size:21px!important;margin-top:10px!important;}
+}
+@media(max-height:559px){
+  #solution.agent-install-flow .agent-install-flow__sticky{
+    padding:72px 28px 24px;gap:10px 22px;
+    grid-template-columns:minmax(160px,.8fr) minmax(0,2.2fr);
+  }
+  #solution.agent-install-flow .agent-install-flow__header h2{font-size:26px!important;}
+  #solution.agent-install-flow .agent-install-flow__header h3{font-size:16px!important;margin-top:6px!important;max-width:none;}
+  #solution.agent-install-flow .agent-install-step p{font-size:14px!important;line-height:1.4!important;}
+  #solution.agent-install-flow .agent-install-flow__controls{min-height:38px;gap:12px;}
+  #solution.agent-install-flow .agent-install-flow__controls button{width:38px;height:38px;font-size:20px;}
+}
+@media(max-width:450px) and (max-height:559px){
+  #solution.agent-install-flow .agent-install-flow__sticky{
+    grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr) auto auto;
+    padding-inline:16px;
+  }
+  #solution.agent-install-flow .agent-install-flow__visual{grid-area:2/1;}
+  #solution.agent-install-flow .agent-install-flow__copy{grid-area:3/1;}
+  #solution.agent-install-flow .agent-install-flow__controls{grid-area:4/1;}
+}
+@media(prefers-reduced-motion:reduce){
+  html body.page-case-agent #main > section#solution.agent-install-flow{height:auto!important;min-height:100svh!important;}
+  #solution.agent-install-flow .agent-install-flow__sticky{position:relative;height:auto;min-height:100svh;grid-template-rows:auto auto auto;overflow:visible;}
+  #solution.agent-install-flow .agent-install-flow__visual{height:clamp(200px,55vw,650px);}
+  #solution.agent-install-flow .agent-install-step{transition:none;}
+  #solution.agent-install-flow .agent-install-overlay{display:none;}
+  #solution.agent-install-flow .agent-install-flow__rail{display:none;}
+}
+html:not(.js) body.page-case-agent #main > section#solution.agent-install-flow{height:auto!important;min-height:0!important;}
+html:not(.js) #solution.agent-install-flow .agent-install-flow__sticky{display:none!important;}
+/* Native details still works when scripts are disabled; there is then no
+   animation controller to replace the legacy zero-height body declaration. */
+html:not(.js) body.page-case-agent #direction details.case-disclosure[open] .story-accordion__body,
+html:not(.js) body.page-case-agent #agent-lifecycle details.case-disclosure[open] .story-accordion__body{
+  height:auto!important;
+}
+html:not(.js) body.page-case-agent details.case-disclosure[open] .case-disclosure__plus{
+  transform:rotate(90deg);opacity:0;
+}

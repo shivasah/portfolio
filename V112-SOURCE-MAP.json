@@ -1,0 +1,21 @@
+{
+  "version": 112,
+  "source": "Management Reports \u2014 landing hero options.html",
+  "source_sha256": "1e69be69e462610db9a7531d0de6773313ea4fff1c0463f9e54aea2a40575f34",
+  "chosen_option": "B: four tools fold into one report, then the builder appears",
+  "excluded": "Option A, option switch, standalone after-section and font imports",
+  "files": [
+    "management-landing.css",
+    "management-landing.js"
+  ],
+  "changes": [
+    "Responsive native copy outside the illustration scale",
+    "Portfolio Cabinet Grotesk and Syne font tokens; no new font files",
+    "Portrait illustration layout with four source windows in two columns",
+    "Viewport-fit desktop builder and three metadata facts",
+    "Publish and send wording instead of the source scheduling claim, which remains deferred",
+    "Read case study and skip-motion links target the existing At a glance section",
+    "Source chart viewBox includes the full legend and all four series groups",
+    "Reduced-motion final composition; no-JavaScript static fallback"
+  ]
+}

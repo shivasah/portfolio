@@ -1,0 +1,14 @@
+{
+  "retained_assets_unchanged": 316,
+  "changed_existing_root_files": [
+    "MANAGEMENT-REPORTS-ASSETS.md",
+    "MANAGEMENT-REPORTS-ASSET-MANIFEST.json",
+    "agent-management.html",
+    "index.html",
+    "management-reports.html",
+    "MANAGEMENT-REPORTS-TODO.md"
+  ],
+  "syntax_checks": 45,
+  "syntax_errors": [],
+  "missing_direct_local_references": []
+}

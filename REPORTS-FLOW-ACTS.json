@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Start from a template",
+    "description": "Emily starts with a ready-made management report rather than a blank page.",
+    "poster": "assets/reports/report-flow/poster-01.webp"
+  },
+  {
+    "title": "Brand the cover",
+    "description": "She chooses a cover style that fits the client’s identity.",
+    "poster": "assets/reports/report-flow/poster-02.webp"
+  },
+  {
+    "title": "Bring in the financials",
+    "description": "She adds a balance sheet from the content library; it joins the report and its contents.",
+    "poster": "assets/reports/report-flow/poster-03.webp"
+  },
+  {
+    "title": "Shape the KPIs",
+    "description": "She changes the chart type, adds revenue and resizes the KPI to fit the page.",
+    "poster": "assets/reports/report-flow/poster-04.webp"
+  },
+  {
+    "title": "Write with live numbers",
+    "description": "She writes commentary using variables that resolve to values for the reporting period.",
+    "poster": "assets/reports/report-flow/poster-05.webp"
+  },
+  {
+    "title": "Preview the report",
+    "description": "She checks the complete paginated report as the recipient will see it.",
+    "poster": "assets/reports/report-flow/poster-06.webp"
+  },
+  {
+    "title": "Publish and send",
+    "description": "She publishes and sends the PDF to James; he gets a report he can read before their review.",
+    "poster": "assets/reports/report-flow/poster-07.webp"
+  }
+]

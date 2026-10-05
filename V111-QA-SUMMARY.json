@@ -1,0 +1,172 @@
+{
+  "version": 111,
+  "browserChecks": {
+    "method": "Offline Chromium; local resources fulfilled from disk, external requests blocked",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 960,
+        "matchedSectionJumps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "pages": 16,
+        "missingLegacySections": 5,
+        "horizontalOverflow": false,
+        "pageEnlargement": "passed, fit and actual size",
+        "focusRestore": "passed",
+        "cursorInDialog": "passed",
+        "keyboard": "passed",
+        "errors": [],
+        "missingLocalAssets": []
+      },
+      {
+        "width": 1024,
+        "height": 768,
+        "matchedSectionJumps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "pages": 16,
+        "missingLegacySections": 5,
+        "horizontalOverflow": false,
+        "pageEnlargement": "passed, fit and actual size",
+        "focusRestore": "passed",
+        "cursorInDialog": "passed",
+        "keyboard": "passed",
+        "errors": [],
+        "missingLocalAssets": []
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "matchedSectionJumps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "pages": 16,
+        "missingLegacySections": 5,
+        "horizontalOverflow": false,
+        "pageEnlargement": "passed, fit and actual size",
+        "focusRestore": "passed",
+        "cursorInDialog": "passed",
+        "keyboard": "passed",
+        "errors": [],
+        "missingLocalAssets": []
+      },
+      {
+        "width": 360,
+        "height": 640,
+        "matchedSectionJumps": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "pages": 16,
+        "missingLegacySections": 5,
+        "horizontalOverflow": false,
+        "pageEnlargement": "passed, fit and actual size",
+        "focusRestore": "passed",
+        "cursorInDialog": "passed",
+        "keyboard": "passed",
+        "errors": [],
+        "missingLocalAssets": []
+      }
+    ],
+    "noJavaScript": {
+      "pages": 16,
+      "usableViewer": true,
+      "deadControlsHidden": true,
+      "errors": [],
+      "missingLocalAssets": []
+    },
+    "normalMotion": {
+      "smoothNavigation": "passed",
+      "enlargedGradientIds": "unique",
+      "magneticCursor": "visible in dialog; restored on close",
+      "errors": []
+    }
+  },
+  "extraChecks": {
+    "scrollBoundary": "At the comparison end, wheel scrolling continues down the main page.",
+    "sectionNavigation": "Comparison appears in the right-hand progress rail and its drawer.",
+    "allEnlargeButtons": "All 16 report pages open and close.",
+    "touch": "Section navigation, enlarged reading, actual-size toggle and close passed on a touch-capable mobile context."
+  },
+  "staticChecks": {
+    "changedBaselineFiles": [
+      "MANAGEMENT-REPORTS-ASSET-MANIFEST.json",
+      "MANAGEMENT-REPORTS-ASSETS.md",
+      "MANAGEMENT-REPORTS-TODO.md",
+      "README.md",
+      "management-reports.html"
+    ],
+    "newSectionPlacement": "after solution; before balancing-act",
+    "sourceReportContent": "16 pages text-matched to the uploaded HTML; only prose em dashes changed to semicolons",
+    "unchangedCaseStudySections": [
+      "top",
+      "pitch",
+      "overview",
+      "background",
+      "problem",
+      "why-it-mattered",
+      "user",
+      "discovery",
+      "lifecycle",
+      "legacy",
+      "design",
+      "period",
+      "solution",
+      "balancing-act",
+      "impact",
+      "bottleneck",
+      "influence",
+      "learning"
+    ],
+    "homepage": "byte-identical to v110",
+    "agentManagement": "byte-identical to v110",
+    "finalWalkthroughAssets": "byte-identical to v110",
+    "footer": "unchanged",
+    "missingReferences": [],
+    "fontFilesBundled": [],
+    "duplicateStaticIDs": [],
+    "javascriptSyntax": "passed"
+  },
+  "notTested": [
+    "Live deployment",
+    "External webfonts",
+    "Safari",
+    "Firefox"
+  ]
+}

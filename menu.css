@@ -210,7 +210,7 @@ html.is-fast-navigation .page-wipe { transition-duration: 320ms !important; }
 .site-footer__bottom [data-contact-links]:empty + .back-top { margin-left: auto; }
 
 /* ========================================================================== 
-   V70 — shared Lastoria wordmark in header + full-screen menu
+   V70; shared Lastoria wordmark in header + full-screen menu
    ========================================================================== */
 .header-logo--signature {
   width: 92px !important;
@@ -262,7 +262,7 @@ html.is-fast-navigation .page-wipe { transition-duration: 320ms !important; }
   .site-menu__label .site-menu__explore { font-size: 12px; }
 }
 
-/* V74 — simplified menu */
+/* V74; simplified menu */
 .site-menu__scroll{display:grid;align-items:start}
 .site-menu__primary--simple{width:min(100%,920px);margin-inline:auto}
 .site-menu__primary--simple .site-menu__page,.site-menu__primary--simple .site-menu__project{grid-template-columns:minmax(0,1fr)}
@@ -281,7 +281,7 @@ html.is-fast-navigation .page-wipe { transition-duration: 320ms !important; }
 @media(max-width:560px){.site-menu__primary--simple .site-menu__page strong{font-size:clamp(32px,10vw,48px)}.site-menu__projects-panel{padding-left:16px}.site-menu__signature-v70{width:88px;height:38px}}
 
 
-/* V83 — private case studies remain visible in Selected works but cannot open. */
+/* V83; private case studies remain visible in Selected works but cannot open. */
 .site-menu__project--locked {
   position: relative;
   cursor: default;

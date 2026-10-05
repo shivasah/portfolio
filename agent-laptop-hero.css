@@ -1,0 +1,453 @@
+/* V99 · scroll-scrubbed Agent Management laptop hero with adaptive HQ frames. */
+.agent-laptop-sequence {
+  --sequence-viewport: 100vh;
+  --sequence-height: 400vh;
+  --sequence-top: 0px;
+  position: relative;
+  min-height: 100vh;
+  height: var(--sequence-height);
+  padding: 0 !important;
+  overflow: visible !important;
+  background: var(--paper);
+}
+.agent-laptop-sequence__sticky {
+  position: sticky;
+  top: var(--sequence-top);
+  height: 100vh;
+  height: var(--sequence-viewport);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--paper);
+}
+.agent-laptop-sequence .editorial-grid-lines { z-index: 0; }
+.agent-laptop-sequence .agent-hero-v72__stage {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  padding: 78px clamp(20px,5vw,78px) 36px;
+}
+.agent-laptop-sequence .agent-hero-v72__copy {
+  position: relative;
+  z-index: 2;
+  width: min(1080px, 90vw);
+  padding: 0 0 clamp(80px,12vh,150px);
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  pointer-events: none;
+}
+.agent-laptop-sequence .agent-hero-v72__kicker { margin: 0 0 20px; }
+.agent-laptop-sequence .agent-hero-v72__title {
+  max-width: none;
+  margin-inline: auto;
+  font-size: clamp(72px,10vw,154px);
+  line-height: .82;
+}
+.agent-laptop-sequence .agent-hero-v72__subtitle {
+  max-width: 38ch;
+  margin: clamp(24px,3.5vh,38px) auto 0;
+}
+.agent-laptop-sequence .agent-hero-v72__facts {
+  width: min(660px, 82vw);
+  max-width: none;
+  margin: clamp(24px,3.2vh,34px) auto 0;
+  text-align: center;
+}
+.agent-laptop-sequence .agent-hero-v72__scroll {
+  z-index: 8;
+  right: clamp(20px,5vw,78px);
+  bottom: 24px;
+}
+.agent-laptop-sequence__stage {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: clamp(-38px,-3.2vh,-18px);
+  width: min(96vw, 1180px, calc((var(--sequence-viewport) - 76px) * 1.7));
+  aspect-ratio: 17 / 10;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.agent-laptop-sequence__stage canvas,
+.agent-laptop-sequence__stage picture,
+.agent-laptop-sequence__stage img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.agent-laptop-sequence__stage canvas { opacity: 0; }
+.agent-laptop-sequence.has-frame:not(.is-static) .agent-laptop-sequence__stage canvas { opacity: 1; }
+.agent-laptop-sequence.has-frame:not(.is-static) [data-sequence-poster] { opacity: 0; }
+.agent-laptop-sequence.is-static { height: 100vh; }
+.agent-laptop-sequence.is-static .agent-laptop-sequence__sticky { position: relative; }
+
+@supports (height: 100svh) {
+  .agent-laptop-sequence { --sequence-viewport: 100svh; --sequence-height: 400svh; }
+  .agent-laptop-sequence.is-static { height: 100svh; }
+}
+@media (max-width: 900px) {
+  .agent-laptop-sequence { --sequence-height: 360vh; }
+  .agent-laptop-sequence .agent-hero-v72__stage { display: grid; padding: 72px 18px 22px; }
+  .agent-laptop-sequence .agent-hero-v72__copy { width: min(94vw,760px); padding-bottom: clamp(96px,18vh,170px); }
+  .agent-laptop-sequence .agent-hero-v72__title { font-size: clamp(60px,14vw,110px); }
+  .agent-laptop-sequence .agent-hero-v72__subtitle { margin-inline: auto; }
+  .agent-laptop-sequence .agent-hero-v72__facts { width: min(88vw,620px); }
+  .agent-laptop-sequence__stage { width: min(112vw, 980px); bottom: clamp(-18px,-2vh,-6px); }
+  .agent-laptop-sequence .agent-hero-v72__scroll { display: none; }
+}
+@media (max-width: 600px) {
+  .agent-laptop-sequence { --sequence-height: 340vh; }
+  .agent-laptop-sequence .agent-hero-v72__copy { padding: 0 0 32vh; }
+  .agent-laptop-sequence .agent-hero-v72__kicker { margin-bottom: 14px; }
+  .agent-laptop-sequence .agent-hero-v72__title { font-size: clamp(54px,16vw,82px); line-height: .84; }
+  .agent-laptop-sequence .agent-hero-v72__subtitle { max-width: 30ch; font-size: clamp(16px,4.7vw,20px); }
+  .agent-laptop-sequence .agent-hero-v72__facts { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; width: 94vw; padding-top: 14px; }
+  .agent-laptop-sequence .agent-hero-v72__facts > div:last-child { grid-column: auto; }
+  .agent-laptop-sequence .agent-hero-v72__facts dt { font-size: 10px; }
+  .agent-laptop-sequence .agent-hero-v72__facts dd { font-size: 12px; }
+  .agent-laptop-sequence__stage { width: 128vw; bottom: 4vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .agent-laptop-sequence { height: 100vh !important; height: 100svh !important; }
+  .agent-laptop-sequence__sticky { position: relative; }
+}
+
+/* V96; override legacy cover rules so the laptop sequence owns the hero timeline. */
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence{
+  --sequence-height: 430vh;
+  position:relative!important;
+  height:var(--sequence-height)!important;
+  min-height:var(--sequence-height)!important;
+  padding:0!important;
+  overflow:visible!important;
+  background:var(--paper)!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__sticky{
+  position:sticky!important;
+  top:0!important;
+  width:100%!important;
+  height:100vh!important;
+  height:100svh!important;
+  min-height:100vh!important;
+  overflow:hidden!important;
+  isolation:isolate;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__stage{
+  position:relative!important;
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  grid-template-rows:1fr!important;
+  grid-template-areas:none!important;
+  place-items:center!important;
+  width:100%!important;
+  max-width:none!important;
+  height:100%!important;
+  min-height:100%!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy{
+  position:absolute!important;
+  z-index:2!important;
+  inset:50% auto auto 50%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:min(980px,88vw)!important;
+  max-width:none!important;
+  padding:0!important;
+  margin:0!important;
+  gap:0!important;
+  text-align:center!important;
+  transform:translate(-50%,-56%)!important;
+  pointer-events:none!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__kicker{
+  display:block!important;
+  margin:0 0 18px!important;
+  text-align:center!important;
+  font-size:14px!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title{
+  display:block!important;
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+  padding:0!important;
+  text-align:center!important;
+  font:500 clamp(74px,9.3vw,148px)/.88 var(--font-display)!important;
+  letter-spacing:-.06em!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__subtitle{
+  display:block!important;
+  width:min(620px,76vw)!important;
+  max-width:none!important;
+  margin:28px auto 0!important;
+  text-align:center!important;
+  font:500 clamp(22px,2.15vw,31px)/1.22 var(--font-display)!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__facts{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  width:min(650px,76vw)!important;
+  max-width:none!important;
+  margin:26px auto 0!important;
+  padding:20px 0 0!important;
+  gap:16px!important;
+  text-align:center!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+  position:absolute!important;
+  z-index:5!important;
+  left:50%!important;
+  top:50%!important;
+  bottom:auto!important;
+  width:min(148vw,1680px)!important;
+  max-width:none!important;
+  height:auto!important;
+  aspect-ratio:17/10!important;
+  margin:0!important;
+  padding:0!important;
+  transform:translate(-50%,-22%)!important;
+  pointer-events:none!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__scroll{
+  position:absolute!important;
+  z-index:8!important;
+  right:auto!important;
+  left:50%!important;
+  bottom:22px!important;
+  inset:auto auto 22px 50%!important;
+  width:max-content!important;
+  margin:0!important;
+  transform:translateX(-50%)!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence.is-static{
+  height:100vh!important;
+  height:100svh!important;
+  min-height:100vh!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence.is-static .agent-laptop-sequence__sticky{
+  position:relative!important;
+}
+@media(max-width:900px){
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence{--sequence-height:390vh}
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy{
+    width:min(92vw,760px)!important;
+    transform:translate(-50%,-60%)!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title{
+    font-size:clamp(62px,14vw,108px)!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+    width:166vw!important;
+    transform:translate(-50%,-18%)!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__scroll{display:none!important}
+}
+@media(max-width:600px){
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence{--sequence-height:360vh}
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy{
+    width:94vw!important;
+    transform:translate(-50%,-65%)!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title{
+    font-size:clamp(54px,16vw,82px)!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__subtitle{
+    width:min(86vw,440px)!important;
+    margin-top:18px!important;
+    font-size:clamp(17px,4.7vw,21px)!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__facts{
+    width:92vw!important;
+    gap:8px!important;
+    margin-top:18px!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+    width:205vw!important;
+    transform:translate(-50%,-8%)!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence{
+    height:100vh!important;height:100svh!important;min-height:100vh!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__sticky{position:relative!important}
+}
+
+/* V97; frame files + direct window-scroll timeline. The laptop crosses the centered copy. */
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence{
+  --sequence-height:430vh;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy{
+  left:50%!important;
+  top:47%!important;
+  width:min(1040px,90vw)!important;
+  transform:translate(-50%,-50%)!important;
+  text-align:center!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title,
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__subtitle,
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__facts,
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__kicker{
+  margin-left:auto!important;
+  margin-right:auto!important;
+  text-align:center!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+  left:50%!important;
+  top:50%!important;
+  width:min(154vw,1760px)!important;
+  transform:translate(-50%,-55%)!important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage canvas,
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage picture,
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage img{
+  object-fit:contain!important;
+}
+@media(max-width:900px){
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence{--sequence-height:390vh}
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy{
+    top:45%!important;
+    transform:translate(-50%,-50%)!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+    width:180vw!important;
+    transform:translate(-50%,-52%)!important;
+  }
+}
+@media(max-width:600px){
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence{--sequence-height:360vh}
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy{
+    top:43%!important;
+    transform:translate(-50%,-50%)!important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+    width:225vw!important;
+    transform:translate(-50%,-48%)!important;
+  }
+}
+
+/* V100; fit the laptop inside the viewport while keeping the lid wide enough
+   to pass across the centred Agent Management title. */
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+  width:min(136vw,1560px,calc((100vh - 64px) * 1.7))!important;
+  transform:translate(-50%,-52%)!important;
+}
+@supports (height:100svh){
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+    width:min(136vw,1560px,calc((100svh - 64px) * 1.7))!important;
+  }
+}
+@media(max-width:900px){
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+    width:min(154vw,1260px,calc((100vh - 48px) * 1.7))!important;
+    transform:translate(-50%,-50%)!important;
+  }
+  @supports (height:100svh){
+    body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+      width:min(154vw,1260px,calc((100svh - 48px) * 1.7))!important;
+    }
+  }
+}
+@media(max-width:600px){
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+    width:min(182vw,980px,calc((100vh - 32px) * 1.7))!important;
+    transform:translate(-50%,-48%)!important;
+  }
+  @supports (height:100svh){
+    body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage{
+      width:min(182vw,980px,calc((100svh - 32px) * 1.7))!important;
+    }
+  }
+}
+
+/* v104: smaller, centred, viewport-safe composition. The timeline now ends
+   before the source frames crop the bottom edge of the physical laptop. */
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence {
+  --laptop-fit-width: min(112vw, 1320px, calc((100vh - 144px) * 1.7));
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage {
+  width: var(--laptop-fit-width) !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title {
+  font-size: min(clamp(74px, 9.3vw, 148px), calc(var(--laptop-fit-width) * .112)) !important;
+}
+@supports (height: 100svh) {
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence {
+    --laptop-fit-width: min(112vw, 1320px, calc((100svh - 144px) * 1.7));
+  }
+}
+@media (max-width: 900px) {
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence {
+    --laptop-fit-width: min(112vw, 1120px, calc((100vh - 128px) * 1.7));
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title {
+    font-size: min(clamp(62px, 14vw, 108px), calc(var(--laptop-fit-width) * .112)) !important;
+  }
+  @supports (height: 100svh) {
+    body.page-case-agent .agent-cover-fixed.agent-laptop-sequence {
+      --laptop-fit-width: min(112vw, 1120px, calc((100svh - 128px) * 1.7));
+    }
+  }
+}
+@media (max-width: 600px) {
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence {
+    --laptop-fit-width: min(112vw, 820px, calc((100vh - 112px) * 1.7));
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy {
+    top: 48% !important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title {
+    font-size: min(clamp(54px, 16vw, 82px), calc(var(--laptop-fit-width) * .112)) !important;
+  }
+  @supports (height: 100svh) {
+    body.page-case-agent .agent-cover-fixed.agent-laptop-sequence {
+      --laptop-fit-width: min(112vw, 820px, calc((100svh - 112px) * 1.7));
+    }
+  }
+}
+
+/* On narrow screens, the closed laptop sits below the copy, then the opening
+   lid rises in front of it. The final frame fits horizontally as well. */
+@media (max-width:600px) {
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage {
+    transform:translate(-50%,-50%) translateY(calc((1 - clamp(0, calc(var(--laptop-progress,0) * 2.4), 1)) * 96px)) !important;
+  }
+}
+@media (max-width:600px) {
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy {
+    top:51% !important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-laptop-sequence__stage {
+    transform:translate(-50%,-50%) translateY(calc((1 - clamp(0, calc(var(--laptop-progress,0) * 2.4), 1)) * clamp(96px,22vh,168px))) !important;
+  }
+  /* Supporting details make room as the device opens on narrow screens.
+     The headline itself is never faded; the lid passes in front of it. */
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__subtitle,
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__facts {
+    opacity:max(0,calc(1 - var(--laptop-progress,0) * 3)) !important;
+  }
+}
+@media (max-width:600px) {
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title {
+    font-size:min(clamp(54px,16vw,82px),calc(var(--laptop-fit-width) * .106)) !important;
+  }
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__subtitle,
+  body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__facts {
+    transition:none !important;
+  }
+}

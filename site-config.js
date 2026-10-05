@@ -4,7 +4,7 @@
    Add real profile URLs here to override them. Email remains optional. */
 window.PORTFOLIO_CONFIG = Object.freeze({
   contact: {
-    email: '',
+    email: 'sah.shiva@gmail.com',
     linkedin: '',
     medium: '',
     github: ''

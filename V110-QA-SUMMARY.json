@@ -1,0 +1,416 @@
+{
+  "browser": "Offline Chromium, in-memory documents with local assets; external fonts and live hosting not tested",
+  "actResults": [
+    {
+      "act": 1,
+      "seconds": 6.28,
+      "state": {
+        "started": true,
+        "playing": 0,
+        "shown": 1,
+        "requested": 1,
+        "visible": true,
+        "view": "vp3"
+      },
+      "imagesComplete": true,
+      "errors": []
+    },
+    {
+      "act": 2,
+      "seconds": 6.99,
+      "state": {
+        "started": true,
+        "playing": 0,
+        "shown": 2,
+        "requested": 2,
+        "visible": true,
+        "view": "6"
+      },
+      "imagesComplete": true,
+      "errors": []
+    },
+    {
+      "act": 3,
+      "seconds": 8.9,
+      "state": {
+        "started": true,
+        "playing": 0,
+        "shown": 3,
+        "requested": 3,
+        "visible": true,
+        "view": "8"
+      },
+      "imagesComplete": true,
+      "errors": []
+    },
+    {
+      "act": 4,
+      "seconds": 16.67,
+      "state": {
+        "started": true,
+        "playing": 0,
+        "shown": 4,
+        "requested": 4,
+        "visible": true,
+        "view": "15"
+      },
+      "imagesComplete": true,
+      "errors": []
+    },
+    {
+      "act": 5,
+      "seconds": 25.82,
+      "state": {
+        "started": true,
+        "playing": 0,
+        "shown": 5,
+        "requested": 5,
+        "visible": true,
+        "view": "27"
+      },
+      "imagesComplete": true,
+      "errors": []
+    },
+    {
+      "act": 6,
+      "seconds": 10.97,
+      "state": {
+        "started": true,
+        "playing": 0,
+        "shown": 6,
+        "requested": 6,
+        "visible": true,
+        "view": "28"
+      },
+      "imagesComplete": true,
+      "errors": []
+    },
+    {
+      "act": 7,
+      "seconds": 7.74,
+      "state": {
+        "started": true,
+        "playing": 0,
+        "shown": 7,
+        "requested": 7,
+        "visible": true,
+        "view": "vp30"
+      },
+      "imagesComplete": true,
+      "errors": []
+    }
+  ],
+  "stress": {
+    "reverseAct": 3,
+    "rapidFinalState": {
+      "started": true,
+      "playing": 0,
+      "shown": 4,
+      "requested": 4,
+      "visible": true,
+      "view": "15"
+    },
+    "errors": []
+  },
+  "features": {
+    "index.html": {
+      "errors": [],
+      "cursor": {
+        "opacity": "1",
+        "grey": "rgb(100, 102, 106)",
+        "white": "rgb(255, 255, 255)",
+        "dotGrey": "rgb(100, 102, 106)",
+        "dotOrange": "rgb(255, 86, 35)",
+        "angle": "90.66deg"
+      }
+    },
+    "agent-management.html": {
+      "errors": [],
+      "cursor": {
+        "opacity": "1",
+        "grey": "rgb(100, 102, 106)",
+        "white": "rgb(255, 255, 255)",
+        "dotGrey": "rgb(100, 102, 106)",
+        "dotOrange": "rgb(255, 86, 35)",
+        "angle": "90.66deg"
+      }
+    },
+    "management-reports.html": {
+      "errors": [],
+      "cursor": {
+        "opacity": "1",
+        "grey": "rgb(100, 102, 106)",
+        "white": "rgb(255, 255, 255)",
+        "dotGrey": "rgb(100, 102, 106)",
+        "dotOrange": "rgb(255, 86, 35)",
+        "angle": "90.66deg"
+      }
+    },
+    "strip_plays": true,
+    "strip_offscreen_pauses": true,
+    "handwriting_svg_count": 4,
+    "handwriting_images_loaded": true,
+    "host_ready": true,
+    "scroll_stops": [
+      {
+        "expected": 1,
+        "host": "1",
+        "requested": 1
+      },
+      {
+        "expected": 2,
+        "host": "2",
+        "requested": 2
+      },
+      {
+        "expected": 3,
+        "host": "3",
+        "requested": 3
+      },
+      {
+        "expected": 4,
+        "host": "4",
+        "requested": 4
+      },
+      {
+        "expected": 5,
+        "host": "5",
+        "requested": 5
+      },
+      {
+        "expected": 6,
+        "host": "6",
+        "requested": 6
+      },
+      {
+        "expected": 7,
+        "host": "7",
+        "requested": 7
+      }
+    ],
+    "reduced": {
+      "overflow": false,
+      "static_screens_visible": true,
+      "static_screens": 7
+    },
+    "no-js": {
+      "overflow": false,
+      "static_screens_visible": true,
+      "static_screens": 7
+    },
+    "touch": {
+      "overflow": false,
+      "static_screens_visible": false,
+      "static_screens": 7,
+      "carousel_next": "2",
+      "note_tap_open": "true"
+    }
+  },
+  "viewports": {
+    "1440": {
+      "noHorizontalOverflow": true,
+      "flowReady": true,
+      "matchingPersonaSizes": true,
+      "flowBoxes": [
+        {
+          "selector": ".mr-report-pin",
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "bottom": 900
+        },
+        {
+          "selector": ".mr-report-scenario",
+          "x": 66.234375,
+          "y": 90,
+          "w": 1307.53125,
+          "h": 120.890625,
+          "bottom": 210.890625
+        },
+        {
+          "selector": ".mr-report-caption",
+          "x": 66.234375,
+          "y": 471.59375,
+          "w": 274.546875,
+          "h": 93.703125,
+          "bottom": 565.296875
+        },
+        {
+          "selector": ".mr-report-viewport",
+          "x": 451.28125,
+          "y": 234.9375,
+          "w": 850.5,
+          "h": 567,
+          "bottom": 801.9375
+        },
+        {
+          "selector": ".mr-report-controls",
+          "x": 379.296875,
+          "y": 826,
+          "w": 994.46875,
+          "h": 44,
+          "bottom": 870
+        }
+      ],
+      "errors": []
+    },
+    "768": {
+      "noHorizontalOverflow": true,
+      "flowReady": true,
+      "matchingPersonaSizes": true,
+      "flowBoxes": [
+        {
+          "selector": ".mr-report-pin",
+          "x": 0,
+          "y": 0,
+          "w": 768,
+          "h": 1024,
+          "bottom": 1024
+        },
+        {
+          "selector": ".mr-report-scenario",
+          "x": 34,
+          "y": 181.234375,
+          "w": 700,
+          "h": 112.53125,
+          "bottom": 293.765625
+        },
+        {
+          "selector": ".mr-report-caption",
+          "x": 74,
+          "y": 808.421875,
+          "w": 620,
+          "h": 26.34375,
+          "bottom": 834.765625
+        },
+        {
+          "selector": ".mr-report-viewport",
+          "x": 34,
+          "y": 317.765625,
+          "w": 700,
+          "h": 466.65625,
+          "bottom": 784.421875
+        },
+        {
+          "selector": ".mr-report-controls",
+          "x": 34,
+          "y": 858.765625,
+          "w": 700,
+          "h": 44,
+          "bottom": 902.765625
+        }
+      ],
+      "errors": []
+    },
+    "390": {
+      "noHorizontalOverflow": true,
+      "flowReady": true,
+      "matchingPersonaSizes": true,
+      "flowBoxes": [
+        {
+          "selector": ".mr-report-pin",
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 844,
+          "bottom": 844
+        },
+        {
+          "selector": ".mr-report-scenario",
+          "x": 24,
+          "y": 211.96875,
+          "w": 342,
+          "h": 94.046875,
+          "bottom": 306.015625
+        },
+        {
+          "selector": ".mr-report-caption",
+          "x": 24,
+          "y": 582.015625,
+          "w": 342,
+          "h": 48,
+          "bottom": 630.015625
+        },
+        {
+          "selector": ".mr-report-viewport",
+          "x": 24,
+          "y": 330.015625,
+          "w": 342,
+          "h": 228,
+          "bottom": 558.015625
+        },
+        {
+          "selector": ".mr-report-controls",
+          "x": 24,
+          "y": 654.015625,
+          "w": 342,
+          "h": 40,
+          "bottom": 694.015625
+        }
+      ],
+      "errors": []
+    },
+    "360": {
+      "noHorizontalOverflow": true,
+      "flowReady": true,
+      "matchingPersonaSizes": true,
+      "flowBoxes": [
+        {
+          "selector": ".mr-report-pin",
+          "x": 0,
+          "y": 0,
+          "w": 360,
+          "h": 640,
+          "bottom": 640
+        },
+        {
+          "selector": ".mr-report-scenario",
+          "x": 24,
+          "y": 80,
+          "w": 312,
+          "h": 94.046875,
+          "bottom": 174.046875
+        },
+        {
+          "selector": ".mr-report-caption",
+          "x": 24,
+          "y": 494,
+          "w": 312,
+          "h": 72,
+          "bottom": 566
+        },
+        {
+          "selector": ".mr-report-viewport",
+          "x": 24,
+          "y": 230.015625,
+          "w": 312,
+          "h": 208,
+          "bottom": 438.015625
+        },
+        {
+          "selector": ".mr-report-controls",
+          "x": 24,
+          "y": 582,
+          "w": 312,
+          "h": 40,
+          "bottom": 622
+        }
+      ],
+      "errors": []
+    }
+  },
+  "structure": {
+    "matchingSourceAssets": 58,
+    "preservedEngines": {
+      "agent-laptop-hero.js": true,
+      "agent-laptop-hero.css": true,
+      "agent-install-flow.js": true,
+      "agent.js": true,
+      "homepage-beyond.js": true,
+      "homepage-shelf-tools.js": true,
+      "app.js": true
+    },
+    "errors": []
+  }
+}

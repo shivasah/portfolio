@@ -1,4 +1,4 @@
-/* V82 — single clean header pill across light and dark page sections. */
+/* V82; single clean header pill across light and dark page sections. */
 .site-header.site-header--floating,
 .site-header.site-header--floating[data-theme="dark"],
 .site-header.site-header--floating[data-theme="light"] {
@@ -69,7 +69,7 @@
 }
 
 
-/* V84 — the floating menu trigger is also the close control. */
+/* V84; the floating menu trigger is also the close control. */
 body.menu-open .site-header.site-header--floating {
   opacity: 1 !important;
   visibility: visible !important;

@@ -292,7 +292,7 @@
   .character-hero__scroll { left: 20px; bottom: 14px; transform: none; }
 }
 
-/* v58 — the site header owns navigation; the hero only carries identity and proof. */
+/* v58; the site header owns navigation; the hero only carries identity and proof. */
 .character-hero__nav { display: none !important; }
 
 /* Rotating proof block. The slightly brighter portfolio orange deliberately covers

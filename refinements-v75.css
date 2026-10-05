@@ -1,4 +1,4 @@
-/* V75 — Agent Management interaction/layout refinements + shelf/menu polish. */
+/* V75; Agent Management interaction/layout refinements + shelf/menu polish. */
 
 /* Global top-right menu trigger: exact Lastoria outline asset, rendered as a wordmark. */
 .site-menu-trigger{
@@ -13,7 +13,7 @@
 .site-menu-trigger:hover{background:var(--ink)!important;color:var(--paper)!important}
 @media(max-width:620px){.site-menu-trigger{width:88px!important;min-width:88px!important}.site-menu-trigger__shiva{width:62px;height:30px}}
 
-/* Agent hero — user supplied MacBook artwork, already composited with product UI. */
+/* Agent hero; user supplied MacBook artwork, already composited with product UI. */
 body.page-case-agent .agent-cover-fixed{min-height:100svh!important;padding:clamp(104px,12vh,148px) 0 clamp(48px,7vh,88px)!important;overflow:hidden}
 body.page-case-agent .agent-cover-fixed .agent-hero-v72__stage{
   width:min(1500px,calc(100% - 48px));margin:auto;display:grid!important;

@@ -1,0 +1,139 @@
+/* v105: original UPPER-ROW pencil personas, not the duotone clones.
+   SVG geometry, texture, timing and motion curves come from the supplied HTML.
+   All classes, keyframes and SVG IDs are namespaced to protect the portfolio. */
+.persona-motion {
+  --pm-paper: var(--paper, #fbfbf3);
+  --pm-ink: var(--ink, #232428);
+  --pm-orange: var(--orange, #ff5623);
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  min-width: 0;
+  margin: 0;
+}
+.persona-motion__scene {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--pm-paper);
+}
+.persona-motion .persona-motion__art {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: visible;
+}
+.persona-motion .persona-motion__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 12px 0 0;
+  color: var(--ink-soft, #4d4d50);
+  font: 400 13px/1.5 var(--font-body, sans-serif);
+}
+.persona-motion--adnan .persona-motion__caption { justify-content: flex-end; }
+.persona-motion .persona-motion__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 8px 13px;
+  border: 1px solid var(--line, rgba(35,36,40,.22));
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft, #4d4d50);
+  font: 500 11px/1.2 var(--font-body, sans-serif);
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background-color .2s, color .2s;
+}
+.persona-motion .persona-motion__toggle::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: currentColor;
+}
+.persona-motion .persona-motion__toggle[aria-pressed="true"]::before { background: transparent; }
+.persona-motion .persona-motion__toggle:hover { background: var(--ink); color: var(--paper); }
+.persona-motion .persona-motion__toggle:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
+.persona-motion .persona-motion__toggle[hidden] { display: none !important; }
+/* Preserve the existing text columns; remove raster-only minimum sizing. */
+.page-case-agent #user .persona__portrait.persona-motion { display: block; min-height: 0; margin-inline: auto; }
+.page-case-reports-v90 .mr-persona > .persona-motion { max-width: 500px; }
+.page-case-reports-v90 .mr-reader > .persona-motion { max-width: 360px; justify-self: end; }
+@media (max-width: 767px) {
+  .page-case-agent #user .persona__portrait.persona-motion { max-width: 360px; }
+  .page-case-reports-v90 .mr-persona > .persona-motion { max-width: 340px; margin-inline: auto; }
+  .page-case-reports-v90 .mr-reader > .persona-motion { max-width: 280px; margin-inline: auto; grid-row: 1; justify-self: center; }
+  .persona-motion .persona-motion__toggle { min-height: 44px; }
+}
+
+.persona-motion .pm-ink{fill:none;stroke:var(--pm-ink);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.persona-motion .pm-thin{stroke-width:2.8}
+.persona-motion .pm-fill{fill:var(--pm-ink);stroke:none}
+.persona-motion .pm-paper{fill:var(--pm-paper)}
+.persona-motion .pm-or{fill:var(--pm-orange);stroke:none}
+.persona-motion .pm-ors{fill:none;stroke:var(--pm-orange);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+
+/* every motion is slow and eased */
+.persona-motion .pm-a{transform-box:fill-box;transform-origin:center}
+@keyframes pm-breathe{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.006)}}
+@keyframes pm-blink{0%,93%,100%{transform:scaleY(1)}95.5%{transform:scaleY(.12)}}
+@keyframes pm-twinkle{0%,100%{transform:scale(.7) rotate(0);opacity:.35}50%{transform:scale(1.08) rotate(12deg);opacity:1}}
+@keyframes pm-spin{to{transform:rotate(360deg)}}
+@keyframes pm-read{0%,100%{transform:translateX(-3px)}45%,55%{transform:translateX(3px)}}
+@keyframes pm-float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(2deg)}}
+@keyframes pm-softblink{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes pm-type{0%,100%{transform:translateY(0)}50%{transform:translateY(2.5px)}}
+@keyframes pm-drift{0%{transform:translate(0,0) rotate(-6deg);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translate(-40px,-190px) rotate(14deg);opacity:0}}
+@keyframes pm-draw{0%,8%{stroke-dashoffset:var(--L)}40%,86%{stroke-dashoffset:0}96%,100%{stroke-dashoffset:var(--L)}}
+@keyframes pm-key{0%,18%,100%{fill:transparent}6%,12%{fill:var(--pm-orange)}}
+@keyframes pm-steam{0%{transform:translateY(8px);opacity:0}30%{opacity:.9}100%{transform:translateY(-34px);opacity:0}}
+@keyframes pm-grow{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+@keyframes pm-glance{0%,52%,100%{transform:translate(-3px,3px)}60%,78%{transform:translate(4px,-3px)}}
+@keyframes pm-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(4deg)}}
+@keyframes pm-sip{0%,70%,100%{transform:translate(0,0) rotate(0)}80%,88%{transform:translate(-6px,-14px) rotate(-8deg)}}
+.persona-motion .pm-breathe,.persona-motion .pm-float,.persona-motion .pm-drift,.persona-motion .pm-grow,.persona-motion .pm-sway,.persona-motion .pm-sip,.persona-motion .pm-type,.persona-motion .pm-read,.persona-motion .pm-glance,.persona-motion .pm-steam{transform-box:fill-box}
+.persona-motion .pm-float,.persona-motion .pm-drift{transform-origin:center}
+.persona-motion .pm-breathe{animation:pm-breathe 7s ease-in-out infinite}
+.persona-motion .pm-blink{animation:pm-blink 7.5s ease-in-out infinite}
+.persona-motion .pm-tw{animation:pm-twinkle 6s ease-in-out infinite}
+.persona-motion .pm-spin{animation:pm-spin 28s linear infinite}
+.persona-motion .pm-read{animation:pm-read 9s ease-in-out infinite}
+.persona-motion .pm-float{animation:pm-float 9s ease-in-out infinite}
+.persona-motion .pm-softblink{animation:pm-softblink 4.5s ease-in-out infinite}
+.persona-motion .pm-type{animation:pm-type 1.6s ease-in-out infinite}
+.persona-motion .pm-drift{animation:pm-drift 11s ease-in-out infinite}
+.persona-motion .pm-draw{stroke-dasharray:var(--L);animation:pm-draw 12s ease-in-out infinite}
+.persona-motion .pm-key{animation:pm-key 9s ease-in-out infinite}
+.persona-motion .pm-steam{animation:pm-steam 5.5s ease-out infinite}
+.persona-motion .pm-grow{transform-origin:50% 100%;animation:pm-grow 8s ease-in-out infinite}
+.persona-motion .pm-glance{animation:pm-glance 11s ease-in-out infinite}
+.persona-motion .pm-sway{transform-origin:50% 100%;animation:pm-sway 8s ease-in-out infinite}
+.persona-motion .pm-sip{transform-origin:50% 100%;animation:pm-sip 13s ease-in-out infinite}
+
+
+/* CSS + SMIL share a single controller. No continuously running JavaScript loop. */
+.persona-motion .persona-motion__art * { animation-play-state: paused !important; }
+.persona-motion[data-motion-state="playing"] .persona-motion__art * { animation-play-state: running !important; }
+.persona-motion:not([data-motion-ready]) .persona-motion__art *,
+.persona-motion[data-motion-reduced] .persona-motion__art * { animation: none !important; }
+.persona-motion:not([data-motion-ready]) .pm-draw,
+.persona-motion[data-motion-reduced] .pm-draw { stroke-dashoffset: 0; }
+.persona-motion .pm-particle { opacity: 0; }
+.persona-motion[data-motion-ready]:not([data-motion-reduced]) .pm-particle { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .persona-motion .persona-motion__art * { animation: none !important; }
+  .persona-motion .pm-draw { stroke-dashoffset: 0; }
+  .persona-motion .pm-particle { opacity: 0 !important; }
+  .persona-motion .persona-motion__toggle { display: none !important; }
+}

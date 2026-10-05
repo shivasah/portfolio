@@ -1,0 +1,167 @@
+/* v111. The comparison is isolated from the portfolio's existing components.
+   The report pages remain HTML/SVG and scale through an SVG viewport, so they
+   also render correctly with JavaScript disabled. */
+#output-comparison {
+  --mrc-toolbar-h: 72px;
+  --mrc-report-font: "Nunito Sans", "Avenir Next", Avenir, Helvetica, Arial, sans-serif;
+  position: relative;
+  display: block;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-block: clamp(80px, 9vw, 140px);
+  background: var(--paper);
+  color: var(--ink);
+  isolation: isolate;
+  scroll-margin-top: 36px;
+}
+#output-comparison .mrc-heading {display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:clamp(28px,4vw,64px);align-items:end}
+#output-comparison .mrc-heading .section-label {font:500 13px/1.5 var(--font-body);letter-spacing:.02em;color:var(--ink-soft);margin:0 0 22px}
+#output-comparison #mrc-title {font:500 clamp(38px,4.6vw,68px)/1.06 var(--font-display);letter-spacing:-.04em;margin:0;max-width:none;text-wrap:balance}
+#output-comparison #mrc-title>span {color:var(--orange)}
+#output-comparison .mrc-intro {font:400 clamp(16px,1.3vw,18px)/1.6 var(--font-body);color:var(--ink-soft);margin:0;max-width:45ch}
+#output-comparison .mrc-rail {position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:8px;padding:16px clamp(16px,2.4vw,36px) 14px;margin:0;background:var(--paper-2);border-bottom:1px solid var(--line)}
+#output-comparison .mrc-jump {display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:40px;border:1px solid var(--line);border-radius:999px;padding:9px 15px;background:var(--paper);color:var(--ink);font:500 12px/1.3 var(--font-body);white-space:nowrap;touch-action:manipulation;transition:background 180ms ease,color 180ms ease,border-color 180ms ease}
+#output-comparison .mrc-jump:hover {border-color:var(--ink)}
+#output-comparison .mrc-jump[aria-current="true"] {background:var(--ink);color:var(--paper);border-color:var(--ink)}
+#output-comparison .mrc-jump--new::after {content:"";width:6px;height:6px;flex:none;border-radius:50%;background:var(--orange)}
+#output-comparison .mrc-viewer {position:relative;height:min(calc(100vh - 110px),980px);height:min(calc(100svh - 110px),980px);margin-top:36px;overflow:auto;overflow-x:hidden;border:1px solid var(--line);border-radius:20px;background:var(--paper-2);overscroll-behavior-y:auto;scrollbar-width:thin;scrollbar-color:#9b9891 var(--paper-2)}
+#output-comparison:not(.is-enhanced) .mrc-viewer {margin-top:36px}
+#output-comparison .mrc-columns {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(16px,2.4vw,36px);row-gap:28px;padding:0 clamp(16px,2.4vw,36px) 36px;align-items:start}
+#output-comparison .mrc-colhead {position:sticky;top:var(--mrc-toolbar-h);z-index:4;min-height:67px;margin:0 -1px;padding:20px 1px 16px;background:var(--paper-2);box-shadow:0 10px 12px var(--paper-2);display:flex;flex-wrap:wrap;justify-content:space-between;align-content:start;align-items:baseline;gap:6px 12px;font:500 12px/1.4 var(--font-body);color:var(--ink-soft)}
+#output-comparison .mrc-colhead b {font:600 14px/1.35 var(--font-body);color:var(--ink)}
+#output-comparison .mrc-colhead--new b::before {content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--orange);margin-right:7px;vertical-align:1px}
+#output-comparison .mrc-cell {display:flex;flex-direction:column;gap:14px;min-width:0;scroll-margin-top:90px}
+#output-comparison .mrc-tag {font:500 11px/1.5 var(--font-body);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);min-height:18px}
+#output-comparison .mrc-sheet {position:relative;width:100%;aspect-ratio:714/1010;overflow:hidden;border-radius:5px;background:#fff;box-shadow:0 1px 0 #2324280f,0 12px 28px #23242812;flex:none}
+#output-comparison .mrc-page-stage {display:block;width:100%;height:100%;max-width:none;isolation:isolate}
+#output-comparison .mrc-page-html {width:714px;height:1010px;position:relative;box-sizing:border-box}
+#output-comparison .mrc-pg {position:relative;width:714px;height:1010px;margin:0;overflow:hidden;box-sizing:border-box;font:400 16px/normal Arial,Helvetica,sans-serif;letter-spacing:normal;word-spacing:normal;text-align:left;text-transform:none;isolation:isolate}
+#output-comparison .mrc-pg * {box-sizing:border-box}
+#output-comparison .mrc-pg :is(h1,h2,h3,h4,h5,h6) {max-width:none;text-wrap:wrap;letter-spacing:normal}
+#output-comparison .mrc-pg :is(p,ul,ol) {max-width:none}
+#output-comparison .mrc-pg :is(p,li,table) {text-wrap:wrap}
+#output-comparison .mrc-pg ul {list-style:disc}
+#output-comparison .mrc-ghost {position:relative;width:100%;aspect-ratio:714/1010;border:1.5px dashed var(--line);border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;color:var(--ink-soft)}
+#output-comparison .mrc-ghost b {font:500 clamp(18px,1.8vw,26px)/1.2 var(--font-display);letter-spacing:-.025em}
+#output-comparison .mrc-ghost span {font:400 14px/1.6 var(--font-body);max-width:28ch}
+#output-comparison .mrc-enlarge {position:absolute;z-index:2;top:8px;right:8px;display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:var(--paper);color:var(--ink);border:1px solid #23242855;border-radius:50%;box-shadow:0 1px 4px #0002;opacity:0;transition:opacity 180ms ease,background 180ms ease;cursor:pointer}
+#output-comparison .mrc-enlarge svg {display:block;width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#output-comparison .mrc-sheet:hover .mrc-enlarge,#output-comparison .mrc-sheet:focus-within .mrc-enlarge {opacity:1}
+#output-comparison .mrc-enlarge:hover {background:var(--ink);color:var(--paper)}
+#output-comparison .mrc-hint {font:400 12px/1.6 var(--font-body);color:var(--ink-soft);margin:20px 0 0}
+#output-comparison :is(button,.mrc-viewer,.mrc-dialog-scroll):focus-visible {outline:2px solid var(--orange);outline-offset:4px}
+#output-comparison .mrc-dialog {position:fixed;inset:0;width:min(870px,calc(100vw - 32px));height:min(94vh,1120px);height:min(94svh,1120px);max-width:none;max-height:none;padding:0;margin:auto;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);overflow:hidden;box-shadow:0 24px 100px #0008}
+#output-comparison .mrc-dialog:not([open]) {display:none}
+#output-comparison .mrc-dialog[open] {display:flex;flex-direction:column}
+#output-comparison .mrc-dialog::backdrop {background:#101010bf;backdrop-filter:blur(6px)}
+#output-comparison .mrc-dialog-bar {display:flex;gap:16px;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid var(--line);flex:none}
+#output-comparison #mrc-dialog-title {font:500 20px/1.3 var(--font-display);letter-spacing:-.02em;margin:0}
+#output-comparison .mrc-dialog-actions {display:flex;gap:12px;align-items:center;flex:none}
+#output-comparison .mrc-zoom {font:500 12px/1.2 var(--font-body);padding:10px 14px;border:1px solid var(--line);border-radius:999px;min-height:40px}
+#output-comparison .mrc-close {width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%}
+#output-comparison .mrc-close svg {width:20px;height:20px;stroke:currentColor;stroke-width:1.7;fill:none}
+#output-comparison .mrc-dialog-scroll {padding:24px;overflow:auto;flex:1;min-height:0;overscroll-behavior:contain;background:var(--paper-2)}
+#output-comparison .mrc-dialog-page {width:min(100%,714px);aspect-ratio:714/1010;margin-inline:auto;box-shadow:0 8px 30px #0002;background:white}
+#output-comparison .mrc-dialog.is-actual .mrc-dialog-page {width:714px;max-width:none}
+body.mrc-modal-open {overflow:hidden!important}
+@media(hover:none) {#output-comparison .mrc-enlarge{opacity:1}}
+@media(max-width:900px) {
+ #output-comparison .mrc-heading{grid-template-columns:1fr;gap:24px}
+ #output-comparison .mrc-intro{max-width:65ch}
+ #output-comparison .mrc-colhead span{display:none}
+ #output-comparison .mrc-colhead{min-height:64px}
+ #output-comparison .mrc-rail{gap:7px}
+}
+@media(max-width:600px) {
+ #output-comparison {padding-block:80px}
+ #output-comparison #mrc-title{font-size:clamp(34px,8.8vw,48px);line-height:1.08}
+ #output-comparison .mrc-heading .section-label{margin-bottom:16px}
+ #output-comparison .mrc-rail{padding:12px 10px;gap:6px}
+ #output-comparison .mrc-jump{min-height:36px;font-size:11px;padding:8px 9px}
+ #output-comparison .mrc-viewer{height:calc(100svh - 96px);margin-top:28px;border-radius:12px}
+ #output-comparison .mrc-columns{column-gap:10px;row-gap:22px;padding:0 10px 24px}
+ #output-comparison .mrc-colhead{padding:17px 0 12px;min-height:68px;align-items:flex-start;align-content:center}
+ #output-comparison .mrc-colhead b{font-size:12px;line-height:1.35}
+ #output-comparison .mrc-tag{font-size:10px;letter-spacing:.01em;min-height:30px;display:flex;align-items:end}
+ #output-comparison .mrc-cell{gap:10px}
+ #output-comparison .mrc-ghost{padding:14px 10px;gap:9px}
+ #output-comparison .mrc-ghost b{font-size:18px;line-height:1.15}
+ #output-comparison .mrc-ghost span{font-size:11px;line-height:1.45}
+ #output-comparison .mrc-enlarge{width:32px;height:32px;top:5px;right:5px;opacity:1}
+ #output-comparison .mrc-dialog{width:calc(100vw - 16px);height:94svh}
+ #output-comparison .mrc-dialog-bar{padding:12px;gap:12px}
+ #output-comparison #mrc-dialog-title{font-size:17px}
+ #output-comparison .mrc-dialog-actions{gap:8px}
+ #output-comparison .mrc-zoom{padding:8px 10px;font-size:11px}
+ #output-comparison .mrc-close{width:36px;height:36px}
+ #output-comparison .mrc-dialog-scroll{padding:14px}
+}
+@media(prefers-reduced-motion:reduce) {#output-comparison *{scroll-behavior:auto!important;transition:none!important}}
+@media print {
+ #output-comparison .mrc-rail,#output-comparison .mrc-hint,#output-comparison .mrc-enlarge,#output-comparison .mrc-dialog{display:none!important}
+ #output-comparison .mrc-viewer{height:auto;overflow:visible;border:0}
+ #output-comparison .mrc-colhead{position:static}
+ #output-comparison .mrc-cell{break-inside:avoid}
+}
+/* Supplied report-document typography and styling, scoped to this component. */
+
+#output-comparison .mrc-L{font-family:Arial,Helvetica,sans-serif;color:#000;background:#fff}
+#output-comparison .mrc-L .mrc-band{position:absolute;left:0;right:0;top:0;height:194px;background:#1d4a7e;color:#fff;padding:40px 48px}
+#output-comparison .mrc-L .mrc-band h1{font:400 30px/1.2 Arial,sans-serif;margin:0 0 22px}
+#output-comparison .mrc-L .mrc-band p{font:400 19px/1.45 Arial,sans-serif;margin:0}
+#output-comparison .mrc-L .mrc-foot{position:absolute;left:52px;right:52px;bottom:28px;display:flex;justify-content:space-between;font:400 12px Arial,sans-serif;color:#9a9a9a}
+#output-comparison .mrc-L h2{position:absolute;left:52px;top:84px;margin:0;font:700 22px Arial,sans-serif}
+#output-comparison .mrc-L .mrc-rule{position:absolute;left:52px;right:52px;top:118px;border-top:1px solid #888}
+#output-comparison .mrc-L table{border-collapse:collapse;width:100%;font:400 12.5px/1.45 Arial,sans-serif}
+#output-comparison .mrc-L td{padding:2.5px 6px}
+#output-comparison .mrc-L td:last-child{text-align:right;white-space:nowrap}
+#output-comparison .mrc-L .mrc-sec td{color:#2a5d97;border-top:1px solid #000}
+#output-comparison .mrc-L .mrc-tot td{border-top:1px solid #000}
+#output-comparison .mrc-L .mrc-grand td{border-top:1px solid #000;border-bottom:3px double #000}
+
+
+#output-comparison .mrc-M{font-family:"Nunito Sans","Avenir Next",Avenir,Helvetica,Arial,sans-serif;color:#2b2e33;background:#fff}
+#output-comparison .mrc-M h2{position:absolute;left:44px;top:72px;margin:0;font:400 30px/1.2 var(--mrc-report-font);color:#2c3e57;letter-spacing:-.01em}
+#output-comparison .mrc-M .mrc-rule{position:absolute;left:44px;right:44px;top:122px;border-top:1.5px solid #b9cbe0}
+#output-comparison .mrc-M .mrc-foot{position:absolute;left:24px;right:24px;bottom:16px;border-top:1px solid #c9d6e6;padding-top:8px;display:flex;justify-content:space-between;font:400 10px/1 Arial,sans-serif;color:#555}
+#output-comparison .mrc-M .mrc-foot b{font:400 13px Arial,sans-serif;color:#333}
+#output-comparison .mrc-M .mrc-body{position:absolute;left:44px;right:44px;top:150px;bottom:60px}
+#output-comparison .mrc-M p,
+#output-comparison .mrc-M li{font-size:13.5px;line-height:1.62}
+#output-comparison .mrc-M .mrc-card{border:1px solid #cfd6de;border-radius:10px;padding:16px 18px;background:#fff}
+#output-comparison .mrc-M .mrc-card h4{margin:0;font:600 13px/1.3 var(--mrc-report-font);color:#2b2e33}
+#output-comparison .mrc-M .mrc-big{font:300 40px/1.1 var(--mrc-report-font);text-align:center;margin:20px 0 8px;color:#2b2e33;letter-spacing:-.01em}
+#output-comparison .mrc-M .mrc-delta{text-align:center;font-size:13px;color:#555}
+#output-comparison .mrc-M .mrc-up{color:#1f9d3a;font-weight:700}#output-comparison .mrc-M .mrc-warn{color:#f08a17;font-weight:700}
+#output-comparison .mrc-M table{border-collapse:collapse;width:100%}
+#output-comparison .mrc-kpi td,
+#output-comparison .mrc-kpi th{font-size:11px;padding:7px 6px;text-align:right;white-space:nowrap}
+#output-comparison .mrc-kpi th{font-weight:700;color:#2b2e33}
+#output-comparison .mrc-kpi td:first-child,
+#output-comparison .mrc-kpi th:first-child{text-align:left}
+#output-comparison .mrc-kpi .mrc-grp td{background:#f3f5f8;font-weight:700;text-align:left}
+#output-comparison .mrc-kpi .mrc-sub td{padding-left:22px}
+#output-comparison .mrc-kpi .mrc-row2 td:first-child{padding-left:38px}
+#output-comparison .mrc-ar{display:inline-block;width:12px;font-weight:800}
+#output-comparison .mrc-ar.mrc-g{color:#1f9d3a}#output-comparison .mrc-ar.mrc-r{color:#d6331f}
+#output-comparison .mrc-pl td,
+#output-comparison .mrc-pl th{font-size:10.5px;padding:4.5px 8px;text-align:right;white-space:nowrap;border-bottom:1px solid #edf0f3}
+#output-comparison .mrc-pl td:first-child,
+#output-comparison .mrc-pl th:first-child{text-align:left;white-space:normal}
+#output-comparison .mrc-pl .mrc-h td{background:#eef6f1}
+#output-comparison .mrc-pl .mrc-t td{font-weight:700}
+#output-comparison .mrc-pl .mrc-i1 td:first-child{padding-left:24px}#output-comparison .mrc-pl .mrc-i2 td:first-child{padding-left:38px}#output-comparison .mrc-pl .mrc-i3 td:first-child{padding-left:52px}
+#output-comparison .mrc-toc li{display:flex;justify-content:space-between;border-bottom:1px solid #d7dee6;padding:7px 0;font-size:14px;list-style:none}
+#output-comparison .mrc-toc{margin:0;padding:0}
+#output-comparison .mrc-rec{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;padding:12px 0;border-bottom:1px solid #e3e8ee}
+#output-comparison .mrc-rec h5{margin:2px 0 4px;font:700 14px/1.3 var(--mrc-report-font);color:#2c3e57}
+#output-comparison .mrc-rec p{margin:0;font-size:12.5px;line-height:1.55}
+
+/* Unlike older site dialogs, this one moves the live cursor into the top layer. */
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+ html.has-custom-cursor #output-comparison .mrc-dialog[open] .cursor-scribble {visibility:visible!important}
+ html.has-custom-cursor #output-comparison .mrc-dialog[open],
+ html.has-custom-cursor #output-comparison .mrc-dialog[open] * {cursor:none!important}
+}
+
+#output-comparison:not(.is-enhanced){--mrc-toolbar-h:0px}

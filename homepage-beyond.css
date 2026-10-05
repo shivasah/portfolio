@@ -1,0 +1,241 @@
+/* v104 - The supplied 3D polaroid scene, isolated from portfolio components. */
+#beyond.beyond-work {
+  --beyond-bg: #f2efe3;
+  --beyond-muted: #7a7a76;
+  --beyond-ease: cubic-bezier(.2,.8,.2,1);
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: clamp(88px,10vh,128px) var(--gutter);
+  overflow: hidden;
+  background: var(--beyond-bg) !important;
+  color: var(--ink);
+  font-family: var(--font-body);
+  touch-action: pan-y;
+}
+#beyond .beyond-work__world {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 40px 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+#beyond .beyond-work__title { grid-column:1/-1; text-align:center; padding:0 0 32px; }
+#beyond .beyond-work__title h2 {
+  font: 500 clamp(54px,9vw,148px)/.9 var(--font-display);
+  letter-spacing: -.05em;
+  margin: 0;
+}
+#beyond .beyond-work__title p {
+  font:400 clamp(14px,1.2vw,17px)/1.5 var(--font-body);
+  color:var(--ink-soft);
+  margin:18px auto 0;
+  max-width:34ch;
+  white-space:normal;
+}
+#beyond .beyond-work__card {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin:0;
+  padding:9px 9px 0;
+  border:0;
+  border-radius:3px 4px 3px 2px;
+  background:var(--paper);
+  color:var(--ink);
+  box-shadow:0 18px 40px rgba(35,36,40,.14),0 1px 0 rgba(35,36,40,.06);
+  font:inherit;
+  text-align:left;
+  cursor:pointer;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  -webkit-tap-highlight-color:transparent;
+}
+#beyond .beyond-work__card::before {
+  content:"";
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:-10px;
+  width:66px;
+  height:20px;
+  margin-left:-33px;
+  background:rgba(247,240,207,.72);
+  transform:rotate(var(--tape,-3deg));
+  pointer-events:none;
+}
+#beyond .beyond-work__card::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--beyond-bg);
+  opacity:var(--haze,0);
+  border-radius:inherit;
+  pointer-events:none;
+}
+#beyond .beyond-work__photo {
+  display:block;
+  width:100%;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  border-radius:2px;
+  background:var(--paper-2);
+}
+#beyond .beyond-work__photo svg,
+#beyond .beyond-work__photo img { display:block; width:100%; height:100%; object-fit:cover; pointer-events:none; }
+#beyond .beyond-work__caption { display:flex; justify-content:space-between; align-items:baseline; gap:8px; padding:10px 3px 12px; }
+#beyond .beyond-work__caption b { font:500 18px/1.12 var(--font-display); letter-spacing:-.025em; }
+#beyond .beyond-work__caption i { font:500 9.5px/1.2 var(--font-body); font-style:normal; color:var(--beyond-muted); white-space:nowrap; }
+#beyond .beyond-work__more { display:block; padding:0 3px 16px; color:var(--ink-soft); font:400 14px/1.5 var(--font-body); }
+#beyond .beyond-work__label {
+  position:absolute;
+  top:clamp(24px,3.5vh,36px);
+  left:var(--gutter);
+  margin:0;
+  font:500 12px/1.4 var(--font-body);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--beyond-muted);
+  pointer-events:none;
+}
+#beyond .beyond-work__ui {
+  position:absolute;
+  z-index:10;
+  inset:auto 0 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+  padding:0 var(--gutter) max(24px,env(safe-area-inset-bottom,0px));
+  pointer-events:none;
+}
+#beyond .beyond-work__ui[hidden],#beyond [data-beyond-close][hidden],#beyond [data-beyond-pause][hidden] { display:none!important; }
+#beyond .beyond-work__hint { font:400 15px/1.4 var(--font-body); color:var(--ink-soft); }
+#beyond .beyond-work__controls { display:flex; align-items:center; gap:10px; pointer-events:auto; }
+#beyond .beyond-work__controls button {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  min-height:44px;
+  padding:11px 18px;
+  border:1px solid var(--ink);
+  border-radius:999px;
+  background:var(--paper);
+  color:var(--ink);
+  font:600 12px/1.4 var(--font-body);
+  cursor:pointer;
+  white-space:nowrap;
+}
+#beyond .beyond-work__controls button:hover { background:var(--ink); color:var(--paper); }
+#beyond .beyond-work__controls button:focus-visible,#beyond .beyond-work__card:focus-visible { outline:2px solid var(--orange); outline-offset:6px; }
+
+/* The 3D scene only replaces the readable grid once its controller is ready. */
+#beyond.beyond-work--enhanced {
+  height:100vh;
+  height:100svh;
+  min-height:620px;
+  padding:0;
+  cursor:grab;
+  user-select:none;
+  -webkit-user-select:none;
+}
+#beyond.beyond-work--enhanced.is-dragging { cursor:grabbing; }
+#beyond.beyond-work--enhanced .beyond-work__view { position:absolute; inset:0; perspective:1500px; perspective-origin:50% 46%; }
+#beyond.beyond-work--enhanced .beyond-work__world {
+  position:absolute;
+  left:50%; top:50%;
+  display:block;
+  width:0; height:0;
+  max-width:none; margin:0;
+  transform-style:preserve-3d;
+  will-change:transform;
+}
+#beyond.beyond-work--enhanced .beyond-work__title {
+  position:absolute;
+  left:0; top:0;
+  padding:0;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  white-space:nowrap;
+}
+#beyond.beyond-work--enhanced .beyond-work__card {
+  position:absolute;
+  left:0; top:0;
+  width:var(--cw,200px);
+  margin-left:calc(var(--cw,200px) / -2);
+  margin-top:calc(var(--cw,200px) * -.62);
+  will-change:transform;
+}
+#beyond.beyond-work--enhanced .beyond-work__more {
+  max-height:0;
+  overflow:hidden;
+  padding:0 3px;
+  font-size:12.5px;
+  transition:max-height .5s var(--beyond-ease),padding .5s var(--beyond-ease);
+}
+#beyond.beyond-work--enhanced .beyond-work__card.is-picked .beyond-work__more { max-height:220px; padding:0 3px 12px; }
+#beyond.beyond-work--enhanced .beyond-work__caption { flex-wrap:wrap; gap:4px 8px; }
+#beyond.beyond-work--enhanced .beyond-work__caption b { font-size:17px; }
+#beyond.beyond-work--static .beyond-work__more { display:none; }
+#beyond.beyond-work--static .beyond-work__card.is-picked .beyond-work__more { display:block; }
+#beyond.beyond-work--static .beyond-work__card.is-picked { outline:2px solid var(--orange); outline-offset:4px; }
+#beyond.beyond-work--static .beyond-work__ui { position:relative; padding:32px 0 0; }
+@media(max-width:900px) {
+  #beyond .beyond-work__world { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+  #beyond.beyond-work--enhanced { min-height:620px; }
+  #beyond .beyond-work__title h2 { font-size:clamp(54px,14vw,84px); }
+  #beyond .beyond-work__title p { max-width:26ch; font-size:14px; }
+  #beyond .beyond-work__ui { align-items:center; gap:12px; }
+  #beyond .beyond-work__hint { max-width:16ch; font-size:12px; }
+  #beyond .beyond-work__controls { flex-direction:column; align-items:flex-end; gap:6px; }
+  #beyond .beyond-work__controls button { min-height:40px; padding:9px 14px; font-size:11px; }
+  #beyond .beyond-work__world { grid-template-columns:1fr; max-width:340px; }
+}
+@media(max-height:540px) and (min-width:700px) {
+  #beyond.beyond-work--enhanced { min-height:500px; }
+  #beyond .beyond-work__title h2 { font-size:72px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #beyond .beyond-work__more { transition:none; }
+}
+/* Keep this self-contained paper scene outside the legacy continuous-colour plane. */
+body.page-home #main > #beyond.beyond-work { background:var(--beyond-bg) !important; }
+#beyond .beyond-work__caption b { font-family:var(--font-display) !important; }
+
+/* v107 - generous quiet space above/below the orbit; photographs stay intact. */
+html body.page-home #beyond.beyond-work--enhanced{
+ height:calc(100svh + 280px);min-height:980px;padding:0;
+}
+#beyond.beyond-work--enhanced .beyond-work__view{inset:140px 0;}
+#beyond .beyond-work__photo{aspect-ratio:4/3;background:#fff;}
+#beyond .beyond-work__photo img{object-fit:contain;object-position:center;}
+#beyond .beyond-work__title .beyond-work__aside{margin-top:14px;font-size:12px;letter-spacing:.01em;}
+#beyond .beyond-work__card.is-picked{--haze:0;}
+@media(max-width:600px){
+ html body.page-home #beyond.beyond-work--enhanced{height:calc(100svh + 220px);min-height:940px;}
+ #beyond.beyond-work--enhanced .beyond-work__view{inset:110px 0;}
+ #beyond .beyond-work__label{top:36px;}
+ #beyond .beyond-work__ui{padding-bottom:36px;}
+ #beyond .beyond-work__title .beyond-work__aside{font-size:11px;}
+}
+
+/* Read an opened photo at native layout resolution, not a magnified thumbnail. */
+#beyond.beyond-work--enhanced .beyond-work__card.is-full-resolution{
+ width:min(500px,calc(100vw - 64px));padding:14px 14px 0;
+}
+#beyond.beyond-work--enhanced .beyond-work__card.is-full-resolution .beyond-work__caption{
+ padding:15px 3px 12px;gap:6px 12px;
+}
+#beyond.beyond-work--enhanced .beyond-work__card.is-full-resolution .beyond-work__caption b{
+ font-size:26px;line-height:1.16;
+}
+#beyond.beyond-work--enhanced .beyond-work__card.is-full-resolution .beyond-work__caption i{font-size:13px;}
+#beyond.beyond-work--enhanced .beyond-work__card.is-full-resolution .beyond-work__more{font-size:18px;line-height:1.5;}
+#beyond.beyond-work--enhanced .beyond-work__card.is-full-resolution.is-picked .beyond-work__more{padding:0 3px 18px;}
+@media(max-width:600px){
+ #beyond.beyond-work--enhanced .beyond-work__card.is-full-resolution .beyond-work__caption b{font-size:22px;}
+ #beyond.beyond-work--enhanced .beyond-work__card.is-full-resolution .beyond-work__more{font-size:16px;}
+}

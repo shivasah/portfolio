@@ -1,0 +1,123 @@
+{
+  "source": "Management Reports — legacy vs modern.html",
+  "source_sha256": "6541ed7f049009fe9e4b4d832830378fc3fa5e8abfc7d157d37ab1983d2abcf7",
+  "section_id": "output-comparison",
+  "placement": "after #solution; before #balancing-act",
+  "sections": [
+    "Cover",
+    "Contents",
+    "Summary",
+    "KPIs",
+    "Profitability",
+    "Cash flow",
+    "Liquidity",
+    "Profit and Loss",
+    "Balance Sheet",
+    "Recommendations"
+  ],
+  "legacy_pages": 6,
+  "new_pages": 10,
+  "pages": [
+    {
+      "id": "mrc-page-01",
+      "side": "Legacy",
+      "section": "Cover",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-02",
+      "side": "New",
+      "section": "Cover",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-03",
+      "side": "Legacy",
+      "section": "Contents",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-04",
+      "side": "New",
+      "section": "Contents",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-05",
+      "side": "Legacy",
+      "section": "Summary",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-06",
+      "side": "New",
+      "section": "Summary",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-07",
+      "side": "New",
+      "section": "KPIs",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-08",
+      "side": "New",
+      "section": "Profitability",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-09",
+      "side": "New",
+      "section": "Cash flow",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-10",
+      "side": "New",
+      "section": "Liquidity",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-11",
+      "side": "Legacy",
+      "section": "Profit and Loss",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-12",
+      "side": "New",
+      "section": "Profit and Loss",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-13",
+      "side": "Legacy",
+      "section": "Balance Sheet",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-14",
+      "side": "Legacy",
+      "section": "Balance Sheet",
+      "page": 2
+    },
+    {
+      "id": "mrc-page-15",
+      "side": "New",
+      "section": "Balance Sheet",
+      "page": 1
+    },
+    {
+      "id": "mrc-page-16",
+      "side": "New",
+      "section": "Recommendations",
+      "page": 1
+    }
+  ],
+  "notes": [
+    "Preserves source report content, numeric values, page order and intentional empty legacy sections.",
+    "Prose em dashes become semicolons; missing-value dashes in tables remain unchanged.",
+    "Report HTML is preserved as text and SVG, not flattened screenshots."
+  ]
+}

@@ -1,0 +1,546 @@
+{
+  "version": 112,
+  "environment": "Isolated offline Chromium rendering. Browser navigation is disabled in this environment; test pages embed their original local CSS, scripts and image bytes. No external fonts or network requests were used.",
+  "viewport_checks": [
+    {
+      "W": 360,
+      "H": 640,
+      "progress": 0,
+      "state": {
+        "enhanced": true,
+        "progress": "0.0000",
+        "scrollY": 0,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": 0,
+          "w": 360,
+          "h": 3584
+        },
+        "copy": {
+          "x": 20,
+          "y": 92.796875,
+          "w": 320,
+          "h": 200.4375
+        },
+        "facts": {
+          "x": 20,
+          "y": 558.40625,
+          "w": 320,
+          "h": 59.59375
+        },
+        "ui": {
+          "x": 20,
+          "y": 243.64999389648438,
+          "w": 320.0039978027344,
+          "h": 263.1144104003906
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 360,
+      "H": 640,
+      "progress": 0.35,
+      "state": {
+        "enhanced": true,
+        "progress": "0.3499",
+        "scrollY": 1030,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": -1030,
+          "w": 360,
+          "h": 3584
+        },
+        "copy": {
+          "x": 20,
+          "y": 92.796875,
+          "w": 320,
+          "h": 200.4375
+        },
+        "facts": {
+          "x": 20,
+          "y": 558.40625,
+          "w": 320,
+          "h": 59.59375
+        },
+        "ui": {
+          "x": 20,
+          "y": 243.64999389648438,
+          "w": 320.0039978027344,
+          "h": 263.1144104003906
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 360,
+      "H": 640,
+      "progress": 0.9,
+      "state": {
+        "enhanced": true,
+        "progress": "0.9001",
+        "scrollY": 2650,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": -2650,
+          "w": 360,
+          "h": 3584
+        },
+        "copy": {
+          "x": 20,
+          "y": 92.796875,
+          "w": 320,
+          "h": 200.4375
+        },
+        "facts": {
+          "x": 20,
+          "y": 558.40625,
+          "w": 320,
+          "h": 59.59375
+        },
+        "ui": {
+          "x": 46.720001220703125,
+          "y": 311.239990234375,
+          "w": 266.5530090332031,
+          "h": 219.165771484375
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 1440,
+      "H": 900,
+      "progress": 0,
+      "state": {
+        "enhanced": true,
+        "progress": "0.0000",
+        "scrollY": 0,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 5040
+        },
+        "copy": {
+          "x": 130.3125,
+          "y": 250.078125,
+          "w": 354.890625,
+          "h": 363.25
+        },
+        "facts": {
+          "x": 120,
+          "y": 801.421875,
+          "w": 1200,
+          "h": 73.390625
+        },
+        "ui": {
+          "x": 519.7999877929688,
+          "y": 95,
+          "w": 819.0000610351562,
+          "h": 673.4000244140625
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 1440,
+      "H": 900,
+      "progress": 0.35,
+      "state": {
+        "enhanced": true,
+        "progress": "0.3500",
+        "scrollY": 1449,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": -1449,
+          "w": 1440,
+          "h": 5040
+        },
+        "copy": {
+          "x": 130.3125,
+          "y": 250.078125,
+          "w": 354.890625,
+          "h": 363.25
+        },
+        "facts": {
+          "x": 120,
+          "y": 801.421875,
+          "w": 1200,
+          "h": 73.390625
+        },
+        "ui": {
+          "x": 519.7999877929688,
+          "y": 95,
+          "w": 819.0000610351562,
+          "h": 673.4000244140625
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 1440,
+      "H": 900,
+      "progress": 0.9,
+      "state": {
+        "enhanced": true,
+        "progress": "0.9000",
+        "scrollY": 3726,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": -3726,
+          "w": 1440,
+          "h": 5040
+        },
+        "copy": {
+          "x": 130.3125,
+          "y": 250.078125,
+          "w": 354.890625,
+          "h": 363.25
+        },
+        "facts": {
+          "x": 120,
+          "y": 801.421875,
+          "w": 1200,
+          "h": 73.390625
+        },
+        "ui": {
+          "x": 519.7999877929688,
+          "y": 95,
+          "w": 819.0000610351562,
+          "h": 673.4000244140625
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 768,
+      "H": 1024,
+      "progress": 0,
+      "state": {
+        "enhanced": true,
+        "progress": "0.0000",
+        "scrollY": 0,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": 0,
+          "w": 768,
+          "h": 5734.390625
+        },
+        "copy": {
+          "x": 42.234375,
+          "y": 148.46875,
+          "w": 683.515625,
+          "h": 242
+        },
+        "facts": {
+          "x": 42.234375,
+          "y": 935.734375,
+          "w": 683.53125,
+          "h": 59.59375
+        },
+        "ui": {
+          "x": 42.2400016784668,
+          "y": 308.5400085449219,
+          "w": 683.5230102539062,
+          "h": 562.0078125
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 768,
+      "H": 1024,
+      "progress": 0.35,
+      "state": {
+        "enhanced": true,
+        "progress": "0.3501",
+        "scrollY": 1649,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": -1649,
+          "w": 768,
+          "h": 5734.390625
+        },
+        "copy": {
+          "x": 42.234375,
+          "y": 148.46875,
+          "w": 683.515625,
+          "h": 242
+        },
+        "facts": {
+          "x": 42.234375,
+          "y": 935.734375,
+          "w": 683.53125,
+          "h": 59.59375
+        },
+        "ui": {
+          "x": 42.2400016784668,
+          "y": 308.5400085449219,
+          "w": 683.5230102539062,
+          "h": 562.0078125
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 768,
+      "H": 1024,
+      "progress": 0.9,
+      "state": {
+        "enhanced": true,
+        "progress": "0.8999",
+        "scrollY": 4239,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": -4239,
+          "w": 768,
+          "h": 5734.390625
+        },
+        "copy": {
+          "x": 42.234375,
+          "y": 148.46875,
+          "w": 683.515625,
+          "h": 242
+        },
+        "facts": {
+          "x": 42.234375,
+          "y": 935.734375,
+          "w": 683.53125,
+          "h": 59.59375
+        },
+        "ui": {
+          "x": 80.4000015258789,
+          "y": 408.4800109863281,
+          "w": 607.2030029296875,
+          "h": 499.2558288574219
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 1366,
+      "H": 768,
+      "progress": 0,
+      "state": {
+        "enhanced": true,
+        "progress": "0.0000",
+        "scrollY": 0,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": 0,
+          "w": 1366,
+          "h": 4300.796875
+        },
+        "copy": {
+          "x": 197.328125,
+          "y": 192.234375,
+          "w": 292.28125,
+          "h": 350.125
+        },
+        "facts": {
+          "x": 83,
+          "y": 672.609375,
+          "w": 1200,
+          "h": 73.390625
+        },
+        "ui": {
+          "x": 518.114990234375,
+          "y": 89.99760437011719,
+          "w": 674.52294921875,
+          "h": 554.6077270507812
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 1366,
+      "H": 768,
+      "progress": 0.35,
+      "state": {
+        "enhanced": true,
+        "progress": "0.3501",
+        "scrollY": 1237,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": -1237,
+          "w": 1366,
+          "h": 4300.796875
+        },
+        "copy": {
+          "x": 197.328125,
+          "y": 192.234375,
+          "w": 292.28125,
+          "h": 350.125
+        },
+        "facts": {
+          "x": 83,
+          "y": 672.609375,
+          "w": 1200,
+          "h": 73.390625
+        },
+        "ui": {
+          "x": 518.114990234375,
+          "y": 89.99760437011719,
+          "w": 674.52294921875,
+          "h": 554.6077270507812
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    },
+    {
+      "W": 1366,
+      "H": 768,
+      "progress": 0.9,
+      "state": {
+        "enhanced": true,
+        "progress": "0.9001",
+        "scrollY": 3180,
+        "overflow": false,
+        "root": {
+          "x": 0,
+          "y": -3180,
+          "w": 1366,
+          "h": 4300.796875
+        },
+        "copy": {
+          "x": 197.328125,
+          "y": 192.234375,
+          "w": 292.28125,
+          "h": 350.125
+        },
+        "facts": {
+          "x": 83,
+          "y": 672.609375,
+          "w": 1200,
+          "h": 73.390625
+        },
+        "ui": {
+          "x": 518.114990234375,
+          "y": 89.99760437011719,
+          "w": 674.52294921875,
+          "h": 554.6077270507812
+        },
+        "copyFont": "\"Cabinet Grotesk\", \"Avenir Next\", \"Helvetica Neue\", Arial, sans-serif"
+      },
+      "errors": []
+    }
+  ],
+  "landing_and_menu": {
+    "page": "management-reports.html",
+    "errors": [],
+    "menu": [
+      {
+        "text": "Agent ManagementCisco AppDynamics",
+        "tag": "A",
+        "href": "agent-management.html",
+        "disabled": null,
+        "visible": true
+      },
+      {
+        "text": "Management ReportsIntuit QuickBooks",
+        "tag": "A",
+        "href": "management-reports.html",
+        "disabled": null,
+        "visible": true
+      },
+      {
+        "text": "Domain-Centric ViewsCisco Cloud ObservabilityAdding soon",
+        "tag": "DIV",
+        "href": null,
+        "disabled": "true",
+        "visible": true
+      }
+    ],
+    "menu_closes": true,
+    "forward_reverse": [
+      [
+        0.9,
+        0.9
+      ],
+      [
+        0.35,
+        0.35
+      ],
+      [
+        0,
+        0.0
+      ],
+      [
+        1,
+        1.0
+      ]
+    ],
+    "cta_pitch_top": 88,
+    "date_carousel": "2 of 3",
+    "horizontal_overflow": false,
+    "unresolved_local_requests": [],
+    "requested_local_count": 0
+  },
+  "fallbacks": [
+    {
+      "mode": "reduced",
+      "state": {
+        "h": 844,
+        "progress": "1.0000",
+        "enhanced": true,
+        "fallback": false,
+        "fallbackHidden": true,
+        "overflow": false
+      },
+      "errors": []
+    },
+    {
+      "mode": "no-js",
+      "state": {
+        "h": 844,
+        "progress": null,
+        "enhanced": false,
+        "fallback": true,
+        "fallbackHidden": false,
+        "overflow": false
+      },
+      "errors": []
+    }
+  ],
+  "static_checks": {
+    "retained_assets_unchanged": 316,
+    "changed_existing_root_files": [
+      "MANAGEMENT-REPORTS-ASSETS.md",
+      "MANAGEMENT-REPORTS-ASSET-MANIFEST.json",
+      "agent-management.html",
+      "index.html",
+      "management-reports.html",
+      "MANAGEMENT-REPORTS-TODO.md"
+    ],
+    "syntax_checks": 45,
+    "syntax_errors": [],
+    "missing_direct_local_references": []
+  },
+  "limits": [
+    "Live HTTP hosting, Safari and external webfont rendering were not tested.",
+    "The existing full report-building animation was not re-exercised in this build; its source and all retained assets were checked for byte identity.",
+    "The restored comparison is unchanged; a supplemental isolated-renderer timing check did not verify its active-tab highlight."
+  ]
+}

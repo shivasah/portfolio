@@ -1,0 +1,3065 @@
+{
+  "version": 112,
+  "entry_pages": [
+    "index.html",
+    "agent-management.html",
+    "management-reports.html"
+  ],
+  "method": "Recursive code reachability plus explicit enumeration of dynamically constructed laptop frame paths. Active/fallback assets retained; documentation-only references do not keep unused images alive. Reachable dictionaries are kept conservatively even when their branches are not exercised.",
+  "inspected_code_files": [
+    "agent-city-story.css",
+    "agent-city-story.js",
+    "agent-install-flow.js",
+    "agent-laptop-hero.css",
+    "agent-laptop-hero.js",
+    "agent-management.html",
+    "agent-v106.css",
+    "agent.css",
+    "agent.js",
+    "app.js",
+    "assets/adnan-deploy.svg",
+    "assets/adnan-optimise.svg",
+    "assets/adnan-setup.svg",
+    "assets/agent-install-flow/step-00.svg",
+    "assets/agent-install-flow/step-01.svg",
+    "assets/agent-install-flow/step-02.svg",
+    "assets/agent-install-flow/step-03.svg",
+    "assets/agent-install-flow/step-04.svg",
+    "assets/agent-install-flow/step-05.svg",
+    "assets/agent-install-flow/step-06.svg",
+    "assets/agent-install-flow/step-07.svg",
+    "assets/agent-lifecycle-configuration.svg",
+    "assets/agent-lifecycle-discovery.svg",
+    "assets/agent-lifecycle-installation.svg",
+    "assets/agent-lifecycle-termination.svg",
+    "assets/agent-lifecycle-upgradation.svg",
+    "assets/decision-lightbulb-v73.svg",
+    "assets/discovery-research-complex-configuration.svg",
+    "assets/discovery-research-fragmented-tools.svg",
+    "assets/discovery-research-learning-curve.svg",
+    "assets/experience-vs-release-in-app.svg",
+    "assets/experience-vs-release-live-logs.svg",
+    "assets/experience-vs-release-scheduling.svg",
+    "assets/experience-vs-release-side-panel.svg",
+    "assets/learning-align.svg",
+    "assets/learning-handshake.svg",
+    "assets/learning-share.svg",
+    "assets/learning-trust.svg",
+    "assets/reports/doctor-note-line-01.svg",
+    "assets/reports/doctor-note-line-02.svg",
+    "assets/reports/doctor-note-line-03.svg",
+    "assets/reports/doctor-note-line-04.svg",
+    "assets/reports/health-metaphor-motion.html",
+    "assets/reports/report-flow-v110/player.css",
+    "assets/reports/report-flow-v110/player.html",
+    "assets/reports/report-flow-v110/player.js",
+    "assets/shiva-lastoria-word-v70.svg",
+    "assets/shiva-wordmark-static.svg",
+    "assets/vibe-codes-preview.svg",
+    "assets/zfi-fleet.svg",
+    "assets/zfi-installation-step.svg",
+    "case-study-stack.css",
+    "case-study-stack.js",
+    "cashflow-preview.js",
+    "cursor-v110.css",
+    "cursor-v110.js",
+    "home.css",
+    "homepage-beyond.css",
+    "homepage-beyond.js",
+    "homepage-shelf-tools.css",
+    "homepage-shelf-tools.js",
+    "index.html",
+    "management-landing.css",
+    "management-landing.js",
+    "management-report-flow.js",
+    "management-reports.html",
+    "management-v100.css",
+    "management-v103.css",
+    "management-v103.js",
+    "management-v109.css",
+    "management-v109.js",
+    "management-v110.css",
+    "management-v110.js",
+    "menu.css",
+    "persona-motion.css",
+    "persona-motion.js",
+    "portfolio-polish.css",
+    "portfolio-v107.css",
+    "portfolio-v107.js",
+    "portfolio-v108.css",
+    "portfolio-v108.js",
+    "preloader-art.css",
+    "preloader-art.js",
+    "refinements-v74.css",
+    "refinements-v74.js",
+    "refinements-v75.css",
+    "refinements-v76.css",
+    "refinements-v77.css",
+    "refinements-v78.css",
+    "refinements-v79.css",
+    "refinements-v80.css",
+    "refinements-v82.css",
+    "refinements-v84c.css",
+    "report-lifecycle-v103.css",
+    "report-output-comparison.css",
+    "report-output-comparison.js",
+    "report-tools-strip.css",
+    "report-tools-strip.js",
+    "site-config.js",
+    "styles.css"
+  ],
+  "dynamic_rules": [
+    {
+      "source": "agent-laptop-hero.js",
+      "base": "assets/agent-laptop/frames/",
+      "range": [
+        0,
+        78
+      ],
+      "variants": [
+        "standard",
+        "retina"
+      ],
+      "asset_count": 158
+    }
+  ],
+  "before": {
+    "files": 394,
+    "bytes": 37985795
+  },
+  "after": {
+    "files": 316,
+    "bytes": 26280349
+  },
+  "removed_files": 78,
+  "removed_bytes": 11705446,
+  "removed": [
+    {
+      "path": "assets/admin-adnan-v63.webp",
+      "bytes": 32162,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/agent-camera.webp",
+      "bytes": 786332,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/agent-city.webp",
+      "bytes": 813676,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/agent-hero-macbook-v75.png",
+      "bytes": 945789,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/agent-junction.webp",
+      "bytes": 798606,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-079.webp",
+      "bytes": 194454,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-080.webp",
+      "bytes": 194244,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-081.webp",
+      "bytes": 195110,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-082.webp",
+      "bytes": 196022,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-083.webp",
+      "bytes": 194114,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-084.webp",
+      "bytes": 194532,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-085.webp",
+      "bytes": 196132,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-086.webp",
+      "bytes": 194380,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-087.webp",
+      "bytes": 195026,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-088.webp",
+      "bytes": 193904,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-089.webp",
+      "bytes": 195828,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-090.webp",
+      "bytes": 192876,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-091.webp",
+      "bytes": 195212,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-092.webp",
+      "bytes": 196138,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-093.webp",
+      "bytes": 194424,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-094.webp",
+      "bytes": 191516,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-095.webp",
+      "bytes": 191276,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-096.webp",
+      "bytes": 190358,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-097.webp",
+      "bytes": 190470,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-098.webp",
+      "bytes": 185794,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-099.webp",
+      "bytes": 187034,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-100.webp",
+      "bytes": 186322,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-101.webp",
+      "bytes": 187932,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-102.webp",
+      "bytes": 190518,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-103.webp",
+      "bytes": 192454,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-104.webp",
+      "bytes": 189020,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-079.webp",
+      "bytes": 88556,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-080.webp",
+      "bytes": 88074,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-081.webp",
+      "bytes": 87842,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-082.webp",
+      "bytes": 88638,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-083.webp",
+      "bytes": 88340,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-084.webp",
+      "bytes": 88202,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-085.webp",
+      "bytes": 84448,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-086.webp",
+      "bytes": 89324,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-087.webp",
+      "bytes": 89140,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-088.webp",
+      "bytes": 87770,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-089.webp",
+      "bytes": 88152,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-090.webp",
+      "bytes": 88084,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-091.webp",
+      "bytes": 87280,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-092.webp",
+      "bytes": 86646,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-093.webp",
+      "bytes": 85568,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-094.webp",
+      "bytes": 83452,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-095.webp",
+      "bytes": 83088,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-096.webp",
+      "bytes": 82748,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-097.webp",
+      "bytes": 81932,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-098.webp",
+      "bytes": 79860,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-099.webp",
+      "bytes": 79952,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-100.webp",
+      "bytes": 80454,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-101.webp",
+      "bytes": 77682,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-102.webp",
+      "bytes": 82880,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-103.webp",
+      "bytes": 84302,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-104.webp",
+      "bytes": 79962,
+      "reason": "Beyond FINAL_FRAME = 78; the current laptop controller explicitly rejects these zoom frames."
+    },
+    {
+      "path": "assets/agent-laptop/manifest.json",
+      "bytes": 2096,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/agent-laptop/poster-retina.webp",
+      "bytes": 189020,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/agent-laptop/poster-standard.webp",
+      "bytes": 79962,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/current-entity.webp",
+      "bytes": 36682,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/current-list.webp",
+      "bytes": 29946,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/feedback-entity.webp",
+      "bytes": 3244,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/flow-01.webp",
+      "bytes": 94102,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/flow-02.webp",
+      "bytes": 102688,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/flow-03.webp",
+      "bytes": 27560,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/flow-04.webp",
+      "bytes": 46104,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/flow-05.webp",
+      "bytes": 32838,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/flow-06.webp",
+      "bytes": 31758,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/flow-07.webp",
+      "bytes": 62422,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/project-placeholder-01.svg",
+      "bytes": 904,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/prototype-02.webp",
+      "bytes": 42710,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/prototype-03.webp",
+      "bytes": 36334,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/question-doodle.webp",
+      "bytes": 143704,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/sketch-01.webp",
+      "bytes": 53078,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/sketch-02.webp",
+      "bytes": 66766,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/sketch-03.webp",
+      "bytes": 22836,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    },
+    {
+      "path": "assets/vibe-squarekin-code.svg",
+      "bytes": 6661,
+      "reason": "No reference from any of the three live HTML pages or their reachable CSS, JavaScript, SVG or helper HTML."
+    }
+  ],
+  "retained": [
+    {
+      "path": "assets/adnan-deploy.svg",
+      "bytes": 6376,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/adnan-optimise.svg",
+      "bytes": 5870,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/adnan-setup.svg",
+      "bytes": 6120,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-city-motion-still.webp",
+      "bytes": 130732,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-hero.webp",
+      "bytes": 63184,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-install-flow/step-00.svg",
+      "bytes": 21390,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-install-flow/step-01.svg",
+      "bytes": 58884,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-install-flow/step-02.svg",
+      "bytes": 61272,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-install-flow/step-03.svg",
+      "bytes": 22558,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-install-flow/step-04.svg",
+      "bytes": 35579,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-install-flow/step-05.svg",
+      "bytes": 20781,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-install-flow/step-06.svg",
+      "bytes": 21443,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-install-flow/step-07.svg",
+      "bytes": 53064,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-000.webp",
+      "bytes": 23332,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-001.webp",
+      "bytes": 23714,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-002.webp",
+      "bytes": 24080,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-003.webp",
+      "bytes": 24722,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-004.webp",
+      "bytes": 24810,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-005.webp",
+      "bytes": 25166,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-006.webp",
+      "bytes": 28064,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-007.webp",
+      "bytes": 31318,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-008.webp",
+      "bytes": 34074,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-009.webp",
+      "bytes": 36202,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-010.webp",
+      "bytes": 41108,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-011.webp",
+      "bytes": 47496,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-012.webp",
+      "bytes": 56084,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-013.webp",
+      "bytes": 61594,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-014.webp",
+      "bytes": 65672,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-015.webp",
+      "bytes": 71540,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-016.webp",
+      "bytes": 78580,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-017.webp",
+      "bytes": 84510,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-018.webp",
+      "bytes": 91090,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-019.webp",
+      "bytes": 94566,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-020.webp",
+      "bytes": 97864,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-021.webp",
+      "bytes": 101692,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-022.webp",
+      "bytes": 103432,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-023.webp",
+      "bytes": 108554,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-024.webp",
+      "bytes": 112314,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-025.webp",
+      "bytes": 112512,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-026.webp",
+      "bytes": 120348,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-027.webp",
+      "bytes": 122628,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-028.webp",
+      "bytes": 122952,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-029.webp",
+      "bytes": 129776,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-030.webp",
+      "bytes": 129130,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-031.webp",
+      "bytes": 131562,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-032.webp",
+      "bytes": 132390,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-033.webp",
+      "bytes": 133122,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-034.webp",
+      "bytes": 141254,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-035.webp",
+      "bytes": 140704,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-036.webp",
+      "bytes": 140308,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-037.webp",
+      "bytes": 144390,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-038.webp",
+      "bytes": 147250,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-039.webp",
+      "bytes": 152364,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-040.webp",
+      "bytes": 152134,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-041.webp",
+      "bytes": 154328,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-042.webp",
+      "bytes": 151724,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-043.webp",
+      "bytes": 156756,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-044.webp",
+      "bytes": 159216,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-045.webp",
+      "bytes": 162590,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-046.webp",
+      "bytes": 164424,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-047.webp",
+      "bytes": 165188,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-048.webp",
+      "bytes": 165610,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-049.webp",
+      "bytes": 168572,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-050.webp",
+      "bytes": 168772,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-051.webp",
+      "bytes": 172254,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-052.webp",
+      "bytes": 173792,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-053.webp",
+      "bytes": 174860,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-054.webp",
+      "bytes": 174864,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-055.webp",
+      "bytes": 177590,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-056.webp",
+      "bytes": 177350,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-057.webp",
+      "bytes": 177040,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-058.webp",
+      "bytes": 179030,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-059.webp",
+      "bytes": 182256,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-060.webp",
+      "bytes": 182208,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-061.webp",
+      "bytes": 181790,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-062.webp",
+      "bytes": 184616,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-063.webp",
+      "bytes": 187326,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-064.webp",
+      "bytes": 186378,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-065.webp",
+      "bytes": 187378,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-066.webp",
+      "bytes": 188596,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-067.webp",
+      "bytes": 189468,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-068.webp",
+      "bytes": 191086,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-069.webp",
+      "bytes": 190190,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-070.webp",
+      "bytes": 189882,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-071.webp",
+      "bytes": 191648,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-072.webp",
+      "bytes": 194708,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-073.webp",
+      "bytes": 191980,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-074.webp",
+      "bytes": 192452,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-075.webp",
+      "bytes": 193910,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-076.webp",
+      "bytes": 193434,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-077.webp",
+      "bytes": 194718,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/retina/frame-078.webp",
+      "bytes": 196650,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-000.webp",
+      "bytes": 9940,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-001.webp",
+      "bytes": 10374,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-002.webp",
+      "bytes": 10814,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-003.webp",
+      "bytes": 11002,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-004.webp",
+      "bytes": 10826,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-005.webp",
+      "bytes": 10830,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-006.webp",
+      "bytes": 11822,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-007.webp",
+      "bytes": 13010,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-008.webp",
+      "bytes": 15158,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-009.webp",
+      "bytes": 15926,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-010.webp",
+      "bytes": 17062,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-011.webp",
+      "bytes": 19850,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-012.webp",
+      "bytes": 23106,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-013.webp",
+      "bytes": 24868,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-014.webp",
+      "bytes": 25790,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-015.webp",
+      "bytes": 28394,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-016.webp",
+      "bytes": 30102,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-017.webp",
+      "bytes": 32742,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-018.webp",
+      "bytes": 34968,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-019.webp",
+      "bytes": 35840,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-020.webp",
+      "bytes": 36844,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-021.webp",
+      "bytes": 39312,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-022.webp",
+      "bytes": 40488,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-023.webp",
+      "bytes": 42518,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-024.webp",
+      "bytes": 43730,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-025.webp",
+      "bytes": 45052,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-026.webp",
+      "bytes": 47216,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-027.webp",
+      "bytes": 48506,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-028.webp",
+      "bytes": 49838,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-029.webp",
+      "bytes": 52056,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-030.webp",
+      "bytes": 52560,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-031.webp",
+      "bytes": 53238,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-032.webp",
+      "bytes": 53460,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-033.webp",
+      "bytes": 55486,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-034.webp",
+      "bytes": 57118,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-035.webp",
+      "bytes": 58370,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-036.webp",
+      "bytes": 58964,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-037.webp",
+      "bytes": 59158,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-038.webp",
+      "bytes": 62764,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-039.webp",
+      "bytes": 63400,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-040.webp",
+      "bytes": 62482,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-041.webp",
+      "bytes": 62866,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-042.webp",
+      "bytes": 63640,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-043.webp",
+      "bytes": 66746,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-044.webp",
+      "bytes": 67070,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-045.webp",
+      "bytes": 67962,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-046.webp",
+      "bytes": 69038,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-047.webp",
+      "bytes": 70398,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-048.webp",
+      "bytes": 74250,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-049.webp",
+      "bytes": 71696,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-050.webp",
+      "bytes": 72494,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-051.webp",
+      "bytes": 73818,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-052.webp",
+      "bytes": 73848,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-053.webp",
+      "bytes": 73650,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-054.webp",
+      "bytes": 74846,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-055.webp",
+      "bytes": 75658,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-056.webp",
+      "bytes": 74732,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-057.webp",
+      "bytes": 80804,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-058.webp",
+      "bytes": 77988,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-059.webp",
+      "bytes": 77368,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-060.webp",
+      "bytes": 76896,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-061.webp",
+      "bytes": 79018,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-062.webp",
+      "bytes": 78380,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-063.webp",
+      "bytes": 80106,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-064.webp",
+      "bytes": 80888,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-065.webp",
+      "bytes": 80182,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-066.webp",
+      "bytes": 81976,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-067.webp",
+      "bytes": 86292,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-068.webp",
+      "bytes": 82628,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-069.webp",
+      "bytes": 86926,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-070.webp",
+      "bytes": 83248,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-071.webp",
+      "bytes": 81938,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-072.webp",
+      "bytes": 88240,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-073.webp",
+      "bytes": 86998,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-074.webp",
+      "bytes": 83118,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-075.webp",
+      "bytes": 88766,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-076.webp",
+      "bytes": 84060,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-077.webp",
+      "bytes": 88886,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/frames/standard/frame-078.webp",
+      "bytes": 89016,
+      "referenced_by": [
+        "agent-laptop-hero.js (runtime frameURL(); frame 000 through 078)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/poster-start-retina.webp",
+      "bytes": 23332,
+      "referenced_by": [
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (responsive srcset)"
+      ]
+    },
+    {
+      "path": "assets/agent-laptop/poster-start-standard.webp",
+      "bytes": 9940,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)",
+        "agent-management.html (responsive srcset)"
+      ]
+    },
+    {
+      "path": "assets/agent-lifecycle-configuration.svg",
+      "bytes": 6627,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-lifecycle-discovery.svg",
+      "bytes": 12051,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-lifecycle-installation.svg",
+      "bytes": 5614,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-lifecycle-termination.svg",
+      "bytes": 5687,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-lifecycle-upgradation.svg",
+      "bytes": 4726,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/agent-management-thumbnail.png",
+      "bytes": 215534,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/alert-storm.webp",
+      "bytes": 143728,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/app-hierarchy.webp",
+      "bytes": 13862,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/application-map.webp",
+      "bytes": 76532,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/architecture-after-v63.webp",
+      "bytes": 62774,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/architecture-before-v63.webp",
+      "bytes": 53440,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/balancing.webp",
+      "bytes": 214470,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/avantika.webp",
+      "bytes": 221072,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/design-detective.webp",
+      "bytes": 86134,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/india-hci.webp",
+      "bytes": 424858,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/level-up.webp",
+      "bytes": 89954,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/live-session.webp",
+      "bytes": 86592,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/phillychi.webp",
+      "bytes": 68888,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/reva.webp",
+      "bytes": 252774,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/sweden.webp",
+      "bytes": 221810,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/think-product.webp",
+      "bytes": 37932,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/ux-switch.webp",
+      "bytes": 111792,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/beyond/voice-ui-workshop.webp",
+      "bytes": 84612,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/brainstorm-v70.png",
+      "bytes": 973039,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/current-observe.webp",
+      "bytes": 21882,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/decision-lightbulb-v73.svg",
+      "bytes": 6870,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/discovery-research-complex-configuration.svg",
+      "bytes": 9893,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/discovery-research-fragmented-tools.svg",
+      "bytes": 11666,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/discovery-research-learning-curve.svg",
+      "bytes": 7615,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/domain-hero.webp",
+      "bytes": 75994,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/epilogue.webp",
+      "bytes": 37720,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/experience-vs-release-in-app.svg",
+      "bytes": 8590,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/experience-vs-release-live-logs.svg",
+      "bytes": 11068,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/experience-vs-release-scheduling.svg",
+      "bytes": 7878,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/experience-vs-release-side-panel.svg",
+      "bytes": 7083,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/feedback-card.webp",
+      "bytes": 4640,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/feedback-heatmap.webp",
+      "bytes": 20602,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/iteration-cards.webp",
+      "bytes": 17050,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/iteration-table.webp",
+      "bytes": 112754,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/kalpana.webp",
+      "bytes": 25210,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/layout-design.webp",
+      "bytes": 39630,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/learning-align.svg",
+      "bytes": 12738,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/learning-handshake.svg",
+      "bytes": 10659,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/learning-share.svg",
+      "bytes": 6198,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/learning-trust.svg",
+      "bytes": 5085,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/management-reports-thumbnail.png",
+      "bytes": 101818,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/mapping-redesign.webp",
+      "bytes": 41736,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/news-builtin-v27.png",
+      "bytes": 570356,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/news-checkpoint-v24.webp",
+      "bytes": 94610,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/news-microsoft-v24.webp",
+      "bytes": 133466,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/process-board.webp",
+      "bytes": 54470,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/prototype-01.webp",
+      "bytes": 38052,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/build-exploration.png",
+      "bytes": 140307,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/doctor-note-line-01.svg",
+      "bytes": 98277,
+      "referenced_by": [
+        "assets/reports/health-metaphor-motion.html (HTML src)",
+        "assets/reports/health-metaphor-motion.html (doctor-note lettering)",
+        "assets/reports/health-metaphor-motion.html (reference)",
+        "assets/reports/health-metaphor-motion.html (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/doctor-note-line-02.svg",
+      "bytes": 86138,
+      "referenced_by": [
+        "assets/reports/health-metaphor-motion.html (HTML src)",
+        "assets/reports/health-metaphor-motion.html (doctor-note lettering)",
+        "assets/reports/health-metaphor-motion.html (reference)",
+        "assets/reports/health-metaphor-motion.html (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/doctor-note-line-03.svg",
+      "bytes": 45651,
+      "referenced_by": [
+        "assets/reports/health-metaphor-motion.html (HTML src)",
+        "assets/reports/health-metaphor-motion.html (doctor-note lettering)",
+        "assets/reports/health-metaphor-motion.html (reference)",
+        "assets/reports/health-metaphor-motion.html (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/doctor-note-line-04.svg",
+      "bytes": 44203,
+      "referenced_by": [
+        "assets/reports/health-metaphor-motion.html (HTML src)",
+        "assets/reports/health-metaphor-motion.html (doctor-note lettering)",
+        "assets/reports/health-metaphor-motion.html (reference)",
+        "assets/reports/health-metaphor-motion.html (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/editor-layout-sketch.png",
+      "bytes": 233334,
+      "referenced_by": [
+        "management-reports.html (HTML href)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/health-metaphor-motion.html",
+      "bytes": 23059,
+      "referenced_by": [
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/legacy-management-report.png",
+      "bytes": 187004,
+      "referenced_by": [
+        "management-reports.html (HTML href)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/period-explicit-choice.png",
+      "bytes": 328508,
+      "referenced_by": [
+        "management-reports.html (HTML href)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/period-insert-dropdown.png",
+      "bytes": 299713,
+      "referenced_by": [
+        "management-reports.html (HTML href)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/period-saved-dates.png",
+      "bytes": 376549,
+      "referenced_by": [
+        "management-reports.html (HTML href)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-card.webp",
+      "bytes": 9350,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cardSel.webp",
+      "bytes": 9916,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch10.webp",
+      "bytes": 24104,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch11.webp",
+      "bytes": 23522,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch12.webp",
+      "bytes": 23454,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch13.webp",
+      "bytes": 36120,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch14.webp",
+      "bytes": 23442,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch15.webp",
+      "bytes": 23442,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch17.webp",
+      "bytes": 23316,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch18.webp",
+      "bytes": 23210,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch19.webp",
+      "bytes": 23210,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch20.webp",
+      "bytes": 23226,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch21.webp",
+      "bytes": 23508,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch22.webp",
+      "bytes": 22776,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch23.webp",
+      "bytes": 23206,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch24.webp",
+      "bytes": 23202,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch25.webp",
+      "bytes": 23202,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch26.webp",
+      "bytes": 23352,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch27.webp",
+      "bytes": 23182,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch28.webp",
+      "bytes": 15760,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch4.webp",
+      "bytes": 25226,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch5.webp",
+      "bytes": 41616,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch6.webp",
+      "bytes": 41856,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch7.webp",
+      "bytes": 35664,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch8.webp",
+      "bytes": 36504,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-ch9.webp",
+      "bytes": 36182,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv10.webp",
+      "bytes": 46230,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv11.webp",
+      "bytes": 46866,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv12.webp",
+      "bytes": 50910,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv14.webp",
+      "bytes": 53066,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv15.webp",
+      "bytes": 35254,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv17.webp",
+      "bytes": 62268,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv18.webp",
+      "bytes": 72088,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv19.webp",
+      "bytes": 42142,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv20.webp",
+      "bytes": 46864,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv21.webp",
+      "bytes": 46446,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv22.webp",
+      "bytes": 44490,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv23.webp",
+      "bytes": 48278,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv24.webp",
+      "bytes": 43696,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv25.webp",
+      "bytes": 70236,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv26.webp",
+      "bytes": 63190,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv27.webp",
+      "bytes": 65356,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv28.webp",
+      "bytes": 400476,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv4.webp",
+      "bytes": 26782,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv5.webp",
+      "bytes": 26504,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv6.webp",
+      "bytes": 31338,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv7.webp",
+      "bytes": 175882,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv8.webp",
+      "bytes": 277900,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-cv9.webp",
+      "bytes": 46136,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-hovBS.webp",
+      "bytes": 1734,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-hovRev.webp",
+      "bytes": 1242,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-hovTB.webp",
+      "bytes": 1644,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-modal.webp",
+      "bytes": 44760,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-toast.webp",
+      "bytes": 9330,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-vp1.webp",
+      "bytes": 98226,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-vp2.webp",
+      "bytes": 92114,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-vp3.webp",
+      "bytes": 68992,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/frame-vp30.webp",
+      "bytes": 98700,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.js (reference)",
+        "assets/reports/report-flow-v110/player.js (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/player.css",
+      "bytes": 3406,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.html (HTML href)",
+        "assets/reports/report-flow-v110/player.html (reference)",
+        "assets/reports/report-flow-v110/player.html (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/player.html",
+      "bytes": 710,
+      "referenced_by": [
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow-v110/player.js",
+      "bytes": 23825,
+      "referenced_by": [
+        "assets/reports/report-flow-v110/player.html (HTML src)",
+        "assets/reports/report-flow-v110/player.html (reference)",
+        "assets/reports/report-flow-v110/player.html (relative helper reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow/poster-01.webp",
+      "bytes": 43216,
+      "referenced_by": [
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow/poster-02.webp",
+      "bytes": 59462,
+      "referenced_by": [
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow/poster-03.webp",
+      "bytes": 68910,
+      "referenced_by": [
+        "management-reports.html (HTML href)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow/poster-04.webp",
+      "bytes": 45746,
+      "referenced_by": [
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow/poster-05.webp",
+      "bytes": 66680,
+      "referenced_by": [
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow/poster-06.webp",
+      "bytes": 59850,
+      "referenced_by": [
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/report-flow/poster-07.webp",
+      "bytes": 57974,
+      "referenced_by": [
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/reports/style-exploration.png",
+      "bytes": 135969,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)"
+      ]
+    },
+    {
+      "path": "assets/research-donut.webp",
+      "bytes": 8488,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/rough-arrow.webp",
+      "bytes": 28734,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/shiva-lastoria-word-v70.svg",
+      "bytes": 16397,
+      "referenced_by": [
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)",
+        "menu.css (literal asset path in reachable code)",
+        "menu.css (reference)",
+        "refinements-v75.css (literal asset path in reachable code)",
+        "refinements-v75.css (reference)",
+        "refinements-v77.css (literal asset path in reachable code)",
+        "refinements-v77.css (reference)"
+      ]
+    },
+    {
+      "path": "assets/shiva-sketch-work.webp",
+      "bytes": 36998,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)",
+        "site-config.js (literal asset path in reachable code)",
+        "site-config.js (reference)"
+      ]
+    },
+    {
+      "path": "assets/shiva-turtleneck-portrait.webp",
+      "bytes": 78948,
+      "referenced_by": [
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/shiva-wordmark-static.svg",
+      "bytes": 11155,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)",
+        "index.html (HTML src)",
+        "index.html (literal asset path in reachable code)",
+        "index.html (reference)",
+        "management-reports.html (HTML src)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)",
+        "refinements-v74.css (literal asset path in reachable code)",
+        "refinements-v74.css (reference)",
+        "refinements-v77.css (literal asset path in reachable code)",
+        "refinements-v77.css (reference)"
+      ]
+    },
+    {
+      "path": "assets/tree-view.webp",
+      "bytes": 17396,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/vibe-codes-preview.svg",
+      "bytes": 526,
+      "referenced_by": [
+        "app.js (literal asset path in reachable code)",
+        "app.js (reference)",
+        "management-reports.html (literal asset path in reachable code)",
+        "management-reports.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/zfi-fleet.svg",
+      "bytes": 5545,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/zfi-guided-install-v64.png",
+      "bytes": 334607,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    },
+    {
+      "path": "assets/zfi-installation-step.svg",
+      "bytes": 11562,
+      "referenced_by": [
+        "agent-management.html (HTML src)",
+        "agent-management.html (literal asset path in reachable code)",
+        "agent-management.html (reference)"
+      ]
+    }
+  ]
+}

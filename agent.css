@@ -352,7 +352,7 @@ body.page-case-agent #problem .agent-scale__visual figcaption {
 }
 
 /* ========================================================================== 
-   V63 — stable case-study surfaces, evidence blending and lifecycle pacing
+   V63; stable case-study surfaces, evidence blending and lifecycle pacing
    ========================================================================== */
 
 /* Case-study sections own their tone. The previous global background scrub
@@ -614,7 +614,7 @@ body.page-case-agent #impact {
 
 
 /* ========================================================================== 
-   V64 — restore the horizontal editorial strokes in the city-story bridge
+   V64; restore the horizontal editorial strokes in the city-story bridge
    ========================================================================== */
 body.page-case-agent .agent-analogy-intro .editorial-grid-lines {
   display: block !important;
@@ -706,7 +706,7 @@ body.page-case-agent .brainstorm-board-v65__caption--maintain {
 }
 
 /* ========================================================================== 
-   V66 — At-a-glance hierarchy, sticky KPIs, persona breathing room
+   V66; At-a-glance hierarchy, sticky KPIs, persona breathing room
    ========================================================================== */
 
 /* Keep the case-study page to one semantic H1 while giving “At a glance”
@@ -824,7 +824,7 @@ body.page-case-agent .journey__notes .journey-note--2::before {
 }
 
 /* ========================================================================== 
-   V67 — Cognitive-load hierarchy and chart alignment
+   V67; Cognitive-load hierarchy and chart alignment
    ========================================================================== */
 body.page-case-agent .cognitive-v24__layout {
   align-items: start !important;
@@ -861,7 +861,7 @@ body.page-case-agent .cognitive-v67__chart {
 }
 
 /* ========================================================================== 
-   V68 — Brainstorm board scale + unclipped live captions
+   V68; Brainstorm board scale + unclipped live captions
    ========================================================================== */
 body.page-case-agent .brainstorm-board-v65 {
   width: min(100%, 720px);
@@ -929,7 +929,7 @@ body.page-case-agent .brainstorm-board-v65__caption--maintain {
 }
 
 /* ========================================================================== 
-   V69 — story coherence, disclosure motion, walkthrough rebuild
+   V69; story coherence, disclosure motion, walkthrough rebuild
    ========================================================================== */
 
 /* Admin Adnan gets a longer isolated chapter so neighbouring tones never crowd
@@ -1416,7 +1416,7 @@ body.page-case-agent .balance .label {
 body.page-case-agent .effort-impact-method b { font-size: 17px !important; }
 
 /* ========================================================================== 
-   V70 — hierarchy, cards, larger validation/final screens, roadmap + epilogue
+   V70; hierarchy, cards, larger validation/final screens, roadmap + epilogue
    ========================================================================== */
 
 /* Decision 01 stays part of Discovery instead of becoming another full-page
@@ -1635,7 +1635,7 @@ body.page-case-agent .architecture-shift-v70__media img {
 }
 
 /* ========================================================================== 
-   V71 — one card language for every product decision
+   V71; one card language for every product decision
    ========================================================================== */
 body.page-case-agent .decision-card-wide-v71 {
   width: min(100%, 1120px) !important;
@@ -1941,7 +1941,7 @@ body.page-case-agent .architecture-lead-note {
 }
 
 /* ========================================================================== 
-   V73 — decisions, influence hierarchy, cleaner hero + At a glance
+   V73; decisions, influence hierarchy, cleaner hero + At a glance
    ========================================================================== */
 
 /* Hero is scale-led; the product screen now belongs to At a glance. */

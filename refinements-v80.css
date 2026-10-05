@@ -1,4 +1,4 @@
-/* V80 — one top-right navigation pill: Shiva home wordmark + orange circular menu button. */
+/* V80; one top-right navigation pill: Shiva home wordmark + orange circular menu button. */
 .site-header.site-header--floating {
   position: fixed !important;
   top: clamp(12px, 1.4vw, 18px) !important;

@@ -918,7 +918,7 @@ html.is-leaving .page-wipe { transform: translateY(0); transition-duration: .5s;
 }
 
 /* ========================================================================== 
-   Untold-reference refinement — personalised for Shiva
+   Untold-reference refinement; personalised for Shiva
    Uses the native Helvetica Neue family when available. No font binary is
    bundled; Nimbus Sans is the local preview fallback.
    ========================================================================== */
@@ -1436,7 +1436,7 @@ body.case-index-visible .case-index--fixed {
 }
 
 /* ========================================================================== 
-   Viewport composition pass — v3
+   Viewport composition pass; v3
    Goal: every natural resting point in the scroll should read as a designed
    frame, while retaining normal document scrolling and accessibility.
    ========================================================================== */
@@ -1664,7 +1664,7 @@ body.case-index-visible .case-index--fixed {
 
 
 /* ========================================================================== 
-   Typography system — exact families used by the Untold reference
+   Typography system; exact families used by the Untold reference
    Reference display: Geometric415Lite
    Reference body/UI: HelveticaNeue
    Font binaries are not copied from the reference file. These declarations
@@ -2024,7 +2024,7 @@ html.is-leaving .page-wipe__signature-wrap { opacity: 0; }
 }
 
 /* ========================================================================== 
-   V3 — exact display family target + cleaner navigation + stacked case cards
+   V3; exact display family target + cleaner navigation + stacked case cards
    ========================================================================== */
 
 /* Geometric 415 Lite: use Bitstream's PostScript name first. This mirrors
@@ -2307,7 +2307,7 @@ h1, h2, h3,
 }
 
 /* ========================================================================== 
-   V4 refinement — readable signature, deliberate menu paths, richer stack
+   V4 refinement; readable signature, deliberate menu paths, richer stack
    ========================================================================== */
 @font-face {
   font-family: "Geometric415LiteLocal";
@@ -2636,7 +2636,7 @@ h1, h2, h3,
 }
 
 /* ========================================================================== 
-   V5 — reference-composed hero, readable drawn signature, ambient transitions
+   V5; reference-composed hero, readable drawn signature, ambient transitions
    ========================================================================== */
 :root {
   --font-geometric: "Geometric415Lite", "Geometric415BT-LiteA", "Avenir Next", "Century Gothic", "Geometric415Lite Fallback", Arial, sans-serif;
@@ -2958,7 +2958,7 @@ body.page-home {
 }
 
 /* ========================================================================== 
-   V6 — closer Untold composition, legible signature, ambient page transition
+   V6; closer Untold composition, legible signature, ambient page transition
    ========================================================================== */
 :root {
   --font-geometric: "Geometric415BT-LiteA", "Geometric 415 Lite", "Geometric415Lite", "Avenir Next", "Century Gothic", "Geometric415Lite Fallback", Arial, sans-serif;
@@ -2986,7 +2986,7 @@ body.page-home {
 .header-signature-v5 path { stroke-width: 6.6; }
 
 /* Landing: compose the first viewport using the same visual ratios as the
-   reference — compact central type, one image interruption, one sketch card,
+   reference; compact central type, one image interruption, one sketch card,
    supporting note to the right and a centered discovery cue. */
 .home-hero-v2 {
   min-height: 100svh;
@@ -3164,7 +3164,7 @@ body.page-home {
 }
 
 /* ========================================================================== 
-   V7 — natural scrolling, composed hero, lighter card stack, vertical progress
+   V7; natural scrolling, composed hero, lighter card stack, vertical progress
    ========================================================================== */
 :root {
   --font-scribble: "Noteworthy", "Bradley Hand", "Chalkboard SE", "Segoe Print", cursive;
@@ -3390,7 +3390,7 @@ body.page-home {
 .case-stack-card:focus-visible .case-stack-card__summary,
 .case-stack-card:focus-within .case-stack-card__summary { transform: none !important; }
 
-/* 5. The third card starts in the exact same stack rhythm—no delayed jump. */
+/* 5. The third card starts in the exact same stack rhythm; no delayed jump. */
 .case-stack-card--three { transition-delay: 0s !important; }
 .case-stack-card--three .case-stack-card__visual img { transform: scale(1.01); }
 
@@ -3571,7 +3571,7 @@ body.page-home {
 }
 
 /* ========================================================================== 
-   V8 — balanced hero, scroll-collected work, writing desk + vibe launchpad
+   V8; balanced hero, scroll-collected work, writing desk + vibe launchpad
    ========================================================================== */
 
 /* The preloader mark is deliberately simple: a single readable handwritten
@@ -4004,7 +4004,7 @@ body.page-home {
 }
 
 /* ========================================================================== 
-   V9 — story polish: scribble loader, clean card collection, editorial labs
+   V9; story polish: scribble loader, clean card collection, editorial labs
    ========================================================================== */
 :root {
   --font-hand: "Segoe Print", "Bradley Hand", "Chalkboard SE", "Noteworthy", cursive;
@@ -4363,7 +4363,7 @@ body.page-home {
 .site-footer__bottom--simple { justify-content:flex-end !important; }
 
 /* ================================================================
-   V10 — Agent Management editorial story pass
+   V10; Agent Management editorial story pass
    ================================================================ */
 
 /* Keep this case study in the paper / ink / orange family. */
@@ -4559,7 +4559,7 @@ body.page-home {
 
 
 /* ============================================================
-   V11 TYPOGRAPHY — Cabinet Grotesk + Syne
+   V11 TYPOGRAPHY; Cabinet Grotesk + Syne
    Cabinet Grotesk: display titles / editorial headings
    Syne: body copy / UI / labels
    Handwritten accents intentionally keep their scribble families.
@@ -4639,7 +4639,7 @@ li,
 }
 
 /* ============================================================
-   V12 — natural scroll + deliberate sticky moments
+   V12; natural scroll + deliberate sticky moments
    ============================================================ */
 html { scroll-behavior: smooth; }
 
@@ -4903,7 +4903,7 @@ html { scroll-behavior: smooth; }
 }
 
 /* ============================================================
-   V13 — flow, hierarchy, component consistency, Agent Management
+   V13; flow, hierarchy, component consistency, Agent Management
    ============================================================ */
 
 /* Minimal persistent chrome: the signature and menu remain discoverable without
@@ -5207,7 +5207,7 @@ html { scroll-behavior: smooth; }
 .page-case-agent .impact-card__foot { margin-top:28px; }
 
 /* ============================================================
-   V14 — Agent Management polish + coherent card system
+   V14; Agent Management polish + coherent card system
    ============================================================ */
 
 /* 1. Persistent chrome without a top nav: two independent liquid-glass islands. */
@@ -5466,7 +5466,7 @@ html { scroll-behavior: smooth; }
 .case-stack-card::after,.writing-card::after,.vibe-tile::after{display:block!important; inset:auto 0 auto 0!important; top:0!important; border:0!important; opacity:1!important;}
 
 /* ========================================================================== 
-   V15 — clean stack, calmer Agent Management, horizontal writing shelf
+   V15; clean stack, calmer Agent Management, horizontal writing shelf
    ========================================================================== */
 
 /* Smooth document flow. The earlier viewport composition pass used proximity
@@ -5801,7 +5801,7 @@ html { scroll-snap-type: none !important; scroll-padding-top: 0 !important; }
 .lifecycle-flip:nth-child(3) { z-index: 5; }
 
 /* ========================================================================== 
-   V16 — scroll-staged colour changes
+   V16; scroll-staged colour changes
    --------------------------------------------------------------------------
    Background changes never happen at a content boundary. When a page moves
    into a new colour family, a deliberately empty transition breath sits
@@ -5893,7 +5893,7 @@ html { scroll-snap-type: none !important; scroll-padding-top: 0 !important; }
 
 
 /* ========================================================================== 
-   V17 — continuous page background interpolation
+   V17; continuous page background interpolation
    --------------------------------------------------------------------------
    The page now owns one continuous background plane. Content sections are
    transparent, and the empty transition breaths only define where the global
@@ -5983,7 +5983,7 @@ html { scroll-snap-type: none !important; scroll-padding-top: 0 !important; }
 }
 
 /* ========================================================================== 
-   V19 — lifecycle clarity, legible signature, compact colour breaths
+   V19; lifecycle clarity, legible signature, compact colour breaths
    ========================================================================== */
 
 /* Header wordmark: readable first, still handwritten. */
@@ -6125,7 +6125,7 @@ body::before {
 }
 
 /* ========================================================================== 
-   V20 — footer reveal debug fix
+   V20; footer reveal debug fix
    --------------------------------------------------------------------------
    The reveal footer is fixed behind the page, so the scrolling document must
    remain an opaque continuous colour plane. V17/V19 made #main transparent,
@@ -6167,7 +6167,7 @@ body::before {
 }
 
 /* ========================================================================== 
-   V21 — Cabinet Grotesk + Syne typography lock
+   V21; Cabinet Grotesk + Syne typography lock
    The workspace preview deliberately does not make network font requests.
    On a normal deployed page, app shell JS loads Cabinet Grotesk from Fontshare
    and Syne from Google Fonts. If either family is installed locally, it is used
@@ -6238,7 +6238,7 @@ h6,
 
 
 /* ========================================================================== 
-   V22 — Webfont delivery fix
+   V22; Webfont delivery fix
    Exact Cabinet Grotesk + Syne load on downloaded/local files and deployments.
    OpenAI artifact/canvas preview remains network-safe and uses close fallbacks.
    ========================================================================== */
@@ -6255,7 +6255,7 @@ h6,
 }
 
 /* ========================================================================== 
-   V23 — agent narrative polish, smoother colour plane, Belove signature
+   V23; agent narrative polish, smoother colour plane, Belove signature
    ========================================================================== */
 :root{
   --font-belove:"Belove","Segoe Script","Bradley Hand","Snell Roundhand",cursive;
@@ -6521,7 +6521,7 @@ html.is-ready.is-leaving #main{transform:translateY(-10vh);transition:transform 
 @media(prefers-reduced-motion:reduce){html.js:not(.is-ready) #main,html.is-ready #main,html.is-ready.is-leaving #main{transform:none!important;transition:none!important;}}
 
 /* ========================================================================
-   V24 — pitch first, mature line art, interactive cognitive load, bookshelf
+   V24; pitch first, mature line art, interactive cognitive load, bookshelf
    ======================================================================== */
 
 /* Previous hand-drawn Shiva signature: one flowing word between two wave lines. */
@@ -6712,7 +6712,7 @@ html.is-ready.is-leaving #main{transform:translateY(-10vh);transition:transform 
 .writing-book::after{display:none!important;}
 
 /* ========================================================================== 
-   V25 — lead visual-design audit pass
+   V25; lead visual-design audit pass
    Focus: cleaner work deck, editorial bookshelf, legible Shiva mark
    ========================================================================== */
 
@@ -6746,7 +6746,7 @@ html.is-ready.is-leaving #main{transform:translateY(-10vh);transition:transform 
 .menu-open .header-wordmark-v25 { color: var(--paper); }
 .header-signature-v24 { display:none !important; }
 
-/* Selected work — make the deck read as one composed object instead of three
+/* Selected work; make the deck read as one composed object instead of three
    unrelated dark cards. The image is the hero; metadata forms a quiet frame. */
 .page-home .work-scroller--stack {
   padding-top: clamp(110px, 13vh, 165px) !important;
@@ -6882,7 +6882,7 @@ html.is-ready.is-leaving #main{transform:translateY(-10vh);transition:transform 
   letter-spacing:.06em;
 }
 
-/* Writing — keep the bookshelf metaphor, remove the novelty-shop feel. One calm
+/* Writing; keep the bookshelf metaphor, remove the novelty-shop feel. One calm
    editorial shelf, a restrained palette, and covers that open without blocking
    half the archive. */
 .writing-lab { overflow:hidden !important; }
@@ -7017,7 +7017,7 @@ html.is-ready.is-leaving #main{transform:translateY(-10vh);transition:transform 
    ========================================================================== */
 
 :root {
-  /* Core palette — one restrained system across all pages. */
+  /* Core palette; one restrained system across all pages. */
   --paper: #fcfcf4;
   --paper-2: #f3efe5;
   --paper-3: #e8e4da;
@@ -7036,7 +7036,7 @@ html.is-ready.is-leaving #main{transform:translateY(-10vh);transition:transform 
   --purple-2: var(--orange);
   --tone-umber: #343a3a;
 
-  /* Typography — 5 display sizes + 4 supporting sizes. */
+  /* Typography; 5 display sizes + 4 supporting sizes. */
   --font-display: "Cabinet Grotesk", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Syne", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-hand: "Segoe Script", "Bradley Hand", "Snell Roundhand", cursive;
@@ -7056,7 +7056,7 @@ html.is-ready.is-leaving #main{transform:translateY(-10vh);transition:transform 
   --lh-title: 1.02;
   --lh-body: 1.52;
 
-  /* Vertical rhythm — only three section densities. */
+  /* Vertical rhythm; only three section densities. */
   --space-poster: clamp(8rem, 15svh, 12rem);
   --space-narrative: clamp(6.25rem, 11svh, 9rem);
   --space-dense: clamp(4.75rem, 8svh, 7rem);
@@ -7526,7 +7526,7 @@ h6,
 }
 
 /* ========================================================================== 
-   V27 — Agent Management polish + chapter rail + continuous backgrounds
+   V27; Agent Management polish + chapter rail + continuous backgrounds
    ========================================================================== */
 
 /* Continuous page colour plane: no section is allowed to paint a hard-edged
@@ -7891,7 +7891,7 @@ h6,
 @keyframes metricArrowDrawV27 { to { stroke-dashoffset:0; } }
 
 /* ========================================================================== 
-   V28 — Agent story refinement: signature, research hierarchy, chart + cards
+   V28; Agent story refinement: signature, research hierarchy, chart + cards
    ========================================================================== */
 
 /* Handwritten Shiva mark: same drawn path in the loader and floating control. */
@@ -8151,7 +8151,7 @@ h6,
 .cog-tooltip.is-active { transform:translate(var(--tip-shift,18px),-50%) !important; }
 
 /* ========================================================================== 
-   V29 — instruction-set polish
+   V29; instruction-set polish
    ========================================================================== */
 
 :root {
@@ -8612,7 +8612,7 @@ html.is-ready.is-leaving .page-wipe.is-parked-bottom { transform:translate3d(0,0
   .impact-grid--reach { grid-template-columns:1fr !important; }
 }
 
-/* V30 — efficiency-arrow reliability fix
+/* V30; efficiency-arrow reliability fix
    Use a state transition instead of a keyframe dependency. The SVG remains
    hidden before reveal and deterministically draws when the card receives
    .is-visible. This prevents a failed/overridden animation from leaving the
@@ -8634,7 +8634,7 @@ html.is-ready.is-leaving .page-wipe.is-parked-bottom { transform:translate3d(0,0
   }
 }
 
-/* ==========================================================================\n   V31 — Skiper-inspired Selected Work + Writing interactions\n   Adapted to the existing editorial design system; no React dependency.\n   ========================================================================== */
+/* ==========================================================================\n   V31; Skiper-inspired Selected Work + Writing interactions\n   Adapted to the existing editorial design system; no React dependency.\n   ========================================================================== */
 
 /* Selected work: vertically sticky cards that collect and scale as the user scrolls. */
 .page-home .work-scroller--skiper {
@@ -9091,7 +9091,7 @@ html.is-ready.is-leaving .page-wipe.is-parked-bottom { transform:translate3d(0,0
 }
 
 /* ========================================================================== 
-   V33 — targeted visual + interaction fixes
+   V33; targeted visual + interaction fixes
    ========================================================================== */
 
 /* 1. Preloader: preserve the physical panel and continuous line. The JS now
@@ -9260,7 +9260,7 @@ html.is-ready.is-leaving .page-wipe.is-parked-bottom { transform:translate3d(0,0
 }
 
 
-/* V34 — video-verified preloader repair. JavaScript measures each connected
+/* V34; video-verified preloader repair. JavaScript measures each connected
    SVG path and animates its real length, so there are no detached dash fragments. */
 .page-wipe.is-js-drawing.is-writing .page-wipe__wave--lead,
 .page-wipe.is-js-drawing.is-writing .page-wipe__signature-line-v28,
@@ -9280,7 +9280,7 @@ html.is-ready:not(.is-leaving) .site-footer {
 }
 
 /* ========================================================================
-   V36 — FIGMA ICON SYSTEM + IMAGE RESTORE
+   V36; FIGMA ICON SYSTEM + IMAGE RESTORE
    User-authored Figma SVGs replace generic inline doodles. Keep these as
    actual SVG image assets so their original hand-drawn path work is preserved.
    ======================================================================== */
@@ -9361,7 +9361,7 @@ html.is-ready:not(.is-leaving) .site-footer {
 }
 
 /* ========================================================================
-   V37 — Lead-story editorial system
+   V37; Lead-story editorial system
    Decisions are evidence-led interruptions, not additional card furniture.
    ======================================================================== */
 
@@ -9587,7 +9587,7 @@ html.is-ready:not(.is-leaving) .site-footer {
 }
 
 /* ========================================================================
-   V38 — PRELOADER STABILITY + TWO-FONT SYSTEM + DISCOVERY COMPOSITION
+   V38; PRELOADER STABILITY + TWO-FONT SYSTEM + DISCOVERY COMPOSITION
    ======================================================================== */
 
 /* Preloader: one reveal surface, no independent dash fragments. */
@@ -9754,7 +9754,7 @@ body.page-case.page-case-domain :is(h1,h2,h3,h4,h5,h6,.display-xl,.display-lg,.d
 }
 
 /* ==========================================================
-   V39 — MANAGEMENT REPORTS STORY PROTOTYPE
+   V39; MANAGEMENT REPORTS STORY PROTOTYPE
    Uses DESIGN.md: Cabinet Grotesk + Syne, paper/ink/orange,
    poster/narrative/dense rhythms, restrained motion.
    ========================================================== */
@@ -9949,7 +9949,7 @@ body.page-case.page-case-domain :is(h1,h2,h3,h4,h5,h6,.display-xl,.display-lg,.d
   .mr-depth-demo details > div { padding-left:36px; }
 }
 
-/* V40 — Agent Management cognitive-load chart adopts the quieter Management Reports
+/* V40; Agent Management cognitive-load chart adopts the quieter Management Reports
    trend-chart grammar: one baseline, one confident curve, restrained orange emphasis. */
 .cognitive-v24__chart--report-style {
   padding: 0 0 54px !important;
@@ -10024,7 +10024,7 @@ body.page-case.page-case-domain :is(h1,h2,h3,h4,h5,h6,.display-xl,.display-lg,.d
   .cognitive-v24__chart--report-style .cog-label { font-size: 12px !important; }
 }
 
-/* V41 — chart legibility, stable narrative text, lifecycle card padding. */
+/* V41; chart legibility, stable narrative text, lifecycle card padding. */
 .page-case-agent .cognitive-v24__chart--report-style .cog-axis--y {
   fill: none !important;
   stroke: rgba(35, 36, 40, .16) !important;
@@ -10121,7 +10121,7 @@ body.page-case.page-case-domain :is(h1,h2,h3,h4,h5,h6,.display-xl,.display-lg,.d
   }
 }
 
-/* ==========================================================================\n   V42 — Cognitive-load tooltip: intrinsic per-marker annotations\n   ========================================================================== */
+/* ==========================================================================\n   V42; Cognitive-load tooltip: intrinsic per-marker annotations\n   ========================================================================== */
 /* The previous shared tooltip accumulated legacy width/height/transform rules.
    Render each explanation from the marker's own data attribute instead. */
 .page-case-agent .cognitive-v24__chart--report-style [data-cog-tooltip] {
@@ -10203,7 +10203,7 @@ body.page-case.page-case-domain :is(h1,h2,h3,h4,h5,h6,.display-xl,.display-lg,.d
 }
 
 
-/* V45 — explicit close control inside the full-screen menu. */
+/* V45; explicit close control inside the full-screen menu. */
 
 
 

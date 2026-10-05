@@ -240,7 +240,7 @@
       'architecture-shift': { title: 'A parallel platform experience', subtitle: 'Platform' },
       learning: { title: 'Four lessons that stayed with me', subtitle: 'Learnings' }
     } : body.classList.contains('page-home') ? {
-      top: ['Home', 'assets/character-hero-q95/center-v4.webp'], intro: ['Approach', 'assets/process-board.webp'], work: ['Selected work', 'assets/agent-hero.webp'],
+      top: ['Home', 'assets/character-hero-q95/center-v4.webp'], intro: ['Approach', 'assets/process-board.webp'], work: ['Work', 'assets/agent-hero.webp'],
       writing: ['Notes & essays', 'assets/feedback-card.webp'], vibes: ['Experiments', 'assets/vibe-codes-preview.svg'], manifesto: ['Principle', 'assets/shiva-sketch-work.webp']
     } : body.classList.contains('page-case-domain') ? {
       top:['Case study','assets/domain-hero.webp'], overview:['Overview','assets/application-map.webp'], alert:['Alert','assets/alert-storm.webp'],
@@ -726,7 +726,7 @@
       }
       link.href = href;
       if (key === 'email') {
-        link.textContent = label;
+        link.textContent = value;
         link.removeAttribute('target');
         link.removeAttribute('rel');
         link.setAttribute('aria-label', `Email ${value}`);
@@ -906,7 +906,7 @@
               return;
             }
             const last = phrase[charIndex - 1] || '';
-            window.setTimeout(tickAchievement, /[,.–—]/.test(last) ? 92 : 28 + Math.random() * 18);
+            window.setTimeout(tickAchievement, /[,.–; ]/.test(last) ? 92 : 28 + Math.random() * 18);
           } else {
             charIndex = Math.max(0, charIndex - 1);
             output.textContent = phrase.slice(0, charIndex);
@@ -1024,152 +1024,11 @@
     setCityStepV14(active);
   };
 
-  // Background transitions are staged in empty scroll space rather than snapping
-  // from one section colour to another. Content never shares the transition:
-  // the colour settles first, then the next section enters.
+  // v107: each homepage section owns a static surface. No scroll-colour
+  // interpolation, transparent background injection or transition spacer.
   const homeManifesto = body.classList.contains('page-home') ? document.getElementById('manifesto') : null;
-  const mixColor = (a, b, t) => {
-    const k = clamp(t);
-    return `rgb(${Math.round(a[0] + (b[0] - a[0]) * k)} ${Math.round(a[1] + (b[1] - a[1]) * k)} ${Math.round(a[2] + (b[2] - a[2]) * k)})`;
-  };
 
-  const backgroundTones = {
-    paper: { hex: '#fcfcf4', rgb: [252, 252, 244] },
-    sand: { hex: '#ece9e4', rgb: [236, 233, 228] },
-    grey: { hex: '#deded8', rgb: [222, 222, 216] },
-    lavender: { hex: '#e8e4da', rgb: [232, 228, 218] },
-    orange: { hex: '#ff5623', rgb: [255, 86, 35] },
-    ink: { hex: '#232428', rgb: [35, 36, 40] },
-    night: { hex: '#08070c', rgb: [8, 7, 12] },
-    purple: { hex: '#232428', rgb: [35, 36, 40] },
-    umber: { hex: '#343a3a', rgb: [52, 58, 58] },
-    graphite: { hex: '#343a3a', rgb: [52, 58, 58] }
-  };
-
-  const toneForSection = section => {
-    if (body.classList.contains('page-home')) {
-      if (section.id === 'writing' || section.id === 'vibes') return 'grey';
-      // The closing poster owns a static orange surface. Do not recolour
-      // the projects (or the entire page) as the poster enters the viewport.
-      if (section.id === 'manifesto') return 'grey';
-      return 'paper';
-    }
-
-    if (body.classList.contains('page-case-agent')) {
-      if (section.classList.contains('screen-flow')) return 'night';
-      if (section.classList.contains('section--ink')) return 'ink';
-      if (section.classList.contains('section--orange')) return 'orange';
-      if (section.classList.contains('section--graphite')) return 'graphite';
-      if (section.classList.contains('section--umber')) return 'umber';
-      if (section.classList.contains('section--sand') || section.classList.contains('lifecycle-scene')) return 'sand';
-      return 'paper';
-    }
-
-    if (body.classList.contains('page-case-domain')) {
-      if (section.classList.contains('screen-flow')) return 'night';
-      if (section.classList.contains('section--ink')) return 'ink';
-      if (section.classList.contains('section--orange')) return 'orange';
-      if (section.classList.contains('section--purple')) return 'purple';
-      if (section.classList.contains('section--lavender') || section.classList.contains('current-ux')) return 'lavender';
-      if (section.classList.contains('section--sand')) return 'sand';
-      return 'paper';
-    }
-
-    return 'paper';
-  };
-
-  const colourDistance = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
-  const bgBreathers = [];
-
-  const installBackgroundBreathers = () => {
-    // Keep the animated continuous colour plane on the homepage only. Case
-    // studies own their section surfaces so an incoming section cannot recolour
-    // an outgoing decision or sticky scene while both are still in view.
-    if (!body.classList.contains('page-home')) return;
-    const main = document.getElementById('main');
-    if (!main || main.dataset.bgBreathersReady === 'true') return;
-    main.dataset.bgBreathersReady = 'true';
-
-    const sections = [...main.children].filter(el => el.matches('section'));
-    if (!sections.length) return;
-
-    let previousTone = toneForSection(sections[0]);
-    sections[0].dataset.bgTone = previousTone;
-    sections[0].style.backgroundColor = 'transparent';
-
-    for (let index = 1; index < sections.length; index += 1) {
-      const section = sections[index];
-      const nextTone = toneForSection(section);
-      section.dataset.bgTone = nextTone;
-      section.style.backgroundColor = 'transparent';
-
-      if (nextTone !== previousTone) {
-        const from = backgroundTones[previousTone];
-        const to = backgroundTones[nextTone];
-        const distance = colourDistance(from.rgb, to.rgb);
-        const breath = document.createElement('div');
-        breath.className = 'bg-transition-breath';
-        breath.setAttribute('aria-hidden', 'true');
-        breath.dataset.fromTone = previousTone;
-        breath.dataset.toTone = nextTone;
-        breath.style.setProperty('--breath-from', from.hex);
-        breath.style.setProperty('--breath-to', to.hex);
-        const distanceClass = distance > 180 ? 'major' : distance > 70 ? 'medium' : 'minor';
-        breath.dataset.distance = distanceClass;
-        breath.style.setProperty('--breath-height', distanceClass === 'major' ? '14svh' : distanceClass === 'medium' ? '10svh' : '7svh');
-        main.insertBefore(breath, section);
-        bgBreathers.push({ el: breath, from: from.rgb, to: to.rgb });
-      }
-
-      previousTone = nextTone;
-    }
-  };
-
-  const updateBackgroundBreathers = () => {
-    if (!body.classList.contains('page-home')) return;
-    const main = document.getElementById('main');
-    if (!main) return;
-    const vh = window.innerHeight || 1;
-    const probe = vh * .5;
-    let current = backgroundTones.paper.rgb;
-
-    if (bgBreathers.length) current = bgBreathers[0].from;
-
-    for (const { el, from, to } of bgBreathers) {
-      const rect = el.getBoundingClientRect();
-      if (rect.top > probe) break;
-
-      if (rect.bottom <= probe) {
-        current = to;
-        el.style.setProperty('--breath-progress', '1');
-        continue;
-      }
-
-      // The viewport-centre line is intentionally used as the scrub point.
-      // Colour therefore does not begin changing when the breath merely
-      // touches the bottom edge; it starts only once the blank transition
-      // has moved into the composition and the previous section has cleared.
-      const raw = clamp((probe - rect.top) / Math.max(1, rect.height));
-      const eased = raw * raw * (3 - 2 * raw);
-      current = [
-        from[0] + (to[0] - from[0]) * eased,
-        from[1] + (to[1] - from[1]) * eased,
-        from[2] + (to[2] - from[2]) * eased
-      ];
-      el.style.setProperty('--breath-progress', eased.toFixed(4));
-      break;
-    }
-
-    const colour = `rgb(${Math.round(current[0])} ${Math.round(current[1])} ${Math.round(current[2])})`;
-    root.style.setProperty('--continuous-page-bg', colour);
-    main.style.setProperty('--continuous-page-bg', colour);
-    main.style.backgroundColor = colour;
-  };
-
-  installBackgroundBreathers();
-
-  // Preserve the manifesto's delayed copy reveal, but keep colour changes out
-  // of content-bearing sections. Colour is now handled exclusively above.
+  // Preserve the manifesto's copy reveal, without recolouring any section.
   const updateHomeBackground = () => {
     if (!homeManifesto) return;
     const rect = homeManifesto.getBoundingClientRect();
@@ -1557,7 +1416,6 @@
   const render = () => {
     updateHomeChrome();
     updateHomeBackground();
-    updateBackgroundBreathers();
     updateHeader();
     updateSectionProgress();
     updateCaseIndexVisibility();
@@ -1675,7 +1533,8 @@
     }
     const rect = lifecycle.getBoundingClientRect();
     const vh = window.innerHeight;
-    const total = Math.max(1, rect.height - vh);
+    const extra = parseFloat(lifecycle.style.getPropertyValue('--lifecycle-more')) || 0;
+    const total = Math.max(1, rect.height - extra - vh);
     const progress = clamp01(-rect.top / total);
     const fan = clamp01((progress - .08) / .34);
     const prioritise = clamp01((progress - .52) / .22);
@@ -1747,7 +1606,7 @@
   roadmaps.forEach(el => observer.observe(el));
 })();
 
-/* V31 — Skiper-inspired sticky Selected Work + hover-expand Writing. */
+/* V31; Skiper-inspired sticky Selected Work + hover-expand Writing. */
 (() => {
   const work = document.querySelector('.work-scroller--skiper');
   const shells = work ? [...work.querySelectorAll('[data-skiper-card]')] : [];

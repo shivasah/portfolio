@@ -1,0 +1,47 @@
+/* v101; Starting Point report-tools motion strip. Scoped to Management Reports. */
+.page-case-reports-v90 .mr-tools-strip{
+  width:100%;
+  margin:clamp(42px,5.5vw,76px) 0 0;
+}
+.page-case-reports-v90 .mr-tools-strip__frame{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:var(--card-radius-sm);
+  background:#f5f4ee;
+}
+.page-case-reports-v90 .mr-tools-strip__scroller{
+  width:100%;
+  overflow:hidden;
+}
+.page-case-reports-v90 .mr-tools-strip svg{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1600/360;
+  background:#f5f4ee;
+}
+.page-case-reports-v90 .mr-tools-strip figcaption{
+  margin-top:14px;
+  max-width:74ch;
+  color:var(--mr-muted);
+  font:400 13px/1.55 var(--font-body);
+}
+@media (max-width:720px){
+  .page-case-reports-v90 .mr-tools-strip__scroller{
+    overflow-x:auto;
+    overscroll-behavior-inline:contain;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .page-case-reports-v90 .mr-tools-strip__scroller::-webkit-scrollbar{display:none}
+  .page-case-reports-v90 .mr-tools-strip svg{
+    width:900px;
+    max-width:none;
+    height:auto;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .page-case-reports-v90 .mr-tools-strip__scroller{scroll-behavior:auto}
+}

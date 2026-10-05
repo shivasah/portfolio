@@ -1,4 +1,4 @@
-/* V77 — restore the stable split floating header from the earlier portfolio chrome.
+/* V77; restore the stable split floating header from the earlier portfolio chrome.
    The home signature stays fixed at top-left; the menu trigger stays top-right. */
 .site-header.site-header--floating {
   position: fixed !important;

@@ -139,7 +139,7 @@ html:not(.js) .flip-stack__instruction { display: none; }
 .flip-card h3{line-height:1.10;padding-block:.04em .12em;overflow:visible}
 
 
-/* V83 — keep all three case-study cards visible while two remain private. */
+/* V83; keep all three case-study cards visible while two remain private. */
 .flip-card__link--locked {
   cursor: default;
   position: relative;

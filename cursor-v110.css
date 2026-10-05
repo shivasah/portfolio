@@ -1,0 +1,12 @@
+/* v110: one clean circular outline, two simultaneous tones, no heavy halo. */
+html body .cursor-scribble.cursor-duotone-v110{width:34px!important;height:34px!important;margin:-17px 0 0 -17px!important;mix-blend-mode:normal!important;filter:none!important;pointer-events:none!important;z-index:9999;transition:opacity .15s,width .18s,height .18s,margin .18s}
+html body .cursor-scribble.cursor-duotone-v110 svg{width:100%;height:100%;animation:none!important;rotate:none!important;transform:none!important;filter:none!important;overflow:visible}
+html body .cursor-duotone-v110 :is(.cursor-duotone__orbit,.cursor-duotone__core){transform-origin:24px 24px;transform:rotate(var(--cursor-angle,0deg));transition:scale .15s}
+html body .cursor-duotone-v110 .cursor-duotone__grey{fill:none;stroke:#64666a;stroke-width:2.4}
+html body .cursor-duotone-v110 .cursor-duotone__white{fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round}
+html body .cursor-duotone-v110 .cursor-duotone__dot-grey{fill:#64666a;stroke:none}
+html body .cursor-duotone-v110 .cursor-duotone__dot-orange{fill:#ff5623;stroke:none}
+html body .cursor-duotone-v110.is-link{width:44px!important;height:44px!important;margin:-22px 0 0 -22px!important}
+html body .cursor-duotone-v110.is-down .cursor-duotone__orbit{scale:.86}
+html body .cursor-duotone-v110.is-down .cursor-duotone__core{scale:.88}
+@media(prefers-reduced-motion:reduce),(pointer:coarse){html body .cursor-duotone-v110{display:none!important}}

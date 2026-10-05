@@ -1,0 +1,72 @@
+[
+  {
+    "asset": "assets/beyond/avantika.webp",
+    "title": "Avantika University",
+    "tag": "Talk",
+    "description": "Designing conversations: a talk at Avantika University.",
+    "source": "Avantika.jpeg"
+  },
+  {
+    "asset": "assets/beyond/design-detective.webp",
+    "title": "Design like a detective",
+    "tag": "Protothon '25",
+    "description": "An online talk at the University of Washington during Protothon '25.",
+    "source": "Design like.jpeg"
+  },
+  {
+    "asset": "assets/beyond/india-hci.webp",
+    "title": "India HCI",
+    "tag": "Workshop",
+    "description": "I co-led a workshop on cultural sensitivity through speculative design with two other presenters.",
+    "source": "India HCI.jpeg"
+  },
+  {
+    "asset": "assets/beyond/level-up.webp",
+    "title": "Level up your portfolio",
+    "tag": "Online talk",
+    "description": "An online portfolio discussion session.",
+    "source": "Level up your port.jpeg"
+  },
+  {
+    "asset": "assets/beyond/live-session.webp",
+    "title": "Learn about UX",
+    "tag": "Online talk",
+    "description": "An online session on a broader perspective of UX, habituation and its effects.",
+    "source": "Live session.jpeg"
+  },
+  {
+    "asset": "assets/beyond/phillychi.webp",
+    "title": "PhillyCHI Design Slam",
+    "tag": "Judging",
+    "description": "Guest judge for the PhillyCHI Design Slam.",
+    "source": "PhillyCHI.jpeg"
+  },
+  {
+    "asset": "assets/beyond/reva.webp",
+    "title": "REVA University",
+    "tag": "Judging",
+    "description": "Judging the UX design hackathon at REVA University.",
+    "source": "REVA uni.jpeg"
+  },
+  {
+    "asset": "assets/beyond/sweden.webp",
+    "title": "Campus Varnamo",
+    "tag": "Sweden",
+    "description": "Presenting our group's work at Campus Varnamo, Sweden.",
+    "source": "Sweden.jpeg"
+  },
+  {
+    "asset": "assets/beyond/think-product.webp",
+    "title": "Think like a product designer",
+    "tag": "Protothon '26",
+    "description": "An online talk at the University of Washington during Protothon '26.",
+    "source": "Think like.png"
+  },
+  {
+    "asset": "assets/beyond/ux-switch.webp",
+    "title": "The UX switch",
+    "tag": "Online talk",
+    "description": "An online AMA for architecture students exploring UX.",
+    "source": "UX Switch.jpeg"
+  }
+]

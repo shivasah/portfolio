@@ -1,0 +1,41 @@
+[
+  {
+    "section": "design",
+    "path": "assets/reports/editor-layout-sketch.png",
+    "size": "2048x1231",
+    "description": "Editor layout sketch with header, canvas, content library, right rail and footer",
+    "status": "supplied and integrated"
+  },
+  {
+    "section": "period",
+    "path": "assets/reports/period-saved-dates.png",
+    "size": "2048x1365",
+    "description": "Saved dates, explained after insertion",
+    "status": "supplied and integrated"
+  },
+  {
+    "section": "period",
+    "path": "assets/reports/period-insert-dropdown.png",
+    "size": "2048x1365",
+    "description": "Choose a period while inserting",
+    "status": "supplied and integrated"
+  },
+  {
+    "section": "period",
+    "path": "assets/reports/period-explicit-choice.png",
+    "size": "2048x1365",
+    "description": "Make the date choices explicit",
+    "status": "supplied and integrated"
+  },
+  {
+    "section": "discovery",
+    "description": "Two native editable draft research notes replace image placeholders",
+    "status": "no image needed; wording requires confirmation"
+  },
+  {
+    "section": "top",
+    "path": "management-landing.js",
+    "description": "Option B: four tools assemble into one report; responsive native HTML/SVG using portfolio font tokens.",
+    "status": "supplied and integrated in v112"
+  }
+]

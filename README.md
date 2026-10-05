@@ -1,108 +1,167 @@
-# Shiva Sah - portfolio v87
+# Shiva Sah portfolio: v112
 
-GitHub Pages-ready static portfolio. Deploy the contents of this folder at the repository root; the homepage is `index.html`.
+Open `index.html` after extracting this complete static website. All three HTML
+pages are at the ZIP root; keep their CSS, JavaScript and assets alongside them.
 
-## Pages
+## This update
 
-- `index.html`: homepage, selected work, notes and essays, experiments, approach and contact.
-- `agent-management.html`: Agent Management case study, including the new scroll-driven city analogy.
-- `management-reports.html`: unlinked work-in-progress page. Management Reports still displays **Adding soon** on the homepage and in the menu. An unlinked HTML page is not access-controlled.
-- Domain-Centric Views remains **Adding soon**; its case-study page is not included.
+Management Reports now opens with option B from the supplied hero options:
+QuickBooks, Excel, Word and email fold into one report, followed by the builder.
+The hero uses the portfolio's existing font tokens, responsive native text,
+local scroll progress, a reduced-motion composition and a no-JavaScript fallback.
+It does not import the demo's font setup or include its option switch.
 
-## v87: bookshelf and experiments polish
+Management Reports is enabled in the menu on every page and in the homepage
+case-study card. The menus follow the existing card order: Agent Management,
+Management Reports, then Domain-Centric Views, which remains Adding soon.
 
-The bookshelf and project sections remain. The standalone section labels have
-been removed; menus and chapter-rail labels are now **Notes & essays** and
-**Experiments**. The Agent Management footer says **Essays & research**.
-Existing `#writing` and `#vibes` anchors and configuration keys remain unchanged,
-so previously saved links still work.
+The asset audit removes 78 unused files (11.71 MB), reducing the assets folder
+from 394 to 316 files. Active laptop frames 000 through 078 in both quality tiers,
+report animations, static fallbacks and all gallery photos are retained unchanged.
+The rest of the case-study content, sample-data labels and research-verification
+backlog are preserved. Management Reports retains its existing noindex/nofollow
+setting; enabling a link does not change search-engine indexing.
 
-Selected books now move ahead of the other spines in the actual 3D scene, not
-just to a larger z-index. When closed, a cover rotates spine-first before it
-returns to its slot. Conflicting historical z-index overrides were removed.
-The Read now control remains above the books.
+## Deployment cleanup
 
-The experiments keep a fixed neutral background. The shared page-wide orange
-scroll blend has been removed; the closing manifesto owns a static orange
-surface instead. Typography, pill buttons, hero animation, magnetic cursor,
-Agent Management city sequence, and project destinations are unchanged.
+Uploading the new files over a GitHub repository will not remove old assets.
+Use `ASSET-AUDIT-v112.md` for the exact paths to delete, or replace the website
+files with this cleaned folder while preserving the repository configuration
+and Git history. No server-side build step is required.
 
-### Cash Flow dashboard preview: capture still needed
+`V112-CHANGE-CHECKLIST.md`, `V112-QA-SUMMARY.json`, `V112-STATIC-CHECKS.json` and
+`ASSET-AUDIT-v112.json` document the changes and checks. Browser tests were
+isolated and offline; live hosting, Safari and external fonts were not tested.
+No font files are bundled.
 
-**The actual dashboard screenshot is not included.** No accessible dashboard
-capture or export was supplied; the localhost URL belongs to the owner's
-computer. The existing labelled workflow illustration remains visible. No
-private records or invented dashboard visuals were added.
+---
 
-A non-clickable two-fold preview is ready in `cashflow-preview.js` and
-`portfolio-polish.css`. To activate it:
+# Historical build notes (retained for context)
 
-1. Export a sanitized image containing exactly the first two screenfuls of the
-   dashboard. Redact names, private feedback, identifiers and internal URLs as
-   appropriate. Do not include the rest of a long dashboard in this image.
-2. Save it as `assets/cashflow-first-two-folds.webp` (PNG/JPEG/AVIF also work).
-3. Set `cashflowPreview.imagePath` in `site-config.js` to that local asset path.
-   Update its `alt` text to describe the sanitized capture.
+# v111: restored Management Reports output comparison
 
-The preview crops to one fold and pans to the second, pauses briefly, and returns
-to the top on a 24-second repeating cycle. It pauses on hover, keyboard focus,
-when offscreen, and when the browser tab is hidden. There is an explicit
-Pause/Play control. Reduced-motion preference starts with a static first fold;
-manual playback is still available. Missing/invalid captures leave the workflow
-illustration intact. No internal dashboard link or localhost request is made.
+Start with `index.html`. The ZIP contains all three portfolio pages at the root.
 
-### Checks for this edit
+The new `management-reports.html#output-comparison` section is immediately after
+**The final experience**, before **The balancing act**. The earlier legacy-editor
+comparison is retained; this section compares the finished report outputs.
 
-- JavaScript syntax and all local HTML asset references pass.
-- Local in-memory browser rendering: no JavaScript errors at desktop and mobile
-  widths; no horizontal page overflow in the checked layouts.
-- Book cover hit tests: 20/20 tested interior points belong to the selected book,
-  on desktop and mobile; the v86 desktop baseline passed only 8/20 points.
-- Close/return animation, publication filter, menu toggle position and labels
-  pass. The orange transition is absent from the generated scroll transitions.
-- Optional image panning, pause/resume, reduced-motion and offscreen suspension
-  were tested with a synthetic geometric image. That fixture is NOT shipped and
-  was NOT represented as the actual dashboard.
-- The two external live website embeds were not reverified in this edit.
+It integrates the supplied *Management Reports: legacy vs modern* HTML with
+6 legacy pages and 10 new pages, matched across 10 section headings. Both sides
+scroll together. Section buttons, sticky column headings and an enlarged-page
+reader support mouse, keyboard and touch. The report contents remain native
+HTML/SVG, including charts and tables, rather than flattened screenshots.
 
-## v86: public experiments restored
+The interface uses the portfolio's typography and colours. The report specimens
+retain their own typography. No font files are bundled. Normal deployments load
+the referenced webfonts; the site retains system-font fallbacks.
 
-The homepage's experiments section is restored between the bookshelf and the manifesto, at `index.html#vibes`. The shared menu on all three pages now links to it. The three projects are Letterwave, Squarekin, and Cash Flow Feedback.
+`REPORT-OUTPUT-COMPARISON.json` records the source and page map.
+`V111-CHANGE-CHECKLIST.md` and `V111-QA-SUMMARY.json` record this update's checks.
+The homepage, Agent Management and existing motion files are unchanged from v110.
 
-Letterwave and Squarekin have separate public Explore links (new tabs) and lazy, view-only live website embeds. The preview itself is also a link. The iframe has no pointer or keyboard interaction, so it does not capture page scrolling. Website typography is isolated inside the frame; the portfolio keeps its own Cabinet Grotesk / Syne font tokens and existing pill-button styles. No font binaries, external app source, or external app styles have been copied into this build.
+---
 
-Frames load only near the section and are removed offscreen or when the browser tab is hidden. A Pause preview button removes the frame. Reduced-motion/data-saving settings use an illustrated cover until Load live preview is explicitly selected. No-JavaScript, offline and network-failure states retain clearly labelled project illustrations and working external links. The Squarekin illustration includes an ordinary QR linking to Squarekin; it is not an export or screenshot of Squarekin's QR artwork.
+# Shiva Sah portfolio: v109
 
-**Live-preview verification limitation:** the public pages were read using web retrieval, but this build environment blocks browser navigation to these hosts. The actual live embeds could not be visually verified here. Frame lifecycle, responsive scaling, controls and failure handling are tested with local browser fixtures; the covers are not presented as screenshots. Deployed embeds depend on the destination sites allowing iframe embedding. Cross-origin CSP/X-Frame-Options refusals cannot reliably be detected from the parent; the separate Explore links always remain available.
+Complete static portfolio based on v108. This build completes the paused Management
+Reports revision and the follow-up request with the period explorations and supplied
+seven-act report-building walkthrough. No build step or server-side code is required.
 
-Cash Flow Feedback is a non-clickable internal-project card. Its graphic is explicitly a workflow illustration, not a dashboard screenshot. It contains only the owner's supplied workflow: UserVoice feedback -> Slack integration -> internal dashboard, five updates a day while the laptop is on. No feedback records, fabricated metrics, internal routes, or localhost URL are included. A real dashboard preview needs an owner-supplied sanitized screenshot.
+The ZIP root contains `index.html`, `agent-management.html` and
+`management-reports.html`, plus the required CSS, JavaScript and `assets/`.
+Keep that folder structure intact when deploying. Extract the ZIP before opening
+`index.html`. An HTTP server may be used for local review.
 
-Project descriptions are based on the owner's brief. Public preview targets:
-- https://letterwave.vercel.app/
-- https://squarekin.vercel.app/
+## What changed
 
-Public source pages additionally describe URL-contained letters without a message database (Letterwave), and offline use and multiple export formats (Squarekin). No backend or security audit was performed.
+Management Reports now uses the supplied editor-layout sketch and all three supplied
+period explorations. The period explanation focuses on the report's default date
+range and explicit saved-report exceptions; its unfilled prototype link is removed.
+The new seven-act walkthrough retains the supplied animation and automatically plays
+the act selected by page scroll, then holds. Its narrative follows the actual demo:
+template, cover, financials, KPI customisation, live-number writing, preview and
+publish/send. The AI-generation action at the end of the source's fourth act is deferred.
 
-Files added: `vibe-codes.css`, `vibe-codes.js`, `assets/vibe-codes-preview.svg`, `assets/vibe-squarekin-code.svg`.
-Menu copies are updated in `index.html`, `agent-management.html`, and `management-reports.html`. The section label and thumbnail are defined in `app.js`. Modified script and stylesheet references use `?v=87` in the current build to refresh cached files.
+AI-summary content and the optional epilogue have moved into
+`MANAGEMENT-REPORTS-TODO.md`. Related AI-summary research, lifecycle, release and
+influence wording has also been removed from the current page. The financial-report
+summary may still be visible as document content within the supplied screenshots;
+there is no AI-generation demonstration or claim in the current story.
 
-The homepage hero, magnetic cursor, menu-to-close control, and scroll-driven Agent Management city sequence are unchanged. Management Reports and Domain-Centric Views remain Adding soon / unlinked.
+The three research-table feedback cells are editable draft syntheses, not recorded
+verbatims. Two native text note cards replace the unfilled research-image slots.
+A draft customer-quote placeholder explains the time-period expectation. All of
+these invented wording examples remain visibly labelled as drafts.
 
-## v85: scroll-driven city analogy
+The requested text cleanup, simpler builder/editor headings, h4 Why it mattered
+label, lifecycle spacing and editor-zone descriptions are included. Editable em
+dashes across the website have been replaced with semicolons. Original text baked
+into uploaded photographs and product screenshots is not modified.
 
-Replaces the separate city introduction and three static illustrations with the supplied Intelligent intersection canvas animation. The existing wording is retained.
+## Metrics: illustrative, not verified
 
-The story pins to the viewport. Native scrolling advances through clouds, city, congestion and camera deployment, with matching text overlays. Scrolling back reverses the sequence. At the end, the camera stays at the intersection while traffic, signals and camera scans continue moving. Scrolling farther releases the pin into the next section. The final scene does not restart the cloud descent.
+The homepage card, At a glance and Impact use matching values:
 
-The ending includes a small portfolio-styled Pause motion / Resume motion control. A keyboard-only Skip city story link bypasses the sequence. Reduced-motion and no-JavaScript views show a still with all narrative text instead of requiring animation.
+- 219.4K report saves: fictional layout value.
+- 162.6K publish/send/export events: fictional layout value, scaled from the earlier
+  ratio (38.4 / 51.8) times 219.4 and rounded to one decimal.
+- 72% created-to-distributed: fictional rate for the draft; not derived from the
+  event totals and not a measure of customer adoption.
+- 47 FMHs: user-confirmed, with 19 business owners and 28 accountants.
 
-Files for this section:
+The 2.5% legacy customer-adoption baseline was supplied by the owner. It is not
+compared directly with a report-distribution rate because their denominators differ.
+Visible illustrative labels remain in the relevant metric areas. Replace the fictional
+values with verified analytics before presenting them as actual product results.
+`REPORTS-METRICS.json` records these values and their status.
 
-- `agent-management.html`: the four text overlays inside `#background`.
-- `agent-city-story.css`: responsive composition, typography, pin height and fallback layout.
-- `agent-city-story.js`: the supplied scene renderer, cached scroll frames and final live hold.
-- `assets/agent-city-motion-still.webp`: static fallback captured from the actual animation.
+## Motion and accessibility
 
-The section is 650svh (6.5 viewport heights): 450svh for the scroll-controlled narrative, 100svh for the pinned ending, and the final 100svh for leaving the section. To adjust pacing, change the enhanced section height in `agent-city-story.css`; the controller derives the timeline distance from the rendered section and stage sizes.
+`management-report-flow.js` owns only the report walkthrough's scroll track.
+The isolated player is `assets/reports/report-flow/player.html`, with 56 extracted
+local WebP assets. Assets are decoded on demand; only a few recent views are retained
+instead of decoding every full-length report image on startup. There are no new font
+files, libraries, analytics or third-party animation dependencies.
 
-Homepage hero behaviour, shared magnetic cursor, menu-to-close transformation, fonts and existing page content outside the city analogy remain from v84d. Agent Management now clips inherited horizontal artwork overflow without creating a nested vertical scroll container, so the pinned view stays aligned on mobile.
+Scrolling back selects the earlier chapter and replays it. The seven chapter buttons
+also work with a keyboard. Playback stops offscreen, when the tab is hidden, and when
+the site menu opens. Reduced-motion settings, very short viewports and no-JavaScript
+visitors get seven static finished screens with the same descriptions. Image links
+open an enlarged native dialog with Close/Escape and return focus; without JavaScript
+they link directly to the original image.
+
+## Preserved from v108
+
+The full-width footers, two case-study links, email/copy button, high-contrast cursor,
+bookshelf controls, compact experiment cards, eleven-photo Beyond the work section,
+preloader and Agent Management laptop/final flow remain. Agent Management has only
+punctuation changes in this version.
+
+Homepage order: Agent Management, Management Reports, Domain-Centric Views.
+Management Reports is linked from its homepage card and all three footers. Its
+existing noindex setting is retained. Domain-Centric Views still says Adding soon.
+
+## Owner follow-ups
+
+`MANAGEMENT-REPORTS-TODO.md` holds the deferred AI-summary and epilogue copy, metric
+verification and research-wording checks. `MANAGEMENT-REPORTS-ASSETS.md` lists the
+remaining visual gaps; `MANAGEMENT-REPORTS-ASSET-MANIFEST.json` tracks active slots.
+
+The Blue in Green still needs a reading URL. Social profile URLs in `site-config.js`
+remain owner-supplied fields; no personal profile URLs have been guessed. The internal
+cash-flow dashboard remains unlinked and does not fetch or expose internal data.
+
+## Validation
+
+See `V109-CHANGE-CHECKLIST.md`. Browser checks use offline Chromium with local assets
+inlined in a test document; this environment blocks browser navigation to HTTP/file
+URLs. Live hosting, external webfonts, Safari and third-party link destinations were
+not tested. This package changes no GitHub repository by itself.
+
+V106 through V108 checklists are historical records. `V108-PHOTO-MAP.json` still
+represents the current gallery. No font files are distributed.
+
+
+## v110
+This build includes the replacement Management Reports flow and the accompanying cursor/content/layout refinements. See V110-CHANGE-CHECKLIST.md and MANAGEMENT-REPORTS-TODO.md. Keep the three HTML files at the root and upload the complete assets directory with the CSS/JS files; the replacement player is under assets/reports/report-flow-v110/. Usage figures marked sample data are not verified business results.

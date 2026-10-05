@@ -102,7 +102,7 @@
   flow.dataset.flowManaged='';
   const nav=document.createElement('nav');
   nav.className='flow-controls';nav.setAttribute('aria-label','Walkthrough screens');
-  nav.innerHTML='<button type="button" data-flow-prev aria-label="Previous screen">←</button><span data-flow-position aria-live="polite">1 of 7</span><button type="button" data-flow-next aria-label="Next screen">→</button>';
+  nav.innerHTML='<button type="button" data-flow-prev aria-label="Previous screen">←</button><span data-flow-position aria-live="polite">1 of 8</span><button type="button" data-flow-next aria-label="Next screen">→</button>';
   sticky.append(nav);
   const prev=nav.querySelector('[data-flow-prev]'),next=nav.querySelector('[data-flow-next]'),position=nav.querySelector('[data-flow-position]');
   let index=-1,raf=0,compact=true,manualUntil=0;
