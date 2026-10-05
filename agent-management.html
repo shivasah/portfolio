@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#fcfcf4" name="theme-color"/>
-<meta content="Agent Management; Cisco AppDynamics product design by Shiva Sah." name="description"/>
+<meta content="Designing an inventory-first agent-management workflow. Cisco AppDynamics product design by Shiva Sah." name="description"/>
 <title>Agent Management; Shiva Sah</title>
 <script>document.documentElement.classList.add("js");</script>
 <script>
@@ -36,9 +36,9 @@
 <link href="menu.css?v=112" rel="stylesheet"/>
 <link href="preloader-art.css?v=112" rel="stylesheet"/>
 <link href="agent.css?v=112" rel="stylesheet"/>
-<script defer="" src="site-config.js?v=112"></script>
+<script defer="" src="site-config.js?v=114"></script>
 <script defer="" src="preloader-art.js?v=112"></script>
-<script defer="" src="app.js?v=112"></script>
+<script defer="" src="app.js?v=114"></script>
 <script defer="" src="agent.js?v=112"></script>
 <link href="refinements-v74.css?v=112" rel="stylesheet"/><script defer="" src="refinements-v74.js?v=112"></script>
 <link href="refinements-v75.css?v=112" rel="stylesheet"/><link href="refinements-v76.css?v=112" rel="stylesheet"/>
@@ -74,6 +74,7 @@ html.js:not(.is-ready) .page-wipe.is-centered.is-composed .page-wipe__signature-
 window.setTimeout(function(){if(!document.documentElement.classList.contains('is-ready')){document.documentElement.classList.add('is-ready');document.body.classList.add('hero-loaded');document.dispatchEvent(new Event('portfolio:ready'));}},5000);
 </script>
 <link rel="stylesheet" href="cursor-v110.css?v=112">
+<link rel="stylesheet" href="portfolio-v114.css?v=114">
 </head>
 <body class="page-case page-case-agent">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -96,7 +97,7 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 </h2>
 </div>
 <div class="site-menu__scroll">
-<nav aria-labelledby="site-menu-pages-title" class="site-menu__primary site-menu__primary--simple">
+<nav aria-label="Portfolio navigation" class="site-menu__primary site-menu__primary--simple">
 <a class="site-menu__page" data-menu-section="top" href="index.html#top"><strong>Home</strong></a>
 <div class="site-menu__works-group">
 <button aria-controls="site-menu-case-studies" aria-expanded="false" class="site-menu__page site-menu__works-toggle" data-menu-section="work" type="button">
@@ -106,35 +107,35 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 <div class="site-menu__projects-panel" hidden="" id="site-menu-case-studies"><div class="site-menu__projects-inner">
 <a class="site-menu__project" data-menu-page="agent-management.html" href="agent-management.html"><strong>Agent Management</strong><em>Cisco AppDynamics</em></a>
 <a class="site-menu__project" data-menu-page="management-reports.html" href="management-reports.html"><strong>Management Reports</strong><em>Intuit QuickBooks</em></a>
-<div class="site-menu__project site-menu__project--locked" aria-disabled="true"><strong>Domain-Centric Views</strong><em>Cisco Cloud Observability</em><span class="site-menu__soon">Adding soon</span></div>
+<div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Domain-Centric Views</strong><em>Cisco Cloud Observability</em><span class="site-menu__soon">Adding soon</span></div>
 </div></div>
 </div>
 <a class="site-menu__page" data-menu-section="writing" href="index.html#writing"><strong>Notes &amp; essays</strong></a>
 <a class="site-menu__page" data-menu-section="vibes" href="index.html#vibes"><strong>Experiments</strong></a>
 <a class="site-menu__page" data-menu-section="intro" href="index.html#intro"><strong>Approach</strong></a>
-<a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
+<a aria-label="View Shiva's resume (opens in a new tab)" class="site-menu__page resume-link" href="https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong>Resume</strong><span aria-hidden="true">↗</span></a><a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
 </nav>
 </div>
 </div>
 <!-- SITE MENU END -->
 <main id="main">
-<section class="agent-hero-v72 agent-cover-fixed agent-laptop-sequence" data-agent-laptop-sequence data-frame-count="105" data-header-theme="light" id="top" aria-label="Agent Management introduction with a scroll-controlled laptop reveal">
-<div class="agent-laptop-sequence__sticky" data-sequence-sticky>
+<section aria-label="Designing an inventory-first agent-management workflow; scroll-controlled laptop reveal" class="agent-hero-v72 agent-cover-fixed agent-laptop-sequence" data-agent-laptop-sequence="" data-frame-count="105" data-header-theme="light" id="top">
+<div class="agent-laptop-sequence__sticky" data-sequence-sticky="">
 <div aria-hidden="true" class="editorial-grid-lines"></div>
 <div class="agent-hero-v72__stage">
 <div class="agent-hero-v72__copy">
 <p class="agent-hero-v72__kicker reveal">Cisco AppDynamics · 2023</p>
-<h1 aria-label="Agent Management" class="agent-hero-v72__title">Agent<br/>Management</h1>
-<p class="agent-hero-v72__subtitle reveal" data-reveal-delay="120">A unified way to install, upgrade and manage agents at enterprise scale.</p>
+<h1 aria-label="Designing an inventory-first agent-management workflow" class="agent-hero-v72__title agent-hero-title--specific">Designing an inventory-first agent-management workflow</h1>
+<p class="agent-hero-v72__subtitle reveal" data-reveal-delay="120">This case study follows the inventory model, the hierarchy changes made after evaluation, and the release trade-offs behind the agent-management workflow.</p>
 <dl class="agent-hero-v72__facts reveal" data-reveal-delay="180">
 <div><dt>Timeline</dt><dd>6 months</dd></div>
 <div><dt>Product</dt><dd>Cisco AppDynamics</dd></div>
 <div><dt>Role</dt><dd>Senior product designer</dd></div>
 </dl>
 </div>
-<div class="agent-laptop-sequence__stage" data-sequence-stage role="img" aria-label="A laptop opens as the page scrolls, revealing a management dashboard.">
-<picture data-sequence-poster aria-hidden="true"><img alt="" decoding="async" fetchpriority="high" src="assets/agent-laptop/poster-start-standard.webp" srcset="assets/agent-laptop/poster-start-standard.webp 1360w, assets/agent-laptop/poster-start-retina.webp 2720w" sizes="(max-width: 900px) 112vw, min(112vw, 1320px)"/></picture>
-<canvas aria-hidden="true" width="1360" height="800"></canvas>
+<div aria-label="A laptop opens as the page scrolls, revealing a management dashboard." class="agent-laptop-sequence__stage" data-sequence-stage="" role="img">
+<picture aria-hidden="true" data-sequence-poster=""><img alt="" decoding="async" fetchpriority="high" sizes="(max-width: 900px) 112vw, min(112vw, 1320px)" src="assets/agent-laptop/poster-start-standard.webp" srcset="assets/agent-laptop/poster-start-standard.webp 1360w, assets/agent-laptop/poster-start-retina.webp 2720w"/></picture>
+<canvas aria-hidden="true" height="800" width="1360"></canvas>
 </div>
 <a class="agent-hero-v72__scroll" href="#pitch"><span>Scroll to discover</span><span>↓</span></a>
 </div>
@@ -359,7 +360,7 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 </div>
 <aside aria-labelledby="agent-sample-title" class="agent-sample-note">
 <p class="agent-sample-note__eyebrow">Who we spoke with</p>
-<h3 id="agent-sample-title"><strong>12</strong> participants</h3>
+<h3 id="agent-sample-title"><strong>12</strong>Participants</h3>
 <svg aria-labelledby="agent-sample-chart-title agent-sample-chart-desc" class="agent-sample-note__pie" role="img" viewbox="0 0 220 220">
 <title id="agent-sample-chart-title">Discovery research participants</title><desc id="agent-sample-chart-desc">5 internal participants and 7 external participants, out of 12 total.</desc>
 <defs><pattern height="8" id="agent-pie-hatch" patterntransform="rotate(28)" patternunits="userSpaceOnUse" width="8"><path d="M0 0V8" stroke="currentColor" stroke-opacity=".18" stroke-width="1.1"></path></pattern></defs>
@@ -399,33 +400,11 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 <section class="section section--paper cognitive-v24" data-header-theme="light" id="cognitive-load">
 <div class="shell cognitive-v24__layout">
 <div class="cognitive-v24__head cognitive-v67__head">
-<h2 class="h1 cognitive-v67__title reveal">Measuring cognitive load</h2>
+<h2 class="h1 cognitive-v67__title reveal">Where the workflow became difficult to follow</h2>
 <h3 class="cognitive-v67__statement reveal" data-reveal-delay="70">The difficult part started before execution.</h3>
-<p class="copy muted reveal" data-reveal-delay="130">We expected execution to be the hard part. Research showed the peak came earlier: identifying the right agents, coordinating ownership and permissions, and deciding which configuration was safe enough to apply.</p>
+<p class="copy muted reveal" data-reveal-delay="130">Research highlighted the difficulty of identifying the right agents, coordinating ownership and permissions, and deciding which configuration was safe enough to apply.</p>
 </div>
-<div class="cognitive-v24__chart cognitive-v24__chart--report-style cognitive-v67__chart reveal" data-cognitive-chart="">
-<svg aria-label="Cognitive load rises through identification, peaks during planning and testing, then falls during execution" role="img" viewbox="0 0 960 420">
-<defs>
-<lineargradient id="cogLineV40" x1="0" x2="1" y1="0" y2="0">
-<stop offset="0" stop-color="#232428"></stop>
-<stop offset=".38" stop-color="#232428"></stop>
-<stop offset=".54" stop-color="#ff5623"></stop>
-<stop offset=".67" stop-color="#232428"></stop>
-<stop offset="1" stop-color="#232428"></stop>
-</lineargradient>
-</defs>
-<path class="cog-axis cog-axis--baseline" d="M112 344H874"></path>
-<path class="cog-axis cog-axis--y" d="M112 344V112"></path>
-<text class="cog-label cog-label--y" text-anchor="middle" transform="rotate(-90 58 228)" x="58" y="228">Cognitive load</text>
-<path class="cog-curve cog-curve--report" d="M112 284 C190 267 252 224 326 174 C430 102 565 104 665 144 C744 176 797 238 854 292" data-cog-line=""></path>
-<text class="cog-label" x="112" y="382">Identification</text>
-<text class="cog-label" x="405" y="382">Planning &amp; testing</text>
-<text class="cog-label" x="760" y="382">Execution</text>
-</svg>
-<button aria-label="Why identification carries cognitive load" class="cog-hotspot" data-cog-position="0.27" data-cog-tip="Identifying the right applications and agents required collaborative effort across owners and operators." type="button"><span></span></button>
-<button aria-label="Why planning carries the peak cognitive load" class="cog-hotspot cog-hotspot--peak" data-cog-position="0.50" data-cog-tip="Installation required admin permission plus application-owner changes to link applications to agents." type="button"><span></span></button>
-<button aria-label="Why configuration testing carries high cognitive load" class="cog-hotspot cog-hotspot--flip" data-cog-position="0.68" data-cog-tip="An incompatible configuration could break a working environment, so testing carried high consequence." type="button"><span></span></button>
-</div>
+<div aria-label="Observed workflow difficulties" class="workflow-difficulties"><article><h3>Identifying targets</h3><p>Identifying the right applications and agents required collaborative effort across owners and operators.</p></article><article><h3>Coordinating permissions</h3><p>Installation required admin permission plus application-owner changes to link applications to agents.</p></article><article><h3>Checking configuration</h3><p>An incompatible configuration could break a working environment, so testing carried high consequence.</p></article></div>
 <article aria-labelledby="decision-target-title" class="decision-card-wide-v70 decision-card-wide-v71 reveal decision-card-breakout-v73 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" src="assets/decision-lightbulb-v73.svg"/><span>Decision 02</span></div><div><h2 class="decision-card-wide-v70__title" id="decision-target-title">Make the target clear before the action.</h2><p class="decision-card-wide-v70__copy">Show ownership, status and configuration before asking admins to commit.</p></div></article>
 </div>
 </section>
@@ -518,21 +497,21 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 <div class="shell validation-v29__grid">
 <div class="validation-v29__copy">
 <h1 class="section-title-fixed reveal">Low-fidelity validation</h1>
-<h3 class="validation-statement-fixed reveal" data-reveal-delay="70"><strong>14 customers</strong> from <strong>6 companies</strong> tested the direction.</h3>
-<div class="validation-v29__scores">
-<article class="score-card score-card--rating reveal" style="--score:.84"><strong>4.2<span>/5</span></strong><p>Easy to use</p><div aria-hidden="true" class="score-card__meter"><i></i><i></i><i></i><i></i><i></i></div></article>
-<article class="score-card score-card--rating reveal" data-reveal-delay="70" style="--score:.82"><strong>4.1<span>/5</span></strong><p>Features met needs</p><div aria-hidden="true" class="score-card__meter"><i></i><i></i><i></i><i></i><i></i></div></article>
+<h3 class="validation-statement-fixed reveal" data-reveal-delay="70">Teams from <strong>6 companies</strong> evaluated the direction.</h3>
+<div class="validation-v29__scores validation-v114__time-only">
+
+
 <article class="score-card score-card--time reveal" data-reveal-delay="140"><strong>3<span> min</span></strong><p>Install flow, down from 17 min</p><div class="score-card__timebar"><span>17</span><b></b><span>3</span></div></article>
 </div>
 </div>
 <div class="validation-v29__visuals agent-iterations">
-<figure class="agent-iteration reveal" aria-labelledby="iteration-title-1">
-  <img class="agent-iteration__screen" src="assets/iteration-table.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Unified table dashboard iteration">
-  <figcaption class="agent-iteration__explanation"><p class="label">Preferred direction</p><h3 id="iteration-title-1">Unified dashboard</h3><p class="copy">Preferred by 4 of 6 teams: “more data at a glance.”</p></figcaption>
+<figure aria-labelledby="iteration-title-1" class="agent-iteration reveal">
+<img alt="Unified table dashboard iteration" class="agent-iteration__screen" decoding="async" height="900" loading="lazy" src="assets/iteration-table.webp" width="1600"/>
+<figcaption class="agent-iteration__explanation"><p class="label">Preferred direction</p><h3 id="iteration-title-1">Unified dashboard</h3><p class="copy">Preferred by 4 of 6 teams: “more data at a glance.”</p></figcaption>
 </figure>
-<figure class="agent-iteration reveal" aria-labelledby="iteration-title-2">
-  <img class="agent-iteration__screen" src="assets/iteration-cards.webp" width="1200" height="674" loading="lazy" decoding="async" alt="Dynamic card view iteration">
-  <figcaption class="agent-iteration__explanation"><p class="label">Explored</p><h3 id="iteration-title-2">Dynamic view</h3><p class="copy">Grouped by agent type.</p></figcaption>
+<figure aria-labelledby="iteration-title-2" class="agent-iteration reveal">
+<img alt="Dynamic card view iteration" class="agent-iteration__screen" decoding="async" height="674" loading="lazy" src="assets/iteration-cards.webp" width="1200"/>
+<figcaption class="agent-iteration__explanation"><p class="label">Explored</p><h3 id="iteration-title-2">Dynamic view</h3><p class="copy">Grouped by agent type.</p></figcaption>
 </figure>
 </div>
 <div class="validation-change-sticky-v75" data-validation-change-sticky=""><div class="validation-change-log reveal">
@@ -544,7 +523,7 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 </section>
 <section class="section section--paper" data-header-theme="light">
 <div class="shell">
-<h2 class="h2 reveal" data-reveal-delay="80">A nested tree stopped working at enterprise scale.</h2>
+<h2 class="h2 reveal" data-reveal-delay="80">Evaluation informed a change from a tree hierarchy to a column-based layout.</h2>
 <p class="copy muted reveal" data-reveal-delay="150" style="max-width:720px;margin-top:22px">Three of six teams found it hard to use at scale. Adjacent columns kept host, application, tier and node visible.</p>
 <div class="drawing-board drawing-board--cards" style="margin-top:55px">
 <figure class="drawing-board__image hierarchy-card reveal-clip"><span class="hierarchy-card__label">Before</span><img alt="Nested tree concept for application hierarchy" src="assets/tree-view.webp"/><figcaption>Nested tree</figcaption></figure>
@@ -8578,8 +8557,8 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 </div>
 <p class="design-influence-v73__caveat">Orchestration and execution performance were enabled by the broader product and engineering system.</p>
 <div class="roadmap-subsection-v73" id="roadmap">
-<h3 class="roadmap-subsection-v73__title reveal">UX defined the roadmap</h3>
-<p class="roadmap-subsection-v73__statement reveal" data-reveal-delay="80">The experience became a sequence of product bets; not a one-off screen.</p>
+<h3 class="roadmap-subsection-v73__title reveal">Release scope and trade-offs</h3>
+<p class="roadmap-subsection-v73__statement reveal" data-reveal-delay="80">The release decisions centered on what needed to work as a complete workflow and which capabilities could follow later.</p>
 <div class="roadmap" data-roadmap-reveal="" style="margin-top:64px">
 <div class="roadmap__row reveal"><h3 class="h4">Cisco AppDynamics</h3><div><div class="roadmap__line"><span class="roadmap__fill" style="--fill:72%"></span><div class="roadmap__nodes"><span class="roadmap__node is-done"></span><span class="roadmap__node is-done"></span><span class="roadmap__node"></span></div></div><div class="roadmap__labels"><span>Ansible / Chef management</span><span>Simplified management UI</span><span>Auto discovery / auto attach</span></div></div></div>
 <div class="roadmap__row reveal"><h3 class="h4">Cisco Observability Platform</h3><div><div class="roadmap__line"><span class="roadmap__fill" style="--fill:42%"></span><div class="roadmap__nodes"><span class="roadmap__node is-done"></span><span class="roadmap__node"></span><span class="roadmap__node"></span></div></div><div class="roadmap__labels"><span>Inventory &amp; actions</span><span>Profiles &amp; templates</span><span>Host-based machine</span></div></div></div>
@@ -8628,24 +8607,23 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 </div>
 </section>
 </main>
-<footer class="site-footer site-footer--v108 site-footer--case-reveal" id="contact" data-header-theme="dark">
- <div class="site-footer__top site-footer__top--simple">
-  <div class="site-footer__intro"><p class="site-footer__title">let's<br>connect.</p><p class="site-footer__note">Open to conversations about complex systems, product craft and mentoring.</p></div>
-  <nav class="footer-next" aria-label="Browse case studies"><p class="eyebrow eyebrow--light">Browse case studies</p>
-   <a class="footer-next__link transition-link" href="agent-management.html"><span>Cisco AppDynamics</span><strong>Agent Management <span aria-hidden="true">&nearr;</span></strong></a>
-   <a class="footer-next__link transition-link" href="management-reports.html"><span>Intuit QuickBooks</span><strong>Management Reports <span aria-hidden="true">&nearr;</span></strong></a>
-   <a class="footer-home transition-link" href="index.html">Homepage <span aria-hidden="true">&nearr;</span></a>
-  </nav>
- </div>
- <div class="site-footer__bottom site-footer__bottom--simple">
-  <nav class="footer-socials" aria-label="Social links and email" data-contact-links>
-   <a data-contact-key="linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn <span aria-hidden="true">&nearr;</span></a>
-   <a data-contact-key="medium" href="https://medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium (opens in a new tab)">Medium <span aria-hidden="true">&nearr;</span></a>
-   <a data-contact-key="github" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">GitHub <span aria-hidden="true">&nearr;</span></a>
-   <span class="footer-email"><a class="footer-email__address" data-contact-key="email" href="mailto:sah.shiva@gmail.com">sah.shiva@gmail.com</a><button class="footer-email__copy" type="button" data-copy-email="sah.shiva@gmail.com" aria-label="Copy sah.shiva@gmail.com" title="Copy email address"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg><span class="footer-email__feedback" hidden>Copied</span></button><span class="sr-only" data-copy-status role="status" aria-live="polite"></span></span>
-  </nav>
-  <a class="back-top back-top--icon" href="#top" aria-label="Back to top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 25V7M9 14l7-7 7 7"/></svg></a>
- </div>
+<footer class="site-footer site-footer--v108 site-footer--case-reveal" data-header-theme="dark" id="contact">
+<div class="site-footer__top site-footer__top--simple">
+<div class="site-footer__intro"><p class="site-footer__title">let's<br/>connect.</p><p class="site-footer__note">Open to conversations about complex systems, product craft and mentoring.</p></div>
+<nav aria-label="Browse case studies" class="footer-next"><p class="eyebrow eyebrow--light">Browse case studies</p>
+<a class="footer-next__link transition-link" href="agent-management.html"><span>Cisco AppDynamics</span><strong>Agent Management <span aria-hidden="true">↗</span></strong></a>
+<a class="footer-next__link transition-link" href="management-reports.html"><span>Intuit QuickBooks</span><strong>Management Reports <span aria-hidden="true">↗</span></strong></a>
+<a class="footer-home transition-link" href="index.html">Homepage <span aria-hidden="true">↗</span></a>
+</nav>
+</div>
+<div class="site-footer__bottom site-footer__bottom--simple">
+<nav aria-label="Social links and email" class="footer-socials" data-contact-links=""><a aria-label="View Shiva's resume (opens in a new tab)" class="resume-link" href="https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing" rel="noopener noreferrer" target="_blank">Resume <span aria-hidden="true">↗</span></a>
+<a aria-label="Shiva on LinkedIn" data-contact-key="linkedin" href="https://linkedin.com/in/shivasah" rel="noopener noreferrer" target="_blank">LinkedIn <span aria-hidden="true">↗</span></a>
+<a aria-label="Shiva on Medium" data-contact-key="medium" href="https://medium.com/@shivasah" rel="noopener noreferrer" target="_blank">Medium <span aria-hidden="true">↗</span></a>
+<span class="footer-email"><a class="footer-email__address" data-contact-key="email" href="mailto:sah.shiva@gmail.com">sah.shiva@gmail.com</a><button aria-label="Copy sah.shiva@gmail.com" class="footer-email__copy" data-copy-email="sah.shiva@gmail.com" title="Copy email address" type="button"><svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17"><rect height="12" rx="2" width="12" x="8" y="8"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg><span class="footer-email__feedback" hidden="">Copied</span></button><span aria-live="polite" class="sr-only" data-copy-status="" role="status"></span></span>
+</nav>
+<a aria-label="Back to top" class="back-top back-top--icon" href="#top"><svg aria-hidden="true" viewbox="0 0 32 32"><path d="M16 25V7M9 14l7-7 7 7"></path></svg></a>
+</div>
 </footer>
 <script src="agent-install-flow.js?v=112" defer></script>
 <script src="portfolio-v107.js?v=112" defer></script>

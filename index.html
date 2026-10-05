@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <meta content="#fcfcf4" name="theme-color"/>
-<meta content="Shiva Sah - Product design, research, systems thinking and mentoring. I make complex problems easy." name="description"/>
+<meta content="Shiva Sah - Product design, research, systems thinking and mentoring. I design complex enterprise workflows that people can understand and control." name="description"/>
 <title>Shiva Sah; Product Designer</title>
 <script>document.documentElement.classList.add("js");</script>
 <script>
@@ -37,9 +37,9 @@
 <link href="preloader-art.css?v=112" rel="stylesheet"/>
 <link href="home.css?v=112" rel="stylesheet"/><link href="homepage-shelf-tools.css?v=112" rel="stylesheet"/>
 <link href="case-study-stack.css?v=112" rel="stylesheet"/>
-<script defer="" src="site-config.js?v=112"></script>
+<script defer="" src="site-config.js?v=114"></script>
 <script defer="" src="preloader-art.js?v=112"></script>
-<script defer="" src="app.js?v=112"></script>
+<script defer="" src="app.js?v=114"></script>
 
 <script defer="" src="case-study-stack.js?v=112"></script>
 <link href="refinements-v74.css?v=112" rel="stylesheet"/><script defer="" src="refinements-v74.js?v=112"></script>
@@ -139,6 +139,7 @@ html.js:not(.is-ready) .page-wipe.is-centered.is-composed .page-wipe__signature-
 window.setTimeout(function(){if(!document.documentElement.classList.contains('is-ready')){document.documentElement.classList.add('is-ready');document.body.classList.add('hero-loaded');document.dispatchEvent(new Event('portfolio:ready'));}},5000);
 </script>
 <link rel="stylesheet" href="cursor-v110.css?v=112">
+<link rel="stylesheet" href="portfolio-v114.css?v=114">
 </head>
 <body class="page-home hero-header-compact">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -161,7 +162,7 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 </h2>
 </div>
 <div class="site-menu__scroll">
-<nav aria-labelledby="site-menu-pages-title" class="site-menu__primary site-menu__primary--simple">
+<nav aria-label="Portfolio navigation" class="site-menu__primary site-menu__primary--simple">
 <a class="site-menu__page" data-menu-section="top" href="index.html#top"><strong>Home</strong></a>
 <div class="site-menu__works-group">
 <button aria-controls="site-menu-case-studies" aria-expanded="false" class="site-menu__page site-menu__works-toggle" data-menu-section="work" type="button">
@@ -171,13 +172,13 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 <div class="site-menu__projects-panel" hidden="" id="site-menu-case-studies"><div class="site-menu__projects-inner">
 <a class="site-menu__project" data-menu-page="agent-management.html" href="agent-management.html"><strong>Agent Management</strong><em>Cisco AppDynamics</em></a>
 <a class="site-menu__project" data-menu-page="management-reports.html" href="management-reports.html"><strong>Management Reports</strong><em>Intuit QuickBooks</em></a>
-<div class="site-menu__project site-menu__project--locked" aria-disabled="true"><strong>Domain-Centric Views</strong><em>Cisco Cloud Observability</em><span class="site-menu__soon">Adding soon</span></div>
+<div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Domain-Centric Views</strong><em>Cisco Cloud Observability</em><span class="site-menu__soon">Adding soon</span></div>
 </div></div>
 </div>
 <a class="site-menu__page" data-menu-section="writing" href="index.html#writing"><strong>Notes &amp; essays</strong></a>
 <a class="site-menu__page" data-menu-section="vibes" href="index.html#vibes"><strong>Experiments</strong></a>
 <a class="site-menu__page" data-menu-section="intro" href="index.html#intro"><strong>Approach</strong></a>
-<a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
+<a aria-label="View Shiva's resume (opens in a new tab)" class="site-menu__page resume-link" href="https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong>Resume</strong><span aria-hidden="true">↗</span></a><a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
 </nav>
 </div>
 </div>
@@ -191,7 +192,7 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 <p class="now">Now designing AI-native reporting at Intuit</p>
 </div>
 <div class="sr-only">
-<p>I make complex problems easy. Leading enterprise and AI-native products for 7+ years.</p>
+<p>I design complex enterprise workflows that people can understand and control. Leading enterprise and AI-native products for 7+ years.</p>
 <ul>
 <li>Database monitoring that finds issues faster: 70% less time to identify incidents (MTTI), Cisco AppDynamics.</li>
 <li>Customer setup, from weeks to hours: time to value cut from 2 weeks to 2 hours, 200+ enterprise customers in 6 months, Cisco AppDynamics.</li>
@@ -203,7 +204,7 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 <a aria-label="Scroll to work" class="mouse" data-tone="paper" href="#work" id="cue"><span aria-hidden="true" class="body"><i class="wheel"></i></span><span>Scroll</span></a>
 <button aria-pressed="false" class="pause" data-tone="paper" id="pause" type="button"><i aria-hidden="true"></i><span>Pause</span></button>
 <div class="scrub" id="scrub"><span id="scrubT">0.00s</span><input aria-label="Scrub timeline" max="26.999" min="0" step="0.001" type="range" value="0"/></div>
-</section>
+<a aria-label="View Shiva's resume (opens in a new tab)" class="hero-resume resume-link" href="https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing" rel="noopener noreferrer" target="_blank">Resume <span aria-hidden="true">↗</span></a><p class="hero-statement-fallback">I design complex enterprise workflows that people can understand and control.</p></section>
 <section class="section intro-portrait-section" id="intro" data-header-theme="dark" aria-label="My approach to design">
  <div class="shell intro-portrait">
   <p class="intro-portrait__quote">I'm comfortable with ambiguity.<br><span>I'm less comfortable with assumptions.</span></p>
@@ -211,27 +212,27 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
  </div>
 </section>
 <section aria-labelledby="work-title" class="work-flip" data-header-theme="light" id="work">
-<header class="shell work-flip__heading"><div><h2 id="work-title">Stories that changed<br/>the roadmap.</h2></div><p>Two case studies. The product, the process and the decisions behind the work.</p></header>
+<header class="shell work-flip__heading"><div><h2 id="work-title">Designing enterprise workflows.</h2></div><p>Two case studies. The product, the process and the decisions behind the work.</p></header>
 <p class="shell flip-stack__instruction">Scroll to reveal the next story.</p><a class="flip-stack__skip" href="#writing">Skip case studies</a><div aria-label="Case studies: Agent Management and Management Reports. Domain-Centric Views is adding soon." class="flip-stack" data-flip-stack="" role="region" style="--flip-count:3;">
 <div class="flip-stack__pin">
 <div class="flip-stack__cards"><article aria-label="Agent Management" class="flip-card flip-card--agent" data-flip-card="0">
-<a aria-describedby="agent-project-description agent-project-kpis" aria-labelledby="agent-project-title" class="flip-card__link transition-link" href="agent-management.html">
+<a aria-describedby="agent-project-description agent-project-focus" aria-label="Read Agent Management case study" class="flip-card__link transition-link" href="agent-management.html">
 <div class="flip-card__copy">
 <div class="flip-card__meta"><span aria-hidden="true" class="flip-card__index">01</span><span>Cisco AppDynamics</span><span>2023</span></div>
 <h3 id="agent-project-title">Agent Management</h3>
-<p class="flip-card__description" id="agent-project-description">One workflow to install, upgrade and manage agents at scale.</p>
-<dl class="flip-card__kpis" id="agent-project-kpis"><div><dt>customer-reported time to value</dt><dd><span class="kpi-before">2 weeks</span><span class="kpi-change"><span aria-hidden="true">→</span> 2 hours</span></dd></div><div><dt>measured install time</dt><dd><span class="kpi-before">17 min</span><span class="kpi-change"><span aria-hidden="true">→</span> 3 min</span></dd></div><div><dt>customer accounts</dt><dd>430+</dd></div><div><dt>hosts reached</dt><dd>3,000+</dd></div></dl>
+<p class="flip-card__description" id="agent-project-description">Helping teams understand their agent inventory and manage installations across hosts.</p>
+<p class="flip-card__focus" id="agent-project-focus">Case focus: inventory-first workflows, hierarchy design, and release trade-offs.</p>
 <span class="flip-card__cta">Read case study <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></span>
 </div>
 <figure class="flip-card__media"><img alt="Agent Management interface showing agent status, types, versions and available upgrades" height="960" loading="lazy" src="assets/agent-management-thumbnail.png" width="1440"/></figure>
 </a>
 <span aria-hidden="true" class="flip-card__shade"></span></article><article aria-label="Management Reports" class="flip-card flip-card--reports" data-flip-card="1">
-<a aria-describedby="reports-project-description reports-project-kpis" aria-labelledby="reports-project-title" class="flip-card__link transition-link" href="management-reports.html">
+<a aria-describedby="reports-project-description reports-project-focus" aria-label="Read Management Reports case study" class="flip-card__link transition-link" href="management-reports.html">
 <div class="flip-card__copy">
 <div class="flip-card__meta"><span aria-hidden="true" class="flip-card__index">02</span><span>Intuit QuickBooks</span><span>2025</span></div>
 <h3 id="reports-project-title">Management Reports</h3>
-<p class="flip-card__description" id="reports-project-description">Financial evidence and commentary in one reusable report editor.</p>
-<dl class="flip-card__kpis" id="reports-project-kpis"><div><dt>report saves</dt><dd>219.4K</dd></div><div><dt>publish / send / export events</dt><dd>162.6K</dd></div><div><dt>created reports reach distribution</dt><dd>72%</dd></div><div><dt>confirmed research sessions</dt><dd>47</dd></div></dl><p class="flip-card__metric-scope"><strong>Sample usage data;</strong> 47 FMHs confirmed.</p>
+<p class="flip-card__description" id="reports-project-description">Bringing financial data and commentary into a reusable report-authoring workflow.</p>
+<p class="flip-card__focus" id="reports-project-focus">Case focus: editor architecture, reporting-period rules, and the author-to-recipient experience.</p>
 <span class="flip-card__cta">Read case study <svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"></path></svg></span>
 </div>
 <figure class="flip-card__media"><img alt="Management Reports editor showing a monthly performance report with KPI customization" height="960" loading="lazy" src="assets/management-reports-thumbnail.png" width="1440"/></figure>
@@ -243,7 +244,6 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 <h3 id="domain-project-title">Domain-Centric Views</h3>
 <p class="flip-card__description" id="domain-project-description">Cloud troubleshooting organised around operational domains.</p>
 <p class="flip-card__pending" id="domain-project-status">Adding soon</p>
-
 </div>
 <figure class="flip-card__media"><img alt="Domain-Centric Views interface composition" height="960" loading="lazy" src="assets/domain-hero.webp" width="1440"/></figure>
 </div>
@@ -387,24 +387,23 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
 </div>
 <span aria-hidden="true" class="scroll-scribble scroll-scribble--underline"><svg viewbox="0 0 260 70"><path d="M8 44 C62 38 118 52 174 40 C202 34 226 37 252 30"></path></svg></span></section>
 </main>
-<footer class="site-footer site-footer--v108 " id="contact" data-header-theme="dark">
- <div class="site-footer__top site-footer__top--simple">
-  <div class="site-footer__intro"><p class="site-footer__title">let's<br>connect.</p><p class="site-footer__note">Open to conversations about complex systems, product craft and mentoring.</p></div>
-  <nav class="footer-next" aria-label="Browse case studies"><p class="eyebrow eyebrow--light">Browse case studies</p>
-   <a class="footer-next__link transition-link" href="agent-management.html"><span>Cisco AppDynamics</span><strong>Agent Management <span aria-hidden="true">&nearr;</span></strong></a>
-   <a class="footer-next__link transition-link" href="management-reports.html"><span>Intuit QuickBooks</span><strong>Management Reports <span aria-hidden="true">&nearr;</span></strong></a>
-   <a class="footer-home transition-link" href="index.html">Homepage <span aria-hidden="true">&nearr;</span></a>
-  </nav>
- </div>
- <div class="site-footer__bottom site-footer__bottom--simple">
-  <nav class="footer-socials" aria-label="Social links and email" data-contact-links>
-   <a data-contact-key="linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn <span aria-hidden="true">&nearr;</span></a>
-   <a data-contact-key="medium" href="https://medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium (opens in a new tab)">Medium <span aria-hidden="true">&nearr;</span></a>
-   <a data-contact-key="github" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">GitHub <span aria-hidden="true">&nearr;</span></a>
-   <span class="footer-email"><a class="footer-email__address" data-contact-key="email" href="mailto:sah.shiva@gmail.com">sah.shiva@gmail.com</a><button class="footer-email__copy" type="button" data-copy-email="sah.shiva@gmail.com" aria-label="Copy sah.shiva@gmail.com" title="Copy email address"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg><span class="footer-email__feedback" hidden>Copied</span></button><span class="sr-only" data-copy-status role="status" aria-live="polite"></span></span>
-  </nav>
-  <a class="back-top back-top--icon" href="#top" aria-label="Back to top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 25V7M9 14l7-7 7 7"/></svg></a>
- </div>
+<footer class="site-footer site-footer--v108" data-header-theme="dark" id="contact">
+<div class="site-footer__top site-footer__top--simple">
+<div class="site-footer__intro"><p class="site-footer__title">let's<br/>connect.</p><p class="site-footer__note">Open to conversations about complex systems, product craft and mentoring.</p></div>
+<nav aria-label="Browse case studies" class="footer-next"><p class="eyebrow eyebrow--light">Browse case studies</p>
+<a class="footer-next__link transition-link" href="agent-management.html"><span>Cisco AppDynamics</span><strong>Agent Management <span aria-hidden="true">↗</span></strong></a>
+<a class="footer-next__link transition-link" href="management-reports.html"><span>Intuit QuickBooks</span><strong>Management Reports <span aria-hidden="true">↗</span></strong></a>
+<a class="footer-home transition-link" href="index.html">Homepage <span aria-hidden="true">↗</span></a>
+</nav>
+</div>
+<div class="site-footer__bottom site-footer__bottom--simple">
+<nav aria-label="Social links and email" class="footer-socials" data-contact-links=""><a aria-label="View Shiva's resume (opens in a new tab)" class="resume-link" href="https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing" rel="noopener noreferrer" target="_blank">Resume <span aria-hidden="true">↗</span></a>
+<a aria-label="Shiva on LinkedIn" data-contact-key="linkedin" href="https://linkedin.com/in/shivasah" rel="noopener noreferrer" target="_blank">LinkedIn <span aria-hidden="true">↗</span></a>
+<a aria-label="Shiva on Medium" data-contact-key="medium" href="https://medium.com/@shivasah" rel="noopener noreferrer" target="_blank">Medium <span aria-hidden="true">↗</span></a>
+<span class="footer-email"><a class="footer-email__address" data-contact-key="email" href="mailto:sah.shiva@gmail.com">sah.shiva@gmail.com</a><button aria-label="Copy sah.shiva@gmail.com" class="footer-email__copy" data-copy-email="sah.shiva@gmail.com" title="Copy email address" type="button"><svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17"><rect height="12" rx="2" width="12" x="8" y="8"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg><span class="footer-email__feedback" hidden="">Copied</span></button><span aria-live="polite" class="sr-only" data-copy-status="" role="status"></span></span>
+</nav>
+<a aria-label="Back to top" class="back-top back-top--icon" href="#top"><svg aria-hidden="true" viewbox="0 0 32 32"><path d="M16 25V7M9 14l7-7 7 7"></path></svg></a>
+</div>
 </footer>
 <script id="v88-landing-hero-script">
 (() => {
@@ -441,13 +440,13 @@ window.setTimeout(function(){if(!document.documentElement.classList.contains('is
   /* ---------- compositions ---------- */
   const LAYOUTS={
     land:{W:1600,H:900,cx:800,LY:560,m1:140,m2:1460,
-      thesis:{lines:["I make complex","problems easy."],size:140,base:[412,548],sub:["Leading enterprise and AI-native products for 7+ years"],subY:[612]},
+      thesis:{lines:["I design complex enterprise","workflows that people can","understand and control."],size:90,base:[350,448,546],sub:["Leading enterprise and AI-native products for 7+ years"],subY:[612]},
       res:{x:140,anchor:"start",headSize:46,headY:[262,316],num:190,labelY:610,srcY:642,labelSize:21},
       gfx:{x:880,y:290,w:580,h:228},
       cred:{x:140,anchor:"start",size:96,base:500,sub:552},
       form:{cx:1170,cy:500,s:1}},
     port:{W:900,H:1600,cx:450,LY:880,m1:70,m2:830,
-      thesis:{lines:["I make","complex","problems easy."],size:104,base:[628,748,866],sub:["Leading enterprise and AI-native","products for 7+ years"],subY:[930,960]},
+      thesis:{lines:["I design complex","enterprise workflows","that people can","understand and control."],size:70,base:[566,666,766,866],sub:["Leading enterprise and AI-native","products for 7+ years"],subY:[930,960]},
       res:{x:450,anchor:"middle",headSize:44,headY:[560,614],num:170,labelY:930,srcY:962,labelSize:19},
       gfx:{x:110,y:1060,w:680,h:300},
       cred:{x:450,anchor:"middle",size:88,base:600,sub:650},

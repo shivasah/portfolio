@@ -1,0 +1,75 @@
+/* v114: evidence-led copy and owner-provided links; existing motion players retained. */
+#top.hero .hero-resume {
+ position:absolute;z-index:4;left:var(--pad);bottom:calc(clamp(20px,3vh,34px) + env(safe-area-inset-bottom,0px));
+ display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:44px;padding:10px 20px;
+ border:1px solid currentColor;border-radius:999px;background:var(--paper);color:var(--ink);
+ font:500 14px/1.35 var(--font-body);text-decoration:none;transition:background 180ms ease,color 180ms ease;
+}
+#top.hero .hero-resume:hover{background:var(--ink);color:var(--paper)}
+#top.hero .hero-resume:focus-visible{outline:3px solid var(--orange);outline-offset:5px}
+.site-menu .resume-link{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.site-menu .resume-link>span{font:400 .7em/1 var(--font-body);margin-right:8px}
+.hero-statement-fallback{display:none}
+html:not(.js) #top.hero .hero-statement-fallback {
+ display:block;position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:min(86vw,1100px);margin:0;text-align:center;
+ font:500 clamp(32px,5.5vw,82px)/1.08 var(--font-display);letter-spacing:-.04em;
+}
+html:not(.js) #top.hero .pause,html:not(.js) #top.hero .scrub{display:none}
+#work .flip-card:is(.flip-card--agent,.flip-card--reports) .flip-card__description {
+ font:400 16px/1.5 var(--font-body);margin:16px 0 20px;max-width:38ch;
+}
+#work .flip-card .flip-card__focus{font:400 14px/1.6 var(--font-body);color:var(--ink-soft);margin:0 0 22px;max-width:40ch}
+#work .flip-card:is(.flip-card--agent,.flip-card--reports) .flip-card__cta{margin-top:auto;padding-top:18px;min-height:44px}
+html body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title.agent-hero-title--specific {
+ font:500 clamp(34px,4.5vw,66px)/1.04 var(--font-display)!important;letter-spacing:-.045em!important;
+ max-width:min(22ch,calc(var(--laptop-fit-width) * .68))!important;text-wrap:balance;margin:0 auto!important;
+}
+html body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__subtitle {
+ font:400 clamp(15px,1.4vw,20px)/1.5 var(--font-body)!important;width:min(660px,84vw)!important;max-width:62ch!important;margin:24px auto 0!important;
+}
+html body.page-case-agent #validation .validation-v114__time-only{grid-template-columns:minmax(0,360px)!important;max-width:360px;gap:0}
+html body.page-case-agent #validation .validation-v114__time-only .score-card{width:100%;min-width:0}
+html body.page-case-agent #cognitive-load .cognitive-v24__layout {
+ display:grid;grid-template-columns:minmax(0,1.16fr) minmax(0,1fr);gap:48px 64px;align-items:start;
+}
+html body.page-case-agent #cognitive-load .cognitive-v67__title{font-size:clamp(38px,4.3vw,66px)!important;line-height:1.08!important;max-width:20ch;text-wrap:balance}
+html body.page-case-agent #cognitive-load .workflow-difficulties{display:grid;gap:26px;padding-top:12px}
+.workflow-difficulties article{padding-top:20px;border-top:1px solid var(--line)}
+.workflow-difficulties h3{font:500 clamp(23px,2.1vw,30px)/1.2 var(--font-display);letter-spacing:-.025em;margin-bottom:12px}
+.workflow-difficulties p{font:400 16px/1.6 var(--font-body);color:var(--ink-soft);max-width:48ch}
+html body.page-case-agent #cognitive-load .decision-card-wide-v70{grid-column:1/-1}
+html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-v24__inner {
+ display:grid!important;grid-template-columns:minmax(0,1.8fr) minmax(220px,.7fr);align-items:center;gap:clamp(36px,6vw,90px)!important;
+}
+html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-v24__top{display:block!important;min-width:0}
+html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-v24__metrics{display:grid!important;grid-template-columns:1fr!important;max-width:320px;width:100%;margin:0 0 0 auto!important}
+html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric{transform:none!important;width:100%;min-width:0}
+html body.page-case-reports-v90 #discovery .mr-research-sample--sessions{display:block;width:min(100%,400px);grid-template-columns:none;gap:0}
+html body.page-case-reports-v90 #discovery .mr-research-sample--sessions>article{display:flex;align-items:baseline;gap:22px;padding:24px 28px}
+html body.page-case-reports-v90 #discovery .mr-research-sample--sessions>article>span{margin:0}
+@media(max-width:800px) {
+ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-v24__inner{grid-template-columns:1fr;gap:44px!important}
+ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-v24__metrics{max-width:360px;margin:0!important}
+ html body.page-case-agent #cognitive-load .cognitive-v24__layout{grid-template-columns:1fr;gap:32px}
+ html body.page-case-agent #cognitive-load .workflow-difficulties{padding-top:0}
+}
+@media(max-width:620px) {
+ #work .flip-card:is(.flip-card--agent,.flip-card--reports) .flip-card__description{font-size:14px;line-height:1.5;margin:12px 0 14px}
+ #work .flip-card .flip-card__focus{font-size:13px;line-height:1.5;margin-bottom:10px}
+ #work .flip-card:is(.flip-card--agent,.flip-card--reports) .flip-card__cta{padding-top:12px}
+ html body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title.agent-hero-title--specific{font-size:clamp(32px,8.8vw,48px)!important;max-width:min(22ch,88vw)!important}
+ html body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__subtitle{font-size:15px!important;line-height:1.45!important;margin-top:18px!important}
+ #top.hero .hero-resume{padding-inline:16px;font-size:12px;gap:12px}
+}
+@media(max-height:550px) and (min-aspect-ratio:1/1) {
+ html body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__title.agent-hero-title--specific{font-size:30px!important;max-width:28ch!important}
+ html body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__subtitle{font-size:13px!important;line-height:1.4!important;margin-top:12px!important;max-width:68ch!important}
+ #work .flip-card:is(.flip-card--agent,.flip-card--reports) .flip-card__description{font-size:13px;margin:7px 0}
+ #work .flip-card .flip-card__focus{font-size:12px;margin-bottom:6px;line-height:1.35}
+ #work .flip-card:is(.flip-card--agent,.flip-card--reports) .flip-card__cta{padding-top:4px;min-height:30px}
+}
+@media(prefers-reduced-motion:reduce){#top.hero .hero-resume{transition:none}}
+/* Project facts remain above the closed laptop after the longer introduction. */
+@media(min-width:621px) and (min-height:551px) {
+ html body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy{transform:translate(-50%,-74%)!important}
+}

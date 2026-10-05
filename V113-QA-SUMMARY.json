@@ -1,0 +1,603 @@
+{
+  "version": 113,
+  "motion": {
+    "mode": "Offline Chromium; mounted resources injected with srcdoc and data images. No live host or external fonts.",
+    "acts": [
+      {
+        "act": 1,
+        "seconds": 5.75,
+        "distinct_intermediate_states": 23,
+        "views": [
+          "vp1",
+          "vp2",
+          "vp3"
+        ],
+        "zoom_range": [
+          1,
+          1
+        ],
+        "scroll_range": [
+          0,
+          0
+        ],
+        "final": {
+          "version": 113,
+          "started": true,
+          "playing": 0,
+          "shown": 1,
+          "requested": 1,
+          "visible": true,
+          "suspended": false,
+          "view": "vp3",
+          "cursor": {
+            "x": 760,
+            "y": 560
+          },
+          "camera": {
+            "z": 1,
+            "cx": 720,
+            "cy": 480
+          },
+          "canvasScroll": 0,
+          "reduced": false,
+          "allowMotion": false
+        }
+      },
+      {
+        "act": 2,
+        "seconds": 6.42,
+        "distinct_intermediate_states": 21,
+        "views": [
+          "vp3",
+          "4",
+          "5",
+          "6"
+        ],
+        "zoom_range": [
+          1,
+          1.55
+        ],
+        "scroll_range": [
+          0,
+          0
+        ],
+        "final": {
+          "version": 113,
+          "started": true,
+          "playing": 0,
+          "shown": 2,
+          "requested": 2,
+          "visible": true,
+          "suspended": false,
+          "view": "6",
+          "cursor": {
+            "x": 1273,
+            "y": 461
+          },
+          "camera": {
+            "z": 1,
+            "cx": 720,
+            "cy": 480
+          },
+          "canvasScroll": 0,
+          "reduced": false,
+          "allowMotion": false
+        }
+      },
+      {
+        "act": 3,
+        "seconds": 8.41,
+        "distinct_intermediate_states": 36,
+        "views": [
+          "6",
+          "7",
+          "8"
+        ],
+        "zoom_range": [
+          1,
+          1
+        ],
+        "scroll_range": [
+          0,
+          3560
+        ],
+        "final": {
+          "version": 113,
+          "started": true,
+          "playing": 0,
+          "shown": 3,
+          "requested": 3,
+          "visible": true,
+          "suspended": false,
+          "view": "8",
+          "cursor": {
+            "x": 560,
+            "y": 520
+          },
+          "camera": {
+            "z": 1,
+            "cx": 720,
+            "cy": 480
+          },
+          "canvasScroll": 3560,
+          "reduced": false,
+          "allowMotion": false
+        }
+      },
+      {
+        "act": 4,
+        "seconds": 16.47,
+        "distinct_intermediate_states": 58,
+        "views": [
+          "8",
+          "10",
+          "11",
+          "12",
+          "13x",
+          "14",
+          "15"
+        ],
+        "zoom_range": [
+          1,
+          1.3
+        ],
+        "scroll_range": [
+          3802.2852289903085,
+          4912.3
+        ],
+        "final": {
+          "version": 113,
+          "started": true,
+          "playing": 0,
+          "shown": 4,
+          "requested": 4,
+          "visible": true,
+          "suspended": false,
+          "view": "15",
+          "cursor": {
+            "x": 911,
+            "y": 712
+          },
+          "camera": {
+            "z": 1,
+            "cx": 720,
+            "cy": 480
+          },
+          "canvasScroll": 4912.3,
+          "reduced": false,
+          "allowMotion": false
+        }
+      },
+      {
+        "act": 5,
+        "seconds": 29.43,
+        "distinct_intermediate_states": 65,
+        "views": [
+          "15",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27"
+        ],
+        "zoom_range": [
+          1,
+          1.6
+        ],
+        "scroll_range": [
+          4910,
+          5403.8
+        ],
+        "final": {
+          "version": 113,
+          "started": true,
+          "playing": 0,
+          "shown": 5,
+          "requested": 5,
+          "visible": true,
+          "suspended": false,
+          "view": "27",
+          "cursor": {
+            "x": 780,
+            "y": 440
+          },
+          "camera": {
+            "z": 1,
+            "cx": 720,
+            "cy": 480
+          },
+          "canvasScroll": 5376.1,
+          "reduced": false,
+          "allowMotion": false
+        }
+      },
+      {
+        "act": 6,
+        "seconds": 10.35,
+        "distinct_intermediate_states": 53,
+        "views": [
+          "27",
+          "28"
+        ],
+        "zoom_range": [
+          1,
+          1
+        ],
+        "scroll_range": [
+          0,
+          8061
+        ],
+        "final": {
+          "version": 113,
+          "started": true,
+          "playing": 0,
+          "shown": 6,
+          "requested": 6,
+          "visible": true,
+          "suspended": false,
+          "view": "28",
+          "cursor": {
+            "x": 1000,
+            "y": 640
+          },
+          "camera": {
+            "z": 1,
+            "cx": 720,
+            "cy": 480
+          },
+          "canvasScroll": 8061,
+          "reduced": false,
+          "allowMotion": false
+        }
+      },
+      {
+        "act": 7,
+        "seconds": 7.36,
+        "distinct_intermediate_states": 21,
+        "views": [
+          "28",
+          "vp30"
+        ],
+        "zoom_range": [
+          1,
+          1
+        ],
+        "scroll_range": [
+          0,
+          8061
+        ],
+        "final": {
+          "version": 113,
+          "started": true,
+          "playing": 0,
+          "shown": 7,
+          "requested": 7,
+          "visible": true,
+          "suspended": false,
+          "view": "vp30",
+          "cursor": {
+            "x": 1181,
+            "y": 827
+          },
+          "camera": {
+            "z": 1,
+            "cx": 720,
+            "cy": 480
+          },
+          "canvasScroll": 0,
+          "reduced": false,
+          "allowMotion": false
+        }
+      }
+    ],
+    "errors": [],
+    "pause_resume": {
+      "paused": {
+        "version": 113,
+        "started": true,
+        "playing": 2,
+        "shown": -1,
+        "requested": 2,
+        "visible": false,
+        "suspended": true,
+        "view": "4",
+        "cursor": {
+          "x": 524.1628008992179,
+          "y": 467.70720918242347
+        },
+        "camera": {
+          "z": 1,
+          "cx": 720,
+          "cy": 480
+        },
+        "canvasScroll": 0,
+        "reduced": false,
+        "allowMotion": false
+      },
+      "held": {
+        "version": 113,
+        "started": true,
+        "playing": 2,
+        "shown": -1,
+        "requested": 2,
+        "visible": false,
+        "suspended": true,
+        "view": "4",
+        "cursor": {
+          "x": 524.1628008992179,
+          "y": 467.70720918242347
+        },
+        "camera": {
+          "z": 1,
+          "cx": 720,
+          "cy": 480
+        },
+        "canvasScroll": 0,
+        "reduced": false,
+        "allowMotion": false
+      },
+      "resumed": {
+        "version": 113,
+        "started": true,
+        "playing": 2,
+        "shown": -1,
+        "requested": 2,
+        "visible": true,
+        "suspended": false,
+        "view": "5",
+        "cursor": {
+          "x": 943,
+          "y": 130
+        },
+        "camera": {
+          "z": 1,
+          "cx": 720,
+          "cy": 480
+        },
+        "canvasScroll": 0,
+        "reduced": false,
+        "allowMotion": false
+      }
+    },
+    "replay": {
+      "version": 113,
+      "started": true,
+      "playing": 2,
+      "shown": -1,
+      "requested": 2,
+      "visible": true,
+      "suspended": false,
+      "view": "vp3",
+      "cursor": {
+        "x": 611.1079382263422,
+        "y": 517.2786534388093
+      },
+      "camera": {
+        "z": 1,
+        "cx": 720,
+        "cy": 480
+      },
+      "canvasScroll": 0,
+      "reduced": false,
+      "allowMotion": false
+    },
+    "rapid_reverse_selection": {
+      "version": 113,
+      "started": true,
+      "playing": 4,
+      "shown": -1,
+      "requested": 4,
+      "visible": true,
+      "suspended": false,
+      "view": "8",
+      "cursor": {
+        "x": 793,
+        "y": 592
+      },
+      "camera": {
+        "z": 1,
+        "cx": 720,
+        "cy": 480
+      },
+      "canvasScroll": 4640,
+      "reduced": false,
+      "allowMotion": false
+    },
+    "error_displays_retry_not_slideshow": true,
+    "responsive": [
+      {
+        "width": 390,
+        "height": 844,
+        "motion_verified": true,
+        "layout": {
+          "width": 390,
+          "scrollWidth": 390,
+          "pin": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 844,
+            "top": 0,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          },
+          "screen": {
+            "x": 24,
+            "y": 330.015625,
+            "width": 342,
+            "height": 228,
+            "top": 330.015625,
+            "right": 366,
+            "bottom": 558.015625,
+            "left": 24
+          },
+          "controls": {
+            "x": 24,
+            "y": 654.015625,
+            "width": 342,
+            "height": 40,
+            "top": 654.015625,
+            "right": 366,
+            "bottom": 694.015625,
+            "left": 24
+          }
+        }
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "motion_verified": true,
+        "layout": {
+          "width": 768,
+          "scrollWidth": 768,
+          "pin": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 1024,
+            "top": 0,
+            "right": 768,
+            "bottom": 1024,
+            "left": 0
+          },
+          "screen": {
+            "x": 34,
+            "y": 317.765625,
+            "width": 700,
+            "height": 466.65625,
+            "top": 317.765625,
+            "right": 734,
+            "bottom": 784.421875,
+            "left": 34
+          },
+          "controls": {
+            "x": 34,
+            "y": 858.765625,
+            "width": 700,
+            "height": 44,
+            "top": 858.765625,
+            "right": 734,
+            "bottom": 902.765625,
+            "left": 34
+          }
+        }
+      },
+      {
+        "width": 844,
+        "height": 390,
+        "motion_verified": true,
+        "layout": {
+          "width": 844,
+          "scrollWidth": 844,
+          "pin": {
+            "x": 0,
+            "y": 0,
+            "width": 844,
+            "height": 390,
+            "top": 0,
+            "right": 844,
+            "bottom": 390,
+            "left": 0
+          },
+          "screen": {
+            "x": 393.890625,
+            "y": 137.078125,
+            "width": 298.5,
+            "height": 199,
+            "top": 137.078125,
+            "right": 692.390625,
+            "bottom": 336.078125,
+            "left": 393.890625
+          },
+          "controls": {
+            "x": 270.28125,
+            "y": 346,
+            "width": 545.71875,
+            "height": 32,
+            "top": 346,
+            "right": 816,
+            "bottom": 378,
+            "left": 270.28125
+          }
+        }
+      },
+      {
+        "width": 360,
+        "height": 640,
+        "motion_verified": true,
+        "layout": {
+          "width": 360,
+          "scrollWidth": 360,
+          "pin": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 640,
+            "top": 0,
+            "right": 360,
+            "bottom": 640,
+            "left": 0
+          },
+          "screen": {
+            "x": 24,
+            "y": 242.015625,
+            "width": 312,
+            "height": 208,
+            "top": 242.015625,
+            "right": 336,
+            "bottom": 450.015625,
+            "left": 24
+          },
+          "controls": {
+            "x": 24,
+            "y": 582,
+            "width": 312,
+            "height": 40,
+            "top": 582,
+            "right": 336,
+            "bottom": 622,
+            "left": 24
+          }
+        }
+      }
+    ],
+    "reduced_motion": {
+      "static_by_default": true,
+      "user_opt_in_plays_motion": true
+    },
+    "no_javascript_seven_readable_steps": true,
+    "complete": true
+  },
+  "static": {
+    "external_js_checks": 29,
+    "inline_js_checks": 16,
+    "errors": [],
+    "motion_assets": 58,
+    "missing_motion_assets": [],
+    "changed_assets": [
+      "assets/reports/report-flow-v110/player.html",
+      "assets/reports/report-flow-v110/player.js"
+    ],
+    "changed_runtime_files": [
+      "assets/reports/report-flow-v110/player.html",
+      "assets/reports/report-flow-v110/player.js",
+      "management-report-flow.js",
+      "management-reports.html"
+    ],
+    "added_runtime_files": [
+      "management-report-flow.css"
+    ],
+    "removed_files": [],
+    "total_js_checks": 45,
+    "missing_direct_local_html_sources": [],
+    "all_58_motion_images_match_v112": true,
+    "unchanged_pages_and_hero": true
+  }
+}

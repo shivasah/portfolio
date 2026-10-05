@@ -1,14 +1,11 @@
-/* Optional owner-supplied details. Social links are restored as static HTML in
-   every footer, using the same destinations as v45. Blank values retain those
-   original service-homepage destinations; they are NOT verified personal profiles.
-   Add real profile URLs here to override them. Email remains optional. */
+/* Owner-supplied links. No generic social-homepage fallbacks. */
 window.PORTFOLIO_CONFIG = Object.freeze({
   contact: {
     email: 'sah.shiva@gmail.com',
-    linkedin: '',
-    medium: '',
-    github: ''
+    linkedin: 'https://linkedin.com/in/shivasah',
+    medium: 'https://medium.com/@shivasah'
   },
+  resume: 'https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing',
   // Owner-supplied publication URLs. The print-only entry has no supplied URL.
   writingLinks: {
     'writing-01': 'https://medium.com/design-appd/storytelling-through-analogies-247b9272ce76',

@@ -1,6 +1,5 @@
 /* v110: retained portfolio materials, matched personas and scenario-led flow. */
 html body.page-case-reports-v90 .mr-chapter-title{font:500 clamp(42px,6.2vw,86px)/1.03 var(--font-display)!important;letter-spacing:-.045em;color:var(--ink);margin:0;text-wrap:balance;max-width:20ch}
-html body.page-case-reports-v90 .mr-sample-badge{display:table;width:auto;border:1px solid var(--line);border-radius:999px;padding:5px 12px;margin:24px 0;font:500 12px/1.5 var(--font-body);color:var(--ink-soft)}
 html body.page-case-reports-v90 #pitch .pitch-v24__metrics{margin-top:12px}
 /* Personas */
 html body.page-case-reports-v90 .mr-persona-row{display:grid;grid-template-columns:minmax(250px,.82fr) minmax(0,1.5fr);gap:clamp(32px,5vw,80px);align-items:center;margin-top:52px}

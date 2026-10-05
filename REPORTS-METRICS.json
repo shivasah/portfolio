@@ -1,27 +1,16 @@
 {
-  "status": "illustrative",
-  "saves": 219400,
-  "distributionEvents": 162600,
-  "createdToDistributedPercent": 72,
-  "legacyAdoptionPercent": {
-    "value": 2.5,
-    "status": "user-supplied; verify source and denominator"
+  "research": {
+    "researchSessions": 47,
+    "method": "Follow-Me-Home"
   },
-  "fmhs": {
-    "total": 47,
-    "businessOwners": 19,
-    "accountants": 28,
-    "status": "user-confirmed"
+  "legacyAdoption": {
+    "percent": 2.5,
+    "unit": "QuickBooks customers",
+    "source": "Owner-supplied in this conversation"
   },
-  "funnel": {
-    "status": "sample data; not verified before-after results",
-    "listingToStartPercent": 9,
-    "startToCreatedPercent": 32,
-    "createdToSentPercent": 72,
-    "denominators": [
-      "listing visits",
-      "report starts",
-      "created reports"
-    ]
+  "implementation": {
+    "tokenCompliancePercent": 92.7,
+    "unit": "UI-repository token compliance after scoping",
+    "source": "Original project storyline"
   }
 }

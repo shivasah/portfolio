@@ -22,25 +22,52 @@ function bez(x1,y1,x2,y2){
 }
 const E = { ui:bez(.4,0,.2,1), out:bez(0,0,.2,1), move:bez(.55,0,.25,1), cam:bez(.65,0,.25,1), scroll:bez(.6,0,.2,1) };
 
-/* ---------- run / cancel ---------- */
+/* ---------- active-time clock / cancellation ----------
+   v113: hiding the player suspends the clock; it never applies a chapter end.
+   Each tween counts only visible playback time. This also protects typing,
+   camera moves and report scrolling when a menu or another tab is opened. */
 const CANCEL = Symbol('cancel');
-let RUN = { c:true, pend:[] };
+const newRun = () => ({ c:false, pend:[], wake:new Set(), images:[] });
+let RUN = newRun();
 const chk = r => { if (r.c) throw CANCEL; };
+const canAdvance = () => visible && !document.hidden;
+function wakeRun(){
+  if (!canAdvance()) return;
+  const jobs=[...RUN.wake];RUN.wake.clear();jobs.forEach(job=>job());
+  document.getAnimations().forEach(a=>{if(a.playState==='paused')a.play();});
+}
 function tween(dur, fn, ease=E.ui){
-  const r = RUN;
-  return new Promise(res => {
-    if (r.c) return res();
-    if (dur <= 0) { fn(1); return res(); }
-    const t0 = performance.now();
-    const f = now => { if (r.c) return res(); const p=Math.min(1,(now-t0)/dur); fn(ease(p)); p<1 ? requestAnimationFrame(f) : res(); };
-    requestAnimationFrame(f);
-  }).then(() => chk(r));
+  const r=RUN;
+  return new Promise((resolve,reject)=>{
+    let elapsed=0,last=0,raf=0,done=false;
+    const finish=error=>{
+      if(done)return;done=true;
+      if(raf)cancelAnimationFrame(raf);
+      r.wake.delete(wake);
+      const i=r.pend.indexOf(cancel);if(i!==-1)r.pend.splice(i,1);
+      error?reject(error):resolve();
+    };
+    const cancel=()=>finish();
+    const wake=()=>{
+      if(done||r.c){finish();return;}
+      last=performance.now();raf=requestAnimationFrame(tick);
+    };
+    const tick=now=>{
+      raf=0;
+      if(r.c){finish();return;}
+      if(!canAdvance()){last=0;r.wake.add(wake);return;}
+      if(last)elapsed+=Math.min(64,Math.max(0,now-last));
+      last=now;
+      const p=dur<=0?1:Math.min(1,elapsed/dur);
+      try{fn(ease(p));}catch(error){finish(error);return;}
+      if(p>=1)finish();else raf=requestAnimationFrame(tick);
+    };
+    r.pend.push(cancel);
+    if(r.c)finish();else if(canAdvance())wake();else r.wake.add(wake);
+  }).then(()=>chk(r));
 }
-function wait(ms){
-  const r = RUN;
-  return new Promise(res => { if (r.c) return res(); const t=setTimeout(res, ms); r.pend.push(()=>{clearTimeout(t);res();}); }).then(() => chk(r));
-}
-addEventListener('unhandledrejection', e => { if (e.reason === CANCEL) e.preventDefault(); });
+function wait(ms){return tween(ms,()=>{},p=>p);}
+addEventListener('unhandledrejection',e=>{if(e.reason===CANCEL)e.preventDefault();});
 
 /* ---------- views ---------- */
 // hybrid views reuse one frame's fixed chrome over another frame's canvas
@@ -373,54 +400,101 @@ const ACTS = {
 };
 
 
-/* The portfolio owns scrolling. This player renders one requested act and holds. */
+/* The portfolio owns scrolling. The player animates the selected act and holds. */
 function applyEnd(n){
- RUN.pend.forEach(f=>f());
  fx.innerHTML='';views.innerHTML='';curView=null;
  camS.z=1;camS.cx=720;camS.cy=480;applyCam();curSvg.style.transform='';
- const [id,s,[x,y]]=END[n];const v=getView(id);css(v,{opacity:1,transform:''});v.setScroll(s);views.appendChild(v);curView=v;cs.x=x;cs.y=y;placeCur();if(n===7)addToast(true);
+ const [id,s,[x,y]]=END[n];const v=getView(id);
+ css(v,{opacity:1,transform:''});v.setScroll(s);views.appendChild(v);curView=v;
+ cs.x=x;cs.y=y;placeCur();if(n===7)addToast(true);
 }
-let playing=0,shown=0,started=false,visible=false,requested=1;
-function notify(state,n=requested){parent.postMessage({type:'report-flow-state',act:n,state},'*');}
-function stop(){RUN.c=true;RUN.pend.forEach(f=>f());RUN.pend=[];for(const a of document.getAnimations())a.cancel();playing=0;}
-function setStill(n){stop();RUN={c:false,pend:[]};applyEnd(n);shown=n;notify('paused',Math.max(1,n));}
-async function go(n,instant=false){
+let playing=0,shown=0,started=false,visible=false,requested=1,allowMotion=false;
+let pendingReplay=false;
+function notify(state,n=requested,detail){
+ parent.postMessage({type:'report-flow-state',version:113,act:n,state,...(detail?{detail}: {})},'*');
+}
+function ready(){parent.postMessage({type:'report-flow-ready',version:113,acts:7},'*');}
+function stop(){
+ const old=RUN;old.c=true;[...old.pend].forEach(f=>f());old.pend=[];old.wake.clear();
+ for(const a of document.getAnimations())a.cancel();playing=0;
+}
+function suspend(){
+ if(playing){
+  document.getAnimations().forEach(a=>{if(a.playState==='running')a.pause();});
+  notify('suspended',playing);
+ }
+}
+async function setStill(n){
+ stop();const r=newRun();RUN=r;
+ try{await getView(END[n][0]).ready;chk(r);applyEnd(n);shown=n;notify('paused',Math.max(1,n));}
+ catch(e){if(e!==CANCEL){console.error('Report walkthrough:',e);notify('error',Math.max(1,n),'A report image could not load.');}}
+}
+async function go(n,instant=false,replay=false){
  n=Math.min(7,Math.max(1,Math.round(Number(n)||1)));requested=n;
+ if(replay)pendingReplay=true;
  if(!started)return;
- if(instant||REDUCED){setStill(n);return;}
- if(!visible||document.hidden)return;
- if(n===playing||(n===shown&&!playing)){notify(playing?'playing':'paused',n);return;}
- stop();const r={c:false,pend:[],images:[]};RUN=r;playing=n;
+ if(instant||(REDUCED&&!allowMotion)){pendingReplay=false;await setStill(n);return;}
+ if(!canAdvance())return;
+ const restart=pendingReplay;pendingReplay=false;
+ if(n===playing&&!restart){wakeRun();notify('playing',n);return;}
+ if(n===shown&&!playing&&!restart){notify('paused',n);return;}
+ stop();const r=newRun();RUN=r;playing=n;notify('loading',n);
  try{
   await getView(END[n-1][0]).ready;chk(r);
-  // Predecode the small overlays and resizing patches used outside show().
   const extra={1:['card','cardSel'],3:['hovBS'],4:['hovRev','cv15','ch15'],5:['hovTB'],7:['modal','toast']}[n]||[];
   r.images=extra.map(k=>img(A[k]));await Promise.all(r.images.map(i=>i.decode()));chk(r);
   if(n===1){const c=vp2Card();await Promise.all([...c.parentNode.querySelectorAll('img')].map(i=>i.decode()));chk(r);}
-  applyEnd(n-1);shown=-1;notify('playing',n);await ACTS[n]();}
-catch(e){if(e!==CANCEL){console.error('Report walkthrough:',e);notify('error',n);return;}}
- if(r.c)return;
- applyEnd(n);shown=n;playing=0;notify('paused',n);
+  applyEnd(n-1);shown=-1;notify(canAdvance()?'playing':'suspended',n);
+  await ACTS[n]();chk(r);
+  // The act has finished. Decode its endpoint before revealing the final still.
+  await getView(END[n][0]).ready;chk(r);
+  applyEnd(n);shown=n;playing=0;r.images=[];notify('paused',n);
+ }catch(e){
+  if(e!==CANCEL&&!r.c){
+   console.error('Report walkthrough:',e);stop();shown=-1;
+   notify('error',n,'A report image could not load. Retry the animation.');
+  }
+ }
 }
 addEventListener('message',event=>{
  if(event.source!==parent||!event.data||typeof event.data!=='object')return;
  const d=event.data;
- if(d.type==='report-flow-ping'&&started)parent.postMessage({type:'report-flow-ready',acts:7},'*');
- if(d.type==='report-flow-visible'){visible=Boolean(d.visible);if(!visible&&playing)setStill(requested);else if(visible&&started)go(requested);}
- if(d.type==='report-flow-go')go(d.act,Boolean(d.instant));
+ if(d.type==='report-flow-ping'&&started)ready();
+ if(d.type==='report-flow-motion')allowMotion=Boolean(d.allowMotion);
+ if(d.type==='report-flow-visible'){
+  visible=Boolean(d.visible);
+  if(!visible)suspend();
+  else if(started){wakeRun();go(requested);}
+ }
+ if(d.type==='report-flow-go')go(d.act,Boolean(d.instant),Boolean(d.replay));
 });
-reducedQuery.addEventListener('change',e=>{REDUCED=e.matches;if(started){if(REDUCED)setStill(requested);else go(requested);}});
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing)setStill(requested);});addEventListener('pagehide',stop);
+reducedQuery.addEventListener('change',e=>{
+ REDUCED=e.matches;
+ if(started){if(REDUCED&&!allowMotion)setStill(requested);else go(requested);}
+});
+document.addEventListener('visibilitychange',()=>{
+ if(document.hidden)suspend();else if(visible&&started){wakeRun();go(requested);}
+});
+addEventListener('pagehide',stop);
 const screenEl=$('#screen'),stageEl=$('#stage');
 function resize(){stageEl.style.transform=`scale(${screenEl.clientWidth/1440})`;}
-if('ResizeObserver' in window)new ResizeObserver(resize).observe(screenEl);addEventListener('resize',resize);resize();
-window.ReportFlow={get state(){return{started,playing,shown,requested,visible,view:curView?curView._id:null};},still(n){requested=Math.min(7,Math.max(0,Number(n)||0));setStill(requested);},go(n){visible=true;return go(n);}};
+if('ResizeObserver' in window)new ResizeObserver(resize).observe(screenEl);
+addEventListener('resize',resize);resize();
+window.ReportFlow={
+ get state(){return{version:113,started,playing,shown,requested,visible,
+  suspended:Boolean(playing&&!canAdvance()),view:curView?curView._id:null,
+  cursor:{...cs},camera:{...camS},canvasScroll:curView?curView._s:0,
+  reduced:REDUCED,allowMotion};},
+ still(n){requested=Math.min(7,Math.max(0,Number(n)||0));return setStill(requested);},
+ go(n){visible=true;return go(n);},
+ replay(){visible=true;return go(requested,false,true);}
+};
 (async()=>{
  try{
   const opening=getView('vp1');await opening.ready;
   views.appendChild(opening);opening.style.opacity='.001';
   await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
-  applyEnd(0);shown=0;started=true;$('#loading').remove();parent.postMessage({type:'report-flow-ready',acts:7},'*');if(visible)go(requested);
- }catch(e){console.error(e);$('#loading').textContent='The report images could not load.';notify('error');}
+  applyEnd(0);shown=0;started=true;$('#loading')?.remove();ready();if(visible)go(requested);
+ }catch(e){console.error(e);if($('#loading'))$('#loading').textContent='The report images could not load.';notify('error');}
 })();
 })();

@@ -1,4 +1,4 @@
-# Management Reports: active asset checklist (v112)
+# Management Reports: active asset checklist (v114)
 
 Keep source images sanitized and approved. Unfilled slots do not request missing files.
 To fill an existing slot, place the image at its named path and set `data-ready="true"`
@@ -6,7 +6,7 @@ on its figure. The upload's declared dimensions are shown below.
 
 ## Remaining slots
 
-The formerly listed image slots are either integrated or intentionally removed. Future image requirements are tracked in `MANAGEMENT-REPORTS-TODO.md`.
+The formerly listed image slots are either integrated or intentionally removed. Deferred-content planning is maintained outside the public website build.
 
 
 ## Integrated visuals
@@ -19,20 +19,20 @@ The formerly listed image slots are either integrated or intentionally removed. 
 - [x] Health-report analogy remains the existing sticky chapter animation.
 - [x] Starting-point workflow remains the supplied QBO to Excel to Word to email strip.
 - [x] Emily and James retain the supplied upper-row persona SVG illustrations.
-- [x] Research notes are editable text cards; no fabricated quote screenshots are needed.
+- [x] Unvalidated research-note and customer-quote components are removed. No research-image placeholders remain.
 
 ## Deferred content
 
 The AI-summary chapter and optional epilogue are intentionally absent from the page.
-Their copy, future assets and evidence requirements are in `MANAGEMENT-REPORTS-TODO.md`.
+Their restoration notes are kept in the separate private content backlog.
 The unfilled period-prototype link is removed; it is not a current asset requirement.
 The old research-image and static-walkthrough placeholder requirements are retired.
 
-## Evidence checks
+## Current content
 
-See `MANAGEMENT-REPORTS-TODO.md` for illustrative metrics, draft research notes and
-the draft customer quote. Keep the visible labels until the underlying data/quotes
-are verified. The FMH count (47; 19 business owners and 28 accountants) is user-confirmed.
+The confirmed 47 Follow-Me-Home research sessions remain. The sample usage metrics,
+sample-only Impact section, unvalidated synthesis table and draft quotation are removed.
+Product demonstrations retain their illustrative financial content.
 
 Management Reports is linked from the menus on all three pages, the homepage card and site footers. Its existing
 noindex/nofollow remains; that is not access control.

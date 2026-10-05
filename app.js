@@ -178,10 +178,10 @@
     : body.classList.contains('page-case-agent')
       ? [
           ['top', 'Agent Management'], ['pitch', 'At a glance'], ['overview', 'From ambiguity to an operable system'], ['background', 'Understand agents through a city'],
-          ['problem', 'It takes weeks'], ['user', 'Admin Adnan'], ['discovery', 'Discovery research'], ['cognitive-load', 'Measuring cognitive load'],
+          ['problem', 'It takes weeks'], ['user', 'Admin Adnan'], ['discovery', 'Discovery research'], ['cognitive-load', 'Where the workflow became difficult to follow'],
           ['direction', 'ZFI simplified one install'], ['agent-lifecycle', 'Focus on the lifecycle moments with the most leverage'], ['technical-landscape', 'From many installs to one orchestrator'],
           ['design', 'Brainstorming'], ['layout', 'Layout design'], ['validation', 'Low-fidelity validation'], ['solution', 'The final experience'],
-          ['impact', 'Impact'], ['roadmap', 'UX defined the roadmap'], ['architecture-shift', 'A parallel platform experience'], ['learning', 'Four lessons that stayed with me']
+          ['impact', 'Impact'], ['roadmap', 'Release scope and trade-offs'], ['architecture-shift', 'A parallel platform experience'], ['learning', 'Four lessons that stayed with me']
         ]
       : body.classList.contains('page-case-domain')
         ? [
@@ -192,7 +192,7 @@
           ]
         : body.classList.contains('page-case-reports')
           ? [['top','Top'],['problem','Legacy'],['needs','Needs'],['lifecycle','North star'],
-             ['design','Design'],['experience','Experience'],['release','Release'],['impact','Usage']]
+             ['design','Design'],['experience','Experience'],['release','Release']]
           : [];
 
   let sectionProgress = null;
@@ -227,7 +227,7 @@
       problem: { title: '“It takes weeks.”', subtitle: 'Scale' },
       user: { title: 'Admin Adnan', subtitle: 'User persona' },
       discovery: { title: 'Discovery research', subtitle: 'Research' },
-      'cognitive-load': { title: 'Measuring cognitive load', subtitle: 'Synthesis' },
+      'cognitive-load': { title: 'Where the workflow became difficult to follow', subtitle: 'Synthesis' },
       direction: { title: 'ZFI simplified one install', subtitle: 'Precedent' },
       'agent-lifecycle': { title: 'Focus on the lifecycle moments with the most leverage', subtitle: 'Priorities' },
       'technical-landscape': { title: 'From many installs to one orchestrator', subtitle: 'Architecture' },
@@ -236,7 +236,7 @@
       validation: { title: 'Low-fidelity validation', subtitle: 'Testing' },
       solution: { title: 'The final experience', subtitle: 'Workflow' },
       impact: { title: 'Impact', subtitle: 'Outcomes' },
-      roadmap: { title: 'UX defined the roadmap', subtitle: 'Strategy' },
+      roadmap: { title: 'Release scope and trade-offs', subtitle: 'Strategy' },
       'architecture-shift': { title: 'A parallel platform experience', subtitle: 'Platform' },
       learning: { title: 'Four lessons that stayed with me', subtitle: 'Learnings' }
     } : body.classList.contains('page-home') ? {
@@ -254,7 +254,7 @@
       design:['Simplifying the authoring model','assets/reports/style-exploration.png'],
       experience:['The report editor','assets/management-reports-thumbnail.png'],
       release:['Release alongside legacy','assets/management-reports-thumbnail.png'],
-      impact:['Usage and next questions','assets/management-reports-thumbnail.png']
+      
     } : {};
 
     const drawer = document.createElement('div');
@@ -698,14 +698,14 @@
   document.addEventListener('portfolio:ready', () => window.setTimeout(restoreFragment, 400), { once: true });
   updateMenuCurrent();
 
-  // The original social links live in HTML and remain visible without config/JS.
-  // Valid owner-supplied profiles override their original destinations in place.
-  // Generic service homepages are restored legacy destinations, not personal profiles.
+  // Owner-supplied destinations only. Static HTML carries the same links.
   const contact = window.PORTFOLIO_CONFIG?.contact || {};
+  const genericSocial = /^https:\/\/(?:www\.)?(?:linkedin\.com|medium\.com|github\.com)\/?$/i;
   document.querySelectorAll('[data-contact-links]').forEach(container => {
-    for (const [key, label] of [['email', 'Email'], ['linkedin', 'LinkedIn'], ['medium', 'Medium'], ['github', 'GitHub']]) {
+    for (const [key, label] of [['email', 'Email'], ['linkedin', 'LinkedIn'], ['medium', 'Medium']]) {
+      let link = container.querySelector(`[data-contact-key="${key}"]`);
       const value = String(contact[key] || '').trim();
-      if (!value) continue;
+      if (!value) { if (key !== 'email') link?.remove(); continue; }
       let href;
       if (key === 'email') {
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) continue;
@@ -713,16 +713,16 @@
       } else {
         try {
           const url = new URL(value);
-          if (url.protocol !== 'https:' || url.username || url.password) continue;
+          if (url.protocol !== 'https:' || url.username || url.password || genericSocial.test(url.href)) {
+            link?.remove(); continue;
+          }
           href = url.href;
-        } catch (_) { continue; }
+        } catch (_) { link?.remove(); continue; }
       }
-      let link = container.querySelector(`[data-contact-key="${key}"]`);
       if (!link) {
         link = document.createElement('a');
         link.dataset.contactKey = key;
-        if (key === 'email') container.prepend(link);
-        else container.appendChild(link);
+        container.appendChild(link);
       }
       link.href = href;
       if (key === 'email') {
@@ -733,7 +733,7 @@
       } else {
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.setAttribute('aria-label', `${label} (opens in a new tab)`);
+        link.setAttribute('aria-label', `Shiva on ${label}`);
         link.textContent = `${label} `;
         const arrow = document.createElement('span');
         arrow.setAttribute('aria-hidden', 'true');
