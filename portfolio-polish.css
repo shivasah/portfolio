@@ -11,7 +11,7 @@
 
 /* No orange scroll transition on the experiments. The closing manifesto keeps
    its own orange surface, rather than tinting all previous sections. */
-.page-home #main > #vibes { background-color:#deded8 !important; }
+.page-home #main > #vibes { background-color:#e4dfd2 !important; }
 .page-home #main > #manifesto { background-color:var(--orange) !important; }
 
 /* A real, sanitized two-fold capture is optional. Without it the existing,

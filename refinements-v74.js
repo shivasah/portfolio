@@ -44,7 +44,7 @@
         const el=document.elementFromPoint(x,y);
         const dark=!document.body.classList.contains('menu-open') &&
           el?.closest('[data-header-theme]')?.dataset.headerTheme==='dark';
-        cursor.style.setProperty('--cursor-line',dark?'#fcfcf4':'#232428');pending=false;
+        cursor.style.setProperty('--cursor-line',dark?'#f3f0e7':'#292e26');pending=false;
       });
     },{passive:true});
   }

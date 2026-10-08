@@ -2,9 +2,9 @@
    SVG geometry, texture, timing and motion curves come from the supplied HTML.
    All classes, keyframes and SVG IDs are namespaced to protect the portfolio. */
 .persona-motion {
-  --pm-paper: var(--paper, #fbfbf3);
-  --pm-ink: var(--ink, #232428);
-  --pm-orange: var(--orange, #ff5623);
+  --pm-paper: var(--paper, #f3f0e7);
+  --pm-ink: var(--ink, #292e26);
+  --pm-orange: var(--orange, #9c4e3b);
   position: relative;
   width: 100%;
   max-width: 520px;
@@ -32,7 +32,7 @@
   flex-wrap: wrap;
   gap: 8px 12px;
   margin: 12px 0 0;
-  color: var(--ink-soft, #4d4d50);
+  color: var(--ink-soft, #666c5e);
   font: 400 13px/1.5 var(--font-body, sans-serif);
 }
 .persona-motion--adnan .persona-motion__caption { justify-content: flex-end; }
@@ -43,10 +43,10 @@
   gap: 7px;
   min-height: 36px;
   padding: 8px 13px;
-  border: 1px solid var(--line, rgba(35,36,40,.22));
+  border: 1px solid var(--line, rgba(41,46,38,.22));
   border-radius: 999px;
   background: transparent;
-  color: var(--ink-soft, #4d4d50);
+  color: var(--ink-soft, #666c5e);
   font: 500 11px/1.2 var(--font-body, sans-serif);
   white-space: nowrap;
   cursor: pointer;

@@ -5,9 +5,9 @@ body.page-case-reports-v90 #impact .mr-draft-metrics{margin:0 0 32px}
 body.page-case-reports-v90 .mr-why-label{font:600 15px/1.4 var(--font-body)!important;letter-spacing:.02em!important;text-transform:none!important;margin-bottom:22px}
 body.page-case-reports-v90 .mr-draft-label{font:400 13px/1.6 var(--font-body);margin:10px 0 22px;color:var(--ink-soft)}
 body.page-case-reports-v90 .mr-research-notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;margin-top:64px;padding:14px 8px}
-body.page-case-reports-v90 .mr-research-note{position:relative;background:#efcc62;padding:32px;transform:rotate(-1deg);box-shadow:3px 12px 26px rgba(35,36,40,.12);border-radius:2px;display:flex;flex-direction:column;gap:18px;min-height:260px}
-body.page-case-reports-v90 .mr-research-note--peach{background:#ffab88;transform:rotate(1.1deg)}
-body.page-case-reports-v90 .mr-research-note::before{content:"";position:absolute;top:-9px;left:calc(50% - 34px);width:68px;height:20px;background:rgba(252,252,244,.58);transform:rotate(-2deg)}
+body.page-case-reports-v90 .mr-research-note{position:relative;background:#e6d8b8;padding:32px;transform:rotate(-1deg);box-shadow:3px 12px 26px rgba(41,46,38,.12);border-radius:2px;display:flex;flex-direction:column;gap:18px;min-height:260px}
+body.page-case-reports-v90 .mr-research-note--peach{background:#d7decd;transform:rotate(1.1deg)}
+body.page-case-reports-v90 .mr-research-note::before{content:"";position:absolute;top:-9px;left:calc(50% - 34px);width:68px;height:20px;background:rgba(243,240,231,.58);transform:rotate(-2deg)}
 body.page-case-reports-v90 .mr-note-label{font:600 11px/1.5 var(--font-body);letter-spacing:.065em;text-transform:uppercase;color:var(--ink-soft)}
 body.page-case-reports-v90 .mr-research-note h3{font:500 clamp(26px,2.5vw,38px)/1.08 var(--font-display);letter-spacing:-.025em}
 body.page-case-reports-v90 .mr-research-note p{font:400 16px/1.6 var(--font-body)}
@@ -32,16 +32,16 @@ body.page-case-reports-v90 .mr-period-tradeoff{color:var(--ink-soft)}
 body.page-case-reports-v90 .mr-period-principle{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;margin-top:72px;padding-top:40px;border-top:1px solid var(--line)}
 body.page-case-reports-v90 .mr-period-principle h3{font:500 clamp(28px,3vw,44px)/1.1 var(--font-display);letter-spacing:-.03em}
 /* A fully scoped, non-hijacking chapter track. Nothing sets scroll snap on html. */
-html body.page-case-reports-v90 #solution.mr-report-flow{background:#000;color:#fcfcf4;padding:0!important;min-height:0!important;height:auto!important;overflow:visible!important}
+html body.page-case-reports-v90 #solution.mr-report-flow{background:#000;color:#f3f0e7;padding:0!important;min-height:0!important;height:auto!important;overflow:visible!important}
 html body.page-case-reports-v90 .mr-report-heading{padding-top:clamp(80px,10vh,130px);padding-bottom:52px;display:flex;align-items:flex-end;justify-content:space-between;gap:28px}
-html body.page-case-reports-v90 .mr-report-heading h2{max-width:20ch;color:#fcfcf4!important}
-html body.page-case-reports-v90 .mr-report-heading .section-label{color:rgba(252,252,244,.65)}
+html body.page-case-reports-v90 .mr-report-heading h2{max-width:20ch;color:#f3f0e7!important}
+html body.page-case-reports-v90 .mr-report-heading .section-label{color:rgba(243,240,231,.65)}
 html body.page-case-reports-v90 .mr-report-skip{font:500 13px/1.6 var(--font-body);white-space:nowrap;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:5px}
 html body.page-case-reports-v90 .mr-report-track{display:none;position:relative;height:870vh;height:870svh;overflow:visible}
 html body.page-case-reports-v90 .mr-report-flow.is-enhanced .mr-report-track{display:block}
 html body.page-case-reports-v90 .mr-report-pin{position:sticky;top:0;width:100%;height:100vh;height:100svh;box-sizing:border-box;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,2.3fr);align-items:center;justify-items:center;gap:clamp(28px,3.5vw,60px);padding:100px var(--gutter) 56px;max-width:1600px;margin:0 auto}
 html body.page-case-reports-v90 .mr-report-caption{width:100%;max-width:34ch;align-self:center}
-html body.page-case-reports-v90 .mr-report-step{font:500 12px/1.5 var(--font-body);color:rgba(252,252,244,.6);letter-spacing:.06em;margin:0 0 22px}
+html body.page-case-reports-v90 .mr-report-step{font:500 12px/1.5 var(--font-body);color:rgba(243,240,231,.6);letter-spacing:.06em;margin:0 0 22px}
 html body.page-case-reports-v90 .mr-report-caption h3{font:500 clamp(28px,2.9vw,44px)/1.05 var(--font-display);letter-spacing:-.035em;margin:0 0 20px;color:#fff}
 html body.page-case-reports-v90 .mr-report-caption > p[data-mr-flow-copy]{font:400 clamp(16px,1.5vw,21px)/1.5 var(--font-body);color:#fff;margin:0}
 html body.page-case-reports-v90 .mr-report-viewport{position:relative;width:100%;max-width:calc((100svh - 165px)*1.5);aspect-ratio:3/2;background:#fff;border:1px solid rgba(255,255,255,.2);border-radius:8px;overflow:hidden;min-width:0}
@@ -51,9 +51,9 @@ html body.page-case-reports-v90 .mr-report-poster{width:100%;height:100%;object-
 html body.page-case-reports-v90 .mr-report-progress{display:flex;gap:8px;margin-top:28px}
 html body.page-case-reports-v90 .mr-report-progress button{width:34px;height:36px;display:grid;place-items:center;padding:0;cursor:pointer;flex:0 1 34px}
 html body.page-case-reports-v90 .mr-report-progress button span{height:3px;width:100%;background:rgba(255,255,255,.25);border-radius:3px;transition:background .25s}
-html body.page-case-reports-v90 .mr-report-progress button[aria-current="step"] span{background:#ff5623}
-html body.page-case-reports-v90 .mr-report-progress button.is-done span{background:#fcfcf4}
-html body.page-case-reports-v90 .mr-report-status{font:400 12px/1.5 var(--font-body);color:rgba(252,252,244,.6);margin-top:8px;min-height:36px}
+html body.page-case-reports-v90 .mr-report-progress button[aria-current="step"] span{background:#9c4e3b}
+html body.page-case-reports-v90 .mr-report-progress button.is-done span{background:#f3f0e7}
+html body.page-case-reports-v90 .mr-report-status{font:400 12px/1.5 var(--font-body);color:rgba(243,240,231,.6);margin-top:8px;min-height:36px}
 html body.page-case-reports-v90 .mr-report-static{display:grid;gap:64px}
 html body.page-case-reports-v90 .mr-report-flow.is-enhanced .mr-report-static{display:none}
 html body.page-case-reports-v90 .mr-report-static article{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:36px;align-items:center}

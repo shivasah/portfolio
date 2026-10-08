@@ -41,10 +41,10 @@
   height: 48px !important;
   padding: 6px 12px !important;
   color: var(--ink) !important;
-  background: rgba(252,252,244,.88) !important;
-  border: 1px solid rgba(35,36,40,.10) !important;
+  background: rgba(243,240,231,.88) !important;
+  border: 1px solid rgba(41,46,38,.10) !important;
   border-radius: 999px !important;
-  box-shadow: 0 8px 28px rgba(35,36,40,.08) !important;
+  box-shadow: 0 8px 28px rgba(41,46,38,.08) !important;
   backdrop-filter: blur(14px) saturate(1.1) !important;
   -webkit-backdrop-filter: blur(14px) saturate(1.1) !important;
   overflow: visible !important;
@@ -56,8 +56,8 @@
   flex: none !important;
   background: currentColor !important;
   opacity: 1 !important;
-  -webkit-mask: url('assets/shiva-wordmark-static.svg') center / contain no-repeat !important;
-  mask: url('assets/shiva-wordmark-static.svg') center / contain no-repeat !important;
+  -webkit-mask: url('assets/shiva-wordmark-static.svg?v=125') center / contain no-repeat !important;
+  mask: url('assets/shiva-wordmark-static.svg?v=125') center / contain no-repeat !important;
 }
 
 /* Right menu trigger keeps the requested Lastoria 'shiva' label, but is independent of the left logo. */
@@ -74,15 +74,15 @@
   border-radius: 999px !important;
   background: var(--orange) !important;
   color: var(--ink) !important;
-  box-shadow: 0 8px 28px rgba(35,36,40,.08) !important;
+  box-shadow: 0 8px 28px rgba(41,46,38,.08) !important;
 }
 .site-header--floating .site-menu-trigger__shiva {
   display: block !important;
   width: 72px !important;
   height: 34px !important;
   background: currentColor !important;
-  -webkit-mask: url('assets/shiva-lastoria-word-v70.svg') center / contain no-repeat !important;
-  mask: url('assets/shiva-lastoria-word-v70.svg') center / contain no-repeat !important;
+  -webkit-mask: url('assets/shiva-lastoria-word-v70.svg?v=125') center / contain no-repeat !important;
+  mask: url('assets/shiva-lastoria-word-v70.svg?v=125') center / contain no-repeat !important;
 }
 .site-header--floating .site-menu-trigger:hover {
   background: var(--ink) !important;

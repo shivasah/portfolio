@@ -19,8 +19,8 @@
 .flip-card__link {
   position: relative; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr);
   min-height: var(--flip-card-base-height); overflow: hidden; color: var(--ink); background: #eeece3;
-  border: 1px solid rgba(35,36,40,.18); border-radius: inherit;
-  box-shadow: 0 18px 40px rgba(35,36,40,.13);
+  border: 1px solid rgba(41,46,38,.18); border-radius: inherit;
+  box-shadow: 0 18px 40px rgba(41,46,38,.13);
   text-decoration: none;
 }
 .flip-card--domain .flip-card__link { background: #e4e3d8; }

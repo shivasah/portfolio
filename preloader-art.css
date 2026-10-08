@@ -1,7 +1,7 @@
 /* V70: universal quiet, connected signature flourish. Every page uses the
    same approved charcoal / soft-orange preloader. */
 .page-wipe.is-lastoria {
-  background: #232428 !important;
+  background: #292e26 !important;
   transition: transform .18s cubic-bezier(.2,.78,.18,1) !important;
 }
 /* One shared coordinate system prevents the joins separating on resize. */
@@ -23,7 +23,7 @@
   overflow: visible !important;
 }
 .page-wipe.is-lastoria .lastoria-ink {
-  fill: #ff8a63;
+  fill: #e6d8b8;
 }
 .page-wipe.is-lastoria .lastoria-ink path {
   fill: inherit;

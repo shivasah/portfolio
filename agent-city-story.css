@@ -87,7 +87,7 @@ body.page-case-agent #background.agent-city-story.is-enhanced:not(.is-reduced) {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(90deg, var(--paper) 0%, rgba(252,252,244,.97) 24%, rgba(252,252,244,.84) 33%, rgba(252,252,244,.18) 49%, rgba(252,252,244,0) 60%);
+  background: linear-gradient(90deg, var(--paper) 0%, rgba(243,240,231,.97) 24%, rgba(243,240,231,.84) 33%, rgba(243,240,231,.18) 49%, rgba(243,240,231,0) 60%);
 }
 .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__layout {
   height: 100%;
@@ -140,7 +140,7 @@ body.page-case-agent #background.agent-city-story.is-enhanced:not(.is-reduced) {
   flex: 1;
   height: 2px;
   overflow: hidden;
-  background: rgba(35,36,40,.15);
+  background: rgba(41,46,38,.15);
 }
 .agent-city-story__progress i::after {
   content: '';
@@ -187,7 +187,7 @@ body.page-case-agent #background.agent-city-story.is-enhanced:not(.is-reduced) {
   .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__overlays { width: min(100%, 530px); height: 235px; }
   .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__panel { justify-content: flex-start; }
   .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__shade {
-    background: linear-gradient(180deg, var(--paper) 0%, rgba(252,252,244,.96) 24%, rgba(252,252,244,.90) 34%, rgba(252,252,244,.14) 49%, rgba(252,252,244,0) 60%);
+    background: linear-gradient(180deg, var(--paper) 0%, rgba(243,240,231,.96) 24%, rgba(243,240,231,.90) 34%, rgba(243,240,231,.14) 49%, rgba(243,240,231,0) 60%);
   }
   .agent-city-story.is-enhanced:not(.is-reduced) .agent-city-story__footer { bottom: max(20px, env(safe-area-inset-bottom, 0px)); gap: 10px; }
   .agent-city-story__progress { width: 52px; gap: 4px; }

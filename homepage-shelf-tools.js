@@ -21,19 +21,19 @@ function pat(kind,col){
 /* ---------- writing ---------- */
 // publisher marks are set typographically in the site's own type (not the publishers' logos)
 const BOOKS=[
- {n:'01',spine:'Storytelling through analogies',title:'Storytelling through Analogies',kind:'article',pub:'Design@AppD',year:'2024',mark:'AppD',href:'https://medium.com/design-appd/storytelling-through-analogies-247b9272ce76',c:'#232428',k:'#fcfcf4',ts:27,p:'analogies',W:44,H:356},
- {n:'02',spine:'Emotion & engagement',title:'Unlocking Emotion and Engagement: Storytelling Techniques in UX Design',kind:'article',pub:'Bootcamp',year:'',mark:'Bootcamp',href:'https://medium.com/design-bootcamp/unlocking-emotion-and-engagement-storytelling-techniques-in-ux-design-855afb9cecdf',c:'#ed663e',k:'#232428',ts:21,p:'emotion',W:48,H:336},
- {n:'03',spine:'Level Up',title:'Level Up',kind:'article',pub:'TEDxIITGuwahati',year:'',mark:'TEDx',href:'https://tedxiitguwahati.medium.com/level-up-720488822d71',c:'#e6d8b6',k:'#232428',ts:34,p:'levelup',W:40,H:318},
- {n:'04',spine:'The PRES framework',title:'Storytelling in UX Design; PRES Framework',kind:'article',pub:'UX Planet',year:'2023',mark:'UX Planet',href:'https://uxplanet.org/storytelling-in-ux-design-pres-framework-b39ec7ca91ab?gi=491167e53e9d',c:'#4a4c46',k:'#fcfcf4',ts:25,p:'pres',W:46,H:350},
- {n:'05',spine:'My internship at AppDynamics',title:'7 Takeaways from My Internship at AppDynamics',kind:'article',pub:'Design@AppD',year:'2020',mark:'AppD',href:'https://medium.com/design-appd/7-takeaways-from-my-internship-at-appdynamics-ab80037c2dd',c:'#efc94c',k:'#232428',ts:25,p:'takeaways',W:44,H:342},
- {n:'06',spine:'IEEE research paper',title:'IEEE research paper',kind:'research',pub:'IEEE Xplore',year:'',mark:'IEEE',href:'https://ieeexplore.ieee.org/abstract/document/9701536',c:'#d9ddd8',k:'#232428',ts:30,p:'research',W:40,H:326},
- {n:'07',spine:'The Blue in Green',title:'The Blue in Green',kind:'research',pub:'Archichakkar',year:'2016',mark:'Archi',href:'',c:'#ff8a63',k:'#232428',ts:32,p:'arches',W:44,H:346},
+ {n:'01',spine:'Storytelling through analogies',title:'Storytelling through Analogies',kind:'article',pub:'Design@AppD',year:'2024',mark:'AppD',href:'https://medium.com/design-appd/storytelling-through-analogies-247b9272ce76',c:'#292e26',k:'#f3f0e7',ts:27,p:'analogies',W:44,H:356},
+ {n:'02',spine:'Emotion & engagement',title:'Unlocking Emotion and Engagement: Storytelling Techniques in UX Design',kind:'article',pub:'Bootcamp',year:'',mark:'Bootcamp',href:'https://medium.com/design-bootcamp/unlocking-emotion-and-engagement-storytelling-techniques-in-ux-design-855afb9cecdf',c:'#9c4e3b',k:'#292e26',ts:21,p:'emotion',W:48,H:336},
+ {n:'03',spine:'Level Up',title:'Level Up',kind:'article',pub:'TEDxIITGuwahati',year:'',mark:'TEDx',href:'https://tedxiitguwahati.medium.com/level-up-720488822d71',c:'#e6d8b6',k:'#292e26',ts:34,p:'levelup',W:40,H:318},
+ {n:'04',spine:'The PRES framework',title:'Storytelling in UX Design; PRES Framework',kind:'article',pub:'UX Planet',year:'2023',mark:'UX Planet',href:'https://uxplanet.org/storytelling-in-ux-design-pres-framework-b39ec7ca91ab?gi=491167e53e9d',c:'#4a4c46',k:'#f3f0e7',ts:25,p:'pres',W:46,H:350},
+ {n:'05',spine:'My internship at AppDynamics',title:'7 Takeaways from My Internship at AppDynamics',kind:'article',pub:'Design@AppD',year:'2020',mark:'AppD',href:'https://medium.com/design-appd/7-takeaways-from-my-internship-at-appdynamics-ab80037c2dd',c:'#e6d8b8',k:'#292e26',ts:25,p:'takeaways',W:44,H:342},
+ {n:'06',spine:'IEEE research paper',title:'IEEE research paper',kind:'research',pub:'IEEE Xplore',year:'',mark:'IEEE',href:'https://ieeexplore.ieee.org/abstract/document/9701536',c:'#d7decd',k:'#292e26',ts:30,p:'research',W:40,H:326},
+ {n:'07',spine:'The Blue in Green',title:'The Blue in Green',kind:'research',pub:'Archichakkar',year:'2016',mark:'Archi',href:'',c:'#e6d8b8',k:'#292e26',ts:32,p:'arches',W:44,H:346},
 ];
 const D=232;
 const wRow=$('wRow'),wStage=$('wStage'),wDetail=$('wDetail');
 const els=BOOKS.map((b,i)=>{
   const d=document.createElement('div');d.className='bk';
-  const ink=b.k==='#fcfcf4'?'rgba(252,252,244,.055)':'rgba(35,36,40,.075)';
+  const ink=b.k==='#f3f0e7'?'rgba(243,240,231,.055)':'rgba(41,46,38,.075)';
   d.style.cssText=`--W:${b.W}px;--H:${b.H}px;--D:${D}px;--c:${b.c};--k:${b.k};--ts:${b.ts}px;--pat:${pat(b.p,ink)}`;
   const kind=b.kind==='article'?'Article':'Research';
   d.innerHTML=`<div class="bk-box">

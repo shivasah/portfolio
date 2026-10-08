@@ -1,0 +1,224 @@
+/* v126: targeted polish. Existing imagery, narrative and motion sequences remain. */
+
+/* Shared menu: icons belong to their labels, not the far edge of the row. */
+html body #site-menu .site-menu__works-toggle,
+html body #site-menu .site-menu__page.resume-link {
+ display:flex!important;justify-content:flex-start!important;align-items:center!important;
+ gap:clamp(12px,1.5vw,22px)!important;
+}
+html body #site-menu .site-menu__works-toggle strong,
+html body #site-menu .site-menu__page.resume-link strong {flex:0 1 auto!important}
+html body #site-menu .site-menu__indicator {
+ width:28px!important;height:28px!important;flex:0 0 28px!important;margin:0!important;
+ fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;
+}
+
+/* One-way loader: fade in, draw, exit upward, remain out of view. */
+html.js:not(.is-ready) body .page-wipe {
+ transform:translate3d(0,0,0)!important;opacity:0;visibility:visible!important;
+ transition:opacity .3s ease,transform .68s cubic-bezier(.22,.68,.24,1)!important;
+}
+html.js.preloader-entering:not(.is-ready) body .page-wipe,
+html.js.reel-incoming:not(.is-ready) body .page-wipe {opacity:1}
+html.is-ready:not(.is-leaving) body .page-wipe {
+ transform:translate3d(0,-110%,0)!important;opacity:1;pointer-events:none!important;
+ transition:transform .68s cubic-bezier(.22,.68,.24,1)!important;
+}
+html.is-ready:not(.is-leaving) body .page-wipe.is-parked-bottom {
+ transform:translate3d(0,-110%,0)!important;visibility:hidden!important;transition:none!important;
+}
+html.is-ready body .page-wipe.is-repositioning {
+ transform:translate3d(0,110%,0)!important;opacity:0!important;visibility:hidden!important;transition:none!important;
+}
+html.is-ready.is-leaving body .page-wipe:not(.is-repositioning) {
+ transform:translate3d(0,0,0)!important;opacity:1!important;visibility:visible!important;
+ transition:transform .68s cubic-bezier(.22,.68,.24,1)!important;
+}
+@media(prefers-reduced-motion:reduce){html body .page-wipe{transition:none!important}}
+
+/* Back to top: a clear enabled action against the forest footer. */
+html body #contact.site-footer .back-top.back-top--icon {
+ background:var(--earth-sage)!important;color:var(--earth-forest)!important;
+ opacity:1!important;border:1px solid var(--earth-sage)!important;
+ width:54px;height:54px;min-width:44px;min-height:44px;
+}
+html body #contact.site-footer .back-top.back-top--icon svg {
+ fill:none!important;stroke:currentColor!important;stroke-width:1.8!important;opacity:1!important;
+}
+html body #contact.site-footer .back-top.back-top--icon:hover {
+ background:var(--earth-oat)!important;border-color:var(--earth-oat)!important;
+}
+html body #contact .back-top:focus-visible {outline:3px solid var(--earth-oat)!important;outline-offset:5px}
+
+/* Three distinct material notes, presented as one balanced summary. */
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-v24__inner {display:block!important}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-v24__top {max-width:960px!important}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-v24__title {
+ font-size:clamp(44px,5vw,72px)!important;line-height:1.05!important;
+}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-v24__statement {
+ max-width:25ch;font-size:clamp(28px,3vw,43px)!important;line-height:1.15!important;
+}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-v24__metrics {
+ display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ width:100%!important;max-width:none!important;gap:clamp(18px,2.4vw,32px)!important;
+ margin:clamp(40px,5vw,64px) auto 0!important;
+}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-metric {
+ min-height:230px!important;padding:clamp(24px,2.5vw,34px)!important;gap:18px!important;
+}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-metric:nth-child(1) {background:var(--earth-oat)!important}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-metric:nth-child(2) {background:var(--earth-sage)!important}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-metric:nth-child(3) {background:var(--earth-stone)!important}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-metric strong {
+ font-size:clamp(42px,5.2vw,72px)!important;line-height:1!important;color:var(--earth-ink)!important;
+}
+html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-metric b {
+ font-size:clamp(16px,1.5vw,20px)!important;line-height:1.3!important;color:var(--earth-ink)!important;max-width:21ch;
+}
+@media(max-width:700px){
+ html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-v24__metrics {grid-template-columns:1fr!important;max-width:450px!important;gap:22px!important}
+ html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-metric {min-height:190px!important;transform:none!important;padding:26px!important}
+ html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-metric strong {font-size:60px!important}
+ html body.page-case-reports-v90 #pitch.pitch-v126--three .pitch-metric b {font-size:18px!important}
+}
+
+/* Stronger why; unlabeled principles and role/reflection notes. */
+html body.page-case-reports-v90 #why-it-mattered .mr-why-title {
+ font:500 clamp(40px,4.5vw,66px)/1.06 var(--font-display)!important;
+ letter-spacing:-.035em!important;color:var(--earth-on-dark)!important;margin:0!important;
+}
+html body.page-case-reports-v90 #why-it-mattered .mr-why-statement {
+ font:400 clamp(24px,2.8vw,38px)/1.25 var(--font-display)!important;max-width:30ch!important;
+ color:var(--earth-on-dark)!important;letter-spacing:-.015em!important;margin:26px 0 0!important;
+}
+html body.page-case-reports-v90 #why-it-mattered .mr-force {padding-top:24px}
+html body.page-case-reports-v90 #principles .mr-principles-heading {display:block!important}
+html body.page-case-reports-v90 #principles .mr-principles-heading h2 {max-width:21ch!important}
+html body.page-case-reports-v90 #principles .agent-learning-card__title {margin-top:auto!important}
+html body :is(#overview,#influence,#design-influence) .agent-role-note h3,
+html body :is(#influence,#design-influence) .design-influence-note h3 {margin-top:0!important}
+
+/* The report interface rests on paper. Only the actual screen receives a black stroke. */
+html body.page-case-reports-v90 #main > #solution.mr-report-flow--paper {
+ background:var(--earth-limestone)!important;color:var(--earth-ink)!important;--orange:var(--earth-clay);
+}
+html body.page-case-reports-v90 #solution.mr-report-flow--paper :is(.mr-report-track,.mr-report-pin,.mr-report-visual) {
+ background:transparent!important;box-shadow:none!important;
+}
+html body.page-case-reports-v90 #solution.mr-report-flow--paper :is(.mr-report-scenario h2,.mr-report-scenario h3,.mr-report-caption>p[data-mr-flow-copy],.mr-report-controls [data-mr-flow-count],.mr-report-static h3,.mr-report-static p) {
+ color:var(--earth-ink)!important;
+}
+html body.page-case-reports-v90 #solution.mr-report-flow--paper .mr-report-viewport {
+ border:1.5px solid #000!important;border-radius:10px!important;box-shadow:none!important;background:#fff!important;
+}
+html body.page-case-reports-v90 #solution.mr-report-flow--paper :is(.mr-report-controls button,[data-mr-flow-optin]) {
+ color:var(--earth-moss)!important;border-color:var(--earth-moss)!important;background:transparent!important;
+}
+html body.page-case-reports-v90 #solution.mr-report-flow--paper .mr-report-controls button:not(:disabled):hover {
+ background:var(--earth-moss)!important;color:var(--earth-on-dark)!important;
+}
+html body.page-case-reports-v90 #solution.mr-report-flow--paper .mr-report-progress button span {background:var(--earth-secondary)!important}
+html body.page-case-reports-v90 #solution.mr-report-flow--paper .mr-report-progress button[aria-current=step] span {background:var(--earth-clay)!important}
+html body.page-case-reports-v90 #solution.mr-report-flow--paper .mr-report-status {color:var(--earth-secondary)!important}
+
+/* Comparison is a deliberate opt-in; wheel/touch passes to the page until opened. */
+html body #output-comparison .mrc-activation {position:relative;margin-top:38px;isolation:isolate;border-radius:20px}
+html body #output-comparison .mrc-activation:not(.is-active) .mrc-preview {
+ max-height:440px;overflow:hidden;filter:blur(6px);opacity:.62;pointer-events:none;user-select:none;
+}
+html body #output-comparison .mrc-activation:not(.is-active) .mrc-viewer {
+ overflow:hidden!important;scroll-behavior:auto!important;pointer-events:none!important;
+}
+html body #output-comparison .mrc-activate {
+ position:absolute;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;
+ width:100%;border:1px solid var(--line);border-radius:20px;padding:30px;
+ color:var(--earth-ink);background:rgba(243,240,231,.28);text-align:center;cursor:pointer;
+}
+html body #output-comparison .mrc-activate[hidden] {display:none!important}
+.mrc-activate__icon {width:48px;height:48px;color:var(--earth-clay)}
+.mrc-activate__icon svg {width:100%;height:100%}
+.mrc-activate__title {font:500 clamp(25px,3vw,39px)/1.15 var(--font-display);letter-spacing:-.025em;max-width:24ch}
+.mrc-activate__copy {font:400 15px/1.55 var(--font-body);max-width:33ch}
+.mrc-activate__action {display:inline-flex;align-items:center;gap:18px;min-height:44px;padding:11px 20px;border-radius:999px;font:500 14px/1.3 var(--font-body);color:var(--earth-on-dark);background:var(--earth-moss);margin-top:8px}
+.mrc-activate:hover .mrc-activate__action {background:var(--earth-forest)}
+html body #output-comparison .mrc-activation.is-active .mrc-preview {filter:none;opacity:1;pointer-events:auto}
+html body #output-comparison .mrc-close-comparison {display:inline-flex;align-items:center;gap:10px;margin-top:20px;padding:10px 16px;min-height:44px;border:1px solid var(--earth-moss);border-radius:999px;background:transparent;color:var(--earth-moss);font:500 14px/1.3 var(--font-body);cursor:pointer}
+html body #output-comparison .mrc-close-comparison[hidden],html body #output-comparison [data-comparison-hint][hidden] {display:none!important}
+.mrc-noscript {padding:16px;font:400 15px/1.5 var(--font-body);color:var(--earth-ink)}
+@media(max-width:600px){html body #output-comparison .mrc-activation:not(.is-active) .mrc-preview{max-height:400px}.mrc-activate__title{font-size:28px}}
+
+/* Bring the remaining old notes into the sage/oat/stone theme. */
+html body.page-case-agent #discovery .agent-sample-note {background:var(--earth-oat)!important;color:var(--earth-ink)!important}
+html body.page-case-agent #discovery .agent-sample-note::before {background:rgba(228,223,210,.85)!important}
+html body.page-case-agent #discovery .agent-pie-internal {fill:var(--earth-sage)!important}
+html body.page-case-agent #discovery .agent-pie-external {fill:var(--earth-stone)!important}
+html body.page-case-agent #discovery .agent-pie-key--internal {background:var(--earth-sage)!important}
+html body.page-case-agent #discovery .agent-pie-key--external {background:repeating-linear-gradient(118deg,var(--earth-stone) 0 4px,var(--earth-secondary) 4px 5px)!important}
+html body.page-case-agent #discovery .insight-card--scribble:nth-child(1),html body.page-case-agent .journey__notes .journey-note--1 {background:var(--earth-oat)!important;color:var(--earth-ink)!important}
+html body.page-case-agent #discovery .insight-card--scribble:nth-child(2),html body.page-case-agent .journey__notes .journey-note--2 {background:var(--earth-sage)!important;color:var(--earth-ink)!important}
+html body.page-case-agent #discovery .insight-card--scribble:nth-child(3),html body.page-case-agent .journey__notes .journey-note--3 {background:var(--earth-stone)!important;color:var(--earth-ink)!important}
+html body.page-case-agent .journey__notes .journey-note::before {background:rgba(243,240,231,.8)!important}
+html body.page-case-agent #direction .zfi-product-evidence {
+ background:transparent!important;padding:0!important;border:0!important;box-shadow:none!important;filter:none!important;
+}
+html body.page-case-agent #direction .zfi-product-evidence::before,html body.page-case-agent #direction .zfi-product-evidence::after {display:none!important}
+html body.page-case-agent #direction .zfi-product-evidence img {background:transparent!important;padding:0!important;box-shadow:none!important;filter:none!important;border:0!important;border-radius:12px!important}
+html body.page-case-agent #technical-landscape .before-after__image {mix-blend-mode:multiply!important}
+html body.page-case-agent #hierarchy-iteration .hierarchy-card {box-shadow:none!important;filter:none!important;background:var(--earth-limestone)!important;border:1px solid var(--line-strong)!important;overflow:hidden!important}
+html body.page-case-agent #hierarchy-iteration .hierarchy-card::before,html body.page-case-agent #hierarchy-iteration .hierarchy-card::after {display:none!important;box-shadow:none!important}
+html body.page-case-agent #hierarchy-iteration .hierarchy-card img {box-shadow:none!important;filter:none!important}
+html body.page-case-agent #main > #decision-background,html body.page-case-agent #decision-background > .shell {background:var(--earth-limestone)!important;color:var(--earth-ink)!important}
+html body.page-case-agent #decision-background::before,html body.page-case-agent #decision-background::after {display:none!important}
+
+/* Scope is explicit; stage order is the owner's sequence, not a completion meter. */
+.release-sequence {margin-top:42px}
+.release-sequence__context,.release-sequence__note {font:400 15px/1.6 var(--font-body);color:var(--earth-secondary);max-width:72ch}
+.release-sequence__steps {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;list-style:none;padding:0;margin:32px 0 24px}
+.release-step {position:relative;min-height:215px;padding:24px 18px;border:1px solid var(--line);border-radius:10px;background:var(--earth-limestone);display:flex;flex-direction:column;gap:17px}
+.release-step::after {content:'\2192';position:absolute;right:-17px;top:49%;width:16px;text-align:center;color:var(--earth-secondary)}
+.release-step:last-child::after {display:none}
+.release-step--current {background:var(--earth-sage);border:2px solid var(--earth-moss)}
+.release-step__scope {font:600 11px/1.3 var(--font-body);letter-spacing:.04em;color:var(--earth-clay)}
+.release-step h4 {font:500 clamp(19px,1.8vw,25px)/1.16 var(--font-display)!important;letter-spacing:-.02em!important;color:var(--earth-ink);margin:0!important}
+.release-step p {font:400 13px/1.45 var(--font-body);color:var(--earth-secondary);margin-top:auto}
+@media(max-width:900px){
+ .release-sequence__steps {grid-template-columns:1fr;max-width:630px;gap:22px}
+ .release-step {min-height:0;padding:22px 24px;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+ .release-step::after {content:'\2193';right:auto;top:auto;left:28px;bottom:-20px}
+ .release-step h4 {font-size:26px!important}.release-step p{font-size:14px}
+}
+
+/* COP title and explanation sit on the left of the existing artboard. */
+html body.page-case-agent #main > #architecture-shift {padding:0!important;background:var(--earth-forest)!important}
+html body.page-case-agent #architecture-shift .architecture-shift-v70__grid {position:relative;display:block!important;width:100%!important;max-width:none!important;min-height:0;padding:0!important}
+html body.page-case-agent #architecture-shift .architecture-shift-v70__media {position:relative!important;width:100%!important;margin:0!important;aspect-ratio:16/9!important;overflow:hidden!important}
+html body.page-case-agent #architecture-shift .architecture-shift-v70__media img {position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;transform:none!important}
+html body.page-case-agent #architecture-shift .architecture-shift-v70__copy {
+ position:absolute!important;z-index:2;left:5.5%;top:50%;transform:translateY(-50%);width:37%!important;max-width:520px!important;
+ display:block!important;margin:0!important;padding:0!important;
+}
+html body.page-case-agent #architecture-shift .architecture-shift-v70__title {
+ font:500 clamp(30px,3.1vw,48px)/1.1 var(--font-display)!important;letter-spacing:-.035em!important;max-width:18ch!important;color:var(--earth-on-dark)!important;
+}
+html body.page-case-agent #architecture-shift .architecture-shift-v70__body {font:400 clamp(14px,1.3vw,19px)/1.55 var(--font-body)!important;color:var(--earth-on-dark)!important;margin:24px 0 0!important;max-width:36ch!important}
+@media(max-width:760px){
+ html body.page-case-agent #architecture-shift .architecture-shift-v70__media {height:800px!important;aspect-ratio:auto!important;background:#000!important}
+ html body.page-case-agent #architecture-shift .architecture-shift-v70__media img {top:auto!important;bottom:0!important;width:148%!important;max-width:none!important;left:auto!important;right:0!important;height:auto!important;object-fit:contain!important}
+ html body.page-case-agent #architecture-shift .architecture-shift-v70__copy {left:7%;top:64px;transform:none;width:86%!important;max-width:550px!important}
+ html body.page-case-agent #architecture-shift .architecture-shift-v70__title {font-size:clamp(32px,7.8vw,46px)!important;max-width:19ch!important}
+ html body.page-case-agent #architecture-shift .architecture-shift-v70__body {font-size:16px!important;line-height:1.5!important;max-width:39ch!important}
+}
+@media print{
+ html body #output-comparison .mrc-preview{filter:none!important;max-height:none!important;opacity:1!important}
+ html body #output-comparison .mrc-activate,html body #output-comparison .mrc-close-comparison{display:none!important}
+}
+/* No colour plate behind the copy placed on the COP artboard. */
+html body.page-case-agent #main > section#architecture-shift .architecture-shift-v70__copy,
+html body.page-case-agent #main > section#architecture-shift .architecture-shift-v70__copy :is(h2,p) {
+ background:transparent!important;box-shadow:none!important;
+}
+/* The mobile extension uses the artboard's own black backdrop, without a seam. */
+html body.page-case-agent #main > section#architecture-shift .architecture-shift-v70__media {
+ background:#000!important;border-radius:0!important;
+}

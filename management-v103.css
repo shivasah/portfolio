@@ -1,15 +1,15 @@
 /* v103: Agent Management component rules, scoped to Management Reports. */
 
-/* Source: styles.css */
+/* Source: styles.css?v=125 */
 body.page-case-reports-v90 .pitch-v24{padding-top:clamp(100px,14vh,180px)!important;padding-bottom:clamp(120px,16vh,210px)!important;}
 body.page-case-reports-v90 .pitch-v24__inner{display:grid;gap:clamp(70px,9vh,120px);}
 body.page-case-reports-v90 .pitch-v24__top{display:grid;grid-template-columns:minmax(0,5fr) minmax(520px,7fr);gap:clamp(56px,7vw,112px);align-items:center;}
 body.page-case-reports-v90 .pitch-v24__copy .h2{max-width:12ch;}
 body.page-case-reports-v90 .pitch-v24__copy .copy{max-width:52ch;margin-top:28px;}
-body.page-case-reports-v90 .pitch-v24__screen{margin:0;overflow:hidden;border-radius:clamp(18px,2vw,30px);background:var(--ink);box-shadow:0 28px 78px rgba(35,36,40,.15);}
+body.page-case-reports-v90 .pitch-v24__screen{margin:0;overflow:hidden;border-radius:clamp(18px,2vw,30px);background:var(--ink);box-shadow:0 28px 78px rgba(41,46,38,.15);}
 body.page-case-reports-v90 .pitch-v24__screen img{display:block;width:100%;height:auto;object-fit:cover;filter:saturate(.96) contrast(1.02);}
-body.page-case-reports-v90 .pitch-v24__metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(22px,3vw,44px);border-top:1px solid rgba(35,36,40,.18);padding-top:30px;}
-body.page-case-reports-v90 .pitch-metric{display:grid;align-content:start;gap:8px;min-height:170px;padding-right:20px;border-right:1px solid rgba(35,36,40,.13);}
+body.page-case-reports-v90 .pitch-v24__metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(22px,3vw,44px);border-top:1px solid rgba(41,46,38,.18);padding-top:30px;}
+body.page-case-reports-v90 .pitch-metric{display:grid;align-content:start;gap:8px;min-height:170px;padding-right:20px;border-right:1px solid rgba(41,46,38,.13);}
 body.page-case-reports-v90 .pitch-metric:last-child{border-right:0;}
 body.page-case-reports-v90 .pitch-metric strong{font:650 clamp(50px,5vw,84px)/.82 var(--font-display);letter-spacing:-.055em;}
 body.page-case-reports-v90 .pitch-metric--quote strong{font-size:clamp(38px,4.2vw,68px);}
@@ -22,7 +22,7 @@ body.page-case-reports-v90 .pitch-metric:nth-child(2){border-right:0}
 }
 @media (max-width:620px){
 body.page-case-reports-v90 .pitch-v24__metrics{grid-template-columns:1fr}
-body.page-case-reports-v90 .pitch-metric{border-right:0;border-bottom:1px solid rgba(35,36,40,.12);padding-bottom:24px;min-height:0}
+body.page-case-reports-v90 .pitch-metric{border-right:0;border-bottom:1px solid rgba(41,46,38,.12);padding-bottom:24px;min-height:0}
 }
 body.page-case.page-case-reports-v90 :is(h1,h2,h3,h4,h5,h6,.display-xl,.display-lg,.display-md,.display-sm,.h1,.h2,.h3,.site-footer__title,.problem-stat__number,.pitch-metric strong,.impact-card strong,.score-card strong,.research-sample-inline strong){
   font-family: var(--font-display) !important;
@@ -31,7 +31,7 @@ body.page-case.page-case-reports-v90 :is(h1,h2,h3,h4,h5,h6,.display-xl,.display-
   font-family: inherit !important;
 }
 
-/* Source: agent.css */
+/* Source: agent.css?v=125 */
 .page-case-reports-v90 :is(.agent-role-intro,.agent-scale__statement,.agent-news__copy,.agent-learning-heading) .eyebrow{ margin-bottom: 20px; }
 body.page-case.page-case-reports-v90 .agent-learning-card__title{
   font-family: var(--font-display) !important;
@@ -40,10 +40,10 @@ body.page-case-reports-v90 .agent-learning-heading{ display: flex; justify-conte
 body.page-case-reports-v90 .agent-learning-heading h2{ max-width: 17ch; }
 body.page-case-reports-v90 .agent-learning-heading > p{ max-width: 28ch; font: 400 15px/1.5 var(--font-body); color: var(--ink-soft); }
 body.page-case-reports-v90 .agent-learning-grid{ display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 24px; }
-body.page-case-reports-v90 .agent-learning-note{ min-width: 0; background: #f1d578; border-radius: 3px; box-shadow: 2px 10px 24px rgba(35,36,40,.10); }
+body.page-case-reports-v90 .agent-learning-note{ min-width: 0; background: #e6d8b8; border-radius: 3px; box-shadow: 2px 10px 24px rgba(41,46,38,.10); }
 body.page-case-reports-v90 .agent-learning-note--2,
-body.page-case-reports-v90 .agent-learning-note--4{ background: #f5efe1; }
-body.page-case-reports-v90 .agent-learning-note--3{ background: #ffab88; }
+body.page-case-reports-v90 .agent-learning-note--4{ background: #f3f0e7; }
+body.page-case-reports-v90 .agent-learning-note--3{ background: #d7decd; }
 body.page-case-reports-v90 .agent-learning-card{ width: 100%; min-height: 360px; padding: 26px; display: flex; flex-direction: column; gap: 18px; text-align: left; color: var(--ink); border-radius: inherit; cursor: pointer; }
 body.page-case-reports-v90 .agent-learning-card__space{ display: grid; position: relative; min-height: 152px; width: 100%; }
 body.page-case-reports-v90 .agent-learning-card__icon{ grid-area: 1 / 1; align-self: start; width: 88px; height: 88px; object-fit: contain; }
@@ -56,7 +56,7 @@ body.page-case-reports-v90 .agent-learning-card.is-enhanced .agent-learning-card
 body.page-case-reports-v90 .agent-learning-card[data-open="true"] .agent-learning-card__detail{ opacity: 1; visibility: visible; transition-delay: 0s; }
 body.page-case-reports-v90 .agent-learning-card[data-open="true"] .agent-learning-card__icon{ opacity: 0; }
 body.page-case-reports-v90 .agent-learning-card[data-open="true"] .agent-learning-card__hint > span{ transform: rotate(45deg); }
-body.page-case-reports-v90 .agent-learning-card:hover{ box-shadow: inset 0 0 0 1px rgba(35,36,40,.2); }
+body.page-case-reports-v90 .agent-learning-card:hover{ box-shadow: inset 0 0 0 1px rgba(41,46,38,.2); }
 body.page-case-reports-v90 .agent-learning-card:focus-visible{ outline: 2px solid var(--ink); outline-offset: 5px; }
 body.page-case-reports-v90 html:not(.js) .agent-learning-card__space{ display: block; }
 body.page-case-reports-v90 html:not(.js) .agent-learning-card__icon{ margin-bottom: 20px; }
@@ -124,7 +124,7 @@ body.page-case-reports-v90 .pitch-metric{
   gap: 10px !important;
   border: 0 !important;
   border-radius: 3px 5px 3px 2px !important;
-  box-shadow: 2px 14px 34px rgba(35,36,40,.12) !important;
+  box-shadow: 2px 14px 34px rgba(41,46,38,.12) !important;
   transform: rotate(var(--pitch-r));
   color: var(--ink);
 }
@@ -135,14 +135,14 @@ body.page-case-reports-v90 .pitch-metric::before{
   height: 19px;
   top: -9px;
   left: calc(50% - 33px);
-  background: rgba(252,252,244,.62);
-  border: 1px solid rgba(35,36,40,.06);
+  background: rgba(243,240,231,.62);
+  border: 1px solid rgba(41,46,38,.06);
   transform: rotate(-2deg);
   pointer-events: none;
 }
-body.page-case-reports-v90 .pitch-metric--yellow{ --pitch-r: -1.7deg; background: #efcc62 !important; }
-body.page-case-reports-v90 .pitch-metric--orange{ --pitch-r: 1.2deg; background: #ff8b64 !important; margin-top: 22px; }
-body.page-case-reports-v90 .pitch-metric--paper{ --pitch-r: -.6deg; background: #f3eee3 !important; margin-top: 5px; }
+body.page-case-reports-v90 .pitch-metric--yellow{ --pitch-r: -1.7deg; background: #e6d8b8 !important; }
+body.page-case-reports-v90 .pitch-metric--orange{ --pitch-r: 1.2deg; background: #e6d8b8 !important; margin-top: 22px; }
+body.page-case-reports-v90 .pitch-metric--paper{ --pitch-r: -.6deg; background: #f3f0e7 !important; margin-top: 5px; }
 body.page-case-reports-v90 .pitch-metric--ink{ --pitch-r: 1.5deg; background: var(--ink) !important; color: var(--paper) !important; margin-top: 27px; }
 body.page-case-reports-v90 .pitch-metric strong{
   margin-top: 6px;
@@ -160,7 +160,7 @@ body.page-case-reports-v90 .pitch-metric span{
   font: 500 12px/1.45 var(--font-body) !important;
   opacity: .7;
 }
-body.page-case-reports-v90 .pitch-metric--ink span{ color: rgba(252,252,244,.7); }
+body.page-case-reports-v90 .pitch-metric--ink span{ color: rgba(243,240,231,.7); }
 @media  (max-width: 1000px) {
 body.page-case-reports-v90 .pitch-v24__metrics{ grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
 body.page-case-reports-v90 .pitch-metric--orange,
@@ -182,9 +182,9 @@ body.page-case-reports-v90 .decision-card-wide-v70{
   gap: clamp(24px, 3vw, 46px);
   align-items: start;
   background: var(--paper);
-  border: 1px solid rgba(35,36,40,.16);
+  border: 1px solid rgba(41,46,38,.16);
   border-radius: 18px;
-  box-shadow: 0 18px 48px rgba(35,36,40,.07);
+  box-shadow: 0 18px 48px rgba(41,46,38,.07);
 }
 body.page-case-reports-v90 .decision-card-wide-v70__index{
   padding-top: .42em;
@@ -216,9 +216,9 @@ body.page-case-reports-v90 .decision-card-wide-v71{
   align-items: start !important;
   background: var(--paper) !important;
   color: var(--ink) !important;
-  border: 1px solid rgba(35,36,40,.16) !important;
+  border: 1px solid rgba(41,46,38,.16) !important;
   border-radius: 18px !important;
-  box-shadow: 0 18px 48px rgba(35,36,40,.07) !important;
+  box-shadow: 0 18px 48px rgba(41,46,38,.07) !important;
 }
 body.page-case-reports-v90 .decision-card-wide-v71 .decision-card-wide-v70__index{
   padding-top: .42em !important;
@@ -243,11 +243,11 @@ body.page-case-reports-v90 .decision-card-wide-v71 .decision-card-wide-v70__copy
 body.page-case-reports-v90 .decision-card-wide-v71--dark{
   background: #2d2e31 !important;
   color: var(--paper) !important;
-  border-color: rgba(252,252,244,.18) !important;
+  border-color: rgba(243,240,231,.18) !important;
   box-shadow: 0 18px 48px rgba(0,0,0,.18) !important;
 }
 body.page-case-reports-v90 .decision-card-wide-v71--dark .decision-card-wide-v70__copy{
-  color: rgba(252,252,244,.84) !important;
+  color: rgba(243,240,231,.84) !important;
   opacity: 1 !important;
 }
 body.page-case-reports-v90 .decision-card-section-v71 .decision-card-wide-v71{
@@ -278,9 +278,9 @@ body.page-case-reports-v90 .decision-card-wide-v71{
   gap: clamp(28px,3.8vw,58px) !important;
   background: var(--paper) !important;
   color: var(--ink) !important;
-  border: 1px solid rgba(35,36,40,.16) !important;
+  border: 1px solid rgba(41,46,38,.16) !important;
   border-radius: 18px !important;
-  box-shadow: 0 18px 48px rgba(35,36,40,.08) !important;
+  box-shadow: 0 18px 48px rgba(41,46,38,.08) !important;
 }
 body.page-case-reports-v90 .decision-card-wide-v70__index{
   display: flex !important;
@@ -354,15 +354,15 @@ body.page-case-reports-v90 .decision-card-wide-v73__icon{ width:34px; height:34p
 }
 body.page-case-reports-v90 .decision-card-wide-v73__icon{width:56px!important;height:56px!important}
 body.page-case-reports-v90 .decision-card-wide-v71{width:min(100%,1180px)!important;margin-inline:auto!important;box-sizing:border-box}
-body.page-case-reports-v90 .agent-learning-card__hint{width:44px;height:44px;display:grid!important;place-items:center;margin-top:auto;border:1px solid rgba(35,36,40,.28);border-radius:50%;font-size:0!important}
+body.page-case-reports-v90 .agent-learning-card__hint{width:44px;height:44px;display:grid!important;place-items:center;margin-top:auto;border:1px solid rgba(41,46,38,.28);border-radius:50%;font-size:0!important}
 body.page-case-reports-v90 .agent-learning-card__hint span{font-size:22px!important;line-height:1}
 
-/* Source: refinements-v74.css */
+/* Source: refinements-v74.css?v=125 */
 body.page-case-reports-v90 #pitch .pitch-v24__top{display:block!important}
 body.page-case-reports-v90 #pitch .pitch-v24__metrics{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:26px!important;margin-top:64px!important}
 body.page-case-reports-v90 #pitch .pitch-metric{margin:0!important;transform:none!important;min-height:252px;height:auto!important;padding:28px!important}
 body.page-case-reports-v90 #pitch .pitch-metric strong{font-size:clamp(34px,3.8vw,56px)!important;line-height:1.07!important}
-body.page-case-reports-v90 .decision-fixed{box-sizing:border-box;display:grid!important;grid-template-columns:130px minmax(0,1fr)!important;grid-column:1/-1!important;width:100%!important;max-width:none!important;min-height:0!important;height:auto!important;margin:80px 0 0!important;padding:clamp(28px,3.3vw,48px)!important;gap:36px!important;background:var(--paper)!important;color:var(--ink)!important;border:1px solid #23242824!important;border-radius:20px!important;overflow:visible!important;transform:none!important;box-shadow:0 10px 28px #2324280a!important}
+body.page-case-reports-v90 .decision-fixed{box-sizing:border-box;display:grid!important;grid-template-columns:130px minmax(0,1fr)!important;grid-column:1/-1!important;width:100%!important;max-width:none!important;min-height:0!important;height:auto!important;margin:80px 0 0!important;padding:clamp(28px,3.3vw,48px)!important;gap:36px!important;background:var(--paper)!important;color:var(--ink)!important;border:1px solid #292e2624!important;border-radius:20px!important;overflow:visible!important;transform:none!important;box-shadow:0 10px 28px #292e260a!important}
 body.page-case-reports-v90 .decision-fixed .decision-card-wide-v70__index{display:flex!important;flex-direction:column;align-items:flex-start;gap:14px;font:600 15px/1.35 var(--font-body)!important;color:var(--orange)!important}
 body.page-case-reports-v90 .decision-fixed .decision-card-wide-v73__icon{width:72px!important;height:72px!important;object-fit:contain}
 body.page-case-reports-v90 .decision-fixed .decision-card-wide-v70__title{font:500 clamp(28px,3vw,42px)/1.15 var(--font-display)!important;letter-spacing:-.03em!important;max-width:none!important;margin:0!important}
@@ -387,18 +387,18 @@ body.page-case-reports-v90 .decision-fixed .decision-card-wide-v73__icon{width:5
 body.page-case-reports-v90 .decision-fixed .decision-card-wide-v70__title{font-size:28px!important}
 }
 
-/* Source: refinements-v75.css */
+/* Source: refinements-v75.css?v=125 */
 body.page-case-reports-v90 .agent-learning-card:hover{box-shadow:none!important}
-body.page-case-reports-v90 .agent-learning-card__hint{width:40px!important;height:40px!important;display:grid!important;place-items:center!important;padding:0!important;border:1px solid rgba(35,36,40,.25)!important;border-radius:50%!important;align-self:flex-start}
+body.page-case-reports-v90 .agent-learning-card__hint{width:40px!important;height:40px!important;display:grid!important;place-items:center!important;padding:0!important;border:1px solid rgba(41,46,38,.25)!important;border-radius:50%!important;align-self:flex-start}
 body.page-case-reports-v90 .agent-learning-card__hint span{display:grid!important;place-items:center!important;width:100%!important;height:100%!important;font-size:22px!important;line-height:1!important;transform-origin:50% 50%!important}
 
-/* Source: refinements-v76.css */
+/* Source: refinements-v76.css?v=125 */
 body.page-case-reports-v90 .agent-learning-card__hint{
   position:relative!important;
   width:40px!important;height:40px!important;min-width:40px!important;min-height:40px!important;
   padding:0!important;margin:0!important;
   display:block!important;
-  border:1px solid rgba(35,36,40,.25)!important;
+  border:1px solid rgba(41,46,38,.25)!important;
   border-radius:50%!important;
   box-sizing:border-box!important;
   line-height:0!important;
@@ -483,4 +483,101 @@ body.page-case-reports-v90 .agent-learning-card:not(.is-enhanced) .agent-learnin
  body.page-case-reports-v90 .mr-health-story__visual{position:relative!important}
  body.page-case-reports-v90 .agent-learning-card__detail{opacity:1!important;visibility:visible!important;max-height:none!important;transform:none!important}
  body.page-case-reports-v90 .agent-learning-card__hint{display:none!important}
+}
+
+
+/* v123: Management Reports design principles */
+body.page-case-reports-v90 .mr-principles-section{
+  min-height:auto!important;
+  padding-block:clamp(88px,10vw,150px)!important;
+}
+body.page-case-reports-v90 .mr-principles-heading{
+  display:grid;
+  grid-template-columns:minmax(0,.34fr) minmax(0,.66fr);
+  gap:clamp(28px,5vw,72px);
+  align-items:end;
+  margin-bottom:clamp(44px,6vw,76px);
+}
+body.page-case-reports-v90 .mr-principles-heading .section-label{
+  margin:0;
+  align-self:start;
+}
+body.page-case-reports-v90 .mr-principles-heading h2{
+  margin:0;
+  max-width:13ch;
+  font:500 clamp(42px,5.2vw,76px)/.98 var(--font-display)!important;
+  letter-spacing:-.045em!important;
+  text-wrap:balance;
+}
+body.page-case-reports-v90 .mr-principles-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:clamp(22px,3vw,38px)!important;
+  max-width:1040px;
+  margin-left:auto;
+}
+body.page-case-reports-v90 .mr-principle-note{
+  padding:0!important;
+  border:0!important;
+  overflow:visible;
+  transform:rotate(-1deg);
+  transform-origin:center;
+}
+body.page-case-reports-v90 .mr-principle-note--live{
+  background:#e6d8b8!important;
+}
+body.page-case-reports-v90 .mr-principle-note--author{
+  background:#f3f0e7!important;
+  transform:rotate(1deg);
+}
+body.page-case-reports-v90 .mr-principle-card{
+  min-height:330px!important;
+  padding:clamp(26px,3vw,38px)!important;
+  background:transparent!important;
+}
+body.page-case-reports-v90 .mr-principle-card .agent-learning-card__space{
+  min-height:108px!important;
+}
+body.page-case-reports-v90 .mr-principle-card .agent-learning-card__icon{
+  width:76px!important;
+  height:76px!important;
+}
+body.page-case-reports-v90 .mr-principle-label{
+  display:block;
+  margin-top:auto;
+  font:600 11px/1.2 var(--font-body);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:rgba(41,46,38,.58);
+}
+body.page-case-reports-v90 .mr-principle-card .agent-learning-card__title{
+  margin-top:0!important;
+  max-width:15ch!important;
+  font-size:clamp(28px,3vw,40px)!important;
+  line-height:1.04!important;
+}
+body.page-case-reports-v90 .mr-principle-card .agent-learning-card__detail{
+  max-width:38ch!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+}
+body.page-case-reports-v90 .mr-principle-card[data-open="true"] .agent-learning-card__detail{
+  max-height:110px!important;
+}
+body.page-case-reports-v90 .mr-principle-card:hover,
+body.page-case-reports-v90 .mr-principle-card:focus-visible{
+  box-shadow:inset 0 0 0 1px rgba(41,46,38,.16)!important;
+}
+@media(max-width:800px){
+  body.page-case-reports-v90 .mr-principles-heading{grid-template-columns:1fr;gap:18px}
+  body.page-case-reports-v90 .mr-principles-grid{margin-left:0}
+  body.page-case-reports-v90 .mr-principles-heading h2{max-width:14ch}
+}
+@media(max-width:550px){
+  body.page-case-reports-v90 .mr-principles-grid{grid-template-columns:1fr!important}
+  body.page-case-reports-v90 .mr-principle-note,
+  body.page-case-reports-v90 .mr-principle-note--author{transform:none}
+  body.page-case-reports-v90 .mr-principle-card{min-height:310px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  body.page-case-reports-v90 .mr-principle-note{transform:none!important}
 }

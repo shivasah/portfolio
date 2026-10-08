@@ -6,9 +6,9 @@
 <title>Health-report metaphor; 18s motion</title>
 <style>
 :root{
-  --paper:#fcfcf4; --paper-2:#ece9e4; --paper-3:#e4e1dc; --ink:#232428; --ink-soft:#4d4d50; --muted:#7a7a76;
-  --orange:#ff5623; --note:#efcc62; --line:rgba(35,36,40,.14);
-  --page:#efeee6; --ui:#232428; --ui-muted:#6E6F72; --ui-line:rgba(35,36,40,.14); --btn:#fcfcf4;
+  --paper:#f3f0e7; --paper-2:#e4dfd2; --paper-3:#e4dfd2; --ink:#292e26; --ink-soft:#666c5e; --muted:#666c5e;
+  --orange:#9c4e3b; --note:#e6d8b8; --line:rgba(41,46,38,.14);
+  --page:#e4dfd2; --ui:#292e26; --ui-muted:#666c5e; --ui-line:rgba(41,46,38,.14); --btn:#f3f0e7;
   --font-display:"Cabinet Grotesk","Avenir Next","Helvetica Neue",Arial,sans-serif;
   --font-body:"Syne","Helvetica Neue",Helvetica,Arial,sans-serif;
   --font-hand:"Syne","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -37,11 +37,11 @@ body{background:var(--paper);color:var(--ui);font-family:var(--font-body);displa
 #closing span{position:relative;display:inline-block;margin-right:.25em}
 
 /* cards */
-.card{left:0;top:0;width:520px;height:440px;background:var(--paper-2);border-radius:3px 5px 3px 2px;box-shadow:2px 10px 26px rgba(35,36,40,.11);transform-origin:50% 50%}
+.card{left:0;top:0;width:520px;height:440px;background:var(--paper-2);border-radius:3px 5px 3px 2px;box-shadow:2px 10px 26px rgba(41,46,38,.11);transform-origin:50% 50%}
 .card::before{content:"";position:absolute;width:76px;height:22px;top:-10px;left:222px;background:rgba(247,240,207,.62);transform:rotate(-2deg)}
 .card .ch{left:40px;top:38px;font:400 30px/1.1 var(--font-display);letter-spacing:-.015em}
 .card .cs{left:40px;top:80px;font:400 15px/1.2 var(--font-body);color:var(--muted)}
-.card .rule{left:40px;right:40px;top:118px;height:1px;background:rgba(35,36,40,.22)}
+.card .rule{left:40px;right:40px;top:118px;height:1px;background:rgba(41,46,38,.22)}
 .row{left:40px;width:440px;height:64px}
 .row .sep{left:0;right:0;bottom:0;height:1px;background:var(--line)}
 .row .lab{left:0;top:21px;font:400 18px/1.2 var(--font-body);white-space:nowrap}
@@ -53,7 +53,7 @@ body{background:var(--paper);color:var(--ui);font-family:var(--font-body);displa
 .row .ul{left:0;width:440px;bottom:-1px;height:1px;background:var(--ink);transform-origin:0 50%}
 
 /* note */
-#note{left:0;top:0;width:540px;height:330px;background:var(--note);border-radius:2px 4px 3px 1px;box-shadow:3px 12px 30px rgba(35,36,40,.14);transform-origin:50% 50%}
+#note{left:0;top:0;width:540px;height:330px;background:var(--note);border-radius:2px 4px 3px 1px;box-shadow:3px 12px 30px rgba(41,46,38,.14);transform-origin:50% 50%}
 #note::before{content:"";position:absolute;left:230px;top:-12px;width:84px;height:25px;background:rgba(241,232,200,.78);transform:rotate(-4deg)}
 .hl{left:44px;font:400 25px/1 var(--font-hand);white-space:nowrap;color:var(--ink)}
 #sigtxt{left:178px;top:270px;font:400 16px/1 var(--font-body);font-variant:small-caps;letter-spacing:.04em;color:var(--ink-soft)}
@@ -111,30 +111,30 @@ label.loop input{accent-color:var(--orange)}
           <div class="card abs" id="cardF"></div>
           <div class="card abs" id="cardM"></div>
           <svg class="ov" id="ovA" width="1600" height="900" viewBox="0 0 1600 900" aria-hidden="true">
-            <path id="arrow" d="M930 364 C 905 290, 740 268, 660 318 C 646 327, 636 338, 628 350" fill="none" stroke="#232428" stroke-width="2.4" stroke-linecap="round"/>
-            <path id="arrowHead" d="M642 342 L628 350 L629.5 334" fill="none" stroke="#232428" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path id="arrow" d="M930 364 C 905 290, 740 268, 660 318 C 646 327, 636 338, 628 350" fill="none" stroke="#292e26" stroke-width="2.4" stroke-linecap="round"/>
+            <path id="arrowHead" d="M642 342 L628 350 L629.5 334" fill="none" stroke="#292e26" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <div id="note" class="abs">
-            <div class="hl" id="h1" style="top:46px"><span class="note-hand-native">Margin slipped and receivables are up;</span><img class="note-hand-outlines" src="doctor-note-line-01.svg" alt="Margin slipped and receivables are up;" height="44"></div>
-            <div class="hl" id="h2" style="top:92px"><span class="note-hand-native">chase the three overdue invoices</span><img class="note-hand-outlines" src="doctor-note-line-02.svg" alt="chase the three overdue invoices" height="44"></div>
-            <div class="hl" id="h3" style="top:138px"><span class="note-hand-native">before month-end.</span><img class="note-hand-outlines" src="doctor-note-line-03.svg" alt="before month-end." height="44"></div>
-            <div class="hl" id="h4" style="top:196px"><span class="note-hand-native">Recheck in April.</span><img class="note-hand-outlines" src="doctor-note-line-04.svg" alt="Recheck in April." height="44"></div>
+            <div class="hl" id="h1" style="top:46px"><span class="note-hand-native">Margin slipped and receivables are up;</span><img class="note-hand-outlines" src="doctor-note-line-01.svg?v=125" alt="Margin slipped and receivables are up;" height="44"></div>
+            <div class="hl" id="h2" style="top:92px"><span class="note-hand-native">chase the three overdue invoices</span><img class="note-hand-outlines" src="doctor-note-line-02.svg?v=125" alt="chase the three overdue invoices" height="44"></div>
+            <div class="hl" id="h3" style="top:138px"><span class="note-hand-native">before month-end.</span><img class="note-hand-outlines" src="doctor-note-line-03.svg?v=125" alt="before month-end." height="44"></div>
+            <div class="hl" id="h4" style="top:196px"><span class="note-hand-native">Recheck in April.</span><img class="note-hand-outlines" src="doctor-note-line-04.svg?v=125" alt="Recheck in April." height="44"></div>
             <svg class="ov" width="140" height="60" viewBox="0 0 140 60" style="left:40px;top:250px" aria-hidden="true">
-              <path id="sig" d="M6 40 C 14 18, 22 14, 24 30 C 26 44, 18 48, 20 36 C 23 22, 36 16, 40 28 C 43 38, 46 40, 52 26 C 56 18, 60 34, 66 32 C 74 30, 72 18, 82 24 C 90 29, 92 36, 104 30 C 112 26, 118 28, 128 22" fill="none" stroke="#232428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path id="sig" d="M6 40 C 14 18, 22 14, 24 30 C 26 44, 18 48, 20 36 C 23 22, 36 16, 40 28 C 43 38, 46 40, 52 26 C 56 18, 60 34, 66 32 C 74 30, 72 18, 82 24 C 90 29, 92 36, 104 30 C 112 26, 118 28, 128 22" fill="none" stroke="#292e26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <div id="sigtxt">; your accountant</div>
             <svg class="ov" width="48" height="44" viewBox="0 0 48 44" style="left:270px;top:122px" aria-hidden="true">
-              <path id="tick" d="M6 24 C 10 27, 13 31, 17 36 C 23 24, 31 13, 43 5" fill="none" stroke="#ff5623" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path id="tick" d="M6 24 C 10 27, 13 31, 17 36 C 23 24, 31 13, 43 5" fill="none" stroke="#9c4e3b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
           <svg class="ov" id="ovL" width="1600" height="900" viewBox="0 0 1600 900" aria-hidden="true">
-            <path id="lead1" d="M820 567 C 856 565, 866 476, 902 456" fill="none" stroke="#232428" stroke-width="1.4" stroke-linecap="round"/>
-            <path id="lead2" d="M820 678 C 862 674, 868 526, 902 504" fill="none" stroke="#232428" stroke-width="1.4" stroke-linecap="round"/>
+            <path id="lead1" d="M820 567 C 856 565, 866 476, 902 456" fill="none" stroke="#292e26" stroke-width="1.4" stroke-linecap="round"/>
+            <path id="lead2" d="M820 678 C 862 674, 868 526, 902 504" fill="none" stroke="#292e26" stroke-width="1.4" stroke-linecap="round"/>
           </svg>
           <div class="card abs" id="cardA"></div>
           <svg class="ov" id="ovR" width="1600" height="900" viewBox="0 0 1600 900" aria-hidden="true">
-            <path id="apArrow" d="M1024 596 C 1054 594, 1050 470, 1066 436" fill="none" stroke="#232428" stroke-width="2.2" stroke-linecap="round"/>
-            <path id="apHead" d="M1055 444 L1066 436 L1067 450" fill="none" stroke="#232428" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path id="apArrow" d="M1024 596 C 1054 594, 1050 470, 1066 436" fill="none" stroke="#292e26" stroke-width="2.2" stroke-linecap="round"/>
+            <path id="apHead" d="M1055 444 L1066 436 L1067 450" fill="none" stroke="#292e26" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
       </div>
@@ -167,13 +167,13 @@ const ROWS=[
   {med:'Blood oxygen',fin:'Receivables',v:2860,feb:2424,fmt:'n',d:'▲ 18%',tone:'mark'},
 ];
 const fmt=(v,f)=>f==='%'?Math.round(v)+'%':Math.round(v).toLocaleString('en-US');
-const RING='<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.2 1.4 C 9.4 1.2, 10.9 3.6, 10.6 6.3 C 10.3 9.2, 7.8 10.8, 5.4 10.5 C 2.8 10.2, 1.2 8, 1.5 5.4 C 1.8 3.1, 3.6 1.6, 6.6 1.7" fill="none" stroke="#232428" stroke-width="1.5" stroke-linecap="round"/></svg>';
-const TICK='<svg width="13" height="12" viewBox="0 0 13 12" aria-hidden="true"><path d="M1.6 6.6 C 3 7.6, 4 8.8, 5 10.2 C 6.8 6.6, 9 3.8, 11.6 1.6" fill="none" stroke="#ff5623" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const RING='<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M6.2 1.4 C 9.4 1.2, 10.9 3.6, 10.6 6.3 C 10.3 9.2, 7.8 10.8, 5.4 10.5 C 2.8 10.2, 1.2 8, 1.5 5.4 C 1.8 3.1, 3.6 1.6, 6.6 1.7" fill="none" stroke="#292e26" stroke-width="1.5" stroke-linecap="round"/></svg>';
+const TICK='<svg width="13" height="12" viewBox="0 0 13 12" aria-hidden="true"><path d="M1.6 6.6 C 3 7.6, 4 8.8, 5 10.2 C 6.8 6.6, 9 3.8, 11.6 1.6" fill="none" stroke="#9c4e3b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 function buildCard(el,head,sub,mode,DL){DL=DL||ROWS;
   el.innerHTML=`<div class="ch">${head}</div><div class="cs">${sub}</div><div class="rule"></div>`;
   const rows=ROWS.map((r,i)=>{const row=document.createElement('div');row.className='row';row.style.top=(132+i*64)+'px';
     row.innerHTML=`<div class="lab"><span class="med">${r.med}</span><span class="fin">${r.fin}</span><div class="strike" style="width:${r.med.length*9.2}px"></div></div><div class="val"></div>`+
-      (mode==='m'?(q=>`<div class="del" style="color:${q.tone==='acc'||q.tone==='ok'?'#ff5623':q.tone==='soft'?'#4d4d50':'#232428'}">${q.d}${q.tone==='mark'?RING:q.tone==='ok'?TICK:''}</div>${q.tone==='mark'||q.tone==='ok'?`<div class="ul"${q.tone==='ok'?' style="background:#ff5623"':''}></div>`:''}`)(DL[i]):'')+
+      (mode==='m'?(q=>`<div class="del" style="color:${q.tone==='acc'||q.tone==='ok'?'#9c4e3b':q.tone==='soft'?'#666c5e':'#292e26'}">${q.d}${q.tone==='mark'?RING:q.tone==='ok'?TICK:''}</div>${q.tone==='mark'||q.tone==='ok'?`<div class="ul"${q.tone==='ok'?' style="background:#9c4e3b"':''}></div>`:''}`)(DL[i]):'')+
       (i<3?'<div class="sep"></div>':'');
     el.appendChild(row);
     const q=s=>row.querySelector(s);return{row,lab:q('.lab'),med:q('.med'),fin:q('.fin'),strike:q('.strike'),val:q('.val'),del:q('.del'),ul:q('.ul')};});

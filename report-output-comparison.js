@@ -1,7 +1,38 @@
-/* v111: synchronized report comparison and accessible, native-text page reading.
-   No window-scroll scrubbing, wheel cancellation or global animation loop. */
+/* v126: the comparison starts only after explicit click/tap/keyboard activation. */
 (() => {
   'use strict';
+  const section=document.getElementById('output-comparison');
+  if(!section)return;
+  const entry=section.querySelector('[data-comparison-entry]');
+  const preview=section.querySelector('[data-comparison-preview]');
+  const open=section.querySelector('[data-comparison-open]');
+  const hint=section.querySelector('[data-comparison-hint]');
+  let initialized=false;
+  if(!entry||!preview||!open){initialize();return;}
+  const close=document.createElement('button');
+  close.type='button';close.className='mrc-close-comparison';close.textContent='Close comparison';close.hidden=true;
+  close.setAttribute('aria-controls','mrc-interactive');entry.after(close);
+  function setOpen(active){
+    entry.classList.toggle('is-active',active);
+    section.dataset.comparisonActive=String(active);
+    preview.inert=!active;
+    if(active)preview.removeAttribute('aria-hidden');else preview.setAttribute('aria-hidden','true');
+    open.setAttribute('aria-expanded',String(active));open.hidden=active;close.hidden=!active;
+    if(hint)hint.hidden=!active;
+    if(active){
+      if(!initialized){initialize();initialized=true;}
+      section.querySelector('.mrc-viewer').focus({preventScroll:true});
+      window.dispatchEvent(new Event('resize'));
+    }else{
+      section.querySelector('.mrc-viewer').scrollTop=0;
+      open.focus({preventScroll:true});
+    }
+  }
+  open.addEventListener('click',()=>setOpen(true));
+  close.addEventListener('click',()=>setOpen(false));
+  section.dataset.comparisonActive='false';
+  function initialize(){
+
   const root = document.getElementById('output-comparison');
   if (!root) return;
   const viewer = root.querySelector('.mrc-viewer');
@@ -134,4 +165,6 @@
     pageContainer.replaceChildren();
     trigger?.focus({preventScroll: true});
   });
+
+  }
 })();

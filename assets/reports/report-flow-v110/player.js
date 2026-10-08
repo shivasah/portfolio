@@ -12,7 +12,8 @@ const reducedQuery=matchMedia('(prefers-reduced-motion: reduce)');
 let REDUCED=reducedQuery.matches;
 const el = (cls, tag='div') => { const e=document.createElement(tag); if(cls) e.className=cls; return e; };
 const img = src => { const i=new Image(); i.src=src; i.decoding='sync'; i.draggable=false; i.alt=''; return i; };
-const css = (e, o) => { for (const k in o) e.style[k] = typeof o[k]==='number' ? o[k]+'px' : o[k]; return e; };
+const UNITLESS = new Set(['opacity','zIndex','fontWeight','lineHeight','flexGrow','flexShrink','order','zoom']);
+const css = (e, o) => { for (const k in o) e.style[k] = typeof o[k]==='number' && !UNITLESS.has(k) ? o[k]+'px' : String(o[k]); return e; };
 
 /* ---------- easing ---------- */
 function bez(x1,y1,x2,y2){
@@ -405,15 +406,15 @@ function applyEnd(n){
  fx.innerHTML='';views.innerHTML='';curView=null;
  camS.z=1;camS.cx=720;camS.cy=480;applyCam();curSvg.style.transform='';
  const [id,s,[x,y]]=END[n];const v=getView(id);
- css(v,{opacity:1,transform:''});v.setScroll(s);views.appendChild(v);curView=v;
+ css(v,{opacity:'1',transform:''});v.setScroll(s);views.appendChild(v);curView=v;
  cs.x=x;cs.y=y;placeCur();if(n===7)addToast(true);
 }
 let playing=0,shown=0,started=false,visible=false,requested=1,allowMotion=false;
 let pendingReplay=false;
 function notify(state,n=requested,detail){
- parent.postMessage({type:'report-flow-state',version:113,act:n,state,...(detail?{detail}: {})},'*');
+ parent.postMessage({type:'report-flow-state',version:124,act:n,state,...(detail?{detail}: {})},'*');
 }
-function ready(){parent.postMessage({type:'report-flow-ready',version:113,acts:7},'*');}
+function ready(){parent.postMessage({type:'report-flow-ready',version:124,acts:7},'*');}
 function stop(){
  const old=RUN;old.c=true;[...old.pend].forEach(f=>f());old.pend=[];old.wake.clear();
  for(const a of document.getAnimations())a.cancel();playing=0;
@@ -481,7 +482,7 @@ function resize(){stageEl.style.transform=`scale(${screenEl.clientWidth/1440})`;
 if('ResizeObserver' in window)new ResizeObserver(resize).observe(screenEl);
 addEventListener('resize',resize);resize();
 window.ReportFlow={
- get state(){return{version:113,started,playing,shown,requested,visible,
+ get state(){return{version:124,started,playing,shown,requested,visible,
   suspended:Boolean(playing&&!canAdvance()),view:curView?curView._id:null,
   cursor:{...cs},camera:{...camS},canvasScroll:curView?curView._s:0,
   reduced:REDUCED,allowMotion};},
@@ -492,7 +493,7 @@ window.ReportFlow={
 (async()=>{
  try{
   const opening=getView('vp1');await opening.ready;
-  views.appendChild(opening);opening.style.opacity='.001';
+  views.appendChild(opening);opening.style.opacity='0';
   await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
   applyEnd(0);shown=0;started=true;$('#loading')?.remove();ready();if(visible)go(requested);
  }catch(e){console.error(e);if($('#loading'))$('#loading').textContent='The report images could not load.';notify('error');}

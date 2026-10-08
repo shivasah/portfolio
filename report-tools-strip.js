@@ -11,8 +11,8 @@ const cl=(v,a,b)=>v<a?a:v>b?b:v,lerp=(a,b,k)=>a+(b-a)*k;
 const tw=(t,s,d,f)=>(f||IN)(cl((t-s)/d,0,1));
 
 /* ---------- palette & helpers ---------- */
-const INK='#232428',SOFT='#4d4d50',MUTED='#7a7a76',PAPER='#fcfcf4',P2='#ece9e4',OR='#ff5623',LINE='rgba(35,36,40,.14)',LS='rgba(35,36,40,.24)';
-const STICKY={y:'#efcc62',b:'#f4e3a3',p:'#ffab88'};
+const INK='#292e26',SOFT='#666c5e',MUTED='#666c5e',PAPER='#f3f0e7',P2='#e4dfd2',OR='#9c4e3b',LINE='rgba(41,46,38,.14)',LS='rgba(41,46,38,.24)';
+const STICKY={y:'#e6d8b8',b:'#e6d8b8',p:'#d7decd'};
 const svg=mount.querySelector('svg'),NS='http://www.w3.org/2000/svg';
 const el=(tag,a,p)=>{const e=document.createElementNS(NS,tag);for(const k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e;};
 const txt=(p,x,y,s,o)=>{o=o||{};const e=el('text',Object.assign({x,y,'font-family':o.hand?'Cabinet Grotesk, Avenir Next, Helvetica Neue, Arial, sans-serif':'Syne, Helvetica Neue, Helvetica, Arial, sans-serif','font-size':o.size||11,fill:o.fill||INK,'font-weight':o.w||400},o.anchor?{'text-anchor':o.anchor}:{},o.tab?{'font-variant-numeric':'tabular-nums'}:{}),p);e.textContent=s;return e;};
@@ -47,7 +47,7 @@ const conn=[0,1,2].map(i=>{const x0=XS[i]+CW+12,x1=XS[i+1]-14,y=CY+CH/2;
   return{line:prep(el('path',{d:`M${x0} ${y+4} C ${x0+30} ${y-10}, ${x1-34} ${y+12}, ${x1} ${y}`,fill:'none',stroke:INK,'stroke-width':1.8,'stroke-linecap':'round'},root)),
          head:prep(el('path',{d:`M${x1-10} ${y-7} L${x1} ${y} L${x1-10} ${y+7}`,fill:'none',stroke:INK,'stroke-width':1.8,'stroke-linecap':'round','stroke-linejoin':'round'},root)),x0,x1,y};});
 function windowCard(i,title){const g=el('g',{},root);const x=XS[i];
-  P(hatch(x+7,CY+8,CW,CH,6),{stroke:'rgba(35,36,40,.22)','stroke-width':1},g);       // pencil-hatched shadow
+  P(hatch(x+7,CY+8,CW,CH,6),{stroke:'rgba(41,46,38,.22)','stroke-width':1},g);       // pencil-hatched shadow
   el('rect',{x,y:CY,width:CW,height:CH,fill:PAPER},g);
   P(rr(x,CY,CW,CH,1.2),{'stroke-width':1.5},g);
   P(rl(x+2,CY+28,x+CW-2,CY+28,0.8),{stroke:LS},g);
@@ -65,7 +65,7 @@ function bars(g,x,base,list,bw,gap){return list.map((h,k)=>{const id='rts110-cb'
 const Q=XS[0],qRows=[['Income',11942],['Cost of goods sold',7404],['Gross profit',4538],['Expenses',3120],['Net income',1418]];
 const qG=el('g',{},cards[0].g);
 H(qG,Q+18,CY+54,'Profit and Loss',{size:17});H(qG,Q+18,CY+71,'Grasshopper Landscapes · March 2026',{size:10.5,fill:MUTED});
-const qSel=el('g',{opacity:0},qG);P(hatch(Q+12,CY+80,CW-24,104,7),{stroke:'rgba(255,86,35,.45)','stroke-width':1},qSel);P(rr(Q+11,CY+79,CW-22,106,1),{stroke:OR,'stroke-width':1.5},qSel);
+const qSel=el('g',{opacity:0},qG);P(hatch(Q+12,CY+80,CW-24,104,7),{stroke:'rgba(156,78,59,.45)','stroke-width':1},qSel);P(rr(Q+11,CY+79,CW-22,106,1),{stroke:OR,'stroke-width':1.5},qSel);
 const qR=qRows.map((r,k)=>{const y=CY+97+k*20;const row=el('g',{},qG);const bold=k===2||k===4;
   H(row,Q+18,y,r[0],{size:13,fill:bold?INK:SOFT});const v=H(row,Q+CW-18,y,'',{size:13,anchor:'end',fill:bold?INK:SOFT});
   if(k<4)P(rl(Q+18,y+6,Q+CW-18,y+6,0.6),{stroke:LINE,'stroke-width':1},row);return{row,v,val:r[1]};});
@@ -75,7 +75,7 @@ const qBtn=el('g',{opacity:0},qG);el('rect',{x:Q+CW-90,y:CY+38,width:74,height:2
 const E=XS[1],gx=E+14,gy=CY+38,colW=[22,72,50,48,46],rowH=18,nR=8;
 const eG=el('g',{},cards[1].g);
 let cx=gx;const colX=colW.map(w=>{const x=cx;cx+=w;return x;});const gw=cx-gx;
-P(hatch(gx,gy,gw,rowH,5),{stroke:'rgba(35,36,40,.12)','stroke-width':1},eG);
+P(hatch(gx,gy,gw,rowH,5),{stroke:'rgba(41,46,38,.12)','stroke-width':1},eG);
 let gd='';for(let r=0;r<=nR;r++)gd+=rl(gx,gy+r*rowH,gx+gw,gy+r*rowH,0.5);colX.concat([gx+gw]).forEach(x=>gd+=rl(x,gy,x,gy+nR*rowH,0.5));
 P(gd,{stroke:LS,'stroke-width':1},eG);
 ['','A','B','C','D'].forEach((h,k)=>H(eG,colX[k]+colW[k]/2,gy+13,h,{size:10.5,fill:MUTED,anchor:'middle'}));
@@ -86,7 +86,7 @@ const eCells=qRows.map((r,k)=>{const y=gy+(k+2)*rowH+13;
   const fix=H(eG,colX[2]+colW[2]-4,y,r[1].toLocaleString('en-US'),{size:11,anchor:'end',fill:k===2||k===4?INK:SOFT});
   return{lab,raw,fix};});
 const eHead=H(eG,colX[1]+4,gy+rowH+13,'March',{size:11.5});
-const eSweep=el('g',{opacity:0},eG);P(hatch(colX[2]+1,gy+rowH*2+1,colW[2]-2,rowH*5-2,6),{stroke:'rgba(255,86,35,.45)','stroke-width':1},eSweep);P(rr(colX[2],gy+rowH*2,colW[2],rowH*5,0.8),{stroke:OR,'stroke-width':1.5},eSweep);
+const eSweep=el('g',{opacity:0},eG);P(hatch(colX[2]+1,gy+rowH*2+1,colW[2]-2,rowH*5-2,6),{stroke:'rgba(156,78,59,.45)','stroke-width':1},eSweep);P(rr(colX[2],gy+rowH*2,colW[2],rowH*5,0.8),{stroke:OR,'stroke-width':1.5},eSweep);
 const chG=el('g',{},eG);const chX=colX[3]+12,chB=gy+nR*rowH-8;
 const chBg=el('g',{opacity:0},chG);el('rect',{x:colX[3]+4,y:chB-56,width:94,height:62,fill:'#fff'},chBg);P(rr(colX[3]+4,chB-56,94,62,0.8),{},chBg);
 const chBars=bars(chG,chX,chB,[42,30,20,14,8],11,5);
@@ -94,12 +94,12 @@ const chBars=bars(chG,chX,chB,[42,30,20,14,8],11,5);
 /* -- 03 Word -- */
 const Wd=XS[2],pX=Wd+46,pY=CY+38,pW=CW-92,pH=CH-46;
 const wG=el('g',{},cards[2].g);
-P(hatch(Wd+12,CY+31,CW-24,CH-34,9),{stroke:'rgba(35,36,40,.08)','stroke-width':1},wG);
+P(hatch(Wd+12,CY+31,CW-24,CH-34,9),{stroke:'rgba(41,46,38,.08)','stroke-width':1},wG);
 el('rect',{x:pX,y:pY,width:pW,height:pH+4,fill:'#fff'},wG);P(rr(pX,pY,pW,pH+4,0.8),{stroke:LS},wG);
 const wTitle=H(wG,pX+14,pY+21,'March report',{size:14});
 const wChart=el('g',{opacity:0},wG);P(rr(pX+14,pY+29,pW-28,52,0.7),{stroke:LINE},wChart);
 const wBars=bars(wChart,pX+24,pY+75,[42,30,20,14,8],14,8);
-const wLines=[pW-28,pW-40,pW-28,pW-70,pW-34,pW-90].map((w,k)=>{const p=prep(P(rl(pX+14,pY+94+k*9,pX+14+w,pY+94+k*9,0.7).split(' M')[0],{stroke:'rgba(35,36,40,.6)','stroke-width':1.6},wG));return{w,p};});
+const wLines=[pW-28,pW-40,pW-28,pW-70,pW-34,pW-90].map((w,k)=>{const p=prep(P(rl(pX+14,pY+94+k*9,pX+14+w,pY+94+k*9,0.7).split(' M')[0],{stroke:'rgba(41,46,38,.6)','stroke-width':1.6},wG));return{w,p};});
 const wCaret=el('rect',{x:pX+14,y:pY+88,width:1.5,height:11,fill:INK,opacity:0},wG);
 const wNote=txt(cards[2].g,Wd+CW-8,CY+CH-6,'',{hand:1,size:15,anchor:'end',fill:SOFT});
 
@@ -107,7 +107,7 @@ const wNote=txt(cards[2].g,Wd+CW-8,CY+CH-6,'',{hand:1,size:15,anchor:'end',fill:
 const M=XS[3];const mG=el('g',{},cards[3].g);
 const mBody=el('g',{},mG);
 [['To','client@grasshopper.co'],['Subject','March management report']].forEach((r,k)=>{const y=CY+53+k*25;H(mBody,M+16,y,r[0],{size:12,fill:MUTED});H(mBody,M+72,y,r[1],{size:12.5});P(rl(M+16,y+8,M+CW-16,y+8,0.6),{stroke:LS,'stroke-width':1},mBody);});
-[150,190,120].forEach((w,k)=>P(rl(M+16,CY+114+k*11,M+16+w,CY+114+k*11,0.7).split(' M')[0],{stroke:'rgba(35,36,40,.4)','stroke-width':1.6},mBody));
+[150,190,120].forEach((w,k)=>P(rl(M+16,CY+114+k*11,M+16+w,CY+114+k*11,0.7).split(' M')[0],{stroke:'rgba(41,46,38,.4)','stroke-width':1.6},mBody));
 const mAtt=el('g',{opacity:0},mBody);el('rect',{x:M+16,y:CY+146,width:156,height:28,fill:PAPER},mAtt);P(rr(M+16,CY+146,156,28,0.8),{},mAtt);
 P(rr(M+24,CY+152,13,16,0.5)+rl(M+27,CY+158,M+34,CY+158,0.3)+rl(M+27,CY+162,M+33,CY+162,0.3),{'stroke-width':1},mAtt);
 H(mAtt,M+44,CY+165,'March report.docx',{size:12});
@@ -121,7 +121,7 @@ const trail=prep(el('path',{d:`M${M+CW-50} ${CY+150} C ${M+CW+10} ${CY+120}, ${M
 function slip(w,h,inner){const g=el('g',{opacity:0},root);el('rect',{x:-w/2,y:-h/2,width:w,height:h,fill:'#fff'},g);P(rr(-w/2,-h/2,w,h,0.7),{},g);inner(g);return g;}
 const fly1=slip(54,38,g=>[0,1,2,3].forEach(k=>P(rl(-18,-10+k*7,k===2?6:12,-10+k*7,0.5).split(' M')[0],{'stroke-width':1.5},g)));
 const fly2=slip(60,42,g=>[18,12,8,5].forEach((h,k)=>P(hatch(-20+k*11,12-h,7,h,2.5)+rr(-20+k*11,12-h,7,h,0.3),{stroke:k===3?OR:INK,'stroke-width':1},g)));
-const fly3=slip(42,54,g=>{P(hatch(-13,-19,26,12,3),{stroke:'rgba(35,36,40,.35)','stroke-width':1},g);[0,1,2,3].forEach(k=>P(rl(-13,2+k*6,k===3?3:13,2+k*6,0.4).split(' M')[0],{stroke:'rgba(35,36,40,.6)','stroke-width':1.5},g));});
+const fly3=slip(42,54,g=>{P(hatch(-13,-19,26,12,3),{stroke:'rgba(41,46,38,.35)','stroke-width':1},g);[0,1,2,3].forEach(k=>P(rl(-13,2+k*6,k===3?3:13,2+k*6,0.4).split(' M')[0],{stroke:'rgba(41,46,38,.6)','stroke-width':1.5},g));});
 function along(g,c,k,lift){const x=lerp(c.x0-10,c.x1+16,k),y=c.y-Math.sin(k*Math.PI)*lift;g.setAttribute('transform',`translate(${x.toFixed(1)},${y.toFixed(1)}) rotate(${(Math.sin(k*Math.PI)*-6).toFixed(1)})`);op(g,k>0&&k<1?Math.min(1,k*8,(1-k)*8):0);}
 const growBars=(list,k0,t)=>list.forEach((b,k)=>{const h=b.h*tw(t,k0+k*0.08,0.5);b.r.setAttribute('y',(b.base-h-2).toFixed(1));b.r.setAttribute('height',(h>0.5?h+4:0).toFixed(1));});
 

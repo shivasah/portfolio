@@ -8,10 +8,10 @@
 .site-header--floating .site-header__combo-pill,
 .site-header[data-theme="dark"] .site-header__combo-pill,
 .site-header[data-theme="light"] .site-header__combo-pill {
-  background: rgba(252,252,244,.96) !important;
-  border: 1px solid rgba(35,36,40,.12) !important;
-  box-shadow: 0 8px 28px rgba(35,36,40,.10) !important;
-  color: #232428 !important;
+  background: rgba(243,240,231,.96) !important;
+  border: 1px solid rgba(41,46,38,.12) !important;
+  box-shadow: 0 8px 28px rgba(41,46,38,.10) !important;
+  color: #292e26 !important;
 }
 
 /* The signature is part of the outer pill, never a second/nested pill. */
@@ -25,7 +25,7 @@
   box-shadow: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  color: #232428 !important;
+  color: #292e26 !important;
   overflow: visible !important;
 }
 
@@ -47,16 +47,16 @@
 .site-header--floating .site-menu-trigger,
 .site-header[data-theme="dark"] .site-menu-trigger,
 .site-header[data-theme="light"] .site-menu-trigger {
-  background: #ff5623 !important;
-  color: #232428 !important;
+  background: #9c4e3b !important;
+  color: #292e26 !important;
   border: 0 !important;
   box-shadow: none !important;
 }
 .site-header--floating .site-menu-trigger:hover,
 .site-header[data-theme="dark"] .site-menu-trigger:hover,
 .site-header[data-theme="light"] .site-menu-trigger:hover {
-  background: #ff5623 !important;
-  color: #232428 !important;
+  background: #9c4e3b !important;
+  color: #292e26 !important;
 }
 
 @media (max-width:620px) {

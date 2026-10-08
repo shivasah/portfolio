@@ -73,3 +73,95 @@ html body.page-case-reports-v90 #discovery .mr-research-sample--sessions>article
 @media(min-width:621px) and (min-height:551px) {
  html body.page-case-agent .agent-cover-fixed.agent-laptop-sequence .agent-hero-v72__copy{transform:translate(-50%,-74%)!important}
 }
+
+/* v121: uncropped case-study artwork and private-case-study status. */
+body.page-home #work .flip-card__link{
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+}
+body.page-home #work .flip-card--agent .flip-card__link,
+body.page-home #work .flip-card--agent .flip-card__media{background:#e4dfd2}
+body.page-home #work .flip-card--reports .flip-card__link,
+body.page-home #work .flip-card--reports .flip-card__media{background:#e4dfd2}
+body.page-home #work .flip-card--domain .flip-card__link,
+body.page-home #work .flip-card--domain .flip-card__media{background:#e4dfd2}
+body.page-home #work .flip-card__media{
+  display:flex;align-items:center;justify-content:flex-end;
+  padding:clamp(18px,2.5vw,30px) clamp(14px,2vw,24px) clamp(18px,2.5vw,30px) 0;
+  overflow:hidden;
+}
+body.page-home #work .flip-card__media img,
+body.page-home #work .flip-card--domain .flip-card__media img{
+  position:relative;inset:auto;width:100%;height:100%;max-width:100%;max-height:100%;
+  object-fit:contain;object-position:right center;
+}
+body.page-home #work .flip-card__pending{
+  display:inline-flex;align-items:center;gap:8px;width:fit-content;
+  margin-top:auto;padding:18px 0 4px;
+  color:rgba(41,46,38,.62);
+  font:400 14px/1.45 var(--font-body);
+  letter-spacing:0;
+}
+body.page-home #work .flip-card__pending svg{width:17px;height:17px;flex:none}
+.site-menu__soon.site-menu__soon--locked{
+  gap:7px;margin-top:7px;padding:0;border:0;border-radius:0;
+  color:currentColor;opacity:.72;
+  font:400 12px/1.35 var(--font-body);
+}
+.site-menu__soon.site-menu__soon--locked svg{width:14px;height:14px;flex:none}
+@media(max-width:620px){
+  body.page-home #work .flip-card__link{grid-template-columns:1fr;grid-template-rows:190px auto}
+  body.page-home #work .flip-card__media{grid-row:1;padding:14px 18px 4px;justify-content:center}
+  body.page-home #work .flip-card__media img,
+  body.page-home #work .flip-card--domain .flip-card__media img{object-position:center center}
+  body.page-home #work .flip-card__copy{grid-row:2}
+  body.page-home #work .flip-card__pending{margin-top:8px;padding-top:4px;font-size:13px}
+}
+@media(max-width:370px){
+  body.page-home #work .flip-card__link{grid-template-rows:160px auto}
+}
+@media(max-height:500px) and (min-aspect-ratio:1/1){
+  body.page-home #work .flip-card__link{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);grid-template-rows:1fr}
+  body.page-home #work .flip-card__media{grid-row:1;grid-column:2;padding:10px 12px 10px 0;justify-content:flex-end}
+  body.page-home #work .flip-card__copy{grid-row:1;grid-column:1}
+}
+body.page-home #work .flip-card--domain .flip-card__link--locked .flip-card__media img{filter:none}
+
+/* v122: enlarge homepage case-study artwork while preserving the right-side composition. */
+@media (min-width:621px) and (min-height:501px){
+  body.page-home #work .flip-card__link{
+    grid-template-columns:minmax(0,.80fr) minmax(0,1.20fr);
+  }
+  body.page-home #work .flip-card__media{
+    padding:4px 0 4px 0;
+    justify-content:flex-end;
+  }
+  body.page-home #work .flip-card__media img,
+  body.page-home #work .flip-card--domain .flip-card__media img{
+    width:116%;
+    height:auto;
+    max-width:none;
+    max-height:none;
+    flex:none;
+    object-fit:contain;
+    object-position:right center;
+    transform-origin:right center;
+  }
+  body.page-home #work .flip-card--agent .flip-card__media img{width:119%}
+  body.page-home #work .flip-card--reports .flip-card__media img{width:117%}
+  body.page-home #work .flip-card--domain .flip-card__media img{width:116%}
+}
+@media (max-width:620px){
+  body.page-home #work .flip-card__link{grid-template-rows:208px auto}
+  body.page-home #work .flip-card__media{padding:0;overflow:hidden}
+  body.page-home #work .flip-card__media img,
+  body.page-home #work .flip-card--domain .flip-card__media img{
+    width:112%;height:auto;max-width:none;max-height:none;flex:none;
+    object-position:center center;
+  }
+  body.page-home #work .flip-card--agent .flip-card__media img{width:115%}
+  body.page-home #work .flip-card--reports .flip-card__media img{width:113%}
+  body.page-home #work .flip-card--domain .flip-card__media img{width:112%}
+}
+@media(max-width:370px){
+  body.page-home #work .flip-card__link{grid-template-rows:178px auto}
+}

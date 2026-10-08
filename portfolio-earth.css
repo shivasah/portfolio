@@ -1,0 +1,195 @@
+/* v125: limestone, olive and burnt clay.
+   Colour-only theme. Typography, geometry, animation timing and product UI are unchanged. */
+:root {
+  --earth-limestone:#f3f0e7;
+  --earth-stone:#e4dfd2;
+  --earth-ink:#292e26;
+  --earth-secondary:#666c5e;
+  --earth-moss:#4f6248;
+  --earth-clay:#9c4e3b;
+  --earth-forest:#252f29;
+  --earth-sage:#d7decd;
+  --earth-oat:#e6d8b8;
+  --earth-on-dark:#f3f0e7;
+  --earth-on-dark-muted:#c5cbbf;
+  --paper:var(--earth-limestone);
+  --paper-2:var(--earth-stone);
+  --paper-3:var(--earth-oat);
+  --ink:var(--earth-ink);
+  --ink-soft:var(--earth-secondary);
+  --muted:var(--earth-secondary);
+  --orange:var(--earth-clay); /* compatibility for existing editorial accents */
+  --orange-soft:var(--earth-oat);
+  --accent:var(--earth-clay);
+  --action:var(--earth-moss);
+  --yellow:var(--earth-oat);
+  --lavender:var(--earth-sage);
+  --lavender-2:var(--earth-stone);
+  --purple:var(--earth-forest);
+  --purple-2:var(--earth-moss);
+  --line:rgba(41,46,38,.22);
+  --line-strong:rgba(41,46,38,.34);
+}
+html, html body { background-color:var(--earth-limestone);color:var(--earth-ink); }
+::selection {background:var(--earth-sage);color:var(--earth-ink)}
+html body :is(a,button,input,select,textarea,[tabindex]):focus-visible {outline-color:var(--earth-moss)}
+
+/* Stable warm surfaces, including backgrounds previously fixed to black. */
+html body #main > :is(.section--paper,.section--sand),
+html body.page-home #main > :is(#top,#work) {background-color:var(--earth-limestone)!important}
+html body #main > .section--sand {background-color:var(--earth-stone)!important}
+html body #main > :is(.section--ink,.section--black,.screen-flow,.agent-install-flow),
+html body #main > :is(#decision-background,#architecture-shift),
+html body.page-case-reports-v90 #solution {
+  background-color:var(--earth-forest)!important;
+  color:var(--earth-on-dark)!important;
+}
+html body :is(.section--ink,.screen-flow,.agent-install-flow,#architecture-shift) {
+  --orange:var(--earth-oat);
+}
+html body :is(.section--ink,.screen-flow,.agent-install-flow,#architecture-shift) :is(.eyebrow--light,.section-label,.flow-step__count) {color:var(--earth-on-dark-muted)}
+/* A decision card may live on a dark section, but its own paper remains light. */
+html body :is(.decision-fixed,.decision-card-wide-v70,.decision-card-wide-v71) {
+  --orange:var(--earth-clay);
+  --ink-soft:var(--earth-secondary);
+  background-color:var(--earth-limestone)!important;color:var(--earth-ink)!important;border-color:rgba(41,46,38,.22)!important;
+}
+
+/* The portrait keeps its photographic backdrop; no person/photo recolouring. */
+html body.page-home #main > #intro.intro-portrait-section {background-color:#121212!important;color:var(--earth-on-dark)!important}
+html body.page-home #intro .intro-portrait__quote span {color:var(--earth-on-dark-muted)}
+html body.page-home :is(#writing,#vibes) {--paper:var(--earth-limestone);--paper-2:var(--earth-stone);--ink:var(--earth-ink);--ink-soft:var(--earth-secondary);--orange:var(--earth-clay);--shelf-bg:var(--earth-stone);--tools-bg:var(--earth-stone)}
+html body.page-home #beyond {background-color:var(--earth-limestone)!important}
+html body.page-home .manifesto {background-color:var(--earth-forest)!important;color:var(--earth-on-dark)!important}
+
+/* Full-size source images retain their product colours; only outer backdrops change. */
+html body.page-home #work :is(.flip-card--agent,.flip-card--reports,.flip-card--domain) :is(.flip-card__link,.flip-card__media) {
+  background-color:var(--earth-stone)!important;
+}
+html body.page-home #work .flip-card__link {color:var(--earth-ink);border-color:rgba(41,46,38,.19)}
+html body.page-home #work :is(.flip-card__meta,.flip-card__description,.flip-card__focus,.flip-card__pending) {color:var(--earth-secondary)}
+html body.page-home #work .flip-card__cta {color:var(--earth-moss)}
+html body.page-home #work .flip-card__link:hover .flip-card__cta {color:var(--earth-clay)}
+
+/* Moss = actions. Clay = restrained editorial emphasis. */
+html body :is(.site-menu-trigger,.site-header[data-theme] .site-menu-trigger) {
+  background:var(--earth-moss)!important;color:var(--earth-on-dark)!important;border-color:transparent!important;
+}
+html body :is(.site-menu-trigger,.site-header[data-theme] .site-menu-trigger):hover {background:var(--earth-forest)!important;color:var(--earth-on-dark)!important}
+html body:not(.menu-open) .site-header__combo-pill {background:rgba(243,240,231,.94)!important;border-color:rgba(41,46,38,.18)!important;color:var(--earth-ink)!important}
+html body:not(.menu-open) .site-header :is(.header-logo,.header-lastoria-v70) {color:var(--earth-ink)!important}
+html body :is(.tools-btn:not(.ghost),.filters button[aria-pressed="true"],.w-detail .tools-btn:not(.ghost)) {background:var(--earth-moss)!important;border-color:var(--earth-moss)!important;color:var(--earth-on-dark)!important}
+html body :is(.tools-btn:not(.ghost),.w-detail .tools-btn:not(.ghost)):hover {background:var(--earth-forest)!important;border-color:var(--earth-forest)!important}
+html body :is(.tools-btn.ghost,.hero-resume,.mr-landing__cta,.tool-dialog__close) {border-color:var(--earth-moss)!important;color:var(--earth-moss)!important}
+html body :is(.tools-btn.ghost,.hero-resume,.mr-landing__cta,.tool-dialog__close):hover {background:var(--earth-moss)!important;border-color:var(--earth-moss)!important;color:var(--earth-on-dark)!important}
+html body .mr-carousel-controls > button {border-color:var(--earth-moss);color:var(--earth-moss)}
+html body .mr-carousel-dots button[aria-current=true] {background:var(--earth-moss)!important;border-color:var(--earth-moss)!important;color:var(--earth-on-dark)!important}
+
+/* Menu: keep the same burger/close position and mechanics on a forest surface. */
+html body #site-menu {
+  --ink:var(--earth-on-dark);--ink-soft:var(--earth-on-dark-muted);
+  --orange:var(--earth-sage);--line:rgba(243,240,231,.22);--line-strong:rgba(243,240,231,.42);
+  background:var(--earth-forest)!important;color:var(--earth-on-dark)!important;
+}
+html body #site-menu :is(.site-menu__label,.site-menu__signature-v70,.site-menu__page,.site-menu__project,.site-menu__eyebrow,.site-menu__works-toggle) {color:var(--earth-on-dark)!important}
+html body #site-menu :is(.site-menu__page,.site-menu__project):is(:hover,:focus-visible,[aria-current]) {color:var(--earth-sage)!important}
+html body #site-menu :is(.site-menu__project em,.site-menu__soon) {color:var(--earth-on-dark-muted)!important}
+html body #site-menu :is(a,button):focus-visible {outline-color:var(--earth-sage)!important}
+html body.menu-open .site-header .site-menu-trigger {background:var(--earth-sage)!important;color:var(--earth-forest)!important}
+html body #site-menu .site-menu__scroll {scrollbar-color:var(--earth-sage) transparent}
+
+/* The note family now shares a limited set of material colours. */
+html body :is(.pitch-metric--yellow,.agent-role-note--yellow,.agent-zfi-note--yellow,.persona-job-note--one,.mr-task-note--yellow,.mr-sticky-v110--yellow,.design-influence-note--yellow) {
+  background:var(--earth-oat)!important;color:var(--earth-ink)!important;
+}
+html body :is(.pitch-metric--orange,.agent-role-note--orange,.persona-job-note--two,.mr-task-note--peach,.mr-sticky-v110--peach,.design-influence-note--orange) {
+  background:var(--earth-sage)!important;color:var(--earth-ink)!important;
+}
+html body :is(.pitch-metric--paper,.agent-role-note--paper,.persona-job-note--three,.mr-task-note--paper,.mr-sticky-v110--paper,.design-influence-note--paper) {
+  background:var(--earth-stone)!important;color:var(--earth-ink)!important;
+}
+html body :is(.pitch-metric--ink,.agent-role-note--ink,.design-influence-note--ink) {
+  background:var(--earth-forest)!important;color:var(--earth-on-dark)!important;
+}
+html body :is(.pitch-metric--ink,.agent-role-note--ink,.design-influence-note--ink) :is(strong,b,p,small,span) {color:var(--earth-on-dark)!important}
+html body :is(.agent-learning-note--1,.agent-learning-note--3) {background:var(--earth-oat)!important;color:var(--earth-ink)!important}
+html body :is(.agent-learning-note--2,.agent-learning-note--4) {background:var(--earth-sage)!important;color:var(--earth-ink)!important}
+html body #principles .mr-principle-note--live {background:var(--earth-sage)!important;color:var(--earth-ink)!important}
+html body #principles .mr-principle-note--author {background:var(--earth-oat)!important;color:var(--earth-ink)!important}
+html body #principles .mr-principle-label {color:var(--earth-secondary)}
+html body .agent-learning-card__hint {border-color:rgba(41,46,38,.38)!important;color:var(--earth-ink)}
+html body .mr-northstar .mr-journey-paper {--ink-soft:var(--earth-secondary);color:var(--earth-ink)}
+html body .mr-northstar .mr-journey-paper :is(strong,li) {color:var(--earth-ink)}
+html body #lifecycle .mr-northstar {--ns-accent:var(--earth-oat)}
+
+/* Footer: consistent forest surface; interactions stay legible on dark. */
+html body #contact.site-footer--v108 {
+  --orange:var(--earth-sage);background:var(--earth-forest)!important;color:var(--earth-on-dark)!important;
+}
+html body #contact.site-footer--v108 :is(.site-footer__title,.footer-next__link strong,.footer-socials a,.back-top) {color:var(--earth-on-dark)!important}
+html body #contact.site-footer--v108 :is(.site-footer__note,.eyebrow--light,.footer-next__link>span,.footer-home) {color:var(--earth-on-dark-muted)!important}
+html body #contact.site-footer--v108 .footer-next__link:hover strong {color:var(--earth-sage)!important}
+html body #contact.site-footer--v108 .footer-socials > a:hover {background:var(--earth-sage)!important;color:var(--earth-forest)!important}
+html body #contact.site-footer--v108 :is(.footer-email__copy,.footer-email__address):hover {background:var(--earth-sage)!important;color:var(--earth-forest)!important}
+html body #contact.site-footer--v108 :is(a,button):focus-visible {outline-color:var(--earth-sage)!important}
+
+/* Progress, modal surrounds and decorative pointer. Do not recolour product UI. */
+html body .section-progress__drawer {background:rgba(243,240,231,.97)!important;color:var(--earth-ink)!important;border-color:rgba(41,46,38,.2)!important}
+html body .section-progress__drawer-item[aria-current="true"] {background:var(--earth-sage)!important;color:var(--earth-ink)!important}
+html body .section-progress__drawer-item:hover {background:var(--earth-stone)!important;color:var(--earth-ink)!important}
+html body .tool-dialog {background:var(--earth-limestone)!important;color:var(--earth-ink)!important}
+html body .tool-dialog::backdrop {background:rgba(37,47,41,.72)}
+html body .cursor-duotone-v110 .cursor-duotone__grey {stroke:var(--earth-secondary)}
+html body .cursor-duotone-v110 .cursor-duotone__white {stroke:var(--earth-limestone)}
+html body .cursor-duotone-v110 .cursor-duotone__dot-grey {fill:var(--earth-secondary)}
+html body .cursor-duotone-v110 .cursor-duotone__dot-orange {fill:var(--earth-clay)}
+html body .mr-report-feedback button:hover {background:var(--earth-moss)!important;border-color:var(--earth-moss)!important;color:var(--earth-on-dark)!important}
+html body :is(.mr-report-progress,.install-flow-progress) button[aria-current] {--orange:var(--earth-sage)}
+
+/* Warm starting/reveal surface; masks stay true white so the signature still draws. */
+html.js:not(.is-ready) body:is(.page-home,.page-case-agent,.page-case-reports),
+html body .page-wipe.is-lastoria {background:var(--earth-forest)!important}
+html body .page-wipe.is-lastoria .lastoria-ink {fill:var(--earth-sage)!important}
+/* Win the existing per-page footer selector without changing footer geometry. */
+html body:is(.page-home,.page-case-agent,.page-case-reports) #contact.site-footer.site-footer--v108 {
+  background:var(--earth-forest)!important;color:var(--earth-on-dark)!important;
+}
+html body.menu-open .site-header.site-header--floating .site-header__combo-pill {
+  background:transparent!important;border-color:transparent!important;box-shadow:none!important;
+}
+html body #site-menu img.site-menu__signature-v70 {background:transparent!important}
+/* Exact anchors supersede legacy per-chapter black/orange surface declarations. */
+:root {--green:var(--earth-moss);--red:var(--earth-clay)}
+html body.page-home #main > #beyond {background:var(--earth-limestone)!important}
+html body.page-home #main > #manifesto,
+html body.page-home #main > #manifesto .manifesto__frame {
+  --orange:var(--earth-sage);background:var(--earth-forest)!important;color:var(--earth-on-dark)!important;
+}
+html body.page-home #manifesto :is(.manifesto__copy,.manifesto__word) {color:var(--earth-on-dark)!important}
+html body.page-home #manifesto .manifesto__word.is-accent {color:var(--earth-sage)!important}
+html body.page-case-agent #main > section#why-it-mattered.section--ink,
+html body.page-case-agent #main > section#direction.section--ink,
+html body.page-case-agent #main > section#decision-background.section--ink,
+html body.page-case-agent #main > section#solution.agent-install-flow,
+html body.page-case-agent #main > section#solution.agent-install-flow .agent-install-flow__sticky,
+html body.page-case-agent #main > section#architecture-shift.section--ink,
+html body.page-case-agent #main > section#architecture-shift > .architecture-shift-v70__grid,
+html body.page-case-agent #main > section#architecture-shift .architecture-shift-v70__copy,
+html body.page-case-agent #main > section#architecture-shift .architecture-shift-v70__media {
+  background:var(--earth-forest)!important;color:var(--earth-on-dark)!important;
+}
+/* Higher-contrast hover on the dark demo stage; native UI controls are untouched. */
+html body #solution :is(.agent-install-flow__controls,.mr-report-controls) button:hover {
+  background:var(--earth-sage);border-color:var(--earth-sage);color:var(--earth-forest);
+}
+/* Secondary text on darker paper needs moss rather than the lighter grey-olive. */
+html body #main > .section--sand {--ink-soft:var(--earth-moss);--muted:var(--earth-moss)}
+html body.page-home :is(#writing,#vibes) {--ink-soft:var(--earth-moss);--muted:var(--earth-moss)}
+html body.page-home #work :is(.flip-card__meta,.flip-card__focus,.flip-card__pending) {color:var(--earth-moss);opacity:1}
+html body.page-home #work .flip-card__description {color:var(--earth-ink)}
+html body #principles .mr-principle-label {color:var(--earth-moss)}
+html body :is(.pitch-metric--yellow,.pitch-metric--orange,.pitch-metric--paper) > span {color:var(--earth-moss)!important;opacity:1!important}
+html body :is(.agent-role-note--yellow,.agent-role-note--orange,.agent-role-note--paper) > small {color:var(--earth-moss)!important;opacity:1!important}
+/* The floating pill stays light over dark chapters, so its image logo stays dark. */
+html body .site-header.site-header--floating .header-lastoria-v70,
+html body #site-menu img.site-menu__signature-v70 {filter:none!important}

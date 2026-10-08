@@ -53,6 +53,7 @@
       path.style.visibility = 'visible';
     });
     preloader?.classList.add('is-written');
+    root.classList.remove('preloader-entering','reel-incoming');
     root.classList.add('is-ready');
     window.setTimeout(() => document.dispatchEvent(new Event('portfolio:ready')), 0);
     window.setTimeout(() => body.classList.add('hero-loaded'), reduceMotion ? 0 : 80);
@@ -173,15 +174,18 @@
         ['work', 'Work'],
         ['writing', 'Notes & essays'],
         ['vibes', 'Experiments'],
-        ['manifesto', 'Principle']
       ]
     : body.classList.contains('page-case-agent')
       ? [
-          ['top', 'Agent Management'], ['pitch', 'At a glance'], ['overview', 'From ambiguity to an operable system'], ['background', 'Understand agents through a city'],
-          ['problem', 'It takes weeks'], ['user', 'Admin Adnan'], ['discovery', 'Discovery research'], ['cognitive-load', 'Where the workflow became difficult to follow'],
-          ['direction', 'ZFI simplified one install'], ['agent-lifecycle', 'Focus on the lifecycle moments with the most leverage'], ['technical-landscape', 'From many installs to one orchestrator'],
-          ['design', 'Brainstorming'], ['layout', 'Layout design'], ['validation', 'Low-fidelity validation'], ['solution', 'The final experience'],
-          ['impact', 'Impact'], ['roadmap', 'Release scope and trade-offs'], ['architecture-shift', 'A parallel platform experience'], ['learning', 'Four lessons that stayed with me']
+          ['top', 'Agent Management'],
+          ['pitch', 'At a glance'],
+          ['background', 'Context and problem'],
+          ['discovery', 'Research and synthesis'],
+          ['direction', 'Direction and lifecycle'],
+          ['design', 'Designing the workflow'],
+          ['solution', 'The final experience'],
+          ['roadmap', 'Release and platform trade-offs'],
+          ['learning', 'Learnings']
         ]
       : body.classList.contains('page-case-domain')
         ? [
@@ -191,8 +195,10 @@
             ['feedback', 'Feedback'], ['ongoing', 'Ongoing']
           ]
         : body.classList.contains('page-case-reports')
-          ? [['top','Top'],['problem','Legacy'],['needs','Needs'],['lifecycle','North star'],
-             ['design','Design'],['experience','Experience'],['release','Release']]
+          ? [['top','Management Reports'],['pitch','At a glance'],['background','Context and problem'],
+             ['discovery','Continuous research'],['lifecycle','Sequence the whole experience'],
+             ['design','Designing the report editor'],['solution','The final experience'],
+             ['output-comparison','Old and new report output'],['learning','Learnings']]
           : [];
 
   let sectionProgress = null;
@@ -220,41 +226,35 @@
     sectionProgress.appendChild(fragment);
 
     const progressPreviewMaps = body.classList.contains('page-case-agent') ? {
-      top: { title: 'Agent Management', subtitle: 'Case' },
+      top: { title: 'Agent Management', subtitle: 'Case study' },
       pitch: { title: 'At a glance', subtitle: 'Overview' },
-      overview: { title: 'From ambiguity to an operable system', subtitle: 'Role' },
-      background: { title: 'Understand agent management through a city', subtitle: 'Analogy' },
-      problem: { title: '“It takes weeks.”', subtitle: 'Scale' },
-      user: { title: 'Admin Adnan', subtitle: 'User persona' },
-      discovery: { title: 'Discovery research', subtitle: 'Research' },
-      'cognitive-load': { title: 'Where the workflow became difficult to follow', subtitle: 'Synthesis' },
-      direction: { title: 'ZFI simplified one install', subtitle: 'Precedent' },
-      'agent-lifecycle': { title: 'Focus on the lifecycle moments with the most leverage', subtitle: 'Priorities' },
-      'technical-landscape': { title: 'From many installs to one orchestrator', subtitle: 'Architecture' },
-      design: { title: 'Brainstorming', subtitle: 'Ideation' },
-      layout: { title: 'Layout design', subtitle: 'Structure' },
-      validation: { title: 'Low-fidelity validation', subtitle: 'Testing' },
-      solution: { title: 'The final experience', subtitle: 'Workflow' },
-      impact: { title: 'Impact', subtitle: 'Outcomes' },
-      roadmap: { title: 'Release scope and trade-offs', subtitle: 'Strategy' },
-      'architecture-shift': { title: 'A parallel platform experience', subtitle: 'Platform' },
-      learning: { title: 'Four lessons that stayed with me', subtitle: 'Learnings' }
+      background: { title: 'Context and problem', subtitle: 'Analogy, scale and user' },
+      discovery: { title: 'Research and synthesis', subtitle: 'Evidence and hierarchy change' },
+      direction: { title: 'Direction and lifecycle', subtitle: 'ZFI, priorities and architecture' },
+      design: { title: 'Designing the workflow', subtitle: 'Ideation, layout and validation' },
+      solution: { title: 'The final experience', subtitle: 'End-to-end workflow' },
+      roadmap: { title: 'Release and platform trade-offs', subtitle: 'Scope, impact and platform' },
+      learning: { title: 'Learnings', subtitle: 'What stayed with me' }
     } : body.classList.contains('page-home') ? {
-      top: ['Home', 'assets/character-hero-q95/center-v4.webp'], intro: ['Approach', 'assets/process-board.webp'], work: ['Work', 'assets/agent-hero.webp'],
-      writing: ['Notes & essays', 'assets/feedback-card.webp'], vibes: ['Experiments', 'assets/vibe-codes-preview.svg'], manifesto: ['Principle', 'assets/shiva-sketch-work.webp']
+      top: { title: 'Home', subtitle: 'Introduction' },
+      intro: { title: 'Approach', subtitle: 'How I work' },
+      work: { title: 'Selected work', subtitle: 'Case studies' },
+      writing: { title: 'Notes & essays', subtitle: 'Writing' },
+      vibes: { title: 'Experiments', subtitle: 'Side projects' },
     } : body.classList.contains('page-case-domain') ? {
       top:['Case study','assets/domain-hero.webp'], overview:['Overview','assets/application-map.webp'], alert:['Alert','assets/alert-storm.webp'],
       current:['Current UX','assets/current-observe.webp'], discovery:['Research','assets/research-donut.webp'], insight:['Insight','assets/feedback-heatmap.webp'],
       stories:['Stories','assets/kalpana.webp'], proposal:['Proposal','assets/app-hierarchy.webp'], design:['Design','assets/prototype-01.webp'], feedback:['Feedback','assets/feedback-card.webp'], ongoing:['Ongoing','assets/domain-hero.webp']
     } : body.classList.contains('page-case-reports') ? {
-      top:['Management Reports','assets/management-reports-thumbnail.png'],
-      problem:['The legacy reporting cycle','assets/management-reports-thumbnail.png'],
-      needs:['Three customer needs','assets/management-reports-thumbnail.png'],
-      lifecycle:['North Star and scope','assets/reports/build-exploration.png'],
-      design:['Simplifying the authoring model','assets/reports/style-exploration.png'],
-      experience:['The report editor','assets/management-reports-thumbnail.png'],
-      release:['Release alongside legacy','assets/management-reports-thumbnail.png'],
-      
+      top:{title:'Management Reports',subtitle:'Case study'},
+      pitch:{title:'At a glance',subtitle:'Overview'},
+      background:{title:'Context and problem',subtitle:'Analogy, monthly rebuild and users'},
+      discovery:{title:'Continuous research',subtitle:'Follow-Me-Homes and synthesis'},
+      lifecycle:{title:'Sequence the whole experience',subtitle:'North Star, legacy learning and scope'},
+      design:{title:'Designing the report editor',subtitle:'Canvas, system coherence and period rules'},
+      solution:{title:'The final experience',subtitle:'Authoring workflow'},
+      'output-comparison':{title:'Old and new report output',subtitle:'Recipient experience'},
+      learning:{title:'Learnings',subtitle:'Trade-offs, influence and reflection'}
     } : {};
 
     const drawer = document.createElement('div');
@@ -271,8 +271,9 @@
       const drawerLink = document.createElement('a');
       drawerLink.className = 'section-progress__drawer-item';
       drawerLink.href = `#${item.id}`;
-      const showThumb = body.classList.contains('page-home');
-      drawerLink.innerHTML = `${showThumb && thumb ? `<img src="${thumb}" alt="">` : ''}<span><b>${title}</b><small>${subtitle}</small></span>`;
+      const showThumb = false;
+      drawerLink.classList.add('section-progress__drawer-item--text');
+      drawerLink.innerHTML = `<span><b>${title}</b><small>${subtitle}</small></span>`;
       drawer.appendChild(drawerLink);
       item.drawerLink = drawerLink;
     });
@@ -488,7 +489,7 @@
     if (body.classList.contains('page-home')) {
       const probe = window.scrollY + Math.min(180, window.innerHeight * .25);
       active = 'top';
-      for (const id of ['top', 'intro', 'work', 'writing', 'vibes', 'manifesto']) {
+      for (const id of ['top', 'intro', 'work', 'writing', 'vibes']) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top + window.scrollY <= probe) active = id;
       }
@@ -649,14 +650,22 @@
     finishPreloader();
     loaderRevealAnimation?.cancel();
     window.setPortfolioPreloaderVariant?.();
+    preloader.classList.add('is-repositioning');
+    preloader.style.setProperty('transform','translate3d(0,110%,0)','important');
+    preloader.style.setProperty('transition','none','important');
     preloader.classList.remove('is-parked-bottom');
-    root.classList.add('is-fast-navigation', 'is-leaving');
+    root.classList.add('is-fast-navigation');
     storageSet('shiva-reel-incoming', '1');
-
-    // Every page now uses the authored 1.2-second connected signature.
     resetLoaderDrawing();
-    // The charcoal panel enters first; the 1200ms pen sequence begins after it settles.
-    window.setTimeout(() => drawLoader(() => location.assign(url.href)), 200);
+    // Commit the invisible below-screen start before animating its upward entry.
+    void preloader.getBoundingClientRect();
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      root.classList.add('is-leaving');
+      preloader.classList.remove('is-repositioning');
+      preloader.style.removeProperty('transition');
+      preloader.style.removeProperty('transform');
+      window.setTimeout(() => drawLoader(() => location.assign(url.href)), 700);
+    }));
   };
 
   document.addEventListener('click', event => {

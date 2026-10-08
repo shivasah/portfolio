@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#fcfcf4">
+<meta name="theme-color" content="#f3f0e7">
 <meta name="description" content="Management Reports: from a report you export to a report you author. A senior product design case study by Shiva Sah.">
 <meta name="robots" content="noindex, nofollow">
 <title>Management Reports; Shiva Sah</title>
@@ -40,20 +40,20 @@ button,input,textarea,select{font:inherit}button{color:inherit;background:transp
 ::selection{background:var(--orange-soft);color:var(--ink)}[hidden]{display:none!important}:focus-visible{outline:2px solid var(--orange);outline-offset:5px}
 .shell{width:min(100%,var(--content));padding-inline:var(--gutter);margin-inline:auto}.section{position:relative}.section--paper{background:var(--paper)}.section--sand{background:var(--paper-2)}.section--ink{background:var(--ink);color:var(--paper)}
 :root {
-  --paper: #fcfcf4;
-  --paper-2: #ece9e4;
-  --ink: #232428;
-  --ink-soft: #4d4d50;
-  --orange: #ff5623;
-  --orange-soft: #ffaa91;
-  --lavender: #d8d1df;
-  --lavender-2: #b8b6d1;
-  --purple: #2d2045;
-  --purple-2: #6c43c3;
+  --paper: #f3f0e7;
+  --paper-2: #e4dfd2;
+  --ink: #292e26;
+  --ink-soft: #666c5e;
+  --orange: #9c4e3b;
+  --orange-soft: #d7decd;
+  --lavender: #d7decd;
+  --lavender-2: #d7decd;
+  --purple: #252f29;
+  --purple-2: #4f6248;
   --green: #6fce7a;
   --red: #ff565d;
   --yellow: #ffbf33;
-  --line: rgba(35, 36, 40, .22);
+  --line: rgba(41,46,38, .22);
   --header-h: 78px;
   --gutter: clamp(18px, 4.6vw, 72px);
   --content: 1440px;
@@ -145,11 +145,11 @@ html.is-leaving .page-wipe { transform: translateY(0); transition-duration: .5s;
   backdrop-filter: blur(13px);
   transform: translateY(-105%);
   transition: transform .45s var(--ease);
-  border-bottom: 1px solid rgba(35,36,40,.08);
+  border-bottom: 1px solid rgba(41,46,38,.08);
 }
 .site-header.is-scrolled::before { transform: translateY(0); }
 .site-header[data-theme="dark"] { color: var(--paper); }
-.site-header[data-theme="dark"]::before { background: color-mix(in srgb, var(--ink) 86%, transparent); border-color: rgba(252,252,244,.12); }
+.site-header[data-theme="dark"]::before { background: color-mix(in srgb, var(--ink) 86%, transparent); border-color: rgba(243,240,231,.12); }
 .site-header[data-theme="orange"] { color: var(--ink); }
 .site-header[data-theme="orange"]::before { background: color-mix(in srgb, var(--orange) 90%, transparent); }
 .header-logo { display: inline-flex; align-items: center; gap: 11px; justify-self: start; font-size: 14px; font-weight: 700; letter-spacing: -.02em; }
@@ -168,8 +168,8 @@ html.is-leaving .page-wipe { transform: translateY(0); transition-duration: .5s;
 .site-footer__top { display: grid; grid-template-columns: 8fr 4fr; gap: 36px; align-items: end; }
 .site-footer__title { font-size: clamp(70px, 13vw, 190px); line-height: .78; letter-spacing: -.07em; font-weight: 300; }
 .site-footer__nav { display: grid; }
-.site-footer__nav a { display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid rgba(252,252,244,.25); text-transform: none; letter-spacing: .06em; font-size: 12px; font-weight: 700; }
-.site-footer__nav a:last-child { border-bottom: 1px solid rgba(252,252,244,.25); }
+.site-footer__nav a { display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid rgba(243,240,231,.25); text-transform: none; letter-spacing: .06em; font-size: 12px; font-weight: 700; }
+.site-footer__nav a:last-child { border-bottom: 1px solid rgba(243,240,231,.25); }
 .site-footer__bottom { display: flex; justify-content: space-between; gap: 20px; align-items: flex-end; padding-top: 70px; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: none; }
 .back-top { width: 58px; height: 58px; border-radius: 50%; background: var(--orange); color: var(--ink); display: grid; place-items: center; font-size: 24px; transition: transform .35s var(--ease); }
 .back-top:hover { transform: rotate(-35deg) scale(.92); }
@@ -184,7 +184,7 @@ html.is-leaving .page-wipe { transform: translateY(0); transition-duration: .5s;
 :root {
   --font-neue: "HelveticaNeueLocal", "HelveticaNeue", "Helvetica Neue", "Nimbus Sans", Helvetica, Arial, sans-serif;
   --font-display: "Geometric415LiteLocal", "Geometric415Lite", "Geometric 415 Lite", Arial, sans-serif;
-  --hero-grid: rgba(35, 36, 40, .095);
+  --hero-grid: rgba(41,46,38, .095);
 }
 .page-wipe__mark {
   display: inline-flex;
@@ -419,7 +419,7 @@ html.is-leaving .page-wipe__signature-wrap { opacity: 0; }
 }
 .cursor-scribble__loop {
   fill: none;
-  stroke: rgba(35,36,40,.42);
+  stroke: rgba(41,46,38,.42);
   stroke-width: 1.15;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -433,7 +433,7 @@ html.is-leaving .page-wipe__signature-wrap { opacity: 0; }
 }
 .cursor-scribble.is-link svg { transform: rotate(-8deg) scale(1.04); }
 .cursor-scribble.is-down svg { transform: rotate(7deg) scale(.88); }
-.menu-open .cursor-scribble__loop { stroke: rgba(252,252,244,.66); }
+.menu-open .cursor-scribble__loop { stroke: rgba(243,240,231,.66); }
 .menu-open .cursor-scribble__dot { fill: var(--paper); }
 @keyframes cursorScribbleWobble {
   from { rotate: -1.2deg; }
@@ -883,10 +883,10 @@ html.js .page-wipe { display: grid; }
   height: 58px;
   padding: 0 10px 0 18px;
   color: var(--ink) !important;
-  background: rgba(252,252,244,.46) !important;
+  background: rgba(243,240,231,.46) !important;
   border: 1px solid rgba(255,255,255,.58);
   border-radius: 16px;
-  box-shadow: 0 9px 32px rgba(35,36,40,.08), inset 0 1px 0 rgba(255,255,255,.56);
+  box-shadow: 0 9px 32px rgba(41,46,38,.08), inset 0 1px 0 rgba(255,255,255,.56);
   -webkit-backdrop-filter: blur(18px) saturate(1.35);
   backdrop-filter: blur(18px) saturate(1.35);
 }
@@ -907,9 +907,9 @@ html.js .page-wipe { display: grid; }
 .page-home .site-footer { background:var(--ink); color:var(--paper); }
 .site-footer__top--simple { min-height:72vh; display:flex; align-items:center; padding:var(--gutter); }
 .site-footer__title { font-family:var(--font-display); font-weight:300; font-size:clamp(84px,12vw,210px); line-height:.76; letter-spacing:-.06em; text-transform:lowercase; }
-.site-footer__bottom--simple { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:20px var(--gutter) 28px; border-top:1px solid rgba(252,252,244,.18); }
+.site-footer__bottom--simple { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:20px var(--gutter) 28px; border-top:1px solid rgba(243,240,231,.18); }
 .site-footer__bottom--simple > span { font-size:11px; opacity:.64; }
-.back-top--icon { width:54px; height:54px; border-radius:50%; display:grid; place-items:center; border:1px solid rgba(252,252,244,.4); color:var(--paper); transition:background-color .25s ease,color .25s ease,transform .3s var(--ease); }
+.back-top--icon { width:54px; height:54px; border-radius:50%; display:grid; place-items:center; border:1px solid rgba(243,240,231,.4); color:var(--paper); transition:background-color .25s ease,color .25s ease,transform .3s var(--ease); }
 .back-top--icon:hover { background:var(--paper); color:var(--ink); transform:translateY(-4px); }
 .back-top--icon svg { width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
 @keyframes scrollScribbleDraw { to { stroke-dashoffset:0; } }
@@ -997,21 +997,21 @@ li,
   display:grid;
   place-items:center;
   color: var(--ink) !important;
-  background: rgba(252,252,244,.70);
+  background: rgba(243,240,231,.70);
   border: 1px solid rgba(255,255,255,.72);
   border-radius: 999px;
-  box-shadow: 0 10px 34px rgba(35,36,40,.08);
+  box-shadow: 0 10px 34px rgba(41,46,38,.08);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
 }
 .site-header--floating .header-signature-v5 { width:70px; height:24px; }
 .site-header--floating .header-actions { display:block !important; }
-.menu-open .site-header--floating .header-logo { background: rgba(252,252,244,.88); color:var(--ink)!important; }
+.menu-open .site-header--floating .header-logo { background: rgba(243,240,231,.88); color:var(--ink)!important; }
 .site-footer__top--simple { position:relative; justify-content:space-between; gap:40px; }
 .site-footer__note { align-self:flex-end; max-width:390px; margin-bottom:5vh; font-size:clamp(15px,1.2vw,19px); line-height:1.45; opacity:.66; }
 .site-footer__bottom--simple { justify-content:space-between !important; }
 .footer-socials { display:flex; flex-wrap:wrap; gap:10px; }
-.footer-socials a { border:1px solid rgba(252,252,244,.22); border-radius:999px; padding:9px 13px; font-size:12px; transition:background .25s ease,color .25s ease; }
+.footer-socials a { border:1px solid rgba(243,240,231,.22); border-radius:999px; padding:9px 13px; font-size:12px; transition:background .25s ease,color .25s ease; }
 .footer-socials a:hover { background:var(--paper); color:var(--ink); }
 .sketch-filter-defs { position:absolute; pointer-events:none; }
 @media  (max-width: 980px) {.site-footer__top--simple { flex-direction:column; align-items:flex-start; }
@@ -1026,17 +1026,17 @@ li,
 }
 .site-header--floating .header-logo{
   height:44px; min-width:96px; padding:7px 14px 6px;
-  background:rgba(252,252,244,.58)!important;
+  background:rgba(243,240,231,.58)!important;
   border:1px solid rgba(255,255,255,.72)!important;
-  box-shadow:0 12px 34px rgba(35,36,40,.10), inset 0 1px 0 rgba(255,255,255,.6)!important;
+  box-shadow:0 12px 34px rgba(41,46,38,.10), inset 0 1px 0 rgba(255,255,255,.6)!important;
   backdrop-filter:blur(22px) saturate(1.35)!important;
   -webkit-backdrop-filter:blur(22px) saturate(1.35)!important;
 }
-.site-header[data-theme="dark"] .header-logo{ color:var(--paper)!important; background:rgba(35,36,40,.42)!important; border-color:rgba(255,255,255,.16)!important; }
+.site-header[data-theme="dark"] .header-logo{ color:var(--paper)!important; background:rgba(41,46,38,.42)!important; border-color:rgba(255,255,255,.16)!important; }
 .site-header[data-theme="dark"] .header-signature-v5 path{ stroke:var(--paper)!important; }
-.menu-open .site-header--floating .header-logo{ color:var(--ink)!important; background:rgba(252,252,244,.82)!important; }
+.menu-open .site-header--floating .header-logo{ color:var(--ink)!important; background:rgba(243,240,231,.82)!important; }
 .menu-open .site-header--floating .header-signature-v5 path{ stroke:var(--ink)!important; }
-:root{ --card-radius:16px; --card-border:rgba(35,36,40,.13); --card-shadow:0 18px 52px rgba(35,36,40,.10); --card-shadow-hover:0 30px 80px rgba(35,36,40,.16); }
+:root{ --card-radius:16px; --card-border:rgba(41,46,38,.13); --card-shadow:0 18px 52px rgba(41,46,38,.10); --card-shadow-hover:0 30px 80px rgba(41,46,38,.16); }
 .site-header.site-header--floating {
   left: auto !important;
   right: clamp(14px, 2vw, 28px) !important;
@@ -1047,9 +1047,9 @@ li,
   justify-content: flex-end !important;
   padding: 5px !important;
   border-radius: 999px !important;
-  background: rgba(252,252,244,.54) !important;
+  background: rgba(243,240,231,.54) !important;
   border: 1px solid rgba(255,255,255,.64) !important;
-  box-shadow: 0 10px 34px rgba(35,36,40,.08) !important;
+  box-shadow: 0 10px 34px rgba(41,46,38,.08) !important;
   backdrop-filter: blur(18px) saturate(1.22) !important;
   -webkit-backdrop-filter: blur(18px) saturate(1.22) !important;
   pointer-events: auto !important;
@@ -1071,8 +1071,8 @@ li,
   z-index:0;
 }
 .footer-next { align-self:end; display:grid; gap:14px; width:min(440px,100%); }
-.footer-next__link { display:grid; gap:5px; padding:16px 0; border-top:1px solid rgba(252,252,244,.25); }
-.footer-next__link:last-child { border-bottom:1px solid rgba(252,252,244,.25); }
+.footer-next__link { display:grid; gap:5px; padding:16px 0; border-top:1px solid rgba(243,240,231,.25); }
+.footer-next__link:last-child { border-bottom:1px solid rgba(243,240,231,.25); }
 .footer-next__link span { font-size:10px; text-transform: none; letter-spacing:.09em; opacity:.54; }
 .footer-next__link strong { font-family:var(--font-display); font-size:clamp(24px,2.4vw,38px); line-height:1; font-weight:500; }
 @media  (max-width: 980px) {.site-header.site-header--floating { right:10px !important; top:10px !important; }
@@ -1234,7 +1234,7 @@ html.is-ready.is-leaving .page-wipe__signature-wrap{opacity:1!important;transfor
 .section-progress__peek{
   position:absolute;right:22px;top:50%;transform:translate(12px,-50%);width:230px;min-height:70px;
   display:grid;grid-template-columns:64px 1fr;gap:10px;align-items:center;padding:8px;
-  border-radius:12px;background:rgba(252,252,244,.94);color:var(--ink);box-shadow:0 16px 45px rgba(0,0,0,.14);
+  border-radius:12px;background:rgba(243,240,231,.94);color:var(--ink);box-shadow:0 16px 45px rgba(0,0,0,.14);
   opacity:0;pointer-events:none;transition:opacity .22s ease,transform .3s var(--ease);backdrop-filter:blur(14px);
 }
 .section-progress__peek img{width:64px;height:54px;object-fit:cover;border-radius:8px;background:#e9e6de;}
@@ -1261,9 +1261,9 @@ html.is-ready.is-leaving .page-wipe__signature-wrap{opacity:1!important;transfor
   fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;
   stroke-dasharray:1;stroke-dashoffset:1;
 }
-.page-wipe__wave{stroke:rgba(35,36,40,.82);stroke-width:3.2;}
+.page-wipe__wave{stroke:rgba(41,46,38,.82);stroke-width:3.2;}
 .page-wipe__signature-line-v24{stroke:var(--ink);stroke-width:4.9;}
-.page-wipe__signature-shadow-v24{stroke:rgba(35,36,40,.13);stroke-width:7.2;}
+.page-wipe__signature-shadow-v24{stroke:rgba(41,46,38,.13);stroke-width:7.2;}
 .page-wipe.is-writing .page-wipe__wave--lead{animation:v24WaveDraw .56s cubic-bezier(.45,.04,.22,1) forwards;}
 .page-wipe.is-writing .page-wipe__signature-line-v24{animation:v24WaveDraw 1.02s cubic-bezier(.45,.04,.18,1) .46s forwards;}
 .page-wipe.is-writing .page-wipe__signature-shadow-v24{animation:v24WaveDraw 1.02s cubic-bezier(.45,.04,.18,1) .44s forwards;}
@@ -1279,18 +1279,18 @@ html.is-ready.is-leaving .page-wipe__signature-wrap{opacity:1!important;transfor
 @media (max-width:760px){.page-wipe__signature-wrap--wave,.page-wipe__signature--wave{height:180px!important}
 .header-logo--signature{width:72px!important}
 .header-signature-v24{width:68px}}
-@keyframes dotBreatheV24{0%,72%,100%{translate:0 0;filter:none}82%{translate:0 -2px;filter:drop-shadow(0 3px 5px rgba(255,86,35,.16))}90%{translate:1px 0}}
+@keyframes dotBreatheV24{0%,72%,100%{translate:0 0;filter:none}82%{translate:0 -2px;filter:drop-shadow(0 3px 5px rgba(156,78,59,.16))}90%{translate:1px 0}}
 @keyframes cogPulse{0%,100%{transform:scale(.94)}50%{transform:scale(1.12)}}
-.section-progress{padding:7px 5px!important;border:1px solid rgba(255,86,35,.58)!important;border-radius:999px!important;background:rgba(252,252,244,.54)!important;backdrop-filter:blur(12px)!important;box-shadow:0 8px 24px rgba(35,36,40,.08)!important;}
+.section-progress{padding:7px 5px!important;border:1px solid rgba(156,78,59,.58)!important;border-radius:999px!important;background:rgba(243,240,231,.54)!important;backdrop-filter:blur(12px)!important;box-shadow:0 8px 24px rgba(41,46,38,.08)!important;}
 .section-progress__segment{width:5px!important;background:#c8c7c2!important;border-radius:999px!important;position:relative!important;overflow:visible!important;}
 .section-progress__segment.is-active{width:8px!important;background:#bebdb7!important;}
 .section-progress__fill{background:var(--orange)!important;border-radius:999px!important;}
 .section-progress:hover{border-radius:18px!important;padding-block:10px!important;}
 .section-progress:hover .section-progress__segment{width:9px!important;}
 .section-progress:hover .section-progress__peek{opacity:1!important;transform:translate(0,-50%)!important;}
-.section-progress__peek{right:26px!important;width:248px!important;min-height:64px!important;border:1px solid rgba(255,86,35,.16)!important;}
+.section-progress__peek{right:26px!important;width:248px!important;min-height:64px!important;border:1px solid rgba(156,78,59,.16)!important;}
 .section-progress:hover .section-progress__peek{pointer-events:auto!important;}
-.section-progress__segment:hover .section-progress__peek{border-color:rgba(255,86,35,.54)!important;box-shadow:0 16px 46px rgba(35,36,40,.16)!important;}
+.section-progress__segment:hover .section-progress__peek{border-color:rgba(156,78,59,.54)!important;box-shadow:0 16px 46px rgba(41,46,38,.16)!important;}
 @media (prefers-reduced-motion:reduce){.page-wipe__wave,.page-wipe__signature-line-v24,.page-wipe__signature-shadow-v24{animation:none!important;stroke-dashoffset:0!important}}
 .section-progress{transition:height .34s var(--ease),width .24s ease,opacity .22s ease,transform .3s var(--ease)!important;}
 .section-progress:hover{height:min(82vh,720px)!important;}
@@ -1328,16 +1328,16 @@ html.is-ready.is-leaving .page-wipe__signature-wrap{opacity:1!important;transfor
 @media  (max-width: 650px) {.header-wordmark-v25 { font-size:17px; }}
 :root {
   
-  --paper: #fcfcf4;
-  --paper-2: #f3efe5;
+  --paper: #f3f0e7;
+  --paper-2: #e4dfd2;
   --paper-3: #e8e4da;
-  --ink: #232428;
-  --ink-soft: #4d4d50;
-  --orange: #ff5623;
-  --orange-soft: #ff8a63;
-  --yellow: #efc94c;
-  --line: rgba(35,36,40,.14);
-  --line-strong: rgba(35,36,40,.28);
+  --ink: #292e26;
+  --ink-soft: #666c5e;
+  --orange: #9c4e3b;
+  --orange-soft: #e6d8b8;
+  --yellow: #e6d8b8;
+  --line: rgba(41,46,38,.14);
+  --line-strong: rgba(41,46,38,.28);
 
   
   --lavender: var(--paper-3);
@@ -1375,10 +1375,10 @@ html.is-ready.is-leaving .page-wipe__signature-wrap{opacity:1!important;transfor
   
   --card-radius: 24px;
   --card-radius-sm: 16px;
-  --card-border: 1px solid rgba(35,36,40,.13);
-  --card-border-hover: rgba(255,86,35,.55);
-  --card-shadow: 0 18px 50px rgba(35,36,40,.10);
-  --card-shadow-hover: 0 26px 68px rgba(35,36,40,.16);
+  --card-border: 1px solid rgba(41,46,38,.13);
+  --card-border-hover: rgba(156,78,59,.55);
+  --card-shadow: 0 18px 50px rgba(41,46,38,.10);
+  --card-shadow-hover: 0 26px 68px rgba(41,46,38,.16);
   --card-lift: -6px;
   --motion-fast: 220ms;
   --motion: 420ms;
@@ -1436,7 +1436,7 @@ h6,
   min-height: 20px !important;
   border-radius: 999px;
   background: rgba(255,255,255,.7) !important;
-  outline: 1px solid rgba(255,86,35,.35);
+  outline: 1px solid rgba(156,78,59,.35);
   outline-offset: 1px;
   opacity: .64;
 }
@@ -1452,7 +1452,7 @@ h6,
   min-height: 76px !important;
   border: var(--card-border) !important;
   border-radius: 14px !important;
-  background: rgba(252,252,244,.96) !important;
+  background: rgba(243,240,231,.96) !important;
   box-shadow: var(--card-shadow) !important;
 }
 .section-progress__peek img { width:72px!important;height:58px!important;border-radius:10px!important; }
@@ -1609,9 +1609,9 @@ h6,
   display: grid;
   gap: 5px;
   border-radius: 16px;
-  background: rgba(252,252,244,.97);
-  border: 1px solid rgba(255,86,35,.25);
-  box-shadow: 0 18px 56px rgba(35,36,40,.14);
+  background: rgba(243,240,231,.97);
+  border: 1px solid rgba(156,78,59,.25);
+  box-shadow: 0 18px 56px rgba(41,46,38,.14);
   backdrop-filter: blur(18px) saturate(1.2);
   -webkit-backdrop-filter: blur(18px) saturate(1.2);
   opacity: 0;
@@ -1647,13 +1647,15 @@ h6,
   outline: 2px solid var(--orange);
   outline-offset: -2px;
 }
-.section-progress__drawer-item img { width:54px; height:36px; object-fit:cover; border-radius:8px; border:1px solid rgba(35,36,40,.08); }
+.section-progress__drawer-item img { width:54px; height:36px; object-fit:cover; border-radius:8px; border:1px solid rgba(41,46,38,.08); }
+/* V120 text-led progress */
+.section-progress__drawer-item--text{grid-template-columns:1fr!important;min-width:0;}
 .section-progress__drawer-item b { display:block; font-family:var(--font-body); font-size:12px; font-weight:700; line-height:1.25; }
 .section-progress__drawer-item small { display:block; margin-top:2px; font-size:12px; opacity:.68; text-transform:none; letter-spacing:0; }
 .section-progress__peek { display:none !important; }
 @keyframes dotQuietFloat { to { transform: translate(1.2px,-1.6px) rotate(2deg) scale(1.03); } }
 @keyframes dotQuietFloatB { to { transform: translate(-1.4px,1px) rotate(-1.8deg) scale(.98); } }
-@keyframes cogPulse { 50% { box-shadow:0 0 0 5px rgba(252,252,244,.86), 0 0 0 11px color-mix(in srgb,currentColor 18%, transparent); } }
+@keyframes cogPulse { 50% { box-shadow:0 0 0 5px rgba(243,240,231,.86), 0 0 0 11px color-mix(in srgb,currentColor 18%, transparent); } }
 @keyframes metricArrowDraw { to { stroke-dashoffset:0; } }
 @media  (max-width: 640px) {.page-wipe__word { font-size:58px; }}
 @keyframes metricArrowDrawV27 { to { stroke-dashoffset:0; } }
@@ -2012,7 +2014,7 @@ body.menu-open .section-progress { opacity: 0 !important; visibility: hidden !im
   min-height: 48px;
   padding: 10px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(35,36,40,.48);
+  border: 1px solid rgba(41,46,38,.48);
   font: 600 14px/1.2 var(--font-body);
   color: var(--ink);
   cursor: pointer;
@@ -2027,12 +2029,12 @@ body.menu-open .section-progress { opacity: 0 !important; visibility: hidden !im
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
-  scrollbar-color: rgba(35,36,40,.45) transparent;
+  scrollbar-color: rgba(41,46,38,.45) transparent;
   padding: clamp(12px, 3vh, 36px) var(--menu-gutter) max(24px, env(safe-area-inset-bottom));
   scroll-padding-block: 12px;
 }
 .site-menu__scroll::-webkit-scrollbar { width: 6px; }
-.site-menu__scroll::-webkit-scrollbar-thumb { background: rgba(35,36,40,.45); border-radius: 6px; }
+.site-menu__scroll::-webkit-scrollbar-thumb { background: rgba(41,46,38,.45); border-radius: 6px; }
 .site-menu__grid {
   display: grid;
   width: min(100%, 1320px);
@@ -2085,7 +2087,7 @@ body.menu-open .section-progress { opacity: 0 !important; visibility: hidden !im
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-  border-top: 1px solid rgba(35,36,40,.32);
+  border-top: 1px solid rgba(41,46,38,.32);
   padding-top: 20px;
 }
 .site-menu__connect { min-height: 48px; display: inline-flex; align-items: center; gap: 24px; font: 600 19px/1.4 var(--font-body); }
@@ -2144,8 +2146,8 @@ html.is-fast-navigation .page-wipe { transition-duration: 320ms !important; }
 .site-menu__signature-v70 {
   display: block;
   background: currentColor;
-  -webkit-mask-image: url("assets/shiva-lastoria-word-v70.svg");
-  mask-image: url("assets/shiva-lastoria-word-v70.svg");
+  -webkit-mask-image: url("assets/shiva-lastoria-word-v70.svg?v=125");
+  mask-image: url("assets/shiva-lastoria-word-v70.svg?v=125");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -2221,7 +2223,7 @@ html.is-fast-navigation .page-wipe { transition-duration: 320ms !important; }
   line-height: 1;
 }
 .page-wipe.is-lastoria {
-  background: #232428 !important;
+  background: #292e26 !important;
   transition: transform .18s cubic-bezier(.2,.78,.18,1) !important;
 }
 .page-wipe.is-lastoria .page-wipe__signature-wrap--wave {
@@ -2242,7 +2244,7 @@ html.is-fast-navigation .page-wipe { transition-duration: 320ms !important; }
   overflow: visible !important;
 }
 .page-wipe.is-lastoria .lastoria-ink {
-  fill: #ff8a63;
+  fill: #e6d8b8;
 }
 .page-wipe.is-lastoria .lastoria-ink path {
   fill: inherit;
@@ -2255,15 +2257,15 @@ html.is-ready.is-leaving .page-wipe.is-lastoria .page-wipe__signature-wrap--wave
   transform: translateY(-50%) !important;
 }
 body .site-header--floating .header-logo{
-display:flex!important;align-items:center;justify-content:center;width:110px!important;min-width:110px!important;height:48px!important;padding:6px 12px!important;color:#232428!important;background:#fcfcf4!important;overflow:visible!important}
+display:flex!important;align-items:center;justify-content:center;width:110px!important;min-width:110px!important;height:48px!important;padding:6px 12px!important;color:#292e26!important;background:#f3f0e7!important;overflow:visible!important}
 body .header-lastoria-v70,body .site-menu__signature-v70{
 display:block!important;flex:none;width:88px!important;height:36px!important;opacity:1!important;background:currentColor!important;
--webkit-mask:url("assets/shiva-wordmark-static.svg") center/contain no-repeat!important;
-mask:url("assets/shiva-wordmark-static.svg") center/contain no-repeat!important}
-body .site-menu__signature-v70{width:108px!important;height:46px!important;color:#232428!important}
-body .cursor-scribble{mix-blend-mode:normal!important;--cursor-line:#232428}
+-webkit-mask:url("assets/shiva-wordmark-static.svg?v=125") center/contain no-repeat!important;
+mask:url("assets/shiva-wordmark-static.svg?v=125") center/contain no-repeat!important}
+body .site-menu__signature-v70{width:108px!important;height:46px!important;color:#292e26!important}
+body .cursor-scribble{mix-blend-mode:normal!important;--cursor-line:#292e26}
 body .cursor-scribble__loop{stroke:var(--cursor-line)!important}
-body .cursor-scribble__dot,body.menu-open .cursor-scribble__dot{fill:#ff5623!important;stroke:none!important}
+body .cursor-scribble__dot,body.menu-open .cursor-scribble__dot{fill:#9c4e3b!important;stroke:none!important}
 body #site-menu .site-menu__scroll{display:block!important}
 body #site-menu .site-menu__primary--simple{width:min(100%,900px);margin-inline:auto;padding-block:10px 32px}
 body #site-menu .site-menu__page{min-height:64px;padding:12px 0}
@@ -2282,8 +2284,8 @@ body #site-menu .site-menu__page{padding-block:14px}}
 }
 .site-menu-trigger__shiva{
   display:block;width:72px;height:34px;background:currentColor;
-  -webkit-mask:url("assets/shiva-lastoria-word-v70.svg") center/contain no-repeat;
-  mask:url("assets/shiva-lastoria-word-v70.svg") center/contain no-repeat;
+  -webkit-mask:url("assets/shiva-lastoria-word-v70.svg?v=125") center/contain no-repeat;
+  mask:url("assets/shiva-lastoria-word-v70.svg?v=125") center/contain no-repeat;
 }
 .site-menu-trigger:hover{background:var(--ink)!important;color:var(--paper)!important}
 @media (max-width:620px){.site-menu-trigger{width:88px!important;min-width:88px!important}
@@ -2329,10 +2331,10 @@ body #site-menu .site-menu__page{padding-block:14px}}
   height: 48px !important;
   padding: 6px 12px !important;
   color: var(--ink) !important;
-  background: rgba(252,252,244,.88) !important;
-  border: 1px solid rgba(35,36,40,.10) !important;
+  background: rgba(243,240,231,.88) !important;
+  border: 1px solid rgba(41,46,38,.10) !important;
   border-radius: 999px !important;
-  box-shadow: 0 8px 28px rgba(35,36,40,.08) !important;
+  box-shadow: 0 8px 28px rgba(41,46,38,.08) !important;
   backdrop-filter: blur(14px) saturate(1.1) !important;
   -webkit-backdrop-filter: blur(14px) saturate(1.1) !important;
   overflow: visible !important;
@@ -2344,8 +2346,8 @@ body #site-menu .site-menu__page{padding-block:14px}}
   flex: none !important;
   background: currentColor !important;
   opacity: 1 !important;
-  -webkit-mask: url("assets/shiva-wordmark-static.svg") center / contain no-repeat !important;
-  mask: url("assets/shiva-wordmark-static.svg") center / contain no-repeat !important;
+  -webkit-mask: url("assets/shiva-wordmark-static.svg?v=125") center / contain no-repeat !important;
+  mask: url("assets/shiva-wordmark-static.svg?v=125") center / contain no-repeat !important;
 }
 .site-header--floating .site-menu-trigger {
   position: relative !important;
@@ -2360,15 +2362,15 @@ body #site-menu .site-menu__page{padding-block:14px}}
   border-radius: 999px !important;
   background: var(--orange) !important;
   color: var(--ink) !important;
-  box-shadow: 0 8px 28px rgba(35,36,40,.08) !important;
+  box-shadow: 0 8px 28px rgba(41,46,38,.08) !important;
 }
 .site-header--floating .site-menu-trigger__shiva {
   display: block !important;
   width: 72px !important;
   height: 34px !important;
   background: currentColor !important;
-  -webkit-mask: url("assets/shiva-lastoria-word-v70.svg") center / contain no-repeat !important;
-  mask: url("assets/shiva-lastoria-word-v70.svg") center / contain no-repeat !important;
+  -webkit-mask: url("assets/shiva-lastoria-word-v70.svg?v=125") center / contain no-repeat !important;
+  mask: url("assets/shiva-lastoria-word-v70.svg?v=125") center / contain no-repeat !important;
 }
 .site-header--floating .site-menu-trigger:hover {
   background: var(--ink) !important;
@@ -2548,9 +2550,9 @@ body.menu-open .site-header.site-header--floating {
   min-height: 56px !important;
   padding: 4px 4px 4px 15px !important;
   border-radius: 999px !important;
-  background: rgba(252,252,244,.94) !important;
-  border: 1px solid rgba(35,36,40,.11) !important;
-  box-shadow: 0 8px 28px rgba(35,36,40,.09) !important;
+  background: rgba(243,240,231,.94) !important;
+  border: 1px solid rgba(41,46,38,.11) !important;
+  box-shadow: 0 8px 28px rgba(41,46,38,.09) !important;
   backdrop-filter: blur(14px) saturate(1.1) !important;
   -webkit-backdrop-filter: blur(14px) saturate(1.1) !important;
 }
@@ -2644,10 +2646,10 @@ body.menu-open .site-header.site-header--floating { opacity:0!important; visibil
 .site-header--floating .site-header__combo-pill,
 .site-header[data-theme="dark"] .site-header__combo-pill,
 .site-header[data-theme="light"] .site-header__combo-pill {
-  background: rgba(252,252,244,.96) !important;
-  border: 1px solid rgba(35,36,40,.12) !important;
-  box-shadow: 0 8px 28px rgba(35,36,40,.10) !important;
-  color: #232428 !important;
+  background: rgba(243,240,231,.96) !important;
+  border: 1px solid rgba(41,46,38,.12) !important;
+  box-shadow: 0 8px 28px rgba(41,46,38,.10) !important;
+  color: #292e26 !important;
 }
 .site-header--floating .header-logo,
 .site-header[data-theme="dark"] .header-logo,
@@ -2659,7 +2661,7 @@ body.menu-open .site-header.site-header--floating { opacity:0!important; visibil
   box-shadow: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  color: #232428 !important;
+  color: #292e26 !important;
   overflow: visible !important;
 }
 .site-header--floating .header-lastoria-v70,
@@ -2679,16 +2681,16 @@ body.menu-open .site-header.site-header--floating { opacity:0!important; visibil
 .site-header--floating .site-menu-trigger,
 .site-header[data-theme="dark"] .site-menu-trigger,
 .site-header[data-theme="light"] .site-menu-trigger {
-  background: #ff5623 !important;
-  color: #232428 !important;
+  background: #9c4e3b !important;
+  color: #292e26 !important;
   border: 0 !important;
   box-shadow: none !important;
 }
 .site-header--floating .site-menu-trigger:hover,
 .site-header[data-theme="dark"] .site-menu-trigger:hover,
 .site-header[data-theme="light"] .site-menu-trigger:hover {
-  background: #ff5623 !important;
-  color: #232428 !important;
+  background: #9c4e3b !important;
+  color: #292e26 !important;
 }
 @media  (max-width:620px) {.site-header--floating .header-lastoria-v70,
   .site-header[data-theme="dark"] .header-lastoria-v70,
@@ -2734,7 +2736,7 @@ body.menu-open .site-header--floating .header-logo { height:44px !important; }}
 .page-case-reports-v90{--mr-rule:var(--line);--mr-muted:var(--ink-soft)}
 .page-case-reports-v90 main{position:relative;z-index:2;background:var(--paper);margin:0;transform:none}
 .page-case-reports-v90 .section{width:100%;min-height:100svh;padding-block:var(--space-narrative);display:flex;align-items:center;scroll-margin-top:88px}
-.page-case-reports-v90 .section--ink{--mr-rule:rgba(252,252,244,.24);--mr-muted:rgba(252,252,244,.74)}
+.page-case-reports-v90 .section--ink{--mr-rule:rgba(243,240,231,.24);--mr-muted:rgba(243,240,231,.74)}
 .page-case-reports-v90 .section-label,.page-case-reports-v90 .eyebrow{display:block;font:600 12px/1.5 var(--font-body);letter-spacing:.06em;margin-bottom:24px;color:var(--mr-muted)}
 .page-case-reports-v90 .section-label::before,.page-case-reports-v90 .eyebrow::before{content:none}
 .page-case-reports-v90 .agent-section-heading{font:500 clamp(38px,4.5vw,68px)/1.06 var(--font-display);letter-spacing:-.04em;text-wrap:pretty;max-width:23ch;margin:0}
@@ -2754,7 +2756,7 @@ body.menu-open .site-header--floating .header-logo { height:44px !important; }}
 .page-case-reports-v90 .placeholder-box>.mr-pending-image{position:absolute;inset:0;opacity:0;pointer-events:none}
 /* Deliberate media slots, never broken images or fabricated screenshots. */
 .page-case-reports-v90 .placeholder{min-width:0;margin:0;width:100%;--asset-ratio:16/10}
-.page-case-reports-v90 .placeholder-box{position:relative;width:100%;min-width:0;min-height:180px;aspect-ratio:var(--asset-ratio);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:clamp(22px,3vw,42px);border:1px dashed var(--mr-rule);border-radius:var(--card-radius-sm);background:rgba(35,36,40,.025);color:var(--mr-muted);text-align:center;overflow:hidden}
+.page-case-reports-v90 .placeholder-box{position:relative;width:100%;min-width:0;min-height:180px;aspect-ratio:var(--asset-ratio);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:clamp(22px,3vw,42px);border:1px dashed var(--mr-rule);border-radius:var(--card-radius-sm);background:rgba(41,46,38,.025);color:var(--mr-muted);text-align:center;overflow:hidden}
 .page-case-reports-v90 .placeholder-title{font:500 clamp(18px,1.7vw,24px)/1.27 var(--font-display);letter-spacing:-.02em;max-width:28ch}
 .page-case-reports-v90 .placeholder-meta{font:600 10px/1.4 var(--font-body);letter-spacing:.08em;opacity:.75}.page-case-reports-v90 .placeholder-file{font:400 10px/1.5 var(--font-body);max-width:100%;overflow-wrap:anywhere;opacity:.8}
 .page-case-reports-v90 .placeholder figcaption{font:400 13px/1.55 var(--font-body);color:var(--mr-muted);margin-top:14px;max-width:74ch}
@@ -2765,7 +2767,7 @@ body.menu-open .site-header--floating .header-logo { height:44px !important; }}
 .page-case-reports-v90 .placeholder--page .placeholder-box{min-height:440px}
 .page-case-reports-v90 .placeholder--ready .placeholder-box{padding:0;border-style:solid;background:transparent}
 .page-case-reports-v90 .placeholder-box>img{width:100%;height:100%;object-fit:contain}
-.page-case-reports-v90 .section--ink .placeholder-box{background:rgba(252,252,244,.035)}
+.page-case-reports-v90 .section--ink .placeholder-box{background:rgba(243,240,231,.035)}
 /* Agent cover grid, display type, metric tiles, physical role notes. */
 .page-case-reports-v90 #top{min-height:100svh;padding-block:clamp(120px,16svh,170px) 72px}
 .page-case-reports-v90 .agent-hero-v72__stage{width:min(100%,var(--content));margin-inline:auto;padding-inline:var(--gutter)}
@@ -2786,7 +2788,7 @@ body.menu-open .site-header--floating .header-logo { height:44px !important; }}
 .page-case-reports-v90 .pitch-metric--yellow{background:var(--yellow)}.page-case-reports-v90 .pitch-metric--orange{background:var(--orange-soft)}.page-case-reports-v90 .pitch-metric--ink{background:var(--ink);color:var(--paper)}
 .page-case-reports-v90 .agent-role-layout{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.4fr);gap:clamp(40px,5vw,80px);align-items:start}
 .page-case-reports-v90 .agent-role-intro h2{max-width:13ch}.page-case-reports-v90 .agent-role-board{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.page-case-reports-v90 .agent-role-note{position:relative;min-width:0;min-height:290px;padding:30px;display:flex;flex-direction:column;gap:24px;background:var(--paper-2);color:var(--ink);border-radius:3px 5px 3px 2px;box-shadow:2px 8px 20px rgba(35,36,40,.1)}
+.page-case-reports-v90 .agent-role-note{position:relative;min-width:0;min-height:290px;padding:30px;display:flex;flex-direction:column;gap:24px;background:var(--paper-2);color:var(--ink);border-radius:3px 5px 3px 2px;box-shadow:2px 8px 20px rgba(41,46,38,.1)}
 .page-case-reports-v90 .agent-role-note::after{content:'';position:absolute;width:72px;height:22px;top:-9px;left:calc(50% - 36px);background:var(--paper);opacity:.6;transform:rotate(-2deg);pointer-events:none}
 .page-case-reports-v90 .agent-role-note--orange{background:var(--orange-soft)}.page-case-reports-v90 .agent-role-note--yellow{background:var(--yellow)}.page-case-reports-v90 .agent-role-note--ink{background:var(--ink);color:var(--paper)}
 .page-case-reports-v90 .agent-role-note__index{font:500 12px/1.4 var(--font-body)}.page-case-reports-v90 .agent-role-note h3{font-size:clamp(23px,2vw,29px)}.page-case-reports-v90 .agent-role-note p{margin-top:auto;font:400 14px/1.5 var(--font-body);opacity:.82}
@@ -2840,7 +2842,7 @@ body.menu-open .site-header--floating .header-logo { height:44px !important; }}
 .page-case-reports-v90 .design-influence-note{display:flex;flex-direction:column;gap:25px;min-height:290px;padding:28px;background:var(--paper-2);color:var(--ink);border-radius:3px}.page-case-reports-v90 .design-influence-note:nth-child(2){background:var(--yellow)}.page-case-reports-v90 .design-influence-note:nth-child(3){background:var(--orange-soft)}.page-case-reports-v90 .design-influence-note h3{margin-top:auto;font-size:27px}.page-case-reports-v90 .design-influence-note p{font-size:14px;line-height:1.5}.page-case-reports-v90 .design-influence-note>span{font-size:12px}
 .page-case-reports-v90 .mr-epilogue{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center;margin-top:50px;padding-top:38px;border-top:1px solid var(--mr-rule)}
 .page-case-reports-v90 .agent-learning-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
-.page-case-reports-v90 .agent-learning-note{background:var(--paper);color:var(--ink);border-radius:3px;box-shadow:2px 8px 20px rgba(35,36,40,.08)}.page-case-reports-v90 .agent-learning-note:nth-child(2){background:var(--yellow)}.page-case-reports-v90 .agent-learning-note:nth-child(3){background:var(--orange-soft)}
+.page-case-reports-v90 .agent-learning-note{background:var(--paper);color:var(--ink);border-radius:3px;box-shadow:2px 8px 20px rgba(41,46,38,.08)}.page-case-reports-v90 .agent-learning-note:nth-child(2){background:var(--yellow)}.page-case-reports-v90 .agent-learning-note:nth-child(3){background:var(--orange-soft)}
 .page-case-reports-v90 .case-disclosure>summary{position:relative;min-height:300px;display:flex;flex-direction:column;align-items:flex-start;list-style:none;padding:28px 28px 72px;cursor:pointer;gap:25px}.page-case-reports-v90 .case-disclosure>summary::-webkit-details-marker{display:none}.page-case-reports-v90 .case-disclosure summary h3{margin-top:auto;font-size:26px;line-height:1.15}
 .page-case-reports-v90 .case-disclosure__hint{position:absolute;right:24px;bottom:24px;width:30px;height:30px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:400 22px/1 var(--font-body);transition:transform .25s var(--ease)}.page-case-reports-v90 .case-disclosure[open] .case-disclosure__hint{transform:rotate(45deg)}.page-case-reports-v90 .case-disclosure>p{padding:0 28px 28px;font:400 15px/1.55 var(--font-body)}
 .page-case-reports-v90 #evidence{min-height:0;padding-block:64px;display:block;border-top:1px solid var(--line);font:400 13px/1.65 var(--font-body);color:var(--ink-soft)}.page-case-reports-v90 #evidence h2{font:500 26px/1.2 var(--font-display);letter-spacing:-.02em;color:var(--ink);margin-bottom:22px}.page-case-reports-v90 .mr-evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 42px}.page-case-reports-v90 .mr-evidence-grid p{max-width:76ch}.page-case-reports-v90 .mr-source{font:400 12px/1.6 var(--font-body);margin-top:25px}
@@ -2882,8 +2884,8 @@ body.menu-open .site-header--floating .header-logo { height:44px !important; }}
   .mr-health-story__chapters{display:none}
 }
 </style>
-<link rel="stylesheet" href="management-v100.css?v=112">
-<link rel="stylesheet" href="report-tools-strip.css?v=112">
+<link rel="stylesheet" href="management-v100.css?v=125">
+<link rel="stylesheet" href="report-tools-strip.css?v=125">
 
 <style id="management-builder-context-v102">
 /* A short bridge inside Decision 02; no new chapter, pin or animation. */
@@ -2929,36 +2931,36 @@ body.menu-open .site-header--floating .header-logo { height:44px !important; }}
   .page-case-reports-v90 #builder-pattern.mr-builder-context{break-inside:avoid}
 }
 </style>
-<link rel="stylesheet" href="management-v103.css?v=112">
-<link rel="stylesheet" href="report-lifecycle-v103.css?v=112">
-<link rel="stylesheet" href="persona-motion.css?v=112">
+<link rel="stylesheet" href="management-v103.css?v=125">
+<link rel="stylesheet" href="report-lifecycle-v103.css?v=125">
+<link rel="stylesheet" href="persona-motion.css?v=125">
 <script defer src="persona-motion.js?v=112"></script>
-<link rel="stylesheet" href="portfolio-v107.css?v=112">
+<link rel="stylesheet" href="portfolio-v107.css?v=125">
 <style id="v108-preloader-critical">
 /* Empty, hidden artwork is the first paint; only the composed signature enters. */
-html.js:not(.is-ready){background:#18191c}
-html.js:not(.is-ready) body{background:#18191c}
-html.js:not(.is-ready) body:is(.page-home,.page-case-agent,.page-case-reports){background:#18191c!important}
+html.js:not(.is-ready){background:#252f29}
+html.js:not(.is-ready) body{background:#252f29}
+html.js:not(.is-ready) body:is(.page-home,.page-case-agent,.page-case-reports){background:#252f29!important}
 html.js:not(.is-ready) body #main,html.js:not(.is-ready) body #contact,html.js:not(.is-ready) body .site-header,html.js:not(.is-ready) body .section-progress{visibility:hidden!important;pointer-events:none!important}
 html.js:not(.is-ready) body .site-header{opacity:0!important}
-html.js:not(.is-ready) .page-wipe{position:fixed;inset:0;z-index:10000;background:#232428;transform:none!important;opacity:0;transition:opacity .65s ease!important}
+html.js:not(.is-ready) .page-wipe{position:fixed;inset:0;z-index:10000;background:#292e26;transform:none!important;opacity:0;transition:opacity .65s ease!important}
 html.js.preloader-entering:not(.is-ready) .page-wipe{opacity:1}
 html.js:not(.is-ready) .page-wipe__signature-wrap{opacity:0!important}
 html.js:not(.is-ready) .page-wipe.is-centered.is-composed .page-wipe__signature-wrap{opacity:1!important;transition:opacity .45s ease!important}
 @media(prefers-reduced-motion:reduce){html.js:not(.is-ready) .page-wipe,html.js:not(.is-ready) .page-wipe__signature-wrap{transition:none!important}}
 </style>
-<link rel="stylesheet" href="portfolio-v108.css?v=112">
+<link rel="stylesheet" href="portfolio-v108.css?v=125">
 <script>/* Do not trap a visitor if an external controller fails to load. */
 window.setTimeout(function(){if(!document.documentElement.classList.contains('is-ready')){document.documentElement.classList.add('is-ready');document.body.classList.add('hero-loaded');document.dispatchEvent(new Event('portfolio:ready'));}},5000);
 </script>
-<link rel="stylesheet" href="management-v109.css?v=112">
-<link rel="stylesheet" href="cursor-v110.css?v=112">
-<link rel="stylesheet" href="management-v110.css?v=112">
-<link rel="stylesheet" href="management-report-flow.css?v=113">
+<link rel="stylesheet" href="management-v109.css?v=125">
+<link rel="stylesheet" href="cursor-v110.css?v=125">
+<link rel="stylesheet" href="management-v110.css?v=125">
+<link rel="stylesheet" href="management-report-flow.css?v=125">
 <link rel="stylesheet" href="report-output-comparison.css?v=112">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&amp;display=swap">
 <link rel="stylesheet" href="management-landing.css?v=112">
-<link rel="stylesheet" href="portfolio-v114.css?v=114">
+<link rel="stylesheet" href="portfolio-v114.css?v=125">
 <style id="v119-at-a-glance-grid">
 /* v119: At a glance — resolved specificity conflict + balanced 2x2 sticky-note hierarchy */
 html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-v24__inner{
@@ -2994,7 +2996,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric{
   gap:10px!important;
   border:0!important;
   border-radius:4px 6px 5px 3px!important;
-  box-shadow:2px 14px 34px rgba(35,36,40,.11)!important;
+  box-shadow:2px 14px 34px rgba(41,46,38,.11)!important;
 }
 html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric:nth-child(1){transform:rotate(-.55deg)!important}
 html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric:nth-child(2){transform:rotate(.45deg)!important}
@@ -3060,6 +3062,8 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 }
 </style>
 
+<link rel="stylesheet" href="portfolio-earth.css?v=125">
+<link rel="stylesheet" href="portfolio-v126.css?v=126">
 </head>
 <body class="page-case page-case-reports page-case-reports-v90">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -3069,14 +3073,14 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 <div class="cursor-scribble cursor-duotone-v110" aria-hidden="true"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><g class="cursor-duotone__orbit"><circle class="cursor-duotone__grey" cx="24" cy="24" r="16"/><path class="cursor-duotone__white" d="M24 8a16 16 0 0 1 0 32"/></g><g class="cursor-duotone__core"><circle class="cursor-duotone__dot-grey" cx="24" cy="24" r="3.5"/><path class="cursor-duotone__dot-orange" d="M24 20.5a3.5 3.5 0 0 1 0 7Z"/></g></svg></div>
 <header class="site-header site-header--untold site-header--floating" data-theme="light">
 <div class="header-actions"><div class="site-header__combo-pill"><a aria-label="Shiva Sah home" class="header-logo header-logo--signature transition-link" href="index.html">
-<img alt="" aria-hidden="true" class="header-lastoria-v70" loading="lazy" src="assets/shiva-wordmark-static.svg"/>
+<img alt="" aria-hidden="true" class="header-lastoria-v70" loading="lazy" src="assets/shiva-wordmark-static.svg?v=125"/>
 <span class="sr-only">Shiva Sah</span>
 </a><button aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog" aria-label="Open menu" class="site-menu-trigger site-menu-trigger--wordmark-burger" type="button"><span aria-hidden="true" class="site-menu-trigger__burger"><span></span><span></span><span></span></span><span class="sr-only">Menu</span></button></div></div>
 </header>
 <div aria-hidden="true" aria-labelledby="site-menu-title" aria-modal="true" class="site-menu" hidden="" id="site-menu" inert="" role="dialog" tabindex="-1">
 <div class="site-menu__bar">
 <h2 class="site-menu__label" id="site-menu-title">
-<img alt="" aria-hidden="true" class="site-menu__signature-v70" loading="lazy" src="assets/shiva-wordmark-static.svg"/>
+<img alt="" aria-hidden="true" class="site-menu__signature-v70" loading="lazy" src="assets/shiva-wordmark-light-v125.svg?v=125"/>
 <span class="sr-only">Shiva</span>
 </h2>
 </div>
@@ -3086,18 +3090,18 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 <div class="site-menu__works-group">
 <button aria-controls="site-menu-case-studies" aria-expanded="false" class="site-menu__page site-menu__works-toggle" data-menu-section="work" type="button">
 <strong>Selected works</strong>
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg>
+<svg aria-hidden="true" class="site-menu__indicator" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg>
 </button>
 <div class="site-menu__projects-panel" hidden="" id="site-menu-case-studies"><div class="site-menu__projects-inner">
 <a class="site-menu__project" data-menu-page="agent-management.html" href="agent-management.html"><strong>Agent Management</strong><em>Cisco AppDynamics</em></a>
 <a class="site-menu__project" data-menu-page="management-reports.html" href="management-reports.html"><strong>Management Reports</strong><em>Intuit QuickBooks</em></a>
-<div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Domain-Centric Views</strong><em>Cisco Cloud Observability</em><span class="site-menu__soon">Adding soon</span></div>
+<div aria-disabled="true" class="site-menu__project site-menu__project--locked"><strong>Domain-Centric Views</strong><em>Cisco Cloud Observability</em><span class="site-menu__soon site-menu__soon--locked"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M7.5 10V7.5a4.5 4.5 0 0 1 9 0V10M6 10h12v10H6z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg><span>Can be presented on demand</span></span></div>
 </div></div>
 </div>
 <a class="site-menu__page" data-menu-section="writing" href="index.html#writing"><strong>Notes &amp; essays</strong></a>
 <a class="site-menu__page" data-menu-section="vibes" href="index.html#vibes"><strong>Experiments</strong></a>
 <a class="site-menu__page" data-menu-section="intro" href="index.html#intro"><strong>Approach</strong></a>
-<a aria-label="View Shiva's resume (opens in a new tab)" class="site-menu__page resume-link" href="https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong>Resume</strong><span aria-hidden="true">↗</span></a><a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
+<a aria-label="View Shiva's resume (opens in a new tab)" class="site-menu__page resume-link" href="https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing" rel="noopener noreferrer" target="_blank"><strong>Resume</strong><svg aria-hidden="true" class="site-menu__indicator" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"></path></svg></a><a class="site-menu__page" data-menu-section="contact" href="index.html#contact"><strong>Contact</strong></a>
 </nav>
 </div>
 </div>
@@ -3132,7 +3136,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
     </div>
   </div>
 </section>
-<section class="section section--paper pitch-v24 pitch-v114--research" data-header-theme="light" id="pitch">
+<section class="section section--paper pitch-v24 pitch-v114--research pitch-v126--three" data-header-theme="light" id="pitch">
 <div class="shell pitch-v24__inner">
 <div class="pitch-v24__top">
 <div class="pitch-v24__copy">
@@ -3141,25 +3145,25 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 <p class="copy muted reveal" data-reveal-delay="130">Management Reports brought financial statements, KPIs, charts and written commentary into a single document editor, with the structure and styling carrying forward to the next period.</p>
 </div>
 </div>
-<div aria-label="Management Reports outcomes and research" class="pitch-v24__metrics">
+<div aria-label="Management Reports at a glance" class="pitch-v24__metrics">
 <article class="pitch-metric reveal pitch-metric--yellow"><strong>219.4K</strong><b>report saves</b></article>
 <article class="pitch-metric reveal pitch-metric--orange" data-reveal-delay="60"><strong>162.6K</strong><b>publish / send / export events</b></article>
 <article class="pitch-metric reveal pitch-metric--paper" data-reveal-delay="120"><strong>72%</strong><b>created reports reach distribution</b></article>
-<article class="pitch-metric reveal pitch-metric--ink" data-reveal-delay="180"><strong>47</strong><b>Follow-Me-Homes</b><span>19 business owners · 28 accountants</span></article>
+
 </div>
 </div>
 </section>
 
 <section class="section section--paper" data-header-theme="light" id="overview">
 <div class="shell">
-<div class="agent-role-layout"><div class="agent-role-intro"><div class="mr-heading"><h2 class="agent-section-heading">I carried the work from a broad brief to a shipped authoring system.</h2></div></div><div class="agent-role-board"><article class="agent-role-note agent-role-note--orange"><span class="agent-role-note__index">01</span><h3>Turn a feature wish-list into one product model.</h3><p>Problem framing + report lifecycle + capability map</p></article><article class="agent-role-note agent-role-note--yellow"><span class="agent-role-note__index">02</span><h3>Run research continuously, not in phases.</h3><p>Rolling Follow-Me-Homes from vision to build, feeding each iteration</p></article><article class="agent-role-note agent-role-note--paper"><span class="agent-role-note__index">03</span><h3>Define the authoring rules the system runs on.</h3><p>Canvas architecture · time-period logic · reusable content blocks</p></article><article class="agent-role-note agent-role-note--ink"><span class="agent-role-note__index">04</span><h3>Protect the core workflow and keep it consistent across the product.</h3><p>Release sequencing with product and engineering · aligned KPI editor, dashboard and report-customize patterns</p></article><p class="agent-role-collaborators"><strong>With</strong> product management · engineering · research · content design · design systems · design leadership</p></div></div>
+<div class="agent-role-layout"><div class="agent-role-intro"><div class="mr-heading"><h2 class="agent-section-heading">I carried the work from a broad brief to a shipped authoring system.</h2></div></div><div class="agent-role-board"><article class="agent-role-note agent-role-note--orange"><h3>Turn a feature wish-list into one product model.</h3><p>Problem framing + report lifecycle + capability map</p></article><article class="agent-role-note agent-role-note--yellow"><h3>Run research continuously, not in phases.</h3><p>Rolling Follow-Me-Homes from vision to build, feeding each iteration</p></article><article class="agent-role-note agent-role-note--paper"><h3>Define the authoring rules the system runs on.</h3><p>Canvas architecture · time-period logic · reusable content blocks</p></article><article class="agent-role-note agent-role-note--ink"><h3>Protect the core workflow and keep it consistent across the product.</h3><p>Release sequencing with product and engineering · aligned KPI editor, dashboard and report-customize patterns</p></article><p class="agent-role-collaborators"><strong>With</strong> product management · engineering · research · content design · design systems · design leadership</p></div></div>
 </div>
 </section>
 
 <section id="background" class="section section--paper mr-health-story" data-header-theme="light" aria-label="Health-report metaphor">
 <div class="mr-health-story__shell">
   <div class="mr-health-story__visual">
-    <iframe id="healthMetaphorFrame" class="mr-health-story__frame" src="assets/reports/health-metaphor-motion.html?frame=title&v=107" title="Health-report metaphor animation" loading="eager"></iframe>
+    <iframe id="healthMetaphorFrame" class="mr-health-story__frame" src="assets/reports/health-metaphor-motion.html?frame=title&v=125" title="Health-report metaphor animation" loading="eager"></iframe>
   </div>
   <div class="mr-health-story__chapters" aria-hidden="true">
     <div class="mr-health-chapter" data-health-target="0.9"></div>
@@ -3186,7 +3190,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 
 <section class="section section--ink" data-header-theme="dark" id="why-it-mattered">
 <div class="shell">
-<div class="mr-heading"><h4 class="section-label mr-why-label">Why it mattered</h4><h2 class="agent-section-heading">The report is the moment the books become advice.</h2></div><div class="mr-grid-3"><article class="mr-force"><span class="mr-index">01</span><h3>Customers</h3><p class="copy">VOC across Slack, support and research kept surfacing the same three asks: control over data, control over presentation, less rework.</p></article><article class="mr-force"><span class="mr-index">02</span><h3>Business</h3><p class="copy">Only 2.5% of QuickBooks customers used legacy Management Reports in the project baseline. Accountants were taking the work elsewhere at the moment they needed to explain their value to clients.</p></article><article class="mr-force"><span class="mr-index">03</span><h3>Platform</h3><p class="copy">QuickBooks was moving toward an AI-native, builder-based architecture. Reporting needed an authoring foundation that could carry AI assistance, not another template.</p></article></div><div class="mr-gap"></div>
+<div class="mr-heading"><h2 class="mr-why-title">Why it mattered</h2><h3 class="mr-why-statement">The report is the moment the books become advice.</h3></div><div class="mr-grid-3"><article class="mr-force"><h3>Customers</h3><p class="copy">VOC across Slack, support and research kept surfacing the same three asks: control over data, control over presentation, less rework.</p></article><article class="mr-force"><h3>Business</h3><p class="copy">Only 2.5% of QuickBooks customers used legacy Management Reports in the project baseline. Accountants were taking the work elsewhere at the moment they needed to explain their value to clients.</p></article><article class="mr-force"><h3>Platform</h3><p class="copy">QuickBooks was moving toward an AI-native, builder-based architecture. Reporting needed an authoring foundation that could carry AI assistance, not another template.</p></article></div>
 </div>
 </section>
 
@@ -3352,9 +3356,38 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 
 </div></section>
 
+<section class="section section--paper mr-principles-section" data-header-theme="light" id="principles">
+<div class="shell">
+<div class="mr-principles-heading">
+
+<h2 class="agent-section-heading">Two principles shaped the experience.</h2>
+</div>
+<div aria-label="Management Reports design principles" class="agent-learning-grid mr-principles-grid">
+<article class="agent-learning-note mr-principle-note mr-principle-note--live">
+<button aria-controls="mr-principle-detail-1" aria-describedby="mr-principle-detail-1" aria-expanded="false" aria-labelledby="mr-principle-title-1" class="agent-learning-card mr-principle-card" data-learning-note="" type="button">
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-trust.svg?v=125"/></span>
+
+<span class="agent-learning-card__title" id="mr-principle-title-1">Make live data feel dependable</span>
+<span class="agent-learning-card__detail" id="mr-principle-detail-1">Reports, KPIs, periods and numbers can all change. Make those changes predictable and easy to trust.</span>
+<span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
+</button>
+</article>
+<article class="agent-learning-note mr-principle-note mr-principle-note--author">
+<button aria-controls="mr-principle-detail-2" aria-describedby="mr-principle-detail-2" aria-expanded="false" aria-labelledby="mr-principle-title-2" class="agent-learning-card mr-principle-card" data-learning-note="" type="button">
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" height="76" src="assets/principle-authorship-v126.svg" width="76"/></span>
+
+<span class="agent-learning-card__title" id="mr-principle-title-2">Keep authorship with the accountant</span>
+<span class="agent-learning-card__detail" id="mr-principle-detail-2">AI and smart scaffolding can get the report started. The accountant brings the judgment, context and final touch.</span>
+<span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
+</button>
+</article>
+</div>
+</div>
+</section>
+
 <section class="section section--ink" data-header-theme="dark" id="lifecycle">
 <div class="shell">
-<div class="mr-heading"><h2 class="agent-section-heading">One report lifecycle:<br/>Create → Build → Collaborate → Publish.</h2></div><article aria-labelledby="mr-decision-01" class="decision-card-wide-v70 decision-card-wide-v71 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" height="62" loading="lazy" src="assets/decision-lightbulb-v73.svg" width="62"/><span>Decision 01</span></div><div><h3 class="decision-card-wide-v70__title" id="mr-decision-01">Define the whole. Sequence the release.</h3><p class="decision-card-wide-v70__copy">I used the vision prototype to get leadership, product and engineering agreeing on the same end state before we argued about November.</p></div></article><figure aria-describedby="mr-northstar-note" aria-labelledby="mr-northstar-title" class="mr-northstar mr-northstar--notes">
+<div class="mr-heading"><h2 class="agent-section-heading">One report lifecycle:<br/>Create → Build → Collaborate → Publish.</h2></div><article aria-labelledby="mr-decision-01" class="decision-card-wide-v70 decision-card-wide-v71 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" height="62" loading="lazy" src="assets/decision-lightbulb-v73.svg?v=125" width="62"/><span>Decision 01</span></div><div><h3 class="decision-card-wide-v70__title" id="mr-decision-01">Define the whole. Sequence the release.</h3><p class="decision-card-wide-v70__copy">I used the vision prototype to get leadership, product and engineering agreeing on the same end state before we argued about November.</p></div></article><figure aria-describedby="mr-northstar-note" aria-labelledby="mr-northstar-title" class="mr-northstar mr-northstar--notes">
 <figcaption class="mr-northstar__caption">
 <h3 id="mr-northstar-title">North Star report lifecycle</h3>
 <p id="mr-northstar-note">Long-term product model, not a shipped-feature checklist. First-release focus refers to the stage; individual capabilities follow the 2025 release plan.</p>
@@ -3429,24 +3462,25 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 <section id="design" class="section section--paper" data-header-theme="light"><div class="shell"><section id="builder-pattern" class="mr-builder-context-v110" aria-labelledby="mr-partnership-title"><h1 id="mr-partnership-title" class="mr-chapter-title">Design system partnership</h1><div class="mr-partner-intro"><p>QuickBooks had no builder pattern for this experience. Mailchimp offered a reference, but its email-focused builder used a different design language.</p><p>I worked closely with the Design System team to create the missing patterns, keep them familiar to QuickBooks users, and add them to the shared system as we built.</p></div><div class="mr-system-map" aria-label="Schematic: QuickBooks foundations become report-builder patterns and shared components">
 <article class="mr-system-stage"><div class="mr-system-demo" aria-hidden="true"><div class="ms-bar"><i></i><i></i><i></i></div><div class="ms-controls"><span class="ms-input">Date range <b>&#8964;</b></span><div class="ms-row"><span class="ms-button">Save</span><span class="ms-chip">This month</span></div><div class="ms-swatches"><i></i><i></i><i></i><i></i></div></div></div><p class="mr-note-label">Start with what is familiar</p><h3>QuickBooks foundations</h3><p>Controls, typography and interaction conventions customers already know.</p></article>
 <article class="mr-system-stage"><div class="mr-system-demo" aria-hidden="true"><div class="ms-bar"><span>Monthly report</span></div><div class="ms-builder"><div class="ms-page"><i></i><i></i><div class="ms-chart"><b></b><b></b><b></b><b></b></div><i></i><i></i></div><div class="ms-panel"><b>Content</b><span>Text</span><span>Reports</span><span>KPIs</span></div><div class="ms-rail"><i></i><i></i><i></i></div></div><div class="ms-footer"><span>Save</span></div></div><p class="mr-note-label">Create the missing pattern</p><h3>A report builder</h3><p>A canvas, content library and contextual tools that work as one authoring model.</p></article>
-<article class="mr-system-stage"><div class="mr-system-demo" aria-hidden="true"><div class="ms-bar"><span>Shared patterns</span></div><div class="ms-tiles"><div><i class="ms-icon-block"></i><span>Content block</span></div><div><i class="ms-icon-panel"></i><span>Side panel</span></div><div><i class="ms-icon-period"></i><span>Period control</span></div><div><i class="ms-icon-state"></i><span>States</span></div></div></div><p class="mr-note-label">Build with the system team</p><h3>Reusable patterns</h3><p>Develop components and interactions alongside the product, not as one-off screens.</p></article></div><p class="mr-schematic-caption">Pattern map; a schematic of the design approach.</p></section><article aria-labelledby="mr-decision-02" class="decision-card-wide-v70 decision-card-wide-v71 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" height="62" loading="lazy" src="assets/decision-lightbulb-v73.svg" width="62"/><span>Decision 02</span></div><div><h3 class="decision-card-wide-v70__title" id="mr-decision-02">Bring numbers and commentary into one editor.</h3><p class="decision-card-wide-v70__copy">Dashboards answer “what’s happening”; a management report answers “what should we do”. The editor had to feel like writing, with the numbers live inside it.</p></div></article><figure class="mr-real-image mr-editor-sketch"><a aria-label="Enlarge: Editor layout sketch with header, canvas, content library, right rail and footer" data-caption="The editor layout: a paged canvas, content library, right rail, header and footer." data-mr-image="" href="assets/reports/editor-layout-sketch.png"><img alt="Editor layout sketch with header, canvas, content library, right rail and footer" decoding="async" height="1231" loading="lazy" src="assets/reports/editor-layout-sketch.png" width="2048"/></a><figcaption>The editor layout: a paged canvas, content library, right rail, header and footer.</figcaption></figure></div></section>
+<article class="mr-system-stage"><div class="mr-system-demo" aria-hidden="true"><div class="ms-bar"><span>Shared patterns</span></div><div class="ms-tiles"><div><i class="ms-icon-block"></i><span>Content block</span></div><div><i class="ms-icon-panel"></i><span>Side panel</span></div><div><i class="ms-icon-period"></i><span>Period control</span></div><div><i class="ms-icon-state"></i><span>States</span></div></div></div><p class="mr-note-label">Build with the system team</p><h3>Reusable patterns</h3><p>Develop components and interactions alongside the product, not as one-off screens.</p></article></div><p class="mr-schematic-caption">Pattern map; a schematic of the design approach.</p></section><article aria-labelledby="mr-decision-02" class="decision-card-wide-v70 decision-card-wide-v71 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" height="62" loading="lazy" src="assets/decision-lightbulb-v73.svg?v=125" width="62"/><span>Decision 02</span></div><div><h3 class="decision-card-wide-v70__title" id="mr-decision-02">Bring numbers and commentary into one editor.</h3><p class="decision-card-wide-v70__copy">Dashboards answer “what’s happening”; a management report answers “what should we do”. The editor had to feel like writing, with the numbers live inside it.</p></div></article><figure class="mr-real-image mr-editor-sketch"><a aria-label="Enlarge: Editor layout sketch with header, canvas, content library, right rail and footer" data-caption="The editor layout: a paged canvas, content library, right rail, header and footer." data-mr-image="" href="assets/reports/editor-layout-sketch.png"><img alt="Editor layout sketch with header, canvas, content library, right rail and footer" decoding="async" height="1231" loading="lazy" src="assets/reports/editor-layout-sketch.png" width="2048"/></a><figcaption>The editor layout: a paged canvas, content library, right rail, header and footer.</figcaption></figure></div></section>
 
 <section class="section section--sand" data-header-theme="light" id="period"><div class="shell">
 <div class="mr-heading"><h2 class="agent-section-heading">The report sets the default time period.</h2></div>
-<article aria-labelledby="mr-decision-03" class="decision-card-wide-v70 decision-card-wide-v71 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" height="62" loading="lazy" src="assets/decision-lightbulb-v73.svg" width="62"/><span>Decision 03</span></div><div><h3 class="decision-card-wide-v70__title" id="mr-decision-03">Use the report period by default.</h3><p class="decision-card-wide-v70__copy">Newly inserted reports should use the management report’s period. A saved custom report can be an exception; make that difference explicit instead of silently changing its dates.</p></div></article>
+<article aria-labelledby="mr-decision-03" class="decision-card-wide-v70 decision-card-wide-v71 decision-fixed"><div class="decision-card-wide-v70__index"><img alt="" aria-hidden="true" class="decision-card-wide-v73__icon" height="62" loading="lazy" src="assets/decision-lightbulb-v73.svg?v=125" width="62"/><span>Decision 03</span></div><div><h3 class="decision-card-wide-v70__title" id="mr-decision-03">Use the report period by default.</h3><p class="decision-card-wide-v70__copy">Newly inserted reports should use the management report’s period. A saved custom report can be an exception; make that difference explicit instead of silently changing its dates.</p></div></article>
 
 <div aria-label="Date handling explorations" aria-roledescription="carousel" class="mr-period-carousel" role="region"><div aria-label="Three explorations for handling report dates" class="mr-period-slides" id="mr-period-slides"><article aria-label="1 of 3" aria-roledescription="slide" class="mr-period-exploration" id="mr-period-slide-1" role="group"><figure class="mr-real-image"><a aria-label="Enlarge: Saved dates, explained after insertion" data-caption="Saved dates, explained after insertion" data-mr-image="" href="assets/reports/period-saved-dates.png"><img alt="Saved dates, explained after insertion" decoding="async" height="1365" loading="lazy" src="assets/reports/period-saved-dates.png" width="2048"/></a></figure><div class="mr-period-exploration__copy"><span class="mr-note-label">Exploration 01</span><h3>Saved dates, explained after insertion</h3><p>A contextual message explains why this block uses saved dates and offers “Match to management report”.</p><p class="mr-period-tradeoff">It keeps the flow moving, but the person needs to notice the mismatch after the report is already on the canvas.</p></div></article><article aria-label="2 of 3" aria-roledescription="slide" class="mr-period-exploration" id="mr-period-slide-2" role="group"><figure class="mr-real-image"><a aria-label="Enlarge: Choose a period while inserting" data-caption="Choose a period while inserting" data-mr-image="" href="assets/reports/period-insert-dropdown.png"><img alt="Choose a period while inserting" decoding="async" height="1365" loading="lazy" src="assets/reports/period-insert-dropdown.png" width="2048"/></a></figure><div class="mr-period-exploration__copy"><span class="mr-note-label">Exploration 02</span><h3>Choose a period while inserting</h3><p>A compact insert dialog starts with the management report’s global time period.</p><p class="mr-period-tradeoff">The default is visible, but asking on every insertion adds a step even when the periods already match.</p></div></article><article aria-label="3 of 3" aria-roledescription="slide" class="mr-period-exploration" id="mr-period-slide-3" role="group"><figure class="mr-real-image"><a aria-label="Enlarge: Make the date choices explicit" data-caption="Make the date choices explicit" data-mr-image="" href="assets/reports/period-explicit-choice.png"><img alt="Make the date choices explicit" decoding="async" height="1365" loading="lazy" src="assets/reports/period-explicit-choice.png" width="2048"/></a></figure><div class="mr-period-exploration__copy"><span class="mr-note-label">Exploration 03</span><h3>Make the date choices explicit</h3><p>A dialog separates keeping saved dates, matching the management report and choosing another period.</p><p class="mr-period-tradeoff">The distinction is clear. It is most useful when there is a real exception, rather than as a routine interruption.</p></div></article></div><div class="mr-carousel-controls" hidden=""><button aria-label="Previous date exploration" data-period-prev="" type="button">←</button><div aria-label="Choose an exploration" class="mr-carousel-dots" role="group"><button aria-current="true" aria-label="Exploration 1: saved dates" data-period-slide="0" type="button">1</button><button aria-label="Exploration 2: insert dropdown" data-period-slide="1" type="button">2</button><button aria-label="Exploration 3: explicit choices" data-period-slide="2" type="button">3</button></div><span aria-live="polite" data-period-status="">1 of 3</span><button aria-label="Next date exploration" data-period-next="" type="button">→</button></div></div><div class="mr-period-principle"><h3>A sensible default, with room for exceptions.</h3><p class="copy">Keep one reporting period as the default. When saved dates differ, explain the difference and let the author keep those dates or match the report. The rule does the routine work; the author handles the exception.</p></div></div></section>
 
 
 
-<section id="solution" class="section section--ink mr-report-flow" data-header-theme="dark" aria-label="The final experience"><div class="mr-report-track"><div class="mr-report-pin"><header class="mr-report-scenario"><h2>The final experience</h2><h3>Accountant Emily prepares the monthly financial summary for Owner James.</h3></header><div class="mr-report-caption"><h3 class="sr-only" data-mr-flow-title>Start from a template</h3><p data-mr-flow-copy aria-live="polite" aria-atomic="true">Emily starts with a ready-made management report rather than a blank page.</p></div><div class="mr-report-visual"><div class="mr-report-viewport"><img class="mr-report-poster" src="assets/reports/report-flow/poster-01.webp" width="1440" height="960" alt="" decoding="async"><iframe aria-hidden="true" id="reportFlowFrame" loading="eager" src="assets/reports/report-flow-v110/player.html?v=113" tabindex="-1" title="Management Reports: template, cover, financials, KPIs, live numbers, preview, publish"></iframe><div class="mr-report-feedback" role="status" aria-live="polite"><p data-mr-flow-feedback>Loading animation...</p><button type="button" data-mr-flow-retry hidden>Retry animation</button></div></div></div><nav class="mr-report-controls" aria-label="Report walkthrough"><button type="button" data-mr-flow-prev aria-label="Previous step" disabled>&#8592;</button><span data-mr-flow-count>1 of 7</span><button type="button" data-mr-flow-next aria-label="Next step">&#8594;</button><button type="button" data-mr-flow-replay aria-label="Replay this step" disabled>Replay step</button></nav><nav class="mr-report-progress" aria-label="Choose a report-building step"><button type="button" data-mr-act="1" aria-label="Step 1: Start from a template"><span></span></button><button type="button" data-mr-act="2" aria-label="Step 2: Brand the cover"><span></span></button><button type="button" data-mr-act="3" aria-label="Step 3: Bring in the financials"><span></span></button><button type="button" data-mr-act="4" aria-label="Step 4: Shape the KPIs"><span></span></button><button type="button" data-mr-act="5" aria-label="Step 5: Write with live numbers"><span></span></button><button type="button" data-mr-act="6" aria-label="Step 6: Preview the report"><span></span></button><button type="button" data-mr-act="7" aria-label="Step 7: Publish and send"><span></span></button></nav><p class="sr-only" data-mr-flow-status aria-live="polite"></p></div></div><div class="mr-report-static-wrap shell"><button type="button" data-mr-flow-optin hidden>Play animated walkthrough</button><header class="mr-report-scenario"><h2>The final experience</h2><h3>Accountant Emily prepares the monthly financial summary for Owner James.</h3></header><div class="shell mr-report-static"><article><figure><img alt="Start from a template" height="960" loading="lazy" src="assets/reports/report-flow/poster-01.webp" width="1440"/></figure><div><p class="mr-report-step">1 of 7</p><h3>Start from a template</h3><p>Emily starts with a ready-made management report rather than a blank page.</p></div></article><article><figure><img alt="Brand the cover" height="960" loading="lazy" src="assets/reports/report-flow/poster-02.webp" width="1440"/></figure><div><p class="mr-report-step">2 of 7</p><h3>Brand the cover</h3><p>She chooses a cover style that fits the client’s identity.</p></div></article><article><figure><img alt="Bring in the financials" height="960" loading="lazy" src="assets/reports/report-flow/poster-03.webp" width="1440"/></figure><div><p class="mr-report-step">3 of 7</p><h3>Bring in the financials</h3><p>She adds a balance sheet from the content library; it joins the report and its contents.</p></div></article><article><figure><img alt="Shape the KPIs" height="960" loading="lazy" src="assets/reports/report-flow/poster-04.webp" width="1440"/></figure><div><p class="mr-report-step">4 of 7</p><h3>Shape the KPIs</h3><p>She changes the chart type, adds revenue and resizes the KPI to fit the page.</p></div></article><article><figure><img alt="Write with live numbers" height="960" loading="lazy" src="assets/reports/report-flow/poster-05.webp" width="1440"/></figure><div><p class="mr-report-step">5 of 7</p><h3>Write with live numbers</h3><p>She writes commentary using variables that resolve to values for the reporting period.</p></div></article><article><figure><img alt="Preview the report" height="960" loading="lazy" src="assets/reports/report-flow/poster-06.webp" width="1440"/></figure><div><p class="mr-report-step">6 of 7</p><h3>Preview the report</h3><p>She checks the complete paginated report as the recipient will see it.</p></div></article><article><figure><img alt="Publish and send" height="960" loading="lazy" src="assets/reports/report-flow/poster-07.webp" width="1440"/></figure><div><p class="mr-report-step">7 of 7</p><h3>Publish and send</h3><p>She publishes and sends the PDF to James; he gets a report he can read before their review.</p></div></article></div></div><div class="shell"><p class="mr-report-endnote">A report is not finished at save. It needs to be ready for the person receiving it.</p></div></section>
+<section aria-label="The final experience" class="section mr-report-flow section--paper mr-report-flow--paper" data-header-theme="light" id="solution"><div class="mr-report-track"><div class="mr-report-pin"><header class="mr-report-scenario"><h2>The final experience</h2><h3>Accountant Emily prepares the monthly financial summary for Owner James.</h3></header><div class="mr-report-caption"><h3 class="sr-only" data-mr-flow-title="">Start from a template</h3><p aria-atomic="true" aria-live="polite" data-mr-flow-copy="">Emily starts with a ready-made management report rather than a blank page.</p></div><div class="mr-report-visual"><div class="mr-report-viewport"><img alt="" class="mr-report-poster" decoding="async" height="960" src="assets/reports/report-flow/poster-01.webp" width="1440"/><iframe aria-hidden="true" id="reportFlowFrame" loading="eager" src="assets/reports/report-flow-v110/player.html?v=125" tabindex="-1" title="Management Reports: template, cover, financials, KPIs, live numbers, preview, publish"></iframe><div aria-live="polite" class="mr-report-feedback" role="status"><p data-mr-flow-feedback="">Loading animation...</p><button data-mr-flow-retry="" hidden="" type="button">Retry animation</button></div></div></div><nav aria-label="Report walkthrough" class="mr-report-controls"><button aria-label="Previous step" data-mr-flow-prev="" disabled="" type="button">←</button><span data-mr-flow-count="">1 of 7</span><button aria-label="Next step" data-mr-flow-next="" type="button">→</button><button aria-label="Replay this step" data-mr-flow-replay="" disabled="" type="button">Replay step</button></nav><nav aria-label="Choose a report-building step" class="mr-report-progress"><button aria-label="Step 1: Start from a template" data-mr-act="1" type="button"><span></span></button><button aria-label="Step 2: Brand the cover" data-mr-act="2" type="button"><span></span></button><button aria-label="Step 3: Bring in the financials" data-mr-act="3" type="button"><span></span></button><button aria-label="Step 4: Shape the KPIs" data-mr-act="4" type="button"><span></span></button><button aria-label="Step 5: Write with live numbers" data-mr-act="5" type="button"><span></span></button><button aria-label="Step 6: Preview the report" data-mr-act="6" type="button"><span></span></button><button aria-label="Step 7: Publish and send" data-mr-act="7" type="button"><span></span></button></nav><p aria-live="polite" class="sr-only" data-mr-flow-status=""></p></div></div><div class="mr-report-static-wrap shell"><button data-mr-flow-optin="" hidden="" type="button">Play animated walkthrough</button><header class="mr-report-scenario"><h2>The final experience</h2><h3>Accountant Emily prepares the monthly financial summary for Owner James.</h3></header><div class="shell mr-report-static"><article><figure><img alt="Start from a template" height="960" loading="lazy" src="assets/reports/report-flow/poster-01.webp" width="1440"/></figure><div><p class="mr-report-step">1 of 7</p><h3>Start from a template</h3><p>Emily starts with a ready-made management report rather than a blank page.</p></div></article><article><figure><img alt="Brand the cover" height="960" loading="lazy" src="assets/reports/report-flow/poster-02.webp" width="1440"/></figure><div><p class="mr-report-step">2 of 7</p><h3>Brand the cover</h3><p>She chooses a cover style that fits the client’s identity.</p></div></article><article><figure><img alt="Bring in the financials" height="960" loading="lazy" src="assets/reports/report-flow/poster-03.webp" width="1440"/></figure><div><p class="mr-report-step">3 of 7</p><h3>Bring in the financials</h3><p>She adds a balance sheet from the content library; it joins the report and its contents.</p></div></article><article><figure><img alt="Shape the KPIs" height="960" loading="lazy" src="assets/reports/report-flow/poster-04.webp" width="1440"/></figure><div><p class="mr-report-step">4 of 7</p><h3>Shape the KPIs</h3><p>She changes the chart type, adds revenue and resizes the KPI to fit the page.</p></div></article><article><figure><img alt="Write with live numbers" height="960" loading="lazy" src="assets/reports/report-flow/poster-05.webp" width="1440"/></figure><div><p class="mr-report-step">5 of 7</p><h3>Write with live numbers</h3><p>She writes commentary using variables that resolve to values for the reporting period.</p></div></article><article><figure><img alt="Preview the report" height="960" loading="lazy" src="assets/reports/report-flow/poster-06.webp" width="1440"/></figure><div><p class="mr-report-step">6 of 7</p><h3>Preview the report</h3><p>She checks the complete paginated report as the recipient will see it.</p></div></article><article><figure><img alt="Publish and send" height="960" loading="lazy" src="assets/reports/report-flow/poster-07.webp" width="1440"/></figure><div><p class="mr-report-step">7 of 7</p><h3>Publish and send</h3><p>She publishes and sends the PDF to James; he gets a report he can read before their review.</p></div></article></div></div><div class="shell"><p class="mr-report-endnote">A report is not finished at save. It needs to be ready for the person receiving it.</p></div></section>
 
 <!-- v111: report OUTPUT comparison; intentionally separate from the earlier editor comparison. -->
 <section id="output-comparison" class="section section--paper mrc-comparison" data-header-theme="light" aria-labelledby="mrc-title">
 <div class="shell">
   <div class="mrc-heading"><div><p class="section-label">Before and after</p><h2 id="mrc-title">Same company, same year.<br><span>Two different reports.</span></h2></div>
   <p class="mrc-intro">The legacy export on the left, the new Management Report on the right, page by page. Sections the old report never had are left empty on its side.</p></div>
-  <div class="mrc-viewer" tabindex="0" role="region" aria-label="Legacy and new report output, aligned by section">
+  <div class="mrc-activation" data-comparison-entry>
+<div class="mrc-preview" data-comparison-preview inert aria-hidden="true"><div class="mrc-viewer" id="mrc-interactive" tabindex="0" role="region" aria-label="Legacy and new report output, aligned by section">
 <nav class="mrc-rail" aria-label="Compare report sections" hidden><button type="button" class="mrc-jump" data-mrc-jump="0" aria-controls="report-compare-cover" aria-current="true">Cover</button><button type="button" class="mrc-jump" data-mrc-jump="1" aria-controls="report-compare-contents" aria-current="false">Contents</button><button type="button" class="mrc-jump" data-mrc-jump="2" aria-controls="report-compare-summary" aria-current="false">Summary</button><button type="button" class="mrc-jump mrc-jump--new" data-mrc-jump="3" aria-controls="report-compare-kpis" aria-current="false" title="Only in the new report">KPIs</button><button type="button" class="mrc-jump mrc-jump--new" data-mrc-jump="4" aria-controls="report-compare-profitability" aria-current="false" title="Only in the new report">Profitability</button><button type="button" class="mrc-jump mrc-jump--new" data-mrc-jump="5" aria-controls="report-compare-cash-flow" aria-current="false" title="Only in the new report">Cash flow</button><button type="button" class="mrc-jump mrc-jump--new" data-mrc-jump="6" aria-controls="report-compare-liquidity" aria-current="false" title="Only in the new report">Liquidity</button><button type="button" class="mrc-jump" data-mrc-jump="7" aria-controls="report-compare-profit-and-loss" aria-current="false">Profit and Loss</button><button type="button" class="mrc-jump" data-mrc-jump="8" aria-controls="report-compare-balance-sheet" aria-current="false">Balance Sheet</button><button type="button" class="mrc-jump mrc-jump--new" data-mrc-jump="9" aria-controls="report-compare-recommendations" aria-current="false" title="Only in the new report">Recommendations</button></nav>
     <div class="mrc-columns">
       <div class="mrc-colhead"><b>Legacy report</b><span>6 pages &middot; statements only</span></div>
@@ -3580,8 +3614,16 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 <button class="mrc-enlarge" type="button" hidden data-mrc-enlarge="mrc-page-16" aria-label="Enlarge New report: Recommendations" title="Enlarge page"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg></button>
 </div></div>
     </div>
-  </div>
-  <p class="mrc-hint">Scroll inside the reports to compare each section.<span class="mrc-enhanced-hint" hidden> Select the expand icon to read a page at a larger size.</span></p>
+  </div></div>
+<button type="button" class="mrc-activate" data-comparison-open aria-expanded="false" aria-controls="mrc-interactive">
+<span class="mrc-activate__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="16" rx="1"/><rect x="14" y="4" width="7" height="16" rx="1"/></svg></span>
+<span class="mrc-activate__title">Explore the report comparison</span>
+<span class="mrc-activate__copy">See the legacy and new report, page by page.</span>
+<span class="mrc-activate__action">Click to compare <span aria-hidden="true">&#8594;</span></span>
+</button>
+<noscript><p class="mrc-noscript">Enable JavaScript to open the interactive report comparison.</p></noscript>
+</div>
+  <p class="mrc-hint" data-comparison-hint hidden>Scroll inside the reports to compare each section.<span class="mrc-enhanced-hint" hidden> Select the expand icon to read a page at a larger size.</span></p>
 </div>
 <dialog class="mrc-dialog" aria-labelledby="mrc-dialog-title">
   <div class="mrc-dialog-bar"><h3 id="mrc-dialog-title">Report page</h3><div class="mrc-dialog-actions"><button class="mrc-zoom" type="button" aria-pressed="false">Actual size</button><button class="mrc-close" type="button" aria-label="Close enlarged report"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div></div>
@@ -3594,9 +3636,9 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 
 <section id="bottleneck" class="section section--paper" data-header-theme="light"><div class="shell"><p class="section-label">What we could have done better</p><h2 class="agent-section-heading">A better builder should not mean starting over.</h2><div class="mr-bottleneck-story"><div><p class="copy">Legacy users had already invested time in their reports. Seamlessly carrying those reports into the new editor would have reduced the effort of making the switch.</p><p class="copy">We could not deliver that migration because the two experiences used different architectures. Translating an existing report into the new builder was an engineering challenge, leaving customers to recreate their setup.</p></div><article class="mr-sticky-v110 mr-sticky-v110--yellow "><span class="mr-note-label">The missed opportunity</span><h3>Bring their work with them.</h3><p>Treat migration as part of onboarding, not a separate task for the customer.</p></article></div><div class="mr-migration-path" aria-label="The gap between saved legacy reports and the new builder"><div><span class="mr-note-label">Existing investment</span><strong>Saved legacy report</strong><p>Structure, choices and repeated work</p></div><div class="mr-migration-gap"><span aria-hidden="true">&#8594;</span><strong>Migration gap</strong><small>Different architectures</small></div><div><span class="mr-note-label">Next iteration</span><strong>Continue in the new builder</strong><p>Preserve the setup before asking for new work</p></div></div><p class="mr-bottleneck-close">The next step is to work with engineering on a reliable migration path, making unsupported elements clear and giving customers a way to review the result.</p></div></section>
 
-<section id="influence" class="section section--sand design-influence-v73" data-header-theme="light">
+<section class="section section--sand design-influence-v73" data-header-theme="light" id="influence">
 <div class="shell">
-<div class="design-influence-v73__head"><div><h2>What design influenced.</h2></div><p>With the Design System team, I helped add the new builder patterns to QuickBooks&rsquo; design system.</p></div><div class="design-influence-v73__notes" aria-label="Areas influenced by design"><article class="design-influence-note design-influence-note--orange"><span>01</span><h3>One authoring model</h3><p>A document editor became the shape of reporting, not a template picker.</p></article><article class="design-influence-note design-influence-note--yellow"><span>02</span><h3>The period rule</h3><p>Inherit-by-default now governs every inserted report.</p></article><article class="design-influence-note design-influence-note--paper"><span>03</span><h3>Reusable builder patterns</h3><p>New components and interactions were developed with the Design System team, alongside the report editor.</p></article><article class="design-influence-note design-influence-note--ink"><span>04</span><h3>A roadmap in the lifecycle</h3><p>Collaboration and scheduling are sequenced, not dropped.</p></article></div>
+<div class="design-influence-v73__head"><div><h2>What design influenced.</h2></div><p>With the Design System team, I helped add the new builder patterns to QuickBooks’ design system.</p></div><div aria-label="Areas influenced by design" class="design-influence-v73__notes"><article class="design-influence-note design-influence-note--orange"><h3>One authoring model</h3><p>A document editor became the shape of reporting, not a template picker.</p></article><article class="design-influence-note design-influence-note--yellow"><h3>The period rule</h3><p>Inherit-by-default now governs every inserted report.</p></article><article class="design-influence-note design-influence-note--paper"><h3>Reusable builder patterns</h3><p>New components and interactions were developed with the Design System team, alongside the report editor.</p></article><article class="design-influence-note design-influence-note--ink"><h3>A roadmap in the lifecycle</h3><p>Collaboration and scheduling are sequenced, not dropped.</p></article></div>
 </div>
 </section>
 
@@ -3606,7 +3648,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 <div aria-label="Project learnings" class="agent-learning-grid">
 <article class="agent-learning-note agent-learning-note--1">
 <button aria-controls="mr-learning-detail-1" aria-describedby="mr-learning-detail-1" aria-expanded="false" aria-labelledby="mr-learning-title-1" class="agent-learning-card" data-learning-note="" type="button">
-<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-share.svg"/>
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-share.svg?v=125"/>
 </span>
 <span class="agent-learning-card__title" id="mr-learning-title-1">Research continuously, decide continuously.</span><span class="agent-learning-card__detail" id="mr-learning-detail-1">Rolling FMHs meant no “big reveal”; and no big surprise.</span>
 <span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
@@ -3614,7 +3656,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 </article>
 <article class="agent-learning-note agent-learning-note--2">
 <button aria-controls="mr-learning-detail-2" aria-describedby="mr-learning-detail-2" aria-expanded="false" aria-labelledby="mr-learning-title-2" class="agent-learning-card" data-learning-note="" type="button">
-<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-align.svg"/>
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-align.svg?v=125"/>
 </span>
 <span class="agent-learning-card__title" id="mr-learning-title-2">Rules before screens.</span><span class="agent-learning-card__detail" id="mr-learning-detail-2">The period logic mattered more than any single layout.</span>
 <span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
@@ -3622,7 +3664,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 </article>
 <article class="agent-learning-note agent-learning-note--3">
 <button aria-controls="mr-learning-detail-3" aria-describedby="mr-learning-detail-3" aria-expanded="false" aria-labelledby="mr-learning-title-3" class="agent-learning-card" data-learning-note="" type="button">
-<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-trust.svg"/>
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-trust.svg?v=125"/>
 </span>
 <span class="agent-learning-card__title" id="mr-learning-title-3">Design for the person receiving it.</span><span class="agent-learning-card__detail" id="mr-learning-detail-3">A useful editor is only half the job; the report also needs to be easy for the client to read and discuss.</span>
 <span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
@@ -3630,7 +3672,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 </article>
 <article class="agent-learning-note agent-learning-note--4">
 <button aria-controls="mr-learning-detail-4" aria-describedby="mr-learning-detail-4" aria-expanded="false" aria-labelledby="mr-learning-title-4" class="agent-learning-card" data-learning-note="" type="button">
-<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-handshake.svg"/>
+<span class="agent-learning-card__space"><img alt="" aria-hidden="true" class="agent-learning-card__icon" src="assets/learning-handshake.svg?v=125"/>
 </span>
 <span class="agent-learning-card__title" id="mr-learning-title-4">Defer whole capabilities, not half of each.</span><span class="agent-learning-card__detail" id="mr-learning-detail-4">A smaller, complete November beat a bigger, uneven one.</span>
 <span aria-hidden="true" class="agent-learning-card__hint"><span>+</span></span>
@@ -3646,24 +3688,24 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 <footer class="site-footer site-footer--v108 site-footer--case-reveal" data-header-theme="dark" id="contact">
 <div class="site-footer__top site-footer__top--simple">
 <div class="site-footer__intro"><p class="site-footer__title">let's<br/>connect.</p><p class="site-footer__note">Open to conversations about complex systems, product craft and mentoring.</p></div>
-<nav aria-label="Browse case studies" class="footer-next"><p class="eyebrow eyebrow--light">Browse case studies</p>
+<nav aria-label="Explore more" class="footer-next"><p class="eyebrow eyebrow--light">Explore more</p>
 <a class="footer-next__link transition-link" href="agent-management.html"><span>Cisco AppDynamics</span><strong>Agent Management <span aria-hidden="true">↗</span></strong></a>
-<a class="footer-next__link transition-link" href="management-reports.html"><span>Intuit QuickBooks</span><strong>Management Reports <span aria-hidden="true">↗</span></strong></a>
-<a class="footer-home transition-link" href="index.html">Homepage <span aria-hidden="true">↗</span></a>
+
+<a class="footer-next__link transition-link" href="index.html#vibes"><span>Side projects</span><strong>Small experiments <span aria-hidden="true">↗</span></strong></a><a class="footer-home transition-link" href="index.html">Homepage <span aria-hidden="true">↗</span></a>
 </nav>
 </div>
 <div class="site-footer__bottom site-footer__bottom--simple">
 <nav aria-label="Social links and email" class="footer-socials" data-contact-links=""><a aria-label="View Shiva's resume (opens in a new tab)" class="resume-link" href="https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing" rel="noopener noreferrer" target="_blank">Resume <span aria-hidden="true">↗</span></a>
 <a aria-label="Shiva on LinkedIn" data-contact-key="linkedin" href="https://linkedin.com/in/shivasah" rel="noopener noreferrer" target="_blank">LinkedIn <span aria-hidden="true">↗</span></a>
 <a aria-label="Shiva on Medium" data-contact-key="medium" href="https://medium.com/@shivasah" rel="noopener noreferrer" target="_blank">Medium <span aria-hidden="true">↗</span></a>
-<span class="footer-email"><a class="footer-email__address" data-contact-key="email" href="mailto:sah.shiva@gmail.com">sah.shiva@gmail.com</a><button aria-label="Copy sah.shiva@gmail.com" class="footer-email__copy" data-copy-email="sah.shiva@gmail.com" title="Copy email address" type="button"><svg aria-hidden="true" height="17" viewbox="0 0 24 24" width="17"><rect height="12" rx="2" width="12" x="8" y="8"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg><span class="footer-email__feedback" hidden="">Copied</span></button><span aria-live="polite" class="sr-only" data-copy-status="" role="status"></span></span>
+<span class="footer-email"><a class="footer-email__address" data-contact-key="email" href="mailto:sah.shiva@gmail.com">sah.shiva@gmail.com</a><button aria-label="Copy sah.shiva@gmail.com" class="footer-email__copy" data-copy-email="sah.shiva@gmail.com" title="Copy email address" type="button"><svg aria-hidden="true" height="17" viewBox="0 0 24 24" width="17"><rect height="12" rx="2" width="12" x="8" y="8"></rect><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"></path></svg><span class="footer-email__feedback" hidden="">Copied</span></button><span aria-live="polite" class="sr-only" data-copy-status="" role="status"></span></span>
 </nav>
-<a aria-label="Back to top" class="back-top back-top--icon" href="#top"><svg aria-hidden="true" viewbox="0 0 32 32"><path d="M16 25V7M9 14l7-7 7 7"></path></svg></a>
+<a aria-label="Back to top" class="back-top back-top--icon" href="#top"><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M16 25V7M9 14l7-7 7 7"></path></svg></a>
 </div>
 </footer>
 <!-- Shared scripts are inlined from v89; other portfolio pages are untouched. -->
 <script src="site-config.js?v=114"></script>
-<script src="preloader-art.js?v=112"></script>
+<script src="preloader-art.js?v=125"></script>
 <script>
 (() => {
   const root = document.documentElement;
@@ -3720,6 +3762,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
       path.style.visibility = 'visible';
     });
     preloader?.classList.add('is-written');
+    root.classList.remove('preloader-entering','reel-incoming');
     root.classList.add('is-ready');
     window.setTimeout(() => document.dispatchEvent(new Event('portfolio:ready')), 0);
     window.setTimeout(() => body.classList.add('hero-loaded'), reduceMotion ? 0 : 80);
@@ -3840,7 +3883,6 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
         ['work', 'Work'],
         ['writing', 'Notes & essays'],
         ['vibes', 'Experiments'],
-        ['manifesto', 'Principle']
       ]
     : body.classList.contains('page-case-agent')
       ? [
@@ -3858,7 +3900,15 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
             ['feedback', 'Feedback'], ['ongoing', 'Ongoing']
           ]
         : body.classList.contains('page-case-reports')
-          ? [["top", "Management Reports"], ["pitch", "At a glance"], ["overview", "Leadership moves"], ["background", "Health-report analogy"], ["problem", "The monthly rebuild"], ["why-it-mattered", "Why it mattered"], ["user", "Emily and James"], ["discovery", "Continuous research"], ["lifecycle", "Decision 01: sequence the whole"], ["legacy", "Learning from legacy"], ["design", "Decision 02: document canvas"], ["period", "Decision 03: period rules"], ["solution", "The final experience"], ["output-comparison", "Report output: before and after"], ["balancing-act", "The balancing act"], ["influence", "Design influence"], ["learning", "Four lessons"]]
+          ? [["top", "Management Reports"],
+             ["pitch", "At a glance"],
+             ["background", "Context and problem"],
+             ["discovery", "Continuous research"],
+             ["lifecycle", "Sequence the whole experience"],
+             ["design", "Designing the report editor"],
+             ["solution", "The final experience"],
+             ["output-comparison", "Old and new report output"],
+             ["learning", "Learnings"]]
           : [];
 
   let sectionProgress = null;
@@ -3907,12 +3957,12 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
       learning: { title: 'Four lessons that stayed with me', subtitle: 'Learnings' }
     } : body.classList.contains('page-home') ? {
       top: ['Home', 'assets/character-hero-q95/center-v4.webp'], intro: ['Approach', 'assets/process-board.webp'], work: ['Selected work', 'assets/agent-hero.webp'],
-      writing: ['Notes & essays', 'assets/feedback-card.webp'], vibes: ['Experiments', 'assets/vibe-codes-preview.svg'], manifesto: ['Principle', 'assets/shiva-sketch-work.webp']
+      writing: ['Notes & essays', 'assets/feedback-card.webp'], vibes: ['Experiments', 'assets/vibe-codes-preview.svg?v=125'], manifesto: ['Principle', 'assets/shiva-sketch-work.webp']
     } : body.classList.contains('page-case-domain') ? {
       top:['Case study','assets/domain-hero.webp'], overview:['Overview','assets/application-map.webp'], alert:['Alert','assets/alert-storm.webp'],
       current:['Current UX','assets/current-observe.webp'], discovery:['Research','assets/research-donut.webp'], insight:['Insight','assets/feedback-heatmap.webp'],
       stories:['Stories','assets/kalpana.webp'], proposal:['Proposal','assets/app-hierarchy.webp'], design:['Design','assets/prototype-01.webp'], feedback:['Feedback','assets/feedback-card.webp'], ongoing:['Ongoing','assets/domain-hero.webp']
-    } : body.classList.contains('page-case-reports') ? {"top": {"title": "Management Reports", "subtitle": "Management Reports"}, "pitch": {"title": "At a glance", "subtitle": "Management Reports"}, "overview": {"title": "Leadership moves", "subtitle": "Management Reports"}, "background": {"title": "Health-report analogy", "subtitle": "Management Reports"}, "problem": {"title": "The monthly rebuild", "subtitle": "Management Reports"}, "why-it-mattered": {"title": "Why it mattered", "subtitle": "Management Reports"}, "user": {"title": "Emily and James", "subtitle": "Management Reports"}, "discovery": {"title": "Continuous research", "subtitle": "Management Reports"}, "lifecycle": {"title": "Decision 01: sequence the whole", "subtitle": "Management Reports"}, "legacy": {"title": "Learning from legacy", "subtitle": "Management Reports"}, "design": {"title": "Decision 02: document canvas", "subtitle": "Management Reports"}, "period": {"title": "Decision 03: period rules", "subtitle": "Management Reports"}, "solution": {"title": "The final experience", "subtitle": "Management Reports"}, "output-comparison": {"title": "Report output: before and after", "subtitle": "Management Reports"}, "balancing-act": {"title": "The balancing act", "subtitle": "Management Reports"}, "influence": {"title": "Design influence", "subtitle": "Management Reports"}, "learning": {"title": "Four lessons", "subtitle": "Management Reports"}} : {};
+    } : body.classList.contains('page-case-reports') ? {"top": {"title": "Management Reports", "subtitle": "Case study"}, "pitch": {"title": "At a glance", "subtitle": "Overview"}, "background": {"title": "Context and problem", "subtitle": "Analogy, monthly rebuild and users"}, "discovery": {"title": "Continuous research", "subtitle": "Follow-Me-Homes and synthesis"}, "lifecycle": {"title": "Sequence the whole experience", "subtitle": "North Star, legacy learning and scope"}, "design": {"title": "Designing the report editor", "subtitle": "Canvas, system coherence and period rules"}, "solution": {"title": "The final experience", "subtitle": "Authoring workflow"}, "output-comparison": {"title": "Old and new report output", "subtitle": "Recipient experience"}, "learning": {"title": "Learnings", "subtitle": "Trade-offs, influence and reflection"}} : {};
 
     const drawer = document.createElement('div');
     drawer.className = 'section-progress__drawer';
@@ -3928,8 +3978,9 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
       const drawerLink = document.createElement('a');
       drawerLink.className = 'section-progress__drawer-item';
       drawerLink.href = `#${item.id}`;
-      const showThumb = body.classList.contains('page-home');
-      drawerLink.innerHTML = `${showThumb && thumb ? `<img src="${thumb}" alt="">` : ''}<span><b>${title}</b><small>${subtitle}</small></span>`;
+      const showThumb = false;
+      drawerLink.classList.add('section-progress__drawer-item--text');
+      drawerLink.innerHTML = `<span><b>${title}</b><small>${subtitle}</small></span>`;
       drawer.appendChild(drawerLink);
       item.drawerLink = drawerLink;
     });
@@ -4145,7 +4196,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
     if (body.classList.contains('page-home')) {
       const probe = window.scrollY + Math.min(180, window.innerHeight * .25);
       active = 'top';
-      for (const id of ['top', 'intro', 'work', 'writing', 'vibes', 'manifesto']) {
+      for (const id of ['top', 'intro', 'work', 'writing', 'vibes']) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top + window.scrollY <= probe) active = id;
       }
@@ -4306,14 +4357,22 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
     finishPreloader();
     loaderRevealAnimation?.cancel();
     window.setPortfolioPreloaderVariant?.();
+    preloader.classList.add('is-repositioning');
+    preloader.style.setProperty('transform','translate3d(0,110%,0)','important');
+    preloader.style.setProperty('transition','none','important');
     preloader.classList.remove('is-parked-bottom');
-    root.classList.add('is-fast-navigation', 'is-leaving');
+    root.classList.add('is-fast-navigation');
     storageSet('shiva-reel-incoming', '1');
-
-    // Every page now uses the authored 1.2-second connected signature.
     resetLoaderDrawing();
-    // The charcoal panel enters first; the 1200ms pen sequence begins after it settles.
-    window.setTimeout(() => drawLoader(() => location.assign(url.href)), 200);
+    // Commit the invisible below-screen start before animating its upward entry.
+    void preloader.getBoundingClientRect();
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      root.classList.add('is-leaving');
+      preloader.classList.remove('is-repositioning');
+      preloader.style.removeProperty('transition');
+      preloader.style.removeProperty('transform');
+      window.setTimeout(() => drawLoader(() => location.assign(url.href)), 700);
+    }));
   };
 
   document.addEventListener('click', event => {
@@ -4691,14 +4750,14 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
   };
 
   const backgroundTones = {
-    paper: { hex: '#fcfcf4', rgb: [252, 252, 244] },
-    sand: { hex: '#ece9e4', rgb: [236, 233, 228] },
-    grey: { hex: '#deded8', rgb: [222, 222, 216] },
+    paper: { hex: '#f3f0e7', rgb: [252, 252, 244] },
+    sand: { hex: '#e4dfd2', rgb: [236, 233, 228] },
+    grey: { hex: '#e4dfd2', rgb: [222, 222, 216] },
     lavender: { hex: '#e8e4da', rgb: [232, 228, 218] },
-    orange: { hex: '#ff5623', rgb: [255, 86, 35] },
-    ink: { hex: '#232428', rgb: [35, 36, 40] },
+    orange: { hex: '#9c4e3b', rgb: [255, 86, 35] },
+    ink: { hex: '#292e26', rgb: [35, 36, 40] },
     night: { hex: '#08070c', rgb: [8, 7, 12] },
-    purple: { hex: '#232428', rgb: [35, 36, 40] },
+    purple: { hex: '#292e26', rgb: [35, 36, 40] },
     umber: { hex: '#343a3a', rgb: [52, 58, 58] },
     graphite: { hex: '#343a3a', rgb: [52, 58, 58] }
   };
@@ -5523,7 +5582,7 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
         const el=document.elementFromPoint(x,y);
         const dark=!document.body.classList.contains('menu-open') &&
           el?.closest('[data-header-theme]')?.dataset.headerTheme==='dark';
-        cursor.style.setProperty('--cursor-line',dark?'#fcfcf4':'#232428');pending=false;
+        cursor.style.setProperty('--cursor-line',dark?'#f3f0e7':'#292e26');pending=false;
       });
     },{passive:true});
   }
@@ -5694,19 +5753,15 @@ html body.page-case-reports-v90 #pitch.pitch-v114--research .pitch-metric>span{
 
 </script>
 
-<script src="report-tools-strip.js?v=112"></script>
-<script src="management-v103.js?v=112"></script>
+<script src="report-tools-strip.js?v=125"></script>
+<script src="management-v103.js?v=123"></script>
 <script src="portfolio-v107.js?v=112" defer></script>
 <script src="portfolio-v108.js?v=112" defer></script>
-<script src="management-report-flow.js?v=113" defer></script>
+<script src="management-report-flow.js?v=124" defer></script>
 <script src="management-v109.js?v=112" defer></script>
 <script src="cursor-v110.js?v=112" defer></script>
 <script src="management-v110.js?v=112" defer></script>
-<script src="report-output-comparison.js?v=112" defer></script>
+<script src="report-output-comparison.js?v=126" defer></script>
 <script src="management-landing.js?v=112" defer></script>
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

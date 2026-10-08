@@ -1,3 +1,56 @@
+# Shiva Sah portfolio; v126
+
+This is a complete static site based on v125. The homepage and both case-study
+HTML pages remain at the ZIP root. Extract the package before opening it.
+
+## Current update
+
+- Shared menu indicators sit beside their labels and use matching outline SVGs.
+- MR At a glance has three theme-coloured notes; its 47-session note is removed.
+- Principles, responsibilities and influence notes use cleaner unnumbered labels.
+- The supplied authorship SVG and the admin-task icon accents use the earthy palette.
+- MR's animated final experience sits on limestone with a black screen outline.
+- The old/new comparison remains blurred and inactive until explicitly opened.
+- Case-study footers link to the other case study and Small experiments, not themselves.
+- The footer top control is visibly active. The loader exits upward without returning.
+- Domain-Centric is no longer labelled Ongoing. The homepage manifesto is removed.
+- Agent evidence surfaces, diagram blending and note colours are corrected.
+- The release sequence distinguishes this case from later cross-platform work.
+- COP explanatory text sits on the left of its existing artwork on desktop.
+
+Targeted styles are in `portfolio-v126.css`. The comparison gate is implemented in
+`report-output-comparison.js`. The standard report player, laptop frames, product
+screens and photos are not replaced. The comparison gate is not access control.
+
+Use the complete build or the v126 patch on a complete v125 repository. Preserve
+the relative paths, including `assets/`. No repository files need deleting. No font
+binaries are included; existing external font sources are unchanged.
+
+---
+
+## Earlier build notes (historical)
+
+# Shiva Sah portfolio; v125
+
+This complete build applies the agreed limestone, olive, moss and burnt-clay palette
+to v124. All three main HTML files are at the ZIP root.
+
+The colour system is documented in `PALETTE-v125.md` and implemented in
+`portfolio-earth.css` plus matching decorative palette values in existing files.
+Use the complete build, or apply every file in the v125 patch to a v124 deployment.
+No repository files need deleting. Resource URLs use v125 cache keys where changed.
+
+Typography, copy, layout and motion timing are unchanged. Product UI screenshots,
+report images, photographs and laptop frames retain their original colours. The
+three homepage thumbnail backdrops alone were adjusted to match the new cards.
+The first-report-screen repair and the homepage's one-second scene holds remain.
+
+No font binaries are bundled. Existing external font sources are unchanged.
+
+---
+
+## Earlier build notes (historical)
+
 # Shiva Sah portfolio; v114
 
 Complete static portfolio based on v113. Extract before opening `index.html`.

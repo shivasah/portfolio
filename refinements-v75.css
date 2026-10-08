@@ -7,8 +7,8 @@
 }
 .site-menu-trigger__shiva{
   display:block;width:72px;height:34px;background:currentColor;
-  -webkit-mask:url('assets/shiva-lastoria-word-v70.svg') center/contain no-repeat;
-  mask:url('assets/shiva-lastoria-word-v70.svg') center/contain no-repeat;
+  -webkit-mask:url('assets/shiva-lastoria-word-v70.svg?v=125') center/contain no-repeat;
+  mask:url('assets/shiva-lastoria-word-v70.svg?v=125') center/contain no-repeat;
 }
 .site-menu-trigger:hover{background:var(--ink)!important;color:var(--paper)!important}
 @media(max-width:620px){.site-menu-trigger{width:88px!important;min-width:88px!important}.site-menu-trigger__shiva{width:62px;height:30px}}
@@ -25,7 +25,7 @@ body.page-case-agent .agent-cover-fixed .agent-cover-device{grid-area:device!imp
 body.page-case-agent .agent-cover-fixed .agent-hero-v72__scroll{grid-area:scroll!important;align-self:end}
 body.page-case-agent .agent-cover-fixed .agent-hero-upload-v75{
   display:block;width:min(920px,68vw);max-width:none;height:auto;margin-inline:auto -5vw;
-  filter:drop-shadow(0 28px 34px rgba(35,36,40,.12));transform:translate3d(0,0,0);
+  filter:drop-shadow(0 28px 34px rgba(41,46,38,.12));transform:translate3d(0,0,0);
   animation:agentHeroFloatV75 7.5s cubic-bezier(.45,0,.55,1) infinite alternate;
 }
 @keyframes agentHeroFloatV75{from{transform:translate3d(0,5px,0)}to{transform:translate3d(0,-7px,0)}}
@@ -69,12 +69,12 @@ body.page-case-agent .agent-zfi-card{padding:26px!important;gap:14px!important;b
 body.page-case-agent .agent-zfi-card:hover{box-shadow:none!important}
 body.page-case-agent .agent-zfi-card__space{min-height:58px!important;display:grid!important;align-items:start!important}
 body.page-case-agent .agent-zfi-card__detail{font-size:15px!important;line-height:1.42!important;max-width:34ch!important}
-body.page-case-agent .agent-zfi-card__hint{width:36px;height:36px;display:grid!important;place-items:center!important;margin-top:auto!important;border:1px solid rgba(35,36,40,.24);border-radius:50%;font-size:0!important;align-self:flex-end}
+body.page-case-agent .agent-zfi-card__hint{width:36px;height:36px;display:grid!important;place-items:center!important;margin-top:auto!important;border:1px solid rgba(41,46,38,.24);border-radius:50%;font-size:0!important;align-self:flex-end}
 body.page-case-agent .agent-zfi-card__hint i{display:grid!important;place-items:center!important;width:100%;height:100%;font:400 22px/1 var(--font-body)!important;font-style:normal!important;transform-origin:50% 50%}
 
 /* Project learning stickies: never draw surprise hover strokes; plus is geometrically centered. */
 body.page-case-agent .agent-learning-card:hover{box-shadow:none!important}
-body.page-case-agent .agent-learning-card__hint{width:40px!important;height:40px!important;display:grid!important;place-items:center!important;padding:0!important;border:1px solid rgba(35,36,40,.25)!important;border-radius:50%!important;align-self:flex-start}
+body.page-case-agent .agent-learning-card__hint{width:40px!important;height:40px!important;display:grid!important;place-items:center!important;padding:0!important;border:1px solid rgba(41,46,38,.25)!important;border-radius:50%!important;align-self:flex-start}
 body.page-case-agent .agent-learning-card__hint span{display:grid!important;place-items:center!important;width:100%!important;height:100%!important;font-size:22px!important;line-height:1!important;transform-origin:50% 50%!important}
 
 /* Decision 4 enters only after the sticky technical landscape has fully released. */

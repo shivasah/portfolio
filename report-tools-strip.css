@@ -9,7 +9,7 @@
   overflow:hidden;
   border:1px solid var(--line);
   border-radius:var(--card-radius-sm);
-  background:#f5f4ee;
+  background:#f3f0e7;
 }
 .page-case-reports-v90 .mr-tools-strip__scroller{
   width:100%;
@@ -20,7 +20,7 @@
   width:100%;
   height:auto;
   aspect-ratio:1600/360;
-  background:#f5f4ee;
+  background:#f3f0e7;
 }
 .page-case-reports-v90 .mr-tools-strip figcaption{
   margin-top:14px;

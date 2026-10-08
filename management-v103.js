@@ -3,11 +3,11 @@
   'use strict';
   if (!document.body.classList.contains('page-case-reports')) return;
 
-  // Same learning-note behavior as Agent Management: hover/focus to preview,
+  // Learning and principle notes share the same behavior: hover/focus to preview,
   // click/tap to pin, Escape or an outside press to dismiss. Icons never swap.
   const hoverCapable = window.matchMedia('(hover: hover) and (pointer: fine)');
   const noteStates = [];
-  document.querySelectorAll('#learning [data-learning-note]').forEach(button => {
+  document.querySelectorAll('#learning [data-learning-note], #principles [data-learning-note]').forEach(button => {
     let pinned = false, pointerInside = false, keyboardFocus = false;
     const setOpen = open => {
       button.dataset.open = String(open);

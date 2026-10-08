@@ -19,14 +19,14 @@
 .vibe-site-preview.is-live .vibe-site-preview__mount { opacity:1; }
 .vibe-site-preview__mount iframe { position:absolute; top:0; left:0; display:block; width:1200px; height:750px; max-width:none; border:0; transform:scale(var(--preview-scale, .5)); transform-origin:0 0; pointer-events:none; background:#fff; }
 .vibe-site-preview__cover { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto 1fr auto; align-items:center; gap:14px; width:100%; height:100%; padding:clamp(18px,2.5vw,36px); }
-.vibe-site-preview__screen--letterwave { background:#efebe1; }
+.vibe-site-preview__screen--letterwave { background:#e4dfd2; }
 .vibe-site-preview__screen--squarekin { background:#e4e4da; }
 .vibe-site-preview__cover-name { grid-column:1/-1; font:650 clamp(15px,1.5vw,21px)/1 var(--font-display); letter-spacing:-.02em; }
 .vibe-site-preview__cover strong { grid-column:1; grid-row:2; z-index:1; font:600 clamp(22px,2.7vw,39px)/1.03 var(--font-display); letter-spacing:-.035em; }
 .vibe-site-preview__cover-note { grid-column:1/-1; align-self:end; font:500 10px/1.45 var(--font-body); color:var(--ink-soft); }
 .vibe-site-preview__letter { grid-column:2; grid-row:2; align-self:center; transform:rotate(-8deg) scale(1.3); }
 .vibe-site-preview__letter img { mix-blend-mode:multiply; width:100%; height:auto; }
-.vibe-site-preview__qr { position:relative; grid-column:2; grid-row:2; align-self:center; padding:8px; transform:rotate(5deg); border-radius:10px; background:var(--paper); box-shadow:0 10px 0 rgba(35,36,40,.06); }
+.vibe-site-preview__qr { position:relative; grid-column:2; grid-row:2; align-self:center; padding:8px; transform:rotate(5deg); border-radius:10px; background:var(--paper); box-shadow:0 10px 0 rgba(41,46,38,.06); }
 .vibe-site-preview__qr img { width:100%; height:auto; position:relative; z-index:1; }
 .vibe-site-preview__qr i { position:absolute; z-index:2; width:18px; height:18px; background:var(--orange); top:-13px; right:14px; border-radius:4px; }
 .vibe-site-preview__qr i:nth-of-type(2) { top:auto; right:auto; bottom:20px; left:-20px; width:14px; height:14px; border-radius:50%; }
