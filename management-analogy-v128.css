@@ -1,0 +1,32 @@
+/* v128: inline replacement of the v126 health analogy only. */
+html body.page-case-reports #background.mr-analogy-v128 {
+ display:block!important;position:relative!important;height:auto!important;min-height:0!important;
+ padding:0!important;overflow:visible!important;background:var(--earth-limestone)!important;
+ color:var(--earth-ink)!important;isolation:isolate;
+ --mr-bg:var(--earth-limestone);--mr-fg:var(--earth-ink);
+ --mr-muted:var(--earth-secondary);--mr-line:rgba(41,46,38,.22);
+ --mr-paper:var(--earth-limestone);--mr-paper-ink:var(--earth-ink);
+ --mr-paper-muted:var(--earth-secondary);--mr-paper-line:rgba(41,46,38,.22);
+ --mr-paper-fill:var(--earth-stone);--mr-accent:var(--earth-clay);
+ --mr-action:var(--earth-moss);--mr-sage:var(--earth-sage);--mr-oat:var(--earth-oat);--mr-stone:var(--earth-stone);
+ --mr-font:var(--font-body);--mr-heading-font:var(--font-display);--mr-sticky-top:0px;
+}
+#background.mr-analogy-v128 management-report-story {display:block;width:100%;}
+#background.mr-analogy-v128 management-report-story:not(:defined) {display:none;}
+#background.mr-analogy-v128[data-story-ready=true] .mr-analogy-fallback {display:none;}
+#background.mr-analogy-v128 .mr-analogy-fallback {padding-block:80px;}
+#background.mr-analogy-v128 .mr-analogy-fallback p {max-width:65ch;font:400 18px/1.6 var(--font-body);margin-block:24px;color:var(--earth-secondary);}
+#background.mr-analogy-v128 .mr-analogy-fallback__note {font-size:13px!important;}
+
+/* v130: same introductory hierarchy as the Agent Management analogy. */
+html body.page-case-reports #background.mr-analogy-v128 .mr-analogy-intro {
+ padding-top:clamp(64px,8vw,116px);padding-bottom:clamp(10px,1.8vw,28px);
+}
+html body.page-case-reports #background.mr-analogy-v128 .mr-analogy-intro h2 {
+ margin:0;max-width:18ch;color:var(--earth-ink);
+ font:500 clamp(38px,5vw,76px)/1.08 var(--font-display);letter-spacing:-.035em;
+}
+@media(max-width:650px){
+ html body.page-case-reports #background.mr-analogy-v128 .mr-analogy-intro{padding-top:58px;padding-bottom:0}
+ html body.page-case-reports #background.mr-analogy-v128 .mr-analogy-intro h2{font-size:clamp(34px,9vw,52px)}
+}

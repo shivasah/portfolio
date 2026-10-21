@@ -1,11 +1,11 @@
 /* Owner-supplied links. No generic social-homepage fallbacks. */
 window.PORTFOLIO_CONFIG = Object.freeze({
   contact: {
-    email: 'sah.shiva@gmail.com',
+    email: 'shivasah@outlook.com',
     linkedin: 'https://linkedin.com/in/shivasah',
     medium: 'https://medium.com/@shivasah'
   },
-  resume: 'https://drive.google.com/file/d/1cZcpYLipOqCTOiPPTvYL6NwHDr1tl2J7/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1I-H9K9RJgcQEKhKam0Rtc8ZeFDslHeyq/view?usp=sharing',
   // Owner-supplied publication URLs. The print-only entry has no supplied URL.
   writingLinks: {
     'writing-01': 'https://medium.com/design-appd/storytelling-through-analogies-247b9272ce76',

@@ -23,7 +23,7 @@
 
 - [x] Fix the inherited second grid column: the case-study footer's top and bottom span the full viewport width.
 - [x] Link to Agent Management and Management Reports in every page footer.
-- [x] Add sah.shiva@gmail.com directly after GitHub, in matching styling.
+- [x] Add shivasah@outlook.com directly after GitHub, in matching styling.
 - [x] Add an explicit email copy button, temporary Copied feedback and an accessible status message.
 - [x] Reset old success feedback before each new copy attempt; never show success after denied copying.
 - [x] Retain a selection-based fallback for environments where Clipboard API access is unavailable.

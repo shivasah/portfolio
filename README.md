@@ -1,3 +1,27 @@
+# Shiva Sah portfolio; v129
+
+Based on v128: the restored v126 website with the six-chapter health-report analogy.
+This update changes analogy copy, contact details and project ordering only.
+
+Management Reports is first and Agent Management second in the homepage deck and
+all three menus. Domain-Centric Views remains third and available on demand.
+Case-study footers still link to the other case study and Small experiments.
+
+Email: shivasah@outlook.com. The matching mail links and copy buttons use that same
+address. The homepage, menus, footers and site-config.js use the latest supplied
+resume URL. Existing external-link safety attributes are retained.
+
+The analogy's chapter explanations, captions, transcript and no-JavaScript fallback
+use the revised copy. Its example values and illustrative-data labels are retained.
+No artwork, fonts, styles, animation timings or other case-study copy were changed.
+
+Extract this full ZIP to a new folder, or apply the v129 patch to a complete v128
+site. No build step or file deletions are required. No fonts are bundled.
+
+---
+
+## Earlier build notes (historical)
+
 # Shiva Sah portfolio; v126
 
 This is a complete static site based on v125. The homepage and both case-study
