@@ -5,7 +5,12 @@ window.PORTFOLIO_CONFIG = Object.freeze({
     linkedin: 'https://linkedin.com/in/shivasah',
     medium: 'https://medium.com/@shivasah'
   },
-  resume: 'https://drive.google.com/file/d/1I-H9K9RJgcQEKhKam0Rtc8ZeFDslHeyq/view?usp=sharing',
+  resume: 'resume.html',
+  resumeDocument: {
+    view: 'https://drive.google.com/file/d/1I-H9K9RJgcQEKhKam0Rtc8ZeFDslHeyq/view',
+    preview: 'https://drive.google.com/file/d/1I-H9K9RJgcQEKhKam0Rtc8ZeFDslHeyq/preview',
+    download: 'https://drive.google.com/uc?export=download&id=1I-H9K9RJgcQEKhKam0Rtc8ZeFDslHeyq'
+  },
   // Owner-supplied publication URLs. The print-only entry has no supplied URL.
   writingLinks: {
     'writing-01': 'https://medium.com/design-appd/storytelling-through-analogies-247b9272ce76',

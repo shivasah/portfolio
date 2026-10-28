@@ -1,12 +1,27 @@
-/* v110: one clean circular outline, two simultaneous tones, no heavy halo. */
-html body .cursor-scribble.cursor-duotone-v110{width:34px!important;height:34px!important;margin:-17px 0 0 -17px!important;mix-blend-mode:normal!important;filter:none!important;pointer-events:none!important;z-index:9999;transition:opacity .15s,width .18s,height .18s,margin .18s}
-html body .cursor-scribble.cursor-duotone-v110 svg{width:100%;height:100%;animation:none!important;rotate:none!important;transform:none!important;filter:none!important;overflow:visible}
-html body .cursor-duotone-v110 :is(.cursor-duotone__orbit,.cursor-duotone__core){transform-origin:24px 24px;transform:rotate(var(--cursor-angle,0deg));transition:scale .15s}
-html body .cursor-duotone-v110 .cursor-duotone__grey{fill:none;stroke:#666c5e;stroke-width:2.4}
-html body .cursor-duotone-v110 .cursor-duotone__white{fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round}
-html body .cursor-duotone-v110 .cursor-duotone__dot-grey{fill:#666c5e;stroke:none}
-html body .cursor-duotone-v110 .cursor-duotone__dot-orange{fill:#9c4e3b;stroke:none}
-html body .cursor-duotone-v110.is-link{width:44px!important;height:44px!important;margin:-22px 0 0 -22px!important}
-html body .cursor-duotone-v110.is-down .cursor-duotone__orbit{scale:.86}
-html body .cursor-duotone-v110.is-down .cursor-duotone__core{scale:.88}
-@media(prefers-reduced-motion:reduce),(pointer:coarse){html body .cursor-duotone-v110{display:none!important}}
+/* v134: custom clay cursor artwork, positioned by the browser at its exact hotspot.
+   No hidden native pointer, DOM follower, trailing circle or magnetic displacement. */
+:root{
+ --cursor-clay-arrow:url("assets/cursor/clay-pointer-v134.svg") 5 4, url("assets/cursor/clay-pointer-v134.png") 5 4, auto;
+ --cursor-clay-hand:url("assets/cursor/clay-hand-v134.svg") 14 4, url("assets/cursor/clay-hand-v134.png") 14 4, pointer;
+}
+/* Protect against stale cached markup while removing the retired ring from all four pages. */
+html body :is(.cursor-scribble,.cursor-duotone-v110,.portfolio-cursor-ring,.portfolio-cursor-dot){display:none!important;visibility:hidden!important;pointer-events:none!important}
+@media (any-pointer:fine){
+ html,html body,html body *{cursor:var(--cursor-clay-arrow)!important}
+ html body :is(a[href],button,summary,label[for],select,[role="button"],[role="tab"],input[type="checkbox"],input[type="radio"],[data-cursor="link"]),
+ html body :is(a[href],button,summary,label[for],select,[role="button"],[role="tab"] ) *{cursor:var(--cursor-clay-hand)!important}
+ html body :is(input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),textarea,[contenteditable="true"],[contenteditable="true"] *){cursor:text!important}
+ html body :is(input[type="range"],[data-resize]){cursor:ew-resize!important}
+ html body :is([draggable="true"],[data-cursor="grab"]){cursor:grab!important}
+ html body :is([draggable="true"],[data-cursor="grab"]):active{cursor:grabbing!important}
+ html body :is([data-cursor="zoom"],.mrc-page-zoom){cursor:zoom-in!important}
+ html body :is(button:disabled,input:disabled,select:disabled,[aria-disabled="true"]),html body :is(button:disabled,[aria-disabled="true"]) *{cursor:not-allowed!important}
+}
+@media (forced-colors:active){
+ html,html body,html body *{cursor:auto!important}
+ html body :is(a[href],button,summary,[role="button"]),html body :is(a[href],button,summary,[role="button"]) *{cursor:pointer!important}
+ html body :is(input,textarea,[contenteditable="true"]){cursor:text!important}
+}
+html :is(a,button,summary,[role="button"]):focus-visible{outline:2px solid var(--earth-clay,#9c4e3b)!important;outline-offset:4px}
+html body #site-menu :is(a,button):focus-visible,
+html body #contact :is(a,button):focus-visible{outline-color:var(--earth-sage,#d7decd)!important}

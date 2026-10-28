@@ -109,23 +109,14 @@ document.querySelectorAll('.filters button').forEach(btn=>btn.addEventListener('
   if(openIdx>=0&&filter!=='all'&&BOOKS[openIdx].kind!==filter)close();else if(openIdx>=0)showInfo(openIdx);setFaded();}));
 window.addEventListener('resize',layout);layout();setFaded();
 
-/* ---------- Letterwave: real live view, loaded only when the card is near ---------- */
-const lw=$('lwScreen');
-function fit(){const f=lw.querySelector('iframe');lw.style.setProperty('--s',(lw.clientWidth/1200).toFixed(4));}
-new ResizeObserver(fit).observe(lw);
-let loaded=false;
-const io=new IntersectionObserver(es=>{es.forEach(async e=>{if(e.isIntersecting&&!loaded){loaded=true;
-  // probe first: if the network or the host blocks the site, keep the designed poster instead of a broken frame
-  try{await fetch('https://letterwave.vercel.app/',{mode:'no-cors',cache:'no-store'});}catch(err){$('lwPill').lastChild.textContent='Preview';$('lwPill').querySelector('.dot').style.display='none';return;}
-  const f=document.createElement('iframe');f.title='Letterwave live view';f.loading='lazy';f.tabIndex=-1;
-  f.setAttribute('sandbox','allow-scripts allow-same-origin');f.referrerPolicy='no-referrer';
-  f.addEventListener('load',()=>f.classList.add('ready'));
-  f.src='https://letterwave.vercel.app/';lw.insertBefore(f,lw.querySelector('.tool-open'));fit();}});},{rootMargin:'300px'});
-io.observe(lw);
+/* v134: public tools use local illustrated covers. No third-party preview
+   replaces a cover, so the series keeps its shared composition after load. */
 
 /* ---------- Cash Flow thumbnail: travel exactly one fold ---------- */
 const roll=$('cfRoll');
-function setTravel(){const vp=roll.parentElement.clientHeight,h=roll.scrollHeight;roll.style.setProperty('--travel',(-Math.max(0,h-vp))+'px');}
-new ResizeObserver(setTravel).observe(roll.parentElement);
-roll.querySelectorAll('img').forEach(im=>im.addEventListener('load',setTravel));
+function setTravel(){if(!roll)return;const vp=roll.parentElement.clientHeight,h=roll.scrollHeight;roll.style.setProperty('--travel',(-Math.max(0,h-vp))+'px');}
+if(roll){
+ new ResizeObserver(setTravel).observe(roll.parentElement);
+ roll.querySelectorAll('img').forEach(im=>im.addEventListener('load',setTravel));
+}
 })();

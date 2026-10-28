@@ -1,0 +1,105 @@
+/* v132: HTML CV. Only the resume page is styled here. Source: supplied CV PDF. */
+body.page-resume{font-family:var(--font-body,"Syne","Helvetica Neue",Arial,sans-serif);background:var(--earth-limestone);color:var(--earth-ink);padding-bottom:0!important;--cv-ease:cubic-bezier(.22,1,.36,1)}
+.page-resume #main{position:relative;z-index:2;background:var(--earth-limestone)!important;margin:0!important;padding:0!important;transform:none!important}
+.page-resume #main :is(h1,h2,h3,h4,p,ul,dl,dd){margin:0}
+.page-resume #main a{touch-action:manipulation}
+.page-resume #main a:focus-visible{outline:2px solid var(--earth-clay);outline-offset:5px}
+.page-resume #main :is(a,button) svg{display:block;width:19px;height:19px;flex:0 0 19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:translate .3s var(--cv-ease)}
+.page-resume :is(.cv-masthead,.cv-body){width:min(100%,1440px);margin:0 auto;padding-inline:var(--gutter)}
+.page-resume .cv-masthead{padding-top:140px;padding-bottom:64px!important;background:var(--earth-limestone)!important}
+.page-resume .cv-masthead__top{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:28px}
+.page-resume .cv-document-label{font:500 16px/1.4 var(--font-body);color:var(--earth-secondary)}
+.page-resume .cv-download{display:inline-flex;align-items:center;gap:24px;min-height:48px;padding:13px 20px;background:var(--earth-moss);color:var(--earth-limestone);border:1px solid var(--earth-moss);border-radius:999px;font:500 14px/1.4 var(--font-body);text-decoration:none;transition:background .2s,translate .3s var(--cv-ease)}
+.page-resume .cv-download:hover{background:var(--earth-forest);translate:0 -2px}
+.page-resume .cv-download:hover svg{translate:0 2px}
+.page-resume .cv-download:active{translate:0 1px}
+.page-resume #main #cv-name{font:500 clamp(68px,7.9vw,112px)/1 var(--font-display,"Cabinet Grotesk",Arial,sans-serif);letter-spacing:-.055em;margin:0 0 42px;text-wrap:initial;max-width:none}
+.page-resume #cv-name>span{color:var(--earth-clay)}
+.page-resume .cv-intro-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(40px,7vw,108px);align-items:start}
+.page-resume #main .cv-role{font:500 24px/1.3 var(--font-display);letter-spacing:-.025em;margin-bottom:24px}
+.page-resume .cv-contact{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.page-resume .cv-contact a{display:inline-flex;align-items:center;gap:8px;min-height:32px;font:400 14px/1.5 var(--font-body);color:var(--earth-moss);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;overflow-wrap:anywhere}
+.page-resume .cv-contact a:hover{color:var(--earth-clay)}
+.page-resume .cv-contact a:hover svg{translate:2px -2px}
+.page-resume .cv-summary{max-width:65ch;display:grid;gap:18px;font:400 17px/1.6 var(--font-body);color:var(--earth-ink)}
+.page-resume .cv-body{display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(44px,8vw,126px);padding-top:44px;padding-bottom:105px;border-top:1px solid var(--line);align-items:start}
+.page-resume .cv-index{position:sticky;top:112px;max-width:240px}
+.page-resume .cv-index__links{display:flex;flex-direction:column;gap:2px}
+.page-resume .cv-index__links a{position:relative;display:block;padding:12px 12px 12px 20px;min-height:44px;font:500 14px/1.45 var(--font-body);text-decoration:none;color:var(--earth-secondary);border-radius:3px;transition:background .25s,color .25s,translate .3s var(--cv-ease)}
+.page-resume .cv-index__links a::before{content:"";position:absolute;left:0;top:50%;width:4px;height:4px;border-radius:100%;background:var(--earth-clay);translate:0 -50%;opacity:0;transition:opacity .2s}
+.page-resume .cv-index__links a[aria-current="location"]{color:var(--earth-ink);background:var(--earth-sage)}
+.page-resume .cv-index__links a[aria-current="location"]::before{opacity:1}
+.page-resume .cv-index__links a:hover{background:var(--earth-stone);color:var(--earth-ink);translate:3px 0}
+.page-resume .cv-index__pdf{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;margin-top:30px;padding:12px 0;min-height:44px;font:500 14px/1.4 var(--font-body);color:var(--earth-moss);text-decoration:underline;text-underline-offset:5px}
+.page-resume .cv-index__pdf:hover svg{translate:0 3px}
+.page-resume .cv-content{min-width:0;max-width:905px}
+.page-resume .cv-section{min-height:0;padding:0;scroll-margin-top:115px;background:var(--earth-limestone)!important}
+.page-resume .cv-section+.cv-section{padding-top:64px;margin-top:64px;border-top:1px solid var(--line)}
+.page-resume #main .cv-section>h2{font:500 clamp(34px,3.1vw,46px)/1.08 var(--font-display);letter-spacing:-.04em;margin:0 0 38px;text-wrap:balance}
+.page-resume .cv-employer{position:relative;padding-left:26px;border-left:1px solid var(--line)}
+.page-resume .cv-employer::before{content:"";position:absolute;left:-4px;top:13px;width:7px;height:7px;background:var(--earth-clay);border-radius:50%}
+.page-resume .cv-employer+.cv-employer{margin-top:44px}
+.page-resume #main .cv-employer>h3{font:600 28px/1.2 var(--font-display);letter-spacing:-.03em;margin:0 0 20px}
+.page-resume .cv-position+.cv-position{margin-top:32px;padding-top:25px;border-top:1px solid var(--line)}
+.page-resume .cv-position>header{display:flex;align-items:baseline;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;margin-bottom:17px}
+.page-resume #main .cv-position h4{font:600 18px/1.35 var(--font-body);letter-spacing:-.015em;color:var(--earth-ink)}
+.page-resume #main .cv-dates{font:400 13px/1.6 var(--font-body);color:var(--earth-secondary);font-variant-numeric:tabular-nums;white-space:nowrap}
+.page-resume #main .cv-position ul{padding:0 0 0 18px;list-style:disc;display:grid;gap:13px;font:400 16px/1.6 var(--font-body);color:var(--earth-ink)}
+.page-resume .cv-position li{padding-left:4px}
+.page-resume .cv-position li::marker{color:var(--earth-moss);font-size:12px}
+.page-resume .cv-work-link{display:inline-flex;align-items:center;gap:14px;min-height:44px;margin-top:16px;font:500 14px/1.5 var(--font-body);color:var(--earth-moss);text-decoration:underline;text-underline-offset:5px;transition:translate .3s var(--cv-ease)}
+.page-resume .cv-work-link:hover{translate:3px 0}
+.page-resume .cv-work-link:hover svg{translate:2px -2px}
+.page-resume .cv-education-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.page-resume .cv-education-grid article{padding:26px;background:var(--earth-sage);border-radius:4px}
+.page-resume .cv-education-grid article:last-child{background:var(--earth-oat)}
+.page-resume #main .cv-education-grid h3{font:500 25px/1.2 var(--font-display);letter-spacing:-.025em;margin:20px 0 12px}
+.page-resume .cv-education-grid p:not(.cv-dates){font:400 15px/1.6 var(--font-body);color:var(--earth-ink)}
+.page-resume .cv-records{display:grid;gap:0}
+.page-resume .cv-records>div{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px;padding:22px 0;border-bottom:1px solid var(--line)}
+.page-resume .cv-records>div:first-child{padding-top:0}
+.page-resume .cv-records>div:last-child{padding-bottom:0;border-bottom:0}
+.page-resume .cv-records dt{font:600 17px/1.5 var(--font-body)}
+.page-resume .cv-records dd{font:400 16px/1.6 var(--font-body);color:var(--earth-secondary)}
+.page-resume .cv-records__date{display:block;font-size:13px;margin-top:6px}
+.page-resume .cv-records--training>div{grid-template-columns:1.3fr 1fr}
+.page-resume .cv-publications{display:grid;gap:30px}
+.page-resume #main .cv-publications h3{font:500 25px/1.25 var(--font-display);letter-spacing:-.02em;max-width:40ch;margin:0 0 12px}
+.page-resume .cv-publications p{font:400 14px/1.6 var(--font-body);color:var(--earth-secondary)}
+/* Extend the exact shared footer geometry to this fourth page, without changing other pages. */
+html body.page-resume #contact.site-footer--v108{position:relative!important;inset:auto!important;width:100%!important;max-width:none!important;min-width:0!important;padding:0!important;margin:0!important;display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:minmax(0,1fr) auto!important;grid-auto-columns:auto!important;gap:0!important;background:var(--earth-forest)!important;color:var(--earth-on-dark)!important;font:400 16px/1.52 var(--font-body)!important;height:100svh!important;min-height:100svh!important;z-index:2}
+/* Keep native pointer available; the shared two-tone follower uses unchanged site code. */
+html.has-custom-cursor body.page-resume,html.has-custom-cursor body.page-resume *{cursor:auto!important}
+html.has-custom-cursor body.page-resume :is(a,button,summary),html.has-custom-cursor body.page-resume :is(a,button,summary) *{cursor:pointer!important}
+@media(max-width:1100px){.page-resume .cv-body{grid-template-columns:195px minmax(0,1fr);gap:45px}.page-resume .cv-intro-grid{grid-template-columns:.8fr 1.2fr;gap:45px}.page-resume .cv-education-grid{gap:18px}.page-resume .cv-education-grid article{padding:24px}}
+@media(max-width:980px),(max-height:700px){html body.page-resume #contact.site-footer--v108{height:auto!important;min-height:90svh!important;grid-template-rows:auto auto!important}}
+@media(max-width:760px){
+ .page-resume .cv-masthead{padding-top:116px;padding-bottom:36px!important}
+ .page-resume #main #cv-name{font-size:clamp(62px,13vw,90px);margin-bottom:30px}
+ .page-resume .cv-masthead__top{margin-bottom:28px}
+ .page-resume .cv-intro-grid{grid-template-columns:1fr;gap:26px}
+ .page-resume #main .cv-role{font-size:24px;margin-bottom:15px}
+ .page-resume .cv-contact{flex-direction:row;flex-wrap:wrap;gap:2px 18px}
+ .page-resume .cv-summary{font-size:16px;line-height:1.6;gap:16px}
+ .page-resume .cv-body{grid-template-columns:1fr;gap:40px;padding-top:24px;padding-bottom:64px}
+ .page-resume .cv-index{position:relative;top:auto;max-width:none}
+ .page-resume .cv-index__links{display:flex;flex-direction:row;flex-wrap:wrap;gap:6px 10px}
+ .page-resume .cv-index__links a{padding:9px 10px;min-height:40px;border:1px solid var(--line);border-radius:3px;font-size:12px}
+ .page-resume .cv-index__links a::before{display:none}
+ .page-resume .cv-index__pdf{display:none}
+ .page-resume .cv-section{scroll-margin-top:100px}
+ .page-resume #main .cv-section>h2{font-size:35px;margin-bottom:28px}
+ .page-resume .cv-employer{padding-left:18px}
+ .page-resume #main .cv-employer>h3{font-size:27px;margin-bottom:16px}
+ .page-resume .cv-position>header{gap:5px;flex-direction:column;margin-bottom:14px}
+ .page-resume #main .cv-position h4{font-size:17px}
+ .page-resume .cv-position ul{font-size:16px}
+ .page-resume .cv-records>div{grid-template-columns:1fr;gap:6px;padding:20px 0}
+ .page-resume .cv-records dd{font-size:15px}
+ .page-resume .cv-desktop-break{display:none}
+ .page-resume .cv-section+.cv-section{padding-top:40px;margin-top:44px}
+ .page-resume .cv-download{font-size:13px;gap:18px;padding:12px 16px}
+}
+@media(max-width:480px){.page-resume .cv-education-grid{grid-template-columns:1fr;gap:16px}.page-resume .cv-education-grid article{padding:24px}.page-resume .cv-document-label{font-size:14px}.page-resume #main .cv-records dt{font-size:16px}.page-resume #main .cv-publications h3{font-size:24px}.page-resume .cv-contact{flex-direction:column}.page-resume .cv-masthead__top{gap:12px}.page-resume .cv-download{gap:12px}}
+@media(prefers-reduced-motion:reduce){.page-resume #main *{transition:none!important;animation:none!important;scroll-behavior:auto!important}.page-resume #main a:hover,.page-resume #main a:hover svg{translate:none!important}}
+@media print{.page-resume .site-header,.page-resume #site-menu,.page-resume #contact,.page-resume .cursor-scribble,.page-resume .cv-index,.page-resume .cv-download{display:none!important}.page-resume :is(.cv-masthead,.cv-body){display:block;width:100%;padding:24px 0!important}.page-resume .cv-masthead__top{margin:0}.page-resume #main #cv-name{font-size:42px;margin:16px 0}.page-resume .cv-intro-grid{display:block}.page-resume .cv-summary{margin-top:20px;font-size:12px}.page-resume .cv-body{border:0}.page-resume .cv-section{break-inside:auto}.page-resume .cv-position,.page-resume .cv-education-grid article{break-inside:avoid}.page-resume #main .cv-section>h2{font-size:26px;margin-bottom:20px}.page-resume .cv-section+.cv-section{margin-top:30px;padding-top:20px}.page-resume #main .cv-position ul,.page-resume .cv-records dd{font-size:12px}}
