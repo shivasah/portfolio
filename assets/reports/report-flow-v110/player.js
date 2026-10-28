@@ -73,6 +73,10 @@ addEventListener('unhandledrejection',e=>{if(e.reason===CANCEL)e.preventDefault(
 /* ---------- views ---------- */
 // hybrid views reuse one frame's fixed chrome over another frame's canvas
 const VIEWMAP = { '13x':{ch:'13', cv:'11'}, '15s':{ch:'15', cv:'17'} };
+// The supplied KPI screenshots (10, 11, 12, 14 and 15) have the side panel
+// flattened over the action bar. Reuse the intact bar from screenshot 13.
+// Keep it inside each view so fades, camera zooms and modal scrims stay in sync.
+const FOOTER_SOURCE = Object.freeze({10:'13',11:'13',12:'13',14:'13',15:'13'});
 const cache = {};
 function makeView(id){
   const v = el('view');
@@ -83,7 +87,12 @@ function makeView(id){
     const m = M['f'+map.cv], cv = css(el('cv'), {width:m.cw}), ci = img(A['cv'+map.cv]);
     css(ci, {width:m.cw, height:m.ch}); cv.appendChild(ci); v.appendChild(cv);
     v.appendChild(el('fsh'));
-    const ch = img(A['ch'+map.ch]); ch.className='full'; v.appendChild(ch);
+    const ch = img(A['ch'+map.ch]); ch.className='full editor-chrome'; v.appendChild(ch);
+    const footer = el('editor-footer');
+    const footerImage = img(A['ch'+(FOOTER_SOURCE[map.ch] || map.ch)]);
+    footer.setAttribute('aria-hidden','true');
+    footerImage.className='editor-footer__image';
+    footer.appendChild(footerImage); v.appendChild(footer);
     v.setScroll = s => { v._s = s; ci.style.transform = `translate3d(0,${(m.y0-107-s).toFixed(2)}px,0)`; };
   }
   v._id=id;v.setScroll(0);
@@ -412,9 +421,9 @@ function applyEnd(n){
 let playing=0,shown=0,started=false,visible=false,requested=1,allowMotion=false;
 let pendingReplay=false;
 function notify(state,n=requested,detail){
- parent.postMessage({type:'report-flow-state',version:124,act:n,state,...(detail?{detail}: {})},'*');
+ parent.postMessage({type:'report-flow-state',version:138,act:n,state,...(detail?{detail}: {})},'*');
 }
-function ready(){parent.postMessage({type:'report-flow-ready',version:124,acts:7},'*');}
+function ready(){parent.postMessage({type:'report-flow-ready',version:138,acts:7},'*');}
 function stop(){
  const old=RUN;old.c=true;[...old.pend].forEach(f=>f());old.pend=[];old.wake.clear();
  for(const a of document.getAnimations())a.cancel();playing=0;
@@ -482,7 +491,7 @@ function resize(){stageEl.style.transform=`scale(${screenEl.clientWidth/1440})`;
 if('ResizeObserver' in window)new ResizeObserver(resize).observe(screenEl);
 addEventListener('resize',resize);resize();
 window.ReportFlow={
- get state(){return{version:124,started,playing,shown,requested,visible,
+ get state(){return{version:138,started,playing,shown,requested,visible,
   suspended:Boolean(playing&&!canAdvance()),view:curView?curView._id:null,
   cursor:{...cs},camera:{...camS},canvasScroll:curView?curView._s:0,
   reduced:REDUCED,allowMotion};},

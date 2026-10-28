@@ -11,6 +11,14 @@
 .fsh{position:absolute;left:0;top:893px;width:1440px;height:67px;background:#fff;box-shadow:0 -1px 0 rgba(0,0,0,.05),0 -6px 16px rgba(0,0,0,.06)}
 .patch{pointer-events:none}
 
+/* The editor action bar sits above the side panel, not above dialogs.
+   Coordinates match the 1440 x 960 source stage; clipping includes its divider. */
+.view{--editor-footer-top:891px;--editor-footer-height:69px}
+.view img.editor-chrome{clip-path:inset(0 0 var(--editor-footer-height) 0)}
+.editor-footer{position:absolute;left:0;top:var(--editor-footer-top);width:1440px;height:var(--editor-footer-height);overflow:hidden;background:#fff;z-index:2;pointer-events:none}
+.view img.editor-footer__image{left:0;top:calc(-1 * var(--editor-footer-top));width:1440px;height:960px}
+
+
 #cursor{position:absolute;left:0;top:0;width:0;height:0;z-index:20;will-change:transform;pointer-events:none}
 #cursor svg{position:absolute;left:-1.5px;top:-1.5px;width:23px;height:31px;transform-origin:2px 2px;filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.35)) drop-shadow(0 3px 6px rgba(0,0,0,.12))}
 .ripple{position:absolute;width:44px;height:44px;border-radius:50%;background:rgba(156,78,59,.28);border:1.5px solid rgba(156,78,59,.7);pointer-events:none;z-index:19}
