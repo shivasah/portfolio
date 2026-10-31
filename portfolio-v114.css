@@ -165,3 +165,20 @@ body.page-home #work .flip-card--domain .flip-card__link--locked .flip-card__med
 @media(max-width:370px){
   body.page-home #work .flip-card__link{grid-template-rows:178px auto}
 }
+
+/* QuickBooks Cashflow: same paper-backed, locked artwork treatment as other private cases. */
+body.page-home #work .flip-card--cashflow .flip-card__link,
+body.page-home #work .flip-card--cashflow .flip-card__media { background: #e4dfd2; }
+body.page-home #work .flip-card--cashflow .flip-card__link--locked .flip-card__media img { filter: none; }
+@media (min-width:621px) and (min-height:501px) {
+  body.page-home #work .flip-card--cashflow .flip-card__media img {
+    width: 117%; height: auto; max-width: none; max-height: none;
+    flex: none; object-fit: contain; object-position: right center;
+  }
+}
+@media (max-width:620px) {
+  body.page-home #work .flip-card--cashflow .flip-card__media img {
+    width: 114%; height: auto; max-width: none; max-height: none;
+    flex: none; object-fit: contain; object-position: center center;
+  }
+}
